@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>  
+        <!-- User  need to hide other wise goal sheet cant open due to read access of manager-->
+	    <!-- <record id="sh_user_emp_own_records_rule" model="ir.rule">
+	        <field name="name">Employee Own Records</field>
+	        <field name="model_id" ref="hr.model_hr_employee"/>
+           	<field name="perm_read">1</field>   
+           	<field name="perm_write">0</field>   
+           	<field name="perm_create">0</field>   
+           	<field name="perm_unlink">0</field>   
+           	<field name="domain_force">[('user_id','=',user.id)]</field>   
+           	<field name="groups" eval="[(4, ref('base.group_user'))]"/>        		        
+ 	    </record> -->
+
+        <!-- Officer -->
+        <!-- <record id="sh_employee_officer_records_rule" model="ir.rule">
+	        <field name="name">Employee:Officer Record Rule</field>
+	        <field name="model_id" ref="hr.model_hr_employee"/>
+           	<field name="perm_read">1</field>   
+           	<field name="perm_write">0</field>   
+           	<field name="perm_create">0</field>   
+           	<field name="perm_unlink">0</field>   
+           	<field name="domain_force">['|',('coach_id.user_id','=',user.id),('user_id','=',user.id)]</field>   
+           	<field name="groups" eval="[(4, ref('hr.group_hr_user'))]"/>        		        
+ 	    </record> -->
+
+        <!-- Manager -->
+	    <record id="sh_employee_manager_records_rule" model="ir.rule">
+	        <field name="name">Employee:Manager Record Rule</field>
+	        <field name="model_id" ref="hr.model_hr_employee"/>
+           	<field name="perm_read">1</field>   
+           	<field name="perm_write">1</field>   
+           	<field name="perm_create">1</field>   
+           	<field name="perm_unlink">1</field>   
+           	<field name="domain_force">[(1,'=',1)]</field>   
+           	<field name="groups" eval="[(4, ref('hr.group_hr_user'))]"/>        		        
+ 	    </record>
+ 	</data>
+</odoo>

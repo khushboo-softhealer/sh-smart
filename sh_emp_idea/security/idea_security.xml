@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- rule for assigned user -->
+    <record model="ir.rule" id="idea_user_see_assigned">
+        <field name="name">Idea Responsible Persons</field>
+        <field name="model_id" ref="model_sh_idea" />
+        <field name="groups" eval="[(4, ref('base.group_user'))]" />
+        <field name="domain_force">['|', '&amp;', ('state','!=','new'),'|',('resp_persons.id','in',[user.id]),('created_by','=',user.id), '&amp;',('state','=','new'),('created_by','=',user.id)]</field>
+    </record>
+    <record model="ir.rule" id="emp_idea_comp_rule">
+        <field name="name">Emp Idea multi-company</field>
+        <field name="model_id" ref="model_sh_idea" />
+        <field name="global" eval="True" />
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+
+    <record model="ir.rule" id="all_idea">
+        <field name="name">ALL Idea </field>
+        <field name="model_id" ref="model_sh_idea" />
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('base.group_system'))]"/>
+    </record>
+
+
+</odoo>

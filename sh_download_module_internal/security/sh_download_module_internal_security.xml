@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Project User Can See Own Records -->
+    <record id="sh_download_module_req_rule_user" model="ir.rule">
+        <field name="name">Module Download Request Rule</field>
+        <field name="model_id" ref="sh_download_module_internal.model_sh_download_module_req" />
+        <field name="domain_force">[('create_uid', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('project.group_project_user'))]"/>
+    </record>
+
+    <!-- Project Officer Can See All Records -->
+    <record id="sh_download_module_req_rule_officer" model="ir.rule">
+        <field name="name">Module Download Request Rule Officer</field>
+        <field name="model_id" ref="sh_download_module_internal.model_sh_download_module_req" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('sh_project_task_base.group_project_officer'))]"/>
+    </record>
+
+</odoo>

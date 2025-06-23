@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <template id='sh_ecommerce_snippet_price_tmpl' name='Price Template'>
+      <div class="product_price mb-1" itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer">
+         <span class="h5" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+         <del t-attf-class="text-danger ml-1 h6 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="white-space: nowrap;" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+         <span itemprop="price" style="display:none;" t-esc="combination_info['price']" />
+         <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+      </div>
+   </template>
+   <!-- Snippet 11 Multi -->
+   <template id="sh_ecom_snippet_tmpl_11_item" name="Snippet 11">
+      <div class="justify-content-center">
+         <ul class="nav nav-tabs" role="tablist">
+            <t t-set="active_class" t-value="'active'" />
+            <t t-foreach="list_tabs_dic" t-as="tab_dic">
+               <li class="nav-item">
+                  <a t-att-class="'js_cls_tab_a nav-link %s' %(active_class)" t-att-data-tab_id="tab_dic['id']" data-bs-toggle="tab" t-att-href="tab_dic['href']" role="tab" aria-controls="all" aria-selected="true">
+                     <t t-raw="tab_dic['name']" />
+                  </a>
+               </li>
+               <t t-set="active_class" t-value="''" />
+            </t>
+         </ul>
+         <div class="tab-content">
+            <t t-set="active_class" t-value="'active'" />
+            <t t-set="is_first_tab_pane_data_loaded" t-value="true" />
+            <t t-foreach="list_tab_panes_dic" t-as="tab_pane_dic">
+               <div t-att-class="'tab-pane show %s' %(active_class)" t-att-id="tab_pane_dic['id_tab_pane']" role="tabpanel" aria-labelledby="all-tab">
+                  <div class="sh_home_primary_button">
+                     <a href='/shop' role="button" class='btn btn-primary sh_store_primary_link'> View More <span class="sh_pos_solution_primary_link_right">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-right" viewBox="0 0 24 24" stroke-width="1" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <polyline points="7 7 12 12 7 17"></polyline>
+                              <polyline points="13 7 18 12 13 17"></polyline>
+                           </svg>
+                        </span>
+                     </a>
+                  </div>
+                  <div t-attf-data-loaded="#{is_first_tab_pane_data_loaded}" t-attf-class="js_cls_tab_pane_content #{row_classes}">
+                     <t t-set="list_product_dic" t-value="tab_pane_dic['list_products_dic']" />
+                     <t t-foreach="list_product_dic" t-as="product">
+                        <div t-attf-class="#{column_classes}">
+                           <div class="sh_store_card mt-4">
+                              <t t-set="product_href" t-value="product['website_url']" />
+                              <form action="/shop/cart/update" method="post" class="card oe_product_cart" itemscope="itemscope" itemtype="http://schema.org/Product">
+                                 <div class="row" style="margin-left: 0px !important; margin-right: 0px !important;">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                                    <div class="sh_store_img_box">
+                                       <a t-att-href="product_href" style="text-decoration: none; cursor: pointer; width: 100%; height: 100%; position: relative; text-align: center;">
+                                          <img t-attf-src="/web/image/product.template/#{product['id']}/image_1920" class="img img-fluid" />
+                                       </a>
+                                    </div>
+                                    <div class="sh_store_product_content">
+                                       <div class="sh_store_product_detail">
+                                          <a style="text-decoration: none;" itemprop="name" t-att-href="product_href" t-att-content="product['name']" t-raw="product['name']" />
+                                          <div class="sh_store_rating">
+                                             <t t-if="display_rating" t-raw="product['rating']" />
+                                          </div>
+                                          <div class="sh_store_app_price">
+                                             <div t-if="display_price" itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer">
+                                                <span t-raw="product['price']" class="pt-2 mr-2" style="color: #777;" />
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="sh_store_product_bottom">
+                                          <div class="sh_store_product_cart">
+                                             <div class="sh_product_icon">
+                                                <t t-if="display_wishlist">
+                                                   <span class="add_to_wishlist">
+                                                      <t t-set="in_wish" t-value="product['in_wish']" />
+                                                      <t t-set="product_variant_id" t-value="product['product_variant_id']" />
+                                                      <button t-if="product_variant_id" type="button" role="button" class="btn btn-secondary o_add_wishlist list_btn" t-att-disabled="in_wish or None" title="Add to Wishlist" t-att-data-product-template-id="product['id']" t-att-data-product-product-id="product_variant_id" data-action="o_wishlist">
+                                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Add to wishlist">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                                         </svg>
+                                                      </button>
+                                                   </span>
+                                                </t>
+                                             </div>
+                                             <div class="sh_product_icon">
+                                                <t t-if="display_add_to_cart">
+                                                   <button class="add_to_cart">
+                                                      <t t-set="product_variant_id" t-value="product['product_variant_id']" />
+                                                      <input name="product_id" t-att-value="product_variant_id" type="hidden" />
+                                                      <t t-if="product_variant_id">
+                                                         <a href="#" role="button" class="a-submit catr_btn" aria-label="Shopping cart" title="Shopping cart">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                               <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                                               <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                                               <path d="M17 17h-11v-14h-2" />
+                                                               <path d="M6 5l14 1l-1 7h-13" />
+                                                            </svg>
+                                                         </a>
+                                                      </t>
+                                                   </button>
+                                                </t>
+                                             </div>
+                                          </div>
+                                          <div class="sh_store_download">
+                                             <p> <t t-esc='product["sh_product_counter"]'></t> <span>
+                                                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                      <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                                      <path d="M7 11l5 5l5 -5" />
+                                                      <path d="M12 4l0 12" />
+                                                   </svg>
+                                                </span>
+                                             </p>
+                                          </div>
+                                       </div>
+                                       <t t-set="bg_color" t-value="product['ribbon_bg_color'] or ''" />
+                                       <t t-set="text_color" t-value="product['ribbon_text_color']" />
+                                       <t t-set="bg_class" t-value="product['ribbon_html_class']" />
+                                       <span t-attf-class="o_ribbon #{bg_class}" t-attf-style="#{text_color and ('color: %s; ' % text_color)}#{bg_color and 'background-color:' + bg_color}" t-raw="product['ribbon_html'] or ''" />
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </t>
+                  </div>
+               </div>
+               <t t-set="active_class" t-value="''" />
+               <t t-set="is_first_tab_pane_data_loaded" t-value="false" />
+            </t>
+            <a t-att-href='st_categ_url' class='url_link'>
+               <b t-esc='st_categ_name'></b>
+            </a>
+         </div>
+      </div>
+   </template>
+</odoo>

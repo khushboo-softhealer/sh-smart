@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="sh_download_module_internal_delete_requests_cron" model="ir.cron">
+            <field name="name">Delete/Archive Download Module Requests</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False" />
+            <field name="model_id" ref="sh_download_module_internal.model_sh_download_module_req" />
+            <field name="code">model.cron_delete_download_requests()</field>
+            <field name="state">code</field>
+            <field name="active" eval="True" />
+        </record>
+
+    </data>
+</odoo>

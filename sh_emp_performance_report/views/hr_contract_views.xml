@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record id="sh_emp_performance_inherit_hr_job_form_view" model="ir.ui.view">
+        <field name="name">hr.job.form.view</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form" />
+        <field name="arch" type="xml">
+            <field name="department_id" position="after">
+              <field name="sh_user_access_template" />
+            </field>
+        </field>
+      </record>
+        <record id="sh_emp_performance_inherit_hr_contract_form_view" model="ir.ui.view">
+            <field name="name">hr.contract.form.view</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+            <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+              <button name="action_view_emp_timesheets" type="object" class="oe_stat_button" icon="fa-money" >
+                <div class="o_stat_info">
+                    <!-- <field name="sh_timesheet_count" class="o_stat_value" widget="timesheet_uom"/>  -->
+                    <span class="o_stat_text">Timesheets</span>
+                </div>
+            </button>
+            <button name="action_view_emp_attendance" type="object" class="oe_stat_button" icon="fa-money" >
+                <div class="o_stat_info">
+                    <!-- <field name="sh_timesheet_count" class="o_stat_value" widget="timesheet_uom"/>  -->
+                    <span class="o_stat_text">Attendance</span>
+                </div>
+            </button>
+            <button name="action_view_emp_attendance_modification_req" type="object" class="oe_stat_button" icon="fa-money" >
+                <div class="o_stat_info">
+                    <!-- <field name="sh_timesheet_count" class="o_stat_value" widget="timesheet_uom"/>  -->
+                    <span class="o_stat_text">Attendance <br/> Modification <br/> Request</span>
+                </div>
+            </button>
+            <button name="action_view_emp_notifications" type="object" class="oe_stat_button" icon="fa-bell" >
+              <div class="o_stat_info">
+                  <!-- <field name="sh_timesheet_count" class="o_stat_value" widget="timesheet_uom"/>  -->
+                  <span class="o_stat_text">Notifications</span>
+              </div>
+          </button>
+            </xpath>
+
+                <xpath expr="//page[@name='information']//group[@name='salary']" position="inside">
+                  <field name="previous_contract_wage" />
+                </xpath>
+                <xpath expr="//page[@name='information']//group[@name='yearly_advantages']" position="inside">
+                  <field name="increment_offer_amount" readonly="1"/>
+                  <field name="increment_offer_percentage" readonly="1"/>
+                </xpath>
+
+                <xpath expr="//notebook" position="inside">
+                  <page string="Performance" name="performance" class="o_hr_contract_salary_information">
+                    <form string="CONTRACTS">
+                     
+                        <button string="Update Details" name="update_contract" type="object" class="btn btn-primary" />
+                      
+                    <!-- <h1 class="text-primary">CONTRACTS</h1> -->
+                    <group string="Current Contract" name="current_contract">
+                        <group>
+                          <field name="date_start" />
+                        </group>   
+                        <group>
+                          <field name="date_end" />
+                        </group>
+                    </group>
+                    <notebook>
+                      <page name="previous_contract" string="Previous Contracts">
+                        <field name="hr_contract_ids" domain="([('employee_id', '=', employee_id),('id', '&lt;', id)])">
+                          <tree>
+                            <field name="date_start" string="Contract Start Date"/>
+                            <field name="date_end" string="Contract End Date"/>
+                            <field name="contract_period" />
+                            <field name="contract_type" string="Duration Count"/>
+                            <field name="wage"/>
+                            <field name="increment_offer_percentage" />
+                            <field name="increment_offer_amount" />
+                          </tree>
+                        </field>
+                      </page>
+                    </notebook>
+                  </form>
+                  <form>
+                    <group name="leaves" string="Leaves">
+                      <group>
+                        <field name="paid_leaves" />
+                        <field name="unpaid_leaves" />
+                        <field name="total_leaves_taken" />
+                        <field name="allocated_paid_leaves" />
+                        <field name="total_auto_generated_leaves" />
+                      </group>
+                      <group >
+                        <field name="preplanned_leaves" />
+                        <field name="unplanned_leaves" />
+                        <field name="fullday_leaves" />
+                        <field name="halfday_leaves" />
+                        <field name="partial_leaves" />
+                      </group>
+                    </group>
+                  </form>
+
+                  <form>
+                    <group name="attandance" string="Attandance">
+                      <group>
+                        <field name="total_working_days_from_company" />
+                        <field name="present_from_employee_excluding_leaves" />
+                        <field name="missed_attendance" />
+                        <field name="total_attendance_modification_request" />
+                      </group>
+                      <group >
+                        <field name="check_in_late" />
+                        <field name="check_out_early" />
+                        <field name="break_hour_extend" />
+                      </group>
+                    </group>
+                  </form>
+
+                  <form>
+                    <group>
+                      <group name="timesheet_billable" string="Timesheet Billable">
+                        <field name="billable_internal_project_timesheet" widget="float_time"/>
+                        <field name="billable_external_project_timesheet" widget="float_time"/>
+                        <field name="billable_total_timesheet" widget="float_time"/>
+                        <field name="billable_avg_timesheet_per_day" widget="float_time"/>
+                        <field name="avg_timesheet_required_per_day" widget="float_time"/>
+                      </group>
+                      <group name="timesheet_unbillable" string="Timesheet Unbillable">
+                        <field name="unbillable_internal_project_timesheet" widget="float_time"/>
+                        <field name="unbillable_external_project_timesheet" widget="float_time"/>
+                        <field name="unbillable_total_timesheet" widget="float_time"/>
+                        <field name="unbillable_avg_timesheet_per_day" widget="float_time"/>
+                        <field name="avg_timesheet_required_per_day" widget="float_time"/>
+                      </group>
+                    </group>
+                    <group>
+                      <group string="Project Profit">
+                          <field name="hourly_cost"/>
+                          <field name="billable_project_cost"/>
+                          <field name="total_emp_pay"/>
+                          <field name="project_profit"/>
+                      </group>
+                    </group>
+                  </form>
+                </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

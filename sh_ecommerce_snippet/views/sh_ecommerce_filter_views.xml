@@ -1,0 +1,81 @@
+<odoo>
+    <!-- Form -->
+    <record id="sh_ecom_s_filter_form" model="ir.ui.view">
+        <field name="name">sh.ecom.s.filter.form</field>
+        <field name="model">sh.ecom.s.filter</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="filter_type" widget="radio" />
+                            <field name="is_show_tab" />
+                            <field name="is_show_slider" />
+                        </group>
+
+                        <group string="Slide Options">
+                            <field name="items" />
+                            <field name="autoplay" />
+                            <field name="speed" />
+                            <field name="loop" />
+                            <field name="nav" />
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page name="page_slider_line" string="Tab Lines">
+                            <!-- Product -->
+                            <field name="tab_product_line">
+                                <tree string="Tabs" editable="bottom">
+                                    <field name="sequence" widget="handle" />
+                                    <field name="name" />
+                                    <field name="categ_id" domain="[('parent_id', '=', False)]"/>
+                                    <field name="product_tmpl_ids" widget="many2many_tags" attrs="{'column_invisible': [('parent.filter_type', '!=', 'manual')] }" domain="[('is_published', '=', True)]"/>
+                                    <field name="filter_id" attrs="{'column_invisible': [('parent.filter_type', '!=', 'domain')] }" />
+                                    <field name="limit" attrs="{'column_invisible': [('parent.filter_type', '!=', 'domain')] }" />
+                                    <field name="slider_id" invisible="1" />
+                                </tree>
+
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="sequence" />
+                                            <field name="name" />
+                                            <field name="product_tmpl_ids" widget="many2many_tags" attrs="{'invisible': [('parent.filter_type', '!=', 'manual')] }" domain="[('is_published', '=', True)]"/>
+                                            <field name="filter_id" attrs="{'invisible': [('parent.filter_type', '!=', 'domain')] }" />
+                                            <field name="limit" attrs="{'invisible': [('parent.filter_type', '!=', 'domain')] }" />
+                                            <field name="slider_id" invisible="1" />
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record id="sh_ecom_s_filter_tree" model="ir.ui.view">
+        <field name="name">sh.ecom.s.filter.tree</field>
+        <field name="model">sh.ecom.s.filter</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="filter_type" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="sh_ecom_s_filter_action" model="ir.actions.act_window">
+        <field name="name">Dynamic Product Filters</field>
+        <field name="res_model">sh.ecom.s.filter</field>
+        <field name="target">current</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="sh_ecom_s_filter_menu" parent="website.menu_website_global_configuration" action="sh_ecom_s_filter_action" />
+</odoo>

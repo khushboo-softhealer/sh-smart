@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- SEARCH VIEW -->
+    <record id="sh_download_module_req_view_search" model="ir.ui.view">
+        <field name="name">sh_download_module_req.view.search</field>
+        <field name="model">sh.download.module.req</field>
+        <field name="arch" type="xml">
+            <search string="Download Module Requests">
+                <field name="task_id" string="Any" filter_domain="['|', '|', '|', '|', ('create_uid', 'ilike', self), ('for_which', '=', self), ('project_id', 'ilike', self), ('task_id', 'ilike', self), ('ticket_id', 'ilike', self)]"/>
+                <separator/>
+                <filter string="For Ticket" name="for_ticket" domain="[('for_which', '=', 'ticket')]"/>
+                <filter string="For Project" name="for_project" domain="[('for_which', '=', 'project')]"/>
+                <separator/>
+                <group name="module_req_group" string="Module Requests Group By">
+                    <filter name="for_which" string="For Which" context="{'group_by': 'for_which'}" />
+                    <filter name="create_uid" string="User" context="{'group_by': 'create_uid'}" />
+                    <filter name="project_id" string="Project" context="{'group_by': 'project_id'}" />
+                    <filter name="task" string="Task" context="{'group_by': 'task_id'}" />
+                    <filter name="ticket_id" string="Ticket" context="{'group_by': 'ticket_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- FORM VIEW -->
+    <record id="sh_download_module_req_view_form" model="ir.ui.view">
+        <field name="name">sh_download_module_req.view.form</field>
+        <field name="model">sh.download.module.req</field>
+        <field name="arch" type="xml">
+            <form string="Download Module Request">
+                <header>
+                    <button string="Grant" name="btn_req_granted" attrs="{'invisible': ['|', ('is_tl', '=', False), ('state', '=', 'granted')]}" class="btn btn-primary" type="object" />
+                    <button string="Download" name="btn_download_modules" attrs="{'invisible': [('state', '!=', 'granted')]}" class="btn btn-primary" type="object" />
+                    <button string="Deny" name="btn_req_denied" attrs="{'invisible': ['|', ('is_tl', '=', False), ('state', '=', 'denied')]}" class="btn btn-primary" type="object" />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="create_date" string="Date" readonly="1" />
+                            <field name="create_uid" string="User" options="{'no_open': True}" readonly="1" />
+                            <field name="for_which" readonly="1" />
+                            <field name="project_id" readonly="1" options="{'no_open': True}" attrs="{'invisible': [('for_which', '!=', 'project')]}" />
+                            <field name="task_id" readonly="1" attrs="{'invisible': [('for_which', '!=', 'project')]}"  />
+                            <field name="ticket_id" readonly="1" options="{'no_open': True}" attrs="{'invisible': [('for_which', '=', 'project')]}" />
+                        </group>
+                        <group>
+                            <field name="module_ids" widget="many2many_tags" readonly="1" />
+                            <field name="state" readonly="1" />
+                            <field name="is_tl" invisible="1" readonly="1" />
+                            <field name="approved_by_id" string="Approved/Denied By" readonly="1" options="{'no_open': True}" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- TREE VIEW -->
+    <record id="sh_download_module_req_view_tree" model="ir.ui.view">
+        <field name="name">sh_download_module_req.view.tree</field>
+        <field name="model">sh.download.module.req</field>
+        <field name="arch" type="xml">
+            <tree string="Download Module Requests" decoration-success="state == 'granted'" decoration-danger="state == 'denied'" >
+                <field name="create_date" string="Date" />
+                <field name="create_uid" string="User" />
+                <field name="for_which" optional="show" />
+                <field name="project_id" optional="show" />
+                <field name="task_id" optional="show" />
+                <field name="module_ids" widget="many2many_tags" />
+                <field name="state" optional="show" />
+                <field name="ticket_id" optional="show" />
+                <field name="is_tl" invisible="1" />
+                <field name="approved_by_id" string="Approved/Denied By" optional="show" />
+                <!--  icon="fa-check" -->
+                <button string="Grant" name="btn_req_granted" attrs="{'invisible': ['|', ('is_tl', '=', False), ('state', '=', 'granted')]}" class="btn btn-primary" type="object" />
+                <!--  icon="fa-times" -->
+                <button string="Deny" name="btn_req_denied" attrs="{'invisible': ['|', ('is_tl', '=', False), ('state', '=', 'denied')]}" class="btn btn-primary" type="object" />
+                <!--  icon="fa-download" -->
+                <button string="Download" name="btn_download_modules" attrs="{'invisible': [('state', '!=', 'granted')]}" class="btn btn-primary" type="object" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="sh_download_module_req_action" model="ir.actions.act_window">
+        <field name="name">Download Module Requests</field>
+        <field name="res_model">sh.download.module.req</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'create': False, 'edit': False}</field>
+    </record>
+
+</odoo>

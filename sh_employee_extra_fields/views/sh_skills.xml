@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<odoo>
+	<!-- Sh Technical Skills views and action -->
+	<record id="sh_technical_skill_form_view" model="ir.ui.view">
+            <field name="name">sh.technical.skill.form</field>
+            <field name="model">sh.technical.skill</field>
+            <field name="arch" type="xml">
+                <form string="Technical Skills">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+        
+    <record id="sh_technical_skill_tree_view" model="ir.ui.view">
+        <field name="name">sh.technical.skill.tree</field>
+        <field name="model">sh.technical.skill</field>
+        <field name="arch" type="xml">
+            <tree string="Technical Skills">
+                <field name="name" string="Name"/>
+            </tree>
+        </field>
+    </record>
+        
+    <record id="sh_technical_skill_search_view" model="ir.ui.view">
+        <field name="name">sh.technical.skill.search</field>
+        <field name="model">sh.technical.skill</field>
+        <field name="arch" type="xml">
+            <search string="Technical Skills">
+                <group expand='0' string='Group by...'>
+                    <filter string="Technical Skills" name="name" context="{'group_by': 'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>     
+     
+	<record id="sh_technical_skill_view_actions" model="ir.actions.act_window">
+	            <field name="name">Technical Skills</field>	          
+	            <field name="res_model">sh.technical.skill</field>
+	            <field name="view_mode">tree,form</field>
+	</record>
+	
+	<!-- Sh Non Technical Skills views and action -->
+	<record id="sh_non_technical_skill_form_view" model="ir.ui.view">
+            <field name="name">sh.non.technical.skill.form</field>
+            <field name="model">sh.non.technical.skill</field>
+            <field name="arch" type="xml">
+                <form string="Non Technical Skills">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+        
+    <record id="sh_non_technical_skill_tree_view" model="ir.ui.view">
+        <field name="name">sh.non.technical.skill.tree</field>
+        <field name="model">sh.non.technical.skill</field>
+        <field name="arch" type="xml">
+            <tree string="Non Technical Skills">
+                <field name="name" string="Name"/>
+            </tree>
+        </field>
+    </record>
+        
+    <record id="sh_non_technical_skill_search_view" model="ir.ui.view">
+        <field name="name">sh.non.technical.skill.search</field>
+        <field name="model">sh.non.technical.skill</field>
+        <field name="arch" type="xml">
+            <search string="Non Technical Skills">
+                <group expand='0' string='Group by...'>
+                    <filter string="Religion" name="name" context="{'group_by': 'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>     
+     
+	<record id="sh_non_technical_skill_view_action" model="ir.actions.act_window">
+	            <field name="name">Non Technical Skills</field>	         
+	            <field name="res_model">sh.non.technical.skill</field>
+	            <field name="view_mode">tree,form</field>
+	</record>
+	
+     <menuitem id="menu_skill_config"
+            parent="hr.menu_human_resources_configuration"
+            sequence="3"
+            name="Skills"/>
+            
+     <menuitem
+            id="sh_technical_skill_view_menu"
+            name="Technical Skills"
+            action="sh_technical_skill_view_actions"
+            parent="sh_employee_extra_fields.menu_skill_config"
+            sequence="1"
+            />
+                          
+     <menuitem
+            id="sh_non_technical_skill_view_menu"
+            name="Non Technical Skills"
+            action="sh_non_technical_skill_view_action"
+            parent="sh_employee_extra_fields.menu_skill_config"
+            sequence="2"
+            />   
+            
+</odoo>            
+            

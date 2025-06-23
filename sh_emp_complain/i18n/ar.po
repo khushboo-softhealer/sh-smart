@@ -1,0 +1,766 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_emp_complain
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-24 12:51+0000\n"
+"PO-Revision-Date: 2020-09-24 12:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_emp_complain
+#: model:ir.ui.menu,name:sh_emp_complain.sh_complain_category_menu
+msgid " Complain Category"
+msgstr "فئة الشكوى"
+
+#. module: sh_emp_complain
+#: model:mail.template,subject:sh_emp_complain.send_new_complain_notification_responsible_user
+msgid ""
+"${object.created_by.company_id.name} -Complain ${object.name} - "
+"${object.subject}"
+msgstr ""
+"${object.created_by.company_id.name} -تذمر ${object.name} - "
+"${object.subject}"
+
+#. module: sh_emp_complain
+#: model:mail.template,subject:sh_emp_complain.send_complain_refused_notification_created_user
+msgid ""
+"${object.created_by.company_id.name} -Complain ${object.name} - "
+"${object.subject} - Refused"
+msgstr ""
+"${object.created_by.company_id.name} -تذمر ${object.name} - "
+"${object.subject} - رفض"
+
+#. module: sh_emp_complain
+#: model:mail.template,subject:sh_emp_complain.send_complain_resolved_notification_created_user
+msgid ""
+"${object.created_by.company_id.name} -Complain ${object.name} - "
+"${object.subject} - Resolved"
+msgstr ""
+"${object.created_by.company_id.name} -تذمر ${object.name} - "
+"${object.subject} - تم الحل"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>About Refused</b>"
+msgstr "<b>حول رفض</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>About Resolved</b>"
+msgstr "<b>حول حل</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Comment</b>"
+msgstr "<b>تعليق</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Complaint Category</b>"
+msgstr "<b>فئة كومبالين</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Complaint Raised By</b>"
+msgstr "<b>أثار كومبالين بواسطة</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Complain Description</b>"
+msgstr "<b>وصف الشكوى</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Date Of Complain</b>"
+msgstr "<b>تاريخ الشكوى</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Has Effect On</b>"
+msgstr "<b>له تأثير على</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Rating</b>"
+msgstr "<b>تقييم</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Refused By</b>"
+msgstr "<b>رفضه</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Resolved By</b>"
+msgstr "<b>حل بواسطة</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Responsible Person</b>"
+msgstr "<b>شخص مسؤول</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Subject</b>"
+msgstr "<b>موضوع</b>"
+
+#. module: sh_emp_complain
+#: model:mail.template,body_html:sh_emp_complain.send_new_complain_notification_responsible_user
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/>\n"
+"\t\t\t<br/>\n"
+"\t\t\tComplain\n"
+"\t\t\t<b>${object.subject}</b>\n"
+"\t\t\t-\n"
+"\t\t\t<b>${object.name}</b>\n"
+"\t\t\tsubmitted by \n"
+"\t\t\t<b>${object.created_by.partner_id.name}</b>\n"
+"\t\t\t.\n"
+"\t\t\t<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div>\n"
+"\t\t\t<br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/>\n"
+"\t\t\t<br/>\n"
+"\t\t\tComplain\n"
+"\t\t\t<b>${object.subject}</b>\n"
+"\t\t\t-\n"
+"\t\t\t<b>${object.name}</b>\n"
+"\t\t\tsubmitted by \n"
+"\t\t\t<b>${object.created_by.partner_id.name}</b>\n"
+"\t\t\t.\n"
+"\t\t\t<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div>\n"
+"\t\t\t<br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: sh_emp_complain
+#: model:mail.template,body_html:sh_emp_complain.send_complain_refused_notification_created_user
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/><br/>\n"
+"\t\t\tYour Complain <b>${object.subject}</b> - <b>${object.name}</b> Refused by <b>${object.refused_by.name}</b>.<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div><br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/><br/>\n"
+"\t\t\tYour Complain <b>${object.subject}</b> - <b>${object.name}</b> Refused by <b>${object.refused_by.name}</b>.<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div><br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: sh_emp_complain
+#: model:mail.template,body_html:sh_emp_complain.send_complain_resolved_notification_created_user
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/><br/>\n"
+"\t\t\tYour Complain <b>${object.subject}</b> - <b>${object.name}</b> Resolved by <b>${object.resolved_by.name}</b> Successfully.<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div><br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/><br/>\n"
+"\t\t\tYour Complain <b>${object.subject}</b> - <b>${object.name}</b> Resolved by <b>${object.resolved_by.name}</b> Successfully.<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div><br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "رمز نوع النشاط"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_refuse_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_resolve_wizard_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Close"
+msgstr "أغلق"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain__state__closed
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: sh_emp_complain
+#: model:ir.actions.report,name:sh_emp_complain.report_compain
+msgid "Complaint Report"
+msgstr "تقرير شكوى"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__company_id
+msgid "Company"
+msgstr "شركة"
+
+#. module: sh_emp_complain
+#: model:ir.actions.act_window,name:sh_emp_complain.sh_complain_view_actions
+#: model:ir.model,name:sh_emp_complain.model_sh_complain
+#: model:ir.ui.menu,name:sh_emp_complain.sh_complain_menu
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_refuse_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_resolve_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_tree_view
+msgid "Complain"
+msgstr "تذمر"
+
+#. module: sh_emp_complain
+#: model:ir.actions.act_window,name:sh_emp_complain.sh_complain_categories_view_actions
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__name
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_categorie_search_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_categories_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_categories_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Complain Categories"
+msgstr "فئات الشكوى"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__complain_category
+msgid "Complain Category"
+msgstr "فئة الشكوى"
+
+#. module: sh_emp_complain
+#: model:ir.ui.menu,name:sh_emp_complain.sh_complain_management_menu
+msgid "Complain Management"
+msgstr "إدارة الشكوى"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__name
+msgid "Complain Sequence"
+msgstr "تسلسل الشكوى"
+
+#. module: sh_emp_complain
+#: model:ir.ui.menu,name:sh_emp_complain.sh_emp_complain_configure_menu
+msgid "Configuration"
+msgstr "ترتيب"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__create_date
+msgid "Create Date"
+msgstr "تاريخ الإنشاء"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__created_by
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Created By"
+msgstr "انشأ من قبل"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Created Date"
+msgstr "تاريخ الإنشاء"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__create_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__create_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__create_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__create_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__create_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__department
+msgid "Department"
+msgstr "قسم"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__description
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Description"
+msgstr "وصف"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__display_name
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__display_name
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__display_name
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__display_name
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_search_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_tree_view
+msgid "Effect"
+msgstr "تأثير"
+
+#. module: sh_emp_complain
+#: model:ir.actions.act_window,name:sh_emp_complain.sh_effect_model_view_actions
+#: model:ir.ui.menu,name:sh_emp_complain.sh_effect_model_menu
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_search_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_tree_view
+msgid "Effect On"
+msgstr "يأثر على"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "Employee Complain Report-"
+msgstr "تقرير شكوى الموظف-"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_refuse_wizard_form_view
+msgid "Enter Refuse Comment"
+msgstr "أدخل تعليق الرفض"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_resolve_wizard_form_view
+msgid "Enter Resolve Comment"
+msgstr "أدخل حل التعليق"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__ref_comment
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__res_comment
+msgid "Enter your Comment"
+msgstr "أدخل تعليقك"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع على سبيل المثال FA- المهام"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_categorie_search_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_search_view
+msgid "Group by..."
+msgstr "مجموعة من..."
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__has_effect_on
+msgid "Has Effect On"
+msgstr "له تأثير على"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__3
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__3
+msgid "High"
+msgstr "عالي"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__id
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__id
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__id
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__id
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__id
+msgid "ID"
+msgstr "هوية شخصية"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "رمز للإشارة إلى نشاط استثناء."
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_needaction
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديدها ، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_is_follower
+msgid "Is Follower"
+msgstr "تابع"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__is_resolve
+msgid "Is Resolve"
+msgstr "هو حل"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain____last_update
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories____last_update
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard____last_update
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard____last_update
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__write_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__write_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__write_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__write_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__write_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__write_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__0
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__0
+msgid "Low"
+msgstr "منخفض"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__5
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__5
+msgid "Max"
+msgstr "ماكس"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__4
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__4
+msgid "Maximum"
+msgstr "أقصى"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__2
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__2
+msgid "Minimum"
+msgstr "الحد الأدنى"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__name
+msgid "Name"
+msgstr "اسم"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain__state__new
+msgid "New"
+msgstr "جديد"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__1
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__1
+msgid "Normal"
+msgstr "عادي"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_refuse_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_resolve_wizard_form_view
+msgid "Ok"
+msgstr "حسنا"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Post Complain"
+msgstr "تقديم شكوى"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__rating
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__priority
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__priority
+msgid "Rating"
+msgstr "تقييم"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain__state__refused
+msgid "Refused"
+msgstr "رفض"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__refused_comment
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Refused Comment"
+msgstr "التعليق المرفوض"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Refused Complain"
+msgstr "شكوى مرفوضة"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Reset To Draft"
+msgstr "إعادة التعيين إلى المسودة"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Resolve"
+msgstr "حل"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Resolve Comment"
+msgstr "حل التعليق"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain__state__resolve
+msgid "Resolved"
+msgstr "تم الحل"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__resolved_comment
+msgid "Resolved Comment"
+msgstr "تعليق تم حله"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Resolved Complain"
+msgstr "حل شكوى"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__refused_by
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__resolved_by
+msgid "Responsible Person"
+msgstr "شخص مسؤول"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__resp_persons
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__responsible_persons
+msgid "Responsible Persons"
+msgstr "الأشخاص المسؤولين"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_user_id
+msgid "Responsible User"
+msgstr "مستخدم مسؤول"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_tree_view
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: sh_emp_complain
+#: model:ir.model,name:sh_emp_complain.model_sh_complain_categories
+msgid "Sh Complain Categories"
+msgstr "فئات الشكوى"
+
+#. module: sh_emp_complain
+#: model:ir.model,name:sh_emp_complain.model_sh_complain_refuse_wizard
+msgid "Sh Complain Refuse Wizard"
+msgstr "معالج رفض شكوى الشيخ"
+
+#. module: sh_emp_complain
+#: model:ir.model,name:sh_emp_complain.model_sh_complain_resolve_wizard
+msgid "Sh Complain Resolve Wizard"
+msgstr "معالج حل شكوى الشيخ"
+
+#. module: sh_emp_complain
+#: model:ir.model,name:sh_emp_complain.model_sh_effect_model
+msgid "Sh Effect"
+msgstr "تأثير ش"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__state
+msgid "State"
+msgstr "حالة"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة \n"
+"متأخر: تاريخ الاستحقاق فات بالفعل \n"
+"اليوم: تاريخ النشاط هو اليوم \n"
+"مخطط لها: الأنشطة المستقبلية."
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__subject
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Subject"
+msgstr "موضوع"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "To resolve Complain"
+msgstr "لحل الشكوى"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل."
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain__state__waiting
+msgid "Waiting For Approval"
+msgstr "بانتظار الموافقة"
+
+#. module: sh_emp_complain
+#: model:ir.actions.act_window,name:sh_emp_complain.sh_complain_refuse_wizard_view_actions
+#: model:ir.actions.act_window,name:sh_emp_complain.sh_complain_resolve_wizard_view_actions
+msgid "resolve Comment"
+msgstr "حل التعليق"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Product for store-->
+    <record model="ir.ui.view" id="sh_dynamic_price_softhealer_product_template_form_normal_inherit_custom_view">
+        <field name="name">sh.dynamic.price.sh.softhealer.product.template.product.form.form.inherit.custom</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <field name='detailed_type' position='before'>
+                <field name='sh_sales_price_with_depends' invisible='0'/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

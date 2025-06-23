@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Employee performance reporting Menus-->
+    <menuitem
+        id="sh_emp_performance_report_menu_reporting"
+        name="Reporting"
+        groups="sh_hr_payroll.group_hr_payroll_manager"
+        parent="sh_hr_payroll.menu_hr_payroll_root"
+        sequence="90" />
+    <menuitem id="sh_emp_performance_report_menu_performance_report"
+        name="Performance Report"
+        groups="sh_hr_payroll.group_hr_payroll_manager"
+        parent="sh_emp_performance_report.sh_emp_performance_report_menu_reporting"
+        action="sh_performance_report_wizard_view_action"
+        sequence="999" />
+</odoo>

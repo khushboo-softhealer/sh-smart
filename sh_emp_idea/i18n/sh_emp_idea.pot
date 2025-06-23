@@ -1,0 +1,594 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_emp_idea
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-24 13:18+0000\n"
+"PO-Revision-Date: 2020-09-24 13:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_emp_idea
+#: model:ir.ui.menu,name:sh_emp_idea.sh_ideas_menu
+msgid " Idea"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.ui.menu,name:sh_emp_idea.sh_ideas_category_menu
+msgid " Idea Category"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:mail.template,subject:sh_emp_idea.send_new_idea_notification_responsible_user
+msgid ""
+"${object.created_by.company_id.name} -Idea ${object.name} - "
+"${object.subject}"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:mail.template,subject:sh_emp_idea.send_idea_approved_notification_created_user
+msgid ""
+"${object.created_by.company_id.name} -Idea ${object.name} - "
+"${object.subject} - Approved"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:mail.template,subject:sh_emp_idea.send_idea_refused_notification_created_user
+msgid ""
+"${object.created_by.company_id.name} -Idea ${object.name} - "
+"${object.subject} - Refused"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:mail.template,body_html:sh_emp_idea.send_new_idea_notification_responsible_user
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/><br/>\n"
+"\t\t\tIdea <b>${object.subject}</b> - <b>${object.name}</b> submitted by <b>${object.created_by.partner_id.name}</b>.<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.idea&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div><br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:mail.template,body_html:sh_emp_idea.send_idea_approved_notification_created_user
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/><br/>\n"
+"\t\t\tYour Idea <b>${object.subject}</b> - <b>${object.name}</b> Approved by <b>${object.approved_by.name}</b> Successfully.<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.idea&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div><br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:mail.template,body_html:sh_emp_idea.send_idea_refused_notification_created_user
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/><br/>\n"
+"\t\t\tYour Idea <b>${object.subject}</b> - <b>${object.name}</b> Refused by <b>${object.refused_by.name}</b>.<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.idea&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div><br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_form_view
+msgid "Approve"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.actions.act_window,name:sh_emp_idea.sh_idea_approve_wizard_view_actions
+#: model:ir.actions.act_window,name:sh_emp_idea.sh_idea_refuse_wizard_view_actions
+msgid "Approve Comment"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea__state__approve
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_form_view
+msgid "Approved"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__approved_comment
+msgid "Approved Comment"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_search_views
+msgid "Approved Idea"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_approve_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_refuse_wizard_form_view
+msgid "Cancel"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_form_view
+msgid "Close"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea__state__closed
+msgid "Closed"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__company_id
+msgid "Company"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__create_date
+msgid "Create Date"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__created_by
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_search_views
+msgid "Created By"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_search_views
+msgid "Created Date"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__create_uid
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_approve_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_categories__create_uid
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_refuse_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_approve_wizard__create_date
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_categories__create_date
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_refuse_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_categories__department
+msgid "Department"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__description
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_form_view
+msgid "Description"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__display_name
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_approve_wizard__display_name
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_categories__display_name
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_refuse_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_approve_wizard_form_view
+msgid "Enter Approve Comment"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_refuse_wizard_form_view
+msgid "Enter Refuse Comment"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_approve_wizard__app_comment
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_refuse_wizard__ref_comment
+msgid "Enter your Comment"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,help:sh_emp_idea.field_sh_idea__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_categorie_search_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_search_views
+msgid "Group by..."
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea__rating__3
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_approve_wizard__priority__3
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_refuse_wizard__priority__3
+msgid "High"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__id
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_approve_wizard__id
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_categories__id
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_refuse_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,help:sh_emp_idea.field_sh_idea__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.actions.act_window,name:sh_emp_idea.sh_idea_view_actions
+#: model:ir.model,name:sh_emp_idea.model_sh_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_approve_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_refuse_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_search_views
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_tree_view
+msgid "Idea"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.actions.act_window,name:sh_emp_idea.sh_idea_categories_view_actions
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_categories__name
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_categorie_search_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_categories_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_categories_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_search_views
+msgid "Idea Categories"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__idea_category
+msgid "Idea Category"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.ui.menu,name:sh_emp_idea.sh_idea_management_menu
+msgid "Idea Management"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__name
+msgid "Idea Name"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,help:sh_emp_idea.field_sh_idea__message_needaction
+#: model:ir.model.fields,help:sh_emp_idea.field_sh_idea__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,help:sh_emp_idea.field_sh_idea__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__is_approve
+msgid "Is Approve"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea____last_update
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_approve_wizard____last_update
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_categories____last_update
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_refuse_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__write_uid
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_approve_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_categories__write_uid
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_refuse_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__write_date
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_approve_wizard__write_date
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_categories__write_date
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_refuse_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea__rating__0
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_approve_wizard__priority__0
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_refuse_wizard__priority__0
+msgid "Low"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea__rating__5
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_approve_wizard__priority__5
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_refuse_wizard__priority__5
+msgid "Max"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea__rating__4
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_approve_wizard__priority__4
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_refuse_wizard__priority__4
+msgid "Maximum"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea__rating__2
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_approve_wizard__priority__2
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_refuse_wizard__priority__2
+msgid "Minimum"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea__state__new
+msgid "New"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea__rating__1
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_approve_wizard__priority__1
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea_refuse_wizard__priority__1
+msgid "Normal"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,help:sh_emp_idea.field_sh_idea__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,help:sh_emp_idea.field_sh_idea__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,help:sh_emp_idea.field_sh_idea__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_approve_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_refuse_wizard_form_view
+msgid "Ok"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_form_view
+msgid "Post Idea"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__rating
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_approve_wizard__priority
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_refuse_wizard__priority
+msgid "Rating"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_form_view
+msgid "Refuse"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea__state__refused
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_form_view
+msgid "Refused"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__refused_comment
+msgid "Refused Comment"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_search_views
+msgid "Refused Idea"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_form_view
+msgid "Reset To Draft"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__approved_by
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__refused_by
+msgid "Responsible Person"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__resp_persons
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea_categories__responsible_persons
+msgid "Responsible Persons"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_search_views
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_tree_view
+msgid "Sequence"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model,name:sh_emp_idea.model_sh_idea_approve_wizard
+msgid "Sh Idea Approve Wizard"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model,name:sh_emp_idea.model_sh_idea_categories
+msgid "Sh Idea Categories"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model,name:sh_emp_idea.model_sh_idea_refuse_wizard
+msgid "Sh Idea Refuse Wizard"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__state
+msgid "State"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,help:sh_emp_idea.field_sh_idea__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__subject
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_search_views
+msgid "Subject"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model_terms:ir.ui.view,arch_db:sh_emp_idea.sh_idea_search_views
+msgid "To Approve Idea"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,help:sh_emp_idea.field_sh_idea__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields,field_description:sh_emp_idea.field_sh_idea__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sh_emp_idea
+#: model:ir.model.fields.selection,name:sh_emp_idea.selection__sh_idea__state__waiting
+msgid "Waiting For Approval"
+msgstr ""

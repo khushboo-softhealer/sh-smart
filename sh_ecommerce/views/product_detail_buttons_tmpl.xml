@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Product Detail Support Buttons -->
+    <template id='sh_ecommerce_product_detail_support_buttons_tmpl' inherit_id="website_sale.product" name="Product Detail Support Buttons">
+        <xpath expr="//form[@action='/shop/cart/update']" position="inside">
+            <t t-set="combination_info" t-value="product_variant._get_combination_info_variant()" />
+            
+            <!-- Technical Support -->
+            <a id="btn_technical_support_product_crate_ticket_id"
+                class="btn btn-primary btn-lg mt8 cls_open_pop_form"
+                t-attf-data-user_public="#{request.env.user._is_public()}"
+                t-attf-data-user_name="#{request.env.user.name}"
+                t-attf-data-user_partner_id="#{request.env.user.partner_id.id}"
+                t-attf-data-product_name="#{product_variant.name}"
+                t-attf-data-email="#{request.env.user.partner_id.email}"
+                t-attf-data-attachment_size='#{request.website.attachment_size}'
+                t-attf-data-mobile="#{request.env.user.partner_id.mobile}"
+                t-attf-data-button="technical_support" href="#">Technical Support							
+            </a>
+
+            <!-- Demo Support -->
+            <a id="btn_demo_product_crate_ticket_id"
+                class="btn btn-primary btn-lg mt8 cls_open_pop_form" 
+                t-attf-data-user_public="#{request.env.user._is_public()}"
+                t-attf-data-user_name="#{request.env.user.name}"
+                t-attf-data-user_partner_id="#{request.env.user.partner_id.id}"
+                t-attf-data-product_name="#{product_variant.name}"
+                t-attf-data-email="#{request.env.user.partner_id.email}"
+                t-attf-data-mobile="#{request.env.user.partner_id.mobile}"
+                t-attf-data-button="demo_support" href="#">Demo							
+            </a>
+
+            <!-- Customization Support -->
+            <a id="btn_demo_product_new_customization_id"
+                class="btn btn-primary btn-lg mt8 cls_open_pop_form" 
+                t-attf-data-user_public="#{request.env.user._is_public()}"
+                t-attf-data-user_name="#{request.env.user.name}"
+                t-attf-data-user_partner_id="#{request.env.user.partner_id.id}"
+                t-attf-data-product_name="#{product_variant.name}"
+                t-attf-data-email="#{request.env.user.partner_id.email}"
+                t-attf-data-mobile="#{request.env.user.partner_id.mobile}"
+                t-attf-data-attachment_size='#{request.website.attachment_size}'
+                t-attf-data-button="new_customization" href="#">New Customization							
+            </a>
+        </xpath>
+    </template>
+</odoo>
+    
