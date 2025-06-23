@@ -1,0 +1,7 @@
+<template id="template" xml:space="preserve">
+    <t t-name="sh.softhealer.website.video.youtube">
+        <div class="player ratio ratio-16x9 embed-responsive-item h-100">
+            <iframe t-att-id="'youtube-player' + widget.videoUrl" t-att-src="widget.videoUrl" allowFullScreen="true" frameborder="0" enablejsapi="1" autoplay="1" allow="autoplay"></iframe>
+        </div>
+    </t>
+</template>

@@ -1,0 +1,166 @@
+#sh_website_hr_recruitment_jobs_banner{
+    @include sh_other_page_banner;
+}
+
+#sh_website_hr_recruitment_jobs_detail_breadcrumb{
+    @include sh_other_page_banner;
+}
+
+#sh_website_hr_recruitment_jobs_apply_breadcrumb{
+    @include sh_other_page_banner;
+}
+// JOb Thankyou page SCSS start //
+.sh_cls_job_thank_you{
+    h1{
+        font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom:10px;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-font-size-mobile);
+        }
+    }
+    p{
+        font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom:10px;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-website-normal-text-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-website-normal-text-font-size-mobile);
+        }
+    }
+    h3{
+        font-size: var(--sh-website-heading-title-font-size);color: var(--sh-website-heading-title-font-color);font-weight: var(--sh-website-heading-title-font-weight);margin-bottom:0;line-height: var(--sh-website-heading-title-line-height);
+    }
+    .col-lg-5{
+        @include media-breakpoint-down(lg){
+            text-align: center;
+        }
+    h4{
+        font-size: var(--sh-website-heading-title-font-size);color: var(--sh-website-heading-title-font-color);font-weight: var(--sh-website-heading-title-font-weight);margin-bottom:10px;line-height: var(--sh-website-heading-title-line-height);
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-font-size-mobile);
+        }
+    }
+    i.fa.fa-envelope{font-size:20px; color:o-color(o-color-1); margin-right:5px;}
+    i.fa.fa-phone{font-size:20px; color:o-color(o-color-1); margin-right:5px;}
+    a{text-decoration:none; color:o-color(o-color-1) !important;   font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-website-normal-text-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-website-normal-text-font-size-mobile);
+        }
+    
+    }
+    span{text-decoration:none; color:o-color(o-color-1) !important;   font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-website-normal-text-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-website-normal-text-font-size-mobile);
+        }
+    }
+}
+    .col-lg-12.text-center.mb32{ font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-website-normal-text-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-website-normal-text-font-size-mobile);
+        }
+    a.btn{color:#fff;}
+    
+    }
+}
+// JOb Thankyou page SCSS end //
+
+// contact thankyou page scss start //
+.sh_cls_contact_us_thank_you{
+    .me-lg-auto{
+        width: 100% !important;
+    }
+    .col-lg-4{
+        display: none !important;
+        @include media-breakpoint-down(md) {
+               margin-top: 20px; 
+        }
+    }
+    .fa.rounded-circle.fa-4x{
+        color:#fff;
+        @include media-breakpoint-down(md){
+            width: 5rem;height: 5rem;line-height: 5rem;font-size: 45px;
+        }
+    }
+    h1{
+        font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom:10px;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-font-size-mobile);
+        }
+    }
+    hr.s_hr{border-top: 1px solid o-color(o-color-1) !important;}
+    h5{
+        font-size: var(--sh-website-heading-title-font-size);color: var(--sh-website-heading-title-font-color);font-weight: var(--sh-website-heading-title-font-weight);margin-bottom:10px;line-height: var(--sh-website-heading-title-line-height);
+    }
+    p{
+        font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom:10px;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-website-normal-text-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-website-normal-text-font-size-mobile);
+        }
+    }
+    .list-unstyled{
+        li{
+            color:o-color(o-color-1) !important;   font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+            &:first-child{
+                font-size: var(--sh-website-heading-title-font-size) !important;color: var(--sh-website-heading-title-font-color) !important;font-weight: var(--sh-website-heading-title-font-weight);margin-bottom:10px;line-height: var(--sh-website-heading-title-line-height);    
+            }
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-website-normal-text-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-website-normal-text-font-size-mobile);
+            }
+                i{
+                    font-size:20px; color:o-color(o-color-1);
+                }
+            
+        }
+    }
+}
+
+// contact thankyou page scss end //
+.s_blog_post_sh_softhealer_website_custom{background: #fff;
+    // .dynamic_snippet_template{
+    //     .row {
+    //         &:first-child {
+    //             &::after {content: "";background: linear-gradient(to top, #fff 22%, transparent 100%);width: 100%;height: 300px;position: absolute;bottom: 0;left: 0;right: 0;}
+    //         }
+    //     }
+    // }
+    .sh_expoler_more_btn_div{
+        text-align: center;
+        z-index: 1;
+        position: relative;
+        .sh_explore_more_btn {
+            box-shadow: none;
+            background: #564BC6;
+            color: #fff;
+            padding: 12px 30px;
+            svg {
+                stroke: #fff;
+                display: inline-block;
+                width: 20px;
+                margin-left: 8px;
+            }
+        }
+    }
+}

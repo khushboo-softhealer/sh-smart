@@ -1,0 +1,209 @@
+<section id="sh_pushpa_2_movie_first_section"
+                    class="sh_pushpa_2_movie_first_section aos-init aos-animate">
+                    <div class="container">
+                        <div class="sh_why_use_crm_section_main">
+                            <div class="sh_inner_box">
+                                <div class="row">
+                                    <div
+                                        class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 d-flex align-items-center">
+                                        <div class="sh_why_use_crm_section_content"
+                                            data-aos="fade-right">
+                                            <h2 class="sh_why_use_crm_section_content_title">Movie
+                                                Outing: Pushpa 2 - The Rule</h2>
+                                            <div class="sh_why_use_crm_section_content_box">
+                                                <div class="sh_why_use_crm_section_content_text">
+                                                    At Softhealer Technologies, we believe in
+                                                    creating memorable experiences that go beyond
+                                                    the workplace. One such thrilling event was our
+                                                    team outing to watch the much-anticipated
+                                                    blockbuster, Pushpa 2 - The Rule. The day was
+                                                    filled with excitement, camaraderie, and an
+                                                    unforgettable cinematic experience.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 align-self-center">
+                                        <div class="sh_column_inner_box" data-aos="fade-left">
+                                            <div class="sh_photo_group">
+                                                <div class="sh_second_photo">
+                                                    <img
+                                                        src="theme_softhealer_website\static\src\img\blogs_bkp\pushpa_2\1.webp"
+                                                        alt="Generate Leads Opportunity"
+                                                        title="Transform Your Business with Our Advanced CRM Solutions"
+                                                        loading="lazy" style="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                 <section id='sh_crm_solution_tab_section'
+                    class="sh_crm_solution_tab_section aos-init aos-animate">
+                    <div class="sh_crm_solution_tab_section_main">
+                        <div class="sh_crm_solution_tabs_box">
+                            <div class="sh_crm_solution_tabs" data-aos="fade-up">
+
+                                <ul class="nav nav-tabs sh_crm_solution_nav_tab">
+                                    <li class="nav-item sh_crm_solution_tabs_item active">
+                                        <a
+                                            class="nav-link active sh_crm_solution_tabs_item_link"
+                                            href="#crm_solution_tab_1">
+                                            <div class="sh_crm_solution_tabs_item_svg">
+                                                <div class="sh_number">01</div>
+                                            </div>
+                                            The Build-Up</a>
+                                    </li>
+                                    <li class="nav-item sh_crm_solution_tabs_item">
+                                        <a class="nav-link sh_crm_solution_tabs_item_link "
+                                            href="#crm_solution_tab_2"
+                                        >
+                                            <div class="sh_crm_solution_tabs_item_svg">
+                                                <div class="sh_number">02</div>
+                                            </div>
+                                            The Cinematic Experience</a>
+                                    </li>
+                                    <li class="nav-item sh_crm_solution_tabs_item">
+                                        <a class="nav-link sh_crm_solution_tabs_item_link"
+                                            href="#crm_solution_tab_3"
+                                        ><div
+                                                class="sh_crm_solution_tabs_item_svg">
+                                                <div class="sh_number">03</div>
+                                            </div>
+                                            Memories to Cherish</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="crm_solution_tab_1" class="sh_crm_solution_tab_sub_section">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div
+                                        class="col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-12 col-xs-12 col-12">
+                                        <div class="sh_crm_solution_tab_content"
+                                            data-aos="fade-right">
+                                            <div class="sh_heading_div">
+                                                <div class="sh_number_div">01</div>
+                                                <h2 class="sh_crm_solution_tab_title">The Build-Up</h2>
+                                            </div>
+                                            <p class="sh_crm_solution_tab_text">From the moment the
+                                                announcement of the outing was made, the excitement
+                                                among the team was palpable. Pushpa 2 - The Rule,
+                                                the sequel to the iconic Pushpa: The Rise, had
+                                                everyone eager to witness the next chapter of Allu
+                                                Arjun’s journey as the indomitable Pushpa Raj. To
+                                                add to the excitement, the event was scheduled as a
+                                                midweek break, giving everyone a refreshing pause
+                                                from their daily routines.</p>
+
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-xxl-7 col-xl-7 col-lg-7 col-md-6 col-sm-12 col-xs-12 col-12">
+                                        <div class="sh_crm_solution_tab_img_box ps-lg-5"
+                                            data-aos="fade-left">
+                                            <img
+                                                src="theme_softhealer_website\static\src\img\blogs_bkp\pushpa_2\2.webp"
+                                                alt="Lead - Opportunity"
+                                                title="Transform Your Business with Our Advanced CRM Solutions"
+                                                loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="crm_solution_tab_2" class="sh_crm_solution_tab_sub_section">
+                            <div class="container">
+                                <div class="row align-items-center flex-row-reverse">
+                                    <div
+                                        class="col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-12 col-xs-12 col-12">
+                                        <div class="sh_crm_solution_tab_content"
+                                            data-aos="fade-left"
+                                            data-aos-delay="300">
+                                            <div class="sh_heading_div">
+                                                <div class="sh_number_div">02</div>
+                                                <h2 class="sh_crm_solution_tab_title">The Cinematic
+                                                    Experience</h2>
+                                            </div>
+                                            <p class="sh_crm_solution_tab_text">As the lights dimmed
+                                                and the movie began, the theatre erupted with
+                                                cheers. Pushpa 2 - The Rule delivered on all fronts
+                                                – gripping action sequences, powerful dialogues, and
+                                                breathtaking visuals. Allu Arjun’s electrifying
+                                                performance and the storyline’s unexpected twists
+                                                had everyone on the edge of their seats. <br />
+                                            <br />
+                                                The theatre resonated with applause during the
+                                                high-octane moments, and the collective laughter
+                                                during comic relief scenes highlighted the bond we
+                                                share as a team. It was an experience that brought
+                                                us closer, blending entertainment with a sense of
+                                                unity. </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-xxl-7 col-xl-7 col-lg-7 col-md-6 col-sm-12 col-xs-12 col-12">
+                                        <div class="sh_crm_solution_tab_img_box pe-lg-5"
+                                            data-aos="fade-right"
+                                            data-aos-delay="300">
+                                            <img
+                                                src="theme_softhealer_website\static\src\img\blogs_bkp\pushpa_2\3.webp"
+                                                alt="Activity Managements"
+                                                title="Transform Your Business with Our Advanced CRM Solutions"
+                                                loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="crm_solution_tab_3" class="sh_crm_solution_tab_sub_section">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div
+                                        class="col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-12 col-xs-12 col-12">
+                                        <div class="sh_crm_solution_tab_content"
+                                            data-aos="fade-right"
+                                            data-aos-delay="500">
+                                            <div class="sh_heading_div">
+                                                <div class="sh_number_div">03</div>
+                                                <h2 class="sh_crm_solution_tab_title">Memories to
+                                                    Cherish</h2>
+                                            </div>
+                                            <p class="sh_crm_solution_tab_text">The Pushpa 2 - The
+                                                Rule outing wasn’t just about watching a movie; it
+                                                was about celebrating our shared love for cinema,
+                                                fostering team spirit, and creating memories that
+                                                we’ll cherish forever. Events like these remind us
+                                                that at Softhealer Technologies, we are more than
+                                                just colleagues; we are a family that grows stronger
+                                                with each experience. <br /><br /> As we look
+                                                forward to more such outings and celebrations, the
+                                                Pushpa 2 movie outing will remain a standout event
+                                                in our journey. Here’s to many more moments of joy
+                                                and togetherness at Softhealer Technologies! </p>
+
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-xxl-7 col-xl-7 col-lg-7 col-md-6 col-sm-12 col-xs-12 col-12">
+                                        <div class="sh_crm_solution_tab_img_box ps-lg-5"
+                                            data-aos="fade-left"
+                                            data-aos-delay="500">
+
+                                            <img
+                                                src="theme_softhealer_website\static\src\img\blogs_bkp\pushpa_2\4.webp"
+                                                alt="Partner Portal"
+                                                title="Transform Your Business with Our Advanced CRM Solutions"
+                                                loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

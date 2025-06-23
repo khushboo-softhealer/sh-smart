@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- CUSTOM HEADER -->
+    <template id="sh_snippet_options" name="Softhealer Snippet Options"
+        inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='HeaderLayout']//we-button[@data-name='header_default_opt']"
+            position="before">
+            <we-button title="Softhealer Website Header"
+                data-name="header_global_search_opt"
+                data-customize-website-views="theme_softhealer_website.global_search_template_header_default"
+                data-customize-website-variable="'global-search'"
+                data-img="/theme_softhealer_website/static/src/img/snippets_options/header.png" />
+        </xpath>
+    </template>
+
+    <!--CUSTOM FOOTER-->
+    <template id="sh_snippet_options_custom_header" inherit_id="website.snippet_options"
+        name="Website Custom Footer">
+        <!-- help -->
+        <xpath
+            expr="//div[@data-js='WebsiteLevelColor']//we-button[@data-customize-website-views='website.footer_custom']"
+            position="before">
+            <we-button title="Softhealer Website Footer"
+                data-customize-website-views="theme_softhealer_website.template_softhealer_custom_footer"
+                data-customize-website-variable="'softhealer_custom_footer'"
+                data-img="/theme_softhealer_website/static/src/img/snippets_options/footer.png" />
+        </xpath>
+    </template>
+
+    <!-- Softhealer Hr Recruitment Snippet Options -->
+    <template id="snippet_options" inherit_id="website.snippet_options" name="Softhealer Hr Recruitment Snippet Options">
+    <xpath expr="." position="inside">
+        <div data-selector="main:has(.sh_website_hr_recruitment_jobs_list)" data-page-options="true" groups="website.group_website_designer" data-no-check="true" string="Jobs Page">
+            <we-checkbox string="Countries Filter"
+                         data-customize-website-views="theme_softhealer_website.sh_job_filter_by_countries"
+                         data-no-preview="true"
+                         data-reload="/"/>
+            <we-checkbox string="Departments Filter"
+                         data-customize-website-views="theme_softhealer_website.sh_job_filter_by_departments"
+                         data-no-preview="true"
+                         data-reload="/"/>
+            <we-checkbox string="Offices Filter"
+                         data-customize-website-views="theme_softhealer_website.sh_job_filter_by_offices"
+                         data-no-preview="true"
+                         data-reload="/"/>
+            <we-checkbox string="Employment Types Filter"
+                         data-customize-website-views="theme_softhealer_website.sh_job_filter_by_employment_type"
+                         data-no-preview="true"
+                         data-reload="/"/>
+            <we-checkbox string="Call To Action"
+                         data-customize-website-views="theme_softhealer_website.sh_job_call_to_action"
+                         data-no-preview="true"
+                         data-reload="/"/>
+        </div>
+    </xpath>
+</template>
+</odoo>

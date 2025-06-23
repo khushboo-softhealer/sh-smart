@@ -1,0 +1,110 @@
+<div class="sh_content_detail">
+                                     <h2 class="sh_heading_title">How To Install Custom Module In Odoo.sh</h2>
+                                <p class="sh_text">
+                                    Odoo is a suite of business solutions, offering two types of
+                                    editions: Enterprise and Community.
+                                    The Enterprise edition is licensed and provides additional
+                                    features compared to the Community
+                                    version. The Community version, on the other hand, is fully
+                                    open-source but comes with limited
+                                    features. However, both versions share a common aspect: they are
+                                    customizable according to
+                                    your requirements.
+                                </p>
+                                <p class="sh_text">
+                                    In the Enterprise editions, there are three types:
+                                </p>
+                                <p class="sh_text">
+                                    1) Odoo SaaS: In Odoo SaaS, custom modules cannot be used.
+                                </p>
+                                <p class="sh_text">
+                                    2) Odoo SH: Odoo SH, also known as Odoo Platform as a Service
+                                    (PaaS), offers fully optimized
+                                    cloud servers and allows customization of Odoo to meet your
+                                    needs.
+                                </p>
+                                <p class="sh_text">
+                                    3) Odoo Enterprise On-premise: In the Odoo Enterprise On-premise
+                                    version, Odoo provides
+                                    Enterprise addons, enabling you to run Odoo on your own server
+                                    and customize it as required.
+                                </p>
+                                <div class="mt-3 mb-3">
+                                    <video controls muted="muted">
+                                            <source src="/theme_softhealer_website/static/src/video/odoo_custom_.mp4" type="video/mp4">
+                                        </video>
+                                </div>
+                                <br/>
+                                <h6 class="sh_subtitle">
+                                    Now Let’s take a look at how to install custom module in odoo sh and on premise (community
+                                    and enterprise)
+                                </h6>
+                                <h6 class="sh_subtitle">
+                                    Install Custom Modules on Odoo sh
+                                </h6>
+                                <h6 class="sh_subtitle">
+                                    Go to your odoo.sh project select instance and click on the Github button as shown in image
+                                    below.
+                                </h6>
+                                <div class="sh_image">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/custom_addons/s1.png" alt="How To Connect Github With Odoo.sh" title="How To Connect Github With Odoo.sh" />
+                                </div>
+                                <h6 class="sh_subtitle">
+                                    After clicking on the Github button, you will redirect in github. Where click on ‘Add File’ and
+                                    ‘Upload File’.
+                                </h6>
+                                <div class="sh_image">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/custom_addons/s2.png" alt="How To Upload Module on Odoo.sh" title="How To Upload Module on Odoo.sh" />
+                                </div>
+                                <h6 class="sh_subtitle">
+                                    Now, Extract your downloaded module, drag it and drop here.
+                                </h6>
+                                <div class="sh_image">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/custom_addons/s3.png"  alt="How To Extract Module on Github" title="How To Extract Module on Github" />
+                                </div>
+                                <h6 class="sh_subtitle">
+                                    Once you drop your custom module it will upload, After completing uploading add a commit
+                                    message and click on ‘Commit changes’.
+                                </h6>
+                                <div class="sh_image">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/custom_addons/s4.png"  alt="How To Commit Changes On Odoo.sh"  title="How To Commit Changes On Odoo.sh" />
+                                </div>
+                                <h6 class="sh_subtitle">
+                                    After committing modules, odoo.sh will build automatically. Once building is complete just
+                                    connect your database and go to the application and find and install it. Done
+                                </h6>
+                                <div class="sh_image">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/custom_addons/s5.png" alt="How To Add Commit Message On Github" title="How To Add Commit Message On Github" />
+                                </div>
+                                <div class="sh_notice">
+                                    Notice:
+                                </div>
+                                <p class="sh_text">
+                                    If your custom module has external python dependencies. Make new simple file
+                                    ‘requirements.txt’ and add your dependencies with versions like ‘pyfcm==1.5.4’.
+                                </p>
+                                <p class="sh_text">
+                                    Once you upload requirements.txt file in github, odoo sh will install it automatically.
+                                </p>
+                                <p class="sh_text">
+                                    If you are using on premise odoo.
+                                </p>
+                                <ul>
+                                    <li class="sh_text">
+                                        Create one folder ‘custom_modules’ on your on premise system, if it does not
+                                        exist.
+                                    </li>
+                                    <li class="sh_text">
+                                        Add your custom module in the ‘custom_modules’ folder.
+                                    </li>
+                                    <li class="sh_text">
+                                        Do not forget to add the path of ‘custom_modules’ in odoo.conf file.
+                                    </li>
+                                    <li class="sh_text">
+                                        After that, Just restart the odoo service, find the module in the odoo application
+                                        and install it.
+                                    </li>
+
+                                </ul>
+                                </div>
+                            </div>

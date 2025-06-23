@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tender Solutions page -->
+    <template id="theme_softhealer_website_royal_paint_tmpl"
+        name="Royal Paint">
+        <t t-call="website.layout">
+            <div class="oe_structure oe_empty" id="wrap">
+
+                <!-- Royal Paint Banner Section start -->
+                <section id="sh_royal_paint_page_banner"
+                    class="sh_royal_paint_page_banner sh_other_page_banner">
+                    <div class="container">
+                        <div class="sh_banner_content">
+                            <h1 class="sh_banner_title">Transformation of Royal Paints with Odoo
+                                Implementation
+                            </h1>
+                            <ul class="sh_banner_breadcrumb">
+                                <li>
+                                    <a class="sh_banner_breadcrumb_link" href="/">Case Study<span
+                                            class="sh_banner_breadcrumb_icon fa fa-angle-right"></span></a>
+                                </li>
+                                <li>
+                                    <span class="sh_banner_normal_text">Transformation of Royal
+                                        Paints with Odoo Implementation</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- Royal Paint Banner Section End  -->
+
+                <section id="royal_paint_about_content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
+                                <div class="sh_image">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/images/visitor_management/video_new.webp" />
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
+                                <div class="sh_company_details">
+                                    <h2 class="sh_main_title">Company Details</h2>
+                                    <p class="sh_text">
+                                        <b>
+                                            <font class="sh_heading_title">Company name :</font>
+                                        </b>
+                                        <font>
+                                            Royal Paints
+                                        </font>
+                                    </p>
+                                    <p class="sh_text">
+                                        <b>
+                                            <font class="sh_heading_title">Location :</font>
+                                        </b>
+                                        <font>
+                                            Kenya
+                                        </font>
+                                    </p>
+                                    <p class="sh_text">
+                                        <b>
+                                            <font class="sh_heading_title">Industry :</font>
+                                        </b>
+                                        <font>
+                                            Paint manufacturing
+                                        </font>
+                                    </p>
+                                    <p class="sh_text">
+                                        <b>
+                                            <font class="sh_heading_title">Services offered :</font>
+                                        </b>
+                                        <font>
+                                            ERP solution , Odoo Implementation , Odoo customisation,
+                                            Odoo support , Odoo migration, Odoo development, Odoo
+                                            Training &amp; Servier Hosting
+                                        </font>
+                                    </p>
+                                    <p class="sh_text">
+                                        <b>
+                                            <font class="sh_heading_title">Odoo applications used :</font>
+                                        </b>
+                                        <font>
+                                            Sales, Purchase, Inventory, Manufacturing, Invoicing
+                                        </font>
+                                    </p>
+                                    <p class="sh_text">
+                                        <b>
+                                            <font class="sh_heading_title">Other applications
+                                                (integrations) :</font>
+                                        </b>
+                                        <font>
+                                            Google maps
+                                        </font>
+                                    </p>
+                                    <p class="sh_text">
+                                        <b>
+                                            <font class="sh_heading_title">Hosting and edition :</font>
+                                        </b>
+                                        <font>
+                                            Local Hosting, Odoo 15 Community
+                                        </font>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Company Details start -->
+                        <!-- Company Details end -->
+                        <!-- Royal_paint_About_description about section start -->
+                        <section id="royal_paint_about_description"
+                            class="royal_paint_about_description aos-init aos-animate">
+                            <div class="container">
+                                <div class="row">
+
+
+                                    
+                                    <div
+                                        class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 align-self-center">
+                                        <div class="sh_odoo_services_about_content"
+                                            data-aos="fade-left">
+                                            <h2 class="sh_heading_title">
+                                                About Royal Paints
+                                            </h2>
+                                            <p class="sh_text">
+                                                Royal Paint is a leading Kenyan manufacturer and
+                                                distributor of high-quality decorative and
+                                                architectural coatings. With a team of industry
+                                                experts and state-of-the-art manufacturing
+                                                processes, Royal Paint delivers products that meet
+                                                stringent performance standards while prioritising
+                                                environmental safety. Certified to comply with
+                                                Kenyan standards, Royal Paint offers a diverse range
+                                                of solutions for any coating project. Trusted by
+                                                customers for reliability and excellence, Royal
+                                                Paint is your partner for success in coating
+                                                surfaces.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 align-self-center">
+                                        <div class="sh_about_image_box" data-aos="fade-right">
+                                            <div class="sh_img">
+                                                <img
+                                                    src="/theme_softhealer_website/static/src/img/images/law_management/sh_about_img.webp"
+                                                    alt="Law Management"
+                                                    title="Advanced Law Management System - Enhance Legal Operations &amp; Client Relations"
+                                                    loading="lazy" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Challenges start -->
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="sh_main_title">Challenges</h2>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Manual Processes :</font>
+                                    </b>
+                                    <font>
+                                        Royal Paints heavily relied on manual processes and Excel
+                                        spreadsheets for data management, leading to inefficiencies
+                                        and errors.
+                                    </font>
+                                </p>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Costing Calculations :</font>
+                                    </b>
+                                    <font>
+                                        Royal Paints heavily relied on manual processes and Excel
+                                        spreadsheets for data management, leading to inefficiencies
+                                        and errors.
+                                    </font>
+                                </p>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Quality Control :</font>
+                                    </b>
+                                    <font>
+                                        Lack of tools for quality control hindered Royal Paints'
+                                        ability to ensure consistent product quality and meet
+                                        industry standards.
+                                    </font>
+                                </p>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Inventory Management :</font>
+                                    </b>
+                                    <font>
+                                        Inadequate inventory management systems resulted in
+                                        difficulties in tracking raw materials and finished
+                                        products, leading to stockouts and overstock situations.
+                                    </font>
+                                </p>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Limited Visibility :</font>
+                                    </b>
+                                    <font>
+                                        Fragmented systems and manual processes restricted the
+                                        company's visibility into day-to-day operations and hindered
+                                        strategic decision-making.
+                                    </font>
+                                </p>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Salesman tracking :</font>
+                                    </b>
+                                    <font>
+                                        Managing the sales team for Royal Paints involved regular
+                                        visits to the market to collect orders, but monitoring and
+                                        controlling their activities posed a challenge. Instances
+                                        occurred where sales representatives engaged in personal
+                                        tasks during working hours, falsely representing themselves
+                                        as being in the market. This behaviour adversely affected
+                                        productivity.
+                                    </font>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Challenges end -->
+                        <!-- Solutions Offered start -->
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <h2 class="sh_main_title">Solutions Offered</h2>
+
+                                <div class="sh_service_content_dic">
+                                    <h3> 1. Automation of Manual Processes</h3>
+                                    <ul class="sh_service_content_ul">
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    With Odoo, Royal Paints transitioned from manual
+                                                    data management and Excel spreadsheets to
+                                                    automated processes. Odoo's integrated modules
+                                                    streamlined workflows, reducing inefficiencies
+                                                    and errors.
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Implemented Odoo's Sales, Purchase, Inventory,
+                                                    and Manufacturing modules to automate various
+                                                    aspects of the business, from order processing
+                                                    to inventory management.
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="sh_service_content_dic">
+                                    <h3> 2. Advanced Costing Calculations</h3>
+                                    <ul class="sh_service_content_ul">
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Odoo's robust costing features addressed Royal
+                                                    Paints' challenges in accurate costing for
+                                                    manufacturing orders. Customised Odoo modules
+                                                    provided precise costing calculations, including
+                                                    direct and indirect costs, ensuring
+                                                    profitability analysis for each production
+                                                    order.
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Leveraged Odoo's accounting integration to
+                                                    seamlessly integrate costing data into financial
+                                                    reports for comprehensive analysis.
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sh_service_content_dic">
+                                    <h3> 3. Enhanced Quality Control</h3>
+                                    <ul class="sh_service_content_ul">
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Odoo's Quality module was customised to meet
+                                                    Royal Paints' quality control requirements. This
+                                                    module facilitated comprehensive quality
+                                                    inspections at various stages of production,
+                                                    ensuring consistent product quality and
+                                                    compliance with industry standards.
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Integrated quality control checkpoints within
+                                                    manufacturing processes to monitor and maintain
+                                                    product integrity throughout the production
+                                                    cycle.
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="sh_service_content_dic">
+                                    <h3> 4. Streamlined Inventory Management:</h3>
+                                    <ul class="sh_service_content_ul">
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Odoo's Inventory module offered advanced
+                                                    inventory management functionalities, addressing
+                                                    Royal Paints' challenges in tracking raw
+                                                    materials and finished products.
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Implemented barcode scanning for efficient
+                                                    inventory tracking and real-time stock updates,
+                                                    minimising stockouts and overstock situations.
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sh_service_content_dic">
+                                    <h3> 5. Improved Visibility and Control</h3>
+                                    <ul class="sh_service_content_ul">
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Odoo's integrated platform provided Royal Paints
+                                                    with centralised visibility into day-to-day
+                                                    operations, overcoming the limitations of
+                                                    fragmented systems.
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Customised Odoo dashboards and reporting tools
+                                                    provided real-time insights into key performance
+                                                    metrics, enabling informed decision-making and
+                                                    strategic planning.
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Utilised Odoo's CRM module for effective sales
+                                                    team tracking, enabling managers to monitor
+                                                    sales activities, track performance metrics, and
+                                                    ensure accountability.
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="sh_service_content_dic">
+                                    <h3> 6. Sales Team Monitoring and Control</h3>
+                                    <ul class="sh_service_content_ul">
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Provided Mobile App to monitor sales team
+                                                    activities effectively. Implemented geolocation
+                                                    tracking and activity logging functionalities to
+                                                    track sales representatives' movements and tasks
+                                                    during working hours.
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span
+                                                    class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+
+                                                <span>
+                                                    Leveraged Odoo's accounting integration to
+                                                    seamlessly integrate costing data into financial
+                                                    reports for comprehensive analysis.
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Solutions Offered end -->
+                        <!-- Impact Created start -->
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <h2 class="sh_main_title">Impact Created</h2>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Operational Efficiency :</font>
+                                    </b>
+                                    <font>
+                                        The implementation of Odoo streamlined Royal Paints'
+                                        day-to-day operations, reducing manual effort and errors,
+                                        and enabling seamless collaboration across departments.
+                                    </font>
+                                </p>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Improved Analysis :</font>
+                                    </b>
+                                    <font>
+                                        With enhanced reporting and analytics capabilities, Royal
+                                        Paints gained deeper insights into their business
+                                        performance, facilitating better decision-making and
+                                        strategic planning.
+                                    </font>
+                                </p>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Quality Control :</font>
+                                    </b>
+                                    <font>
+                                        Lack of tools for quality control hindered Royal Paints'
+                                        ability to ensure consistent product quality and meet
+                                        industry standards.
+                                    </font>
+                                </p>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Costing Accuracy :</font>
+                                    </b>
+                                    <font>
+                                        Odoo's costing solutions enabled Royal Paints to calculate
+                                        manufacturing order costs accurately, leading to improved
+                                        profitability and cost management.
+                                    </font>
+                                </p>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Unified Platform :</font>
+                                    </b>
+                                    <font>
+                                        By consolidating their operations onto a single platform,
+                                        Royal Paints achieved greater visibility and control over
+                                        their business processes, fostering collaboration and
+                                        driving growth.
+                                    </font>
+                                </p>
+                                <p class="sh_text_about">
+                                    <b>
+                                        <font class="sh_heading_title">Enhanced salesman
+                                            productivity :</font>
+                                    </b>
+                                    <font>
+                                        using Salesmen tracking application it boosted salesman
+                                        productivity and tracking and monitoring become easy.
+                                    </font>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Impact Created end -->
+
+                        <!-- conclusion start -->
+                         <div class="row mt-4">
+                            <div class="col-12">
+                                <h2 class="sh_main_title">Conclusion</h2>
+                                <p class="sh_text_about">
+                                    <font>
+                                        The implementation of Odoo streamlined Royal Paints'
+                                        day-to-day operations, reducing manual effort and errors,
+                                        and enabling seamless collaboration across departments.
+                                    </font>
+                                </p>
+                            </div>
+                         </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+
+    <data noupdate="1">
+
+        <!-- Default pagese  below 2 record must put in no update 1-->
+        <record id="theme_softhealer_website_royal_paint_page" model="website.page">
+            <field name="is_published">True</field>
+            <field name="url">/royal-paint</field>
+            <field name="view_id"
+                ref="theme_softhealer_website.theme_softhealer_website_royal_paint_tmpl" />
+            <field name="track">True</field>
+            <field name="website_id" model="website"
+                eval="obj().env['website'].sudo().get_current_website()" />
+        </record>
+
+        <record id="theme_softhealer_website_royal_paint_menu" model="website.menu">
+            <field name="name">Royal Paint</field>
+            <field name="url">/royal-paint</field>
+            <field name="page_id"
+                ref="theme_softhealer_website.theme_softhealer_website_royal_paint_page" />
+            <field name="sequence" type="int">10</field>
+            <field name="website_id" model="website"
+                eval="obj().env['website'].sudo().get_current_website()" />
+        </record>
+
+    </data>
+
+</odoo>

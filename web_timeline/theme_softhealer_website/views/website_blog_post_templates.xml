@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Softhealer blog custom layout -->
+    <template id="dynamic_filter_template_blog_post_sh_softhealer_website_custom" name="Softhealer Blog Layout">
+
+        <figure t-foreach="records" t-as="data" class="sh_softhealer_website_blog_custom_snippet post s_blog_posts_post w-100 justify-content-center" data-number-of-elements="3">
+            <t t-set="record" t-value="data['_record']" />
+            <span t-if="is_sample" class="h5 float-end bg-primary text-uppercase rounded-circle px-2 py-2">Sample123</span>
+            <div class="sh_blog_box" style='position: relative;'>
+                <h5 class="mt0 mb4" t-field="record.post_date" t-options='{"format": "dd/MM/yyyy"}' />
+
+                <a class="s_blog_posts_post_cover position-relative d-flex flex-column shadow-sm overflow-hidden rounded text-decoration-none" target="_blank" t-att-href="data['call_to_action_url']">
+                    <t t-call="website.record_cover">
+                        <t t-set="_record" t-value="record" />
+                        <t t-set="_resize_height" t-value="512" />
+                        <t t-set="_resize_width" t-value="512" />
+                        <t t-set="use_filters" t-value="True" />
+                        <t t-set="additionnal_classes" t-value="'h-100 w-100 bg-600 position-absolute'" />
+                    </t>
+
+                    <figcaption class="text-center w-100 h-100 px-3 d-flex flex-column flex-grow-1" style='position:absolute;'>
+                        <div t-if="is_sample" class="h5 o_ribbon_right bg-primary text-uppercase">
+                            Sample</div>
+                        <div class="s_blog_posts_post_title text-white" t-field="record.name" />
+                    </figcaption>
+                </a>
+            </div>
+        </figure>
+
+    </template>
+
+    <template id="dynamic_filter_template_blog_post_sh_image_gird" name="Softhealer Image Grid">
+        <t t-set="classes" t-value="[
+            'sh_blog_items_1 g-height-6 g-col-lg-4 col-lg-4 col-md-6 col-sm-6 s_col_no_bgcolor sh_grid',
+            'sh_blog_items_2 g-col-lg-4 g-height-5 col-lg-4 col-md-6 col-sm-6 s_col_no_bgcolor sh_grid',
+            'sh_blog_items_3 g-col-lg-4 g-height-5 col-lg-4 col-md-6 col-sm-6 s_col_no_bgcolor sh_grid',
+            'sh_blog_items_4 g-col-lg-4 g-height-5 col-lg-4 col-md-6 col-sm-6 s_col_no_bgcolor sh_grid',
+            'sh_blog_items_5 g-height-6 g-col-lg-4 col-lg-4 col-md-6 col-sm-6 s_col_no_bgcolor sh_grid',
+            'sh_blog_items_6 g-col-lg-4 g-height-5 col-lg-4 col-md-6 col-sm-6 s_col_no_bgcolor sh_grid',
+            'sh_blog_items_7 g-height-4 g-col-lg-8 col-lg-8 col-md-6 col-sm-6 s_col_no_bgcolor sh_grid',
+            'sh_blog_items_8 g-col-lg-4 g-height-5 col-lg-4 col-md-6 col-sm-6 s_col_no_bgcolor sh_grid'
+        ]" />
+
+        <t t-set="records_list" t-value="enumerate(records)" />
+        <t t-foreach="records_list" t-as="data">
+            <t t-set="index" t-value="data[0]" />
+            <t t-set="record" t-value="data[1]['_record']" />
+            <t t-set="class_index" t-value="index % 8" />
+            <t t-set="css_class" t-value="classes[class_index]" />
+
+            <figure t-att-class="css_class" data-number-of-elements="3">
+
+                <div class="sh_blog_box" style="position: relative;">
+
+                    <a class="s_blog_posts_post_cover position-relative d-flex flex-column shadow-sm overflow-hidden text-decoration-none " target="_blank" t-att-href="data[1]['call_to_action_url']">
+                        <t t-call="website.record_cover">
+                        <t t-set="_record" t-value="record" />
+                        <t t-set="_resize_height" t-value="512" />
+                        <t t-set="_resize_width" t-value="512" />
+                        <t t-set="use_filters" t-value="True" />
+                        <t t-set="additionnal_classes" t-value="'h-100 w-100 bg-600 position-absolute'" />
+                    </t>
+                        <h5 class="mt0 mb4 sh_date" t-field="record.post_date" t-options='{"format": "dd/MM/yyyy"}' />
+                        <h5 class="mt0 mb4 sh_name" t-field="record.name" />
+                    </a>
+
+                </div>
+            </figure>
+        </t>
+
+    </template>
+
+
+    <template id="sh_softhealer_website_blog_detail_page_inherit" name="Blog Detail Page" inherit_id='website_blog.blog_post_complete'>
+        <xpath expr="//section[@id='o_wblog_post_top']//div[@id='title']//a[@id='o_wblog_post_content_jump']" position="replace"></xpath>
+
+        <xpath expr='//section[@id="o_wblog_post_top"]//div[@id="title"]//div[contains(@t-attf-class, "o_wblog_post_title")]' position='inside'>
+            <t t-call="website_blog.post_breadcrumbs">
+                <t t-set="additionnal_classes" t-value="'mb-3 bg-transparent sh_softhealer_breadcrumb_div'"></t>
+            </t>
+        </xpath>
+
+        <xpath expr='//section[@id="o_wblog_post_footer"]' position='replace'></xpath>
+    </template>
+
+    <template id="sh_softhealer_website_blog_breadcrumbs_inherit" name="Blog top breadcrumbs" inherit_id="website_blog.post_breadcrumbs">
+        <xpath expr="//li[hasclass('breadcrumb-item')][2]//a" position="replace">
+            <a t-attf-href="#{blog_url(tag=None, date_begin=None, date_end=None)}" t-esc="blog.sh_display_as_label"/>
+        </xpath>
+    </template>
+
+    <!-- Need to remove breadcrumbs from blog content section-->
+    <template id="sh_softhealer_website_blog_content_page_inherit" name="Blog Detail Page Content" inherit_id='website_blog.blog_post_content'>
+        <xpath expr='//t[@t-call="website_blog.post_breadcrumbs"]' position='replace'></xpath>
+        <xpath expr='//div[hasclass("css_editable_mode_hidden","text-muted")]' position='replace'></xpath>
+    </template>
+
+    <!-- Change the Fetched Elements Range -->
+    <template id="sh_s_dynamic_snippet_options_template_inherit" name="Sh S Dynamic Snippet Options Template" inherit_id="website.s_dynamic_snippet_options_template">
+        <xpath expr="//we-select[@data-name='number_of_records_opt']/we-button" position="attributes">
+            <attribute name="t-foreach">range(1, 100)</attribute>
+        </xpath>
+    </template>
+
+    <!-- Remove o_not_editable class from the  -->
+    <template id="sh_s_dynamic_snippet_template_inherit" name="Sh S Dynamic Snippet Template" inherit_id="website.s_dynamic_snippet_template">
+        <xpath expr="//div[contains(@class, 'o_not_editable')]" position="attributes">
+            <attribute name="class">container</attribute>
+        </xpath>
+    </template>
+
+</odoo>

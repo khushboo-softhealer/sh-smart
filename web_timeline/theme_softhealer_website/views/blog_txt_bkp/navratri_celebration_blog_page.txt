@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sh_softhealer_website_default_navratri_celebration_blog_page_tmpl_latest" name="Navrati Blog">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <!--  start banner Navratri Blog section  -->
+                <section id="sh_navratri_page_banner"
+                    class="sh_navratri_page_banner sh_other_page_banner">
+                    <div class="sh_banner_content">
+                        <h2 class="sh_banner_title">Navratri Celebration</h2>
+                        <p class="sh_banner_text"> Nine nights of power, joy, and devotion.</p>
+                        <ul class="sh_banner_breadcrumb">
+                            <li>
+                                <a class="sh_banner_breadcrumb_link" href="/">Home<span
+                                        class="sh_banner_breadcrumb_icon fa fa-angle-right"></span></a>
+                            </li>
+                            <li>
+                                <span class="sh_banner_normal_text">Navratri Celebration</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!--  end banner Navratri Blog section  -->
+                <!-- Navratri Blog page About-us Section Start -->
+                <section id="sh_navratri_page_about"
+                    class="sh_navratri_page_about aos-init aos-animate">
+                    <div class="container">
+                        <div class="row">
+                        <div
+                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 align-self-center">
+                                <div class="sh_about_content_box" data-aos="fade-right">
+                                    <h1 class="sh_about_title">
+                                        Blessings Of Goddess Durga
+                                    </h1>
+                                    <p class="sh_text">
+                                        Why do indian people celebrate Navratri? We celebrate Navratri because in those days celebrate the victory of "Durga Mata Over Mahishasura”. We have decorated our office and played garba together with all softhealer family. Our hearts happy after seeing these pictures. It's a funny and most memorable movement for all healers.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 align-self-center">
+                                <div class="sh_about_img_box" data-aos="fade-left">
+                                    <div class="row justify-content-center">
+                                        <div
+                                            class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 col-6  align-self-end">
+                                            <div class="sh_img_1">
+                                                <img
+                                                    src="/theme_softhealer_website/static/src/img/blogs_bkp/navratri_blog/sh_about_1.webp"
+                                                    alt="Project Management System" loading="lazy" />
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 col-sm-12">
+                                            <div class="sh_img_2">
+                                                <img
+                                                    src="/theme_softhealer_website/static/src/img/blogs_bkp/navratri_blog/sh_about_2.webp"
+                                                    alt="Project Task Management" loading="lazy" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div
+                                            class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6">
+                                            <div class="sh_img_3">
+                                                <img
+                                                    src="/theme_softhealer_website/static/src/img/blogs_bkp/navratri_blog/sh_about_3.webp"
+                                                    alt="PMS System" loading="lazy" />
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 col-6">
+                                            <div class="sh_img_4">
+                                                <img
+                                                    src="/theme_softhealer_website/static/src/img/blogs_bkp/navratri_blog/sh_about_4.webp"
+                                                    alt="HR Projects Tasks Management" loading="lazy" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             
+                        </div>
+                    </div>
+                </section>
+                <!-- Navratri Blog page About-us Section End -->
+
+                 <!--Navratri Image Slider  start-->
+         <section id="sh_navratri_image_slider" class="sh_navratri_image_slider aos-init aos-animate">
+            <div class="container">
+               <div class="sh-heading">
+                  <header>
+                     <h1>Navratri - Festival Of Nine Nights</h1>
+                     <h6>Navratri celebration unites us, encourages us to maximize what we have, and fosters joy as we share memorable moments with our team.</h6>
+                  </header>
+               </div>
+               <section class="custom_owl" data-aos="fade-right">
+                  <div id="navratri-slider" class="owl-carousel owl-theme">
+                     <div class="item">
+                        <figure>
+                           <img src="/theme_softhealer_website/static/src/img/blogs_bkp/navratri_blog/sh_image_1.webp" alt="ERP Solution" loading="lazy"/>
+                        </figure>
+                     </div>
+                     <div class="item">
+                        <figure>
+                           <img src="/theme_softhealer_website/static/src/img/blogs_bkp/navratri_blog/sh_image_2.webp" alt="CRM Solution" loading="lazy"/>
+                        </figure>
+                     </div>
+                     <div class="item">
+                        <figure>
+                           <img src="/theme_softhealer_website/static/src/img/blogs_bkp/navratri_blog/sh_image_3.webp" alt="POS Solution" loading="lazy"/>
+                        </figure>
+                     </div>
+                     <div class="item">
+                        <figure>
+                           <img src="/theme_softhealer_website/static/src/img/blogs_bkp/navratri_blog/sh_image_4.webp" alt="Web Devlopment" loading="lazy"/>
+                        </figure>
+                     </div>
+                     <div class="item">
+                        <figure>
+                           <img src="/theme_softhealer_website/static/src/img/blogs_bkp/navratri_blog/sh_image_5.webp" alt="Mobile Apps" loading="lazy"/>
+                        </figure>
+                     </div>
+                     <div class="item">
+                        <figure>
+                           <img src="/theme_softhealer_website/static/src/img/blogs_bkp/navratri_blog/sh_image_6.webp" alt="Custom Software" loading="lazy"/>
+                        </figure>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </section>
+         <!--Navratri Image Slider  end-->
+
+         <!-- Navratri celebration section start -->
+                <section id="sh_navratri_celebration_section"
+                    class="sh_navratri_celebration_section aos-init aos-animate">
+                    <div class="container">
+                        <div class="sh_heading_box">
+                            <h1 class="sh_title_box">Celebrate Navratri With Happiness And Blessings</h1>
+                            <p class="sh_text">Navratri celebrations at the workplace: transforming dullness into vibrancy, and boosting employee morale.</p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 sh_space">
+                                <div class="sh_inner_box h-100" data-aos="fade-up">
+                                    <div class="sh_icon">
+                                        01
+                                    </div>
+                                    <div class="sh-des">
+                                        <h3>All About Traditions</h3>
+                                        <p>We take so many pictures together in traditional clothes, there are some photos of people playing Garba, it’s really wonderful.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 sh_space">
+                                <div class="sh_inner_box h-100" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="sh_icon">
+                                        02
+                                    </div>
+                                    <div class="sh-des">
+                                        <h3>Light Up Our Lives</h3>
+                                        <p>
+                                            The photos done, let’s turn to another movement now, think what is it? think think! now it’s time to play garba together.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 sh_space">
+                                <div class="sh_inner_box h-100" data-aos="fade-up" data-aos-delay="600">
+                                    <div class="sh_icon">
+                                        03
+                                    </div>
+                                    <div class="sh-des">
+                                        <h3>Wonderfull Memories</h3>
+                                        <p>
+                                           We all healers prayed to Goddess Durga together in those nine days of Navratri. It's a most memorable movement.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Navratri celebration section start -->
+
+                <!--sh_navratri_video section strat-->
+                    <section id="sh_navratri_video" class="sh_navratri_video_section">
+                        <div class="container">
+                        <div class="sh_inner_section">
+                            <div class="sh_main_video_section">
+                                <div class="sh_video_button">
+                                    <a class="sh_video_icon" href="https://www.youtube.com/watch?list=PL-zDV7_rrd2pjl8cNmNRqbsjedwGT30BH&amp;v=1rLq0JgOG6Y&amp;feature=youtu.be" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M7 4v16l13 -8z" />
+                                    </svg>
+                                    </a>
+                                    <!-- Ripple -->
+                                    <svg class="sh_svg" viewBox="0 0 320 320">
+                                    <defs>
+                                        <circle id="circle-clip" cx="50%" cy="50%" r="25%"></circle>
+                                        <clipPath id="avatar-clip">
+                                            <use href="#circle-clip"></use>
+                                        </clipPath>
+                                    </defs>
+                                    <circle cx="50%" cy="50%" r="25%" fill="#fff" fill-opacity="1">
+                                        <animate attributeName="r" values="20%;40%" dur="4s" repeatCount="indefinite"></animate>
+                                        <animate attributeName="fill-opacity" values="1;0" dur="4s" repeatCount="indefinite"></animate>
+                                    </circle>
+                                    <circle cx="50%" cy="50%" r="25%" fill="#fff" fill-opacity="1">
+                                        <animate attributeName="r" values="20%;40%" dur="4s" begin="1s" repeatCount="indefinite"></animate>
+                                        <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="1s" repeatCount="indefinite"></animate>
+                                    </circle>
+                                    <circle cx="50%" cy="50%" r="25%" fill="#fff" fill-opacity="1">
+                                        <animate attributeName="r" values="20%;40%" dur="4s" begin="2s" repeatCount="indefinite"></animate>
+                                        <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="2s" repeatCount="indefinite"></animate>
+                                    </circle>
+                                    <circle cx="50%" cy="50%" r="25%" fill="#fff" fill-opacity="1">
+                                        <animate attributeName="r" values="20%;40%" dur="4s" begin="3s" repeatCount="indefinite"></animate>
+                                        <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="3s" repeatCount="indefinite"></animate>
+                                    </circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+         <!--sh_navratri_video section end-->
+            </div>
+        </t>
+    </template>
+</odoo>

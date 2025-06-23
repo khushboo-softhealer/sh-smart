@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- Image SLider Snippet Template1 -->
+    <template id="sh_image_slider_snippet" name="Sh Image SLider">
+        <section id="sh_life_at_softhealer_Global_Connections" class="sh_image_scroll" data-item_template="theme_softhealer_website.sh_image_slider_snippet_tmpl">
+            <div class="container">
+             <div class="sh_content_div">
+                            <div class="sh_heading_div">
+                                <h1 class="sh_heading">Workplace Environment</h1>
+                            </div>
+                            <div class="sh_text_div">
+                                <p class="sh_text">
+                                    Our workplace is more than just a hub for
+                                    innovation—it's a home where ideas come to life.
+                                    With open communication, mutual respect, and
+                                    teamwork at our core, we ensure a collaborative
+                                    environment where every voice is valued. Whether
+                                    it’s brainstorming sessions, client meetings, or
+                                    casual discussions, our dynamic space inspires
+                                    creativity and excellence.
+                                </p>
+                            </div>
+                        </div>
+                <div class="js_cls_render_image" />
+            </div>
+        </section>
+    </template>
+
+    <!-- Image SLider Snippet Template1 Structure -->
+    <template id="sh_image_slider_snippet_tmpl" name="Sh Snippet item 1">
+        <div id="">
+            <div class="row">
+                <t t-foreach="data" t-as="record">
+                    <div class="sh_image_card col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="sh_main_div">
+                            <div class="sh_img_div">
+                                    <img t-att-src="record['img_thumb']" class="sh_img" alt="image"/>
+                            </div>
+                            <div class="sh_content_div">
+                                <div class="sh_small_heading">
+                                    <span t-esc="record['sub_title']" class="sh_small_heading_span"/>
+                                </div>
+                                <div class="sh_content_heading_div">
+                                    <h1 class="sh_heading" t-esc="record['name']"/>
+                                </div>
+                            </div>
+                            <div class="hiii sh_opne_slider open_slider">
+                                <div class="sh_icon_div">
+                                    <span class="fa fa-arrows-alt"></span>
+                                </div>
+                            </div>
+                            <h1 t-esc="record['image_src']" class="d-none"/>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </template>
+
+    <!-- Image SLider Snippet Template1 Raw Structure -->
+    <!-- <template id="sh_image_slider_snippet_tmpl" name="Sh Snippet item 1">
+        <div>
+            <t t-foreach="data" t-as="record">
+                <div class="sh_image_card">
+                    <h1 t-esc="record['name']"/>
+                    <h1 t-esc="record['image_src']" class="d-none"/>
+
+                    <t t-foreach="record['image_src']" t-as="img_src">
+                        <img t-att-src="img_src" class="sh_thumbnail" alt="image"/>
+                    </t>
+                    <div class="hola">
+                    <span class="open_slider">+</span>
+                    </div>
+
+                </div>
+            </t>
+        </div>
+    </template> -->
+</odoo>

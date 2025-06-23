@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="sh_image_slider_view_form" model="ir.ui.view">
+        <field name="name">sh.image.slider.view.form</field>
+        <field name="model">sh.image.slider</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="sub_title" />
+                        <field name="website_published"/>
+                        <field name="img"/>
+                    </group>
+                    <group>
+                    
+                        <label for='images' />
+                        <field name="images" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" add-label="Slider Images" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_image_slider_view_tree" model="ir.ui.view">
+        <field name="name">sh.image.slider.view.tree</field>
+        <field name="model">sh.image.slider</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="sub_title" />
+                <field name="website_published"/>
+                <field name="img"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_image_slider_action" model="ir.actions.act_window">
+        <field name="name">Action Name</field>
+        <field name="res_model">sh.image.slider</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="sh_image_snippet_menu_editor" parent="softhealer_website_base.sh_website_editor_contact_menu" groups="softhealer_website_base.group_softhealer_website_editor_image_slider" name="Image Slider" action="theme_softhealer_website.sh_image_slider_action" />
+
+    <menuitem id="sh_image_snippet_menu_website" parent="website.menu_content" groups="softhealer_website_base.group_softhealer_website_editor_image_slider" name="Image Slider" action="sh_image_slider_action"/>
+
+</odoo>

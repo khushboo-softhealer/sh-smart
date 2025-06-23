@@ -1,0 +1,198 @@
+// start banner pos solution section // 
+#sh_pos_solution_banner {
+    @include sh_other_page_banner;
+}
+// end banner pos solution section // 
+// start about pos solution section // 
+#sh_pos_about_us_section {
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_about_img_box {
+        width: 100%;overflow: hidden;
+        .sh_img_1 {
+            height: 200px;width: 100%;border-radius: var(--sh-website-common-border-radius);box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            @include media-breakpoint-down(sm) {
+                height: 120px;
+            }
+            img {
+                height: 100%;width: 100%;border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+        .sh_img_2 {
+            height: 300px;width: 100%;border-radius: var(--sh-website-common-border-radius);box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            @include media-breakpoint-down(sm) {
+                height: 170px;
+            }
+            img {
+                height: 100%;width: 100%;border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+        .sh_img_3 {
+            height: 200px;width: 100%;border-radius: var(--sh-website-common-border-radius);margin-top: 30px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            @include media-breakpoint-down(sm) {
+                height: 120px;
+            }
+            img {
+                height: 100%;width: 100%;border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+
+        .sh_img_4 {
+            height: 250px;width: 100%;border-radius: var(--sh-website-common-border-radius);margin-top: 30px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            @include media-breakpoint-down(sm) {
+                height: 170px;
+            }
+            img {
+                height: 100%;width: 100%;border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+    }
+
+    .sh_about_content_box {
+        width: 100%;
+        h2.sh_about_title {
+            font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+            @include media-breakpoint-only(md) {
+                font-size: var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-font-size-mobile);margin-top: 0px;
+            }
+        }
+        p.sh_text {
+            font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+            @include media-breakpoint-only(md) {
+                font-size: var(--sh-website-normal-text-font-size-tablet);text-align: left;
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-website-normal-text-font-size-mobile);
+            }
+        }
+        .btn {  
+            @include sh_primary_button;margin-top:20px;
+            span {
+                display: flex;align-items: center;
+                svg {
+                    stroke: #fff;display: inline-block;width: 30px; padding-right:5px;height: 30px;
+                }
+            }
+        }
+    }
+}
+// end about pos solution section //
+// start why work pos solution section // 
+#sh_pos_solution_why_work_section {
+   @include sh_why_work_with_us_section;
+}
+// end why work pos solution section // 
+// start pos solution tab section  //
+#sh_pos_solution_tab_section {
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-only(md){
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    @include media-breakpoint-down(md){
+        padding-top: 0;padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_pos_solution_tab_section_main {
+        .sh_pos_solution_tab_sub_section{
+            padding: 40px 0;
+            @include media-breakpoint-between(lg, xl){
+                padding: 35px 0; 
+            }
+            @include media-breakpoint-only(md){
+                padding: 20px 0;
+            }
+            @include media-breakpoint-down(md){
+                padding: 20px 0;
+            }
+        }
+        .sh_pos_solution_tab_content {
+            padding: 0px 0px;
+            @include media-breakpoint-only(md) {
+                padding: 0;
+            }
+            @include media-breakpoint-down(md) {
+                padding: 0;padding-top: 30px;
+            }
+            .sh_sub_title {
+                @include sh_sub_badge;
+                margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+            }
+            h2.sh_heading_title {
+                font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-website-heading-title-font-weight);line-height: var(--sh-website-heading-title-line-height);color: var(--sh-website-heading-title-font-color);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);text-transform: capitalize;
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-section-heading-font-size-tablet);margin-bottom: 15px;
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile);
+                }
+            }
+            p.sh_text {
+                font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-website-normal-text-font-size-tablet)
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-website-normal-text-font-size-mobile)
+                }
+            }
+            .sh_pos_solution_primary_button {
+                .sh_pos_solution_primary_link {
+                    @include sh_primary_button;                   
+                    .sh_pos_solution_primary_link_right {
+                        svg {
+                            stroke: #fff;display: inline-block;width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .sh_pos_solution_tab_column_box {
+            position: relative;padding: 0px 0;
+            @include media-breakpoint-down(lg) {
+                padding: 0;
+            }
+            .sh_photo_group {
+                display: flex;position: relative;z-index: 10;
+                @include media-breakpoint-down(sm) {
+                    justify-content: center;
+                }
+            }
+            .sh_second_photo {
+                position: relative;width: 95%;height: 375px;
+                @include media-breakpoint-only(md) {
+                    height: 300px;width: 100%;
+                }
+                @include media-breakpoint-down(md) {
+                    height: auto;width: 100%;
+                }
+                img {
+                    width: 100%;height: 100%;box-shadow: 0 0px 30px rgba(38,42,76,.2);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                }
+                svg {
+                    bottom: -35px;right: -35px;width: 340px;height: auto;position: absolute;z-index: -1;
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                    @include media-breakpoint-down(lg) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+//  end pos solution tab section //
+// related_services section start //
+#sh_pos_solution_related_services {
+    @include sh_related_services_section;
+}
+// related services section end //
+// call to action start //
+#sh_pos_solution_call_to_action {
+    @include sh_call_to_action_section;
+}
+// call to action end //

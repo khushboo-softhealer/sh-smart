@@ -1,0 +1,467 @@
+.sh_oddo_migration_in_dubai_hero_section , .sh_oddo_migration_in_dubai_ERP_for_Your_Business{
+    &.sh_oddo_migration_in_dubai_hero_section_first_section{
+        position: relative; padding:150px 0px var(--sh-section-bottom-padding); overflow: hidden; background: #212240 !important;
+        @include media-breakpoint-down(lg){
+            padding:50px 0px var(--sh-section-bottom-padding-mobile);;
+        }
+        .sh_hero_main_section{
+            .sh_heading_div{
+                .sh_heading{font-size:50px; color: #fff;
+                    @include media-breakpoint-only(md){font-size:35px;}
+                    @include media-breakpoint-down(md){font-size:30px;}
+                }
+            }
+            .sh_content_div{
+                .sh_text {color: #fff; margin: 30px 0;}
+            }
+        }
+        .sh_img_div {height: 90%;}
+    }
+     .sh_img_div{
+         &.sh_responsive_img_in_odoo_page{height: 350px; width: 100%;
+            @include media-breakpoint-down(lg) {height: 300px;}
+        }
+         img {
+             width: 100%;border-radius: var(--sh-website-common-border-radius);height : 100%; object-fit: cover;
+         }
+     }
+     position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff ;
+     @include media-breakpoint-down(lg) {
+         padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+     }
+    .sh_hero_main_section{
+        @include media-breakpoint-down(lg) {margin-top: 30px;}
+        .sh_heading_div{
+            .sh_heading{
+                font-size:var(--sh-section-heading-font-size); color:#1e266d; font-weight:500;font-weight: 600;letter-spacing: -.01em;line-height: 1.1;margin-bottom:20px;
+                @include media-breakpoint-only(md){
+                    font-size:var(--sh-section-heading-font-size-tablet);
+                }
+                @include media-breakpoint-down(md){
+                    font-size:var(--sh-section-heading-font-size-mobile);
+                }
+            }
+        }
+        .sh_content_div{
+            .sh_text{
+                font-size: var(--sh-section-heading-sub-title-font-size);color: var(--sh-section-heading-sub-title-font-color) ;font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom); margin:30px 0px;
+                @include media-breakpoint-only(md){
+                    font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                }
+                @include media-breakpoint-down(md){
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile); margin-bottom: 0 ;
+                }
+            }
+        }
+        .sh_call_action_button {
+            
+            .btn {
+                position: relative;color: #ffffff;background: #212240;box-shadow: none;border-radius: 5px;width: max-content;display: flex;align-items: center;justify-content: center;outline: none;overflow: hidden;font-size: 18px;padding: 12px 30px;transition: .3s ease-in-out;border: 1px solid #212240;letter-spacing: .01em;cursor: pointer;min-width: auto;                
+                span {
+                    display: flex;align-items: center;
+                    svg {
+                        stroke: #fff;display: inline-block;width: 30px; padding-right:5px;
+                    }
+                    &.sh_arrow_icon {
+                        padding-left: 10px;
+                    }
+                }
+                @include media-breakpoint-down(lg) {
+                    font-size: 16px !important;
+                }
+            }
+            .btn-1{
+                @include sh_primary_button;
+            }
+        }
+    }
+}
+
+// start bus booking about section //
+#sh_oddo_migration_in_dubai_Business_Growth {
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_odoo_migration_responsive{
+        @include media-breakpoint-down(lg) {flex-direction: column-reverse;}
+    }
+    .sh_section_heading {
+        width: var(--sh-section-heading-width-desktop);margin: 0 auto;margin-bottom: 40px;
+        @include media-breakpoint-down(lg) {
+            width: var(--sh-section-heading-width-mobile);margin-bottom: 20px;
+        }
+        .sh_section_heading_title {
+            font-size: var(--sh-section-heading-font-size);color: var(--sh-section-heading-font-color);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);text-align: center;text-transform: capitalize;
+            @include media-breakpoint-only(md) {
+                font-size: var(--sh-section-heading-font-size-tablet);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+        .sh_section_heading_text {
+            font-size: var(--sh-website-normal-text-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: 0;text-align: center;
+            @include media-breakpoint-only(md) {
+                font-size: var(--sh-website-normal-text-font-size-tablet)
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-website-normal-text-font-size-mobile)
+            }
+        }
+    }
+    .sh_img_box {
+        .sh_img_1 {
+            height: 350px;width: 100%; border-radius: var(--sh-website-common-border-radius);position: relative;
+            @include media-breakpoint-only(md){
+                width: 100%;height: 350px;margin: 0 auto;
+            }
+            @include media-breakpoint-down(md){
+                width: 100%;height: 300px;
+            }
+            img {
+                height: 100%;width: 100%;object-fit: cover;border-radius: var(--sh-website-common-border-radius);
+            }
+        }
+        .sh_shape {
+            position: absolute;bottom: -30px;right: -40px;z-index: -1;
+            @include media-breakpoint-only(md){
+                bottom: -20px;right: -35px;
+            }
+            @include media-breakpoint-down(md){
+                display:none;
+            }
+            svg {
+                height: 100px !important;width: 300px !important;
+                .cls-1 {
+                    fill: o-color(o-color-1);
+                }
+                @include media-breakpoint-down(lg){
+                    height: 100px !important;
+                }
+            }
+        }
+    }
+    .sh_content_box{
+        width:100%;
+        @include media-breakpoint-down(lg) {margin-top: 30px;}
+        .sh_box_title{
+            font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-font-size-mobile);
+            }
+        }
+        .sh_box_text{
+            font-size: var(--sh-website-normal-text-font-size);font-weight:var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-sub-title-font-size-mobile);
+            }
+        }
+    }
+}
+// end bus booking about section //
+.sh_oddo_migration_in_dubai_ERP_in_Dubai{
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_img_div{ width: 100%; height: 350px;
+        @include media-breakpoint-down(lg) {height: 300px;}
+        .sh_img{
+            width: 100%; border-radius: var(--sh-website-common-border-radius); height: 100%; object-fit: cover;
+        }
+    }
+    .sh_heading_div{margin-bottom: 50px;
+        .sh_heading{
+            font-size:var(--sh-section-heading-font-size); color:#1e266d; font-weight:500;font-weight: 600;letter-spacing: -.01em;line-height: 1.1;text-align: center;     
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_odoo_migration_in_dubai_ERP_in_Dubai_responsive {
+        @include media-breakpoint-down(lg) {
+            flex-direction: column-reverse; align-items: center;
+        }
+    }
+    .sh_main_div{
+        @include media-breakpoint-only(md) {margin-top: 30px; display: flex; flex-wrap: wrap; justify-content: start;}
+        @include media-breakpoint-down(md) {margin-top: 30px; }
+        .sh_points_main_div{display: flex; align-items: center;margin-bottom : 20px;
+            @include media-breakpoint-only (md) {width: 50%; margin-bottom: 30px; align-items: start;}     
+            @include media-breakpoint-only (md) {padding: 0 10px;}
+   
+
+            .sh_point_div{
+                .sh_svg_icon_div{background: rgba(87, 74, 199, 0.1); padding: 15px;border-radius: 100%;
+                    @include media-breakpoint-down (lg) {padding: 10px;}
+                    svg {width : 40px;
+                        @include media-breakpoint-down (lg) {width: 30px;}
+                        path {fill : #564BC6;}
+                    }
+                }
+    
+            }
+            .sh_points_content{margin-left: 20px;
+                .sh_point_heading_div{margin-bottom: 5px;
+                    .sh_point_heading{
+                        font-size: 20px ; color:#1e266d; font-weight:500;font-weight: 600;letter-spacing: -.01em;line-height: 1.1;margin-bottom:0;   
+                        @include media-breakpoint-down (lg ) {font-size:18px}        
+                    }
+                }
+                .sh_points_text_div{
+                    .sh_points_text{
+                        font-size: var(--sh-section-heading-sub-title-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);
+                        @include media-breakpoint-only(md){
+                            font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                        }
+                        @include media-breakpoint-down(md){
+                            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//POS Retail Shop start
+#sh_oddo_migration_in_dubai_service {
+    padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_solar_managemnet_key_feature_div{padding-bottom: 30px;
+        header {
+            text-align: center;
+            @include media-breakpoint-down(lg) {
+                margin-top: 0px;
+            }
+            h2 {
+                color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: 50px;text-transform: capitalize;
+                @include media-breakpoint-only(md){
+                    font-size: var(--sh-section-heading-font-size-tablet);margin-bottom: 30px;
+                }
+                @include media-breakpoint-down(md) {
+                    width: auto;font-size: var(--sh-section-heading-font-size-mobile);margin-bottom: 20px;
+                }
+            }
+        }
+        .sh_inner_box {
+            .row {
+                @include media-breakpoint-down(md) {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+            }
+            .sh_order_box{
+                @include media-breakpoint-down(md) {
+                    order: 1;
+                }
+            }
+            .sh_odoo_custom_tab_box {
+                position: relative;padding:50px;background-color: rgba(87, 74, 199, 0.05);border-radius: 10px;
+                @include media-breakpoint-only(lg) {padding: 30px;}
+                @include media-breakpoint-down(lg) {
+                    padding: 20px;
+                    margin-top: 20px;
+                }
+                .sh_photo_group {
+                    display: flex;position: relative;z-index: 10;
+                    @include media-breakpoint-down(sm) {
+                        justify-content: center;
+                    }
+                }
+                .sh_second_photo {
+                    position: relative;width:100%;height: 100%;
+    
+                    @include media-breakpoint-down(md) {
+                        height: auto;
+                    }
+                    img {
+                        width: 100%;height: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                    }
+                    svg {
+                        bottom: -35px;right: -55px;width: 340px;height: auto;position: absolute;z-index: -1;
+                        .cls-1 {
+                            fill: o-color(o-color-1);
+                        }
+                        @include media-breakpoint-only (lg) {right: -35px;}
+                        @include media-breakpoint-down(lg) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .sh_odoo_custom_tab_content {
+                @include media-breakpoint-down(md) {
+                    margin-top: 20px;
+                 }
+                .sh_sub_title {
+                    @include sh_sub_badge;
+                    margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                    @include media-breakpoint-down(md) {
+                        font-size: var(--sh-section-heading-sub-title-font-size-mobile);margin-bottom: 15px;
+                    }
+                }
+                h2.sh_heading_title {
+                    font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-website-heading-title-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-website-heading-title-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+                    @include media-breakpoint-only(md)  {
+                        font-size: var(--sh-section-heading-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile);margin-bottom: 15px;
+                    }
+                }
+                p.sh_text {
+                    font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom:20px;
+                    @include media-breakpoint-only(md)  {
+                        font-size: var(--sh-section-heading-sub-title-font-size-tablet); 
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: var(--sh-section-heading-sub-title-font-size-mobile); 
+                    }
+                }
+                .btn {
+                    @include sh_primary_button;
+                    span {
+                        display: flex;align-items: center;
+                        
+                        svg {
+                            stroke: #fff;display: inline-block;width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        &:last-child{
+            padding: 0;
+        }
+    }
+}
+//POS Retail Shop end
+
+#sh_oddo_migration_in_dubai_service_provider_dubai {
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom: 60px;background-color: var(--sh-section-background-color); margin-top: var(--sh-section-top-padding);
+
+    @include media-breakpoint-down(lg){
+        padding-top:var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);margin-top: var(--sh-section-top-padding-mobile);
+    }
+    .sh_section_heading {
+        width: var(--sh-section-heading-width-desktop);margin: 0 auto;margin-bottom: 40px;
+        @include media-breakpoint-down(lg) {
+            width: var(--sh-section-heading-width-mobile);margin-bottom: 20px;
+        }
+        .sh_section_heading_title {
+            font-size: var(--sh-section-heading-font-size);color: var(--sh-section-heading-font-color);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);text-align: center;text-transform: capitalize;
+            @include media-breakpoint-only(md) {
+                font-size: var(--sh-section-heading-font-size-tablet);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+        .sh_section_heading_text {
+            font-size: var(--sh-website-normal-text-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: 0;text-align: center;
+            @include media-breakpoint-only(md) {
+                font-size: var(--sh-website-normal-text-font-size-tablet)
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-website-normal-text-font-size-mobile)
+            }
+        }
+    }
+    .sh_img_box {
+        .sh_img_1 {
+            height: 350px;width: 100%; border-radius: var(--sh-website-common-border-radius);position: relative;
+            @include media-breakpoint-only(md){
+                width: 100%;height: 350px;margin: 0 auto;
+            }
+            @include media-breakpoint-down(md){
+                width: 100%;height: 300px;margin-top: 30px;
+            }
+            img {
+                height: 100%;width: 100%;object-fit: cover;border-radius: var(--sh-website-common-border-radius);
+            }
+        }
+        .sh_shape {
+            position: absolute;bottom: -30px;right: -40px;z-index: -1;
+            @include media-breakpoint-only(md){
+                bottom: -20px;right: -35px;
+            }
+            @include media-breakpoint-down(md){
+                display:none;
+            }
+            svg {
+                height: 100px !important;width: 300px !important;
+                .cls-1 {
+                    fill: o-color(o-color-1);
+                }
+                @include media-breakpoint-down(lg){
+                    height: 100px !important;
+                }
+            }
+        }
+    }
+    .sh_content_box{
+        width:100%;
+        padding-left: 35px;
+        @include media-breakpoint-only(md){
+            margin-top:0px;padding-left:0;
+        }
+        @include media-breakpoint-down(md){
+            margin-top:30px;padding-left:0;
+        }
+        .sh_box_title{
+            font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-font-size-mobile);
+            }
+        }
+        .sh_box_text{
+            font-size: var(--sh-website-normal-text-font-size);font-weight:var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-sub-title-font-size-mobile);
+            }
+        }
+        .btn {  
+            @include sh_primary_button;margin-top:20px;
+            span {
+                display: flex;align-items: center;
+                svg {
+                    stroke: #fff;display: inline-block;width: 30px; padding-right:5px;height: 30px;
+                }
+            }
+        }
+    }
+}
+
+// call to action start //
+#sh_oddo_migration_in_dubai_ERP_in_Dubai_contact_us {
+    @include sh_call_to_action_section;
+    p.sh_text {
+        font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: #fff;line-height: var(--sh-website-normal-text-line-height);margin-bottom:0px;
+        @include media-breakpoint-only(md)  {
+            font-size: var(--sh-section-heading-sub-title-font-size-tablet);margin-bottom: 0px;
+        }
+        @include media-breakpoint-down(md) {
+            font-size: var(--sh-section-heading-sub-title-font-size-mobile);margin-bottom: 20px; text-align: center;
+        }
+    }
+}
+// call to action end //

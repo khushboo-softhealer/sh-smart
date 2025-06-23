@@ -1,0 +1,199 @@
+//  banner-start //
+#sh_bhediya_movie_page_banner {
+    @include sh_other_page_banner;
+}
+//  banner-end //
+
+
+// sh_bhediya_blog_about section start //
+#sh_bhediya_blog_about{
+    position: relative;padding-top:var(--sh-section-top-padding);  background:#fff;padding-bottom:80px;
+    @include media-breakpoint-between(lg, xl){
+        padding-bottom: var(--sh-section-bottom-padding);
+    }
+    
+    .sh_about_image_box{
+        width:100%;
+        .sh_img{
+            height:350px;width:90%;border-radius: var(--sh-website-common-border-radius);position: relative;
+            img{
+                height:100%; width:100%;border-radius:var(--sh-website-common-border-radius);
+            }
+            .sh_shape{
+                @include media-breakpoint-down(md){
+                    display:none;
+                }
+                svg{
+                    height:350px !important; width:350px !important;
+                    position: absolute; bottom:-150px; right:-30px;z-index:-1; display: block; stroke:o-color(o-color-1); stroke-width:3;
+                }
+            }
+        }
+    }
+    .sh_odoo_services_about_content{
+        h1.sh_heading_title{
+            font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);margin-bottom:15px;
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-font-size-mobile);margin-bottom:15px;
+            }
+        }
+        p.sh_text{
+            font-size: var(--sh-website-normal-text-font-size);font-weight:var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom:0;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+            }
+        }
+
+    }
+}
+@include media-breakpoint-down(xl){
+    #sh_bhediya_blog_about{
+        .sh_about_image_box{
+            .sh_img{
+                height:300px;
+                img{
+                    object-fit: cover;
+                }
+                .sh_shape{
+                    svg{
+                        height: 300px !important;width: 300px !important;right:-30px;bottom: -120px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-down(lg){
+    #sh_bhediya_blog_about{
+        padding-top: var(--sh-section-top-padding-mobile) ;padding-bottom:var(--sh-section-bottom-padding-mobile);
+        .sh_about_image_box{
+            .sh_img{
+                width:100%;margin-bottom:50px;
+            }
+
+        }
+
+    }
+}
+@include media-breakpoint-down(sm){
+    #sh_bhediya_blog_about{
+        .sh_about_image_box{
+            .sh_img{
+                height:250px;
+                .sh_shape{
+                    svg{
+                        height: 250px !important;width: 250px !important;right: -10px;bottom: -100px;
+                    }
+                }
+            }
+        }
+    }
+}
+// sh_bhediya_blog_about section end //
+
+
+
+
+// sh_bhediya_movie_image_blog section page //
+#sh_bhediya_movie_image_blog{
+    position: relative;padding-top:var(--sh-section-top-padding);padding-bottom:60px;
+    @include media-breakpoint-down(xl){
+        padding-bottom:var(--sh-section-bottom-padding);
+    }
+    @include media-breakpoint-down(lg){
+        padding-top: var(--sh-section-top-padding-mobile) ;padding-bottom:var(--sh-section-bottom-padding-mobile);
+    }
+
+    .sh_section_heading{
+        width: var(--sh-section-heading-width-desktop);margin: 0 auto;
+        @include media-breakpoint-down(xl){ 
+            width: var(--sh-section-heading-width-mobile);
+        }
+
+        h1.sh_title_heading{
+        font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom); text-align: center;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-font-size-tablet); 
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-font-size-mobile); 
+        }
+       }
+       p.sh_text{
+        font-size: var(--sh-section-heading-sub-title-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);text-align: center;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-sub-title-font-size-tablet); 
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+        }
+    }
+    }
+    .sh_image_box{
+        width:100%;margin-top:30px;
+        .sh_img_1{
+            height:300px;width:100%;border-radius: var(--sh-website-common-border-radius);position: relative;
+            @include media-breakpoint-only(lg){
+                height:220px;
+            }
+            @include media-breakpoint-only(md){
+                height:250px;
+            }
+            img{
+                height:100%;width:100%;border-radius: var(--sh-website-common-border-radius);
+            } 
+        }  
+    }
+    .sh_image_box:hover{
+        cursor: pointer;
+        .sh_desc:after{width:50%;}
+       }
+     
+}
+@include media-breakpoint-down(xl){
+    #sh_sh_bhediya_movie_image_blog{
+        .sh_image_box.box_2{
+            margin-top:30px;
+        } 
+        .sh_image_box{
+            margin-top:30px;
+            .sh_img_1{
+                height:250px;
+            }
+        }
+    }  
+}
+
+@include media-breakpoint-only(md){
+    #sh_bhediya_movie_image_blog{
+        .sh_image_box{
+            .sh_img_1{
+                height:250px;
+            }
+          }  
+    } 
+    .sh_image_box.box_2{
+        margin-top:30px;
+    }
+}
+@include media-breakpoint-down(md){
+    #sh_bhediya_movie_image_blog{ 
+      .sh_image_box{
+        margin-top: 30px;
+        .sh_img_1{
+            height:200px;
+            img{
+                object-fit: cover;
+            }
+        }
+        .sh_desc{margin-top:10px;}
+      }  
+    } 
+}
+// sh_bhediya_movie_image_blog section end //

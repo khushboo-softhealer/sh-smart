@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="sh_opt_blog_cover_post" inherit_id="website_blog.opt_blog_cover_post">
+        <t t-call="website.record_cover" position="replace">
+            <section id="sh_blog_record_cover">
+                <div class="container">
+                    <div class="sh_banner_content">
+                        <h1 class="sh_banner_title">Blogs</h1>
+                        <p class="sh_banner_text">Captivating blogs that inform, inspire, and ignite your passion for knowledge.
+                     </p>
+                     <ul class="sh_banner_breadcrumb">
+                        <li>
+                           <a class="sh_banner_breadcrumb_link" href="/">Home<span
+                              class="sh_banner_breadcrumb_icon fa fa-angle-right"></span></a>
+                        </li>
+                        <li>
+                           <span class="sh_banner_normal_text">Blogs</span>
+                        </li>
+                     </ul>
+                    </div>
+                </div>
+            </section>
+        </t>
+    </template>
+
+    <!-- <template id="theme_softhealer_website_blog_info" name="softhealer blog info"
+        inherit_id="website_blog.post_info">
+        <xpath expr="//a[@t-field='blog_post.blog_id']" position="replace">
+            <a t-attf-href="/blog/#{slug(blog_post.blog_id)}" t-field="blog_post.blog_id.sh_display_as_label"/>
+        </xpath>
+    </template> -->
+
+    <template id="sh_blogs_nav" inherit_id="website_blog.blogs_nav" name="softhealer website blog nav">
+         <!-- <div class="container" position="attributes">
+            <attribute name="class" separator=" " add="sh_cls_blogs_nav"></attribute>
+        </div> -->
+        <xpath expr="//div[hasclass('container')]" position="attributes">
+            <attribute name="class" add="sh_cls_blogs_nav" separator=" "/>
+        </xpath>
+
+        <xpath expr="//li[@t-foreach='blogs']//b" position="replace">
+            <b t-field="nav_blog.sh_display_as_label"/>
+        </xpath>
+    </template>
+</odoo>

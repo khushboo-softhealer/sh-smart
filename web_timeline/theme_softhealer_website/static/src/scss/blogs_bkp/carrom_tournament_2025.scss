@@ -1,0 +1,365 @@
+#sh_carrom_tournament_banner { padding-top: var(--sh-section-top-padding);padding-bottom: 220px; background-image: url("/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/background.webp"); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;
+    @include media-breakpoint-down(lg){
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_carrom_tournament_banner_heading_div {
+        .sh_carrom_tournament_banner_heading { font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:20px; text-align: left;
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_carrom_tournament_banner_text_div {
+        .sh_carrom_tournament_banner_text {color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;text-align:justify;margin: auto;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-website-normal-text-font-size-tablet); margin-top: 0;
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-website-normal-text-font-size-mobile);width: 100%; margin-top: 0;
+            }
+        }
+    }
+    .sh_carrom_tournament_banner_main_img_div { position: relative;
+        @include media-breakpoint-down (lg) { margin-bottom: 150px; }
+        @include media-breakpoint-down(md){margin-bottom: 100px;}
+        .sh_carrom_tournament_banner_first_img_div { width: 60%; height: 500px; border-radius: 10px;
+            @include media-breakpoint-down (lg) { height: 400px; width: 70%; }
+            @include media-breakpoint-only (lg) { height: 400px; }
+           
+            .sh_carrom_tournament_banner_first_img { width: 100%; height: 100%; object-fit: cover; transform: rotate(5deg); border-radius: 10px; }
+        }
+        .sh_carrom_tournament_banner_second_img_div {position: absolute; z-index: 1; top: 90px; right: 50px; width: 60%; height: 500px; border-radius: 10px;
+            @include media-breakpoint-down (lg) { height: 400px; width: 70%; right: -50px; }
+            @include media-breakpoint-only (lg) { height: 400px; }
+            @include media-breakpoint-only (xs) { right: 0; height:300px; }
+            .sh_carrom_tournament_banner_second_img { width: 100%; height: 100%; object-fit: cover; transform: rotate(-5deg); border-radius: 10px; border: 10px solid #fff; }
+        }
+        .sh_carrom_tournament_banner_small_img_div { position: absolute; height: 160px; width: 160px; bottom: -80px; left: 120px; z-index: 11; animation: rotated 10s linear infinite;
+            @include media-breakpoint-down (lg) { height: 120px; width: 120px; bottom: -50px; left: 100px; }
+            @include media-breakpoint-only (lg) { height: 130px; width: 130px; left: 70px; }
+            @include media-breakpoint-only (xs) { left: 50px; }
+            @keyframes rotated {
+                0%{
+                    transform: rotate(0);
+                }
+                100%{
+                    transform: rotate(1turn);
+                }
+            }
+            .sh_carrom_tournament_banner_small_img{ background: #ecebf9 !important; border-radius: 100%; width: 100%; height: 100%; } 
+        }
+    }
+}
+
+#sh_carrom_blog_testimonial_section{
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #0855fe12;
+    @include media-breakpoint-down(lg) {
+        padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_carrom_blog_testimonial_section_first_img_div{ position: absolute; top: 0; left: 0; width: 170px; height: 170px; 
+        img{ width: 100%; height: 100%; }
+    }
+    .sh_carrom_blog_testimonial_section_second_img_div{     position: absolute;
+        bottom: -100px;
+        right: 0;
+        width: 210px;
+        height: 220px;
+        img{ width: 100%; height: 100%; object-fit: cover;
+
+        }
+    }
+    h2{
+        color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom); text-align: center;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+            } 
+    }
+    .sh_carrom_blog_testimonial_text_div {
+        .sh_carrom_blog_testimonial_text { color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;text-align: justify;margin: auto;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-website-normal-text-font-size-tablet); margin-top: 0;
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-website-normal-text-font-size-mobile);width: 100%; margin-top: 0;
+            }
+        }
+    }
+    img { object-position: 0 -50px !important; border-radius: 0px; } 
+    #owl-testimonial{
+        margin-top:50px;
+        .owl-stage-outer{
+            height:430px !important;
+            @include media-breakpoint-down(xl){
+                height:345px  !important;
+            }
+            @include media-breakpoint-down(lg){
+                height:400px !important;
+            }
+            @include media-breakpoint-down(md){
+                height:340px !important;
+            }
+        .item{
+            .sh_owl_testimonial_box{
+               background:#fff; display: inline-block;vertical-align: top;max-width: 390px;height: 400px;width: 100%;box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 40px;padding: 30px;border-radius: 10px;transition: transform 1500ms cubic-bezier(0.4, 0, 0.2, 1);
+            .sh_testimonial_heading{
+                display: flex;flex-wrap: nowrap;flex-direction: row;align-items: center;gap: 15px;margin: 0px 0px 20px;
+                .sh_user{
+                    max-width: 60px;width: 100%;height: 60px; background-size: contain !important; box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;background: url(/theme_softhealer_website/static/src/img/images/home/testimonial/user-1.png) no-repeat;border-radius: 100%;border-width: 5px;border-style: solid;border-color: rgb(255, 255, 255);border-image: initial;
+                }
+                .user_1{
+                    background: url(/theme_softhealer_website/static/src/img/images/home/testimonial/user-2.png) no-repeat;
+                }
+                .user_2{
+                    background: url(/theme_softhealer_website/static/src/img/images/home/testimonial/user-3.png) no-repeat;
+                }
+                .user_3{
+                    background: url(/theme_softhealer_website/static/src/img/images/home/testimonial/user-4.png) no-repeat;
+                }
+                .user_4{
+                    background: url(/theme_softhealer_website/static/src/img/images/home/testimonial/user-5.png) no-repeat;
+                }
+                .sh_user_name{
+                    p{
+                        font-size: 16px;font-weight: 700;margin-bottom:0px;color:#1e266d; font-weight: 600; text-transform: capitalize;
+                       
+                    }
+                    .sh_star{
+                        span{font-size:16px; color:#fdbb34;}
+                    }
+                }
+                .sh_google_logo{
+                    max-width: 35px;width: 100%;height: 50px;background: url(/theme_softhealer_website/static/src/img/images/home/testimonial/g_icon.png);margin: 0px 0px 0px auto; background-position: center; background-size: cover;
+                }   
+            }
+            .sh_testimonial_text{
+                margin-top:10px;
+                p{
+                    font-size: var(--sh-website-normal-text-font-size);color: var(--sh-website-normal-text-font-color);font-weight: var(--sh-website-normal-text-font-weight);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+                }
+            }
+            @include media-breakpoint-down(lg){
+                height:450px;
+            }
+        }
+        }
+       
+    }
+    .owl-nav {
+        transform: translateY(0%);justify-content: center;z-index: 1;display: flex !important; margin-top: 50px;
+        @include media-breakpoint-down(xxl) {
+            right: 15%;
+        }
+        @include media-breakpoint-down(xl) {
+            right: 15%;
+        }
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+        @include media-breakpoint-down(lg) {
+            right: 100px;
+        }
+
+        button.owl-prev {
+            display: flex;background: rgba(86, 75, 198,0.11) !important;border-radius: 5px;margin-right: 5px;align-items: center;
+            span {
+                color: #1e266d;font-size: 30px;display: block;border-radius: 5px;position: relative;top: -3px;padding: 0px 15px !important;
+            }
+        }
+        button.owl-next {
+            display: flex;background: rgba(86, 75, 198,0.11) !important;border-radius: 5px;align-items: center;
+            span {
+                color: #1e266d;font-size: 30px;display: block;border-radius: 5px;position: relative;top: -3px;padding: 0px 15px !important;
+            }
+        }
+    }
+    }
+    .viewmore_link{
+        text-align:center;margin-top:35px;
+        a{
+            font-size: 18px;text-decoration: none;font-weight: 600;background:o-color(o-color-1);padding: 15px 20px;border-radius: 5px;color: #fff; 
+            span{
+                transition: 0.3s ease-in-out;
+            }
+            &:hover{
+                span{
+                    margin-left:5px;
+                }
+            }
+        }
+    }
+}
+
+#sh_carrom_blog_semi_final_section { position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_carrom_blog_semi_final_section_heading_div {
+        .sh_carrom_blog_semi_final_section_heading { color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom); text-align: center;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+            }            
+        }
+    }
+    .sh_carrom_blog_semi_final_section_text_div {
+        .sh_carrom_blog_semi_final_section_text { color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;text-align: justify;margin: auto;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-website-normal-text-font-size-tablet); margin-top: 0;
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-website-normal-text-font-size-mobile);width: 100%; margin-top: 0;
+            }
+        }
+        .sh_service_content_dic {
+            .sh_service_content_ul { padding-left: 0; margin: 20px 0;
+                .sh_service_content_li {
+                    font-size: var(--sh-website-normal-text-font-size); color: var(--sh-website-normal-text-font-color);font-weight: var(--sh-website-normal-text-font-weight);margin-bottom: 10px;list-style-type: none;display: flex;
+                    @include media-breakpoint-only(md) {
+                        font-size: var(--sh-website-normal-text-font-size-tablet)
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: var(--sh-website-normal-text-font-size-mobile)
+                    }
+                    .sh_service_content_li_check_box {
+                        width: 30px;
+                        .sh_service_content_li_check {
+                            background-color: o-color(o-color-1);font-size: 15px;border-radius: 50px;color: #fff;margin-right: 20px;padding: 3px;
+                        }
+                    }
+                    .sh_highlight{
+                        font-size:20px; color: var(--sh-section-heading-font-color);font-weight: var(--sh-section-heading-font-weight)
+                    }
+                }
+            }
+        }
+    }
+    .sh_carrom_blog_semi_final_section_img_div { margin-top: 30px;
+        .sh_carrom_blog_semi_final_section_img { width: 100%; height: 100%; border-radius: 10px; }
+    }
+}
+
+#sh_carrom_blog_final_countdown { position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_carrom_blog_final_countdown_heading_div {
+        .sh_carrom_blog_final_countdown_heading { color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: 50px; text-align: center;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet); margin-bottom: 30px;
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile); margin-bottom: 30px;
+            } 
+        }
+    }
+    .sh_carrom_blog_final_countdown_img_div {
+        .sh_carrom_blog_final_countdown_img { width: 100%; height: 100%; border-radius: 10px; 
+        }
+    }
+
+    .sh_carrom_blog_final_countdown_text_div {
+        .sh_carrom_blog_final_countdown_text { color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;text-align:justify;margin: auto;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-website-normal-text-font-size-tablet); margin-top: 0;
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-website-normal-text-font-size-mobile);width: 100%; margin-top: 0;
+            }
+        }
+        @include media-breakpoint-down (lg) { margin-bottom: 30px; }
+    }
+}
+
+#sh_carrom_tournament_final_player { padding-top: var(--sh-section-top-padding);padding-bottom: 220px; background-image: url("/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/background.webp"); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;
+    @include media-breakpoint-down(lg){
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_carrom_tournament_banner_heading_div { 
+        .sh_carrom_tournament_banner_heading { font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:50px; text-align: center;
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_carrom_tournament_banner_text_div {
+        .sh_carrom_tournament_banner_text {color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;text-align:justify;margin: auto;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-website-normal-text-font-size-tablet); margin-top: 0;
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-website-normal-text-font-size-mobile);width: 100%; margin-top: 0;
+            }
+        }
+    }
+    .sh_carrom_tournament_banner_main_img_div { position: relative;
+        @include media-breakpoint-down (lg) { margin-bottom: 150px; }
+        .sh_carrom_tournament_banner_first_img_div { width: 370px; height: 450px; border-radius: 10px;
+            @include media-breakpoint-down (lg) { height: 400px; width: 70%; }
+            @include media-breakpoint-only (lg) { height: 400px; }
+           
+            @include media-breakpoint-only (xs) { height:350px; }
+            @include media-breakpoint-down (md){margin-bottom: 100px;}
+            .sh_carrom_tournament_banner_first_img { width: 100%; height: 100%; object-fit: cover; transform: rotate(5deg); border-radius: 10px; border: 10px solid #000; }
+        }
+        .sh_carrom_tournament_banner_second_img_div {position: absolute; z-index: 1; bottom: -90px; right: 90px; height: 280px; width: 295px; border-radius: 10px;
+            @include media-breakpoint-down (lg) { height: 300px; width: 70%; right: -60px; }
+            @include media-breakpoint-only (lg) { height: 250px; right:50px; }
+            @include media-breakpoint-only (xs) { right: 0; height:250px; }
+            .sh_carrom_tournament_banner_second_img { width: 100%; height: 100%; object-fit: cover; transform: rotate(-5deg); border-radius: 10px; border: 10px solid #fff; }
+        }
+        .sh_carrom_tournament_banner_small_img_div { position: absolute; height: 160px; width: 160px; bottom: -80px; left: 120px; z-index: 11; animation: rotated 10s linear infinite;
+            @include media-breakpoint-down (lg) { height: 120px; width: 120px; bottom: -50px; left: 100px; }
+            @include media-breakpoint-only (lg) { height: 130px; width: 130px; left: 70px; }
+            @include media-breakpoint-only (xs) { left: 50px; }
+            @keyframes rotated {
+                0%{
+                    transform: rotate(0);
+                }
+                100%{
+                    transform: rotate(1turn);
+                }
+            }
+            .sh_carrom_tournament_banner_small_img{ background: #ecebf9 !important; border-radius: 100%; width: 100%; height: 100%; } 
+        }
+    }
+}
+
+#sh_carrom_blog_last_section_2025 { position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_why_use_crm_section_main { background-color: var(--sh-section-background-color); border-radius: 30px; padding: 50px; 
+        @include media-breakpoint-only(xs) { padding: 30px; }
+        .sh_why_use_crm_section_content { padding-right: 35px;
+            @include media-breakpoint-down(lg) { margin-bottom: 0px; padding-right: 0 !important; }
+            .sh_why_use_crm_section_content_title { font-size: var(--sh-section-heading-font-size); font-weight: var(--sh-section-heading-font-weight); line-height: var(--sh-section-heading-line-height); color: var(--sh-section-heading-font-color); margin-bottom: var(--sh-section-heading-margin-bottom); text-transform: capitalize; 
+                @include media-breakpoint-only(md) { font-size: var(--sh-section-heading-font-size-tablet); line-height: var(--sh-section-heading-line-height); margin-bottom: var(--sh-section-heading-margin-bottom);  }
+                @include media-breakpoint-down(md) { font-size: var(--sh-section-heading-font-size-mobile); }
+            }
+            .sh_why_use_crm_section_content_box { display: flex; align-items: flex-start; margin-bottom: 20px; 
+                @include media-breakpoint-down(md) { margin-bottom: 0px; }
+                .sh_why_use_crm_section_content_check_box {
+                    svg { width: 28px; fill: o-color(o-color-1); margin-right: 20px; margin-top: 5px; 
+                        .cls-2 { fill: o-color(o-color-1); } 
+                        @include media-breakpoint-down(lg) { width: 25px; margin-right: 10px; }
+                    }
+                }
+                .sh_why_use_crm_section_content_text { font-size: var(--sh-website-normal-text-font-size); font-weight: var(--sh-website-normal-text-font-weight); color: var(--sh-website-normal-text-font-color); line-height: var(--sh-website-normal-text-line-height); 
+                    @include media-breakpoint-only(md) { font-size: var(--sh-section-heading-sub-title-font-size-tablet); } 
+                    @include media-breakpoint-down(md) { font-size: var(--sh-section-heading-sub-title-font-size-mobile); }
+                }
+            }
+        }
+    }
+}

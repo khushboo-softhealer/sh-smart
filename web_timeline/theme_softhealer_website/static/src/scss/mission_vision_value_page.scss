@@ -1,0 +1,130 @@
+// start mission vision banner section // 
+#sh_mission_vision_banner {
+    @include sh_other_page_banner;
+}
+// end mission vision banner section //
+// start mission vision about section // 
+#sh_vision_about_section,
+#sh_mission_about_section,
+#sh_goals_about_section,
+#sh_values_about_section{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:var(--sh-section-bottom-padding); 
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_inner_box {
+        .sh_flex_column_reverse{
+            @include media-breakpoint-down(md){
+                flex-direction: column-reverse;
+            }
+        }
+        .sh_mission_vision_about_ing_box {
+            position: relative;padding:50px;background-color: rgba(87, 74, 199, 0.05);border-radius: 10px;
+            @include media-breakpoint-down(lg) {
+                padding: 0px;
+            }
+            .sh_photo_group {
+                display: flex;position: relative;z-index: 10;
+                @include media-breakpoint-down(sm) {
+                    justify-content: center;
+                }
+            }
+            .sh_second_photo {
+                position: relative;width:100%;height: 350px;
+                @include media-breakpoint-only(md) {
+                    height: 300px;
+                }
+                @include media-breakpoint-down(md) {
+                    height: auto;
+                }
+                img {
+                    width: 100%;height: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                }
+                svg {
+                    bottom: -35px;right: -55px;width: 340px;height: auto;position: absolute;z-index: -1;
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                    @include media-breakpoint-down(lg) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .sh_mission_vision_about_content {
+            padding-right: 40px;padding-left: 40px;
+            @include media-breakpoint-down(lg) {
+                padding-right: 0px;padding-left: 0px;
+            }
+            &.sh_mission_accordion_box{
+                @include media-breakpoint-down(lg) {
+                   margin-bottom: 20px
+                }
+            }
+            .sh_sub_title {
+                @include sh_sub_badge;
+                margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);margin-bottom: 15px;
+                }
+            }
+            p.sh_text {
+                font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                @include media-breakpoint-only(md)  {
+                    font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                }
+            }   
+            .sh_goal_box{
+                .sh_goal_box_content {
+                    display: flex;align-items: flex-start;margin-bottom: 20px;
+                    .sh_goal_check_box {
+                        svg {
+                            width: 25px;fill: o-color(o-color-1);margin-right: 20px;margin-top: 5px;
+                            .cls-2 {
+                                fill: o-color(o-color-1);
+                            }
+                            @include media-breakpoint-down(lg) {
+                                width: 21px;margin-right: 10px;
+                            }
+                        }
+                    }
+                    .sh_goal_text {
+                        font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+                        @include media-breakpoint-only(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                        }
+                    }
+                }
+            }
+            .sh_mission_box_accordion{
+                .accordion-item{
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+                    .sh_mission_box_accordion_header{
+                        .sh_mission_box_accordion_btn{
+                            box-shadow: none;outline: none;color: var(--sh-section-heading-font-color);font-weight: var(--sh-website-normal-text-font-weight); font-size: var(--sh-website-heading-title-font-size); padding: 15px 0;background: transparent;
+                        }
+                    }
+                    .sh_mission_box_accordion_body{
+                        padding: 10px 0;
+                        .sh_mission_box_accordion_text{
+                            font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0;
+                            @include media-breakpoint-only(md) {
+                                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                            }
+                            @include media-breakpoint-down(md) {
+                                font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// end mission vision about section // 

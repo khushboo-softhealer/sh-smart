@@ -1,0 +1,940 @@
+// start sh_solar_management_system_hero_section  // 
+.sh_solar_management_system_hero_section {
+    position: relative;padding-top: 150px;padding-bottom: 100px;background: #1e266d;
+      @include media-breakpoint-down(lg) {
+          padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+      }
+    .zoho_book_accounting_overview_main {z-index: 1;
+        .zoho_project_overview_content {
+              @include media-breakpoint-down(lg) {
+                  margin-bottom: 30px;
+              }
+            .zoho_project_overview_title {
+                font-size: 60px;font-weight: var(--sh-section-heading-font-weight);color: #fff;margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;line-height: 1;
+
+                  @include media-breakpoint-only(md) {
+                      font-size: 50px;line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);
+                  }
+                  @include media-breakpoint-down(md) {
+                      font-size: 45px;
+                  }
+                  @include media-breakpoint-only(lg){font-size: 40px;}
+            }
+            .zoho_project_overview_box {
+                display: flex;align-items: flex-start;
+
+                .zoho_project_overview_svg_box {
+                    svg {
+                        width: 25px;fill: o-color(o-color-1);margin-right: 15px;margin-top:5px;
+                        .cls-2 {
+                            fill: o-color(o-color-1);
+                        }
+                          @include media-breakpoint-down(lg) {
+                              width: 25px;margin-right: 10px;
+                          }
+                    }
+                }
+                .zoho_project_overview_text {
+                    .sh_about_mobile_app_text {
+                        font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: #fff;
+                          @include media-breakpoint-only(md) {
+                              font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                          }
+                          @include media-breakpoint-down(md) {
+                              font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                          }
+                    }
+                }
+            }
+            .btn {  
+                @include sh_primary_button;
+                span {
+                    display: flex;align-items: center;
+                    svg {
+                        stroke: #fff;display: inline-block;width: 30px; padding-right:5px;height: 30px;
+                    }
+                }
+            }
+        }
+        .sh_parking_management_about_ing_box {
+            position: relative;border-radius: 10px;
+              @include media-breakpoint-down(lg) {
+                  padding: 0px;
+              }
+            .sh_photo_group {
+                display: flex;position: relative;z-index: 10;
+                  @include media-breakpoint-down(sm) {
+                      justify-content: center;
+                  }
+            }
+            .sh_second_photo {
+                position: relative;width:100%;
+                  @include media-breakpoint-down(md) {
+                      height: auto;
+                  }
+                img {
+                    width: 100%;height: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                }
+                svg {
+                    bottom: -35px;right: -55px;width: 340px;height: auto;position: absolute;z-index: -1;
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                      @include media-breakpoint-down(lg) {
+                          display: none;
+                      }
+                }
+            }
+            .sh_floating_img_div{
+                position: absolute;
+                height: 180px;
+                object-fit: contain;
+                bottom: -50px;
+                left: -20px;
+                animation: move_top_bottom 5s ease-in-out infinite;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    box-shadow:  0 5px 70px rgba(38,42,76,.1);
+                    border-radius: var(--sh-website-common-border-radius);
+                }
+                @keyframes move_top_bottom {
+                    0% {
+                        transform: translateY(0);
+                    }
+                    50% {
+                        transform: translateY(10px);
+                    }
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+                @include media-breakpoint-only(xs){display: none;}
+                @include media-breakpoint-only(md){bottom:-10px}                
+                @include media-breakpoint-only(sm){bottom:-10px}                
+            }
+        }
+    }
+    &::after{    content: '';
+        position: absolute;
+        right: -150px;
+        bottom: -250px;
+        height: 800px;
+        width: 800px;
+        background: #212240;
+        border-radius: 100%;
+    }
+}
+// end sh_solar_management_system_hero_section // 
+
+//who we are section start
+.sh_solar_management_system_software{
+    padding-top: var(--sh-section-top-padding);padding-bottom:var(--sh-section-bottom-padding);background: #fff;
+      @include media-breakpoint-down(lg) {
+          padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+      }
+    header {
+        text-align: center;
+          @include media-breakpoint-down(lg) {
+              margin-top: 0px;
+          }
+        h6 {
+            color: var(--sh-section-heading-sub-title-font-color);font-size: var(--sh-section-heading-sub-title-font-size);letter-spacing: 0.01em;line-height: 1.5;
+              @include media-breakpoint-only(md){
+                  font-size: var(--sh-section-heading-sub-title-font-size-tablet)
+              }
+              @include media-breakpoint-down(md) {
+                  font-size: var(--sh-section-heading-sub-title-font-size-mobile)
+              }
+        }
+        h2 {
+            color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+              @include media-breakpoint-only(md){
+                  font-size: var(--sh-section-heading-font-size-tablet);
+              }
+              @include media-breakpoint-down(md) {
+                  width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+              }
+        }
+    }
+        .sh_column_inner_box{
+                position: relative;top:70px;
+                  @include media-breakpoint-down(sm){
+                      top:50px;
+                  }
+            .sh_photo_group{
+                display: flex;position: relative;z-index: 10;
+                  @include media-breakpoint-down(sm){
+                      justify-content: center;
+                  }
+                .sh_first_photo{
+                    position: absolute;transform: translateY(1.6111px);bottom: 50px;left: 20px;
+                      @include media-breakpoint-down(sm){
+                          display: none;
+                      }
+                      @include media-breakpoint-down(md){
+                          left: 0px;
+                      }
+                      @include media-breakpoint-only(xl) {
+                          left: 35px;bottom:40px;
+                      }
+                    img{
+                        width: 100%;box-shadow:var(--sh-website-box-shadow);border-radius:var(--sh-website-common-border-radius);width: 370px;height: 420px; object-fit: cover;
+
+                          @include media-breakpoint-down(xl){
+                              width: 300px;height: 370px;object-fit: cover;
+                          }
+                        
+                        
+                    }
+                }
+            
+                .sh_second_photo{
+                    margin-left: auto;
+                      @include media-breakpoint-down(sm){
+                          margin-left: 0px;
+                      }
+                    img{
+                        width: 100%;box-shadow:var(--sh-website-box-shadow);border-radius:var(--sh-website-common-border-radius);width: 370px;height: 420px; object-fit: cover;
+
+                          @include media-breakpoint-down(xl){
+                              width: 300px;height: 370px;object-fit:  cover;
+                          }
+                    }
+                }
+            }
+        }
+        .sh_shapes_one{
+                
+            bottom: 40px;left: 30px;width:100%;height: 100px;transform: translateY(-30.5578px);position: relative;display: flex;
+              @include media-breakpoint-down(sm){
+                  top: -60px;left:65px;
+              }
+              @include media-breakpoint-only(sm){
+                  bottom: 80px;left: 25px;
+              }
+              @include media-breakpoint-only(md){
+                  left: -5px;bottom: 70px;
+              }
+              @include media-breakpoint-only(xl) {
+                  left: -5px;
+              }
+            svg{
+                stroke: o-color(o-color-1);
+            }
+        
+    }
+    .sh_shapes_two{
+       
+            top: -45px;right: -15px;width: 120px;height: 173px;transform: translateY(-14.0692px);position: absolute;display: flex;
+              @include media-breakpoint-down(sm){
+                  top: -45px;right: 10px;width: 100px;
+              }
+              @include media-breakpoint-only(sm){
+                  top: -45px;right: 40px;width: 100px;
+              }
+              @include media-breakpoint-only(md){
+                  width:100px;top: -50px;right: -10px;
+              }
+              @include media-breakpoint-only(xl) {
+                  width:105px;
+              }
+            svg{
+                stroke: o-color(o-color-1);
+            }
+        
+    }
+            
+     
+    
+    .sh_section_dec{
+        padding-right: 50px;padding-left: 50px;
+              @include media-breakpoint-down(lg){
+                  padding-right: 0;padding-left: 0px;
+              }
+              @include media-breakpoint-only(lg){
+              padding-right: 0;padding-left: 20px;
+              }
+              @include media-breakpoint-only(xl) {
+                  padding-right: 0;
+                  padding-left: 70px;
+              }
+        h2{
+            font-size:var(--sh-section-heading-font-size);color:var(--sh-website-heading-title-font-color);font-weight:var(--sh-website-heading-title-font-weight);line-height:var(--sh-website-heading-title-line-height);margin-bottom:20px;text-transform: capitalize;
+              @include media-breakpoint-only(md) {
+                  font-size: var(--sh-section-heading-font-size-tablet);
+               
+              }
+              @include media-breakpoint-down(md) {
+                  font-size: var(--sh-section-heading-font-size-mobile);
+             
+              }
+        }
+        p{
+            font-size:var(--sh-website-normal-text-font-size);color:var(--sh-website-normal-text-font-color);font-weight:var(--sh-website-normal-text-font-weight);line-height:var(--sh-website-normal-text-line-height);margin-bottom: 10px;
+              @include media-breakpoint-only(md){
+                  font-size: var(--sh-website-normal-text-font-size-tablet);
+              }
+              @include media-breakpoint-down(md) {
+                  font-size: var(--sh-website-normal-text-font-size-mobile);
+              }
+              span {
+                background-color: o-color(o-color-1);font-size: 15px;border-radius: 50px;color: #fff;margin-right: 20px;padding: 3px;
+              }
+        }
+        ul{
+            padding-left: 0px;
+            li{
+                font-size:var(--sh-website-normal-text-font-size);color:var(--sh-website-normal-text-font-color);font-weight:var(--sh-website-normal-text-font-weight);line-height:var(--sh-website-normal-text-line-height);list-style: none;margin-bottom: 10px;
+                  @include media-breakpoint-down(sm){
+                  font-size:var(--sh-section-heading-sub-title-font-size-mobile)
+              }
+                  @include media-breakpoint-only(lg){
+                      font-size: 17px;
+                  }
+                svg{
+                    width: 20px;display: inline-flex;stroke:o-color(o-color-1);margin-right: 5px;
+                }
+            }
+        }
+        .sh_home_primary_button {
+            margin-top: 20px;
+            .sh_pos_solution_primary_link {
+                  @include sh_primary_button;                 
+                  .sh_pos_solution_primary_link_right {
+                      svg {
+                          stroke: #fff;display: inline-block;width: 20px;
+                      }
+                  }
+            }
+        }
+    }
+}
+//who we are section end
+
+//sh_solar_management_system_business start
+.sh_solar_management_system_business {
+    padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom:var(--sh-section-bottom-padding-mobile);
+    }
+    header {
+        text-align: center;
+        @include media-breakpoint-down(lg) {
+            margin-top: 0px;
+        }
+        p {
+            color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-website-normal-text-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-website-normal-text-font-size-mobile);
+            }
+        }
+        h2 {
+            color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_main_box {
+        margin-top: 30px;
+        .sh_inner_box {
+            border: 1px solid #e7e7e7;text-align: center;padding-top: 40px;padding-bottom: 40px;padding-left: 30px;padding-right: 30px;transition: all 0.15s ease;border-radius: 5px;
+            @include media-breakpoint-down(md) {
+                padding-top: 30px;padding-bottom: 30px;
+            }
+            .sh_icon {
+                background-color: #f0f1ff;width: 70px;height: 70px;margin: 0px auto 25px;display: flex;justify-content: center;border-radius: 5px;
+                svg {
+                    width: 45px;display: inline-flex;
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-2 {
+                        fill: o-color(o-color-1);
+                    }
+                }
+            }
+            .icon_1 {
+                background-color: #f0f1ff;width: 70px;height: 70px;margin: 0px auto 25px;display: flex;justify-content: center;border-radius: 5px;
+                svg {
+                    width: 45px;display: inline-flex;
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-1{
+                        fill: o-color(o-color-1);
+                    }
+                    .cls-2{
+                        fill:none;
+                    }
+                }
+            }
+            .sh-des {
+                h5 {
+                    line-height: 1.3;font-weight: 600;color: var(--sh-website-heading-title-font-color);font-size: var(--sh-website-heading-title-font-size);
+                }
+                p {
+                    color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+                    @include media-breakpoint-only(md){
+                        font-size: var(--sh-website-normal-text-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md){
+                        font-size: var(--sh-website-normal-text-font-size-mobile);
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);border-color: transparent !important;
+            }
+        }
+    }
+}
+//sh_solar_management_system_business end //
+
+//POS Retail Shop start
+#sh_solar_management_key_feature {
+    padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_solar_managemnet_key_feature_div{padding-bottom: 30px;
+        header {
+            text-align: center;
+            @include media-breakpoint-down(lg) {
+                margin-top: 0px;
+            }
+            h2 {
+                color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: 50px;text-transform: capitalize;
+                @include media-breakpoint-only(md){
+                    font-size: var(--sh-section-heading-font-size-tablet);margin-bottom: 30px;
+                }
+                @include media-breakpoint-down(md) {
+                    width: auto;font-size: var(--sh-section-heading-font-size-mobile);margin-bottom: 20px;
+                }
+            }
+        }
+        .sh_inner_box {
+            .row {
+                @include media-breakpoint-down(md) {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+            }
+            .sh_order_box{
+                @include media-breakpoint-down(md) {
+                    order: 1;
+                }
+            }
+            .sh_odoo_custom_tab_box {
+                position: relative;padding:50px;background-color: rgba(87, 74, 199, 0.05);border-radius: 10px;
+                @include media-breakpoint-down(lg) {
+                    padding: 20px;
+    
+                }
+                .sh_photo_group {
+                    display: flex;position: relative;z-index: 10;
+                    @include media-breakpoint-down(sm) {
+                        justify-content: center;
+                    }
+                }
+                .sh_second_photo {
+                    position: relative;width:100%;height: 100%;
+    
+                    @include media-breakpoint-down(md) {
+                        height: auto;
+                    }
+                    img {
+                        width: 100%;height: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                    }
+                    svg {
+                        bottom: -35px;right: -55px;width: 340px;height: auto;position: absolute;z-index: -1;
+                        .cls-1 {
+                            fill: o-color(o-color-1);
+                        }
+                        @include media-breakpoint-down(lg) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .sh_odoo_custom_tab_content {
+                @include media-breakpoint-down(md) {
+                    margin-top: 20px;
+                 }
+                .sh_sub_title {
+                    @include sh_sub_badge;
+                    margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                    @include media-breakpoint-down(md) {
+                        font-size: var(--sh-section-heading-sub-title-font-size-mobile);margin-bottom: 15px;
+                    }
+                }
+                h2.sh_heading_title {
+                    font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-website-heading-title-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-website-heading-title-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+                    @include media-breakpoint-only(md)  {
+                        font-size: var(--sh-section-heading-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile);margin-bottom: 15px;
+                    }
+                }
+                p.sh_text {
+                    font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom:0px;
+                    @include media-breakpoint-only(md)  {
+                        font-size: var(--sh-section-heading-sub-title-font-size-tablet);margin-bottom: 0px;
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: var(--sh-section-heading-sub-title-font-size-mobile);margin-bottom: 0px;
+                    }
+                }
+                .btn {
+                    @include sh_primary_button;
+                    span {
+                        display: flex;align-items: center;
+                        
+                        svg {
+                            stroke: #fff;display: inline-block;width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        &:last-child{
+            padding: 0;
+        }
+    }
+}
+//POS Retail Shop end
+
+// sh_solar_managemnet_Additional_Tools start //
+.sh_solar_managemnet_Additional_Tools{      
+    padding: 40px 0 35px;
+    @include media-breakpoint-down(lg) {
+        padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+
+    .sh_section_heading{
+        width:86%;margin-bottom: 50px;margin: 0 auto;
+        @include media-breakpoint-down(lg){
+            width: var(--sh-section-heading-width-mobile);
+        }
+        .sh_box_title{
+            font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom); text-align: center;text-transform: capitalize;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet); 
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-font-size-mobile);text-align: center;    
+            }
+        }
+        .sh_text{
+            font-size: var(--sh-section-heading-sub-title-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);text-align: center;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile);text-align: center; 
+            }
+        }
+    }
+
+    .sh_zoho_sales_img_box{
+        .sh_zoho_sales_img{
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+    
+    .sh_key_feature_main_box{                
+        margin-bottom: 30px;
+        @include media-breakpoint-down(md){
+            margin-bottom: 20px;
+        }
+        &.sh_mb_1{
+            @include media-breakpoint-up(lg) { 
+                margin-bottom: 0;
+            }
+        }
+        &.sh_mb_3{
+            @include media-breakpoint-up(md){
+                margin-bottom: 0px;
+            }
+        }
+        &.sh_mb_0{
+            @include media-breakpoint-down(lg) { 
+                margin-bottom: 0;
+            }
+        }
+        .sh_key_feature_box {
+            background-color: #fff;z-index: 1;position: relative;border-radius: var(--sh-card-box-radius);box-shadow: 0 10px 35px rgba(38, 42, 76, .1);border: 1px solid #e7e7e7;padding: 30px 30px;position: relative;height: 100%;transition: .15s ease-in-out;
+            &:hover{
+                box-shadow: 0 5px 70px rgba(38,42,76,.1);border-color: transparent!important;
+            }  
+            @include media-breakpoint-only(md) { 
+                margin-bottom: 0;
+            }   
+            @include media-breakpoint-down(md) { 
+                height: auto; 
+            }   
+            .sh_key_feature_img {
+                svg {
+                    width: 45px;display: inline-block;fill: o-color(o-color-1);margin-bottom: 20px;
+                    // .cls-1 {
+                    //     fill: o-color(o-color-1); stroke:none !important;
+                    // }
+                    
+                    @include media-breakpoint-down(lg) {
+                        width: 35px;
+                    }
+                    .cls-2{
+                        fill:none !important; stroke:none !important;
+                    }
+                }
+            }        
+            .sh_key_feature_content {
+                .sh_key_feature_title {
+                    color: var(--sh-website-heading-title-font-color); font-size: var(--sh-website-heading-title-font-size); font-weight: var(--sh-website-heading-title-font-weight); letter-spacing: 0.8px; margin-bottom: 20px;text-transform: capitalize;
+                }
+                .sh_key_feature_text {
+                font-size: var(--sh-website-normal-text-font-size); color: var(--sh-website-normal-text-font-color); margin-bottom: 20px;
+                    @include media-breakpoint-only(md) {
+                        font-size: var(--sh-website-normal-text-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: var(--sh-website-normal-text-font-size-mobile);
+                    }
+                }
+            }
+            .sh_key_feature_link_box{
+                .sh_key_feature_link{
+                    @include sh_secondary_button;margin: 0 auto;
+                    &:hover{
+                        box-shadow: var(--sh-website-box-shadow)
+                    }
+                    .sh_key_feature_link_right {
+                        svg {
+                            stroke: o-color(o-color-1);display: inline-block;width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// sh_solar_managemnet_Additional_Tools end //
+
+// about-us page Work-flow section start//
+#sh_solar_managemnet_how_its_work{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:var(--sh-section-bottom-padding);background:#ffffff;
+    @include media-breakpoint-down(lg){
+        padding-top:var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_section_heading{
+        width: var(--sh-section-heading-width-desktop);margin: 0 auto;
+        @include media-breakpoint-down(lg){
+            width: var(--sh-section-heading-width-mobile);
+        }
+
+    .sh_heading_title{
+        font-size:var(--sh-section-heading-font-size);color: var(--sh-section-heading-font-color);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);margin-bottom:var(--sh-section-heading-margin-bottom);text-align: center;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-font-size-tablet);  
+        }
+    }
+    p.sh_heading_text{
+        font-size:var(--sh-section-heading-sub-title-font-size);color:var(--sh-section-heading-sub-title-font-color);font-weight:var(--sh-section-heading-sub-title-font-weight);line-height:var(--sh-section-heading-sub-title-line-height);margin-bottom:var(--sh-section-heading-sub-title-margin-bottom);text-align: center;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-sub-title-font-size-tablet)
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+        }
+    }
+    }
+    .sh_workflow_box{width:100%;text-align:center; margin-top:20px; position: relative;
+        &:after{display: block;width: 81%;height: 1px;position: absolute;content: '';border-bottom: 1px solid rgba(125,125,125,0.25);top: 40px;left: 63%;
+            @include media-breakpoint-down(xl){
+               display:none;
+            }
+        }
+        .sh_icon{
+            height:80px;width:80px;background:o-color(o-color-1);border-radius:80px;display:flex;justify-content: center;align-items: center;margin:0px auto;margin-bottom:20px;position: relative;z-index:1;
+            
+            &:before{
+                width: 100px;height: 100px;opacity: -1;margin-left: -50px;top: -10px;z-index:-1;transform: scale(0.6);left: 50%;border-radius: 50%;position: absolute;background:o-color(o-color-1);content: '';transition: 0.3s cubic-bezier(0.5,0.58,0.55,1);
+            }
+            &:hover:before{
+                opacity: 0.3; transform:scale(1.2);
+            }
+            &:after{
+                width: 85px;height: 85px;top: -3px;margin-left: -42px;background:o-color(o-color-1);content:'';border-radius: 50%;position: absolute;left: 50%;transition: 0.3s cubic-bezier(0.5,0.58,0.55,1); opacity:0; z-index:-1;
+            }
+            &:hover:after{
+                opacity: 0.4;transform: scale(1.2);
+            }
+
+        svg{stroke:#fff !important;}
+
+        }
+        .sh_box_desc{
+            width:100%;
+            h2.sh_box_title{
+                font-size:var(--sh-website-heading-title-font-size);color:var(--sh-website-heading-title-font-color) ;font-weight:var(--sh-website-heading-title-font-weight);margin-bottom:var(--sh-website-heading-title-margin-bottom) ;line-height: var(--sh-website-heading-title-line-height);text-transform: capitalize;
+            }
+            p.sh_box_text{
+                font-size:var(--sh-website-normal-text-font-size);color:var(--sh-website-normal-text-font-color);font-weight:var(--sh-website-normal-text-font-weight);line-height:var(--sh-website-normal-text-line-height); 
+                @include media-breakpoint-only(md){
+                    font-size:var(--sh-website-normal-text-font-size-tablet);
+
+                }
+                @include media-breakpoint-down(md){
+                    font-size:var(--sh-website-normal-text-font-size-mobile);
+                }
+
+            }
+
+        }
+    
+    }
+    .sh_workflow_box.box-1:after{display:none;}
+
+}
+// about-us page Work-flow section end//
+
+// accordion with slider start 
+#sh_solar_managemnet_faq_and_carousel {
+    padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);
+    @include media-breakpoint-down(lg) {
+        padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_main_div{
+        header {text-align: center; margin-bottom:50px;
+            @include media-breakpoint-down(lg) {margin-top: 0px;margin-bottom: 0;}
+            h2 {
+                color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom);
+                @include media-breakpoint-only(md){font-size: var(--sh-section-heading-font-size-tablet);}
+                @include media-breakpoint-down(md) {width: auto;font-size: var(--sh-section-heading-font-size-mobile);}
+            }
+        }
+        .accordion{width: 100%;
+            .accordion-item{border-bottom: 2px solid #ddd;position: relative;padding: 20px 0;
+                .accordion-header{
+                    .accordion-button{padding: 10px 20px;color: var(--sh-website-heading-title-font-color);font-size: 20px;background: transparent;font-weight: var(--sh-website-heading-title-font-weight);padding-right: 40px;}
+                }
+                &::after {position: absolute;content: "";width: 4px;top: 8px;height: 90%;background: o-color(o-color-1);transform: scale(0);transition: 0.5s;
+                    @include media-breakpoint-down(xl) {top: 25px;}
+                }
+                &:has(.accordion-collapse.show){
+                    &::after{transform: scale(1);}
+                }
+                .accordion-body{padding: 0;padding-left: 20px;padding-top: 10px;font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+                    .sh_main_img_div{position: relative;padding: 20px;display: none;
+                        @include media-breakpoint-only(xs) {padding: 10px;}
+                        @include media-breakpoint-down(md){display: block;margin-top: 10px;}
+                        .sh_main_img{width: 100%;height: 100%;z-index: 1;position: relative;border-radius: 20px; background: #fff;}
+                        &::after{position: absolute;content: "";background: linear-gradient(225deg, (o-color(o-color-1)) 40%, o-color(o-color-2) 100%);width: 100%;height: 100%;top: 0;bottom: 0;left: 0;right: 0;border-radius: 20px;}
+                    }
+                }
+                &:last-child{border: 0;}
+            }
+        }
+        #my_carousel {
+            @include media-breakpoint-down(md) {display: none;}
+            .carousel-inner{position: relative;
+                .carousel-item{display: flex; align-items: center;
+                    .sh_img_div{
+                        .sh_main_img_div{padding: 20px;
+                            .sh_main_img{width: 100%;height: 100%;z-index: 1;position: relative;border-radius: 25px;background: #fff;}
+                        }
+                        .sh_sub_img_1_div , .sh_sub_img_2_div , .sh_sub_img_3_div , .sh_sub_img_4_div {
+                            .sh_suv_img{width: 100%; height: 100%;}
+                        }
+                    }
+                }
+                &::after{position: absolute;content: "";background: linear-gradient(225deg, o-color(o-color-1) 40%, o-color(o-color-2) 100%);width: 100%;height: 100%;top: 0;bottom: 0;left: 0;right: 0;border-radius: 28px;}
+            }
+        }
+    }
+}
+// accordion with slider end 
+
+//sh_jobs_call_to_action
+#sh_solar_managemnet_get_start_today {
+    background: #fff;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);
+    @include media-breakpoint-down(lg){
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_inner_section {
+        padding: 80px 60px 80px;background-image: url("/theme_softhealer_website/static/src/img/images/solar_management/get_start_today.webp");background-position: 0 80%;background-repeat: no-repeat;background-size:cover;border-radius: 50px;text-align: center;position: relative;
+        &::after{
+        content: "";position: absolute;left: 0;top: 0;bottom: 0;right: 0;background:#212240db no-repeat padding-box;opacity: 1;visibility: visible;border-radius: 50px;}
+        @include media-breakpoint-only(md){
+            padding: 50px 30px 50px;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 40px 15px 40px;
+        }
+        .sh_heading {
+            text-align: center;
+            margin-bottom: 30px;position: relative;z-index: 1;
+            @include media-breakpoint-down(xl){
+                margin-bottom: 20px;
+            }
+            h2 {
+                color:#fff;font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);letter-spacing: 1.5px;text-transform: capitalize;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);margin-bottom: 0px
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size:22px !important;margin-bottom: 0px;
+            }
+            }
+        }
+        .sh_content_box{
+            display:flex; color:#fff; position: relative; z-index:1; align-items: center; justify-content: center;
+            @include media-breakpoint-down(md){
+                flex-direction: column;
+            }
+        .sh_contact_detail{
+           a{
+            display:flex; align-items: center; justify-content: space-between; margin-right:30px;color:#fff; text-decoration:none;
+            @include media-breakpoint-down(md){
+                margin-right: 0;
+
+            }
+            .sh_icon{
+                svg{width:40px; margin-right:10px;
+                @include media-breakpoint-down(md){
+                    width:30px;
+                }
+                }
+            }
+            .sh_text{
+                font-size:20px;font-weight:600;
+                @include media-breakpoint-only(md){
+                    font-size:16px;
+                }
+                @include media-breakpoint-down(md){
+                    font-size:15px;
+                }
+            }
+        }
+        
+        }
+        
+        
+        }
+        a.btn{
+            @include sh_primary_button; margin: 0px auto;  margin-top:30px;z-index:1; position: relative;
+            @include media-breakpoint-down(md){
+                margin-top:20px;
+            }
+            span{
+                svg{
+                    stroke: #fff;display: inline-block;width: 20px;
+                }
+            }
+        }
+    }
+}
+//sh_jobs_call_to_action
+
+#sh_solar_management_faq{background: #f5f6fe;padding: 50px 0;
+    @include media-breakpoint-down(lg){padding: 30px 0;}
+    .accordion{
+        .accordion-item{background: #fff;margin-top:20px;
+            .accordion-header{
+                .accordion-button{
+                    font-weight: var(--sh-website-heading-title-font-weight);
+                    transition:0.5s;
+                    color: var(--sh-website-heading-title-font-color);
+                    font-size: 20px;
+                    background: transparent;
+                    &:hover {color: o-color(o-color-1);}
+                }
+            }
+            .accordion-collapse{
+                .accordion-body{font-size: var(--sh-website-normal-text-font-size); color: var(--sh-website-normal-text-font-color);font-weight: 300;margin-bottom: 10px;list-style-type: none;
+                    .sh_faq_min_text{font-size: 18px;}
+                    .sh_service_content_ul {
+                        .sh_service_content_li {
+                            font-size: var(--sh-website-normal-text-font-size); color: var(--sh-website-normal-text-font-color);font-weight: 300;margin-bottom: 10px;list-style-type: none;display: flex;
+                            @include media-breakpoint-only(md) {
+                                font-size: var(--sh-website-normal-text-font-size-tablet)
+                            }
+                            @include media-breakpoint-down(md) {
+                                font-size: var(--sh-website-normal-text-font-size-mobile)
+                            }
+                            .sh_service_content_li_check_box {
+                                width: 30px;
+                                .sh_service_content_li_check {
+                                    background-color: o-color(o-color-1);font-size: 15px;border-radius: 50px;color: #fff;margin-right: 20px;padding: 3px;
+                                }
+                            }
+                            .sh_highlight{
+                                font-size:20px; color: var(--sh-section-heading-font-color);font-weight: var(--sh-section-heading-font-weight)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// modal scss start 
+.sh_solar_management_system_modal_popup {backdrop-filter: blur(10px);
+    .modal-dialog{padding: 11.75rem 0 !important;
+        .btn-close{top :10px;right :20px;}
+        .modal-content{border-radius: 20px;max-height: max-content;
+            .sh_form_box{
+                form {
+                      @include media-breakpoint-only(xs) {justify-content: center;}
+                }
+                .s_website_form_field{
+                    .col-sm {position: relative;padding:0; margin: 0 20px;
+                        // &:has(input:focus,textarea:focus,select:focus) {
+                        //     &:after {width: 100% ;
+                        //     }
+                        // }
+                        input , textarea , select {border: 0;border: 1px solid #ddd;transition: 0.5s;
+                              @include media-breakpoint-only(xs){width: 100% !important;}
+                              &:hover {
+                                border-color: o-color(o-color-1);
+                              }
+                        }
+                        // &::after{content: "";position: absolute;bottom: 0;height: 2px;width: 0;background: #564CB6;transition: 0.5s;}
+                          @include media-breakpoint-only(xs) {margin: 0;}
+                    }
+                }
+                .s_website_form_submit{
+                    .btn {
+                          @include sh_primary_button;
+                        svg {stroke: #fff;display: inline-block;width: 20px;}
+                        .sh_link_right{
+                            svg {width: 27px;transition: 0.5s;}
+                        }
+                        &:hover {
+                            .sh_link_right{
+                                svg {transform: translateX(10px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// modal scss end

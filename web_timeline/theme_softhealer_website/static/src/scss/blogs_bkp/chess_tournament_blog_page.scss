@@ -1,0 +1,352 @@
+//  banner-start //
+#sh_chess_page_banner {
+    @include sh_other_page_banner;
+}
+//  banner-end //
+
+
+//sh_chess_tournament_box section//
+.sh_chess_tournament_box{
+    padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top:var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_inner_box {
+        .sh_order_box{
+            @include media-breakpoint-down(md) {
+                order: 1;
+            }
+        }
+        .sh_crm_solution_about_img_box {
+            width: 100%;
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 30px;
+            }
+            .sh_crm_solution_about_img {
+                width: 100%;position: relative;display: flex;flex-wrap: wrap;justify-content: center;align-items: end;gap: 20px;
+                img {
+                    height: 100%;width: 100%;object-fit: cover;border-radius: var(--sh-website-common-border-radius);box-shadow: 0 20px 30px rgba(38, 42, 76, .15);
+                }
+                .sh_crm_solution_about_img_1 {
+                    width: 45%; height: 220px;
+                    @include media-breakpoint-down(md) {
+                        width: 45%;height: 160px;
+                    }
+                }
+                .sh_crm_solution_about_img_2 {
+                    width: 45%;height: 350px;
+                    @include media-breakpoint-down(md) {
+                        width: 45%;height: 225px;
+                    }
+                }
+                .sh_crm_solution_about_img_3 {
+                    width: 90%;height: 230px;
+                    @include media-breakpoint-down(md) {
+                        width: 90%;height: 180px;
+                    }
+                }
+                .sh_crm_solution_about_shap_1 {
+                    position: absolute;top: 40px;left: -20px;z-index: -1;
+                    svg {
+                        height: auto;width: 120px;
+                        .cls-1 {
+                            fill: o-color(o-color-1);
+                        }
+                        @include media-breakpoint-down(lg) {
+                            width: 150px;
+                        }
+                    }
+                    @include media-breakpoint-only(md) {
+                        left: 0;
+                    }
+                    @include media-breakpoint-down(md) {
+                        display: none;
+                    }
+                }
+                .sh_crm_solution_about_shap_2 {
+                    position: absolute;bottom: 0;right: 0;z-index: -1;
+                    svg {
+                        height: auto;width: 100%;
+                        .cls-1 {
+                            fill: o-color(o-color-1);
+                        }
+                    }
+                    @include media-breakpoint-down(md) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .sh_odoo_custom_tab_content {
+            @include media-breakpoint-down(md) {
+                margin-top: 20px;
+             }
+            .sh_sub_title {
+                @include sh_sub_badge;
+                margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);margin-bottom: 15px;
+                }
+            }
+            h2.sh_heading_title {
+                font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-website-heading-title-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-website-heading-title-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);
+                @include media-breakpoint-only(md)  {
+                    font-size: var(--sh-section-heading-font-size-tablet);
+                }
+                @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-font-size-mobile);margin-bottom: 15px;
+                }
+            }
+            p.sh_text {
+                font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom:0px;
+                @include media-breakpoint-only(md)  {
+                    font-size: var(--sh-section-heading-sub-title-font-size-tablet);margin-bottom: 0px;
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);margin-bottom: 0px;
+                }
+            }
+            .sh_home_primary_button {
+                .sh_pos_solution_primary_link {
+                    @include sh_primary_button;margin-top: var(--sh-section-heading-margin-bottom);                 
+                    .sh_pos_solution_primary_link_right {
+                        svg {
+                            stroke: #fff;display: inline-block;width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+
+// sh_chess_tournament_images_slider section //
+
+.sh_chess_tournament_images_slider{
+    padding-top: var(--sh-section-top-padding);padding-bottom:var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg){
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh-heading {
+        header {
+            text-align: center;
+            @include media-breakpoint-down(lg) {
+                margin-top: 0px;
+            }
+            h6 {
+                color: var(--sh-section-heading-sub-title-font-color);font-size: var(--sh-section-heading-sub-title-font-size);letter-spacing: 0.01em;line-height: 1.5; font-weight: 400;
+                @include media-breakpoint-only(md){
+                    font-size: var(--sh-section-heading-sub-title-font-size-tablet)
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);text-align:left;
+                }
+            }
+            h1 {
+                color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom);
+                @include media-breakpoint-only(md){
+                    font-size: var(--sh-section-heading-font-size-tablet);
+                }
+                @include media-breakpoint-down(md) {
+                    width: auto;font-size: var(--sh-section-heading-font-size-mobile);text-align:left;
+                }
+            }
+        }
+    }
+    .custom_owl {
+        margin-top: 50px;
+        @include media-breakpoint-down(md) {
+            margin-top: 30px;
+        }
+        .owl-carousel {
+            .item {
+                position: relative;
+                &:hover {
+                    a {
+                        &::before {
+                            width: 100% !important;
+                        }
+                    }
+                }
+                .content {
+                    position: absolute;z-index: 1;color: #fff;left: 25px;bottom: 15px;width: calc(100% - 40px);
+                    a {
+                        text-decoration: none;
+                        position: relative;
+                        &:before {
+                            content: "";-webkit-backface-visibility: hidden;backface-visibility: hidden;position: absolute;left: 0;height: 1px;width: 50px;bottom: -10px;background-color: #ccc;transition: 0.2s all ease;
+                        }
+                    }
+                    h5 {
+                        color: var(--sh-section-heading-font-color);font-size:23px;font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: #fff;margin-bottom: 15px;display: inline-block;
+                        @include media-breakpoint-only(md){
+                            font-size: var(--sh-section-heading-font-size-tablet);
+                        }
+                        @include media-breakpoint-down(md) {
+                            width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+                        }
+                        
+                    }
+                    p{
+                        font-size: var(--sh-website-normal-text-font-size);color:#fff;font-weight: var(--sh-website-normal-text-font-weight);line-height: var(--sh-website-normal-text-line-height);
+                        @include media-breakpoint-only(md){
+                            font-size: var(--sh-website-normal-text-font-size-tablet);
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-website-normal-text-font-size-mobile);
+                        }
+                    }
+                }
+            }
+            figure {
+                position: relative;overflow: hidden;
+                img {
+                    width: 100%;-o-object-fit: cover;object-fit: cover;
+                    @include media-breakpoint-down(md) {
+                        height: 400px;border-radius: 5px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        height: 400px;border-radius: 5px;
+                    }
+                }
+            }
+        }
+        .owl-nav {
+            transform: translateY(0%);justify-content: center;z-index: 1;display: flex !important;
+            @include media-breakpoint-down(xxl) {
+                right: 15%;
+            }
+            @include media-breakpoint-down(xl) {
+                right: 15%;
+            }
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+            @include media-breakpoint-down(lg) {
+                right: 100px;
+            }
+    
+            button.owl-prev {
+                display: flex;background: rgba(86, 75, 198,0.11) !important;border-radius: 5px;margin-right: 5px;align-items: center;
+                span {
+                    color: #1e266d;font-size: 30px;display: block;border-radius: 5px;position: relative;top: -3px;padding: 0px 15px !important;
+                }
+            }
+            button.owl-next {
+                display: flex;background: rgba(86, 75, 198,0.11) !important;border-radius: 5px;align-items: center;
+                span {
+                    color: #1e266d;font-size: 30px;display: block;border-radius: 5px;position: relative;top: -3px;padding: 0px 15px !important;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        .custom_owl{
+            .item {
+                img {
+                    height: 400px;border-radius: 5px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        .custom_owl{
+            .item {
+                img {
+                    height: 500px;border-radius: 5px;
+                }
+            }
+            .carousel-controls {
+                padding:0px 5px;
+            }
+        }
+    }
+}
+// sh_chess_winner_section section start //
+#sh_chess_winner_section{
+    position: relative;background:#fff; padding:30px 0px 0px;
+    .col-xxl-6{padding:0 !important;}
+    .sh_service_content{
+        width:100%;
+        margin:0px auto; padding:0px 29px;
+        margin-bottom:60px;
+        h2.sh_box_title{
+            font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+        p.sh_text{
+            font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 10px;
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-sub-title-font-size-mobile);
+            }
+        }
+    }
+    .sh_image_box{
+            height:350px;width:90%; margin:0px auto; margin-bottom:60px;  box-shadow: var(--sh-website-box-shadow); border-radius:var(--sh-website-common-border-radius);
+            @include media-breakpoint-only(md){
+                height:300px;
+            }
+            @include media-breakpoint-down(md){
+                height:250px;
+                margin-bottom:30px;
+            }
+
+            img{
+                height:100%;width:100%; border-radius: var(--sh-website-common-border-radius);    object-fit: cover;
+                object-position: top;
+            }
+    }
+    .btn{@include sh_primary_button;margin-top:30px;
+        span{
+            svg{
+                stroke: #fff;display: inline-block;width: 20px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-between(lg, xl){
+    #sh_chess_winner_section{ 
+        .sh_service_content{
+            width:100%;padding:0px 0px 0px 15px;
+        }
+        .sh_service_content.box_1{
+            padding-left:15px; padding-right: 0;
+        }
+        .sh_image_box{height:300px;margin-bottom:60px;}
+    }
+}
+
+@include media-breakpoint-only(md){
+    #sh_chess_winner_section{
+        .sh_service_content{width:90%;padding:0;
+        }
+        .sh_service_content.box_1{
+            padding-left:0px; padding-right: 0;
+        } 
+    }
+}
+
+@include media-breakpoint-down(md){
+    #sh_chess_winner_section{
+        .col-xxl-6.sh_order_1{order:2;}  
+        .col-xxl-6.sh_order_2{order:1;}  
+        .sh_service_content{
+            width:90%;padding:0px 0px;margin-bottom:30px;
+        }
+        .sh_image_box{
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+}
+// sh_chess_winner_section section end //

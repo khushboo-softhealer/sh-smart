@@ -1,0 +1,282 @@
+//  banner-start //
+#sh_about_us_banner {
+    @include sh_other_page_banner;
+}
+//  banner-end //
+
+// about-us page about-section start//
+#sh_about_us_page_about{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:var(--sh-section-bottom-padding);background:#ffffff;
+    @include media-breakpoint-down(lg){
+        padding-top:var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_about_img_box{width:100%; overflow:hidden;
+
+        .sh_img_1{
+            height:200px;width:100%;border-radius:var(--sh-website-common-border-radius);
+            @include media-breakpoint-down(sm){
+                height:120px;
+            }
+
+            img{
+                height:100%;width:100%;border-radius:var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+        .sh_img_2{
+            height:300px;width:100%;border-radius:var(--sh-website-common-border-radius);
+            @include media-breakpoint-down(sm){
+                height:170px;
+            }
+            img{
+                height:100%;width:100%;border-radius:var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+        .sh_img_3{
+            height:200px;width:100%;border-radius:var(--sh-website-common-border-radius);margin-top:30px;
+            @include media-breakpoint-down(sm){
+                height:120px;
+            }
+            img{
+                height:100%;width:100%;border-radius:var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+        .sh_img_4{
+            height:250px;width:100%;border-radius:var(--sh-website-common-border-radius);margin-top:30px;
+            @include media-breakpoint-down(sm){
+                height:170px;
+            }
+            img{
+                height:100%;width:100%;border-radius:var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+    }
+    .sh_about_content_box{width:100%;
+        .sh_about_title{
+            font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-section-heading-font-size-tablet);margin-top:30px;
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-font-size-mobile);margin-top:30px;
+            }
+        }
+        .sh_text{
+            font-size: var(--sh-website-normal-text-font-size);font-weight:var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);text-align: left;
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-website-normal-text-font-size-tablet);text-align: left;
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-website-normal-text-font-size-mobile);text-align: left;
+            }
+        }
+
+    }  
+}
+
+// about-us page about-section end//
+
+// about-us page Work-flow section start//
+#sh_service_workflow{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:var(--sh-section-bottom-padding);background:#ffffff;
+    @include media-breakpoint-down(lg){
+        padding-top:var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+
+
+    .sh_section_heading{
+        width: var(--sh-section-heading-width-desktop);margin: 0 auto;
+        @include media-breakpoint-down(lg){
+            width: var(--sh-section-heading-width-mobile);
+        }
+
+    .sh_heading_title{
+        font-size:var(--sh-section-heading-font-size);color: var(--sh-section-heading-font-color);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);margin-bottom:var(--sh-section-heading-margin-bottom);text-align: center;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-font-size-tablet);  
+        }
+    }
+    p.sh_heading_text{
+        font-size:var(--sh-section-heading-sub-title-font-size);color:var(--sh-section-heading-sub-title-font-color);font-weight:var(--sh-section-heading-sub-title-font-weight);line-height:var(--sh-section-heading-sub-title-line-height);margin-bottom:var(--sh-section-heading-sub-title-margin-bottom);text-align: center;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-sub-title-font-size-tablet)
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+        }
+    }
+    }
+    .sh_workflow_box{width:100%;text-align:center; margin-top:20px; position: relative;
+        &:after{display: block;width: 81%;height: 1px;position: absolute;content: '';border-bottom: 1px solid rgba(125,125,125,0.25);top: 40px;left: 63%;
+            @include media-breakpoint-down(xl){
+               display:none;
+            }
+        }
+        .sh_icon{
+            height:80px;width:80px;background:o-color(o-color-1);border-radius:80px;display:flex;justify-content: center;align-items: center;margin:0px auto;margin-bottom:20px;position: relative;z-index:1;
+            
+            &:before{
+                width: 100px;height: 100px;opacity: -1;margin-left: -50px;top: -10px;z-index:-1;transform: scale(0.6);left: 50%;border-radius: 50%;position: absolute;background:o-color(o-color-1);content: '';transition: 0.3s cubic-bezier(0.5,0.58,0.55,1);
+            }
+            &:hover:before{
+                opacity: 0.3; transform:scale(1.2);
+            }
+            &:after{
+                width: 85px;height: 85px;top: -3px;margin-left: -42px;background:o-color(o-color-1);content:'';border-radius: 50%;position: absolute;left: 50%;transition: 0.3s cubic-bezier(0.5,0.58,0.55,1); opacity:0; z-index:-1;
+            }
+            &:hover:after{
+                opacity: 0.4;transform: scale(1.2);
+            }
+
+        svg{stroke:#fff !important;}
+
+        }
+        .sh_box_desc{
+            width:100%;
+            h2.sh_box_title{
+                font-size:var(--sh-website-heading-title-font-size);color:var(--sh-website-heading-title-font-color) ;font-weight:var(--sh-website-heading-title-font-weight);margin-bottom:var(--sh-website-heading-title-margin-bottom) ;line-height: var(--sh-website-heading-title-line-height);
+            }
+            p.sh_box_text{
+                font-size:var(--sh-website-normal-text-font-size);color:var(--sh-website-normal-text-font-color);font-weight:var(--sh-website-normal-text-font-weight);line-height:var(--sh-website-normal-text-line-height); 
+                @include media-breakpoint-only(md){
+                    font-size:var(--sh-website-normal-text-font-size-tablet);
+
+                }
+                @include media-breakpoint-down(md){
+                    font-size:var(--sh-website-normal-text-font-size-mobile);
+                }
+
+            }
+
+        }
+    
+    }
+    .sh_workflow_box.box-1:after{display:none;}
+
+}
+
+// about-us page Work-flow section end//
+
+// sh_about_mission_vision section start //
+
+#sh_about_mission_vision{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:80px;
+    @include media-breakpoint-between(lg, xl){
+        padding-bottom: var(--sh-section-bottom-padding);
+    }
+    @include media-breakpoint-down(md){
+        padding-top:var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_img_box{
+        padding-top:50px;
+        @include media-breakpoint-between(xl, xxl){
+           padding-top:50px;
+        }
+        @include media-breakpoint-down(lg){
+            padding:0;
+        }
+    }
+    .sh_img_1{
+        height:450px;width:55%;border-radius: var(--sh-website-common-border-radius);position: relative;
+        @include media-breakpoint-only(md){
+            left:8%;
+        }
+        @include media-breakpoint-down(sm){
+            height: 300px;width: 100%;left:0;
+        }
+        img{
+            height:100%;width:100%;object-fit: cover;border-radius: var(--sh-website-common-border-radius);
+            @include media-breakpoint-down(sm){
+                display:none;
+            }   
+        }
+        .sh_img_2{
+            height:350px;width:90%;border-radius: var(--sh-website-common-border-radius);position: absolute;top:120px;right:-200px;
+            @include media-breakpoint-down(sm){
+            height: 300px;width: 100%; top:0; right:0; position: relative; margin-top:20px; display:block;
+            }
+
+            img{
+                height:100%;width:100%;object-fit: cover;border-radius: var(--sh-website-common-border-radius);
+                @include media-breakpoint-down(sm){
+                    display:block;
+                }   
+            }
+        }
+        .sh_shape{
+            position: absolute;top: 250px;right: -270px;z-index: -1;
+            @include media-breakpoint-between(lg, xl){
+                right: -220px;
+             }
+            svg{
+                height:350px !important;width:350px !important;display: block; stroke:o-color(o-color-1); stroke-width:3;
+                @include media-breakpoint-down(sm){
+                    display:none;
+                }
+            }
+        }
+    }
+    .sh_content_box{
+        width:100%;
+        padding:0px 35px;
+        @include media-breakpoint-down(lg){
+            margin-top:120px;padding:0;
+        }
+        @include media-breakpoint-down(sm){
+            margin-top:50px;
+        }
+        .sh_box_title{
+            font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-font-size-mobile);
+            }
+
+        }
+        .sh_box_text{
+            font-size: var(--sh-website-normal-text-font-size);font-weight:var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+            }
+        }
+        .sh_icon_box{
+            display:flex;justify-content: center;align-items:baseline;margin-top:20px;
+            .sh_icon{margin-right:20px;
+            svg{
+                height:45px !important;width:45px !important; stroke:o-color(o-color-1) !important;
+                .cls-2{
+                    fill:o-color(o-color-1) !important; stroke:none !important;
+                }
+                @include media-breakpoint-down(md){
+                    height:35px !important; width:35px !important;
+                }
+            
+            }
+            }
+            .sh_desc{width:100%;
+             h2.sh_title{
+                font-size:var(--sh-website-heading-title-font-size);color:var(--sh-website-heading-title-font-color) ;font-weight:var(--sh-website-heading-title-font-weight);line-height: var(--sh-website-heading-title-line-height);
+               
+             }
+             p.sh_text{
+                font-size:var(--sh-website-normal-text-font-size);color:var(--sh-website-normal-text-font-color);font-weight:var(--sh-website-normal-text-font-weight);line-height:var(--sh-website-normal-text-line-height);margin-bottom:0;
+                @include media-breakpoint-only(md){
+                    font-size:var(--sh-website-normal-text-font-size-tablet);
+                }
+                @include media-breakpoint-down(md){
+                    font-size:var(--sh-website-normal-text-font-size-mobile);
+                }
+             }
+            }
+        }
+    }
+}
+// sh_about_mission_vision section end //
+

@@ -1,0 +1,671 @@
+//  banner-start //
+.sh_zoho_sales_banner{
+    @include sh_other_page_banner;
+    .sh_banner_title{
+        color: #fff;font-size: 40px;font-weight: 600;letter-spacing: -.01em;line-height: 1.1;margin-bottom: 0px;
+        @include media-breakpoint-only(md){
+           font-size: var(--sh-sh-other-page-banner-content-h2-tablet);
+        }
+         @include media-breakpoint-down(md){
+           font-size: var(--sh-sh-other-page-banner-content-h2-mobile);
+        }
+   }
+}
+//  banner-end //
+
+// start zoho overview section // 
+.sh_zoho_sales_overview_section {
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_zoho_sales_overview_main {
+        .sh_zoho_sales_overview_content {
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 30px;
+            }
+            .sh_zoho_sales_overview_title {
+                font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-section-heading-font-size-tablet);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile);
+                }
+            }
+            .sh_zoho_sales_overview_box {
+                display: flex;align-items: flex-start;
+
+                .sh_zoho_sales_overview_svg_box {
+                    svg {
+                        width: 25px;fill: o-color(o-color-1);margin-right: 15px;margin-top:5px;
+                        .cls-2 {
+                            stroke: o-color(o-color-1); fill:none !important;
+                        }
+                        @include media-breakpoint-down(lg) {
+                            width: 25px;margin-right: 10px;
+                        }
+                    }
+                }
+                .sh_zoho_sales_overview_text {
+                    .sh_about_mobile_app_text {
+                        font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);
+                        @include media-breakpoint-only(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                        }
+                    }
+                    .btn {  
+                        @include sh_primary_button;margin-top:20px;
+                        span {
+                            display: flex;align-items: center;
+                            svg {
+                                stroke: #fff;display: inline-block;width: 30px; padding-right:5px;height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sh_parking_management_about_ing_box {
+            position: relative;padding:50px;background-color: rgba(87, 74, 199, 0.05);border-radius: 10px;
+            @include media-breakpoint-down(lg) {
+                padding: 0px;
+            }
+            .sh_photo_group {
+                display: flex;position: relative;z-index: 10;
+                @include media-breakpoint-down(sm) {
+                    justify-content: center;
+                }
+            }
+            .sh_second_photo {
+                position: relative;width:100%;height: 350px;
+                @include media-breakpoint-down(md) {
+                    height: auto;
+                }
+                img {
+                    width: 100%;height: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                }
+                svg {
+                    bottom: -35px;right: -55px;width: 340px;height: auto;position: absolute;z-index: -1;
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                    @include media-breakpoint-down(lg) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// end zoho overview section // 
+
+// crm advance tab section start //
+.sh_crm_solution_tab_section{
+    .sh_section_heading{
+        width:86%;margin-bottom: 50px;margin: 0 auto;
+        @include media-breakpoint-down(lg){
+            width: var(--sh-section-heading-width-mobile);
+        }
+        .sh_box_title{
+            font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom); text-align: center;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet); 
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-font-size-mobile);text-align: center;    
+            }
+        }
+        .sh_text{
+            font-size: var(--sh-section-heading-sub-title-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);text-align: center;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile);text-align: center; 
+            }
+        }
+    }
+    .sh_zoho_sales_tabs_box {
+        position: sticky;overflow: hidden;z-index: 12;top: 70px;left: 0;background: #fff;padding-top: 0;
+        .sh_zoho_sales_tabs {
+            .sh_crm_solution_nav_tab {
+                text-align: center;align-items: stretch;justify-content: center;padding-left: 15px;padding-right: 15px;
+                @include media-breakpoint-down(xl) {
+                    flex-wrap: nowrap;display:flex;overflow-x: auto; overflow-y: hidden; width: 100%;
+                    &::-webkit-scrollbar {
+                    display: none;
+                    }
+                    &::-webkit-scrollbar:horizontal {
+                        height: 10px;
+                    }
+                }
+                @include media-breakpoint-down(md){
+                    justify-content: flex-start;
+                }
+                .sh_crm_solution_tabs_item {
+                    .sh_crm_solution_tabs_item_link {
+                        position: relative;font-weight: 500;color: o-color(o-color-1); padding: 20px 20px; transition: .2s ease;align-items: center;justify-content: space-evenly;display: flex;font-size: 16px;text-decoration: none;margin-bottom: 0;border: none;transition: .2s all;text-transform: capitalize;
+                        @include media-breakpoint-down(md) {
+                            white-space: nowrap;
+                        }
+                        @include media-breakpoint-only(md) {
+                            font-size: 12px;padding: 20px 10px;
+                        }
+                        .sh_zoho_sales_tabs_item_svg {
+                            svg {
+                                width: 35px;display: inline-block;fill:none;margin-right: 10px;transition: .2s all;
+                                .cls-1 {
+                                    fill: o-color(o-color-1); stroke:none !important;
+                                }
+                                
+                                @include media-breakpoint-down(lg) {
+                                   
+                                }
+                                .cls-2{
+                                    fill:none !important; stroke:none !important;
+                                }
+                            }
+                        }
+                        &::before {
+                            content: '';width: 0;transition: .2s all ease;transform: translateX(-50%);left: 50%;display: block;height: 2px;background: #ccc;position: absolute;top: inherit;bottom: 0px;background-color: o-color(o-color-1);
+                        }
+                        &:hover {
+                            color: var(--sh-section-heading-font-color);
+                            .sh_zoho_sales_tabs_item_svg {
+                                svg {
+                                    .cls-1 {
+                                        fill: o-color(o-color-1); stroke:none !important;
+                                    }
+                                }
+                            }
+                        }
+                        &.active {
+                            color: var(--sh-section-heading-font-color);
+                            &::before {
+                                width: 70%;
+                            }
+                            .sh_zoho_sales_tabs_item_svg {
+                                svg {
+                                    .cls-1 {
+                                        fill: var(--sh-section-heading-font-color);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .sh_zoho_sales_tab_section_main{
+        .sh_zoho_sales_tab_sub_section{      
+            padding: 40px 0 35px;
+            @include media-breakpoint-down(lg) {
+                padding: 20px 0;
+            }
+            .sh_zoho_sales_img_box{
+                .sh_zoho_sales_img{
+                    img{
+                        object-fit: cover;
+                    }
+                }
+            }
+            
+            .sh_key_feature_main_box{                
+                margin-bottom: 30px;
+                @include media-breakpoint-down(md){
+                    margin-bottom: 20px;
+                }
+                &.sh_mb_1{
+                    @include media-breakpoint-up(lg) { 
+                        margin-bottom: 0;
+                    }
+                }
+                &.sh_mb_3{
+                    @include media-breakpoint-up(md){
+                        margin-bottom: 0px;
+                    }
+                }
+                &.sh_mb_0{
+                    @include media-breakpoint-down(lg) { 
+                        margin-bottom: 0;
+                    }
+                }
+                .sh_key_feature_box {
+                    background-color: #fff;z-index: 1;position: relative;border-radius: var(--sh-card-box-radius);box-shadow: 0 10px 35px rgba(38, 42, 76, .1);border: 1px solid #e7e7e7;padding: 30px 30px;position: relative;height: 100%;transition: .15s ease-in-out;
+                    &:hover{
+                        box-shadow: 0 5px 70px rgba(38,42,76,.1);border-color: transparent!important;
+                    }  
+                    @include media-breakpoint-only(md) { 
+                        margin-bottom: 0;
+                    }   
+                    @include media-breakpoint-down(md) { 
+                        height: auto; 
+                    }   
+                    .sh_key_feature_img {
+                        svg {
+                            width: 45px;display: inline-block;fill: o-color(o-color-1);margin-bottom: 20px;
+                            @include media-breakpoint-down(md) { 
+                                width: 35px;
+                            }
+                            .cls-1 {
+                                fill: o-color(o-color-1); stroke:none !important;
+                            }
+                            
+                            @include media-breakpoint-down(lg) {
+                               
+                            }
+                            .cls-2{
+                                fill:none !important; stroke:none !important;
+                            }
+                        }
+                    }       
+                    .sh_key_feature_content {
+                        .sh_key_feature_title {
+                            color: var(--sh-website-heading-title-font-color); font-size: var(--sh-website-heading-title-font-size); font-weight: var(--sh-website-heading-title-font-weight); letter-spacing: 0.8px; margin-bottom: 20px;text-transform: capitalize;
+                        }
+                        .sh_key_feature_text {
+                        font-size: var(--sh-website-normal-text-font-size); color: var(--sh-website-normal-text-font-color); margin-bottom: 20px;
+                            @include media-breakpoint-only(md) {
+                                font-size: var(--sh-website-normal-text-font-size-tablet);
+                            }
+                            @include media-breakpoint-down(md) {
+                                font-size: var(--sh-website-normal-text-font-size-mobile);
+                            }
+                        }
+                    }
+                    .sh_key_feature_link_box{
+                        .sh_key_feature_link{
+                            @include sh_secondary_button;margin: 0 auto;
+                            &:hover{
+                                box-shadow: var(--sh-website-box-shadow)
+                            }
+                            .sh_key_feature_link_right {
+                                svg {
+                                    stroke: o-color(o-color-1);display: inline-block;width: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sh_box_1{
+                    min-height:293px;
+                    @include media-breakpoint-only(lg){
+                        min-height: 262px;
+                    }
+                    @include media-breakpoint-down(lg){
+                        min-height:auto;
+                    }
+                }
+                .sh_box_2{
+                    min-height:265px;
+                    @include media-breakpoint-down(xl){
+                        min-height:auto;
+                    }
+                }
+                .sh_box_3{
+                    @include media-breakpoint-down(xl){
+                        min-height:210px;
+                    }
+                    @include media-breakpoint-down(lg){
+                        min-height: auto;
+                    }
+
+                }
+                .sh_box_5{
+                    min-height:260px;
+                    @include media-breakpoint-down(xl){
+                        min-height:238.38px;
+                    }
+                    @include media-breakpoint-down(lg){
+                        min-height: auto;
+                    }
+
+                }
+            }
+        }
+    }
+   
+}
+// crm advance tab section end //
+// zoho integration start //
+.sh_zoho_implementation{      
+    padding: 40px 0 35px;
+    @include media-breakpoint-down(lg) {
+        padding: 20px 0;
+    }
+
+    .sh_section_heading{
+        width:86%;margin-bottom: 50px;margin: 0 auto;
+        @include media-breakpoint-down(lg){
+            width: var(--sh-section-heading-width-mobile);
+        }
+        .sh_box_title{
+            font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom); text-align: center;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet); 
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-font-size-mobile);text-align: center;    
+            }
+        }
+        .sh_text{
+           font-size: var(--sh-section-heading-sub-title-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);text-align: center;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile);text-align: center; 
+            }
+        }
+    }
+
+    .sh_zoho_sales_img_box{
+        .sh_zoho_sales_img{
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+    
+    .sh_key_feature_main_box{                
+        margin-bottom: 30px;
+        @include media-breakpoint-down(md){
+            margin-bottom: 20px;
+        }
+        &.sh_mb_1{
+            @include media-breakpoint-up(lg) { 
+                margin-bottom: 0;
+            }
+        }
+        &.sh_mb_3{
+            @include media-breakpoint-up(md){
+                margin-bottom: 0px;
+            }
+        }
+        &.sh_mb_0{
+            @include media-breakpoint-down(lg) { 
+                margin-bottom: 0;
+            }
+        }
+        .sh_key_feature_box {
+            background-color: #fff;z-index: 1;position: relative;border-radius: var(--sh-card-box-radius);box-shadow: 0 10px 35px rgba(38, 42, 76, .1);border: 1px solid #e7e7e7;padding: 30px 30px;position: relative;height: 100%;transition: .15s ease-in-out;
+            &:hover{
+                box-shadow: 0 5px 70px rgba(38,42,76,.1);border-color: transparent!important;
+            }  
+            @include media-breakpoint-only(md) { 
+                margin-bottom: 0;
+            }   
+            @include media-breakpoint-down(md) { 
+                height: auto; 
+            }   
+            .sh_key_feature_img {
+                svg {
+                    width: 45px;display: inline-block;fill: o-color(o-color-1);margin-bottom: 20px;
+                    @include media-breakpoint-down(md) { 
+                        width: 35px;
+                    }
+                    .cls-1 {
+                        fill: o-color(o-color-1); stroke:none !important;
+                    }
+                    
+                    @include media-breakpoint-down(lg) {
+                       
+                    }
+                    .cls-2{
+                        fill:none !important; stroke:none !important;
+                    }
+                }
+            }        
+            .sh_key_feature_content {
+                .sh_key_feature_title {
+                    color: var(--sh-website-heading-title-font-color); font-size: var(--sh-website-heading-title-font-size); font-weight: var(--sh-website-heading-title-font-weight); letter-spacing: 0.8px; margin-bottom: 20px;text-transform: capitalize;
+                }
+                .sh_key_feature_text {
+                font-size: var(--sh-website-normal-text-font-size); color: var(--sh-website-normal-text-font-color); margin-bottom: 20px;
+                    @include media-breakpoint-only(md) {
+                        font-size: var(--sh-website-normal-text-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: var(--sh-website-normal-text-font-size-mobile);
+                    }
+                }
+            }
+            .sh_key_feature_link_box{
+                .sh_key_feature_link{
+                    @include sh_secondary_button;margin: 0 auto;
+                    &:hover{
+                        box-shadow: var(--sh-website-box-shadow)
+                    }
+                    .sh_key_feature_link_right {
+                        svg {
+                            stroke: o-color(o-color-1);display: inline-block;width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// zoho integration end //
+
+#zoho_faq_section{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:var(--sh-section-bottom-padding); 
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_inner_box {
+        .sh_flex_column_reverse{
+            @include media-breakpoint-down(md){
+                flex-direction: column-reverse;
+            }
+        }
+        .sh_mission_vision_about_ing_box {
+            position: relative;padding:50px;background-color: rgba(87, 74, 199, 0.05);border-radius: 10px;
+            @include media-breakpoint-down(lg) {
+                padding: 0px;
+            }
+            .sh_photo_group {
+                display: flex;position: relative;z-index: 10;
+                @include media-breakpoint-down(sm) {
+                    justify-content: center;
+                }
+            }
+            .sh_second_photo {
+                position: relative;width:100%;height: 350px;
+                @include media-breakpoint-only(md) {
+                    height: 300px;
+                }
+                @include media-breakpoint-down(md) {
+                    height: auto;
+                }
+                img {
+                    width: 100%;height: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                }
+                svg {
+                    bottom: -35px;right: -55px;width: 340px;height: auto;position: absolute;z-index: -1;
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                    @include media-breakpoint-down(lg) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .sh_mission_vision_about_content {
+            padding-right: 40px;padding-left: 40px;
+            @include media-breakpoint-down(lg) {
+                padding-right: 0px;padding-left: 0px;
+            }
+            &.sh_mission_accordion_box{
+                @include media-breakpoint-down(lg) {
+                   margin-bottom: 20px
+                }
+            }
+            .sh_sub_title {
+                @include sh_sub_badge;
+                margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);margin-bottom: 15px;
+                }
+            }
+            p.sh_text {
+                font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                @include media-breakpoint-only(md)  {
+                    font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                }
+            }   
+            .sh_goal_box{
+                .sh_goal_box_content {
+                    display: flex;align-items: flex-start;margin-bottom: 20px;
+                    .sh_goal_check_box {
+                        svg {
+                            width: 25px;fill: o-color(o-color-1);margin-right: 20px;margin-top: 5px;
+                            .cls-1 {
+                                fill: o-color(o-color-1); stroke:none !important;
+                            }
+                            
+                            @include media-breakpoint-down(lg) {
+                               
+                            }
+                            .cls-2{
+                                fill:none !important; stroke:none !important;
+                            }
+                            @include media-breakpoint-down(lg) {
+                                width: 21px;margin-right: 10px;
+                            }
+                        }
+                    }
+                    .sh_goal_text {
+                        font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+                        @include media-breakpoint-only(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                        }
+                    }
+                }
+            }
+            .sh_mission_box_accordion{
+                .accordion-item{
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+                    .sh_mission_box_accordion_header{
+                        .sh_mission_box_accordion_btn{
+                            box-shadow: none;outline: none;color: var(--sh-section-heading-font-color);font-weight: var(--sh-website-normal-text-font-weight); font-size: var(--sh-website-heading-title-font-size); padding: 15px 0;background: transparent;
+                        }
+                    }
+                    .sh_mission_box_accordion_body{
+                        padding: 10px 0;
+                        .sh_mission_box_accordion_text{
+                            font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0;
+                            @include media-breakpoint-only(md) {
+                                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                            }
+                            @include media-breakpoint-down(md) {
+                                font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// start zoho_why_chooes_section section  // 
+.zoho_why_chooes_section {
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .zoho_project_overview_main {
+        .zoho_project_overview_content {
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 30px;
+            }
+            .zoho_project_overview_title {
+                font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-section-heading-font-size-tablet);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile);
+                }
+            }
+            .zoho_project_overview_box {
+                display: flex;align-items: flex-start;
+
+                .zoho_project_overview_svg_box {
+                    svg {
+                        width: 25px;fill: o-color(o-color-1);margin-right: 15px;margin-top:5px;
+                        .cls-2 {
+                            fill: o-color(o-color-1);
+                        }
+                        @include media-breakpoint-down(lg) {
+                            width: 25px;margin-right: 10px;
+                        }
+                    }
+                }
+                .zoho_project_overview_text {
+                    .sh_about_mobile_app_text {
+                        font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);
+                        @include media-breakpoint-only(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                        }
+                    }
+                }
+            }
+        }
+        .sh_parking_management_about_ing_box {
+            position: relative;padding:50px;background-color: rgba(87, 74, 199, 0.05);border-radius: 10px;
+            @include media-breakpoint-down(lg) {
+                padding: 0px;
+            }
+            .sh_photo_group {
+                display: flex;position: relative;z-index: 10;
+                @include media-breakpoint-down(sm) {
+                    justify-content: center;
+                }
+            }
+            .sh_second_photo {
+                position: relative;width:100%;height: 350px;
+                @include media-breakpoint-down(md) {
+                    height: auto;
+                }
+                img {
+                    width: 100%;height: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                }
+                svg {
+                    bottom: -35px;right: -55px;width: 340px;height: auto;position: absolute;z-index: -1;
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                    @include media-breakpoint-down(lg) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// end zoho_why_chooes_section // 
+// call to action start //
+.sh_zoho_sales_call_to_action {
+    @include sh_call_to_action_section;
+}
+// call to action end //

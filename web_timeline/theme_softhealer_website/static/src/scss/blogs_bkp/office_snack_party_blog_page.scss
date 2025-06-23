@@ -1,0 +1,115 @@
+// start office snack party banner banner section // 
+#sh_office_snack_party_banner {
+    @include sh_other_page_banner;
+}
+// end office snack party banner banner section //
+// strat office snack party viedo section //
+#sh_office_snack_party_viedo_section {
+    background: #fff;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);
+    @include media-breakpoint-down(lg){
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_inner_section {
+        padding: 150px 60px;background-image: url("/theme_softhealer_website/static/src/img/blogs_bkp/office_snack_party/office_snack_party_video.webp");background-position: center;background-repeat: no-repeat;background-size:cover;border-radius: 50px;text-align: center;position: relative;
+        &::after{
+        content: "";position: absolute;left: 0;top: 0;bottom: 0;right: 0;background:#21224082 no-repeat padding-box;opacity: 1;visibility: visible;border-radius: 50px;
+            @include media-breakpoint-down(md) {
+                border-radius: 30px;
+            }
+        }
+        @include media-breakpoint-between(lg, xl){
+            padding: 90px 30px;
+        }
+        @include media-breakpoint-only(md){
+            padding: 50px 30px 50px;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 40px 15px;border-radius: 30px;
+        }
+        .sh_main_video_section{
+            display: flex;
+            justify-content: center;position: relative;z-index: 1;
+            .sh_video_button{
+                position: relative;
+                width: 200px;
+                .sh_svg{
+                    width: 200px;
+                    @include media-breakpoint-down(md) {
+                        width: 150px;
+                    }
+                }
+                .sh_video_icon{
+                    position: absolute;background: #fff;padding: 20px;border-radius: 50%;left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    @include media-breakpoint-down(md) {
+                        padding: 10px 17px;
+                    }
+                    svg{
+                        stroke:o-color(o-color-1);
+                        @include media-breakpoint-down(xl) {
+                            width: 30px;display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// end office snack party viedo section //
+
+#sh_office_snack_party_gallery_section{
+    padding-bottom: var(--sh-section-bottom-padding);
+    @include media-breakpoint-down(lg){
+        padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_office_snack_party_gallery_main{
+        .sh_section_heading {
+            width: var(--sh-section-heading-width-desktop);margin: 0 auto;margin-bottom: 40px;
+    
+            @include media-breakpoint-down(lg) {
+                width: var(--sh-section-heading-width-mobile);margin-bottom: 30px;
+            }
+            .sh_section_heading_title {
+                font-size: var(--sh-section-heading-font-size);color: var(--sh-section-heading-font-color);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);text-align: center;text-transform: capitalize;
+    
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-section-heading-font-size-tablet);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile);
+                }
+            }
+            .sh_section_heading_text {
+                font-size: var(--sh-section-heading-sub-title-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: 0;text-align: center;
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                }
+            }
+        }
+        .sh_inner_box{
+            .sh_office_snack_party_gallery_img_box{
+                overflow:hidden;border-radius: var(--sh-website-common-border-radius);margin-bottom: 30px;box-shadow: var(--sh-website-box-shadow);
+                &.sh_mb_1{
+                    @include media-breakpoint-up(md) { 
+                        margin-bottom: 0;
+                    }
+                }
+                &.sh_mb_0{
+                    @include media-breakpoint-down(md) { 
+                        margin-bottom: 0;
+                    }
+                }
+                .sh_office_snack_party_gallery_img{
+                    width: 100%;transition-duration: .3s;border-radius: var(--sh-website-common-border-radius);max-width: 100%;display:block;overflow:hidden;
+                    &:hover{
+                        transform: scale(1.2);border-radius: var(--sh-website-common-border-radius);transition-duration: .3s;box-shadow: var(--sh-website-box-shadow);opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}

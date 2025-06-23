@@ -1,0 +1,395 @@
+// start about crm solution banner section // 
+#sh_crm_solution_banner {
+    @include sh_other_page_banner;
+}
+
+// end  about crm solution banner section // 
+// start about crm solution section // 
+#sh_crm_solution_about_section {
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    @include media-breakpoint-between(lg, xl){
+        padding-top: var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_crm_solution_about_section_main {
+        .sh_crm_solution_about_content {
+            .sh_crm_solution_about_content_title {
+                font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-section-heading-font-size-tablet);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile);
+                }
+            }
+            .sh_crm_solution_about_content_box {
+                display: flex; align-items: flex-start; margin-bottom: 20px;
+                .sh_crm_solution_about_content_check_box {
+                    .sh_crm_solution_about_content_check {
+                        background-color: o-color(o-color-1);font-size: 16px;border-radius: 50px;color: #fff;margin-right: 10px;margin-top: 6px;padding: 3px;
+                    }
+                }
+                .sh_crm_solution_about_content_text {
+                    font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+                    @include media-breakpoint-only(md) {
+                        font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                    }
+                }
+            }
+            .btn {  
+                @include sh_primary_button;margin-top:20px;
+                span {
+                    display: flex;align-items: center;
+                    svg {
+                        stroke: #fff;display: inline-block;width: 30px; padding-right:5px;height: 30px;
+                    }
+                }
+            }
+        }
+        .sh_crm_solution_about_img_box {
+            width: 100%;
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 30px;
+            }
+            .sh_crm_solution_about_img {
+                width: 100%;position: relative;display: flex;flex-wrap: wrap;justify-content: center;align-items: end;gap: 20px;
+                img {
+                    height: 100%;width: 100%;object-fit: cover;border-radius: var(--sh-website-common-border-radius);box-shadow: 0 20px 30px rgba(38, 42, 76, .15);
+                }
+                .sh_crm_solution_about_img_1 {
+                    width: 45%; height: 220px;
+                    @include media-breakpoint-down(md) {
+                        width: 45%;height: 160px;
+                    }
+                }
+                .sh_crm_solution_about_img_2 {
+                    width: 45%;height: 350px;
+                    @include media-breakpoint-down(md) {
+                        width: 45%;height: 225px;
+                    }
+                }
+                .sh_crm_solution_about_img_3 {
+                    width: 90%;height: 230px;
+                    @include media-breakpoint-down(md) {
+                        width: 90%;height: 180px;
+                    }
+                }
+                .sh_crm_solution_about_shap_1 {
+                    position: absolute;top: 40px;left: -20px;z-index: -1;
+                    svg {
+                        height: auto;width: 120px;
+                        .cls-1 {
+                            fill: o-color(o-color-1);
+                        }
+                        @include media-breakpoint-down(lg) {
+                            width: 150px;
+                        }
+                    }
+                    @include media-breakpoint-only(md) {
+                        left: 0;
+                    }
+                    @include media-breakpoint-down(md) {
+                        display: none;
+                    }
+                }
+                .sh_crm_solution_about_shap_2 {
+                    position: absolute;bottom: 0;right: 0;z-index: -1;
+                    svg {
+                        height: auto;width: 100%;
+                        .cls-1 {
+                            fill: o-color(o-color-1);
+                        }
+                    }
+                    @include media-breakpoint-down(md) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// end about crm solution section // 
+// start use crm solution section // 
+#sh_why_use_crm_section {
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: 40px;background-color: var(--sh-section-background-color);
+    }
+    @include media-breakpoint-between(lg, xl){
+        padding-top: var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_why_use_crm_section_main {
+        background-color: var(--sh-section-background-color);border-radius: 30px;padding: 50px;
+        @include media-breakpoint-down(lg) {
+            background-color: transparent;padding: 0px;
+        }
+        .sh_why_use_crm_section_content {
+            padding-right: 35px;
+            @include media-breakpoint-down(lg) {
+                padding-right: 0px;margin-bottom: 50px;
+            }
+            .sh_why_use_crm_section_content_title {
+                font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-section-heading-font-size-tablet);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile);
+                }
+            }
+            .sh_why_use_crm_section_content_box {
+                display: flex;align-items: flex-start;margin-bottom: 20px;
+                .sh_why_use_crm_section_content_check_box {
+                    svg {
+                        width: 28px;fill: o-color(o-color-1);margin-right: 20px;margin-top: 5px;
+                        .cls-2 {
+                            fill: o-color(o-color-1);
+                        }
+                        @include media-breakpoint-down(lg) {
+                            width: 25px;margin-right: 10px;
+                        }
+                    }
+                }
+                .sh_why_use_crm_section_content_text {
+                    font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+                    @include media-breakpoint-only(md) {
+                        font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                    }
+                }
+            }
+        }
+        .sh_column_inner_box {
+            position: relative;
+            @include media-breakpoint-only(md) {
+                margin-bottom: 60px;
+            }
+            @include media-breakpoint-down(md) {
+                margin-bottom: 15px;
+            }
+            .sh_photo_group {
+                display: flex;position: relative;z-index: 10;
+                @include media-breakpoint-down(sm) {
+                    justify-content: center;
+                }
+                .sh_first_photo {
+                    position: absolute;transform: translateY(1.6111px);top: 50px;left: 0px;width: 320px;height: 250px;
+                    @include media-breakpoint-down(md) {
+                        display: none;
+                    }
+                    @include media-breakpoint-only(md) {
+                        left: 0px;width: 400px;height: 300px;
+                    }
+                    img {
+                        width: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);height: 100%;object-fit: cover;
+                    }
+                }
+                .sh_second_photo {
+                    margin-left: auto;width: 300px;height: 250px;
+                    @include media-breakpoint-only(md) {
+                        width: 350px;height: 300px;
+                    }
+                    @include media-breakpoint-down(md) {
+                        margin-left: 0px;width: 90%;
+                    }
+                    img {
+                        width: 100%;height: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                    }
+                }
+                .sh_shapes_one {
+                    bottom: 0px;right: -30px;position: absolute;display: flex;margin-left: auto;z-index: -1;
+                    @include media-breakpoint-down(md) {
+                        right: -10px;
+                    }
+                    svg {
+                        width: 340px;height: auto;
+                        .cls-1 {
+                            fill: o-color(o-color-1);
+                        }
+                        @include media-breakpoint-only(md) {
+                            left: -5px;width: 270px
+                        }
+                        @include media-breakpoint-down(md) {
+                            bottom: 80px;right: -10px;width: 250px;
+                        }
+                    }
+                }
+                .sh_shapes_two {
+                    svg {
+                        top: -20px;left: 20%;width: 120px;height: 173px;position: absolute;display: flex;z-index: -1;
+                        .cls-1 {
+                            fill: o-color(o-color-1);
+                        }
+                        @include media-breakpoint-up(xxl){
+                            top: -20px;left: 28%;
+                        }
+                        @include media-breakpoint-between(lg, xl){
+                            top: -40px;left: 0;
+                        }
+                        @include media-breakpoint-only(md) {
+                            top: -20px;left: 34%;
+                        }
+                        @include media-breakpoint-down(md) {
+                            top: -40px;left: -30px;
+                        }
+                        @include media-breakpoint-down(sm) {
+                            top: -40px;left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// end use crm solution section // 
+
+
+// start tab crm solution section // 
+#sh_crm_solution_tab_section {
+    position: relative;padding-top:30px;padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: 20px;padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    @include media-breakpoint-between(lg, xl){
+        padding-top: 20px; padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_crm_solution_tab_section_main {
+        .sh_crm_solution_tabs_box {
+            position: sticky;overflow: hidden;z-index: 12;top: 80px;left: 0;background: #fff;padding-top: 0;
+
+            .sh_crm_solution_tabs {
+                .sh_crm_solution_nav_tab {
+                    text-align: center;align-items: stretch;justify-content: center;padding-left: 15px;padding-right: 15px;
+                    @include media-breakpoint-down(md) {
+                        flex-wrap: nowrap;display: -webkit-box;overflow-x: auto; overflow-y: hidden; width: 100%;
+                       &::-webkit-scrollbar {
+                        display: none;
+                        }
+                        &::-webkit-scrollbar:horizontal {
+                            height: 10px;
+                        }
+                    }
+                    .sh_crm_solution_tabs_item {
+                        .sh_crm_solution_tabs_item_link {
+                            position: relative;font-weight: 500;color: o-color(o-color-1); padding: 20px 20px; transition: .2s ease;align-items: center;justify-content: space-evenly;display: flex;font-size: 16px;text-decoration: none;margin-bottom: 0;border: none;transition: .2s all;text-transform: capitalize;
+                            @include media-breakpoint-down(md) {
+                                white-space: nowrap;
+                            }
+                            @include media-breakpoint-only(md) {
+                                font-size: 14px;padding: 20px 10px;
+                            }
+                            .sh_crm_solution_tabs_item_svg {
+                                svg {
+                                    width: 28px;display: inline-block;fill: o-color(o-color-1);margin-right: 10px;transition: .2s all;
+                                    .cls-2 {
+                                        fill: o-color(o-color-1);
+                                    }
+                                    @include media-breakpoint-down(lg) {
+                                        width: 20px;
+                                    }
+                                }
+                            }
+                            &::before {
+                                content: '';width: 0;transition: .2s all ease;transform: translateX(-50%);left: 50%;display: block;height: 2px;background: #ccc;position: absolute;top: inherit;bottom: 0px;background-color: o-color(o-color-1);
+                            }
+                            &:hover {
+                                color: var(--sh-section-heading-font-color);
+                                .sh_crm_solution_tabs_item_svg {
+                                    svg {
+                                        .cls-2 {
+                                            fill: var(--sh-section-heading-font-color);
+                                        }
+                                    }
+                                }
+                            }
+                            &.active {
+                                color: var(--sh-section-heading-font-color);
+                                &::before {
+                                    width: 70%;
+                                }
+                                .sh_crm_solution_tabs_item_svg {
+                                    svg {
+                                        .cls-2 {
+                                            fill: var(--sh-section-heading-font-color);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sh_crm_solution_tab_sub_section {
+            padding: 60px 0 0;
+            @include media-breakpoint-down(lg) {
+                padding: 30px 0 0;
+            }
+            .sh_crm_solution_tab_content {
+                @include media-breakpoint-only(md) {
+                    padding-right: 0px;
+                }
+                @include media-breakpoint-down(md) {
+                    padding-right: 0px;margin-bottom: 25px;
+                }
+                .sh_crm_solution_tab_title {
+                    font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+
+                    @include media-breakpoint-only(md) {
+                        font-size: var(--sh-section-heading-font-size-tablet);line-height: var(--sh-section-heading-line-height);margin-bottom: 15px;
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: var(--sh-section-heading-font-size-mobile);
+                    }
+                }
+                .sh_crm_solution_tab_text {
+                    font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+                    @include media-breakpoint-only(md) {
+                        font-size: var(--sh-section-heading-sub-title-font-size-tablet);margin-bottom: 15px;
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                    }
+                }
+                .sh_crm_solution_primary_button {
+                    .sh_crm_solution_primary_link {
+                        @include sh_primary_button;                   
+                        .sh_crm_solution_primary_link_right {
+                            svg {
+                                stroke: #fff;display: inline-block;width: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .sh_crm_solution_tab_img_box {
+                height: 350px;
+                @include media-breakpoint-down(lg) {
+                    height: 300px;
+                }
+                img {
+                    width: 100%;height: 100%;object-fit: cover;box-shadow: 0 20px 30px rgba(38, 42, 76, .15);border-radius: var(--sh-website-common-border-radius);
+                }
+            }
+        }
+    }
+}
+// end tab crm solution section //
+// related_services section start //
+#sh_crm_solution_related_services {
+    @include sh_related_services_section;
+}
+// related services section end //
+// call to action start //
+#sh_crm_solution_call_to_action {
+    @include sh_call_to_action_section;
+}
+// call to action end //

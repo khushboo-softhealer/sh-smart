@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sh_softhealer_website_default_office_snack_party_blog_page_tmpl_latest"
+        name="Office Snack Party Blog">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <!-- start office snack party banner section -->
+                <section id="sh_office_snack_party_banner"
+                    class="sh_office_snack_party_banner sh_other_page_banner">
+                    <div class="sh_banner_content">
+                        <h2 class="sh_banner_title">Tasty and Healthy Bites</h2>
+                        <p class="sh_banner_text">Snack Time Delights for the Office Party</p>
+                        <ul class="sh_banner_breadcrumb">
+                            <li>
+                                <a class="sh_banner_breadcrumb_link" href="/">Home<span
+                                        class="sh_banner_breadcrumb_icon fa fa-angle-right"></span></a>
+                            </li>
+                            <li>
+                                <span class="sh_banner_normal_text">Office Snack Party</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- end office snack party banner section -->
+                <!-- strat office snack party viedo section -->
+                <section id="sh_office_snack_party_viedo_section"
+                    class="sh_office_snack_party_viedo_section">
+                    <div class="container">
+                        <div class="sh_inner_section">
+                            <div class="sh_main_video_section">
+                                <div class="sh_video_button">
+                                    <a class="sh_video_icon"
+                                        href="https://youtu.be/pOnzQ1mjMiI?list=PL-zDV7_rrd2pjl8cNmNRqbsjedwGT30BH"
+                                        target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-player-play"
+                                            width="44" height="44" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M7 4v16l13 -8z" />
+                                        </svg>
+                                    </a>
+                                    <!-- Ripple -->
+                                    <svg class="sh_svg" viewBox="0 0 320 320">
+                                        <defs>
+                                            <circle id="circle-clip" cx="50%" cy="50%" r="25%"></circle>
+                                            <clipPath id="avatar-clip">
+                                                <use href="#circle-clip"></use>
+                                            </clipPath>
+                                        </defs>
+                                        <circle cx="50%" cy="50%" r="25%" fill="#fff"
+                                            fill-opacity="1">
+                                            <animate attributeName="r" values="20%;40%" dur="4s"
+                                                repeatCount="indefinite"></animate>
+                                            <animate attributeName="fill-opacity" values="1;0"
+                                                dur="4s" repeatCount="indefinite"></animate>
+                                        </circle>
+                                        <circle cx="50%" cy="50%" r="25%" fill="#fff"
+                                            fill-opacity="1">
+                                            <animate attributeName="r" values="20%;40%" dur="4s"
+                                                begin="1s" repeatCount="indefinite"></animate>
+                                            <animate attributeName="fill-opacity" values="1;0"
+                                                dur="4s" begin="1s" repeatCount="indefinite"></animate>
+                                        </circle>
+                                        <circle cx="50%" cy="50%" r="25%" fill="#fff"
+                                            fill-opacity="1">
+                                            <animate attributeName="r" values="20%;40%" dur="4s"
+                                                begin="2s" repeatCount="indefinite"></animate>
+                                            <animate attributeName="fill-opacity" values="1;0"
+                                                dur="4s" begin="2s" repeatCount="indefinite"></animate>
+                                        </circle>
+                                        <circle cx="50%" cy="50%" r="25%" fill="#fff"
+                                            fill-opacity="1">
+                                            <animate attributeName="r" values="20%;40%" dur="4s"
+                                                begin="3s" repeatCount="indefinite"></animate>
+                                            <animate attributeName="fill-opacity" values="1;0"
+                                                dur="4s" begin="3s" repeatCount="indefinite"></animate>
+                                        </circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end office snack party viedo section -->
+                <!-- start office snack party gallery section -->
+                <section id="sh_office_snack_party_gallery_section"
+                    class="sh_office_snack_party_gallery_section aos-init aos-animate">
+                    <div class="sh_office_snack_party_gallery_main">
+                        <div class="container">
+                            <div class="sh_section_heading">
+                                <h1 class="sh_section_heading_title">Office Snacks Party - Taste
+                                    Like Home</h1>
+                                <p class="sh_section_heading_text">A Whole day lots of eating! you
+                                    know what that means! step away from the oily and too much fast
+                                    food, and don’t even think about making time spending food. We
+                                    have made healthy snacks that taste great &amp; coworkers also
+                                    feel great!</p>
+                            </div>
+                            <div class="sh_inner_box">
+                                <div class="row">
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="sh_office_snack_party_gallery_img_box">
+                                            <img src="/theme_softhealer_website/static/src/img/blogs_bkp/office_snack_party/image6.webp" alt="" class="sh_office_snack_party_gallery_img" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                       <div class="sh_office_snack_party_gallery_img_box">
+                                            <img src="/theme_softhealer_website/static/src/img/blogs_bkp/office_snack_party/image2.webp" alt="" class="sh_office_snack_party_gallery_img" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="sh_office_snack_party_gallery_img_box">
+                                            <img src="/theme_softhealer_website/static/src/img/blogs_bkp/office_snack_party/image3.webp" alt="" class="sh_office_snack_party_gallery_img" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="sh_office_snack_party_gallery_img_box sh_mb_1">
+                                            <img src="/theme_softhealer_website/static/src/img/blogs_bkp/office_snack_party/image4.webp" alt="" class="sh_office_snack_party_gallery_img" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                       <div class="sh_office_snack_party_gallery_img_box sh_mb_1">
+                                            <img src="/theme_softhealer_website/static/src/img/blogs_bkp/office_snack_party/image5.webp" alt="" class="sh_office_snack_party_gallery_img" loading="lazy" />
+                                        </div>
+                                    </div>
+                                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                       <div class="sh_office_snack_party_gallery_img_box sh_mb_1 sh_mb_0">
+                                            <img src="/theme_softhealer_website/static/src/img/blogs_bkp/office_snack_party/image1.webp" alt="" class="sh_office_snack_party_gallery_img" loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end office snack party gallery section -->
+            </div>
+        </t>
+    </template>
+</odoo>

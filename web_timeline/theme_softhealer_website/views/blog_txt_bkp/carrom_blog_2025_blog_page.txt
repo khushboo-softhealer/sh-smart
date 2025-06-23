@@ -1,0 +1,340 @@
+ <section id="sh_carrom_tournament_banner" class="sh_carrom_tournament_banner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                                <div class="sh_carrom_tournament_banner_main_img_div">
+                                    <div class="sh_carrom_tournament_banner_first_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/banner/section_1_left_side_img.webp"
+                                            alt="banner img"
+                                            class="sh_carrom_tournament_banner_first_img" />
+                                    </div>
+                                    <div class="sh_carrom_tournament_banner_second_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/banner/section_1_right_side_img.webp"
+                                            alt="banner img"
+                                            class="sh_carrom_tournament_banner_second_img" />
+                                    </div>
+                                    <div class="sh_carrom_tournament_banner_small_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/banner/Carrom_Tournament_circle_shape_new.webp"
+                                            alt="banner img"
+                                            class="sh_carrom_tournament_banner_small_img" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center">
+                                <div class="sh_carrom_tournament_banner_main_heading_div">
+
+                                    <div class="sh_carrom_tournament_banner_heading_div">
+                                        <h2 class="sh_carrom_tournament_banner_heading">A Battle of
+                                            Skills and Strategy!</h2>
+                                    </div>
+                                    <div class="sh_carrom_tournament_banner_text_div">
+                                        <p class="sh_carrom_tournament_banner_text">At Softhealer
+                                            Technologies, we believe that a little friendly
+                                            competition brings people together and recharges the
+                                            spirit. Staying true to that spirit, we organized an
+                                            exciting Carrom Tournament on 26th April 2025,
+                                            turning an ordinary Saturday into a lively celebration
+                                            of strategy, precision, and team bonding. <br /> <br />
+                                            The tournament started with tremendous enthusiasm as
+                                            players gathered around the carrom boards, chalking
+                                            their fingers and preparing for battle. Every match was
+                                            intense, fast-paced, and full of brilliant moments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sh_carrom_blog_testimonial_section"
+                    class="sh_carrom_bog_testimonial_section">
+                    <div class="container">
+                        <h2>
+                            The Journey Through the Rounds
+                        </h2>
+                        <div class="sh_carrom_blog_testimonial_text_div">
+                            <p class="sh_carrom_blog_testimonial_text"> From the very first round,
+                                players showcased incredible focus, sharp aiming skills, and clever
+                                tactics. Colleagues cheered on their favorite teams, creating an
+                                electrifying atmosphere that filled the office with energy. Each
+                                strike, pocket, and rebound drew applause and gasps a like 
+                                as the rounds progressed, the competition only grew tougher.
+                                Participants displayed not just their carrom skills but also
+                                remarkable teamwork and sportsmanship, making it a true delight to
+                                watch. </p>
+                        </div>
+                        <div id="owl-testimonial" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_1.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_2.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_3.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_4.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_5.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_6.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_7.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_8.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_9.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_10.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_11.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_12.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_13.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_14.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_15.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_16.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_17.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="sh_carrom_bog_testimonial_section_img_box">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/slider/carrom_18.webp"
+                                        alt="carrom blog slider img"
+                                        class="sh_carrom_bog_testimonial_section_img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sh_carrom_blog_semi_final_section"
+                    class="sh_carrom_blog_semi_final_section">
+                    <div class="container">
+                        <div class="sh_carrom_blog_semi_final_section_heading_div">
+                            <h2 class="sh_carrom_blog_semi_final_section_heading">Building up to the
+                                Semi-Finals</h2>
+                        </div>
+                        <div class="sh_carrom_blog_semi_final_section_text_div">
+                            <p class="sh_carrom_blog_semi_final_section_text">After several rounds
+                                of fierce competition, two teams emerged as the top contenders
+                                to battle it out in the semi-finals. Both teams played
+                                with exceptional skill and determination, but after an intense
+                                match, it was Dishant Doshi and Amit Rathod who managed to secure
+                                their spot in
+                                the finals with a commanding performance.</p>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <div class="sh_carrom_blog_semi_final_section_img_div">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/semi_finalist_1_new.webp"
+                                        alt="sami final img"
+                                        class="sh_carrom_blog_semi_final_section_img" />
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <div class="sh_carrom_blog_semi_final_section_img_div">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/semi_finalist_2_new.webp"
+                                        alt="sami final img"
+                                        class="sh_carrom_blog_semi_final_section_img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sh_carrom_blog_final_countdown" class="sh_carrom_blog_final_countdown">
+                    <div class="container">
+                        <div class="sh_carrom_blog_final_countdown_heading_div">
+                            <h2 class="sh_carrom_blog_final_countdown_heading">The Final Showdown</h2>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div
+                                class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 d-flex align-items-center">
+                                <div class="sh_carrom_blog_final_countdown_text_div">
+                                    <p class="sh_carrom_blog_final_countdown_text">The final match
+                                        was nothing short of thrilling! Every move was carefully
+                                        calculated,
+                                        and the tension could be felt across the room. Ultimately,
+                                        Amit Rathod
+                                        demonstrated outstanding composure and precision under
+                                        pressure, securing the
+                                        title of Final Winner. His victory was a testament to focus,
+                                        perseverance, and a
+                                        deep love for the game.</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <div class="sh_carrom_blog_final_countdown_img_div">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/the_final_showdown.webp"
+                                        alt="final countdown"
+                                        class="sh_carrom_blog_final_countdown_img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sh_carrom_tournament_final_player"
+                    class="sh_carrom_tournament_final_player">
+                    <div class="container">
+                        <div class="sh_carrom_tournament_banner_heading_div">
+                            <h2 class="sh_carrom_tournament_banner_heading">Crowning the Champion</h2>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                                <div class="sh_carrom_tournament_banner_main_img_div">
+                                    <div class="sh_carrom_tournament_banner_first_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/final_winner_left_side.webp"
+                                            alt="banner img"
+                                            class="sh_carrom_tournament_banner_first_img" />
+                                    </div>
+                                    <div class="sh_carrom_tournament_banner_second_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/final_winner_right_side.webp"
+                                            alt="banner img"
+                                            class="sh_carrom_tournament_banner_second_img" />
+                                    </div>
+                                    <div class="sh_carrom_tournament_banner_small_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/carrom_blog_2025/banner/Carrom_Tournament_circle_shape_new.webp"
+                                            alt="banner img"
+                                            class="sh_carrom_tournament_banner_small_img" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center">
+                                <div class="sh_carrom_tournament_banner_main_heading_div">
+                                    <div class="sh_carrom_tournament_banner_text_div">
+                                        <p class="sh_carrom_tournament_banner_text"> The Carrom
+                                            Tournament 2025 was more than a competition — it was a
+                                            celebration of camaraderie, healthy rivalry, and the
+                                            lively spirit that defines Softhealer Technologies.
+                                            Events like these remind us that success isn't just
+                                            about work; it’s about building strong relationships,
+                                            creating joyful memories, and enjoying the journey
+                                            together. <br /><br /> Congratulations once again to
+                                            Amit Rathod for his fantastic win, and kudos to all
+                                            participants who made the tournament such a grand
+                                            success. Here's looking forward to many more exciting
+                                            events at Softhealer Technologies!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

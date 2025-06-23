@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sh_softhealer_website_default_kgf_movie_party_blog_page_tmpl_latest" name="KGF Movie">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+            <!--  start banner KGF Movie section  -->
+                <section id="sh_kgf_movie_banner"
+                    class="sh_kgf_movie_banner sh_other_page_banner">
+                    <div class="sh_banner_content">
+                        <h2 class="sh_banner_title">KGF Movie Chapter-2</h2>
+                        <p class="sh_banner_text">Watching movies with office friends creates enjoyable moments and makes them even more memorable.</p>
+                        <ul class="sh_banner_breadcrumb">
+                            <li>
+                                <a class="sh_banner_breadcrumb_link" href="/">Home<span
+                                        class="sh_banner_breadcrumb_icon fa fa-angle-right"></span></a>
+                            </li>
+                            <li>
+                                <span class="sh_banner_normal_text">KGF Movie Blog</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!--  end banner KGF Movie section  -->
+
+                <!--  KGF blog About   section start -->
+            <section id="sh_kgf_movie_about" class="sh_kgf_movie_about aos-init aos-animate" >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 align-self-center" >
+                            <div class="sh_service_content" data-aos="fade-right">
+                                <h2 class="sh_box_title">Movie Together With Friends</h2>
+                                <p class="sh_text">
+                                    Light, Camera &amp; Action! Who is not excited about KGF! How weekend will be great if watching KGF! Want to catch your special moments perfectly?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="sh_image_box" data-aos="fade-left">
+                                <img src="/theme_softhealer_website/static/src/img/blogs_bkp/kgf_blog/sh_image_1.webp" alt="Odoo Customization" loading="lazy"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 sh_order_1" >
+                            <div class="sh_image_box" data-aos="fade-right">
+                                <img src="/theme_softhealer_website/static/src/img/blogs_bkp/kgf_blog/sh_image_2.webp" alt="Odoo Support" loading="lazy"/>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 align-self-center sh_order_2">
+                            <div class="sh_service_content box_1" data-aos="fade-left">
+                                <h2 class="sh_box_title">Party Mood</h2>
+                                <p class="sh_text">
+                                    Whether you are a kid or a grown-up, a movie party is always a winning idea to get together with friends. That is a perfect way from invitations to sweet treats.
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 align-self-center">
+                            <div class="sh_service_content" data-aos="fade-right">
+                                <h2 class="sh_box_title">Employee Happiness Is Our Happiness</h2>
+                                <p class="sh_text">
+                                    Our healers team was gone to watch KGF2 this weekend when it first hit theaters to make a memory. It’s not a true movie party without popcorn and cock!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12" >
+                            <div class="sh_image_box" data-aos="fade-left" >
+                                <img src="/theme_softhealer_website/static/src/img/blogs_bkp/kgf_blog/sh_image_3.webp" alt="Odoo Migration" loading="lazy"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 sh_order_1">
+                            <div class="sh_image_box" data-aos="fade-right">
+                                <img src="/theme_softhealer_website/static/src/img/blogs_bkp/kgf_blog/sh_image_4.webp" alt="Odoo Implementation" loading="lazy"/>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 align-self-center sh_order_2">
+                            <div class="sh_service_content box_1" data-aos="fade-left">
+                                <h2 class="sh_box_title">Employee Engagement</h2>
+                                <p class="sh_text">
+                                    To increase happiness and positive vibes, It's a more effective way to do small small party with staff. It's always great to get together with staff in every party.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- KGF blog About section end -->
+            </div>
+        </t>
+    </template>
+</odoo>

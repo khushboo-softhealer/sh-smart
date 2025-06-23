@@ -1,0 +1,34 @@
+//  banner-start //
+#sh_privacy_policy_banner {
+    @include sh_other_page_banner;
+}
+//  banner-end //
+
+
+// Privacy policy Rules start //
+#sh_privacy_policy_rules{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:var(--sh-section-bottom-padding);background:#ffffff;
+    @include media-breakpoint-down(lg){ 
+        padding-top:var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_heading_title{
+        color: var(--sh-section-heading-font-color);font-size: 20px;font-weight: 500;margin: 0px 5px 0px 0px;
+        @include media-breakpoint-down(md) {
+            font-size: 16px;
+        }
+    }
+    p.sh_text{
+        font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom:10px;
+        @include media-breakpoint-only(md) {
+            font-size: var(--sh-website-normal-text-font-size-tablet)
+        }
+        @include media-breakpoint-down(md) {
+            font-size: var(--sh-website-normal-text-font-size-mobile)
+        }
+    }
+    
+}
+
+
+
+// Privacy policy Rules end //

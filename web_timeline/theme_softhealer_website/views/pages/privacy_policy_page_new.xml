@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+    <!-- Template Privacy Policy for website basic view -->
+    <template id="theme_softhealer_website_privacy_policy_tmpl" name="Privacy Policy for Website">
+        <t t-call="website.layout">
+   <!-- 
+==================================
+ Privacy Policy for Website
+==================================
+-->
+<div class="oe_structure oe_empty" id="wrap">
+    <!--  start banner Privacy Policy section  -->
+   <!-- 
+==================================
+ Privacy Policy for Website
+==================================
+-->
+
+    <section id="sh_privacy_policy_banner"
+        class="sh_privacy_policy_banner sh_other_page_banner">
+        <div class="sh_banner_content">
+            <h1 class="sh_banner_title">Privacy Policy</h1>
+            <p class="sh_banner_text">We makes your business easy</p>
+            <ul class="sh_banner_breadcrumb">
+                <li>
+                    <a class="sh_banner_breadcrumb_link" href="/">Home<span
+                            class="sh_banner_breadcrumb_icon fa fa-angle-right"></span></a>
+                </li>
+                <li>
+                    <span class="sh_banner_normal_text">Privacy Policy</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--  end banner Privacy Policy section  -->
+    <section id="sh_privacy_policy_rules" class="sh_privacy_policy_rules ">
+        <div class="container">
+            <div class="sh_privacy_policy_content">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <p class="sh_text">
+                            <b>
+                                <font class="sh_heading_title">About Privacy Policy:</font>
+                            </b>
+                            <font>We are a leading ERP solution provider catering to businesses of all sizes. Our comprehensive
+                                ERP solutions are designed to streamline operations, optimize processes, and enhance
+                                productivity across various industries. This page is intended to inform visitors about our policies
+                                regarding the collection, use, and disclosure of personal information for users of our service. We
+                                are committed to protecting the privacy and confidentiality of our user's personal information
+                                and have implemented measures to ensure its secure handling.</font>
+                            <br />
+                            <br />
+                            <font>
+                                By using our service, you agree to the collection and use of information in
+                                accordance with this policy. The "Personal Information" collected is used for
+                                providing and improving the service, and will not be shared with anyone except
+                                as described in this "Privacy Policy".
+                            </font>
+                            <br />
+                            <br />
+                            <font>
+                                The terms used in this "Privacy Policy" have the same meanings as in our "Terms
+                                and Conditions", which can be found on the ERP app unless otherwise defined in
+                                this "Privacy Policy".
+                            </font>
+
+
+                        </p>
+                        <p class="sh_text">
+                            <b>
+                                <font class="sh_heading_title">Information Collection and Use:</font>
+                            </b>
+                            <font>While using our service, we may require you to
+                                provide us with certain personally identifiable information to enhance your
+                                experience. The information we request will be retained by us and used as
+                                described in this privacy policy.
+                            </font>
+                        </p>
+                        <p class="sh_text">
+                            <b>
+                                <font class="sh_heading_title">Log Data:</font>
+                            </b>
+                            <font>We collect data and information (through third party products) on your
+                                phone called "Log Data" whenever you use our service. This "Log Data" may
+                                include information such as your device Internet Protocol (“IP”) address, device
+                                name, operating system version, the configuration of the app when utilizing our
+                                service, the time and date of your use of the service, and other statistics.</font>
+                        </p>
+                        <p class="sh_text">
+                            <span class="sh_heading_title">
+                                Cookies:</span>
+                            <font>Cookies are files with a small amount of data commonly used as
+                                anonymous unique identifiers. These are sent to your browser from the websites
+                                you visit and stored on your device's internal memory. While this service does
+                                not use these “cookies” explicitly, the app may use third party code and libraries
+                                that use “cookies” to collect information and improve their services. You have
+                                the option to either accept or refuse these cookies, and you may not be able to
+                                use some portions of this service if you choose to refuse our cookies.</font>
+                        </p>
+                        <p class="sh_text">
+                            <b>
+                                <font class="sh_heading_title">Service Providers:</font>
+                            </b>
+                            <font>
+                                We may employ third-party companies and individuals for a
+                                variety of reasons, such as to facilitate our service, to provide the service on our
+                                behalf, to perform service-related services, or to assist us in analyzing how our
+                                service is used. We want to inform users that these third parties have access to
+                                your "Personal Information" only to perform the tasks assigned to them on our
+                                behalf. However, they are obligated not to disclose or use the information for any
+                                other purpose.
+                            </font>
+                        </p>
+                        <p class="sh_text">
+                            <b>
+                                <font class="sh_heading_title">Security:</font>
+                            </b>
+                            <font>We take the protection of your Personal Information seriously and use
+                                commercially acceptable means to safeguard it. However, please keep in mind
+                                that no method of transmission over the internet, or method of electronic
+                                storage is 100% secure and reliable, and we cannot guarantee its absolute
+                                security.
+                                </font>
+                        </p>
+                        <p class="sh_text">
+                            <b>
+                                <font class="sh_heading_title">Links to Other Sites:</font>
+                            </b>
+                            <font>This service may contain links to other sites. If you click on
+                                a third-party link, you will be directed to that site. Please note that these
+                                external sites are not operated by us. Therefore, we strongly advise you to review
+                                the Privacy Policy of these websites. We have no control over and assume no
+                                responsibility for the content, privacy policies, or practices of any third-party
+                                sites or services.</font>
+                        </p>
+                        <p class="sh_text">
+                            <b>
+                                <font class="sh_heading_title">Children’s Privacy:</font>
+                            </b>
+                            <font>Our services are not directed to anyone under the age of 13.
+                                We do not knowingly collect personally identifiable information from children
+                                under 13. If we become aware that a child under 13 has provided us with personal
+                                information, we immediately delete this from our servers. If you are a parent or
+                                guardian and you are aware that your child has provided us with personal
+                                information, please contact us so that we will be able to take the necessary
+                                actions.</font>
+                        </p>
+                        <p class="sh_text">
+                            <b>
+                                <font class="sh_heading_title">Changes to This Privacy Policy:</font>
+                            </b>
+                            <font>We may update our "Privacy Policy" from time to
+                                time. Thus, we advise you to review this page periodically for any changes. We
+                                will notify you of any changes by posting the new "Privacy Policy" on this page.
+                                This policy is effective as.</font>
+                        </p>
+                        <p class="sh_text">
+                            <b>
+                                <font class="sh_heading_title">Contact Us:</font>
+                            </b>
+                            <font>If you have any questions or suggestions about our
+                                "Privacy Policy", do not hesitate to contact us at
+                                info@softhealer.com<br/></font>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+        </t>
+    </template>		
+	
+
+    <data noupdate="1">
+
+        <!-- Default pagese  below 2 record must put in no update 1-->
+        <record id="theme_softhealer_website_privacy_policy_page" model="website.page">
+            <field name="is_published">True</field>
+            <field name="url">/privacy-policy</field>
+            <field name="view_id" ref="theme_softhealer_website.theme_softhealer_website_privacy_policy_tmpl"/>
+            <field name="track">True</field>
+            <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+        </record>
+
+        <record id="theme_softhealer_website_privacy_policy_menu" model="website.menu">
+            <field name="name">Privacy Policy</field>
+            <field name="url">/privacy-policy</field>
+            <field name="page_id" ref="theme_softhealer_website.theme_softhealer_website_privacy_policy_page"/>
+            <field name="sequence" type="int">10</field>
+            <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+        </record>
+
+    </data>
+
+
+
+
+
+</odoo>

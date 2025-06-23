@@ -1,0 +1,1062 @@
+#wrapwrap {
+    .o_header_standard#top {
+        .navbar {
+            .js_cls_global_search_container#top_menu_container {
+                #top_menu {
+                    @include media-breakpoint-up(lg) {
+                        align-items: center;
+                    }
+                }
+
+                .navbar-toggler.ms-auto {
+                    @include media-breakpoint-down(lg) {
+                        margin-left: 0px !important;
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+
+                        span {
+                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(30, 38, 109,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+                        }
+                    }
+                }
+
+                a.navbar-brand.logo.me-4 {
+                    img {
+                        height: 1.9rem;
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        margin-right: auto !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &:not(.login_signup_reset_password_page) {
+        &:not(.o_portal) {
+            header {
+                nav.navbar {
+                    background-color: transparent;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+
+                    @include media-breakpoint-down(lg) {
+                        .dropdown.o_no_autohide_item {
+                            margin-left: 0px !important;
+                        }
+                    }
+                }
+            }
+
+            .navbar-light {
+                .navbar-nav {
+                    .nav-link {
+                        color: #fff;
+                        font-size: 16px;
+                        margin: 0px 10px;
+                        position: relative;
+                        transition: opacity 0.24s ease-in-out;
+                        padding-left: 0px;
+                        padding-right: 0px;
+
+                        @include media-breakpoint-down(lg) {
+                            margin: 0px;
+                        }
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 0%;
+                            height: 2px;
+                            bottom: 0px;
+                            background-color: #fff;
+                            left: 0px;
+                        }
+
+                        &:hover {
+                            &:before {
+                                background: #fff;
+                                width: 100%;
+                                transition: width .5s cubic-bezier(.22, .61, .36, 1);
+                            }
+                        }
+
+                        &:hover {
+                            color: #fff;
+                        }
+
+                        &:focus {
+                            color: #fff;
+                        }
+                    }
+
+                    .nav-link.show {
+                        &:before {
+                            width: 100%;
+                        }
+
+                        >#wrapwrap {
+                            &:not(.login_signup_reset_password_page) {
+                                &:not(.o_portal) {
+                                    .nav-link {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .nav-link.active {
+                        &:before {
+                            width: 100%;
+                        }
+                    }
+
+                    .nav-link.active {
+                        color: #fff;
+                    }
+
+                    li.nav-item.dropdown.o_no_autohide_item {
+                        margin-left: auto;
+                    }
+
+                }
+            }
+
+            .o_header_standard.o_header_is_scrolled {
+                background-color: #fff;
+
+                .navbar-light {
+                    .navbar-nav {
+                        .nav-link {
+                            color: var(--sh-website-heading-title-font-color) !important;
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                width: 0%;
+                                height: 2px;
+                                bottom: 0px;
+                                background-color: o-color(o-color-1);
+                                left: 0px;
+                            }
+
+                            &:hover {
+                                &::before {
+                                    background: o-color(o-color-1);
+                                    width: 100%;
+                                    transition: width .5s cubic-bezier(.22, .61, .36, 1);
+                                }
+                            }
+
+                            &:hover {
+                                color: #fff;
+                            }
+
+                            &:focus {
+                                color: #fff;
+                            }
+                        }
+
+                        .nav-link.active {
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
+
+
+
+
+#wrapwrap {
+    &.login_signup_reset_password_page {
+        .o_header_standard.o_top_fixed_element {
+            .sh_softhealer_website_navbar_brand_website_logo_scrolled {
+                display: block;
+            }
+
+            .sh_softhealer_website_navbar_brand_website_logo {
+                display: none !important;
+            }
+        }
+    }
+
+    &:not(.login_signup_reset_password_page) {
+        &:not(.o_portal) {
+            .o_header_standard.o_header_affixed.o_header_is_scrolled.o_top_fixed_element {
+                .sh_softhealer_website_navbar_brand_website_logo {
+                    display: none;
+                }
+
+                .sh_softhealer_website_navbar_brand_website_logo_scrolled {
+                    display: block !important;
+                }
+            }
+
+            .navbar-nav {
+                .o_extra_menu_items {
+                    .nav-link {
+                        &:before {
+                            display: none;
+                        }
+
+                        &:hover {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .o_no_autohide_item {
+                    .nav-link {
+                        &:before {
+                            display: none;
+                        }
+
+                        &:hover {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#wrapwrap.login_signup_reset_password_page {
+    .sh_softhealer_website_no_breadcrumb_page {
+        .sh_softhealer_website_navbar_brand_website_logo {
+            display: none !important;
+        }
+    }
+
+    .sh_softhealer_website_navbar_brand_website_logo_scrolled {
+        display: block !important;
+    }
+
+    .navbar-light {
+        .navbar-nav {
+            .nav-link {
+                color: #fff;
+                font-size: 16px;
+                margin: 0px 10px;
+                position: relative;
+                transition: opacity 0.24s ease-in-out;
+                padding-left: 0px;
+                padding-right: 0px;
+
+                @include media-breakpoint-down(lg) {
+                    margin: 0px;
+                }
+            }
+        }
+    }
+
+    .o_header_standard {
+        background-color: #fff;
+
+        .navbar-light {
+            .navbar-nav {
+                .show {
+                    >.nav-link {
+                        color: #fff;
+                    }
+                }
+
+                .nav-link {
+                    color: var(--sh-website-heading-title-font-color) !important;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 0%;
+                        height: 2px;
+                        bottom: 0px;
+                        background-color: o-color(o-color-1);
+                        left: 0px;
+                    }
+
+                    &:hover {
+                        &::before {
+                            background: o-color(o-color-1);
+                            width: 100%;
+                            transition: width .5s cubic-bezier(.22, .61, .36, 1);
+                        }
+                    }
+
+                    &:hover {
+                        color: #fff;
+                    }
+
+                    &:focus {
+                        color: #fff;
+                    }
+                }
+
+                .nav-link.active {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+
+                .nav-link.active {
+                    color: #fff;
+                }
+            }
+        }
+
+        .js_cls_global_search_container {
+            .js_cls_global_search_btn.btn.oe_search_button.btn-primary {
+                svg {
+                    stroke: #1e266d;
+                }
+            }
+        }
+    }
+}
+
+
+
+.js_blog.website_blog {
+    .navbar-light {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: rgba(0, 0, 0, 0.55) !important;
+
+                    &:before {
+                        display: none;
+                    }
+
+                    &:hover &:before {
+                        display: none;
+                    }
+
+                    .disabled {
+                        color: rgba(0, 0, 0, 0.3) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#wrapwrap {
+    &:not(.login_signup_reset_password_page) {
+        &:not(.o_portal) {
+            .navbar-nav {
+                .o_extra_menu_items {
+                    .nav-link {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+
+                .o_no_autohide_item {
+                    .nav-link {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//global search
+#wrapwrap {
+    &:has(.sh_helpdesk_ticket_submitted_page):not(.login_signup_reset_password_page) {
+        &:not(.o_portal) {
+            .o_header_standard.o_header_is_scrolled {
+                .js_cls_global_search_container {
+                    .js_cls_global_search_btn.btn.oe_search_button.btn-primary {
+                        svg {
+                            stroke: #1e266d;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#wrapwrap.login_signup_reset_password_page {
+    .o_header_standard {
+        .navbar-nav {
+            .o_extra_menu_items {
+                .nav-link {
+                    &:hover {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .o_no_autohide_item {
+                .nav-link {
+                    &:hover {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@include media-breakpoint-up(lg) {
+    #wrapwrap:not(:has(.sh_helpdesk_ticket_submitted_page)):not(.login_signup_reset_password_page):not(.o_portal) .o_header_standard {
+        position: fixed !important;
+        top: 0;
+        left: 0 !important;
+        width: 100%;
+        transition: all 0.5s ease, width 0;
+    }
+}
+
+.js_blog.website_blog {
+    .navbar-light {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: rgba(0, 0, 0, 0.55) !important;
+
+                    &:before {
+                        display: none;
+                    }
+
+                    &:hover &:before {
+                        display: none;
+                    }
+
+                    .disabled {
+                        color: rgba(0, 0, 0, 0.3) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.o_portal {
+    .o_header_standard.o_top_fixed_element {
+        .js_cls_global_search_container {
+            .sh_softhealer_website_navbar_brand_website_logo {
+                display: none;
+            }
+
+            .sh_softhealer_website_navbar_brand_website_logo_scrolled {
+                display: block !important;
+            }
+        }
+    }
+
+    .js_cls_global_search_btn.btn-primary {
+        svg {
+            stroke: var(--sh-website-heading-title-font-color);
+        }
+    }
+
+    li.nav-item.dropdown.o_no_autohide_item {
+        margin-left: auto;
+
+        @include media-breakpoint-down(lg) {
+            margin-left: 0px;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    #wrapwrap {
+        &:not(.login_signup_reset_password_page) {
+            &:not(.o_portal) {
+                header {
+                    nav.navbar {
+                        background-color: #fff;
+
+                        .js_cls_global_search_container {
+                            a.navbar-brand.logo.me-4 {
+                                @include media-breakpoint-down(sm) {
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .navbar-light {
+                    .navbar-nav {
+                        .nav-link {
+                            color: var(--sh-website-heading-title-font-color) !important;
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                width: 0%;
+                                height: 2px;
+                                bottom: 0px;
+                                background-color: o-color(o-color-1);
+                                left: 0px;
+                            }
+
+                            &:hover {
+                                &::before {
+                                    background: o-color(o-color-1);
+                                    width: 10%;
+                                    transition: width .5s cubic-bezier(.22, .61, .36, 1);
+                                }
+
+                                color: #fff;
+                            }
+                        }
+
+                        .nav-link.active {
+                            &::before {
+                                width: 10%;
+                            }
+                        }
+
+                        .show {
+                            >#wrapwrap {
+                                &:not(.login_signup_reset_password_page) {
+                                    &:not(.o_portal) {
+                                        .navbar-light {
+                                            .navbar-nav {
+                                                .nav-link.active {
+                                                    color: #fff;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .o_header_standard.o_top_fixed_element {
+                    .sh_softhealer_website_navbar_brand_website_logo_scrolled {
+                        display: block !important;
+                    }
+
+                    .sh_softhealer_website_navbar_brand_website_logo {
+                        display: none;
+                    }
+                }
+
+                .o_header_standard {
+                    .js_cls_global_search_container {
+                        .js_cls_global_search_btn.btn.oe_search_button.btn-primary {
+                            svg {
+                                stroke: #1e266d;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-light {
+        .navbar-nav {
+            .nav-link {
+                &:focus {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+}
+
+
+#wrapwrap {
+    &:not(.login_signup_reset_password_page) {
+        .o_header_standard {
+            .navbar {
+                .nav.navbar-nav.flex-grow-1 {
+                    li.nav-item {
+                        .o_mega_menu:has(.sh_mega_menu.sh_company_megamenu) {
+                            width: 270px !important;
+                            left: auto;
+                            padding: 10px 0px;
+                            max-height: 60vh !important;
+                            min-height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#wrapwrap.login_signup_reset_password_page {
+    .o_header_standard {
+        .navbar {
+            .navbar-toggler.ms-auto {
+                margin-left: 10px !important;
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+                span {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(30, 38, 109,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+                }
+            }
+
+            .nav.navbar-nav.flex-grow-1 {
+                li.nav-item {
+                    .o_mega_menu:has(.sh_mega_menu.sh_company_megamenu) {
+                        width: 270px !important;
+                        left: auto;
+                        padding: 10px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//mega menu start//
+
+.dropdown-menu.o_mega_menu.show {
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    opacity: 1;
+    display: block;
+}
+
+.dropdown-menu.o_mega_menu {
+    background: #fff;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0 0 0;
+    -ms-transform-origin: 0 0 0;
+    -o-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+    opacity: 0;
+    position: absolute;
+    margin: 0 0px;
+    -moz-box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 5px;
+    display: block;
+    top: 100%;
+    z-index: -1;
+    left: 0px;
+    padding: 40px 0;
+    min-height: 80vh;
+
+
+
+    @include media-breakpoint-down(lg) {
+        z-index: 0;
+        position: relative;
+        display: table-column-group;
+        padding: 0px 0px;
+    }
+
+    ul {
+        width: 100%;
+        float: left;
+        padding-left: 0px !important;
+
+        h4 {
+            padding: 0px !important;
+            border-left: 1px solid rgba(0, 0, 0, .05) !important;
+            color: var(--sh-section-heading-font-color) !important;
+            font-weight: 600 !important;
+            font-size: 20px !important;
+            position: relative;
+
+            @include media-breakpoint-down(lg) {
+                margin-top: 20px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 10%;
+                height: 1px;
+                bottom: -2px;
+                background-color: o-color(o-color-1);
+                left: 0px;
+            }
+        }
+
+        li {
+            display: inline-block;
+            list-style: none;
+            margin-left: 5px;
+            color: var(--sh-section-heading-font-color);
+
+            @include media-breakpoint-down(lg) {
+                font-size: 14px;
+            }
+
+            a {
+                margin: 3px 5px;
+                text-decoration: none;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .sh_sub_menu1 {
+        @include media-breakpoint-down(lg) {
+            margin-top: 30px;
+        }
+    }
+
+    .sh_sub_menu {
+        float: left;
+        left: 0;
+        right: 0;
+        padding-left: 0px;
+
+        @include media-breakpoint-down(lg) {
+            box-shadow: none;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 20px;
+        }
+    }
+
+    .sh_sub_menu1 {
+        float: left;
+        left: 0;
+        right: 0;
+        padding-left: 0px;
+
+        @include media-breakpoint-down(lg) {
+            box-shadow: none;
+        }
+    }
+
+    .sh_mega_menu_company {
+        width: 270px;
+    }
+
+    .sh_mega_menu {
+        .sh_icon {
+            text-align: left;
+            float: left;
+            padding: 15px 0px 5px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            svg {
+                width: 35px;
+                display: inline-flex;
+
+                @include media-breakpoint-down(lg) {
+                    width: 30px;
+                }
+
+                .cls-2 {
+                    fill: o-color(o-color-1);
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 2px;
+                bottom: 0px;
+                background-color: #fff;
+                left: 0px;
+            }
+
+            &:hover {
+                &::before {
+                    background: o-color(o-color-1);
+                    width: 100%;
+                    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+                }
+            }
+
+        }
+
+        .new_icon {
+            svg {
+                width: 35px;
+                display: inline-flex;
+
+                .cls-1 {
+                    fill: o-color(o-color-1);
+                    stroke: none !important;
+                }
+
+                @include media-breakpoint-down(lg) {}
+
+                .cls-2 {
+                    fill: none !important;
+                    stroke: none !important;
+                }
+            }
+        }
+
+        .sh_mega {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding-right: 0px;
+        }
+    }
+}
+
+//mega menu end//
+
+
+// Usermenu scss // 
+.js_usermenu.dropdown-menu {
+    transition: all .4s ease;
+    transform: scaleY(0);
+    transform-origin: 0 0 0;
+    opacity: 0;
+    right: 0 !important;
+    left: auto !important;
+    right: 0;
+    transform: translateY(0px);
+    opacity: 0;
+    transition: 0.3s all;
+
+    @include media-breakpoint-down(lg) {
+        left: auto;
+        right: auto;
+        position: static;
+    }
+
+    .dropdown-item {
+        display: flex !important;
+        align-items: center !important;
+        color: var(--sh-section-heading-font-color) !important;
+        position: relative;
+        width: fit-content;
+        margin: 1rem 1rem !important;
+        padding: 0 !important;
+
+        &:hover {
+            background-color: #fff;
+            color: var(--sh-section-heading-font-color) !important;
+        }
+
+        &:focus {
+            background-color: #fff;
+            color: var(--sh-section-heading-font-color) !important;
+            outline: 0px;
+        }
+
+        &:active {
+            background-color: #fff;
+            color: var(--sh-section-heading-font-color) !important;
+        }
+
+        &:active:focus {
+            background-color: #fff;
+            color: var(--sh-section-heading-font-color) !important;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -3px;
+            background-color: #fff;
+            left: 0px;
+            transition: 0.5s all;
+        }
+
+        &:hover::before {
+            width: 100%;
+            background-color: o-color(o-color-1);
+        }
+
+        &:focus::before {
+            width: 100%;
+            background-color: o-color(o-color-1);
+        }
+
+        .fa.fa-fw.me-1.small.text-muted {
+            font-size: 20px !important;
+            color: o-color(o-color-1) !important;
+            margin-right: 8px !important;
+        }
+
+    }
+
+}
+
+.js_usermenu.dropdown-menu.show {
+    transform: scaleY(1);
+    opacity: 1;
+    display: block;
+    left: auto;
+    right: 0;
+
+    @include media-breakpoint-down(lg) {
+        left: auto;
+        right: auto;
+        position: static;
+    }
+}
+
+// Helpdesk ticket submitted successfully code //
+html {
+    div#wrapwrap {
+
+        &.o_project_sharing_container {
+            header {
+                &#top {
+                    &.o_header_standard {
+                        position: unset !important;
+                        background-color: #fff;
+                        margin-bottom: 15px;
+
+                        .sh_softhealer_website_navbar_brand_website_logo {
+                            display: none;
+                        }
+
+                        .sh_softhealer_website_navbar_brand_website_logo_scrolled {
+                            display: block !important;
+                        }
+
+                        .js_cls_global_search_btn.btn-primary svg {
+                            stroke: var(--sh-website-heading-title-font-color) !important;
+                        }
+
+                        .navbar-light {
+                            .navbar-nav {
+                                .nav-link {
+                                    color: var(--sh-website-heading-title-font-color) !important;
+
+                                    &:before {
+                                        content: '';
+                                        position: absolute;
+                                        width: 0%;
+                                        height: 2px;
+                                        bottom: 0px;
+                                        background-color: o-color(o-color-1);
+                                        left: 0px;
+                                    }
+
+                                    &:hover {
+                                        &::before {
+                                            background: o-color(o-color-1);
+                                            width: 100%;
+                                            transition: width .5s cubic-bezier(.22, .61, .36, 1);
+                                        }
+                                    }
+
+                                    &:hover {
+                                        color: #fff;
+                                    }
+
+                                    &:focus {
+                                        color: #fff;
+                                    }
+                                }
+
+                                .nav-link.active {
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+li.nav-item {
+    .o_mega_menu:has(.sh_mega_menu.sh_company_megamenu) {
+        width: 270px !important;
+        left: auto;
+        padding: 10px 0px;
+        max-height: 60vh !important;
+        min-height: auto;
+    }
+}
+
+
+#wrapwrap {
+    &.sh_auto_parts_main {
+        header {
+            &.o_top_fixed_element {
+                nav.navbar {
+                    background-color: #212240 !important;
+
+                    #top_menu_container {
+                        .navbar-brand {
+                            span {
+                                img {
+                                    &.sh_softhealer_website_navbar_brand_website_logo {
+                                        @include media-breakpoint-down(lg) {
+                                            display: none !important;
+                                        }
+                                    }
+
+                                    &.sh_softhealer_website_navbar_brand_website_scrolled_logo {
+                                        @include media-breakpoint-down(lg) {
+                                            display: none !important;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.o_header_is_scrolled {
+                nav.navbar {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}
