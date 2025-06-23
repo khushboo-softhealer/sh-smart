@@ -1,0 +1,80 @@
+.o_menu_systray {
+    .o_notification_systray_item{
+        position: relative;
+        .o_notification_systray_dropdown {
+            right: 0 !important;
+            left: auto !important;
+            min-width: 25rem !important;
+            border-radius: 10px !important;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
+            padding: 4px 8px !important;
+            .o_notification_systray_dropdown_items{
+                .o_mail_preview{
+                    &:hover {
+                        background: #ededed;
+                        border-radius: 10px;
+                    }
+                    .o_preview_info {
+                        margin-top: 5px;
+                        padding: 10px;
+                        &.sh_unread{
+                            border-radius: 10px;
+                            background: #ededed;
+                        }
+                        .o_preview_title{
+                            .o_preview_name{
+                                .para_text{
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 3;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    width: 100%;
+                                    color: #9d9d9d;
+                                    max-width: 100%;
+                                    margin-bottom: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.o_web_client {
+    .o_menu_systray {
+        .MessagingMenuContainer{
+            .o_MessagingMenu {
+                .o_MessagingMenu_dropdownMenu{
+                    border-radius: 10px !important;
+                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
+                }
+            }
+        }
+        .sh_language_icon{
+            .sh_user_language_list_cls{
+                border-radius: 10px !important;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
+            }
+        }
+        .o_ActivityMenuView {
+            .o_ActivityMenuView_dropdownMenu{
+                border-radius: 10px !important;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
+            }
+        }
+        .o_debug_manager {
+            .o-dropdown--menu{
+                border-radius: 10px !important;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
+            }
+        }
+        .o_user_menu {
+            .o-dropdown--menu{
+                border-radius: 10px !important;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px !important;
+            }
+        }
+    }
+}

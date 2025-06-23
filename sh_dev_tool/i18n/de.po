@@ -1,0 +1,79 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_dev_tool
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-24 07:29+0000\n"
+"PO-Revision-Date: 2020-10-24 07:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_dev_tool
+#: code:addons/sh_dev_tool/models/models.py:0
+#, python-format
+msgid "Apply Schedule Upgrade"
+msgstr "Zeitplan-Upgrade anwenden"
+
+#. module: sh_dev_tool
+#: model:ir.model.fields,field_description:sh_dev_tool.field_ir_module_module__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: sh_dev_tool
+#: model:ir.model.fields,field_description:sh_dev_tool.field_ir_module_module__id
+msgid "ID"
+msgstr "ICH WÜRDE"
+
+#. module: sh_dev_tool
+#: model_terms:ir.ui.view,arch_db:sh_dev_tool.sh_base_module_tree_inherit
+msgid "Install"
+msgstr "Installieren"
+
+#. module: sh_dev_tool
+#: model:ir.model.fields,field_description:sh_dev_tool.field_ir_module_module____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert am"
+
+#. module: sh_dev_tool
+#: model:ir.model,name:sh_dev_tool.model_ir_module_module
+msgid "Module"
+msgstr "Modul"
+
+#. module: sh_dev_tool
+#: model_terms:ir.ui.view,arch_db:sh_dev_tool.sh_base_module_kanban_inherit
+#: model_terms:ir.ui.view,arch_db:sh_dev_tool.sh_base_module_tree_inherit
+msgid "Uninstall"
+msgstr "Deinstallieren"
+
+#. module: sh_dev_tool
+#: model:ir.actions.server,name:sh_dev_tool.action_server_module_immediate_uninstall
+msgid "Uninstall Modules"
+msgstr "Module deinstallieren"
+
+#. module: sh_dev_tool
+#: model_terms:ir.ui.view,arch_db:sh_dev_tool.sh_base_module_kanban_inherit
+#: model_terms:ir.ui.view,arch_db:sh_dev_tool.sh_base_module_tree_inherit
+msgid "Upgrade"
+msgstr "Aktualisierung"
+
+#. module: sh_dev_tool
+#: model:ir.actions.server,name:sh_dev_tool.action_server_module_immediate_upgrade
+msgid "Upgrade Modules"
+msgstr "Module aktualisieren"
+
+#. module: sh_dev_tool
+#: code:addons/sh_dev_tool/models/models.py:0
+#, python-format
+msgid ""
+"You try to upgrade the module %s that depends on the module: %s.\n"
+"But this module is not available in your system."
+msgstr ""
+"Sie versuchen, das Modul zu aktualisieren %s das hängt vom modul ab: %s.\n"
+"Dieses Modul ist jedoch in Ihrem System nicht verfügbar."

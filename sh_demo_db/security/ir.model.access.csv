@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_demo_db_log,access_sh_demo_db_log,model_sh_demo_db_log,base.group_user,1,1,1,1
+access_sh_demo_db_server_setup_manager,access_sh_demo_db_server_setup_manager,model_sh_servers,sh_demo_db.sh_group_demo_db_manager,1,1,1,1

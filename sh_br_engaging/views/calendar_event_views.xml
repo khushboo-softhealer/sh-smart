@@ -1,0 +1,106 @@
+<odoo>
+    
+    <record id="view_calendar_event_tree_inherited" model="ir.ui.view">
+        <field name="name">calendar.event.tree.inherited</field>
+        <field name="model">calendar.event</field>
+        <field name="inherit_id" ref="calendar.view_calendar_event_tree"/>
+        <field name="arch" type="xml">
+            <field name='location' position="after">
+                <!-- <field name="sh_user_partner_id_in_partners" invisible='1'/> -->
+                <!-- <field name="sh_is_user_attendee" invisible='1'/> -->
+            </field>
+            <field name='duration' position="after">
+                <field name="sh_stage"/>
+            </field>
+            <field name='name' position="before">
+                <field name="sh_talking_point_id" invisible='1'/>
+                <field name="sh_calendar_check_in_id" attrs="{'column_invisible': [('sh_talking_point_id', '=', False)]}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_calendar_event_form_inherited" model="ir.ui.view">
+        <field name="name">calendar.event.form.inherited</field>
+        <field name="model">calendar.event</field>
+        <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <field name="sh_stage" widget="statusbar"/>
+                    <button name="action_complete" class="oe_stat_button btn btn-primary" type="object" string="Complete" attrs="{'invisible': [('sh_stage', '=', 'completed')]}"/>
+                </header>
+
+            </xpath>
+
+            <field name='partner_ids' position="attributes">
+                <attribute name="required">1</attribute>
+                <attribute name="domain">[('user_ids', '!=', False)]</attribute>
+            </field>
+
+            <field name='active' position="after">
+                <field name="sh_talking_point_id" invisible="1"/>
+                <field name="sh_is_rescheduled" invisible="1"/>
+                <!-- <field name="sh_user_partner_id_in_partners"  invisible='1'/> -->
+                <!-- <field name="sh_is_user_attendee"  invisible='1'/> -->
+                <field name="is_br_user" invisible='1'/>
+            </field>
+
+            <xpath expr="//notebook" position="inside">
+                <!-- <page string="Current Notes" attrs="{'invisible': [('sh_talking_point_id', '=', False)]}"> -->
+                <page string="Current Notes" invisible='1'>
+                    <field name="sh_current_talking_point_line" nolabel="1" >
+                        <tree string="Current Notes" editable="bottom" nolabel="1" no_open='1'>
+                            <field name="name" readonly='1' force_save="1"/>
+                            <field name="sh_employee_id" readonly='1' force_save="1"/>
+                            <field name="sh_your_notes" readonly='1' force_save="1"/>
+                            <field name="sh_employee_notes" readonly='1' force_save="1"/>
+                            <field name="sh_user_private_notes" attrs="{'column_invisible': [('parent.is_br_user', '=', False)]}"/>
+                            <field name="sh_your_private_notes" invisible='1'/>
+                        </tree>
+                    </field>
+                </page>
+
+                <!-- <page string="Previous Notes" attrs="{'invisible': [('sh_talking_point_id', '=', False)]}"> -->
+                <page string="Previous Notes" invisible='1'>
+                    <field name="sh_previous_talking_point_line" nolabel="1" >
+                        <tree string="Previous Notes" editable="bottom" nolabel="1" no_open='1' create='0'>
+                            <field name="name" readonly='1' force_save="1"/>
+                            <field name="sh_employee_id" readonly='1' force_save="1"/>
+                            <field name="sh_your_notes" readonly='1' force_save="1"/>
+                            <field name="sh_employee_notes" readonly='1' force_save="1"/>
+                            <field name="sh_user_private_notes"  attrs="{'column_invisible': [('parent.is_br_user', '=', False)]}"/>
+                            <field name="sh_your_private_notes" invisible='1'/>
+                        </tree>
+                    </field>
+                </page>
+
+                <page string="Meeting Agenda">
+                    <field name="sh_meeting_agenda_line" nolabel="1" >
+                        <tree editable="bottom" nolabel="1" no_open='1'>
+                            <field name="name"/>
+                            <field name="sh_is_active" />
+                            <field name="sh_description" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_meetings_custom_action" model="ir.actions.act_window">
+        <field name="name">Meetings</field>
+        <field name="res_model">calendar.event</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="calendar.view_calendar_event_tree"/>
+    </record>
+
+    <!-- <record model="ir.actions.server" id="sh_one_on_ones_action"> 
+        <field name="name">Meetings</field>
+        <field name="model_id" ref="model_calendar_event"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.open_conditional_1on1s()
+        </field>
+    </record> -->
+</odoo>

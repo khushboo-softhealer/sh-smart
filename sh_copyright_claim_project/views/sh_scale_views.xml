@@ -1,0 +1,38 @@
+<odoo>
+    <record id="sh_scale_form" model='ir.ui.view'>
+        <field name="name">sh.scale.form</field>
+        <field name="model">sh.scale</field>
+        <field name="arch" type="xml">
+            <form string="Scales">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="days"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id='sh_scale_tree' model='ir.ui.view'>
+        <field name="name">sh.scale.tree</field>
+        <field name="model">sh.scale</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="days"/>
+            </tree>
+        </field>
+    </record>
+    <record id="sh_scale_action" model="ir.actions.act_window">
+        <field name="name">Scales</field>
+        <field name="res_model">sh.scale</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Scale
+            </p>
+        </field>
+    </record>
+    <menuitem name="Sh Scale" action="sh_scale_action" id="sh_scale_root" parent="sale.menu_sale_config" sequence="16"/>
+</odoo>

@@ -1,0 +1,1178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="sh_high_five_template" t-inherit="web.ListView" t-inherit-mode="primary" owl="1">
+        <xpath expr="//t[@t-component='props.Renderer']" position="replace">
+            <div class="sh_high_five_main_box">
+                <div class="container-fluid">
+                    <div class="row gx-4">
+                        <div class="col-lg-9 col-md-7 col-12">
+                            <div class="sh_high_five_left_panel">
+                                <div class="sh_high_five_main">
+                                    <div class="sh_high_five_heading">
+                                        <p class="mb-0">Give a High Five</p>
+                                    </div>
+                                    <div class="sh_high_five_ideas">
+                                        <input type="text" class="form-control sh_hive_five_input" t-on-keydown="highFiveKeyPress" t-on-keyup="highFiveKeyUp" placeholder="Write a Message..." />
+
+                                        <div class="employee_list_main_div">
+                                            <div class=" w-100 dropdown">
+                                                <ul class="d-none user-item-ul dropdown-menu show w-100 overflow-auto" id="employee_list">
+                                                    <li><a href="#" class="dropdown-item d-flex w-100 py-2 px-4">demo</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="badge_list_main_div">
+                                            <div class=" w-100 dropdown">
+                                                <ul class="d-none badge-item-ul dropdown-menu show w-100 overflow-auto" id="badge_list">
+                                                    <li><a href="#" class="dropdown-item d-flex w-100 py-2 px-4">demo</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <BrEmojisDropdown/>
+                                        <p class='text-info mb-0 mt-3'>Use @ to select Employee Name &amp; Use # to select the Badges</p>
+                                        <button type="button" class="sh_high_five_btn disabled btn btn-outline-primary mt-4" t-on-click="onClickHighFive"> High Five </button>
+                                    </div>
+
+                                    <!-- <h4>employee_list</h4>  -->
+
+                                    <h3 class="alert alert-danger text-center d-none validation_element">*Please fill out all the questions</h3>
+                                </div>
+                                <!-- == Add Group By Creation Date ==  -->
+                                    
+                                <t t-if='state.infos.is_group_by_enable'>
+                                    <t t-foreach="state.infos.final_group_by_dict" t-as="groupby_record" t-key="groupby_record">
+                                        <div class="massage_panel_box">
+                                            <div class="massage_panel_date_box text-center">
+                                                <p class="massage_panel_date"><t t-esc="groupby_record"/></p>
+                                            </div>
+
+                                            <!-- ** High Five Records Code **  -->
+                                            <div class="massage_items">
+                                                <!-- <t t-foreach="all_high_fives" t-as="high_five" t-key="high_five_index"> -->
+                                                <t t-foreach="state.infos.final_group_by_dict[groupby_record]" t-as="high_five" t-key="high_five.id">
+                                                    <div class="massage_item" t-att-data-id="high_five.id">
+                                                        <div class="massage_user_item align-items-center d-flex">
+                                                            <div class="massage_reply_user_box align-items-center d-flex">
+                                                                <div class="massage_reply_user_label">
+                                                                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{high_five.sh_from_user_id}}" alt="" class=""/>
+                                                                </div>
+                                                                <div class="massage_reply_user_text">
+                                                                    <p class="massage_reply_user_text_name mb-0">
+                                                                    <!-- rajvi trivedi <span class="fw-normal px-2">to</span> Khilan shah -->
+                                                                    <t t-esc="high_five.sh_from_user_name"/><span class="fw-normal px-2">to</span> <t t-esc="high_five.sh_to_user_name"/>
+                                                                    </p>
+                                                                    <p class="massage_reply_user_text_Date mb-0"><t t-esc="high_five.record_creation_date"/></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="massage_reply_user_extra_text">
+
+                                                            <!-- <p class="massage_reply_user_extra_text_name mb-0">
+                                                                <t t-esc="high_five.high_five_text"/>
+                                                            </p> -->
+
+                                                            <p class="massage_reply_user_extra_text_name mb-0">
+                                                                <HighFiveDescPanel
+                                                                sh_str="high_five.high_five_text"
+                                                                sh_user="high_five.sh_to_user_name"
+                                                                />
+                                                            </p>
+                                                            <p class="sh_bold_parent_employee d-none">@<t t-esc="high_five.sh_to_user_name"/> </p>
+                                                            <div class="like_box">
+                                                                <ul class="m-0 p-0 list-group list-group-horizontal">
+                                                                    <li class="list-group-item py-2 border-0 ps-0 like_btn">
+                                                                        <a href="#" class="list-item-link">
+                                                                            <span class="me-1">
+                                                                                <t t-if="high_five.show_like_btn">
+                                                                                    <!-- == Show Like Button If Not Liked ==  -->
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="like_button" class="like_btn_01" data-name="Layer 1" viewBox="0 0 14 14" t-on-click="onClickLikeButton">
+                                                                                        <defs>
+                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                        </defs>
+                                                                                        <title>fa-thumbs-up</title>
+                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                    </svg>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="unlike_button" class="unlike_btn_01 d-none" data-name="Layer 2" viewBox="0 0 14 14" t-on-click="onClickUnlikeButton">
+                                                                                        <defs>
+                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                        </defs>
+                                                                                        <title>fa-thumbs-down</title>
+                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                    </svg>
+                                                                                </t>
+                                                                                <t t-else="">
+                                                                                    <!-- == Show UnLike Button If Liked ==  -->
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="like_button" class="like_btn_02 d-none" data-name="Layer 1" viewBox="0 0 14 14" t-on-click="onClickLikeButton">
+                                                                                        <defs>
+                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                        </defs>
+                                                                                        <title>fa-thumbs-up</title>
+                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                    </svg>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="unlike_button" data-name="Layer 2" class="unlike_btn_02" viewBox="0 0 14 14" t-on-click="onClickUnlikeButton">
+                                                                                        <defs>
+                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                        </defs>
+                                                                                        <title>fa-thumbs-down</title>
+                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                    </svg>
+                                                                                </t>
+                                                                            </span><span id="like_count"><t t-esc="high_five.like_count"/></span> like</a>
+                                                                    </li>
+                                                                    <!-- <li class="list-group-item py-2 border-0 smile_icon_btn ">
+                                                                        <a href="#" class="list-item-link fw-bold">
+                                                                            <span class="">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                    <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li> -->
+                                                                    <li class="list-group-item py-2 border-0 chat_btn">
+                                                                        <a href="#" class="list-item-link fw-bold" t-att-id='high_five.id' t-on-click="() => this.CommentCurrentHifi(high_five.id)">
+                                                                            <span class="">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                    <path d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="list-group-item py-2 border-0 delete_btn">
+                                                                        <t t-if="high_five.show_delete_button">
+                                                                            <a href="#" class="list-item-link" t-on-click="onClickDeleteButton">Delete</a>
+                                                                        </t>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="main_kanban_div">
+                                                                <div class="dynamic_conditional_child_kanban">
+                                                                    <t t-if='high_five.child_ids'>
+                                                                        <t t-foreach="high_five.child_ids" t-as="child_id" t-key="child_id.id">
+                                                                            <!-- == Private Comment Only Visible To Selected Employees ==  -->
+                                                                            <t t-if="child_id.sh_is_private_cmt_record">
+                                                                                <t t-if="child_id.sh_is_login_user_have_acs">
+                                                                                    <div class="child_kanban_user_item" t-att-data-id="child_id.id">
+                                                                                        <div class="massage_reply_user_box align-items-center d-flex justify-content-between">
+                                                                                            <div class="d-flex align-items-center">
+                                                                                                <div class="massage_reply_user_label">
+                                                                                                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{child_id.sh_from_user_id}}" alt="Feedback Users Image" class=""/>
+                                                                                                </div>
+                                                                                                <div class="massage_reply_user_text">
+                                                                                                    <!-- <p class="massage_reply_user_text_name mb-0"> Khilan shah -->
+                                                                                                    <p class="massage_reply_user_text_name mb-0"> <t t-esc="child_id.sh_from_user_name"/>
+                                                                                                    </p>
+                                                                                                    <p class="massage_reply_user_text_Date mb-0"><t t-esc="child_id.child_creation_date"/></p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <t t-if="child_id.sh_show_edit_delete_btn">
+                                                                                                <div class="delet_edit_icon_box">
+                                                                                                    <ul class="list-group list-group-horizontal">
+                                                                                                        <li class="list-group-item py-2 border-0">
+                                                                                                            <a href="#">
+                                                                                                                <span class="fa fa-pencil fs-2 sh_pencil_icon" t-on-click="OnClickChildEdit"></span>
+                                                                                                            </a>
+                                                                                                        </li>
+                                                                                                        <li class="list-group-item py-2 border-0">
+                                                                                                            <a href="#">
+                                                                                                                <span class="fa fa-trash-o fs-2" t-on-click="OnChildDelete"></span>
+                                                                                                            </a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </t>
+                                                                                            <!-- <div class="delet_edit_icon_box">
+                                                                                                <ul class="list-group list-group-horizontal">
+                                                                                                    <li class="list-group-item py-2 border-0">
+                                                                                                        <a href="#">
+                                                                                                            <span class="fa fa-pencil fs-2 sh_pencil_icon" t-on-click="OnClickChildEdit"></span>
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                    <li class="list-group-item py-2 border-0">
+                                                                                                        <a href="#">
+                                                                                                            <span class="fa fa-trash-o fs-2" t-on-click="OnChildDelete"></span>
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div> -->
+                                                                                        </div>
+                                                                                        <div class="massage_replay_text">
+                                                                                            <p class="child_massage_reply_user_extra_text_name my-2">
+                                                                                                <t t-esc='child_id.high_five_text'/>
+                                                                                            </p>
+                                                                                            <p class="sh_bold_child_employee d-none">@<t t-esc='child_id.sh_third_mention_name'/> </p>
+                                                                                            <div class="sh_high_five_dynamic_nested_kanban_text mt-3 d-none">
+                                                                                                <div class="input-group mb-0">
+                                                                                                    <input type="text" class="form-control sh_high_five_edit_input" />
+                                                                                                    <div class="input-group-append align-self-start">
+                                                                                                        <a class="btn btn-outline-success mt-0 sh_postbtn" type="button" t-on-click="onClickHighfivePost"> Post</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="like_box">
+                                                                                                <ul class="m-0 p-0 list-group list-group-horizontal">
+                                                                                                    <li class="list-group-item py-2 border-0 ps-0 like_btn">
+                                                                                                        <a href="#" class="list-item-link">
+                                                                                                            <span class="me-1">
+
+                                                                                                                <t t-if="child_id.show_child_like_btn">
+                                                                                                                    <!-- == Show Like Button If Not Liked ==  -->
+                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="child_like_button" class="child_like_btn_01" data-name="Layer 3" viewBox="0 0 14 14" t-on-click="onClickChildLikeButton">
+                                                                                                                        <defs>
+                                                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                        </defs>
+                                                                                                                        <title>fa-thumbs-up</title>
+                                                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                    </svg>
+                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="child_unlike_button" class="child_unlike_btn_01 d-none" data-name="Layer 4" viewBox="0 0 14 14" t-on-click="onClickChildUnlikeButton">
+                                                                                                                        <defs>
+                                                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                        </defs>
+                                                                                                                        <title>fa-thumbs-down</title>
+                                                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                    </svg>
+                                                                                                                </t>
+                                                                                                                <t t-else="">
+                                                                                                                    <!-- == Show UnLike Button If Liked ==  -->
+                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="child_like_button" class="child_like_btn_02 d-none" data-name="Layer 3" viewBox="0 0 14 14" t-on-click="onClickChildLikeButton">
+                                                                                                                        <defs>
+                                                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                        </defs>
+                                                                                                                        <title>fa-thumbs-up</title>
+                                                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                    </svg>
+                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="child_unlike_button" data-name="Layer 4" class="child_unlike_btn_02" viewBox="0 0 14 14" t-on-click="onClickChildUnlikeButton">
+                                                                                                                        <defs>
+                                                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                        </defs>
+                                                                                                                        <title>fa-thumbs-down</title>
+                                                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                    </svg>
+                                                                                                                </t>
+                                                                                                                </span>
+                                                                                                                <span id="child_like_count"><t t-esc="child_id.child_like_count"/></span> like</a>
+
+
+
+
+
+                                                                                                                <!-- <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 14 14">
+                                                                                                                    <defs>
+                                                                                                                        <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                    </defs>
+                                                                                                                    <title>fa-thumbs-up</title>
+                                                                                                                    <rect class="cls-1" width="14" height="14"/>
+                                                                                                                    <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                    <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                </svg>
+                                                                                                            </span> like</a> -->
+                                                                                                    </li>
+                                                                                                    <!-- === Comment Emoji Icon From Child ===  -->
+                                                                                                    <!-- <li class="list-group-item py-2 border-0 smile_icon_btn ">
+                                                                                                        <a href="#" class="list-item-link fw-bold">
+                                                                                                            <span class="">
+                                                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                                                    <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                                                                                                                </svg>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </li> -->
+                                                                                                    <!-- === Comment Emoji Icon From Child ===  -->
+                                                                                                    <!-- <li class="list-group-item py-2 border-0 chat_btn">
+                                                                                                        <a href="#" class="list-item-link fw-bold">
+                                                                                                            <span class="">
+                                                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                                                    <path d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/>
+                                                                                                                </svg>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </li> -->
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </t>
+                                                                            </t>  
+                                                                            <t t-else="">
+                                                                                <div class="child_kanban_user_item" t-att-data-id="child_id.id">
+                                                                                    <div class="massage_reply_user_box align-items-center d-flex justify-content-between">
+                                                                                        <div class="d-flex align-items-center">
+                                                                                            <div class="massage_reply_user_label">
+                                                                                                <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{child_id.sh_from_user_id}}" alt="Feedback Users Image" class=""/>
+                                                                                            </div>
+                                                                                            <div class="massage_reply_user_text">
+                                                                                                <!-- <p class="massage_reply_user_text_name mb-0"> Khilan shah -->
+                                                                                                <p class="massage_reply_user_text_name mb-0"> <t t-esc="child_id.sh_from_user_name"/>
+                                                                                                </p>
+                                                                                                <p class="massage_reply_user_text_Date mb-0"><t t-esc="child_id.child_creation_date"/></p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <t t-if="child_id.sh_show_edit_delete_btn">
+                                                                                            <div class="delet_edit_icon_box">
+                                                                                                <ul class="list-group list-group-horizontal">
+                                                                                                    <li class="list-group-item py-2 border-0">
+                                                                                                        <a href="#">
+                                                                                                            <span class="fa fa-pencil fs-2 sh_pencil_icon" t-on-click="OnClickChildEdit"></span>
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                    <li class="list-group-item py-2 border-0">
+                                                                                                        <a href="#">
+                                                                                                            <span class="fa fa-trash-o fs-2" t-on-click="OnChildDelete"></span>
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </t>
+                                                                                        <!-- <div class="delet_edit_icon_box">
+                                                                                            <ul class="list-group list-group-horizontal">
+                                                                                                <li class="list-group-item py-2 border-0">
+                                                                                                    <a href="#">
+                                                                                                        <span class="fa fa-pencil fs-2 sh_pencil_icon" t-on-click="OnClickChildEdit"></span>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li class="list-group-item py-2 border-0">
+                                                                                                    <a href="#">
+                                                                                                        <span class="fa fa-trash-o fs-2" t-on-click="OnChildDelete"></span>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div> -->
+                                                                                    </div>
+                                                                                    <div class="massage_replay_text">
+                                                                                        <p class="child_massage_reply_user_extra_text_name my-2">
+                                                                                            <t t-esc='child_id.high_five_text'/>
+                                                                                        </p>
+
+                                                                                        <!-- <p class="child_massage_reply_user_extra_text_name my-2">
+                                                                                            <HighFiveDescPanel
+                                                                                            sh_str="child_id.high_five_text"
+                                                                                            sh_user="child_id.sh_from_user_name"
+                                                                                            />
+                                                                                        </p> -->
+                                                                                        <p class="sh_bold_child_employee d-none">@<t t-esc='child_id.sh_third_mention_name'/> </p>
+
+                                                                                        <div class="sh_high_five_dynamic_nested_kanban_text mt-3 d-none">
+                                                                                            <div class="input-group mb-0">
+                                                                                                <input type="text" class="form-control sh_high_five_edit_input" />
+                                                                                                <div class="input-group-append align-self-start">
+                                                                                                    <a class="btn btn-outline-success mt-0 sh_postbtn" type="button" t-on-click="onClickHighfivePost"> Post</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="like_box">
+                                                                                            <ul class="m-0 p-0 list-group list-group-horizontal">
+                                                                                                <li class="list-group-item py-2 border-0 ps-0 like_btn">
+                                                                                                    <a href="#" class="list-item-link">
+                                                                                                        <span class="me-1">
+
+                                                                                                            <t t-if="child_id.show_child_like_btn">
+                                                                                                                <!-- == Show Like Button If Not Liked ==  -->
+                                                                                                                <svg xmlns="http://www.w3.org/2000/svg" id="child_like_button" class="child_like_btn_01" data-name="Layer 3" viewBox="0 0 14 14" t-on-click="onClickChildLikeButton">
+                                                                                                                    <defs>
+                                                                                                                        <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                    </defs>
+                                                                                                                    <title>fa-thumbs-up</title>
+                                                                                                                    <rect class="cls-1" width="14" height="14"/>
+                                                                                                                    <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                    <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                </svg>
+                                                                                                                <svg xmlns="http://www.w3.org/2000/svg" id="child_unlike_button" class="child_unlike_btn_01 d-none" data-name="Layer 4" viewBox="0 0 14 14" t-on-click="onClickChildUnlikeButton">
+                                                                                                                    <defs>
+                                                                                                                        <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                    </defs>
+                                                                                                                    <title>fa-thumbs-down</title>
+                                                                                                                    <rect class="cls-1" width="14" height="14"/>
+                                                                                                                    <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                    <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                </svg>
+                                                                                                            </t>
+                                                                                                            <t t-else="">
+                                                                                                                <!-- == Show UnLike Button If Liked ==  -->
+                                                                                                                <svg xmlns="http://www.w3.org/2000/svg" id="child_like_button" class="child_like_btn_02 d-none" data-name="Layer 3" viewBox="0 0 14 14" t-on-click="onClickChildLikeButton">
+                                                                                                                    <defs>
+                                                                                                                        <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                    </defs>
+                                                                                                                    <title>fa-thumbs-up</title>
+                                                                                                                    <rect class="cls-1" width="14" height="14"/>
+                                                                                                                    <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                    <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                </svg>
+                                                                                                                <svg xmlns="http://www.w3.org/2000/svg" id="child_unlike_button" data-name="Layer 4" class="child_unlike_btn_02" viewBox="0 0 14 14" t-on-click="onClickChildUnlikeButton">
+                                                                                                                    <defs>
+                                                                                                                        <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                    </defs>
+                                                                                                                    <title>fa-thumbs-down</title>
+                                                                                                                    <rect class="cls-1" width="14" height="14"/>
+                                                                                                                    <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                    <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                </svg>
+                                                                                                            </t>
+                                                                                                            </span>
+                                                                                                            <span id="child_like_count"><t t-esc="child_id.child_like_count"/></span> like</a>
+
+
+
+
+
+                                                                                                            <!-- <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 14 14">
+                                                                                                                <defs>
+                                                                                                                    <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                </defs>
+                                                                                                                <title>fa-thumbs-up</title>
+                                                                                                                <rect class="cls-1" width="14" height="14"/>
+                                                                                                                <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                            </svg>
+                                                                                                        </span> like</a> -->
+                                                                                                </li>
+                                                                                                <!-- <li class="list-group-item py-2 border-0 smile_icon_btn ">
+                                                                                                    <a href="#" class="list-item-link fw-bold">
+                                                                                                        <span class="">
+                                                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                                                <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                                                                                                            </svg>
+                                                                                                        </span>
+                                                                                                    </a>
+                                                                                                </li> -->
+                                                                                                <!-- <li class="list-group-item py-2 border-0 chat_btn">
+                                                                                                    <a href="#" class="list-item-link fw-bold">
+                                                                                                        <span class="">
+                                                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                                                <path d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/>
+                                                                                                            </svg>
+                                                                                                        </span>
+                                                                                                    </a>
+                                                                                                </li> -->
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </t>      
+                                                                        
+                                                                        </t>
+                                                                    </t>
+
+                                                                    <div class="message_sub_replay_box d-none"  t-att-id="'reply_id_'+high_five.id">
+                                                                        <div class="message_sub_replay_main">
+                                                                            <div class="message_sub_replay_img_box">
+                                                                                <!-- <img src="web/image?model=res.users&amp;field=avatar_128&amp;id=2" alt="Feedback Users Image"/> -->
+                                                                                <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{login_user_id}}" alt="Feedback Users Image"/>
+                                                                            </div>
+                                                                            <div class="message_sub_replay_input">
+                                                                                <div class="input-group-main">
+                                                                                    <!-- <input type="text" class="form-control sub_message_type sh_hive_five_child_input" t-att-id='"reply_input_id_"+high_five.id' t-on-keydown="highFiveKeyPress" t-on-keyup="highFiveKeyUp" placeholder="Add a Comment.."/> -->
+
+                                                                                    <input type="text" class="form-control sub_message_type sh_hive_five_child_input"  t-att-id='"reply_input_id_"+high_five.id' t-on-keydown="(event) => this.highFiveKeyPressReply('reply_input_id_'+high_five.id, event)" t-on-keyup="(event) => this.highFiveKeyUpReply('reply_input_id_'+high_five.id, event)" placeholder="Add a Comment.."/>
+
+                                                                                    <p class='comment_validation d-none text-danger'>Please add some comment content..!</p>
+                                                                                    <!-- <a href="#" class="input-group-text">
+                                                                                        <span>
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                                <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                                                                                            </svg>
+                                                                                        </span>
+                                                                                    </a> -->
+                                                                                </div>
+                                                                                <div class="select_employee_list_div">
+                                                                                    <div class=" w-100 dropdown">
+                                                                                        <ul class="d-none dropdown-menu show w-100 overflow-auto select_employee_list_ul"  t-att-id="'reply_input_id_'+high_five.id">
+                                                                                            <!-- <li><a href="#" class="dropdown-item d-flex w-100 py-2 px-4"></a></li> -->
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <BrChildEmojisDropdown kishan="high_five.id"/>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="checkbox_private_box">
+                                                                            <input class="form-check-input sh_private_cmt_boolean" type="checkbox"/>
+                                                                            <span class="form-check-label">Private Comment to <t t-esc="high_five.sh_to_user_name"/></span>
+                                                                        </div>
+                                                                        <div class="post_comment_btn_box">
+                                                                            <a href="#" class="btn btn-secondary post_comment_btn" t-on-click="(event) => this.CreateReplyHighFi(high_five.id,event)">Post Comment</a>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </t>
+                                <t t-else=''>
+                                    <t t-foreach="state.infos.group_by_high_five_list_data" t-as="groupby_record" t-key="groupby_record">
+                                        <!-- ** Message Box Main Date **  -->
+                                        <div class="massage_panel_box">
+                                            <div class="massage_panel_date_box text-center">
+                                                <p class="massage_panel_date"><t t-esc="groupby_record"/></p>
+                                            </div>
+                                            <!-- ** High Five Records Code **  -->
+                                            <div class="massage_items">
+                                                <!-- <t t-foreach="all_high_fives" t-as="high_five" t-key="high_five_index"> -->
+                                                <t t-foreach="state.infos.sh_all_high_five_data" t-as="high_five" t-key="high_five.id">
+                                                    <t t-if="groupby_record == high_five.record_creation_date">
+                                                        <div class="massage_item" t-att-data-id="high_five.id">
+                                                            <div class="massage_user_item align-items-center d-flex">
+                                                                <div class="massage_reply_user_box align-items-center d-flex">
+                                                                    <div class="massage_reply_user_label">
+                                                                        <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{high_five.sh_from_user_id}}" alt="" class=""/>
+                                                                    </div>
+                                                                    <div class="massage_reply_user_text">
+                                                                        <p class="massage_reply_user_text_name mb-0">
+                                                                        <!-- rajvi trivedi <span class="fw-normal px-2">to</span> Khilan shah -->
+                                                                        <t t-esc="high_five.sh_from_user_name"/><span class="fw-normal px-2">to</span> <t t-esc="high_five.sh_to_user_name"/>
+                                                                        </p>
+                                                                        <p class="massage_reply_user_text_Date mb-0"><t t-esc="high_five.record_creation_date"/></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="massage_reply_user_extra_text">
+
+                                                                <!-- <p class="massage_reply_user_extra_text_name mb-0">
+                                                                    <t t-esc="high_five.high_five_text"/>
+                                                                </p> -->
+
+                                                                <p class="massage_reply_user_extra_text_name mb-0">
+                                                                    <HighFiveDescPanel
+                                                                    sh_str="high_five.high_five_text"
+                                                                    sh_user="high_five.sh_to_user_name"
+                                                                    />
+                                                                </p>
+                                                                <p class="sh_bold_parent_employee d-none">@<t t-esc="high_five.sh_to_user_name"/> </p>
+                                                                <div class="like_box">
+                                                                    <ul class="m-0 p-0 list-group list-group-horizontal">
+                                                                        <li class="list-group-item py-2 border-0 ps-0 like_btn">
+                                                                            <a href="#" class="list-item-link">
+                                                                                <span class="me-1">
+                                                                                    <t t-if="high_five.show_like_btn">
+                                                                                        <!-- == Show Like Button If Not Liked ==  -->
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" id="like_button" class="like_btn_01" data-name="Layer 1" viewBox="0 0 14 14" t-on-click="onClickLikeButton">
+                                                                                            <defs>
+                                                                                                <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                            </defs>
+                                                                                            <title>fa-thumbs-up</title>
+                                                                                            <rect class="cls-1" width="14" height="14"/>
+                                                                                            <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                            <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                        </svg>
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" id="unlike_button" class="unlike_btn_01 d-none" data-name="Layer 2" viewBox="0 0 14 14" t-on-click="onClickUnlikeButton">
+                                                                                            <defs>
+                                                                                                <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                            </defs>
+                                                                                            <title>fa-thumbs-down</title>
+                                                                                            <rect class="cls-1" width="14" height="14"/>
+                                                                                            <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                            <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                        </svg>
+                                                                                    </t>
+                                                                                    <t t-else="">
+                                                                                        <!-- == Show UnLike Button If Liked ==  -->
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" id="like_button" class="like_btn_02 d-none" data-name="Layer 1" viewBox="0 0 14 14" t-on-click="onClickLikeButton">
+                                                                                            <defs>
+                                                                                                <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                            </defs>
+                                                                                            <title>fa-thumbs-up</title>
+                                                                                            <rect class="cls-1" width="14" height="14"/>
+                                                                                            <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                            <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                        </svg>
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" id="unlike_button" data-name="Layer 2" class="unlike_btn_02" viewBox="0 0 14 14" t-on-click="onClickUnlikeButton">
+                                                                                            <defs>
+                                                                                                <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                            </defs>
+                                                                                            <title>fa-thumbs-down</title>
+                                                                                            <rect class="cls-1" width="14" height="14"/>
+                                                                                            <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                            <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                        </svg>
+                                                                                    </t>
+                                                                                </span><span id="like_count"><t t-esc="high_five.like_count"/></span> like</a>
+                                                                        </li>
+                                                                        <!-- <li class="list-group-item py-2 border-0 smile_icon_btn ">
+                                                                            <a href="#" class="list-item-link fw-bold">
+                                                                                <span class="">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                        <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            </a>
+                                                                        </li> -->
+                                                                        <li class="list-group-item py-2 border-0 chat_btn">
+                                                                            <a href="#" class="list-item-link fw-bold" t-att-id='high_five.id' t-on-click="() => this.CommentCurrentHifi(high_five.id)">
+                                                                                <span class="">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                        <path d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="list-group-item py-2 border-0 delete_btn">
+                                                                            <t t-if="high_five.show_delete_button">
+                                                                                <a href="#" class="list-item-link" t-on-click="onClickDeleteButton">Delete</a>
+                                                                            </t>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+            
+                                                                <div class="main_kanban_div">
+                                                                    <div class="dynamic_conditional_child_kanban">
+                                                                        <t t-if='high_five.child_ids'>
+                                                                            <t t-foreach="high_five.child_ids" t-as="child_id" t-key="child_id.id">
+                                                                                <!-- == Private Comment Only Visible To Selected Employees ==  -->
+                                                                                <t t-if="child_id.sh_is_private_cmt_record">
+                                                                                    <t t-if="child_id.sh_is_login_user_have_acs">
+                                                                                        <div class="child_kanban_user_item" t-att-data-id="child_id.id">
+                                                                                            <div class="massage_reply_user_box align-items-center d-flex justify-content-between">
+                                                                                                <div class="d-flex align-items-center">
+                                                                                                    <div class="massage_reply_user_label">
+                                                                                                        <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{child_id.sh_from_user_id}}" alt="Feedback Users Image" class=""/>
+                                                                                                    </div>
+                                                                                                    <div class="massage_reply_user_text">
+                                                                                                        <!-- <p class="massage_reply_user_text_name mb-0"> Khilan shah -->
+                                                                                                        <p class="massage_reply_user_text_name mb-0"> <t t-esc="child_id.sh_from_user_name"/>
+                                                                                                        </p>
+                                                                                                        <p class="massage_reply_user_text_Date mb-0"><t t-esc="child_id.child_creation_date"/></p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <t t-if="child_id.sh_show_edit_delete_btn">
+                                                                                                    <div class="delet_edit_icon_box">
+                                                                                                        <ul class="list-group list-group-horizontal">
+                                                                                                            <li class="list-group-item py-2 border-0">
+                                                                                                                <a href="#">
+                                                                                                                    <span class="fa fa-pencil fs-2 sh_pencil_icon" t-on-click="OnClickChildEdit"></span>
+                                                                                                                </a>
+                                                                                                            </li>
+                                                                                                            <li class="list-group-item py-2 border-0">
+                                                                                                                <a href="#">
+                                                                                                                    <span class="fa fa-trash-o fs-2" t-on-click="OnChildDelete"></span>
+                                                                                                                </a>
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </div>
+                                                                                                </t>
+                                                                                                <!-- <div class="delet_edit_icon_box">
+                                                                                                    <ul class="list-group list-group-horizontal">
+                                                                                                        <li class="list-group-item py-2 border-0">
+                                                                                                            <a href="#">
+                                                                                                                <span class="fa fa-pencil fs-2 sh_pencil_icon" t-on-click="OnClickChildEdit"></span>
+                                                                                                            </a>
+                                                                                                        </li>
+                                                                                                        <li class="list-group-item py-2 border-0">
+                                                                                                            <a href="#">
+                                                                                                                <span class="fa fa-trash-o fs-2" t-on-click="OnChildDelete"></span>
+                                                                                                            </a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </div> -->
+                                                                                            </div>
+                                                                                            <div class="massage_replay_text">
+                                                                                                <p class="child_massage_reply_user_extra_text_name my-2">
+                                                                                                    <t t-esc='child_id.high_five_text'/>
+                                                                                                </p>
+                                                                                                <p class="sh_bold_child_employee d-none">@<t t-esc='child_id.sh_third_mention_name'/> </p>
+                                                                                                <div class="sh_high_five_dynamic_nested_kanban_text mt-3 d-none">
+                                                                                                    <div class="input-group mb-0">
+                                                                                                        <input type="text" class="form-control sh_high_five_edit_input" />
+                                                                                                        <div class="input-group-append align-self-start">
+                                                                                                            <a class="btn btn-outline-success mt-0 sh_postbtn" type="button" t-on-click="onClickHighfivePost"> Post</a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="like_box">
+                                                                                                    <ul class="m-0 p-0 list-group list-group-horizontal">
+                                                                                                        <li class="list-group-item py-2 border-0 ps-0 like_btn">
+                                                                                                            <a href="#" class="list-item-link">
+                                                                                                                <span class="me-1">
+                    
+                                                                                                                    <t t-if="child_id.show_child_like_btn">
+                                                                                                                        <!-- == Show Like Button If Not Liked ==  -->
+                                                                                                                        <svg xmlns="http://www.w3.org/2000/svg" id="child_like_button" class="child_like_btn_01" data-name="Layer 3" viewBox="0 0 14 14" t-on-click="onClickChildLikeButton">
+                                                                                                                            <defs>
+                                                                                                                                <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                            </defs>
+                                                                                                                            <title>fa-thumbs-up</title>
+                                                                                                                            <rect class="cls-1" width="14" height="14"/>
+                                                                                                                            <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                            <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                        </svg>
+                                                                                                                        <svg xmlns="http://www.w3.org/2000/svg" id="child_unlike_button" class="child_unlike_btn_01 d-none" data-name="Layer 4" viewBox="0 0 14 14" t-on-click="onClickChildUnlikeButton">
+                                                                                                                            <defs>
+                                                                                                                                <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                            </defs>
+                                                                                                                            <title>fa-thumbs-down</title>
+                                                                                                                            <rect class="cls-1" width="14" height="14"/>
+                                                                                                                            <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                            <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                        </svg>
+                                                                                                                    </t>
+                                                                                                                    <t t-else="">
+                                                                                                                        <!-- == Show UnLike Button If Liked ==  -->
+                                                                                                                        <svg xmlns="http://www.w3.org/2000/svg" id="child_like_button" class="child_like_btn_02 d-none" data-name="Layer 3" viewBox="0 0 14 14" t-on-click="onClickChildLikeButton">
+                                                                                                                            <defs>
+                                                                                                                                <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                            </defs>
+                                                                                                                            <title>fa-thumbs-up</title>
+                                                                                                                            <rect class="cls-1" width="14" height="14"/>
+                                                                                                                            <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                            <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                        </svg>
+                                                                                                                        <svg xmlns="http://www.w3.org/2000/svg" id="child_unlike_button" data-name="Layer 4" class="child_unlike_btn_02" viewBox="0 0 14 14" t-on-click="onClickChildUnlikeButton">
+                                                                                                                            <defs>
+                                                                                                                                <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                            </defs>
+                                                                                                                            <title>fa-thumbs-down</title>
+                                                                                                                            <rect class="cls-1" width="14" height="14"/>
+                                                                                                                            <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                            <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                        </svg>
+                                                                                                                    </t>
+                                                                                                                    </span>
+                                                                                                                    <span id="child_like_count"><t t-esc="child_id.child_like_count"/></span> like</a>
+                    
+                    
+                    
+                    
+                    
+                                                                                                                    <!-- <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 14 14">
+                                                                                                                        <defs>
+                                                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                        </defs>
+                                                                                                                        <title>fa-thumbs-up</title>
+                                                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                    </svg>
+                                                                                                                </span> like</a> -->
+                                                                                                        </li>
+                                                                                                        <!-- === Comment Emoji Icon From Child ===  -->
+                                                                                                        <!-- <li class="list-group-item py-2 border-0 smile_icon_btn ">
+                                                                                                            <a href="#" class="list-item-link fw-bold">
+                                                                                                                <span class="">
+                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                                                        <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                                                                                                                    </svg>
+                                                                                                                </span>
+                                                                                                            </a>
+                                                                                                        </li> -->
+                                                                                                        <!-- === Comment Emoji Icon From Child ===  -->
+                                                                                                        <!-- <li class="list-group-item py-2 border-0 chat_btn">
+                                                                                                            <a href="#" class="list-item-link fw-bold">
+                                                                                                                <span class="">
+                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                                                        <path d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/>
+                                                                                                                    </svg>
+                                                                                                                </span>
+                                                                                                            </a>
+                                                                                                        </li> -->
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </t>
+                                                                                </t>  
+                                                                                <t t-else="">
+                                                                                    <div class="child_kanban_user_item" t-att-data-id="child_id.id">
+                                                                                        <div class="massage_reply_user_box align-items-center d-flex justify-content-between">
+                                                                                            <div class="d-flex align-items-center">
+                                                                                                <div class="massage_reply_user_label">
+                                                                                                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{child_id.sh_from_user_id}}" alt="Feedback Users Image" class=""/>
+                                                                                                </div>
+                                                                                                <div class="massage_reply_user_text">
+                                                                                                    <!-- <p class="massage_reply_user_text_name mb-0"> Khilan shah -->
+                                                                                                    <p class="massage_reply_user_text_name mb-0"> <t t-esc="child_id.sh_from_user_name"/>
+                                                                                                    </p>
+                                                                                                    <p class="massage_reply_user_text_Date mb-0"><t t-esc="child_id.child_creation_date"/></p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <t t-if="child_id.sh_show_edit_delete_btn">
+                                                                                                <div class="delet_edit_icon_box">
+                                                                                                    <ul class="list-group list-group-horizontal">
+                                                                                                        <li class="list-group-item py-2 border-0">
+                                                                                                            <a href="#">
+                                                                                                                <span class="fa fa-pencil fs-2 sh_pencil_icon" t-on-click="OnClickChildEdit"></span>
+                                                                                                            </a>
+                                                                                                        </li>
+                                                                                                        <li class="list-group-item py-2 border-0">
+                                                                                                            <a href="#">
+                                                                                                                <span class="fa fa-trash-o fs-2" t-on-click="OnChildDelete"></span>
+                                                                                                            </a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </t>
+                                                                                            <!-- <div class="delet_edit_icon_box">
+                                                                                                <ul class="list-group list-group-horizontal">
+                                                                                                    <li class="list-group-item py-2 border-0">
+                                                                                                        <a href="#">
+                                                                                                            <span class="fa fa-pencil fs-2 sh_pencil_icon" t-on-click="OnClickChildEdit"></span>
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                    <li class="list-group-item py-2 border-0">
+                                                                                                        <a href="#">
+                                                                                                            <span class="fa fa-trash-o fs-2" t-on-click="OnChildDelete"></span>
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div> -->
+                                                                                        </div>
+                                                                                        <div class="massage_replay_text">
+                                                                                            <p class="child_massage_reply_user_extra_text_name my-2">
+                                                                                                <t t-esc='child_id.high_five_text'/>
+                                                                                            </p>
+
+                                                                                            <!-- <p class="child_massage_reply_user_extra_text_name my-2">
+                                                                                                <HighFiveDescPanel
+                                                                                                sh_str="child_id.high_five_text"
+                                                                                                sh_user="child_id.sh_from_user_name"
+                                                                                                />
+                                                                                            </p> -->
+                                                                                            <p class="sh_bold_child_employee d-none">@<t t-esc='child_id.sh_third_mention_name'/> </p>
+
+                                                                                            <div class="sh_high_five_dynamic_nested_kanban_text mt-3 d-none">
+                                                                                                <div class="input-group mb-0">
+                                                                                                    <input type="text" class="form-control sh_high_five_edit_input" />
+                                                                                                    <div class="input-group-append align-self-start">
+                                                                                                        <a class="btn btn-outline-success mt-0 sh_postbtn" type="button" t-on-click="onClickHighfivePost"> Post</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="like_box">
+                                                                                                <ul class="m-0 p-0 list-group list-group-horizontal">
+                                                                                                    <li class="list-group-item py-2 border-0 ps-0 like_btn">
+                                                                                                        <a href="#" class="list-item-link">
+                                                                                                            <span class="me-1">
+                
+                                                                                                                <t t-if="child_id.show_child_like_btn">
+                                                                                                                    <!-- == Show Like Button If Not Liked ==  -->
+                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="child_like_button" class="child_like_btn_01" data-name="Layer 3" viewBox="0 0 14 14" t-on-click="onClickChildLikeButton">
+                                                                                                                        <defs>
+                                                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                        </defs>
+                                                                                                                        <title>fa-thumbs-up</title>
+                                                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                    </svg>
+                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="child_unlike_button" class="child_unlike_btn_01 d-none" data-name="Layer 4" viewBox="0 0 14 14" t-on-click="onClickChildUnlikeButton">
+                                                                                                                        <defs>
+                                                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                        </defs>
+                                                                                                                        <title>fa-thumbs-down</title>
+                                                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                    </svg>
+                                                                                                                </t>
+                                                                                                                <t t-else="">
+                                                                                                                    <!-- == Show UnLike Button If Liked ==  -->
+                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="child_like_button" class="child_like_btn_02 d-none" data-name="Layer 3" viewBox="0 0 14 14" t-on-click="onClickChildLikeButton">
+                                                                                                                        <defs>
+                                                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                        </defs>
+                                                                                                                        <title>fa-thumbs-up</title>
+                                                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                    </svg>
+                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" id="child_unlike_button" data-name="Layer 4" class="child_unlike_btn_02" viewBox="0 0 14 14" t-on-click="onClickChildUnlikeButton">
+                                                                                                                        <defs>
+                                                                                                                            <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                        </defs>
+                                                                                                                        <title>fa-thumbs-down</title>
+                                                                                                                        <rect class="cls-1" width="14" height="14"/>
+                                                                                                                        <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                        <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                    </svg>
+                                                                                                                </t>
+                                                                                                                </span>
+                                                                                                                <span id="child_like_count"><t t-esc="child_id.child_like_count"/></span> like</a>
+                
+                
+                
+                
+                
+                                                                                                                <!-- <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 14 14">
+                                                                                                                    <defs>
+                                                                                                                        <style>.cls-1{fill:none;}.cls-2,.cls-3{fill:#393939;}.cls-3{opacity:0.4;}</style>
+                                                                                                                    </defs>
+                                                                                                                    <title>fa-thumbs-up</title>
+                                                                                                                    <rect class="cls-1" width="14" height="14"/>
+                                                                                                                    <path class="cls-2" d="M8.91,12.38a7.62,7.62,0,0,1-1.49-.05,5.57,5.57,0,0,1-2.66-1.71.42.42,0,0,1,0-.65c.26-.18.44,0,.61.16a6.52,6.52,0,0,0,1.86,1.35.93.93,0,0,0,.37.1,23.78,23.78,0,0,0,2.8,0A.74.74,0,0,0,11,10.7a.48.48,0,0,1,.3-.54.8.8,0,0,0,.36-1.23c-.16-.3-.13-.43.17-.64a.82.82,0,0,0,.32-1,.5.5,0,0,1,.15-.65.82.82,0,0,0-.55-1.46q-1.52,0-3,0c-.51,0-.66-.24-.41-.69A5.74,5.74,0,0,0,9,2.71.61.61,0,0,0,8.24,2a.63.63,0,0,0-.45.49,5.55,5.55,0,0,1-.73,1.67,4.16,4.16,0,0,1-1,1,3.27,3.27,0,0,0-.75.64.35.35,0,0,1-.54.06.37.37,0,0,1-.06-.52,2.31,2.31,0,0,1,.77-.72,3.46,3.46,0,0,0,1.5-2c0-.15.08-.29.13-.43a1.39,1.39,0,0,1,2.68.72,4.7,4.7,0,0,1-.39,1.22c-.13.26-.09.33.2.32h2.19a1.53,1.53,0,0,1,1.47.86,1.52,1.52,0,0,1-.16,1.7.4.4,0,0,0-.09.35,1.47,1.47,0,0,1-.33,1.29.4.4,0,0,0-.1.4A1.53,1.53,0,0,1,12,10.64a.56.56,0,0,0-.19.35,1.57,1.57,0,0,1-1.69,1.39Zm-5.16-.79a.73.73,0,0,1-.82.79H1.39a.74.74,0,0,1-.82-.82V6.06a.79.79,0,0,1,.89-.89H2.9c.54,0,.85.27.85.8C3.76,7.84,3.76,9.72,3.75,11.59ZM3,11.39C3,9.66,3,7.92,3,6.18c0-.18-.06-.25-.25-.25-.37,0-.75,0-1.12,0s-.3.07-.3.29c0,.85,0,1.7,0,2.54s0,1.72,0,2.58c0,.21.06.28.28.28.38,0,.77,0,1.15,0C2.92,11.62,3,11.57,3,11.39Z" transform="translate(0 0)"/>
+                                                                                                                    <path class="cls-3" d="M1.34,8.76c0-.84,0-1.69,0-2.54,0-.22.07-.3.3-.29s.75,0,1.12,0c.19,0,.25.07.25.25,0,1.74,0,3.48,0,5.21,0,.18-.08.23-.24.23-.38,0-.77,0-1.15,0-.22,0-.28-.07-.28-.28C1.34,10.48,1.34,9.62,1.34,8.76Z" transform="translate(0 0)"/>
+                                                                                                                </svg>
+                                                                                                            </span> like</a> -->
+                                                                                                    </li>
+                                                                                                    <!-- <li class="list-group-item py-2 border-0 smile_icon_btn ">
+                                                                                                        <a href="#" class="list-item-link fw-bold">
+                                                                                                            <span class="">
+                                                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                                                    <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                                                                                                                </svg>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </li> -->
+                                                                                                    <!-- <li class="list-group-item py-2 border-0 chat_btn">
+                                                                                                        <a href="#" class="list-item-link fw-bold">
+                                                                                                            <span class="">
+                                                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                                                    <path d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/>
+                                                                                                                </svg>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </li> -->
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </t>      
+                                                                            
+                                                                            </t>
+                                                                        </t>
+            
+                                                                        <div class="message_sub_replay_box d-none"  t-att-id="'reply_id_'+high_five.id">
+                                                                            <div class="message_sub_replay_main">
+                                                                                <div class="message_sub_replay_img_box">
+                                                                                    <!-- <img src="web/image?model=res.users&amp;field=avatar_128&amp;id=2" alt="Feedback Users Image"/> -->
+                                                                                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{login_user_id}}" alt="Feedback Users Image"/>
+                                                                                </div>
+                                                                                <div class="message_sub_replay_input">
+                                                                                    <div class="input-group-main">
+                                                                                        <!-- <input type="text" class="form-control sub_message_type sh_hive_five_child_input" t-att-id='"reply_input_id_"+high_five.id' t-on-keydown="highFiveKeyPress" t-on-keyup="highFiveKeyUp" placeholder="Add a Comment.."/> -->
+            
+                                                                                        <input type="text" class="form-control sub_message_type sh_hive_five_child_input"  t-att-id='"reply_input_id_"+high_five.id' t-on-keydown="(event) => this.highFiveKeyPressReply('reply_input_id_'+high_five.id, event)" t-on-keyup="(event) => this.highFiveKeyUpReply('reply_input_id_'+high_five.id, event)" placeholder="Add a Comment.."/>
+            
+                                                                                        <p class='comment_validation d-none text-danger'>Please add some comment content..!</p>
+                                                                                        <!-- <a href="#" class="input-group-text">
+                                                                                            <span>
+                                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                                                    <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                                                                                                </svg>
+                                                                                            </span>
+                                                                                        </a> -->
+                                                                                    </div>
+                                                                                    <div class="select_employee_list_div">
+                                                                                        <div class=" w-100 dropdown">
+                                                                                            <ul class="d-none dropdown-menu show w-100 overflow-auto select_employee_list_ul"  t-att-id="'reply_input_id_'+high_five.id">
+                                                                                                <!-- <li><a href="#" class="dropdown-item d-flex w-100 py-2 px-4"></a></li> -->
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <BrChildEmojisDropdown kishan="high_five.id"/>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="checkbox_private_box">
+                                                                                <input class="form-check-input sh_private_cmt_boolean" type="checkbox"/>
+                                                                                <span class="form-check-label">Private Comment to <t t-esc="high_five.sh_to_user_name"/></span>
+                                                                            </div>
+                                                                            <div class="post_comment_btn_box">
+                                                                                <a href="#" class="btn btn-secondary post_comment_btn" t-on-click="(event) => this.CreateReplyHighFi(high_five.id,event)">Post Comment</a>
+                                                                            </div>
+                                                                        </div>
+            
+                                                                    </div>
+                                                                </div>
+            
+                                                            </div>
+                                                        </div>
+                                                    </t>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </t>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 col-12">
+                            <div class="sh_high_five_right_panel">
+                                <div class="sh_high_five_right_box">
+                                    <div class="sh_high_five_right_user_box align-items-center d-flex">
+                                        <div class="sh_high_five_label">                                            
+                                            <img alt="Login Image" t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{login_user_id}}"/>
+                                        </div>
+                                        <div class="sh_high_five_user_text">
+                                            <p class="sh_high_five_label_date mb-0"><t t-esc="login_user_name"/></p>
+                                            <!-- <p class="sh_high_five_label_text mb-0">Due Friday, September 15</p> -->
+                                        </div>
+                                    </div>
+                                    <div class="sh_count_box">
+                                        <div class="sh_give_count_box">
+                                            <p class="sh_give_count_number mb-0"><t t-esc="sh_given_high_five_count"/></p>
+                                            <p class="sh_give_count_name mb-0">GIVEN</p>
+                                        </div>
+                                        <div class="sh_give_count_box me-0">
+                                            <p class="sh_give_count_number mb-0"><t t-esc="sh_received_high_five_count"/></p>
+                                            <p class="sh_give_count_name mb-0">RECEIVED</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sh_high_five_total_box">
+                                    <div class="sh_high_five_right_total_box align-items-center d-flex">
+                                        <div class="sh_high_five_right_total_heading">
+                                            <p class="sh_high_five_right_total_title mb-0"><t t-esc="login_user_name"/></p>
+                                        </div>
+                                        <div class="sh_high_five_right_total_number">
+                                            <p class="sh_high_five_right_total_count mb-0"><t t-esc="total_points"/></p>
+                                        </div>
+                                    </div>
+                                    <div class="sh_high_five_right_total_items_box">
+                                        <div class="sh_high_five_right_total_item_box">
+                                            <div class="sh_high_five_right_total_items_name">
+                                                <p class="sh_high_five_right_total_items_text mb-0">Point Given</p>
+                                            </div>
+                                            <div class="sh_high_five_right_total_items_count me-0">
+                                                <p class="sh_high_five_right_total_items_number mb-0"><t t-esc="total_points_of_given_high_five"/></p>
+                                            </div>
+                                        </div>
+                                        <div class="sh_high_five_right_total_item_box">
+                                            <div class="sh_high_five_right_total_items_name">
+                                                <p class="sh_high_five_right_total_items_text mb-0">Point Received</p>
+                                            </div>
+                                            <div class="sh_high_five_right_total_items_count me-0">
+                                                <p class="sh_high_five_right_total_items_number mb-0"><t t-esc="total_points_of_received_high_five"/></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sh_top_high_five_box">
+                                    <div class="sh_top_high_five_right_main_img_box">
+                                        <img src="sh_br_engaging\static\images\high_five_image.png" alt="" class="sh_top_high_five_right_main_img"/>
+                                    </div>
+                                    <div class="sh_top_high_five_right_box align-items-center d-flex">
+                                        <div class="sh_top_high_five_right_heading">
+                                            <p class="sh_top_high_five_right_title mb-0">Top 5 High Fiver</p>
+                                        </div>
+                                    </div>
+                                    <div class="sh_top_high_five_right_items_box">
+                                        <!-- === First Top High Fiver ===  -->
+                                        <div class="sh_top_high_five_right_item_box">
+                                            <div class="sh_top_high_five_right_items_name d-flex">
+                                                <div class="sh_top_high_five_right_img_box">
+                                                    <!-- <img src="web/image?model=res.users&amp;field=avatar_128&amp;id=2" alt="" class="sh_top_high_five_right_img"/> -->
+                                                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{first_top_user_id}}" alt="" class="sh_top_high_five_right_img"/>
+                                                    
+                                                </div>
+                                                <!-- <p class="sh_top_high_five_right_items_text mb-0">GIVEN</p> -->
+                                                <p class="sh_top_high_five_right_items_text mb-0"><t t-esc="first_top_user"/></p>
+                                            </div>
+                                            <div class="sh_top_high_five_right_items_count me-0">
+                                                <!-- <p class="sh_top_high_five_right_items_number mb-0">10</p> -->
+                                                <p class="sh_top_high_five_right_items_number mb-0"><t t-esc="first_top_counts"/></p>
+                                            </div>
+                                        </div>
+                                        <!-- === Second Top High Fiver ===  -->
+                                        <div class="sh_top_high_five_right_item_box">
+                                            <div class="sh_top_high_five_right_items_name d-flex">
+                                                <div class="sh_top_high_five_right_img_box">
+                                                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{second_top_user_id}}" alt="" class="sh_top_high_five_right_img"/>
+                                                </div>
+                                                <!-- <p class="sh_top_high_five_right_items_text mb-0">GIVEN</p> -->
+                                                <p class="sh_top_high_five_right_items_text mb-0"><t t-esc="second_top_user"/></p>
+                                            </div>
+                                            <div class="sh_top_high_five_right_items_count me-0">
+                                                <!-- <p class="sh_top_high_five_right_items_number mb-0">10</p> -->
+                                                <p class="sh_top_high_five_right_items_number mb-0"><t t-esc="second_top_counts"/></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- === Third Top High Fiver ===  -->
+                                        <div class="sh_top_high_five_right_item_box">
+                                            <div class="sh_top_high_five_right_items_name d-flex">
+                                                <div class="sh_top_high_five_right_img_box">
+                                                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{third_top_user_id}}" alt="" class="sh_top_high_five_right_img"/>
+                                                </div>
+                                                <!-- <p class="sh_top_high_five_right_items_text mb-0">GIVEN</p> -->
+                                                <p class="sh_top_high_five_right_items_text mb-0"><t t-esc="third_top_user"/></p>
+                                            </div>
+                                            <div class="sh_top_high_five_right_items_count me-0">
+                                                <!-- <p class="sh_top_high_five_right_items_number mb-0">10</p> -->
+                                                <p class="sh_top_high_five_right_items_number mb-0"><t t-esc="third_top_counts"/></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- === Fourth Top High Fiver ===  -->
+                                        <div class="sh_top_high_five_right_item_box">
+                                            <div class="sh_top_high_five_right_items_name d-flex">
+                                                <div class="sh_top_high_five_right_img_box">
+                                                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{fourth_top_user_id}}" alt="" class="sh_top_high_five_right_img"/>
+                                                </div>
+                                                <!-- <p class="sh_top_high_five_right_items_text mb-0">GIVEN</p> -->
+                                                <p class="sh_top_high_five_right_items_text mb-0"><t t-esc="fourth_top_user"/></p>
+                                            </div>
+                                            <div class="sh_top_high_five_right_items_count me-0">
+                                                <!-- <p class="sh_top_high_five_right_items_number mb-0">10</p> -->
+                                                <p class="sh_top_high_five_right_items_number mb-0"><t t-esc="fourth_top_counts"/></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- === Fifth Top High Fiver ===  -->
+                                        <div class="sh_top_high_five_right_item_box">
+                                            <div class="sh_top_high_five_right_items_name d-flex">
+                                                <div class="sh_top_high_five_right_img_box">
+                                                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{fifth_top_user_id}}" alt="" class="sh_top_high_five_right_img"/>
+                                                </div>
+                                                <!-- <p class="sh_top_high_five_right_items_text mb-0">GIVEN</p> -->
+                                                <p class="sh_top_high_five_right_items_text mb-0"><t t-esc="fifth_top_user"/></p>
+                                            </div>
+                                            <div class="sh_top_high_five_right_items_count me-0">
+                                                <!-- <p class="sh_top_high_five_right_items_number mb-0">10</p> -->
+                                                <p class="sh_top_high_five_right_items_number mb-0"><t t-esc="fifth_top_counts"/></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- FOR OPEN ALL BADGE SELECTION FROM SEARCH MORE -->
+                <!-- ============================================= -->
+                <div id="SelectBadgesModel" class="modal fade" role="dialog">
+                    <div class="modal-dialog sh_select_badge_model">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title">All Badges</h5>
+                            <a type="button" class="close" data-bs-dismiss="modal">×</a>
+                        </div>
+
+
+                        <div class="modal-body">
+                            <div class="list-group">
+                                <t t-foreach="badge_all_list" t-as="badge_id" t-key="badge_id">
+                                    <a href="#" t-att-id='badge_id' t-on-click="() => this.SelectFromAllBadges(event,badge_id)" class="list-group-item list-group-item-action list-group-item-light"><t t-esc='badge_all_list[badge_id]'/></a>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </xpath>
+</t>
+</templates>

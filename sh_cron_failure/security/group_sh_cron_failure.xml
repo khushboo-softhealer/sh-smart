@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+    
+        <record id="group_cron_failure" model="res.groups">
+        <field name="name">Cron Failure Group</field>
+        <field name="users" eval="[(4, ref('base.user_admin'))]" />
+
+        </record>
+    
+    </data>
+    
+</odoo>

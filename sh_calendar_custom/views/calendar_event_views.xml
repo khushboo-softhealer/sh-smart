@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="calendar.action_calendar_event" model="ir.actions.act_window">
+        <field name="context">{'search_default_mymeetings': 1}</field>
+    </record>
+
+    <record id="sh_calendar_overlap_view_calendar_event_form_inherit" model="ir.ui.view">
+        <field name="name">sh.calendar.overlap</field>
+        <field name="model">calendar.event</field>
+        <field name="inherit_id" ref="calendar.view_calendar_event_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//notebook/page[@name='page_options']/group/div/group/field[@name='recurrency']"
+                position="before">
+                <field name="allow_overlap" />
+            </xpath>
+
+            <xpath expr="//div[hasclass('oe_title')]" position="after">
+                <group>
+                    <group>
+                        <field name="calendar_group_templates" widget="many2many_tags"
+                            options="{'no_create_edit': True}" />
+                    </group>
+                    <group>
+                        <field name="create_new_group" />
+                        <field name="new_group_name"
+                            attrs="{'invisible':[('create_new_group', '=', False)]}" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_calendar_custom_view_calendar_event_search_inherit" model="ir.ui.view">
+        <field name="name">calendar.event.view.search.inherit</field>
+        <field name="model">calendar.event</field>
+        <field name="inherit_id" ref="calendar.view_calendar_event_search" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="start" />
+                <field name="stop" />
+            </field>
+
+            <xpath expr="//filter[@name='responsible']" position="after">
+                <filter name="today" string="Today"
+                    domain="[('start', '&gt;=', time.strftime('%Y-%m-%d 00:00:00')),('stop', '&lt;=', time.strftime('%Y-%m-%d 23:59:59'))]" />
+                <filter string="Current Week" name="Current Week"
+                    domain="[('stop','&lt;',(context_today()+relativedelta(days=7)).strftime('%Y-%m-%d 23:59:59')), ('start','&gt;=',context_today().strftime('%Y-%m-%d 00:00:00'))]" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

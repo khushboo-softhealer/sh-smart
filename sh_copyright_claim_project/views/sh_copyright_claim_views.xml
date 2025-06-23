@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_copyright_claim_view_form" model="ir.ui.view">
+        <field name="name">sh.copyright.claim.view.form</field>
+        <field name="model">sh.copyright.claim</field>
+        <field name="arch" type="xml">
+            <form string="Copyright Claim">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="product_id" />
+                            <field name="task_id" />
+                        </group>
+                        <group>
+                            <field name="sh_technical_name" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="claim_data" />
+                    </group>
+                    <group>
+                        <group>
+                            <field name="create_date" readonly="1" />
+                        </group>
+                        <group>
+                            <field name="write_date" readonly="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_copyright_claim_view_tree" model="ir.ui.view">
+        <field name="name">sh.copyright.claim.view.tree</field>
+        <field name="model">sh.copyright.claim</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="product_id" />
+                <field name="claim_data" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_copyright_claim_view_search" model="ir.ui.view">
+        <field name="name">sh.copyright.claim.view.search</field>
+        <field name="model">sh.copyright.claim</field>
+        <field name="arch" type="xml">
+            <search string="Copyright Claim">
+                <field name="product_id" />
+                <field name="claim_data" />
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_copyright_claim_action" model="ir.actions.act_window">
+        <field name="name">Copyright Claim</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.copyright.claim</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="sh_copyright_claim_action" id="sh_copyright_claim_menu" name="Copyright Claim" parent="project.menu_project_config" groups="sh_copyright_claim_project.group_project_user" />
+</odoo>

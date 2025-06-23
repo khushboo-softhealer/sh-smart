@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="model_mass_partner_parent_action" model="ir.actions.server">
+        <field name="name">Mass Update Partner Parent</field>
+        <field name="model_id" ref="base.model_res_partner" />            
+        <field name="binding_model_id" ref="base.model_res_partner"/>       
+        <field name="state">code</field>
+        <field name="binding_view_types">form,list</field>        
+        <field name="code"> action = record.action_update_partner_parent()</field>
+    </record>
+
+    <record id="model_mass_set_partner_email_domain_action" model="ir.actions.server">
+        <field name="name">Mass Set Partner Email Domain</field>
+        <field name="model_id" ref="base.model_res_partner" />            
+        <field name="binding_model_id" ref="base.model_res_partner"/>       
+        <field name="state">code</field>
+        <field name="binding_view_types">form,list</field>        
+        <field name="code"> action = record.action_set_partner_email_domain()</field>
+    </record>
+
+    <record id="model_mass_clear_partner_name_action" model="ir.actions.server">
+        <field name="name">Update Contact Name Clean</field>
+        <field name="model_id" ref="base.model_res_partner" />            
+        <field name="binding_model_id" ref="base.model_res_partner"/>       
+        <field name="state">code</field>
+        <field name="binding_view_types">form,list</field>        
+        <field name="code"> action = record.action_clear_partner_name()</field>
+    </record>
+
+
+</odoo>

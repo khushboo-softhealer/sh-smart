@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Br engage category -->
+    <record id="module_br_groups_category" model="ir.module.category">
+        <field name="name">Br Enagage</field>
+        <field name="sequence">18</field>
+    </record>
+
+    <!-- Define User Group -->
+    <record id="group_br_engage_user" model="res.groups">
+        <field name="name">Br Enagage User</field>
+        <field name="category_id" ref="sh_br_engaging.module_br_groups_category"/>
+    </record>
+
+    <!-- Define Manager Group -->
+    <record id="group_br_engage_manager" model="res.groups">
+        <field name="name">Br Enagage Manager</field>
+        <field name="implied_ids" eval="[(4, ref('sh_br_engaging.group_br_engage_user'))]"/>
+        <field name="category_id" ref="sh_br_engaging.module_br_groups_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+</odoo>

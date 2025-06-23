@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.br.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block " string="BR Engage" data-string="BR Engage" data-key="br_engage">
+                    <!-- <h2>Manage Questions Queue Settings</h2>
+                    <div class="row mt16 o_settings_container" name="br_question_configurations">
+                        <div class="col-12 col-lg-6 o_setting_box" id="br_options">
+                            <div class="o_setting_left_pane">
+                                <field name="sh_turn_question_queue_on_off"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="sh_turn_question_queue_on_off"/>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box" id="blank">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box" id="question_frequency" attrs="{'invisible': [('sh_turn_question_queue_on_off', '=', False)]}">
+                            <div class="o_setting_left_pane">
+                                <span></span>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Question Frequency</span>
+                                <div class="text-muted">
+                                    <field name="sh_question_frequency" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box" id="no_of_question" attrs="{'invisible': [('sh_turn_question_queue_on_off', '=', False)]}">
+                            <div class="o_setting_left_pane">
+                                <span></span>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label"><label for="sh_no_of_questions_asked"/></span>
+                                <div class="text-muted">    
+                                    <field name="sh_no_of_questions_asked"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box" id="repeat_question" attrs="{'invisible': [('sh_turn_question_queue_on_off', '=', False)]}">
+                            <div class="o_setting_left_pane">
+                                <field name="sh_repeat_question_queue"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="sh_repeat_question_queue"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="question_repeating" attrs="{'invisible': ['|','|',('sh_question_frequency', '=', 'monthly'),('sh_repeat_question_queue', '=', False),('sh_turn_question_queue_on_off', '=', False)]}">
+                            <div class="o_setting_left_pane">
+                                <span></span>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Repeat Every</span>
+                                <div class="text-muted">
+                                    <field name="sh_repeat_day" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="question_repeating" attrs="{'invisible': ['|','|',('sh_question_frequency', '=', 'weekly'),('sh_repeat_question_queue', '=', False),('sh_turn_question_queue_on_off', '=', False)]}">
+                            <div class="o_setting_left_pane">
+                                <span></span>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Repeat Date</span>
+                                <div class="text-muted">
+                                    <field name="sh_repeat_date" />
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <h2>Manage Notifications</h2>
+                    <div class="row mt16 o_settings_container" name="br_notification_configurations">
+                        <div class="col-12 col-lg-6 o_setting_box" id="br_options">
+                            <div class="o_setting_left_pane">
+                                <field name="sh_send_check_in_pending_email_notification"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="sh_send_check_in_pending_email_notification"/>
+                            </div>
+                        </div>
+                         <div class="col-12 col-lg-6 o_setting_box" id="br_options">
+                            <div class="o_setting_left_pane">
+                                <field name="sh_send_check_in_pending_bell_notification"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="sh_send_check_in_pending_bell_notification"/>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box" id="br_engage_mail_server">
+                            <div class="o_setting_left_pane">
+                                <span></span>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Select Mail Server</span>
+                                <div class="text-muted">
+                                    <field name="sh_mail_server_id" />
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <h2>Gamification</h2>
+                    <div class="row mt16 o_settings_container" name="br_high_five_gamification">
+                        <div class="col-12 col-lg-6 o_setting_box" id="no_of_question">
+                            <div class="o_setting_left_pane">
+                                <span></span>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label"><label for="sh_points_for_each_received_high_five"/></span>
+                                <div class="text-muted">    
+                                    <field name="sh_points_for_each_received_high_five"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="no_of_question">
+                            <div class="o_setting_left_pane">
+                                <span></span>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label"><label for="sh_points_for_each_given_high_five"/></span>
+                                <div class="text-muted">    
+                                    <field name="sh_points_for_each_given_high_five"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <h2>Wall Of Fame</h2>
+                    <div class="row mt16 o_settings_container" name="br_dashboard_emp_of_month">
+                        <div class="col-12 col-lg-6 o_setting_box" id="sh_wall_of_fame_setting">
+                            <div class="o_setting_left_pane">
+                                <span></span>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label"><label for="sh_wall_of_fame_employee"/></span>
+                                <div class="text-muted">    
+                                    <field name="sh_wall_of_fame_employee"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box" id="sh_wall_of_fame_update_date">
+                            <div class="o_setting_left_pane">
+                                <span></span>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label"><label for="sh_wall_of_fame_record_update_date"/></span>
+                                <div class="text-muted">    
+                                    <field name="sh_wall_of_fame_record_update_date"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Monthly Team Meeting Configurations</h2>
+                    <div class="row mt16 o_settings_container" name="br_monthly_team_config">
+                        <div class="col-12 col-lg-6 o_setting_box" id="sh_monthly_team_setting">
+                            <div class="o_setting_left_pane">
+                                <span></span>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label"><label for="sh_monthly_meeting_date"/></span>
+                                <div class="text-muted">    
+                                    <field name="sh_monthly_meeting_date"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_br_config_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'br_engage', 'bin_size': False}</field>
+    </record>
+
+</odoo>

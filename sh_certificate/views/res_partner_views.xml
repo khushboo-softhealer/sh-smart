@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_partner_inherit_form">
+        <field name="name">Partner</field>
+        <field name="model">res.partner</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button type="action" class="oe_stat_button" name="%(sh_certificate.sh_letter_menu_action)d" context="{'search_default_sh_partner_id': id}" icon="fa-envelope">
+                    <field string="Letters" name="letter_count" widget="statinfo" />
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

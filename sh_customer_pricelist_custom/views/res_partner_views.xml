@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_pricelist_res_partner_search_view" model="ir.ui.view">
+        <field name="name">res.partner</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <field name="name" position="replace">
+                <field name="name" filter_domain="['|','|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self),('property_product_pricelist','ilike',self)]"/>
+            </field>
+            <filter name="group_country" position="after">
+                <filter name="pricelist" string="Pricelist" domain="[]" context="{'group_by' : 'property_product_pricelist'}"/>
+            </filter>
+        </field>
+    </record>
+</odoo>

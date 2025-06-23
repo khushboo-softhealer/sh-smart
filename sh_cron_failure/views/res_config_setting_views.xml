@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+     <record id="crone_failure_notify_user_config_settings" model="ir.ui.view">
+        <field name="name">Cron Failure Notify Settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="hr_attendance.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='hr_attendance']/div[3]" position="after">
+                <h2>Cron Failure Notify Users</h2>
+                <div class="row mt16 o_settings_container">
+                    <div id="cron_user_notify" class="col-xs-12 col-md-6 ">
+                        <div class="o_setting_right_pane">
+                            <label for="sh_cron_notify_users" />
+                            <field name="sh_cron_notify_users" widget="many2many_tags"/>
+                        </div>                       
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

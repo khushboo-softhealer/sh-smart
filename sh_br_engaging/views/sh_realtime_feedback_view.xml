@@ -1,0 +1,17 @@
+<odoo>  
+    <record  id="sh_realtime_feedback_tree" model="ir.ui.view">
+        <field name="name">sh.realtime.feedback.tree</field>
+        <field name="model">sh.realtime.feedback</field>
+        <field name="arch" type="xml">
+            <tree js_class="br_engage_realtime_feedback">
+                <field name="name"></field>                               
+            </tree>
+        </field>
+    </record>    
+    <record id="sh_br_realtime_feedback_action" model="ir.actions.act_window">
+        <field name="name">Feedback</field>
+        <field name="res_model">sh.realtime.feedback</field>        
+        <field name="view_mode">tree</field>        
+    </record>
+
+</odoo>

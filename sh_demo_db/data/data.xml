@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="demo_request" model="sh.helpdesk.stages">
+			<field name="name">Demo Request</field>
+			<field name="sequence">70</field>
+			<field name="fold" eval="True"/>
+		</record>
+		<record id="demo_approved" model="sh.helpdesk.stages">
+			<field name="name">Demo Approved</field>
+			<field name="sequence">80</field>
+			<field name="fold" eval="True"/>
+		</record>
+		<record id="cron_demo_db_expired" model="ir.cron">
+	        <field name="name">Drop Demo Database</field>
+	        <field name="interval_number">2</field>
+	        <field name="interval_type">hours</field>
+	        <field name="numbercall">-1</field>
+	        <field name="doall" eval="False"/>
+	        <field name="model_id" ref="sh_helpdesk.model_sh_helpdesk_ticket"/>
+	        <field name="code">model._run_drop_demo_db()</field>
+	        <field name="state">code</field>
+	    </record>
+	</data>
+</odoo>

@@ -1,0 +1,73 @@
+<odoo>
+    <record  id="sh_check_in_form" model="ir.ui.view">
+        <field name="name">sh.check.in.form</field>
+        <field name="model">sh.check.in</field>
+        <field name="arch" type="xml">
+            <form class="sh_check_in_form" js_class="br_engage_check_in" delete="false">
+                <field name="name" invisible='1'></field>                
+            </form>
+        </field>
+    </record>   
+    <record  id="sh_check_in_tree" model="ir.ui.view">
+        <field name="name">sh.check.in.tree</field>
+        <field name="model">sh.check.in</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"></field>                
+                <field name="sh_employee_id"></field>                
+                <!-- <field name="sh_check_in_frequency"></field>-->
+                <field name="sh_from_date"></field>                
+                <field name="sh_to_date"></field>                
+                <field name="sh_stage"></field>  
+                <field name="sh_user_id"></field> 
+                <button string="View Check-in" class="btn btn-outline-secondary" type="object" name="action_open_form_view" />
+            </tree>
+        </field>
+    </record>    
+
+    <record id="sh_check_in_search" model="ir.ui.view">
+        <field name="name">sh.check.in.search</field>
+        <field name="model">sh.check.in</field>
+        <field name="arch" type="xml">
+            <search string="Check-in groupby">
+                <field name="name"></field>
+                <field name="sh_employee_id"></field>
+                
+                <group expand="0" string="Group By">
+                    <filter string="Employee" name="sh_employee_id" domain="" context="{'group_by':'sh_employee_id'}"/>
+                    <filter string="From Date" name="sh_from_date" domain="" context="{'group_by':'sh_from_date'}"/>
+                    <filter string="To Date" name="sh_to_date" domain="" context="{'group_by':'sh_to_date'}"/>
+                    <filter string="Stage" name="sh_stage" domain="" context="{'group_by':'sh_stage'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- <record id="sh_br_all_check_in_action_for_admin" model="ir.actions.act_window">
+        <field name="name">Check-in</field>
+        <field name="res_model">sh.check.in</field>        
+        <field name="view_mode">tree,search</field>        
+    </record> -->
+
+    <!-- *** CUSTOM SERVER TO OPEN THE TREE VIEW OF ALL CHECK-IN ***  -->
+    <record model="ir.actions.server" id="sh_br_all_child_check_in_tree_action"> <!-- Menu + python -->
+        <field name="name">Child Check-in Tree</field>
+        <field name="model_id" ref="model_sh_check_in"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.open_all_child_checkin_tree_view()
+        </field>
+    </record>
+
+    <!-- *** CUSTOM SERVER TO OPEN THE LATEST CHECK-IN FORM VIEW ***  -->
+    <record model="ir.actions.server" id="sh_br_check_in_action"> <!-- Menu + python -->
+        <field name="name">Check-in</field>
+        <field name="model_id" ref="model_sh_check_in"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.open_seprate_form_view()
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--1ons Record Rules -->
+    <record id="sh_br_engage_1on1s_user_record_rule" model="ir.rule">
+        <field name="name">1on1s User Rule</field>
+        <field name="model_id" ref="model_sh_talking_points"/>
+        <!-- <field name="domain_force">[('sh_user_id', '=', user.id)]</field> -->
+        <field name="domain_force">['|',('sh_user_id', '=', user.id),('sh_employee_id','=',user.employee_id.id)]</field>
+        <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+    </record>
+
+    <record id="sh_br_engage_1on1s_manager_record_rule" model="ir.rule">
+        <field name="name">1on1s Manager Rule</field>
+        <field name="model_id" ref="model_sh_talking_points" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('sh_br_engaging.group_br_engage_manager'))]"/>
+    </record>
+
+
+    <!-- inactive standard event record rules -->
+    <record id="calendar.calendar_event_rule_employee" model="ir.rule">
+        <field name="active" eval="False" />
+    </record>
+
+    <record id="calendar_event_rule_employee_updated" model="ir.rule">
+        <field ref="model_calendar_event" name="model_id"/>
+        <field name="name">All Calendar Event for employees Updated</field>
+        <field name="domain_force">['|', ('user_id', '=', user.id), ('partner_ids', 'in', user.partner_id.id)]</field>
+        <field eval="[(4,ref('base.group_user'))]" name="groups"/>
+    </record>
+</odoo>

@@ -1,0 +1,32 @@
+<odoo>
+    <record  id="sh_manage_agenda_form" model="ir.ui.view">
+        <field name="name">sh.manage.agenda.form</field>
+        <field name="model">sh.manage.agenda</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name"></field>   
+                <field name="sh_is_active"></field>                
+                <!-- <field name="sh_agenda_description"></field>                 -->
+            </form>
+        </field>
+    </record>
+
+    <record  id="sh_manage_agenda_tree" model="ir.ui.view">
+        <field name="name">sh.manage.agenda.tree</field>
+        <field name="model">sh.manage.agenda</field>
+        <field name="arch" type="xml">
+            <tree editable='bottom'>
+            <!-- <tree> -->
+                <field name="name"></field>                
+                <field name="sh_is_active"></field>   
+                <!-- <field name="sh_agenda_description"></field>                 -->
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_manage_agenda_action" model="ir.actions.act_window">
+        <field name="name">Talking Points</field>
+        <field name="res_model">sh.manage.agenda</field>        
+        <field name="view_mode">tree,form</field>        
+    </record>
+</odoo>

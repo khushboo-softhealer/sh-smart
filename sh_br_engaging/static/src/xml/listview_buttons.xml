@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="web.ListView.Buttons" t-inherit="web.ListView.Buttons" t-inherit-mode="extension">
+        <!-- Add Setting Button In Manage Questions Model  -->
+        <xpath expr="//div" position="inside">
+            <!-- <t t-if="sh_is_manage_question_model">
+                <button name="sh_settings" class="btn btn-primary sh_settings" t-on-click="_onClickSettingButton">
+                    Settings
+                </button>
+            </t>    -->
+            <t t-if="is_talking_point_model">
+                <button name="sh_create_new_1on1_record" class="btn btn-primary sh_create_new_1on1_record" t-on-click="_onClickCreateNew1on1Record">
+                    Create New 1on1
+                </button>  
+            </t>  
+        </xpath>
+
+        <!-- Hide Add Button In Checkin Model  -->
+        <!-- <xpath expr="//button[hasclass('o_list_button_add')]" position="replace">
+            <t t-if="sh_check_in_model">
+            </t> 
+            <t t-else="">
+                <button type="button" class="btn btn-primary o_list_button_add" data-hotkey="c" t-on-click="onClickCreate" data-bounce-button="">
+                    New
+                </button>
+            </t>           
+        </xpath> -->
+
+        <!-- Add Custom Buttons In Realtime Feedback Model  -->
+        <xpath expr="//button[hasclass('o_list_button_add')]" position="after">
+            <t t-if="sh_is_realtime_feedback_model">
+                <button type="button" class="btn btn-primary p-2" t-on-click="onClickRequestFeedback">
+                    Request Feedback
+                </button>
+                <button type="button" class="btn btn-outline-primary p-2" t-on-click="onClickGiveFeedback">
+                    Give Feedback
+                </button>
+            </t> 
+        </xpath>
+
+        <!-- Hide Add Button In Realtime Feedback Model  -->
+        <xpath expr="//button[hasclass('o_list_button_add')]" position="replace">
+            <t t-if="sh_is_realtime_feedback_model">
+            </t> 
+            <t t-else="">
+                <button type="button" class="btn btn-primary o_list_button_add" data-hotkey="c" t-on-click="onClickCreate" data-bounce-button="">
+                    New
+                </button>
+            </t>           
+        </xpath>
+    </t>
+
+</templates>

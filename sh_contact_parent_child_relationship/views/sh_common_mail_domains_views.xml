@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="sh_common_mail_domains_tree_view" model='ir.ui.view'>
+			<field name="name">sh.common.mail.domains.tree.view</field>
+			<field name="model">sh.common.mail.domains</field>
+			<field name="arch" type="xml">
+				<tree string="Tags" editable="bottom">
+					<field name="name" required="1"/>
+				</tree>
+			</field>
+		</record>
+		<record id="sh_common_mail_domains_action" model="ir.actions.act_window">
+     		<field name="name">Common Mail Domains</field>
+          	<field name="res_model">sh.common.mail.domains</field>
+          	<field name="view_mode">tree</field>
+          	<field name="help" type="html">
+              	<p class="oe_view_nocontent_create">Create a New Domain</p>
+          	</field>
+    	</record>
+    	<menuitem id="sh_common_mail_domains_menu" name="Common Mail Domains" parent="sh_helpdesk.helpdesk_config_menu" action="sh_common_mail_domains_action" sequence="11"/>
+	</data>
+</odoo>

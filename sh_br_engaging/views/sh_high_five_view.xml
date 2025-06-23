@@ -1,0 +1,37 @@
+<odoo>  
+    <record  id="sh_high_five_search" model="ir.ui.view">
+        <field name="name">sh.high.five.search</field>
+        <field name="model">sh.high.five</field>
+        <field name="arch" type="xml">
+            <search string="High Five Search">
+                <field name="name"/>
+                <field name="sh_from_user_id"/>
+                <field name="sh_to_user_id"/>
+
+                <filter string="My Sent HighFives" name="my_high_five" domain="[('sh_from_user_id', '=', uid)]"/>
+                <filter string="My Recieved HighFives" name="my_high_five_recieved" domain="[('sh_to_user_id', '=', uid)]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Employees" name='sh_from_user_id_group' context="{'group_by':'sh_from_user_id'}"/>
+                    <!-- <filter string="Create Date" name='sh_high_five_create_date_search' context="{'group_by':'sh_high_five_create_date_search'}"/> -->
+                    <filter string="Badges" name='sh_manage_badges_id_search' context="{'group_by':'sh_manage_badges_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>   
+
+    <record  id="sh_high_five_tree" model="ir.ui.view">
+        <field name="name">sh.high.five.tree</field>
+        <field name="model">sh.high.five</field>
+        <field name="arch" type="xml">
+            <tree js_class="br_engage_high_five_class" create="false">
+                <field name="name"></field>                               
+            </tree>
+        </field>
+    </record>    
+    <record id="sh_br_engage_high_five_action" model="ir.actions.act_window">
+        <field name="name">High Fives</field>
+        <field name="res_model">sh.high.five</field>        
+        <field name="view_mode">tree</field>        
+    </record>
+
+</odoo>

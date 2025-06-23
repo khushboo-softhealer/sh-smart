@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- form view -->
+    <record id="sh_letter_form" model="ir.ui.view">
+        <field name="name">sh.letter</field>
+        <field name="model">sh.letter</field>
+        <field name="arch" type="xml">
+            <form string="Letter">
+                <header>
+                    <button name="button_approve" type="object" states="draft" string="Approved" class="oe_highlight" />
+                    <button name="button_set_to_draft" states="cancel" string="Set to Draft" type="object" />
+                    <button name="action_letter_send" string="Send by Email" type="object" states="draft,approve" />
+                    <button name="button_cancel" states="draft,approve" string="Cancel" type="object" />
+                    <field name="state" widget="statusbar" statusbar_visible="draft,approve" readonly="1" />
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="sh_sequence" placeholder="Sequence" readonly="1"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="sh_layout_selection" widget="radio"/>
+                            <field name="company_id" invisible="1" />
+                            <field name="letter_template" />
+                            <field name="sh_partner_id" />
+                            <field name="employee_id" />
+                        </group>
+                        <group>
+                            <field name="date" />
+                            <field name="reference" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="letter_content_html" nolabel="0" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+    <!-- Letter template tree view -->
+    <record id="sh_letter_tree" model="ir.ui.view">
+        <field name="name">sh.letter</field>
+        <field name="model">sh.letter</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sh_sequence" />
+                <field name="name" />
+                <field name="date" />
+                <field name="letter_template" />
+                <field name="sh_partner_id" />
+                <field name="employee_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_letter_filter" model="ir.ui.view">
+        <field name="name">Letter Search</field>
+        <field name="model">sh.letter</field>
+        <field name="arch" type="xml">
+            <search string="Letter">
+                <field name="name" />
+                <field name="sh_sequence" />
+                <field name="sh_partner_id" />
+                <field name="employee_id" />
+                <newline />
+                <group expand="0" string="Group By...">
+                    <filter string="Partner" name="group_sh_partner_id" domain="[]" context="{'group_by':'sh_partner_id'}" />
+                    <filter string="Employee" name="group_employee_id" domain="[]" context="{'group_by':'employee_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- MenuAction -->
+    <record id="sh_letter_menu_action" model="ir.actions.act_window">
+        <field name="name">Letter</field>
+        <field name="res_model">sh.letter</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="sh_letter_filter" />
+    </record>
+
+    <!--  menuitem root -->
+    <menuitem id="sh_letter_menuitem_root" sequence="3" action="sh_letter_menu_action" name="Letter" web_icon="sh_certificate,static/description/menu.png" />
+</odoo>

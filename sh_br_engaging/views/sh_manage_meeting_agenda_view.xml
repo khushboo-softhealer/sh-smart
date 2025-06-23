@@ -1,0 +1,31 @@
+<odoo>
+    <record  id="sh_meeting_agenda_form" model="ir.ui.view">
+        <field name="name">sh.meeting.agenda.form</field>
+        <field name="model">sh.meeting.agenda</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name"></field>   
+                <field name="sh_is_active"></field>                
+                <!-- <field name="sh_agenda_description"></field>                 -->
+            </form>
+        </field>
+    </record>
+
+    <record  id="sh_meeting_agenda_tree" model="ir.ui.view">
+        <field name="name">sh.meeting.agenda.tree</field>
+        <field name="model">sh.meeting.agenda</field>
+        <field name="arch" type="xml">
+            <tree editable='bottom'>
+                <field name="name"></field>                
+                <field name="sh_is_active"></field>   
+                <!-- <field name="sh_agenda_description"></field>                 -->
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_meeting_agenda_action" model="ir.actions.act_window">
+        <field name="name">Meeting Agenda</field>
+        <field name="res_model">sh.meeting.agenda</field>        
+        <field name="view_mode">tree,form</field>        
+    </record>
+</odoo>

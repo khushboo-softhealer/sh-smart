@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="model_project_task_print_claim_mass_action" model="ir.actions.server">
+        <field name="name">Print Copyright Claim Reports</field>
+        <field name="model_id" ref="sh_copyright_claim_project.model_project_task" />
+        <field name="binding_model_id" ref="project.model_project_task" />
+        <field name="state">code</field>
+        <field name="code">action=records.mass_print_project_claim()</field>
+    </record>
+
+    <record id="sh_project_task_inherited_form_view" model="ir.ui.view">
+        <field name="name">project.task.inherit.view.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <!-- user_id(v12) -> user_ids(v16) -->
+            <field name="user_ids" position="after">
+                <field name="claim" invisible="1" />
+            </field>
+
+            <xpath expr="//form/header/button[last()]" position="after">
+                <button string="DMCA" class="oe_highlight" type="action" name="%(sh_copyright_claim_project.sh_claim_wizard_action)d" groups="sh_copyright_claim_project.group_project_user" attrs="{'invisible': [('claim','=',False)]}" />
+            </xpath>
+            <xpath expr="//notebook//page[2]" position="after">
+                <page name="copyright_claim" string="Copyright Claim" groups="sh_copyright_claim_project.group_project_user" attrs="{'invisible': [('claim','=',False)]}">
+                    <field name="claim_ids" widget="section_and_note_one2many">
+                        <form>
+                            <group>
+                                <group>
+                                    <field name="product_id" />
+                                </group>
+                                <group>
+                                    <field name="sh_technical_name" />
+                                </group>
+                            </group>
+                            <group>
+                                <field name="is_claim" invisible="1"/>
+                                <field name="claim_data_search" />
+                                <field name="claim_data"/>
+                            </group>
+                            <group>
+                                <field name="git_hub_url" groups="project.group_project_manager" />
+                                <field name="odoo_url" groups="project.group_project_manager" />
+                                <field name="soft_url" groups="project.group_project_manager" />
+                            </group>
+                            <group>
+
+                                <field name="product_technical_name" />
+                                <field name="product_ids" widget="many2many_tags" />
+                                <field name="odoo_urls" groups="project.group_project_manager" />
+                                <field name="git_hub_urls" groups="project.group_project_manager" />
+                            </group>
+                        </form>
+                        <tree>
+                            <field name="sh_technical_name" />
+                            <field name="create_date" readonly="1" />
+                            <field name="write_date" readonly="1" />
+                            <field name="is_claim" />
+                            <button type="object" icon="fa-check" name="claim_found" title="claim_found" />
+                            <button type="object" icon="fa-times" name="claim_notfound" title="claim_notfound" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

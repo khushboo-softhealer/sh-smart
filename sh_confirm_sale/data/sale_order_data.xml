@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_is_confirm_action_server" model="ir.actions.server">
+        <field name="name">Is Confirm Sale</field>
+        <field name="model_id" ref="model_sale_order"/>
+        <field name="binding_model_id" ref="model_sale_order"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.multi_action_is_sale_confirm()
+        </field>
+    </record>
+
+</odoo>

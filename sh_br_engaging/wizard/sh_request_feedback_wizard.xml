@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="request_feedback_wizard" model="ir.ui.view">
+            <field name="name">sh.request.feedback.form</field>
+            <field name="model">sh.request.feedback.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="sh_request_feedback_person" placeholder="Select Teammates"/>
+                                <field name="name" placeholder="Write Your Feedback"/>
+                                <field name="sh_request_feedback_review_selection"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button string="Request Feedback" class="oe_highlight" type="object" name="action_request_feedback" data-hotkey="q"/>
+                        <!-- <button string="Discard" special="cancel" data-hotkey="z"/> -->
+                        <button string="Discard" name="discard_request_feedback" type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="request_feedback_wizard_action" model="ir.actions.act_window">
+            <field name="name">Request Feedback</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sh.request.feedback.wizard</field>
+            <field name="target">new</field>
+            <field name="view_mode">form</field>
+        </record>
+
+    </data>
+</odoo>

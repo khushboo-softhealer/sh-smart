@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="sh_br_custom_configuration_view_form" model="ir.ui.view">
+            <field name="name">sh.br.custom.configuration.form</field>
+            <field name="model">sh.br.custom.configuration</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group string='Manage Questions Queue Settings'>
+                            <group>
+                                <!-- <field name='sh_turn_question_queue_on_off' />
+                                <field name='sh_question_frequency' attrs="{'invisible': [('sh_turn_question_queue_on_off', '=', False)]}"/>
+                                <field name='sh_repeat_question_queue' attrs="{'invisible': [('sh_turn_question_queue_on_off', '=', False)]}"/> -->
+
+                                <field name='name' invisible='1'/>
+                                <field name='company_id' invisible='1'/> 
+                            </group>
+
+                            <!-- <group>
+                                <field name='sh_no_of_questions_asked' attrs="{'invisible': [('sh_turn_question_queue_on_off', '=', False)]}"/>
+                                <field name='sh_repeat_day' attrs="{'invisible': ['|','|',('sh_question_frequency', '=', 'monthly'),('sh_repeat_question_queue', '=', False),('sh_turn_question_queue_on_off', '=', False)]}"/>
+                                <field name='sh_repeat_date' attrs="{'invisible': ['|','|',('sh_question_frequency', '=', 'weekly'),('sh_repeat_question_queue', '=', False),('sh_turn_question_queue_on_off', '=', False)]}"/>
+                            </group> -->
+                        </group>
+
+                        <!-- <group string='Manage Notifications'>
+                            <group>
+                                <field name='sh_send_check_in_pending_email_notification' />
+                                <field name='sh_mail_server_id' />
+                            </group>
+                            <group>
+                                <field name='sh_send_check_in_pending_bell_notification' />
+                            </group>
+                        </group> -->
+
+                        <group string='Gamification'>
+                            <group>
+                                <field name='sh_points_for_each_received_high_five' />
+                            </group>
+                            <group>
+                                <field name='sh_points_for_each_given_high_five' />
+                            </group>
+                        </group>
+
+                        <!-- <group string='Wall Of Fame'>
+                            <group>
+                                <field name='sh_wall_of_fame_employee' />
+                            </group>
+                            <group>
+                                <field name='sh_wall_of_fame_record_update_date' />
+                            </group>
+                        </group>
+                        <group string='Monthly Team Meeting Configurations'>
+                            <group>
+                                <field name='sh_monthly_meeting_date' />
+                            </group>
+                        </group> -->
+
+                    </sheet>
+                    <footer>
+                        <button string="Update" class="oe_highlight" type="object" name="update_company_configurations" data-hotkey="q"/>
+                        <button string="Discard" special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="sh_br_custom_configuration_update_action" model="ir.actions.act_window">
+            <field name="name">View Talking Agenda</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sh.br.custom.configuration</field>
+            <field name="target">new</field>
+            <field name="view_mode">form</field>
+        </record>
+
+
+    </data>
+</odoo>
