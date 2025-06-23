@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="model_product_action_link_task_variant" model="ir.actions.server">
+        <field name="name">Link Sub Task to Variant</field>
+        <field name="model_id" ref="sh_backend.model_project_task" />
+        <field name="binding_model_id" ref="project.model_project_task" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.link_task_to_variant()
+        </field>
+    </record>
+</odoo>

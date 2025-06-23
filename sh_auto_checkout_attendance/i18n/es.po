@@ -1,0 +1,66 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_auto_checkout_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 09:54+0000\n"
+"PO-Revision-Date: 2020-10-21 09:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_auto_checkout_attendance
+#: model:ir.model,name:sh_auto_checkout_attendance.model_hr_attendance
+msgid "Attendance"
+msgstr "Asistencia"
+
+#. module: sh_auto_checkout_attendance
+#: model:ir.actions.server,name:sh_auto_checkout_attendance.sh_auto_checkout_attendance_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_auto_checkout_attendance.sh_auto_checkout_attendance_cron
+#: model:ir.cron,name:sh_auto_checkout_attendance.sh_auto_checkout_attendance_cron
+msgid "Attendance Auto checkout"
+msgstr "Pago automático de asistencia"
+
+#. module: sh_auto_checkout_attendance
+#: model_terms:ir.ui.view,arch_db:sh_auto_checkout_attendance.sh_attendance_auto_checkout_config_settings
+msgid "Auto Checkout"
+msgstr "Pago automático"
+
+#. module: sh_auto_checkout_attendance
+#: model:ir.model.fields,field_description:sh_auto_checkout_attendance.field_res_config_settings__checkout_after
+msgid "Checkout After(minutes)"
+msgstr "Pago después de (minutos)"
+
+#. module: sh_auto_checkout_attendance
+#: model:ir.model,name:sh_auto_checkout_attendance.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: sh_auto_checkout_attendance
+#: model:ir.model.fields,field_description:sh_auto_checkout_attendance.field_hr_attendance__display_name
+#: model:ir.model.fields,field_description:sh_auto_checkout_attendance.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: sh_auto_checkout_attendance
+#: model:ir.model.fields,field_description:sh_auto_checkout_attendance.field_res_config_settings__auto_checkout
+msgid "Enable Auto Checkout?"
+msgstr "¿Habilitar pago automático?"
+
+#. module: sh_auto_checkout_attendance
+#: model:ir.model.fields,field_description:sh_auto_checkout_attendance.field_hr_attendance__id
+#: model:ir.model.fields,field_description:sh_auto_checkout_attendance.field_res_config_settings__id
+msgid "ID"
+msgstr "CARNÉ DE IDENTIDAD"
+
+#. module: sh_auto_checkout_attendance
+#: model:ir.model.fields,field_description:sh_auto_checkout_attendance.field_hr_attendance____last_update
+#: model:ir.model.fields,field_description:sh_auto_checkout_attendance.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"

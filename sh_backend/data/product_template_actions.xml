@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <!-- Comment mass action according to given instruction -->
+
+    <!-- <record id="model_product_template_action_update_res_user" model="ir.actions.server">
+        <field name="name">Update Responsible User In Product</field>
+        <field name="model_id" ref="sh_backend.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.update_responsible_user()
+        </field>
+    </record> -->
+
+    <!-- added in project base -->
+    <!-- <record id="model_product_template_action_create_task" model="ir.actions.server">
+        <field name="name">Create Task</field>
+        <field name="model_id" ref="sh_backend.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.create_task()
+        </field>
+    </record> -->
+
+    <!-- <record id="model_product_template_action_update_responsible_user_task"
+        model="ir.actions.server">
+        <field name="name">Update Assigned User In Task</field>
+        <field name="model_id" ref="sh_backend.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.update_responsible_user_in_task()
+        </field>
+    </record> -->
+
+    <!-- <record id="model_product_template_action_add_git_repo" model="ir.actions.server">
+        <field name="name">Add Git Repo</field>
+        <field name="model_id" ref="sh_backend.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.update_git_repo_product()
+        </field>
+    </record> -->
+
+    <!-- <record id="model_product_template_action_update_technical_name" model="ir.actions.server">
+        <field name="name">Update Technical Name</field>
+        <field name="model_id" ref="sh_backend.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.update_technical_name()
+        </field>
+    </record> -->
+
+    <!-- <record id="model_product_template_action_assign_mass_edition" model="ir.actions.server">
+        <field name="name">Mass Assign Edition</field>
+        <field name="model_id" ref="sh_backend.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.assign_mass_edition()
+        </field>
+    </record> -->
+
+    <record id="model_product_template_action_assign_mass_scale" model="ir.actions.server">
+        <field name="name">Mass Assign Product Scale</field>
+        <field name="model_id" ref="sh_backend.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.assign_mass_scale()
+        </field>
+    </record>
+
+    <record id="model_product_template_update_mass_category" model="ir.actions.server">
+        <field name="name">Mass Update Product Category</field>
+        <field name="model_id" ref="sh_backend.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.mass_update_category()
+        </field>
+    </record>
+
+    <record id="model_product_template_update_mass_ecommerce_category" model="ir.actions.server">
+        <field name="name">Mass Update Product Ecommerce Category</field>
+        <field name="model_id" ref="sh_backend.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.mass_update_ecommerce_category()
+        </field>
+    </record>
+
+    <record id="model_product_template_update_mass_product_type" model="ir.actions.server">
+        <field name="name">Mass Update Product Type</field>
+        <field name="model_id" ref="sh_backend.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.mass_update_product_type()
+        </field>
+    </record>
+
+    <record id="model_product_template_action_add_new_odoo_version" model="ir.actions.server">
+        <field name="name">Add New Odoo Version</field>
+        <field name="model_id" ref="sh_backend.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code"> action=records.add_new_version() </field>
+    </record>
+
+</odoo>

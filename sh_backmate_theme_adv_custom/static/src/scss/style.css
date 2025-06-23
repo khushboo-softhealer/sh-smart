@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/sh_backmate_theme_adv_custom/static/src/fonts/icomoon.eot?8xyqpr');
+  src:  url('/sh_backmate_theme_adv_custom/static/src/fonts/icomoon.eot?8xyqpr#iefix') format('embedded-opentype'),
+    url('/sh_backmate_theme_adv_custom/static/src/fonts/icomoon.woff2?8xyqpr') format('woff2'),
+    url('/sh_backmate_theme_adv_custom/static/src/fonts/icomoon.ttf?8xyqpr') format('truetype'),
+    url('/sh_backmate_theme_adv_custom/static/src/fonts/icomoon.woff?8xyqpr') format('woff'),
+    url('/sh_backmate_theme_adv_custom/static/src/fonts/icomoon.svg?8xyqpr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="sh-"], [class*=" sh-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sh-sh_employee_goal_management_sh_goal_management_root .path1:before {
+  content: "\a90f";
+  color: rgb(57, 57, 57);
+  opacity: 0.4;
+}
+.sh-sh_employee_goal_management_sh_goal_management_root .path2:before {
+  content: "\a910";
+  margin-left: -1em;
+  color: rgb(57, 57, 57);
+}
+.sh-sh_employee_goal_management_sh_goal_management_root:before {
+  content: "\a911";
+}
+.sh-sh_hr_dashboard_sh_hr_dashboard_main_menu-dt .path1:before {
+  content: "\a90c";
+  color: rgb(57, 57, 57);
+  opacity: 0.4;
+}
+.sh-sh_hr_dashboard_sh_hr_dashboard_main_menu-dt .path2:before {
+  content: "\a90d";
+  margin-left: -1em;
+  color: rgb(57, 57, 57);
+}
+.sh-sh_hr_dashboard_sh_hr_dashboard_main_menu:before {
+  content: "\a90e";
+}
+.sh-idea-management-dt .path1:before {
+  content: "\a909";
+  color: rgb(57, 57, 57);
+  opacity: 0.4;
+}
+.sh-idea-management-dt .path2:before {
+  content: "\a90a";
+  margin-left: -1em;
+  color: rgb(57, 57, 57);
+}
+.sh-idea-management:before {
+  content: "\a90b";
+}
+.sh-sh_helpdesk_helpdesk_main_menu-dt .path1:before {
+  content: "\a906";
+  color: rgb(57, 57, 57);
+  opacity: 0.4;
+}
+.sh-sh_helpdesk_helpdesk_main_menu-dt .path2:before {
+  content: "\a907";
+  margin-left: -1em;
+  color: rgb(57, 57, 57);
+}
+.sh-sh_helpdesk_helpdesk_main_menu:before {
+  content: "\a908";
+}
+.sh-Payroll-dt .path1:before {
+  content: "\a903";
+  color: rgb(57, 57, 57);
+  opacity: 0.4;
+}
+.sh-Payroll-dt .path2:before {
+  content: "\a904";
+  margin-left: -1em;
+  color: rgb(57, 57, 57);
+}
+.sh-Payroll:before {
+  content: "\a905";
+}
+.sh-sh_training_sh_training-dt .path1:before {
+  content: "\a9c7";
+  color: rgb(57, 57, 57);
+}
+.sh-sh_training_sh_training-dt .path2:before {
+  content: "\a9c8";
+  margin-left: -1em;
+  color: rgb(57, 57, 57);
+  opacity: 0.4;
+}
+.sh-sh_training_sh_training:before {
+  content: "\a9c9";
+}
+.sh-complain-management-dt .path1:before {
+  content: "\a900";
+  color: rgb(57, 57, 57);
+  opacity: 0.4;
+}
+.sh-complain-management-dt .path2:before {
+  content: "\a901";
+  margin-left: -1em;
+  color: rgb(57, 57, 57);
+}
+.sh-complain-management:before {
+  content: "\a902";
+}

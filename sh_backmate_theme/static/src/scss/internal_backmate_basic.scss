@@ -1,0 +1,199 @@
+@if $theme_style=='style_8' {
+    .o_main_navbar .o_menu_systray .o_notification_systray_item .o_notification_counter.badge{background-color: $extra_color;border-radius: 100%;}
+    .o_main_navbar .o_menu_systray .sh_timer_div .sh_timer::marker{display: none;}
+    .o_form_view .table-responsive table.o_section_and_note_list_view.o_list_table tr.o_data_row.o_is_line_section,.o_form_view .table-responsive table.o_section_and_note_list_view.o_list_table tr.o_data_row.o_is_line_section td.o_data_cell{background-color: lighten($primaryColor, 50%) !important;}
+    .sh_timer_div .main_ul_task #user_task:not(:empty), .sh_timer_div .main_ul_task .sh_timer_li #timer_pause, .sh_timer_div .main_ul_task .sh_timer_li #timer_stop, .sh_timer_div .main_ul_task .sh_timer_li #timer_resume, .sh_timer_div .main_ul_task .sh_timer_li #timer_start{border-radius: 50rem;}
+    body .table-responsive .o_list_table tbody tr:hover{transform: none !important; }
+    .sh_timer_div .main_ul_task #user_task{display: block;overflow: hidden !important;white-space: nowrap;text-overflow: ellipsis;width: 100px;}
+    .sh_timer_div .main_ul_task #user_task:empty{width: unset !important;}
+
+    .sh_hr_dashboard .main_title,
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body div h1.mt-5,
+    .o_hr_attendance_kiosk_mode .o_hr_attendance_sign_in_out_icon,
+    .sh_hr_dashboard .counter_col .row .counter_title,
+    .sh_hr_dashboard .counter_col .row .counter_count,
+    .sh_hr_dashboard .section_table .expence_table .expence_content .no_record,
+    .sh_hr_dashboard .section_table .payslip_table .payslip_content .no_record,
+    .sh_hr_dashboard .section_table .complain_table .complain_content .no_record, 
+    .sh_hr_dashboard .section_table .idea_table .idea_content .no_record,
+    .sh_hr_dashboard .main_content .main_anniversary_container .anniversary_info .anniversary_name,
+    .sh_hr_dashboard .main_content .main_content_birthday .birthday_box .birthday_info .birthday_name{color: $primaryColor !important;}
+
+    .sh_hr_dashboard .main_content .main_content_birthday .main_birthday_container,
+    .sh_hr_dashboard .main_content .announcement_box,
+    .sh_hr_dashboard .section_table .payslip_table .payslip_content,
+    .sh_hr_dashboard .section_table .expence_table .expence_content,
+    .sh_hr_dashboard .section_table .idea_table .idea_content, 
+    .sh_hr_dashboard .col.counter_col.sh_box_col,
+    .sh_hr_dashboard .section_table .complain_table .complain_content,
+    .sh_hr_dashboard .main_content .main_content_anniversary .main_anniversary_container,
+    .sh_hr_dashboard .main_content .main_anniversary_container .anniversary_conteiner_rest,
+    .sh_hr_dashboard .main_content .main_content_birthday .birthday_box .birthday_conteiner_rest{box-shadow: 3px 3px 10px 0 rgba(209, 196, 233, 0.5) !important;border: transparent !important;border-radius: 20px !important;background-color: #FFF !important;}
+    .sh_hr_dashboard .main_content .main_anniversary_container .anniversary_info .annivarsary_days,
+    .sh_hr_dashboard .main_content .main_content_birthday .birthday_box .birthday_info .birthday_days{font-size: 13px !important;}
+
+    .sh_hr_dashboard .main_content .main_content_birthday .birthday_box .birthday_conteiner_rest .birthday_image,
+    .sh_hr_dashboard .main_content .main_anniversary_container .anniversary_conteiner_rest .anniversary_image,
+    .sh_hr_dashboard .main_content .main_content_birthday .birthday_box .birthday_conteiner_main,
+    .sh_hr_dashboard .main_content .main_anniversary_container .anniversary_box .anniversary_conteiner_main,
+    .sh_hr_dashboard .main_content .main_anniversary_container .anniversary_conteiner_main .anniversary_image,
+    .sh_hr_dashboard .main_content .main_content_birthday .birthday_box .birthday_conteiner_main .birthday_image{border-radius: 20px !important;}
+
+    .sh_hr_dashboard .main_content .main_anniversary_container .anniversary_info hr,
+    .sh_hr_dashboard .main_content .main_content_birthday .birthday_box .birthday_info .line{background-color:$primaryColor !important;}
+    .sh_hr_dashboard .main_content .announcement_box,
+    .sh_hr_dashboard .main_content .main_content_anniversary .main_anniversary_container,
+    .sh_hr_dashboard .main_content .main_content_birthday .main_birthday_container{height: 360px;min-height: 360px;overflow-y: hidden;overflow-x: hidden;padding-bottom: 5px;}
+    .sh_hr_dashboard .main_content .announcement_box .announcement_container,
+    .sh_hr_dashboard .main_content .main_anniversary_container .anniversary_box,
+    .sh_hr_dashboard .main_content .main_content_birthday .main_birthday_container .birthday_box {padding: 10px;min-height: 308px;height: 308px;overflow-y: auto;}
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body .sh_rsn > .row.mt-2{width: 100% !important;}
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body div h3,
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body  .sh_rsn div h4.fw-bolder{color: #4E4E4E !important; font-weight: bold;}
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body  .sh_rsn .sh_input{width: auto;color: #4E4E4E; background-color: #f1f3fa !important;border-radius: 20px;border: none;outline: none;padding: 0.4em 1em;transition: all .5s;}
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body  .sh_rsn .sh_input:hover {box-shadow: 0 5px 5px rgba(0, 6, 6,0.10) inset !important;}
+
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body div h4{color: #4E4E4E !important;}
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body div h1.mt-5{font-weight: 600;font-size: 23px;margin-bottom: 10px !important;}
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body div h4.bye_label,
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body .sh_rsn div h4.fw-bolder,
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body div h4.break_label{margin-bottom: 0 !important;}
+    .o_content .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .bye,
+    .o_content .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .break{align-items: center;}
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body .o_hr_attendance_sign_in_out_icon{line-height: 56px !important;border-radius: 20px !important;}
+    .o_content .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .form-switch input {width: 60px !important;height: 30px !important;border-color: $primaryColor !important;}
+    .o_main_navbar .o_menu_systray .o_user_menu .o_user_avatar{padding: 0 !important;}
+    .sh_timer_div .main_ul_task #user_task:not(:empty),
+    .sh_timer_div .main_ul_task .sh_timer_li #timer_pause, 
+    .sh_timer_div .main_ul_task .sh_timer_li #timer_stop, 
+    .sh_timer_div .main_ul_task .sh_timer_li #timer_resume, 
+    .sh_timer_div .main_ul_task .sh_timer_li #timer_start{padding: 3px 8px !important; color: $primaryColor !important;}
+
+    .sh_timer_div .main_ul_task .sh_timer_li #timer_pause .fa, 
+    .sh_timer_div .main_ul_task .sh_timer_li #timer_stop .fa, 
+    .sh_timer_div .main_ul_task .sh_timer_li #timer_resume .fa, 
+    .sh_timer_div .main_ul_task .sh_timer_li #timer_start .fa{line-height: 21px;}
+
+    //  notification //
+    .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .tile_header,
+    .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .rd_all_btn_left a.sh_view_read_all_btn,
+    .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .view_all_btn_right a.sh_view_all_btn{background: $primaryColor; border-radius: 20px;}
+    .o_main_navbar .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .tile_header_2 .active{color: $primary_active !important;}
+    .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .o_mail_preview .o_preview_info.sh_unread .o_preview_title{color: $primaryColor;}
+    .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .o_mail_preview:hover,
+    .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown.dropdown-menu, 
+    .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .o_mail_preview .o_preview_info.sh_unread{border-radius: 20px;}
+    .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .o_mail_preview .o_preview_info{margin-top: 5px;}
+    .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .o_mail_preview{cursor: pointer;}
+
+    .sh_hr_dashboard .main_content,
+    .sh_hr_dashboard .section_table{margin-top: 35px !important;}
+    .sh_hr_dashboard .section_table .complain_table,
+    .sh_hr_dashboard .section_table .payslip_table{padding-left: 0 !important;}
+    .sh_hr_dashboard .section_table .expence_table{padding-left: 25px !important;}
+    .sh_hr_dashboard .section_table .idea_table .idea_content,
+    .sh_hr_dashboard .section_table .expence_table .expence_content{margin-right: 0 !important;}
+    .sh_hr_dashboard .section_table .complain_table .complain_content{margin-right: 15px !important;}
+
+    .o_kanban_renderer .o_kanban_record .o_field_many2many_tags .o_tag{padding: 5px; border-radius: 20px;}
+    .o_kanban_renderer .o_kanban_record .o_kanban_record_bottom .oe_kanban_bottom_left{flex-wrap: wrap;}
+    .o_action_manager .o_kanban_view .o_kanban_renderer.o_kanban_grouped,
+    html .o_web_client .o_action_manager .o_action.o_view_controller.o_kanban_view .o_content:has(.o_kanban_grouped){background-color: #f6f7fa !important;}
+    .o_FormRenderer_chatterContainer.o-aside .o_Chatter .o_Chatter_scrollPanel .o_MessageList.o_ThreadView_messageList .o_Message.o_MessageList_item .o_Message_core{overflow: auto;}
+    :not(.dropstart) > .dropdown-item.active:not(.dropdown-item_active_noarrow):before,
+    .o_action_manager .o_action .dropdown.o_filter_menu .dropdown-menu .dropdown-item.selected::before {position: absolute;top: 0;left: auto;bottom: auto;right: auto;transform: translate(-1.5em, 90%);font: 0.7em/1em FontAwesome;color: $primaryColor !important;content: "\f00c";}
+    .o_action_manager .o_action .dropdown.o_filter_menu .dropdown-menu .dropdown-item.selected{background: #eceef7;color: $primaryColor;font-weight: bold;position: relative;}
+    .o_action_manager .btn.btn-secondary:not(.o_external_button):not(.o_select_file_button):not(.fa.fa-download):not(.o_clear_file_button):not(.breadcrumb-item):not(.o_list_button_discard):not(.o_form_button_cancel):hover{background: linear-gradient(75deg, $primaryColor 50%, $gradient_color) !important; color: #fff !important;}
+
+    @include media-breakpoint-only(md) {
+        .o_main_navbar > .o_menu_brand,
+        .o_main_navbar .o_menu_systray .o_night_mode > span{line-height: 45px !important;}
+        .sh_hr_dashboard .main_content .announcement_part,
+        .sh_hr_dashboard .main_content, .sh_hr_dashboard .section_table{margin-top: 25px !important;}
+        .sh_hr_dashboard .main_content .main_content_birthday .main_birthday_container{margin-right: 15px !important;}
+        .sh_hr_dashboard .section_table .complain_table .complain_content{margin-right: 0 !important;}
+        .sh_hr_dashboard .main_content .main_content_anniversary .main_anniversary_container{margin-right: 0 !important; margin-left: 15px;}
+        .sh_hr_dashboard .section_table .idea_table,
+        .sh_hr_dashboard .section_table .expence_table {padding-left: 0 !important;padding-top: 25px;}
+        .sh_hr_dashboard .section_table .complain_table,
+        .sh_hr_dashboard .section_table .idea_table,
+        .sh_hr_dashboard .section_table .payslip_table,
+        .sh_hr_dashboard .section_table .expence_table{margin-bottom: 0 !important;}
+        .sh_hr_dashboard .counter_col{margin: 0 15px !important;}
+                
+    }
+    @include media-breakpoint-between(md, lg){
+        .sh_hr_dashboard .sh_dashboard_row{margin-right: calc(-.5 * var(--gutter-x)) !important;margin-left: calc(-.5 * var(--gutter-x)) !important;}
+    }    
+    @include media-breakpoint-down(md) {
+        .sh_hr_dashboard .main_title{font-size: 18px !important;}
+        .sh_hr_dashboard{padding: 8px !important;}
+        .sh_hr_dashboard .col.counter_col.sh_box_col {max-width: 100% !important;width: 100% !important;flex: 100% !important;}
+        .sh_hr_dashboard .section_table .expence_table{padding-left: 0 !important;}
+        .sh_hr_dashboard .section_table .idea_table,
+        .sh_hr_dashboard .section_table .expence_table{margin-bottom: 0 !important;}
+        .sh_hr_dashboard .main_content, .sh_hr_dashboard .section_table{margin-top: 25px !important;}
+        .sh_hr_dashboard .section_table .complain_table .complain_content{margin-right: 0 !important;}
+        .app_drawer_layout .sh_profile_part .sh_user_profile_div .sh_login_username{text-align: center !important;}
+        .o_hr_attendance_kiosk_mode .o_hr_attendance_user_badge{background: linear-gradient(to right bottom, $primaryColor, $gradient_color) !important;     flex-grow: 0 !important;}
+        .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body  .sh_rsn{margin-top: 3rem !important;}
+        .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body .sh_rsn .sh_input{width: 100% !important;}
+        .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body .flex-grow-1{flex-grow: 0 !important;}
+      .o_web_client .o_navbar .o_main_navbar .o_menu_systray .sh_timer_div{display: none !important;}
+    }
+
+    .o_action_manager .o_action .dropdown .dropdown-menu .dropdown-item.selected::before {
+        position: absolute;
+        top: 0;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        transform: translate(-1.5em, 90%);
+        font: 0.7em/1em FontAwesome;
+        color: #71639e;
+        content: "\f00c";
+    }
+    .o_kanban_view .o_component_with_search_panel .o_kanban_ungrouped .oe_kanban_global_click.o_kanban_record_has_image_fill .oe_kanban_details .o_kanban_record_top .o_kanban_record_headings .o_kanban_record_title .float-end .btn.btn-primary.oe_kanban_action_button > span{color: #ffffff !important;    font-size: 12px;}
+    .o_content .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .sh_break_bye_div .bye .bye_img,
+    .o_content .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .break .bell_img {width: 45px !important;height: 45px !important; margin: 0 20px;
+        svg{
+            .cls-2{
+                fill: $primaryColor;
+            }
+        }
+    }
+    // Recruitment Applicant Kanban View //
+    .o_kanban_view{
+        .o_kanban_renderer.o_kanban_applicant{
+            .o_kanban_group{
+                .o_kanban_record{
+                    .oe_applicant_kanban.oe_kanban_card {
+                        .ribbon-top-right{margin-top: -16px;}
+                    } 
+                } 
+            } 
+        } 
+    }
+}
+
+// Recruitment -> Job position (issue cause of web_debranding which replace odoo to softhealer)
+.o_kanban_view .o_hr_recruitment_kanban .o_kanban_record .ribbon span.bg-Softhealer{background: $primaryColor !important;}
+.o_Chatter .o_Chatter_scrollPanel .o_Message.sh_right_chat .o_Message_core .o_Message_content p,
+.o_Chatter .o_Chatter_scrollPanel .o_MessageList.o_ThreadView_messageList .o_Message.sh_right_chat .o_Message_prettyBody .o_mail_notification .o_channel_redirect{color: #4E4E4E !important;}
+
+// task timer new functionality //
+.sh_task_menu_submenu_list_cls .sh_task_menu .sh_push_btn_group .sh_end_task_menu_cls i.fa,
+.sh_task_menu_submenu_list_cls .sh_task_menu .sh_push_btn_group .sh_resume_task_menu_cls i.fa{font-size: 25px;vertical-align: middle; color: $primaryColor !important;}
+.sh_task_menu_submenu_list_cls .sh_task_menu .sh_timer_number{background-color: $primaryColor !important;}
+.sh_meeting_room_details {
+	.sh_buttons_group {
+		.sh_btn.sh_count_room {
+			// background-color: $primaryColor !important;
+		}
+	}
+}
+
+// softhealer store product box checkbox scss // 
+.js_product .td-product_name .js_attribute_value .js_variant_change{opacity: 1 !important;}
+.js_product .td-product_name .js_attribute_value .form-check:has(.js_variant_change){padding-left: 1.5rem !important;}
+.js_product .td-qty .css_quantity .js_quantity{border-radius: 20px !important;margin: 0 5px !important;}
