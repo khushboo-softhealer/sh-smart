@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_slide_slide_form_inherit_publish_pro" model="ir.ui.view">
+            <field name="name">survey.survey.view.form.pro</field>
+            <field name="model">survey.survey</field>
+            <field name="inherit_id" ref="survey.survey_survey_view_form"/>
+            <field name="arch" type="xml">
+                <group name="participants" position="after">
+                    <group string="Proctoring" name="proctoring">
+                        <field name="is_proctoring"/>
+                        <field name="proctoring_passing_score" attrs="{'invisible':[('is_proctoring', '=', False)]}"/>
+                    </group>
+                </group>    
+            </field>
+        </record>
+        <record id="survey_user_input_view_form" model="ir.ui.view">
+            <field name="name">Survey User Input</field>
+            <field name="model">survey.user_input</field>
+            <field name="inherit_id" ref="survey.survey_user_input_view_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="before">
+                    <label for="proctor_scoring_percentage" string="Proctor Score"/>
+                    <div class="d-inline-flex">
+                        <field name="proctor_scoring_percentage" nolabel="1" readonly="1"/>
+                        <span>%</span>
+                    </div>
+                </field>
+                <page position="after">
+                    <page string="Proctor Results">
+                        <field name="evidence_ids" mode="kanban" attrs="{'readonly': True}" no_label="1">
+                            <tree>
+                                <field name="evidence_url"/>
+                                <field name="message"/>
+                                <field name="violation"/>
+                                <!-- <field name="occurred_at"/> -->
+                            </tree>
+                            <kanban>
+                                <field name="evidence_url"/>
+                                <field name="message"/>
+                                <field name="violation"/>
+                                <field name="label"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <div class="oe_module_vignette" style="width: 900px;">
+                                            <table>
+                                                <!-- <thead>
+                                                    <tr>
+                                                        <th><span>Violation Type</span></th>
+                                                        <th><span>Evidence</span></th>
+                                                    </tr>
+                                                </thead> -->
+                                                <tbody>
+                                                    <tr>
+                                                        <th><span>Violation Type: </span><field name="message" /></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <t t-if="record.label.raw_value == 'noise-detected'">
+                                                            <td>
+                                                                <a t-att-href="record.evidence_url.raw_value" target="_blank">
+                                                                    <audio controls="" class="media-audio">
+                                                                        <source t-att-src="record.evidence_url.raw_value"/>
+                                                                    </audio>
+                                                                </a>
+                                                            </td>
+                                                        </t>
+                                                        <t t-elif="record.label.raw_value == 'random-photo-taken'">
+                                                            <td>
+                                                                <img t-att-src="record.evidence_url.raw_value" alt="Random Photo" style="width:60%"/>
+                                                            </td>
+                                                        </t>
+                                                        <t t-elif="record.label.raw_value == 'no-face-looking-at-camera'">
+                                                            <td>
+                                                                <img t-att-src="record.evidence_url.raw_value" alt="No Face Detected" style="width:60%"/>
+                                                            </td>
+                                                        </t>
+                                                        <t t-else="">
+                                                            <td>
+                                                                <img t-att-src="record.evidence_url.raw_value" alt="Switched to different Application"  style="width:60%"/>
+                                                            </td>
+                                                        </t>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!-- <div class="oe_module_desc">
+                                                <div class="float-right"><field name="create_date"/></div>
+                                                <div>
+                                                    <p>
+                                                        <field name="question_name" widget="html"/>
+                                                    </p>
+                                                    <div><p><strong>Response</strong></p></div>
+                                                    <t t-if="record.response_type.raw_value == 'text'">
+                                                        <p style="overflow-wrap: break-word;">
+                                                            <field name="value_text_box"/>
+                                                        </p>
+                                                    </t>
+                                                    <t t-if="record.response_type.raw_value == 'rich_text'">
+                                                        <p style="overflow-wrap: break-word;">
+                                                            <field name="value_richtext_box" widget="html"/>
+                                                        </p>
+                                                    </t>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                        </field>
+                    </page>
+                </page>
+                <xpath expr="//widget[3]" position="replace" />
+                <widget name="web_ribbon" bg_color="bg-danger" position="replace">
+                </widget>
+            </field>
+        </record>
+    </data>
+</odoo>

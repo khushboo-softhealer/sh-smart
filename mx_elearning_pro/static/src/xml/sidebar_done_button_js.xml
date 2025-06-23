@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-extend="website.slides.sidebar.done.button">
+        <t t-jquery="div.o_wslides_sidebar_done_button" t-operation="attributes">
+            <attribute name="t-att-data-category">category</attribute>
+            <attribute name="t-att-data-is_timer">isTimer</attribute>
+            <attribute name="t-att-data-is_tincan">isTincan</attribute>
+            <attribute name="t-att-data-is_sequential">isSequential</attribute>
+            <attribute name="t-att-data-has_next">hasNext</attribute>
+        </t>
+        <t t-jquery=".o_wslides_button_complete .btn .btn-sm" t-operation="attributes">
+            <attribute name="t-att-disabled">1 if (slide.channel_id.is_sequential or slide.channel_id.is_timer) else 0</attribute>
+        </t>
+        <t t-jquery=".o_wslides_button_complete .o_wslides_button_uncompleted .btn .btn-sm" t-operation="attributes">
+            <attribute name="t-att-disabled">1 if (slide.channel_id.is_sequential or slide.channel_id.is_timer or slide.slide_category == 'quiz' or slide.question_ids )) else 0</attribute>
+        </t>
+    </t>
+</templates>
