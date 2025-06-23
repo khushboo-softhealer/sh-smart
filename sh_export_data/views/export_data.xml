@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id='sh_sale_order_form_inh' model='ir.ui.view'>
+            <field name="name">sh.sale.order.form.inh</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="payment_term_id" position="after">
+                    <field name="po_ref"/>
+                </field>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
+                    <field name="country"/>
+                    <field name="origin"/>
+                    <field name="version"/>
+                </xpath>
+            </field>
+        </record>
+        <record id='sh_sale_order_search_view_inh' model='ir.ui.view'>
+            <field name="name">sh.sale.order.search.view.inh</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="po_ref"/>
+                    <field name="order_line" string="Origin" filter_domain="[('order_line.origin', 'ilike', self)]"/>
+                    <field name="order_line" string="Country" filter_domain="[('order_line.country', 'ilike', self)]"/>
+                    <field name="order_line" string="Version" filter_domain="[('order_line.version', 'ilike', self)]"/>
+                </field>
+                <xpath expr="//group/filter[@name='customer']" position="after">
+                    <filter string="PO Reference" name="po_ref" domain="[]" context="{'group_by':'po_ref'}"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id='sh_e_form' model='ir.ui.view'>
+            <field name="name">sh.e.form</field>
+            <field name="model">sh.export.data</field>
+            <field name="arch" type="xml">
+                <!-- <form string="Export">
+                    <header>
+                        <button name="export_data" type="object" string="Export" class="btn-primary"></button>
+                        <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
+                    <sheet>
+	                     <div class="oe_button_box" name="button_box">
+		                      <button name="action_view_saleorder" type="object" class="oe_stat_button" icon="fa-pencil-square-o">
+		                          <field name="so_count" widget="statinfo" string="SO Ref"/>
+		                      </button>
+		                 </div>	
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="ref_name"/>
+                            
+                        </group>
+                        <notebook>
+                        	<page string="HTML">
+                        		<group>
+                        			<field name="html" nolabel="1"/>
+                        		</group>
+                        	</page>
+                        	<page string="Error Log">
+                        		<group>
+                        			<field name="error" nolabel="1"/>
+                        		</group>
+                        	</page>
+                        	<page string="SO Reference">
+                        		<group>
+                        			<field name="so_ids" nolabel="1" readonly="1"/>
+                        		</group>
+                        	</page>
+                        </notebook>
+                    </sheet>    
+                </form> -->
+                <form string="Export">
+                    <header>
+                        <button name="export_data" type="object" string="Export" class="btn-primary"/>
+                        <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_saleorder" type="object" class="oe_stat_button" icon="fa-pencil-square-o">
+                                <field name="so_count" widget="statinfo" string="SO Ref"/>
+                            </button>
+                        </div>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="ref_name"/>
+                            <field name="pricelist_id" />
+                        </group>
+                        <notebook>
+                            <page string="HTML">
+                                <field name="html" nolabel="1" options="{'codeview': true }"/>
+                            </page>
+                            <page string="Error Log">
+                                <field name="error" nolabel="1"/>
+                            </page>
+                            <page string="SO Reference">
+                                <field name="so_ids" nolabel="1" readonly="1"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="export_data_search_view" model="ir.ui.view">
+            <field name="name">sh.export.data.search.view</field>
+            <field name="model">sh.export.data</field>
+            <field name="arch" type="xml">
+                <search string="Export data">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="state"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Partner" name="partner" context="{'group_by':'partner_id'}"/>
+                        <filter string="Reference" name="ref" context="{'group_by':'ref_name'}"/>
+                        <filter string="State" name="stage" context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id='sh_e_tree' model='ir.ui.view'>
+            <field name="name">sh.e.tree</field>
+            <field name="model">sh.export.data</field>
+            <field name="arch" type="xml">
+                <tree string="Export">
+                    <field name="partner_id"/>
+                    <field name="ref_name"/>
+
+                </tree>
+            </field>
+        </record>
+        <record id="sh_export_data_action" model="ir.actions.act_window">
+            <field name="name">Export Data</field>
+            <field name="res_model">sh.export.data</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                Export Data
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Export Data" action="sh_export_data_action" id="sh_export_data_menu_item" groups="sales_team.group_sale_manager" parent="sale.menu_sale_config"/>
+    </data>
+</odoo>

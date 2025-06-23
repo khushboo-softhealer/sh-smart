@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_goal_template_form" model="ir.ui.view">
+        <field name="name">sh.goal.template.form</field>
+        <field name="model">sh.goal.sheet.template</field>
+        <field name="arch" type="xml">
+            <form string="Goal Template">
+                <header>
+                    <button name="action_generate_goal_sheet" type="object" string="Generate Goal Sheet" class="btn btn-primary" />
+                </header>
+                <sheet>
+                    <!-- <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="toggle_active" icon="fa-archive" groups="base.group_system">
+                            <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}">Archive</field>
+                        </button>
+                    </div> -->
+                    <group>
+                        <field name="name" required="1" />
+                        
+                        <field name="employee_ids" widget="many2many_tags" />
+                        <field name="category_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="sh_goal_template_tree" model="ir.ui.view">
+        <field name="name">sh.goal.template.tree</field>
+        <field name="model">sh.goal.sheet.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="sh_goal_template_action" model="ir.actions.act_window">
+        <field name="name">Goal Template</field>
+        <field name="res_model">sh.goal.sheet.template</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Goal Template</p>
+        </field>
+    </record>
+
+    <record id="action_goal_configuration" model="ir.actions.act_window">
+         <field name="name">Goal Management Settings</field>
+         <field name="type">ir.actions.act_window</field>
+         <field name="res_model">res.config.settings</field>
+         <field name="view_mode">form</field>
+         <field name="target">inline</field>
+         <field name="context">{'module' : 'sh_employee_goal_management'}</field>
+      </record>
+
+
+    <menuitem id="sh_goal_management_root" name="Goal Management" groups="group_show_goal_menu" web_icon="sh_employee_goal_management,static/description/icon.png" />
+    <menuitem id="sh_goal_configuration" name="Configuration" parent="sh_goal_management_root" sequence="10" groups="project.group_project_manager" />
+    <menuitem id="sh_menu_config_goal" name="Settings" 
+    parent="sh_employee_goal_management.sh_goal_configuration" sequence="1"
+     action="action_goal_configuration" groups="project.group_project_manager" />
+
+    <menuitem name="Goal Template" id="sh_goal_template_root" action="sh_goal_template_action" parent="sh_goal_configuration" sequence="10" />
+</odoo>

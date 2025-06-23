@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ======================== TREE VIEW ======================== -->
+    <record id="sh_goal_sheet_line_tree" model="ir.ui.view">
+        <field name="name">sh.goal.sheet.line.tree</field>
+        <field name="model">sh.goal.sheet.line</field>
+        <field name="arch" type="xml">
+            <tree create="0" delete="0" edit="0">
+                <field name="need_rating" invisible="1" />
+                
+                <field name="goal_id" optional="show"/>
+                <field name="employee_id" optional="show"/>
+                <field name="coach_id" optional="show"/>
+                <field name="manager_id" optional="show"/>
+                <field name="date_from" optional="show"/>
+                <field name="date_to" optional="show"/>
+                
+                <field name="category_id" optional="show"/>
+                <field name="name" readonly="1"  optional="show"/>
+                <!-- <field name="description" readonly="1"/> -->
+                <field name="employee_rating_id" options="{'no_create':True,'no_create_edit':True}" attrs="{'column_invisible' : ['&amp;',('parent.stage','=','draft'),('parent.is_coach','!=',False)],'readonly':[('need_rating','=',False)]}"  optional="show"/>
+                <field name="employee_comment" attrs="{'column_invisible' : ['&amp;',('parent.stage','=','draft'),('parent.is_coach','!=',False)]}"  optional="show"/>
+                <field name="coach_rating_id" options="{'no_create':True,'no_create_edit':True}" attrs="{'column_invisible' : ['&amp;',('parent.stage','=','draft'),('parent.is_coach','=',False)],'readonly':[('need_rating','=',False)]}"  optional="show"/>
+                <field name="coach_comment" attrs="{'column_invisible' : ['&amp;',('parent.stage','=','draft'),('parent.is_coach','=',False)]}"  optional="show"/>
+                <field name="description" optional="hide"/>
+                <field name="stage"  optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_goal_sheet_line_search_view" model="ir.ui.view">
+        <field name="name">goal.sheet.line.search.view</field>
+        <field name="model">sh.goal.sheet.line</field>
+        <field name="arch" type="xml">
+            <search string="Goal Sheet Line">
+                <field name="employee_id" />
+                <field name="coach_id"/>
+                <field name="stage" />
+                <field name="date_from" />
+                <field name="goal_id"/>
+                <separator />
+                <filter name="month" string="Date" date="date_from" />
+                <group name="group" string="Group By">
+                    <filter name="status_goal" string="Goal Ref" context="{'group_by':'goal_id'}" />
+                    <filter name="status_filter" string="Stages" context="{'group_by':'stage'}" />
+                    <filter name="status_employee" string="Employee" context="{'group_by':'employee_id'}" groups="project.group_project_manager"/>
+                    <filter name="status_coach" string="Coach" context="{'group_by':'coach_id'}" groups="project.group_project_manager"/>
+                    <filter name="status_manager" string="Manager" context="{'group_by':'manager_id'}" groups="project.group_project_manager"/>
+                   
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+     <record id="sh_goal_sheet_line_action" model="ir.actions.act_window">
+        <field name="name">Goal Sheet Lines</field>
+        <field name="res_model">sh.goal.sheet.line</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Goal Sheet Line</p>
+        </field>
+    </record>
+    <menuitem name="Goal Sheet Lines" id="sh_goal_sheet_line_menu"
+     groups="project.group_project_manager" action="sh_goal_sheet_line_action" parent="sh_goal_management_root" sequence="5" />
+
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sh_task_sale_helpdesk_view" model="ir.ui.view">
+		<field name="name">sale.order</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//div[@name='button_box']" position="inside">
+				<button name="action_view_sale_invoice_task" type="object" class="oe_stat_button" icon="fa-tasks" attrs="{'invisible': [('sh_invoice_task_count', '=', 0)]}" groups="project.group_project_user">
+                    <field name="sh_invoice_task_count" widget="statinfo" string="Tasks"/>
+                </button>
+            </xpath>
+			<field name="payment_term_id" position="after">
+				<field name="responsible_user_id" domain="[('share', '=', False)]"/>
+				<!-- <field name="sh_responsible_user_ids" options="{'no_quick_create': True, 'no_create_edit': True}" widget="many2many_tags" domain="[('share', '=', False)]"/> -->
+				<field name="sh_task_id"/>
+			</field>
+		</field>
+	</record>
+</odoo>

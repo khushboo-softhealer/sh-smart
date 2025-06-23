@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="sh_helpdesk_ticket_crm" model="res.groups">
+        <field name="name">CRM Helpdesk Ticket</field>
+    </record>
+</odoo>

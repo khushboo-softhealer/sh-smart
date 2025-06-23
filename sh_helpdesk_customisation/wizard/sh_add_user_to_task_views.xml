@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_add_user_to_task_view" model="ir.ui.view">
+        <field name="name">sh.add.user.to.task</field>
+        <field name="model">sh.add.user.to.task</field>
+        <field name="arch" type="xml">
+            <form string="Add/Remove Users">
+				<group>
+					<group>
+						<field name="sh_action" widget="radio"/>
+					</group>
+				</group>
+                <group>
+                    <group>
+						<field name="sh_user_ids" widget="many2many_tags"/>
+					</group>
+                </group>
+				<footer>
+                   <button string='Add/Remove' name="action_users" type="object" class="btn-primary"/>
+                   <button string="Cancel" class="btn-default" special="cancel"/>
+               	</footer>
+			</form>
+        </field>
+    </record>
+    <record id="sh_action_add_user_to_task" model="ir.actions.act_window">
+		<field name="name">Add/Remove Users</field>
+		<field name="res_model">sh.add.user.to.task</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+</odoo>

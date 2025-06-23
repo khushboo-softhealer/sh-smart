@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="web.ListView.Buttons" t-inherit="web.ListView.Buttons" t-inherit-mode="extension">
+        <xpath expr="//div" position="inside">
+            <!-- <t t-if="props.resModel in ['product.template','product.product','sh.helpdesk.ticket']"> -->
+            <t t-if="props.resModel == 'sh.helpdesk.ticket' or props.resModel == 'product.template' or props.resModel == 'product.product'">
+                <button class="btn btn-primary" t-on-click="_onClickListRefreshView" type="button" style="margin-left: 10px;">Refresh</button>
+            </t>
+        </xpath>
+    </t>
+
+    <t t-name="web.KanbanView.Buttons" t-inherit="web.KanbanView.Buttons" t-inherit-mode="extension">
+        <xpath expr="//div" position="inside">
+            <t t-if="props.resModel == 'sh.helpdesk.ticket' or props.resModel == 'product.template' or props.resModel == 'product.product'">
+                <button class="btn btn-primary" t-on-click="_onClickKanbanRefreshView" type="button" style="margin-left: 10px;">Refresh</button>
+            </t>
+        </xpath>
+    </t>
+</templates>

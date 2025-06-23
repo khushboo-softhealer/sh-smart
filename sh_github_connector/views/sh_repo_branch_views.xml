@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ======= Tree View (With Button of Sync Module) ========= -->
+    <record id="sh_repo_branch_view_tree" model="ir.ui.view">
+        <field name="name">sh_repo_branch.view.tree</field>
+        <field name="model">sh.repo.branch</field>
+        <field name="arch" type="xml">
+            <form string="Branch">
+                <group>
+                    <group>
+                        <field name="name" string="Brnach" />
+                    </group>
+                </group>
+                <field name="module_line">
+                    <tree no_open="True">
+                        <field name="name" />
+                        <button title="Sync" name="sync_module" icon="fa-refresh" class="btn btn-primary" type="object" />
+                    </tree>
+                </field>
+            </form>
+        </field>
+    </record>
+</odoo>

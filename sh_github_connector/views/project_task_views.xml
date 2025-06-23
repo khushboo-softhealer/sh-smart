@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="project_task_inherit_github" model="ir.ui.view">
+        <field name="name">project.task.view.form.github</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <!-- ====== Project Readonly ====== -->
+            <field name="user_ids" position="after">
+                <field name="sh_is_appstore" invisible="1" />
+                <field name="is_manager" invisible="1"  />
+            </field>
+            <!-- ====== Update Attributes ====== -->
+            <!-- <field name="sh_product_id" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field> -->
+            <field name="project_id" position="attributes">
+                <attribute name="attrs">{'readonly': ['|',('sh_is_appstore', '=', True),('is_manager','=',False)]}</attribute>
+            </field>
+            <field name="display_project_id" position="attributes">
+                <attribute name="attrs">{'readonly': ['|',('sh_is_appstore', '=', True),('is_manager','=',False)],'invisible': [('project_id', '!=', False)]}</attribute>
+            </field>
+            <!-- <field name="user_ids" position="attributes">
+                <attribute name="attrs">{'readonly': ['|',('sh_is_appstore', '=', True),('is_manager','=',False)]}</attribute>
+            </field> -->
+        </field>
+    </record>
+
+    <record id="sh_project_task_template_id_form_view_github" model="ir.ui.view">
+        <field name="name">sh.project.task.github</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sh_project_task_base.sh_project_task_template_id_form_view"/>
+        <field name="arch" type="xml">
+            <!-- ====== Update Attributes ====== -->
+            <!-- <field name="sh_technical_name" position="before">
+                <field name="sh_is_tech_name_editable" invisible="1" />
+            </field>
+            <field name="sh_technical_name" position="attributes">
+                <attribute name="attrs">{'readonly': [('project_id', '=', self.env.user.company_id.appstore_project_id.id)]}</attribute>
+                <attribute name="attrs">{'readonly': [('sh_is_tech_name_editable', '=', False)]}</attribute>
+            </field> -->
+            <!-- <field name="product_template_id" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field> -->
+            <field name="version_ids" position="attributes">
+                <attribute name="attrs">{'readonly': ['|',('parent_id', '!=', False),('is_manager','=',False)]}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="sh_project_task_inherit_github" model="ir.ui.view">
+        <field name="name">sh.project.task.view.form.github</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sh_training.sh_training_project_task_form_view"/>
+        <field name="arch" type="xml">
+            <!-- ====== Training Project Related Fields Visibility ====== -->
+            <field name="batch_id" position="after">
+                <field name="sh_is_training" invisible="1" />
+            </field>
+            <!-- ====== Update Attributes ====== -->
+            <field name="course_id" position="attributes">
+                <attribute name="attrs">{'invisible': [('sh_is_training', '=', False)]}</attribute>
+            </field>
+            <field name="batch_id" position="attributes">
+                <attribute name="attrs">{'invisible': [('sh_is_training', '=', False)]}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="sh_view_task_form2_inherited_github" model="ir.ui.view">
+        <field name="name">sh.project.task.form.inherited.github</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited"/>
+        <field name="arch" type="xml">
+            <field name="timesheet_ids" position="before">
+                <field name="sh_is_parent_task" invisible="1" />
+            </field>
+            <field name="timesheet_ids" position="attributes">
+                <attribute name="attrs">{'readonly': [('sh_is_parent_task', '=', True)]}</attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

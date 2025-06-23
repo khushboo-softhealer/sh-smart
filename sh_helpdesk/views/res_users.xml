@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sh_res_users_form_view" model="ir.ui.view">
+		<field name="name">res.users</field>
+		<field name="model">res.users</field>
+		<field name="inherit_id" ref="base.view_users_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//div[hasclass('oe_title')]//field[@name='partner_id']" position="after">
+				<field name="sh_portal_user" invisible="1"/>
+                <field name="sh_portal_user_access" attrs="{'invisible':[('sh_portal_user','=',False)]}" />
+            </xpath>
+		</field>
+	</record>
+
+
+	<record id="sh_helpdesk_users_form_simple_inherit_modif" model="ir.ui.view">
+        <field name="name">res.users</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="sh_notifications.sh_notification_res_users_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='notifications']" position="before">
+                <group name="Signature">
+                    <field name="sign" />
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='notifications']" position="inside">
+                <group>
+                    <group string="Helpdesk Ticket Notification" name="helpdesk_notifications">
+                        <field name="sh_new_notification_on_off" readonly="0"/>
+                        <field name="sh_ticket_assigned_notification_on_off" readonly="0"/>
+                        <field name="sh_customer_reply_notification_on_off" readonly="0"/>
+                    </group>
+                    <field name="display_sale_customer_reply_noti_boolean" invisible="1" />
+                    <group string="Sales Order Notification" name="sales_order_notifications"  attrs="{'invisible':[('display_sale_customer_reply_noti_boolean','!=',True)]}" >
+                        <field name="sh_sale_customer_reply_notif" readonly="0"  attrs="{'invisible':[('display_sale_customer_reply_noti_boolean','!=',True)]}"  />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

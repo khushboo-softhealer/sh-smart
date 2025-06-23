@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="hr_rule_over_time" model="hr.salary.rule">
+        <field name="name">Over Time</field>
+        <field name="sequence" eval="500" />
+        <field name="code">OverTime</field>
+        <field name="category_id" ref="sh_hr_payroll.ALW" />
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = contract.get_over_time_data(employee,payslip)</field>
+
+    </record>
+</odoo>

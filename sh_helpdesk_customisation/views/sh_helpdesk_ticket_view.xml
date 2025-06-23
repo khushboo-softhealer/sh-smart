@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_helpdesk_tickets_responsible_button_inherited_view_form" model="ir.ui.view">
+        <field name="name">sh.sh.helpdesk.tickets.responsible.view.form</field>
+        <field name="model">sh.helpdesk.ticket</field>
+        <field name="inherit_id" ref="sh_helpdesk.helpdesk_ticket_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button class="btn btn-primary" name="action_add_responsible_users" type="object" string="Add Responsible Users" groups="sh_helpdesk.helpdesk_group_manager" invisible="1"/>
+                <button class="btn btn-primary" name="action_add_users_to_task" type="object" string="Add/Remove Users To Task" groups="sh_helpdesk.helpdesk_group_team_leader"/>
+            </xpath>
+            <xpath expr="//field[@name='sh_special']" position="after">
+                <field name="sh_email_from"  readonly='1' force_save='1'/>
+            </xpath>
+            <xpath expr="//field[@name='ticket_type']" position="after">
+                <field name="sh_ticket_type_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

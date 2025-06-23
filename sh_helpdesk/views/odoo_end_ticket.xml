@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="sh_odoo_end_ticket_form_view" model="ir.ui.view">
+			<field name="name">sh.odoo.end.ticket</field>
+			<field name="model">sh.odoo.end.ticket</field>
+			<field name="arch" type="xml">
+				<form string="Odoo End Ticket">
+					<header>
+						<button name="action_assign_to_me" type="object" class="btn btn-primary" string="Assign To Me"/>
+						<button name="sh_create_ticket" type="object" class="btn btn-primary" string="Create Ticket" attrs="{'invisible':[('sh_ticket_created','=',True)]}"/>
+						<field name="state" widget="statusbar" options="{'clickable': '1'}" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box" groups="sh_helpdesk.sh_odoo_end_ticket_group">
+							<!-- <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+								<field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+							</button> -->
+							<button name="action_view_tickets" type="object" class="oe_stat_button" icon="fa-ticket" attrs="{'invisible':[('ticket_count','=',0)]}">
+								<div class="o_stat_info">
+									<field name="ticket_count" class="o_stat_value" />
+									<span class="o_stat_text">Tickets</span>
+								</div>
+							</button>
+						</div>
+						<div class="oe_title">
+							<h1>
+								<field name="email_subject" readonly="1" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="sh_user_ids" widget="many2many_tags"/>
+								<field name="sh_store_link" widget="url" class="fw-bolder" />
+								<field name="sh_tech_name"/>
+								<field name="partner_id" invisible="1"/>
+								<field name="email" invisible="1"/>
+								<field name="sh_ticket_id" invisible="1"/>
+								<field name="sh_ticket_created" invisible="1"/>
+							</group>
+						</group>
+						<notebook>
+							<page string="Description">
+								<field name="description"/>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+		<record id="sh_odoo_end_ticket_tree_view" model="ir.ui.view">
+			<field name="name">sh.odoo.end.ticket</field>
+			<field name="model">sh.odoo.end.ticket</field>
+			<field name="arch" type="xml">
+				<tree string="Odoo End Ticket">
+					<field name="email_subject" />
+					<field name="create_date"/>
+				</tree>
+			</field>
+		</record>
+		<record id="sh_odoo_end_ticket_kanban_view" model="ir.ui.view">
+			<field name="name">sh.odoo.end.ticket</field>
+			<field name="model">sh.odoo.end.ticket</field>
+			<field name="arch" type="xml">
+				<kanban default_group_by="state" class="o_kanban_small_column o_opportunity_kanban" archivable="false">
+					<field name="email_subject"/>
+					<field name="state"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<div class="oe_kanban_content">
+									<div>
+										<strong>
+											<t t-if="record.email_subject.value">
+												<field name="email_subject"/>
+												<strong>-</strong>
+											</t>
+										</strong>
+									</div>
+									<div>
+										<field name="create_date" />
+									</div>
+									<div>
+										<strong>Tech Name:</strong>
+										<field name="sh_tech_name"/>
+									</div>
+									<div>
+										<strong>Responsible:</strong>
+										<field name="sh_responsible_user_id"/>
+									</div>
+									<div>
+										<field name="sh_user_ids" widget="many2many_tags"/>
+									</div>
+									<t t-if="record.sh_store_link.value">
+										<div style="overflow: hidden;text-overflow: ellipsis;display:block;-webkit-line-clamp: 3;-webkit-box-orient: vertical;">
+											<field name="sh_store_link" widget="url" class="fw-bolder"/>
+										</div>
+									</t>
+								</div>
+								<div class="oe_clear" />
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+		<record id="sh_odoo_end_ticket_search_view" model="ir.ui.view">
+			<field name="name">sh.odoo.end.ticket</field>
+			<field name="model">sh.odoo.end.ticket</field>
+			<field name="arch" type="xml">
+				<search string="Odoo End Ticket">
+					<field name="email_subject" string="Ticket" filter_domain="['|','|',('sh_tech_name','ilike',self),('email_subject', 'ilike', self), ('sh_user_ids.name', 'ilike', self)]"/>
+					<field name="create_date" />
+					<separator />
+					<filter string="My Tickets" name="self_ticket" domain="[('sh_user_ids','in',[uid])]"/>
+					<filter string="Archived" name="archived" domain="[('active', '=', False)]" />
+					<group expand="0" string="Group By">
+						<filter string="Created On" name="create_on" context="{'group_by':'create_date'}" />
+						<filter string="Responsible" name="responsible" context="{'group_by':'sh_responsible_user_id'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+		<record id="sh_action_odoo_end_ticket" model="ir.actions.act_window">
+			<field name="name">Odoo End Tickets</field>
+			<field name="res_model">sh.odoo.end.ticket</field>
+			<field name="type">ir.actions.act_window</field>
+
+			<field name="view_mode">kanban,tree,form</field>
+		</record>
+		<!-- <menuitem id="sh_odoo_end_ticket_menu" name="Odoo End Tickets" parent="sh_helpdesk.helpdesk_main_menu" action="sh_action_odoo_end_ticket" groups="sh_helpdesk.sh_odoo_end_ticket_group" sequence="2"/> -->
+		<record id="sh_odoo_end_mass_update_wizard" model="ir.ui.view">
+			<field name="name">sh.odoo.end.mass.update</field>
+			<field name="model">sh.odoo.end.mass.update</field>
+			<field name="arch" type="xml">
+				<form string="Mass Update State">
+					<group>
+						<group>
+							<field name="state"/>
+						</group>
+					</group>
+					<footer>
+						<button name="update_record" class="btn btn-primary" type="object" string="Update" />
+						<button string="Cancel" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+		<record id="sh_odoo_end_mass_update_action" model="ir.actions.act_window">
+			<field name="name">Mass Update State</field>
+			<field name="res_model">sh.odoo.end.mass.update</field>
+			<field name="type">ir.actions.act_window</field>
+
+			<field name="target">new</field>
+		</record>
+		<act_window id="model_odoo_end_multi_action" name="Mass Update" src_model="sh.odoo.end.ticket" res_model="sh.odoo.end.mass.update" view_type="form" view_mode="form" key2="client_action_multi" target="new" />
+
+	</data>
+</odoo>

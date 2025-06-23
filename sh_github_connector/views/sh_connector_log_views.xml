@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_connector_log_view_search" model="ir.ui.view">
+        <field name="name">sh.connector.log.view.search</field>
+        <field name="model">sh.connector.log</field>
+        <field name="arch" type="xml">
+            <search string="Connector Log">
+                <!-- FILTER -->
+                <!-- <filter string="Today" name="today" domain="[('datetime', 'ilike', context_today().strftime('%m-%d-%Y'))]" /> -->
+                <!-- <filter string="Today" name="filter_today" domain="[('datetime', '&lt;=', time.strftime('%m-%d-%Y 23:59:59')), ('datetime', '&gt;=', time.strftime('%m-%d-%Y 00:00:00'))]" /> -->
+                <filter string="Success" name="success" domain="[('state', '=', 'success')]" />
+                <filter string="Sync" name="sync" domain="[('state', '=', 'sync')]" />
+                <filter string="Error" name="error" domain="[('state', '=', 'error')]" />
+                <!-- GROUP BY -->
+                <group name="group" string="Group By">
+                    <filter string='State' name="group_by_state" context="{'group_by': 'state'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- TREE VIEW -->
+    <record id="sh_connector_log_view_tree" model="ir.ui.view">
+        <field name="name">sh_connector_log.view.tree</field>
+        <field name="model">sh.connector.log</field>
+        <field name="arch" type="xml">
+            <tree string="Connector Log" decoration-success="state=='success'" decoration-danger="state=='error'">
+                <field name="operation" />
+                <field name="field_type" />
+                <field name="message" optional="hide" />
+                <field name="datetime" />
+                <field name="state" />
+                <field name="connector_obj_id" optional="hide" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="sh_connector_log_action" model="ir.actions.act_window">
+        <field name="name">Connector Log</field>
+        <field name="res_model">sh.connector.log</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+</odoo>

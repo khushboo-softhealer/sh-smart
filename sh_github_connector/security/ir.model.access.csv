@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sh_github_connector.access_sh_github_connector,access_sh_github_connector,sh_github_connector.model_sh_github_connector,base.group_user,1,1,1,1
+sh_github_connector.access_sh_connector_log,access_sh_connector_log,sh_github_connector.model_sh_connector_log,base.group_user,1,1,1,1
+sh_github_connector.access_sh_repo_branch,access_sh_repo_branch,sh_github_connector.model_sh_repo_branch,base.group_user,1,1,1,1
+sh_github_connector.access_sh_module,access_sh_module,sh_github_connector.model_sh_module,base.group_user,1,1,1,1
+sh_github_connector.access_sh_index_queue,access_sh_index_queue,sh_github_connector.model_sh_index_queue,base.group_user,1,1,1,1
+sh_github_connector.access_sh_map_categ,access_sh_map_categ,sh_github_connector.model_sh_map_categ,base.group_user,1,1,1,1
+sh_github_connector.access_sh_repo_wizard,access_sh_repo_wizard,sh_github_connector.model_sh_repo_wizard,base.group_user,1,1,1,1
+sh_github_connector.access_sh_repo_wizard_lines,access_sh_repo_wizard_lines,sh_github_connector.model_sh_repo_wizard_lines,base.group_user,1,1,1,1

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="odoo_community" model="sh.edition">
+		<field name="name">Community</field>
+	</record>
+	<record id="odoo_enterprise" model="sh.edition">
+		<field name="name">Enterprise</field>
+	</record>
+	<record id="odoo_sh" model="sh.edition">
+		<field name="name">odoo.sh</field>
+	</record>
+	<record id="v8" model="sh.version">
+		<field name="name">Odoo 8</field>
+	</record>
+	<record id="v9" model="sh.version">
+		<field name="name">Odoo 9</field>
+	</record>
+	<record id="v10" model="sh.version">
+		<field name="name">Odoo 10</field>
+	</record>
+	<record id="v11" model="sh.version">
+		<field name="name">Odoo 11</field>
+	</record>
+	<record id="v12" model="sh.version">
+		<field name="name">Odoo 12</field>
+	</record>
+	<record id="v13" model="sh.version">
+		<field name="name">Odoo 13</field>
+	</record>
+	<record id="v14" model="sh.version">
+		<field name="name">Odoo 14</field>
+	</record>
+</odoo>

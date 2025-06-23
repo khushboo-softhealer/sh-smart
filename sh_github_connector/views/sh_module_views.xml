@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- SEARCH VIEW -->
+    <record id="sh_module_view_search" model="ir.ui.view">
+        <field name="name">sh_module.view.search</field>
+        <field name="model">sh.module</field>
+        <field name="arch" type="xml">
+            <search string="Module Queue">
+
+                <!-- Search Fields -->
+                <field name="name" />
+                <field name="sh_branch_id" />
+                <filter name="state_draft" string="Draft" domain="[('state', '=', 'draft')]" />
+                <filter name="state_done" string="Done" domain="[('state', '=', 'done')]" />
+                <filter name="state_error" string="Failed" domain="[('state', '=', 'error')]" />
+
+                <!-- Filter -->
+                <filter name="archived" string="Archived" domain="[('active', '=', False)]" />
+                <filter name="all" string="All" domain="[('active', 'in', [True, False])]" />
+
+                <!-- Group By -->
+                <group expand="0" string="Group By">
+                    <filter string="State" name="state" context="{'group_by': 'state'}"/>
+                    <filter string="Branch" name="branch" context="{'group_by': 'sh_branch_id'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+    <!-- TREE VIEW -->
+    <record id="sh_module_view_tree" model="ir.ui.view">
+        <field name="name">sh_module.view.tree</field>
+        <field name="model">sh.module</field>
+        <field name="arch" type="xml">
+            <tree string="Module Queue" decoration-success="state=='done'" decoration-danger="state=='error'">
+
+                <!-- Fields -->
+                <field name="display_name" />
+                <field name="sh_version" optional="hide" />
+                <field name="sh_branch_id" optional="hide" />
+                <field name="sh_product_id" optional="hide" />
+                <field name="sh_blog_post_id" optional="hide" />
+                <field name="repo_id" optional="hide" />
+                <field name="state" />
+                <field name="datetime" optional="show" />
+                <field name="message" optional="show" />
+                <field name="active" optional="hide" />
+
+                <!-- Buttons -->
+                <button title="Product" name="show_product" icon="fa-sign-out" type="object" attrs="{'invisible': ['|', ('sh_product_id', 'in', (False, None)), ('active', '=', False)]}" />
+                <button title="Sync" name="sync_module" icon="fa-refresh" type="object" attrs="{'invisible': [('active', '=', False)]}" />
+
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="sh_module_action" model="ir.actions.act_window">
+        <field name="name">Module Queue</field>
+        <field name="res_model">sh.module</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{'search_default_state_draft': 1}</field>
+    </record>
+
+</odoo>

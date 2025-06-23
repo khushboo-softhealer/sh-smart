@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_git_employee_form" model="ir.ui.view">
+        <field name="name">sh.git.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='address_id']" position="before">
+                <field name="gituser_name" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

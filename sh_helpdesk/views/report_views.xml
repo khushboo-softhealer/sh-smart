@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+	<!-- <report string="Helpdesk Ticket" 
+    id="action_report_helpdesk_ticket" 
+    model="sh.helpdesk.ticket" 
+    report_type="qweb-pdf" 
+    name="sh_helpdesk.report_helpdeskticket" 
+    file="sh_helpdesk.report_helpdeskticket"/> -->
+    
+    <!-- <report string="Helpdesk Ticket" id="action_portal_report_helpdesk_ticket" model="sh.helpdesk.ticket" report_type="qweb-pdf" name="sh_helpdesk.report_portal_helpdeskticket" file="sh_helpdesk.report_portal_helpdeskticket" menu="False" /> -->
+  
+
+
+    <record id="action_report_holidayssummary" model="ir.actions.report">
+        <field name="name">Helpdesk Ticket</field>
+        <field name="model">sh.helpdesk.ticket</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sh_helpdesk.report_portal_helpdeskticket</field>
+        <field name="report_file">sh_helpdesk.report_portal_helpdeskticket</field>
+    </record>
+
+    <record id="action_portal_report_helpdesk_ticket" model="ir.actions.report">
+        <field name="name">Helpdesk Ticket</field>
+        <field name="model">sh.helpdesk.ticket</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sh_helpdesk.report_portal_helpdeskticket</field>
+        <field name="report_file">sh_helpdesk.report_portal_helpdeskticket</field>
+    </record>
+
+
+
+
+</data>
+  
+</odoo>

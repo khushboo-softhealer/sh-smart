@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_github_notify_partners" model="mail.template">
+        <field name="name">Notify Partners About The Launched Product</field>
+        <field name="subject">We have launched our product now you can proceed.</field>
+        <field name="email_from">{{object.company_id.email}}</field>
+        <field name="email_to">{{object.partner_id.email}}</field>
+        <field name="model_id" ref="sh_product_base.model_sh_migration_notify_me" />
+        <field name="lang">{{object.partner_id.lang}}</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p>
+                    Hello 
+                    <b>
+                        <t t-if="object.partner_id">
+                            <t t-esc="object.partner_id.name" />
+                        </t>
+                        <t t-else="">
+                            User
+                        </t>,
+                    </b>
+                </p>
+                <p>We appreciate your interest and support!</p><br/>
+
+                <p>
+                    We are happy to inform you that the migration of the
+                    <t t-if="object.product_id">
+                        "<t t-esc="object.product_id.name" />"
+                    </t>
+                    module for
+                    <t t-if="object.product_id and object.product_id.product_template_attribute_value_ids">
+                        <t t-esc="object.product_id.product_template_attribute_value_ids[0].name" />
+                    </t>
+                    has been successfully completed.
+                </p><br/>
+                
+                <t t-if="object.product_web_url">
+                    <p>
+                        Here is the product URL:<br/>
+                        <a>
+                            <t t-esc="object.product_web_url" />
+                        </a>
+                    </p>
+                </t><br/>
+                <p>IF you have any inquiries or require assistance, please feel free to contact our dedicated support team at support@softhealer.com.</p><br/>
+                <p>Thank you for choosing Softhealer!</p>
+                <p>Team Softhealer</p>
+            </div>
+        </field>
+    </record>
+</odoo>

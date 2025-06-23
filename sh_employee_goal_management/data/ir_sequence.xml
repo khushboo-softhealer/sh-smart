@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sh_goal_sheet_sequence" model="ir.sequence">
+            <field name="name">Goal Sheet Seq</field>
+            <field name="code">sh.goal.sheet.seq</field>
+            <field name="active">TRUE</field>
+            <field name="prefix">GS</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
+</odoo>

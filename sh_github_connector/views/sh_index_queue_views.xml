@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- SEARCH VIEW -->
+    <record id="sh_index_queue_view_search" model="ir.ui.view">
+        <field name="name">sh_index_queue.view.search</field>
+        <field name="model">sh.index.queue</field>
+        <field name="arch" type="xml">
+            <search string="Index Queue">
+                <field name="sh_module_id" string="Module" />
+                <field name="sh_branch_id" string="Branch" />
+                <filter name="state_draft_or_in_progress" string="Draft or In Progress" domain="[('state', 'in', ('draft', 'in_progress'))]" />
+                <filter name="state_draft" string="Draft" domain="[('state', '=', 'draft')]" />
+                <filter name="state_in_progress" string="In Progress" domain="[('state', '=', 'in_progress')]" />
+                <filter name="state_done" string="Done" domain="[('state', '=', 'done')]" />
+                <filter name="state_error" string="Failed" domain="[('state', '=', 'error')]" />
+                <group expand="0" string="Group By">
+                    <filter string="State" name="state" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- TREE VIEW -->
+    <record id="sh_index_queue_view_tree" model="ir.ui.view">
+        <field name="name">sh_index_queue.view.tree</field>
+        <field name="model">sh.index.queue</field>
+        <field name="arch" type="xml">
+            <tree string="Index Queue" decoration-success="state=='done'" decoration-info="state=='in_progress'" decoration-danger="state=='error'">
+                <field name="sh_module_id" />
+                <field name="sh_branch_id" />
+                <field name="sh_repo" />
+                <field name="is_small_index" />
+                <field name="state" />
+                <field name="sh_datetime" />
+                <field name="sh_message" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="sh_index_queue_action" model="ir.actions.act_window">
+        <field name="name">Index Queue</field>
+        <field name="res_model">sh.index.queue</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{'search_default_state_draft_or_in_progress': 1}</field>
+    </record>
+
+</odoo>

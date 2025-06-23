@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_github_connector_product_form_view" model="ir.ui.view">
+        <field name="name">github.product.view.inherit</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="sh_product_base.sh_product_product_normal_form_view_custom_new"/>
+        <field name="arch" type="xml">
+            <!-- ====== Update Attributes ====== -->
+            <field name="git_repo" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <field name="sh_technical_name" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <field name="euro_price" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <field name="related_sub_task" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <!-- ====== Add Field ====== -->
+            <field name="last_updated_date" position="after">
+                <field name="sh_seo_summary" />
+                <field name="sh_seo_description" />
+            </field>
+        </field>
+    </record>
+
+    <!-- <record id="product_variant_easy_edit_view_inherit_github" model="ir.ui.view">
+        <field name="name">product.view.form.inherit.github</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
+        <field name="arch" type="xml">
+            <field name="product_version" position="after">
+                <field name="sh_blog_post_id" readonly="1" />
+            </field>
+        </field>
+    </record> -->
+
+</odoo>

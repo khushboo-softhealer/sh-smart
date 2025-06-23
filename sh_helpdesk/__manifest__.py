@@ -1,0 +1,91 @@
+# -*- coding: utf-8 -*-
+# Part of Softhealer Technologies.
+{
+    "name": "Helpdesk ",
+    "author": "Softhealer Technologies",
+    "website": "http://www.softhealer.com",
+    "support": "support@softhealer.com",
+    "category": "Discuss",
+    "license": "OPL-1",
+    "summary": "Flexible HelpDesk Module, Customizable Help Desk App, Service Desk, HelpDesk With Stages, Help Desk Ticket Management, Helpdesk Email Templates, Helpdesk Chatter Odoo",
+    "description": """Are you looking for a fully flexible and customizable helpdesk in odoo? Our this apps almost contain everything you need for Service Desk, Technical Support Team, Issue Ticket System which include service request to be managed in Odoo backend. The support ticket will send by email to the customer and admin. Customer can view their ticket from the website portal and easily see the stage of the reported ticket. This desk is fully customizable clean and flexible. """,
+    "version": "16.0.24",
+    "depends": ["web","mail", "portal", 'project', "product", "crm", "sale_management", "hr_recruitment", "sh_partner_category", "sh_notifications", "sh_stop_crm_lead_spam", "sh_task_time", 'sh_training',"sales_team"],
+    "data": [
+        "security/sh_helpdesk_security.xml",
+        "security/send_mail_security.xml",
+        "security/ir.model.access.csv",
+        "data/helpdesk_email_data.xml",
+        "data/helpdesk_data.xml",
+        "data/helpdesk_cron_data.xml",
+        "data/helpdesk_stage_data.xml",
+        "views/helpdesk_menu.xml",
+        "views/helpdesk_sla_policies.xml",
+        "views/helpdesk_team_view.xml",
+        "views/helpdesk_follower_domain.xml",
+        "views/sh_ticket_followup_configuration_views.xml",
+        "views/helpdesk_ticket_type_view.xml",
+        "views/helpdesk_subject_type_view.xml",
+        "views/helpdesk_tags_view.xml",
+        "views/helpdesk_stages_view.xml",
+        "views/helpdesk_category_view.xml",
+        "views/helpdesk_subcategory_view.xml",
+        "views/helpdesk_priority_view.xml",
+        "views/helpdesk_config_settings_view.xml",
+        "wizard/check_downgrade.xml",
+        "views/helpdesk_ticket_view.xml",
+        "views/sh_report_helpdesk_ticket_template.xml",
+        "views/sh_helpdeks_report_portal.xml",
+        "views/report_views.xml",
+        "views/sh_ticket_feedback_template.xml",
+        # "views/ticket_dashboard_view.xml",
+        "views/res_users.xml",
+        "views/ticket_dashboard_templates.xml",
+        "views/helpdesk_ticket_portal_template.xml",
+        "views/send_mail_quick_reply.xml",
+        "wizard/mail_compose_view.xml",
+        "views/helpdesk_alarm.xml",
+        "data/helpdesk_reminder_mail_template.xml",
+        "data/helpdesk_reminder_cron.xml",
+        "wizard/add_remove_follower_wizard.xml",
+        # "wizard/update_ticket_wizard.xml",
+        # "views/odoo_end_ticket.xml",
+        # "views/res_partner.xml",
+        "views/sh_task_time_account_line.xml",
+        "views/project_task_views.xml",
+        "views/sale_order.xml",
+        "wizard/sh_log_note_views.xml",
+    ],
+    # 'qweb': [
+    #     "static/src/xml/product_referech.xml",
+    # ],
+
+
+    'assets': {
+        'web.assets_backend': [
+            # 'sh_helpdesk/static/src/js/helpdesk_ticket_dasboard.js',
+            # 'sh_helpdesk/static/src/css/ticket_dashboard.css',
+            # 'sh_helpdesk/static/src/js/filter.js'
+            # 'sh_helpdesk/static/src/js/abstract_controller.js',
+            # 'sh_helpdesk/static/src/js/helpdesk_ticket_dasboard.js',
+            
+            'sh_helpdesk/static/src/xml/product_referech.xml',
+            'sh_helpdesk/static/src/js/kanban_controller.js',
+            'sh_helpdesk/static/src/js/list_controller.js',
+        ],
+
+        'web.assets_frontend': [
+            'sh_helpdesk/static/src/css/feedback.scss',
+            'sh_helpdesk/static/src/css/bootstrap-multiselect.min.css',
+            'sh_helpdesk/static/src/js/bootstrap-multiselect.min.js',
+            'sh_helpdesk/static/src/js/portal.js',
+        ]
+    },
+
+    "images": ['static/description/background.png', ],
+    "application": True,
+    "auto_install": False,
+    "installable": True,
+    "price": "40",
+    "currency": "EUR"
+}

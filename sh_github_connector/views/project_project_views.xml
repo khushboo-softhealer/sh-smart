@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ 
+    <record id="sh_gitbuh_edit_project" model="ir.ui.view">
+        <field name="name">sh.github.project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="sh_git_send_invitation"/>
+                <field name="sh_git_repo_link" attrs="{'invisible': [('sh_git_send_invitation', '=', False)]}" />
+            </field>
+            <xpath expr="//notebook" position="inside">
+                <page name="git_log_line" string="Git Invitation Log">
+                    <field name="sh_git_log_line">
+                        <tree create="0" edit="0" no_open="1" delete="0" decoration-success="state == 'success'" decoration-danger="state == 'error'">
+                            <field name="datetime" />
+                            <field name="message" />
+                            <field name="state" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="global.request.menu">
+        <div class="pause_entry_list dropdown o_debug_manager" role="menuitem">
+            <a class="openDropdown" href="#" title="Open Pending Task Menu" aria-label="Open Pending Task Menu" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-info-circle" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right sh_global_submenu_list_cls" role="menu">
+                <span
+                    role="menuitem"
+                    class="dropdown-item request_item sh_request_management complain_global d-none"  type='complain'
+                >
+                    <li>
+                        Complain 
+                        <t t-esc='group_allow_global_request'/>
+                    </li>
+
+                    <li>
+                        <a class="sh_timer_number btn btn-primary fa fa-hand-o-up sh_request_view" type='complain'>
+                        </a>
+                    </li>
+                </span>
+                <span
+                    role="menuitem"
+                    class="dropdown-item request_item sh_request_management idea_global d-none" type='idea'
+                >
+                    <li>
+                        Idea 
+                    </li>
+
+                    <li>
+                        <a class=" btn btn-primary fa fa-lightbulb-o sh_request_view" type='idea'>
+                        </a>
+                    </li>
+                </span>
+                <span
+                    role="menuitem"
+                    class="dropdown-item request_item sh_request_management knowledge_global d-none"  type='knowledge'
+                >
+                    <li >
+                        Knowledge
+                    </li>
+
+                    <li >
+                        <a class=" btn btn-primary fa fa-book sh_request_view" type='knowledge'>
+                        </a>
+                    </li>
+                </span>
+                <span
+                    role="menuitem"
+                    class="dropdown-item request_item sh_request_management sop_global d-none" type='sop'
+                >
+                    <li >
+                        SOP 
+                    </li>
+
+                    <li>
+                        <a class=" btn btn-primary fa fa-file-text sh_request_view" type='sop'>
+                        </a>
+                    </li>
+                </span>
+                <span
+                    role="menuitem"
+                    class="dropdown-item request_item sh_request_management maintenance_global d-none" type='maintenance'
+                >
+                    <li >
+                        Maintenance 
+                    </li>
+
+                    <li>
+                        <a class=" btn btn-primary fa fa-wrench sh_request_view" type='maintenance'>
+                        </a>
+                    </li>
+                </span>
+            </div>
+        </div>
+    </t>
+
+</templates>

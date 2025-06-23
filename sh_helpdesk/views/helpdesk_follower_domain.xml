@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_helpdesk_follower_domain" model="ir.ui.view">
+        <field name="name">sh.ticket.follower.domain</field>
+        <field name="model">sh.ticket.follower.domain</field>
+        <field name="arch" type="xml">
+            <form string="Follower Domain">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

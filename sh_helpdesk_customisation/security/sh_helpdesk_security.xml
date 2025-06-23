@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Override sh_helpdesk Team Leader Record Rule -->
+		<record model="ir.rule" id="sh_helpdesk.helpdesk_ticket_team_leader_rule">
+			<field name="name">Helpdesk Ticket Team Leader</field>
+			<field name="model_id" ref="model_sh_helpdesk_ticket"/>
+			<field name="global" eval="True"/>
+			<field name="domain_force">[('sh_user_ids','in',[user.id])]</field>
+			<field name="groups" eval="[(4, ref('sh_helpdesk.helpdesk_group_team_leader'))]"/>
+			<field name="perm_create" eval="True"/>
+			<field name="perm_read" eval="True"/>
+			<field name="perm_write" eval="True"/>
+			<field name="perm_unlink" eval="False"/>
+		</record>
+    </data>
+</odoo>

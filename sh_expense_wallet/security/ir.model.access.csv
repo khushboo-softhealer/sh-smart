@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_wallet,access_sh_wallet,model_sh_wallet,base.group_user,1,1,1,1
+access_sh_wallet_transaction,access_sh_wallet_transaction,model_sh_wallet_transaction,base.group_user,1,1,1,1
+access_sh_wallet_transaction_wizard,access_sh_wallet_transaction_wizard,model_sh_wallet_transaction_wizard,base.group_user,1,1,1,1

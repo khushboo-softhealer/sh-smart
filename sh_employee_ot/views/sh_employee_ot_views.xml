@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View sh.employee.ot View Tree -->
+    <record id="sh_employee_ot_tree_view" model="ir.ui.view">
+        <field name="name">view.sh.employee.ot.tree</field>
+        <field name="model">sh.employee.ot</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="sh_employee_id" />
+                <field name="sh_ot_date" />
+                <field name="sh_project_manager_id" />
+                <field name="sh_finance_manager_ids" widget="many2many_tags" />
+                <field name="sh_total_timesheet" widget="timesheet_uom" sum="Total" />
+                <field name="state" widget="badge" decoration-success="state == 'done'"
+                    decoration-primary="state == 'draft'"
+                    decoration-danger="state == 'cancel'" decoration-info="state == 'pm'"
+                    decoration-warning="state == 'fm'" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- View sh.employee.ot form -->
+    <record id="sh_employee_ot_form_view" model="ir.ui.view">
+        <field name="name">view.sh.employee.ot.form</field>
+        <field name="model">sh.employee.ot</field>
+        <field name="arch" type="xml">
+            <form string="Sh Employee Ot">
+                <header>
+                    <button string="Confirm OverTime" name="project_manager_notify" type="object"
+                        class="oe_highlight" attrs="{'invisible': [('state', '!=', 'draft')]}" />
+                    <button string="Approve"
+                        groups="sh_project_task_base.group_project_officer"
+                        name="finance_manager_notify" type="object" class="btn-success"
+                        attrs="{'invisible': [('state', '!=', 'pm')]}" />
+
+                    <button string="Approve" groups="account.group_account_manager"
+                        name="approve_ot" type="object" class="btn btn-success"
+                        attrs="{'invisible': [('state', '!=', 'fm')]}" />
+
+                    <button string="Reject"
+                        groups="sh_project_task_base.group_project_officer,account.group_account_manager"
+                        name="reject_ot" type="object" class="btn btn-danger"
+                        attrs="{'invisible': ['&amp;',('state', '!=', 'fm'),('state', '!=', 'pm')]}" />
+                    <button string="Cancel Paid OT" groups="account.group_account_manager" attrs="{'invisible': [('state', '!=', 'paid')]}" name="cancel_paid" type="object"/>
+                    <button string="Cancel OT" groups="account.group_account_manager,sh_project_task_base.group_project_officer" attrs="{'invisible': [('state', 'not in', ['pm','fm','done'])]}" name="cancel_ot" type="object"/>
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,pm,fm"
+                        class="me-3" />
+                </header>
+
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="sh_employee_id" readonly="1" />
+                            <field name="sh_project_id"
+                                attrs="{'readonly':[('state','!=','draft')]}"
+                                options="{'no_create':'True'}"
+                                required="1"
+                            />
+                            <field name="sh_ot_date" required="1"
+                                attrs="{'readonly':[('state','!=','draft')]}" />
+                        </group>
+                        <group>
+                            <field name="sh_project_manager_id" />
+                            <field name="sh_finance_manager_ids" widget="many2many_tags" />
+                            <field name="sh_total_timesheet" widget="timesheet_uom" />
+                        </group>
+                        <field name="sh_description" placeholder="Add Description of Over-Time..." />
+                    </group>
+                    <notebook>
+                        <page name="timesheets" string="Timesheets">
+                            <field name="sh_project_timesheet_ids"
+                                domain="['&amp;',('project_id','=',sh_project_id),('employee_id','=',sh_employee_id),('date','=',sh_ot_date)]"
+                                attrs="{'readonly':[('state','!=','draft')]}" />
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View sh.employee.ot search -->
+    <record id="sh_employee_ot_search_view" model="ir.ui.view">
+        <field name="name">view.sh.employee.ot.search</field>
+        <field name="model">sh.employee.ot</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="sh_employee_id" />
+                <field name="sh_project_manager_id" />
+                <field name="sh_finance_manager_ids" />
+                <group expand="1" string="Group By">
+                    <filter string="Group by Employee" name="sh_employee_id" domain="[]"
+                        context="{'group_by':'sh_employee_id'}" />
+                    <filter string="Group By Date" name="sh_ot_date" domain="[]" context="{'group_by': 'sh_ot_date'}"/>
+                    <filter string="Group By State" name="sh_ot_date" domain="[]" context="{'group_by': 'state'}"/>
+
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action sh.employee.ot -->
+    <record id="sh_employee_ot_action" model="ir.actions.act_window">
+        <field name="name">Employee OverTime</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.employee.ot</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create Employee OverTime.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="sh_employee_ot_menu" name="Employee OverTime" action="sh_employee_ot_action"
+        parent="sh_hr_dashboard.sh_hr_dashboard_main_menu" sequence="10" />
+
+</odoo>
