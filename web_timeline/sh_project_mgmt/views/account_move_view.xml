@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- project.project kanban view inherited-->
+    <record id="sh_project_mgmt_account_move_form" model="ir.ui.view">
+        <field name="name">sh.project.mgmt.account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <field name="invoice_date" position="after">
+                <field name="sh_analytic_account_id"/>
+            </field>
+            <button name="preview_invoice" position="after">
+                <button name="update_analytic" type="object" 
+                string="Update Analytic Entry" groups="sh_project_mgmt.group_project_pl" />
+            </button>
+
+        </field>
+    </record>
+
+</odoo>

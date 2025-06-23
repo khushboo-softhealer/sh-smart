@@ -1,0 +1,734 @@
+#wrapwrap:not(.sh_survmate_input_style_1):not(.sh_survmate_input_style_2):not(.sh_survmate_input_style_3):not(.sh_survmate_input_style_4):not(.sh_survmate_input_style_5) input[type=range] {
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+}
+
+.sh_is_rating_question_True .o_survey_form_choice .o_survey_choice_btn {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .sh_is_rating_question_True .o_survey_form_choice .o_survey_choice_btn {
+    flex: 1 0 35%;
+  }
+}
+.sh_is_rating_question_True .o_survey_form_choice .o_survey_choice_btn .o_survey_choice_img {
+  position: relative;
+  z-index: -1;
+}
+
+/*=====================
+	Input Style 1
+=======================*/
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location {
+  background-position: center bottom, center calc(100% - 1px);
+  padding-right: 0;
+  padding-left: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  transition: background 0s ease-out;
+  border-bottom: 1px solid #ccc;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  padding: 0.429rem 1.072rem;
+  border-radius: 0px !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_question_matrix input,
+.sh_survmate_input_style_1 .o_survey_question_matrix .sh_textarea {
+  background-position: center bottom, center calc(100% - 1px);
+  padding-right: 0;
+  padding-left: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  transition: background 0s ease-out;
+  border-bottom: 1px solid #ccc;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  padding: 0.429rem 1.072rem;
+  border-radius: 0px !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box:focus,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date:focus,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime:focus,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn:focus,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box:focus,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box:focus,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box:focus:not(input[type=range]),
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input:focus,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar:focus,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input:focus,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select:focus,
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location:focus {
+  background-size: 100% 2px, 100% 1px;
+  outline: 0;
+  transition-duration: 0.3s;
+  float: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.sh_survmate_input_style_1 .o_survey_question_matrix input:focus,
+.sh_survmate_input_style_1 .o_survey_question_matrix .sh_textarea:focus {
+  background-size: 100% 2px, 100% 1px;
+  outline: 0;
+  transition-duration: 0.3s;
+  float: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .fa-calendar {
+  padding: 5px 10px !important;
+  border-radius: 0px !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_question_text_box,
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_question_date,
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_question_datetime,
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_choice_btn,
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_question_numerical_box,
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_question_color_box,
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_question_email_box,
+.sh_survmate_input_style_1 .o_survey_print fieldset .js_cls_tmpl_sh_location,
+.sh_survmate_input_style_1 .o_survey_print fieldset .js_cls_sh_address_wrapper input,
+.sh_survmate_input_style_1 .o_survey_print fieldset .js_cls_sh_address_wrapper select {
+  padding: 5px 10px !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_choice_btn,
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_question_numerical_box {
+  background: transparent;
+  border-radius: 0 !important;
+  border: 0px;
+  border-bottom: 0px !important;
+  padding: 5px 10px !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_question_color_box,
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_question_email_box,
+.sh_survmate_input_style_1 .o_survey_print fieldset .js_cls_tmpl_sh_location,
+.sh_survmate_input_style_1 .o_survey_print fieldset .js_cls_sh_address_wrapper input,
+.sh_survmate_input_style_1 .o_survey_print fieldset .js_cls_sh_address_wrapper select {
+  border: 0;
+  border-bottom: 1px solid !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_print fieldset .o_survey_question_numerical_box {
+  border-bottom: 1px solid !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_form .o_survey_question_matrix thead th:first-child {
+  border-top-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_form .o_survey_question_matrix thead th:last-child {
+  border-top-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_form .o_survey_question_matrix tbody tr:last-child th {
+  border-bottom-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_form .o_survey_question_matrix tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_print .o_survey_question_matrix thead th:first-child {
+  border-top-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_print .o_survey_question_matrix thead th:last-child {
+  border-top-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_print .o_survey_question_matrix tbody tr:last-child th {
+  border-bottom-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_print .o_survey_question_matrix tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_choice_btn {
+  border-bottom: 0 !important;
+}
+
+.sh_survmate_input_style_1 .o_survey_print .o_survey_choice_btn {
+  border-bottom: 1px solid !important;
+}
+
+/*=====================
+	Input Style 2
+=======================*/
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input,
+.sh_survmate_input_style_2 .o_survey_print fieldset .o_survey_question_text_box,
+.sh_survmate_input_style_2 .o_survey_print fieldset .o_survey_question_date,
+.sh_survmate_input_style_2 .o_survey_print fieldset .o_survey_question_datetime,
+.sh_survmate_input_style_2 .o_survey_print fieldset .o_survey_choice_btn,
+.sh_survmate_input_style_2 .o_survey_print fieldset .o_survey_question_numerical_box,
+.sh_survmate_input_style_2 .o_survey_print fieldset .o_survey_question_color_box,
+.sh_survmate_input_style_2 .o_survey_print fieldset .o_survey_question_email_box,
+.sh_survmate_input_style_2 .o_survey_print fieldset .js_cls_tmpl_sh_location,
+.sh_survmate_input_style_2 .o_survey_print fieldset .js_cls_sh_many2one_wrapper input {
+  padding: 5px 10px !important;
+  border: 1px solid;
+  border-radius: 3px !important;
+  transition: all 0.6s;
+}
+
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper input[type=range] {
+  padding: 3px 10px !important;
+}
+
+.sh_survmate_input_style_2 .o_survey_question_matrix input,
+.sh_survmate_input_style_2 .o_survey_question_matrix .sh_textarea {
+  padding: 5px 10px !important;
+  border: 1px solid;
+  border-radius: 3px !important;
+  transition: all 0.6s;
+}
+
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn {
+  border: 0px solid;
+  transition: all 0.6s;
+}
+
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn span {
+  font-weight: 500;
+}
+
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .fa-calendar {
+  padding: 5px 10px !important;
+}
+
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box:focus,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date:focus,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime:focus,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box:focus,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box:focus,
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box:focus:not(input[type=range]),
+.sh_survmate_input_style_2 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location:focus {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.6s;
+}
+
+.sh_survmate_input_style_2 .o_survey_question_matrix input:focus,
+.sh_survmate_input_style_2 .o_survey_question_matrix .sh_textarea:focus {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.6s;
+}
+
+.sh_survmate_input_style_2 .o_survey_print fieldset .o_survey_choice_btn {
+  border: 0;
+  border-bottom: 0 !important;
+  font-weight: 500;
+}
+
+/*=====================
+	Input Style 3
+======================*/
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_text_box,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_date,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_datetime,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_choice_btn,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_numerical_box,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_color_box,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_email_box,
+.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_tmpl_sh_location,
+.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_sh_many2one_wrapper input,
+.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_sh_many2many_select_div .viewbar {
+  padding: 5px 10px !important;
+  border-bottom: 1px solid;
+  border-radius: 0 !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper input[type=range] {
+  padding: 3px 10px !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_question_matrix input,
+.sh_survmate_input_style_3 .o_survey_question_matrix .sh_textarea {
+  padding: 5px 10px !important;
+  border-bottom: 1px solid;
+  border-radius: 0 !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .fa-calendar {
+  padding: 5px 10px !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_choice_btn,
+.sh_survmate_input_style_3 .o_survey_choice_btn.o_survey_selected {
+  border-bottom: 1px solid !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_comment_container {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_form .o_survey_question_matrix thead th:first-child {
+  border-top-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_form .o_survey_question_matrix thead th:last-child {
+  border-top-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_form .o_survey_question_matrix tbody tr:last-child th {
+  border-bottom-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_form .o_survey_question_matrix tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_print .o_survey_question_matrix thead th:first-child {
+  border-top-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_print .o_survey_question_matrix thead th:last-child {
+  border-top-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_print .o_survey_question_matrix tbody tr:last-child th {
+  border-bottom-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_print .o_survey_question_matrix tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location {
+  background-position: left bottom, left calc(100% - 1px);
+  padding-right: 0;
+  padding-left: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  transition: background 0s ease-out;
+  border-bottom: 1px solid;
+  padding: 0.429rem 1.072rem;
+  border-radius: 0px !important;
+  border: 1px solid;
+}
+
+.sh_survmate_input_style_3 .o_survey_question_matrix input,
+.sh_survmate_input_style_3 .o_survey_question_matrix .sh_textarea {
+  background-position: left bottom, left calc(100% - 1px);
+  padding-right: 0;
+  padding-left: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  transition: background 0s ease-out;
+  border-bottom: 1px solid;
+  padding: 0.429rem 1.072rem;
+  border-radius: 0px !important;
+  border: 1px solid;
+}
+
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_text_box,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_date,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_datetime,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_choice_btn,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_numerical_box,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_color_box,
+.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_email_box,
+.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_sh_many2one_wrapper input,
+.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_sh_many2many_select_div .viewbar,
+.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_sh_address_wrapper input,
+.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_sh_address_wrapper select,
+.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_tmpl_sh_location {
+  border: 1px solid;
+  border-bottom: 2px solid;
+}
+
+.sh_survmate_input_style_3 .o_survey_question_matrix input,
+.sh_survmate_input_style_3 .o_survey_question_matrix .sh_textarea {
+  border: 1px solid;
+  border-bottom: 2px solid;
+}
+
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box:focus,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date:focus,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime:focus,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn:focus,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box:focus,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box:focus,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box:focus:not(input[type=range]),
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input:focus,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar:focus,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input:focus,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select:focus,
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location:focus {
+  background-size: 100% 2px, 100% 1px;
+  outline: 0;
+  transition-duration: 0.3s;
+  float: none;
+  border: 1px solid;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.sh_survmate_input_style_3 .o_survey_question_matrix input:focus,
+.sh_survmate_input_style_3 .o_survey_question_matrix .sh_textarea:focus {
+  background-size: 100% 2px, 100% 1px;
+  outline: 0;
+  transition-duration: 0.3s;
+  float: none;
+  border: 1px solid;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn {
+  border: 0px solid;
+  border-bottom: 0px solid !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_print .o_survey_choice_btn {
+  background: transparent;
+  border: 0px solid !important;
+}
+
+.sh_survmate_input_style_3 .o_survey_form .o_survey_choice_btn,
+.sh_survmate_input_style_3 .o_survey_print .o_survey_choice_btn {
+  font-weight: 500;
+}
+
+.sh_survmate_input_style_3 .o_survey_print .o_survey_choice_btn.o_survey_selected {
+  background: transparent;
+  border-bottom: 1px solid !important;
+}
+
+/*=====================
+	Input Style 4
+======================*/
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_choice_btn,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location,
+.sh_survmate_input_style_4 .o_survey_print fieldset .o_survey_question_text_box,
+.sh_survmate_input_style_4 .o_survey_print fieldset .o_survey_question_date,
+.sh_survmate_input_style_4 .o_survey_print fieldset .o_survey_question_datetime,
+.sh_survmate_input_style_4 .o_survey_print fieldset .o_survey_choice_btn,
+.sh_survmate_input_style_4 .o_survey_print fieldset .o_survey_question_numerical_box,
+.sh_survmate_input_style_4 .o_survey_print fieldset .o_survey_question_color_box,
+.sh_survmate_input_style_4 .o_survey_print fieldset .o_survey_question_email_box,
+.sh_survmate_input_style_4 .o_survey_print fieldset .js_cls_sh_many2one_wrapper input,
+.sh_survmate_input_style_4 .o_survey_print fieldset .js_cls_sh_many2many_select_div .viewbar,
+.sh_survmate_input_style_4 .o_survey_print fieldset .js_cls_sh_address_wrapper input,
+.sh_survmate_input_style_4 .o_survey_print fieldset .js_cls_sh_address_wrapper select,
+.sh_survmate_input_style_4 .o_survey_print fieldset .js_cls_tmpl_sh_location {
+  padding: 5px 15px !important;
+  border: 1px solid;
+  border-radius: 0px !important;
+  border-bottom-left-radius: 1pc !important;
+  border-top-right-radius: 1pc !important;
+  position: relative;
+  overflow: hidden;
+  transition: 400ms ease all;
+}
+
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper input[type=range] {
+  overflow: visible;
+  padding: 3px 10px !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_question_matrix input,
+.sh_survmate_input_style_4 .o_survey_question_matrix .sh_textarea {
+  padding: 5px 15px !important;
+  border: 1px solid;
+  border-radius: 0px !important;
+  border-bottom-left-radius: 1pc !important;
+  border-top-right-radius: 1pc !important;
+  position: relative;
+  overflow: hidden;
+  transition: 400ms ease all;
+}
+
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .fa-calendar {
+  padding: 5px 15px !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_form .o_survey_question_matrix thead th:first-child {
+  border-top-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_form .o_survey_question_matrix thead th:last-child {
+  border-top-right-radius: 1pc !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_form .o_survey_question_matrix tbody tr:last-child th {
+  border-bottom-left-radius: 1pc !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_form .o_survey_question_matrix tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_print .o_survey_question_matrix thead th:first-child {
+  border-top-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_print .o_survey_question_matrix thead th:last-child {
+  border-top-right-radius: 1pc !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_print .o_survey_question_matrix tbody tr:last-child th {
+  border-bottom-left-radius: 1pc !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_print .o_survey_question_matrix tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_choice_btn {
+  border: 0 !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box:focus,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date:focus,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime:focus,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn:focus,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box:focus,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box:focus,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box:focus:not(input[type=range]),
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input:focus,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar:focus,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input:focus,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select:focus,
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location:focus {
+  box-shadow: 0 -50px 0 #f5f5f5 inset;
+  transition: 400ms ease all;
+  z-index: 0;
+}
+
+.sh_survmate_input_style_4 .o_survey_question_matrix input:focus,
+.sh_survmate_input_style_4 .o_survey_question_matrix .sh_textarea:focus {
+  box-shadow: 0 -50px 0 #f5f5f5 inset;
+  transition: 400ms ease all;
+  z-index: 0;
+}
+
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_choice_btn,
+.sh_survmate_input_style_4 .o_survey_print fieldset .o_survey_choice_btn {
+  background: transparent !important;
+}
+
+.sh_survmate_input_style_4 .o_survey_print fieldset .o_survey_choice_btn {
+  border: 0px solid !important;
+}
+
+/*=====================
+	Input Style 5
+======================*/
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location,
+.sh_survmate_input_style_5 .o_survey_print fieldset .o_survey_question_text_box,
+.sh_survmate_input_style_5 .o_survey_print fieldset .o_survey_question_date,
+.sh_survmate_input_style_5 .o_survey_print fieldset .o_survey_question_datetime,
+.sh_survmate_input_style_5 .o_survey_print fieldset .o_survey_choice_btn,
+.sh_survmate_input_style_5 .o_survey_print fieldset .o_survey_question_numerical_box,
+.sh_survmate_input_style_5 .o_survey_print fieldset .o_survey_question_color_box,
+.sh_survmate_input_style_5 .o_survey_print fieldset .o_survey_question_email_box,
+.sh_survmate_input_style_5 .o_survey_print fieldset .js_cls_sh_many2one_wrapper input,
+.sh_survmate_input_style_5 .o_survey_print fieldset .js_cls_sh_many2many_select_div .viewbar,
+.sh_survmate_input_style_5 .o_survey_print fieldset .js_cls_sh_address_wrapper input,
+.sh_survmate_input_style_5 .o_survey_print fieldset .js_cls_sh_address_wrapper select,
+.sh_survmate_input_style_5 .o_survey_print fieldset .js_cls_tmpl_sh_location {
+  padding: 5px 15px !important;
+  border-bottom: 1px solid;
+  border-radius: 0px !important;
+  transition: all 0.6s;
+}
+
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper input[type=range],
+.sh_survmate_input_style_5 .o_survey_print fieldset input[type=range] {
+  padding: 3px 15px !important;
+}
+
+.sh_survmate_input_style_5 .o_survey_question_matrix input,
+.sh_survmate_input_style_5 .o_survey_question_matrix .sh_textarea {
+  padding: 5px 15px !important;
+  border: 0;
+  border-bottom: 1px solid;
+  border-radius: 0px !important;
+  transition: all 0.6s;
+  background: #f5f5f5 !important;
+}
+
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .fa-calendar {
+  padding: 7px 15px !important;
+}
+
+.sh_survmate_input_style_5 .o_survey_choice_btn {
+  border-color: transparent !important;
+  font-weight: normal;
+}
+
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box:focus,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date:focus,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime:focus,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn:focus,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box:focus,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box:focus,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box:focus:not(input[type=range]),
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input:focus,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar:focus,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input:focus,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select:focus,
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location:focus {
+  transition: all 0.6s;
+  z-index: 0;
+}
+
+.sh_survmate_input_style_5 .o_survey_question_matrix input:focus,
+.sh_survmate_input_style_5 .o_survey_question_matrix .sh_textarea:focus {
+  transition: all 0.6s;
+  z-index: 0;
+}
+
+.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn,
+.sh_survmate_input_style_5 .o_survey_print fieldset .o_survey_choice_btn {
+  box-shadow: none !important;
+  border-bottom: 1px solid;
+  font-weight: 500;
+}
+
+.sh_survmate_input_style_5 .o_survey_form .o_survey_question_matrix thead th:first-child {
+  border-top-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_5 .o_survey_form .o_survey_question_matrix thead th:last-child {
+  border-top-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_5 .o_survey_form .o_survey_question_matrix tbody tr:last-child th {
+  border-bottom-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_5 .o_survey_form .o_survey_question_matrix tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_5 .o_survey_print .o_survey_question_matrix thead th:first-child {
+  border-top-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_5 .o_survey_print .o_survey_question_matrix thead th:last-child {
+  border-top-right-radius: 0 !important;
+}
+
+.sh_survmate_input_style_5 .o_survey_print .o_survey_question_matrix tbody tr:last-child th {
+  border-bottom-left-radius: 0 !important;
+}
+
+.sh_survmate_input_style_5 .o_survey_print .o_survey_question_matrix tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .o_survey_form_date div.dropdown-menu.bootstrap-datetimepicker-widget {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+  }
+}
+.sh_survmate_input_style_1 input[type=range].o_survey_question_email_box,
+.sh_survmate_input_style_2 input[type=range].o_survey_question_email_box,
+.sh_survmate_input_style_3 input[type=range].o_survey_question_email_box,
+.sh_survmate_input_style_4 input[type=range].o_survey_question_email_box,
+.sh_survmate_input_style_5 input[type=range].o_survey_question_email_box {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  height: 8px;
+  cursor: pointer;
+}
+
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box[data-question-type=que_sh_qrcode],
+.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box[data-question-type=que_sh_barcode],
+.sh_survmate_input_style_4 .o_survey_question_matrix input.que_sh_qrcode,
+.sh_survmate_input_style_4 .o_survey_question_matrix input.que_sh_barcode {
+  border-top-right-radius: 0pc !important;
+}
+
+input[type=range].o_survey_question_email_box:focus,
+input[type=range].o_survey_question_email_box:active {
+  box-shadow: none;
+}
+
+input[type=range].o_survey_question_email_box::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+}/*# sourceMappingURL=input_style.css.map */

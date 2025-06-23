@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_attendance_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.attendance.inherit.tree</field>
+        <field name="model">hr.attendance</field>
+        <field name="inherit_id" ref="hr_attendance.view_attendance_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='check_out']" position="after">
+            	<field name="total_time" widget="float_time"  groups="hr_attendance.group_hr_attendance_user"/>
+                <field name="message_in"  />
+                <!-- <field name="check_in_url" widget="url" groups="hr_attendance.group_hr_attendance_user" /> -->
+                <field name="message_out"  />
+                <!-- <field name="check_out_url" widget="url" groups="hr_attendance.group_hr_attendance_user"/> -->
+                <field name="sh_break_start" groups="hr_attendance.group_hr_attendance_user"/>
+                <field name="sh_break_end" groups="hr_attendance.group_hr_attendance_user"/>
+             <!--    <field name="sh_break_duration" widget="float_time"/> -->
+                <field name="sh_break_reason"/>
+                <field name="sh_break_over" invisible="1"/>
+               
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_attendance_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.attendance.inherit.form</field>
+        <field name="model">hr.attendance</field>
+        <field name="inherit_id" ref="hr_attendance.hr_attendance_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group" position="after">
+            	<group>
+            		<field name="sh_break_start" groups="hr_attendance.group_hr_attendance_user"/>
+	                <field name="sh_break_end" groups="hr_attendance.group_hr_attendance_user"/>
+	              <!--   <field name="sh_break_duration" widget="float_time"/> -->
+	                <field name="sh_break_reason"/>
+	                <field name="sh_break_over" invisible="1"/>
+            	</group>
+                <group string="Employee Geolocation"  groups="hr_attendance.group_hr_attendance_user">
+                    <group string="Check-in" colspan="4" >
+                        <field name="message_in"/>
+                        <!-- <field name="in_latitude"  groups="hr_attendance.group_hr_attendance_user"/>
+                        <field name="in_longitude"  groups="hr_attendance.group_hr_attendance_user"/> 
+                        <field name="check_in_url" widget="url"  groups="hr_attendance.group_hr_attendance_user" /> -->
+                    </group>
+                    <group string="Check-out" colspan="4" >
+                        <field name="message_out" />
+                        <!-- <field name="out_latitude"  groups="hr_attendance.group_hr_attendance_user"/>
+                        <field name="out_longitude"  groups="hr_attendance.group_hr_attendance_user"/>
+                        <field name="check_out_url" widget="url"  groups="hr_attendance.group_hr_attendance_user"/> -->
+                         <field name="other_data" groups="hr.group_hr_manager"/>
+                    </group>
+                </group>
+            </xpath>
+             <field name="check_out" position="after">
+                <field name="total_time" widget="float_time"  groups="hr_attendance.group_hr_attendance_user"/>
+            </field>
+        </field>
+    </record>
+    
+      <menuitem id="hr_attendance.menu_hr_attendance_manage_attendances" 
+      name="Manage Attendances" parent="hr_attendance.menu_hr_attendance_root" 
+      sequence="20" groups="base.group_user"/>
+
+    <!-- <menuitem id="hr_attendance.menu_hr_attendance_view_attendances" 
+    name="Attendances" parent="hr_attendance.menu_hr_attendance_manage_attendances" sequence="10" 
+    groups="base.group_user" action="hr_attendance.hr_attendance_action"/> -->
+    
+    
+    
+</odoo>

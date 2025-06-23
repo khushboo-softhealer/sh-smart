@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- HOME PAGE 2 -->
+  <template id="theme_mobiheal_website_privacy_policy_tmpl" name="Your Privacy Matters: Read Our Policy to Learn How We Protect Your Information">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty">
+        <section class="mb_privacy_policy_page o_colored_level"
+          data-snippet="mb_our_privacy_policy_tmpl" data-name="Privacy Policy"
+          style="background-image: none;">
+          <div class="mb_privacy_policy_heading">
+            <div class="container">
+              <img src="/theme_mobiheal_website/static/src/img/contact/contact_1.png" alt=""
+                class="mb_shapes mb_shape_one" title="Your Privacy Matters: Read Our Policy to Learn How We Protect Your Information" loading="lazy" />
+              <img src="/theme_mobiheal_website/static/src/img/contact/contact_2.png" alt=""
+                class="mb_shapes mb_shape_two"  title="Your Privacy Matters: Read Our Policy to Learn How We Protect Your Information" loading="lazy" />
+              <div class="heading">
+                <h1 class="mb_title o_default_snippet_text">Privacy &amp;amp;<span
+                    class="o_default_snippet_text"> Policy</span></h1>
+              </div>
+            </div>
+          </div>
+          <div class="mb_privacy_policy_content">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 o_colored_level">
+                  <div class="mb_privacy_policy_text">
+                    <div class="mb_privacy_policy_rules">
+                      <div class="mb_title sh_first">
+                        <div class="mb_icon">
+                          <img src="/theme_mobiheal_website/static/src/img/tcpage/arrow.png"  title="Your Privacy Matters: Read Our Policy to Learn How We Protect Your Information"
+                            loading="lazy" />
+                        </div>
+                        <div class="mb_heading o_default_snippet_text">Thank you for visiting
+                          Mobiheal Technologies</div>
+                      </div>
+                      <div class="mb_text o_default_snippet_text">Thank you for choosing Mobiheal Technologies for your business solutions. This privacy policy
+                        outlines how we collect, use, and safeguard your personal information when you visit our site or
+                        use our products and services.</div>
+                      <div class="mb_title">
+                        <div class="mb_icon">
+                          <img src="/theme_mobiheal_website/static/src/img/tcpage/arrow.png"  title="Your Privacy Matters: Read Our Policy to Learn How We Protect Your Information"
+                            loading="lazy" />
+                        </div>
+                        <div class="mb_heading o_default_snippet_text">Security</div>
+                      </div>
+                      <div class="mb_text o_default_snippet_text">Your account security is important to us. We employ industry-standard measures to protect the
+                        personal information stored in our database. Your account is secured by a password, and we take
+                        steps to ensure the confidentiality and integrity of your data.</div>
+                      <div class="mb_title">
+                        <div class="mb_icon">
+                          <img src="/theme_mobiheal_website/static/src/img/tcpage/arrow.png"  title="Your Privacy Matters: Read Our Policy to Learn How We Protect Your Information"
+                            loading="lazy" />
+                        </div>
+                        <div class="mb_heading o_default_snippet_text">Purpose of Collecting
+                          Personal Information</div>
+                      </div>
+                      <div class="mb_text o_default_snippet_text">
+                        We collect your personal information for the following purposes:
+                      </div>
+                      <ul>
+                        <li class="o_default_snippet_text">Managing and processing orders.</li>
+                        <li class="o_default_snippet_text">Delivering customizable modules and services.</li>
+                        <li class="o_default_snippet_text">
+                          Handling payments securely.
+                        </li>
+                        <li class="o_default_snippet_text">
+                          Communicating with you about orders, products, services, and promotional offers.
+                        </li>
+                        <li class="o_default_snippet_text">
+                          Enhancing the functionality, analyzing performance, addressing errors, and improving the
+                          usability and effectiveness of Mobiheal Agile Support.
+                        </li>
+                      </ul>
+                     
+                      <div class="mb_title">
+                        <div class="mb_icon">
+                          <img src="/theme_mobiheal_website/static/src/img/tcpage/arrow.png"  title="Your Privacy Matters: Read Our Policy to Learn How We Protect Your Information"
+                            loading="lazy" />
+                        </div>
+                        <div class="mb_heading o_default_snippet_text">To Get Latest Update and
+                          Releases</div>
+                      </div>
+                      <div class="mb_text o_default_snippet_text">
+                        We use your personal information, such as your name, email, address, phone number, mobile
+                        number, and website, to alert you about the latest features, product updates, and services. This
+                        information helps us provide you with the most relevant and personalized experience through the
+                        Mobiheal Agile Support System.
+                      </div>
+                      <div class="mb_title">
+                        <div class="mb_icon">
+                          <img src="/theme_mobiheal_website/static/src/img/tcpage/arrow.png"  title="Your Privacy Matters: Read Our Policy to Learn How We Protect Your Information"
+                            loading="lazy" />
+                        </div>
+                        <div class="mb_heading o_default_snippet_text">Refunds and Exchanges</div>
+                      </div>
+                      <div class="mb_text o_default_snippet_text">
+                        Mobiheal provides services to clients, and as services are not returnable, we strictly adhere to a
+                        No Refund, No Return policy. However, we are committed to improving our services, and your
+                        feedback is valuable to us. Please contact our support team for assistance.
+                      </div>
+                      <div class="mb_title">
+                        <div class="mb_icon">
+                          <img src="/theme_mobiheal_website/static/src/img/tcpage/arrow.png"  title="Your Privacy Matters: Read Our Policy to Learn How We Protect Your Information"
+                            loading="lazy" />
+                        </div>
+                        <div class="mb_heading o_default_snippet_text">Legals</div>
+                      </div>
+                      <div class="mb_text o_default_snippet_text">
+                        We provide the necessary legal information, including license details, terms of service, and
+                        other relevant details related to Mobiheal Technologies and its associated companies. It is
+                        important to review and understand these terms to ensure compliance with our policies.
+                      </div>
+                      <div class="mb_title">
+                        <div class="mb_icon">
+                          <img src="/theme_mobiheal_website/static/src/img/tcpage/arrow.png"  title="Your Privacy Matters: Read Our Policy to Learn How We Protect Your Information"
+                            loading="lazy" />
+                        </div>
+                        <div class="mb_heading o_default_snippet_text">Cookies</div>
+                      </div>
+                      <div class="mb_text o_default_snippet_text">
+                        A cookie is a small software code that our website sends to your browser when you access
+                        information on our site. Some pages on our site utilize cookies to enhance your experience and
+                        provide personalized content. You have the option to accept or decline cookies through your
+                        browser settings. Please note that disabling cookies may affect the functionality of certain
+                        features on our site.
+                      </div>
+                      <div class="mb_text o_default_snippet_text">
+                        By using our site and services, you agree to the terms outlined in this privacy policy. Mobiheal
+                        Technologies reserves the right to update and modify this policy as needed. We encourage you to
+                        review this policy periodically for any changes.
+                      </div>
+                      <div class="mb_text o_default_snippet_text">
+                        If you have any questions or concerns regarding our privacy policy, please contact us at
+                        info@mobiheal.tech.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+
+  <data noupdate="1">
+
+    <!-- Default pagese  below 2 record must put in no update 1-->
+    <record id="theme_mobiheal_website_privacy_policy_page" model="website.page">
+        <field name="is_published">True</field>
+        <field name="url">/privacy-policy</field>
+        <field name="view_id" ref="theme_mobiheal_website.theme_mobiheal_website_privacy_policy_tmpl"/>
+        <field name="track">True</field>
+        <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+    </record>
+
+</data>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sh_hr_recruitment_task.access_sh_create_task_wizard,access_sh_create_task_wizard,sh_hr_recruitment_task.model_sh_create_task_wizard,base.group_user,1,1,1,1

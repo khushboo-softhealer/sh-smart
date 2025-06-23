@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View sh.cron.failure View Tree -->
+    <record id="view_sh_cron_failure_tree" model="ir.ui.view">
+        <field name="name">view.sh.cron.failure.tree</field>
+        <field name="model">sh.cron.failure</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="failure_reason" />
+                <field name="cron" />
+                <field name="failure_time" />
+                <!-- <field name="time"/> -->
+            </tree>
+        </field>
+    </record>
+
+    <!-- View sh.cron.failure form -->
+    <record id="view_sh_cron_failure_form" model="ir.ui.view">
+        <field name="name">view.sh.cron.failure.form</field>
+        <field name="model">sh.cron.failure</field>
+        <field name="arch" type="xml">
+            <form string="Sh Cron Failure">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="cron" readonly="1"/>
+                        <field name="failure_reason" readonly="1" />
+                        <field name="failure_time" readonly="1" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View sh.cron.failure search -->
+    <record id="view_sh_cron_failure_search" model="ir.ui.view">
+        <field name="name">view.sh.cron.failure.search</field>
+        <field name="model">sh.cron.failure</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter string="Today" name="today" domain="[('failure_time', 'in', [context_today().strftime('%d-%m-%Y')])]" />
+                <filter string="Today" name="today" domain="[('failure_time', 'in', ['24-03-2025'])]" />
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action sh.cron.failure -->
+    <record id="action_sh_cron_failure" model="ir.actions.act_window">
+        <field name="name">Sh Cron Failure</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.cron.failure</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Sh Cron Failure.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="sh_cron_failure_menu" name="Cron Failure" action="action_sh_cron_failure"
+        parent="sh_hr_dashboard.sh_hr_dashboard_main_menu" groups="sh_cron_failure.group_cron_failure" sequence="10" />
+
+</odoo>

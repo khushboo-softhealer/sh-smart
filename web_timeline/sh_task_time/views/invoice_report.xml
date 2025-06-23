@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- <template id="report_invoice_document_inherit_account_invoice" inherit_id="account.report_invoice_document_with_payments">
+
+        <xpath expr="//div[@name='reference']" position="after">
+            <div name="versions" class="col-auto mw-100 mb-2" t-if="o.version_ids">
+                <strong>Versions:</strong>
+                <p class="m-0" t-field="o.version_ids" />
+            </div>
+        </xpath>
+
+    </template> -->
+
+    <template id="report_invoice_document_custom_inherit" inherit_id="account.report_invoice_document">
+
+        <xpath expr="//div[@name='reference']" position="after">
+            <div name="versions" class="col-auto mw-100 mb-2" t-if="o.version_ids">
+                <strong>Versions:</strong>
+                <p class="m-0" t-field="o.version_ids" />
+            </div>
+        </xpath>
+
+    </template>
+</odoo>

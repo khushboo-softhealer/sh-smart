@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="sh_webclient_bootstrap" name="Favicon Image"
+        inherit_id="web.webclient_bootstrap" priority="300">
+        <xpath expr="//t/t/link" position="replace">
+            <t t-set="css_url" t-value="fav_icon"/>
+            <link t-attf-href="css_url" rel="icon" type="image/x-icon"/>
+        </xpath>
+        <xpath expr="//t/t/link[2]" position="replace">
+            <t t-set="css_url" t-value="fav_icon"/>
+            <link t-attf-href="css_url" rel="icon" type="image/x-icon"/>
+        </xpath>
+    </template>
+
+    <template id="sh_web_layout" name="Favicon Layout"
+        inherit_id="web.layout" priority="300">
+        <xpath expr="//link" position="replace">
+            <link type="image/x-icon" rel="shortcut icon" t-att-href="x_icon or '/sh_base_debranding/static/src/img/favicon.ico'"/>
+        </xpath>
+    </template>
+</odoo>

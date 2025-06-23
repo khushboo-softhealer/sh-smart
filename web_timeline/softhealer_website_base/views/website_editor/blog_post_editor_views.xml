@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <!-- Blog Post List View -->
+     <record id="sh_website_editor_blog_post_tree_view" model="ir.ui.view">
+        <field name="name">sh.website.editor.blog.post.view.tree</field>
+        <field name="model">blog.post</field>
+        <field name="arch" type="xml">
+            <tree js_class="website_pages_list" type="object" multi_edit="1">
+                <field name="active" invisible="1" />
+                <field name="name" />
+                <field name="website_url" />
+
+                <field name="author_id" optional="show" />
+                <field name="blog_id" optional="hide" />
+                <field name="create_uid" optional="hide" />
+                <field name="write_uid" optional="hide" />
+                <field name="write_date" optional="hide" />
+
+                <field name="is_seo_optimized" />
+                <field name="is_published" />
+                <field name="website_id" groups="website.group_multi_website" />
+                <button name="action_code_blog_post_content" type="object"
+                    title="Code" icon="fa-code fa-lg"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Blog Post Form view -->
+    <record id="sh_website_editor_blog_post_form_view" model="ir.ui.view">
+        <field name="name">sh.website.editor.blog.post.view.form</field>
+        <field name="model">blog.post</field>
+        <field name="arch" type="xml">
+            <form string="Blog Post">
+                <header>
+                    <button string="Upload Blog Cover Image" name="open_image_cover_properties" type="object" class="oe_highlight" width="100%"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                        attrs="{'invisible': [('active', '=', True)]}" />
+                    <group name="blog_details">
+                        <field name="blog_id" />
+                        <field name="active" invisible="1" />
+                        <field name="name" placeholder="Blog Post Title" />
+                        <field name="subtitle" placeholder="Blog Subtitle" />
+                        <field name="tag_ids" widget="many2many_tags" />
+                        <field name="website_id" groups="website.group_multi_website" />
+                        <field name="is_article" />
+                        <field name="suggested_blog_by_categories" widget="many2many_tags" attrs="{'invisible':[('is_article','!=',True)] }"/>
+                        <field name="suggestion_image" attrs="{'invisible':[('is_article','!=',True)] }"/>
+                        <field name='cover_properties'/>
+                        <field name='is_published' widget="boolean_toggle"/>
+                        <!-- ShViewUpdate -->
+                        <field name="sh_video" widget="many2many_tags" invisible="1" />
+                        <!-- ShViewUpdate (Just Hide) -->
+                        <field name="sh_product_template_ids" widget="many2many_tags" invisible="1" />
+                        <!-- ShViewUpdate -->
+                        <field name="blog_image" widget="image" invisible="1" />
+                        <!-- ShViewUpdate -->
+                        <field name="buy_now" widget="url" invisible="1" />
+                        <field name="teaser_manual"/>
+                        <field name="sh_image_attachment_id" invisible="1"/>
+                    </group>
+                    <group name="publishing_details" string="Publishing Options">
+                        <field name="author_id" />
+                        <field name="create_date" groups="base.group_no_one" />
+                        <field name="visits" />
+                        <field name="post_date" />
+                        <field name="write_uid" />
+                        <field name="write_date" />
+                    </group>
+                    <notebook>
+                        <page string="Optimize SEO">
+                            <group class="mt-4">
+                                <field name="website_meta_title" />
+                                <field name="website_meta_description" />
+                                <field name="website_meta_keywords" />
+                                <field name="website_meta_og_img" />
+                            </group>
+                        </page>
+                        <page name="blog_content" string="Blog Content">
+                            <field name="content" widget="html"
+                                options="{'style-inline': false, 'resizable':true, 'codeview': true}" />
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Blog Post code form view -->
+    <record id="sh_website_editor_blog_post_form_wizard_code_view" model="ir.ui.view">
+        <field name="name">sh.website.editor.blog.post.wizard.code.view.form</field>
+        <field name="model">blog.post</field>
+        <field name="arch" type="xml">
+            <form string="Blog Post">
+                <sheet>
+                    <group>
+                        <field name="name" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Blog Post Content" name="blog_post_content_page">
+                            <field name="content" widget="ace" options="{'mode': 'xml'}"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Blog Post Action -->
+    <record id="sh_website_editor_blog_post_action" model="ir.actions.act_window">
+        <field name="name">Blog Post Pages</field>
+        <field name="res_model">blog.post</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids"
+            eval="[(5, 0, 0),(0, 0, {'view_mode': 'tree', 'view_id': ref('sh_website_editor_blog_post_tree_view')}),(0, 0, {'view_mode': 'form', 'view_id': ref('sh_website_editor_blog_post_form_view')})]" />
+    </record>
+
+
+</odoo>

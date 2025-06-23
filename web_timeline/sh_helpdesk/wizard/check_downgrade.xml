@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="sh_check_downgrade_wizard_view" model="ir.ui.view">
+		<field name="name">sh.check.downgrade</field>
+		<field name="model">sh.check.downgrade</field>
+		<field name="arch" type="xml">
+			<form string="Ticket to downgrade task">
+				<sheet>
+					<field name="sh_task_ids" nolabel="1">
+						<tree editable="bottom">
+							<field name="name"/>
+							<field name="project_id"/>
+							<field name="stage_id"/>
+							<field name="company_id"/>
+						</tree>
+					</field>
+					<field name="sh_description" nolabel="1"/>
+					<footer>
+						<button string='Check Downgrade' name="action_downgrade" type="object" class="btn-primary"/>
+						<button string="Cancel" class="btn-default" special="cancel"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="sh_action_check_downgrade" model="ir.actions.act_window">
+		<field name="name">Ticket to downgrade task</field>
+		<field name="res_model">sh.check.downgrade</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+</odoo>

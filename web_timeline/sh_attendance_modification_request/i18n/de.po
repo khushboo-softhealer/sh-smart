@@ -1,0 +1,525 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_attendance_modification_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-16 06:19+0000\n"
+"PO-Revision-Date: 2021-09-16 06:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_attendance_modification_request
+#: model:mail.template,body_html:sh_attendance_modification_request.sh_attendance_modification_request_email_approve_tmpl
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    Dear ${object.employee_id.name},\n"
+"                    <br/>\n"
+"                    ${object.name} has been Approved by ${object.employee_id.parent_id.name}.\n"
+"                    <br/>\n"
+"                    Thank you\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    lieb ${object.employee_id.name},\n"
+"                    <br/>\n"
+"                    ${object.name} wurde von genehmigt ${object.employee_id.parent_id.name}.\n"
+"                    <br/>\n"
+"                    Dankeschön\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+
+
+
+#. module: sh_attendance_modification_request
+#: model:mail.template,body_html:sh_attendance_modification_request.sh_attendance_modification_request_email_reject_tmpl
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    Dear ${object.employee_id.name},\n"
+"                    <br/>\n"
+"                    Attendace modification Request ${object.name} has been rejected by ${object.employee_id.parent_id.name}.\n"
+"                    <br/>\n"
+"                    Thank you\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    lieb ${object.employee_id.name},\n"
+"                    <br/>\n"
+"                     Antragsanforderung anwenden ${object.name} wurde von abgelehnt ${object.employee_id.parent_id.name}.\n"
+"                    <br/>\n"
+"                    Dankeschön\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+
+#. module: sh_attendance_modification_request
+#: model:mail.template,body_html:sh_attendance_modification_request.sh_attendance_modification_request_email_tmpl
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    Dear ${object.employee_id.parent_id.name},\n"
+"                    <br/>\n"
+"                    Attendace modification Request ${object.name} has been submitted by ${object.employee_id.name}.\n"
+"                    <br/>\n"
+"                    Thank you\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    lieb ${object.employee_id.parent_id.name},\n"
+"                    <br/>\n"
+"                    wurde von eingereicht ${object.name} wurde von abgelehnt ${object.employee_id.name}.\n"
+"                    <br/>\n"
+"                    Dankeschön\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_needaction
+msgid "Action Needed"
+msgstr "Handlungsbedarf"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_ids
+msgid "Activities"
+msgstr "Aktivitäten"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Aktivitätsausnahmedekoration."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_state
+msgid "Activity State"
+msgstr "Aktivitätszustand"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Aktivitätstyp-Symbol"
+
+#. module: sh_attendance_modification_request
+#: model:mail.template,subject:sh_attendance_modification_request.sh_attendance_modification_request_email_approve_tmpl
+#: model:mail.template,subject:sh_attendance_modification_request.sh_attendance_modification_request_email_reject_tmpl
+#: model:mail.template,subject:sh_attendance_modification_request.sh_attendance_modification_request_email_tmpl
+msgid "Application For Attendance Modification Request"
+msgstr "Antrag auf Anwaltsänderungsanforderung"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+msgid "Approve"
+msgstr "Genehmigen"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__state__approved
+msgid "Approved"
+msgstr "Zugelassen"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "Befestigungszählung"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__attendance_id
+msgid "Attendance"
+msgstr "Teilnahme"
+
+#. module: sh_attendance_modification_request
+#: model:ir.actions.act_window,name:sh_attendance_modification_request.sh_attendance_modification_request_action
+#: model:ir.model,name:sh_attendance_modification_request.model_sh_attendance_modification_request
+#: model:ir.ui.menu,name:sh_attendance_modification_request.sh_attendance_modification_request_menu
+#: model:mail.template,name:sh_attendance_modification_request.sh_attendance_modification_request_email_tmpl
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "Attendance Modification Request"
+msgstr "Anwesenheitsänderungsanfrage."
+
+#. module: sh_attendance_modification_request
+#: model:mail.template,name:sh_attendance_modification_request.sh_attendance_modification_request_email_approve_tmpl
+#: model:mail.template,name:sh_attendance_modification_request.sh_attendance_modification_request_email_reject_tmpl
+msgid "Attendance Modification Request Approve"
+msgstr "Anwesenheitsänderungsanforderung genehmigen"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model,name:sh_attendance_modification_request.model_sh_attendance_modification_request_reason
+msgid "Attendance Modification Request Reason"
+msgstr "Anwesenheitsanwaltsanfrage Grund"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__type__both
+msgid "Both"
+msgstr "Beide"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__state__cancel
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__type__checkin
+msgid "Check In"
+msgstr "Check-In"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__type__checkout
+msgid "Check Out"
+msgstr "Kasse"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+msgid "Confirm"
+msgstr "Bestätigen Sie"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.actions.act_window,help:sh_attendance_modification_request.sh_attendance_modification_request_action
+msgid "Create a new Attendance Modification Request"
+msgstr "Erstellen Sie eine neue Anwesenheitsänderungsanforderung"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__create_uid
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__create_date
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__date
+msgid "Date"
+msgstr "Datum"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__display_name
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__state__draft
+msgid "Draft"
+msgstr "Luftzug"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__employee_id
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "Employee"
+msgstr "Angestellter"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_follower_ids
+msgid "Followers"
+msgstr "Anhänger"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Anhänger (Partner)"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Schriftart fantastisches Symbol z. FA-Aufgaben"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "Group"
+msgstr "Gruppe"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__has_message
+msgid "Has Message"
+msgstr "Hat eine Nachricht"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__id
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__id
+msgid "ID"
+msgstr "ICH WÜRDE"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_exception_icon
+msgid "Icon"
+msgstr "Symbol"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Symbol, um eine Ausnahmeaktivität anzuzeigen."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_needaction
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Wenn Sie geprüft werden, benötigen neue Nachrichten Ihre Aufmerksamkeit."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_error
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Wenn aktiviert, haben einige Nachrichten einen Lieferfehler."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_is_follower
+msgid "Is Follower"
+msgstr "Ist Anhänger"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request____last_update
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__write_uid
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__write_date
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Hauptanhang"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_error
+msgid "Message Delivery error"
+msgstr "Fehler beim Zustellungsfehler"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_ids
+msgid "Messages"
+msgstr "Mitteilungen"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Meine Aktivitätsfrist."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__name
+msgid "Name"
+msgstr "Name"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Nächste Aktivitätsfrist."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "Nächste Aktivitätsübersicht."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "Nächste Aktivitätstyp."
+
+#. module: sh_attendance_modification_request
+#: code:addons/sh_attendance_modification_request/models/sh_attendance_modification_request.py:0
+#: code:addons/sh_attendance_modification_request/models/sh_attendance_modification_request.py:0
+#: code:addons/sh_attendance_modification_request/models/sh_attendance_modification_request.py:0
+#, python-format
+msgid "Notification"
+msgstr "Benachrichtigung"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Anzahl der Aktionen"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "Anzahl der Fehler."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Anzahl der Nachrichten, die eine Aktion erfordert"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Anzahl der Nachrichten mit dem Lieferfehler"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Anzahl ungelesener Nachrichten"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__reason
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__myreason
+msgid "Reason"
+msgstr "Grund"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__state__reject
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+msgid "Reject"
+msgstr "Ablehnen"
+
+#. module: sh_attendance_modification_request
+#: model:ir.actions.act_window,name:sh_attendance_modification_request.sh_attendance_modification_request_reason_action
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__rejection_reason
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_reason_form_view
+msgid "Rejection Reason"
+msgstr "Ablehnungsgrund"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__user_id
+msgid "Related user name for the resource to manage its access."
+msgstr "Zugehöriger Benutzername für die Ressource, um den Zugriff zu steuern."
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_reason_form_view
+msgid "Remove Reason"
+msgstr "Grund entfernen."
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+msgid "Reset To Draft"
+msgstr "Auf den Entwurf zurücksetzen"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_user_id
+msgid "Responsible User"
+msgstr "Verantwortungsbewusster Benutzer"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS-Lieferfehler."
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_reason_form_view
+msgid "Save Reason"
+msgstr "Grund sparen"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__state
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "State"
+msgstr "Bundesland"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status basierend auf Aktivitäten \ n"
+"Überfällig: Fälligkeitsdatum ist bereits bestanden \n"
+"Heute: Aktivitätsdatum ist heute \n"
+"Geplant: Zukünftige Aktivitäten. \n"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "Today"
+msgstr "Heute"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__type
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "Type"
+msgstr "Typ"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Art der Ausnahmeaktivität auf Datensatz."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_unread
+msgid "Unread Messages"
+msgstr "ungelesene Nachrichten"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Ungelesene Nachrichtenzähler"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__updated_value
+msgid "Updated Value Checkin"
+msgstr "Aktualisiertes Wert-Checkin."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__updated_value_checkout
+msgid "Updated Value Checkout"
+msgstr "Aktualisierte Wertschachtel."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__user_id
+msgid "User"
+msgstr "Benutzer"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__state__waiting_for_approve
+msgid "Waiting For Approve"
+msgstr "Warten auf Genehmigung"

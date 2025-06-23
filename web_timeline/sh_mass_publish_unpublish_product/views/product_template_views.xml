@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="model_mass_publish_product" model="ir.actions.server">
+        <field name="name">Mass Publish Product</field>
+        <field name="model_id" ref="product.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="binding_view_types">list</field>
+        <field name="code"> action = model.sh_action_publish_product()</field>
+    </record>
+
+    <record id="model_mass_unpublish_product" model="ir.actions.server">
+        <field name="name">Mass Unpublish Product</field>
+        <field name="model_id" ref="product.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="binding_view_types">list</field>
+        <field name="code"> action = model.sh_action_unpublish_product()</field>
+    </record>
+
+</odoo>

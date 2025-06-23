@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <!-- SIGNUP PAGE -->
+    <template id="theme_mobiheal_website_web_signup" name="Mobiheal Website Signup Icon" inherit_id="auth_signup.fields">
+        <xpath expr="//div[hasclass('field-login')]" position="before">
+            <img alt="Mobiheal Logo" t-if="request.website.sudo().theme_id and request.website.sudo().theme_id.name == 'theme_mobiheal_website'" class="d-block mx-auto img img-fluid sh_website_logo" src="/theme_mobiheal_website/static/src/img/logo/mobiheal_logo.png"/>
+        </xpath>
+    </template>
+
+    <!-- LOGIN PAGE -->
+    <template id="theme_mobiheal_website_web_login" name="Mobiheal Website Login Icon" inherit_id="web.login">
+        <xpath expr="//input[@name='csrf_token']" position="before">
+            <img alt="Mobiheal Logo" t-if="request.website.sudo().theme_id and request.website.sudo().theme_id.name == 'theme_mobiheal_website'" class="d-block mx-auto img img-fluid sh_website_logo" src="/theme_mobiheal_website/static/src/img/logo/mobiheal_logo.png"/>
+        </xpath>
+    </template>
+
+    <!-- RESET PAGE -->
+    <template id="theme_mobiheal_website_reset_password" name="Mobiheal Website Reset Password" inherit_id="auth_signup.reset_password">
+        <xpath expr="//div[hasclass('field-login')]" position="before">
+            <img alt="Mobiheal Logo" t-if="request.website.sudo().theme_id and request.website.sudo().theme_id.name == 'theme_mobiheal_website'" class="d-block mx-auto img img-fluid sh_website_logo" src="/theme_mobiheal_website/static/src/img/logo/mobiheal_logo.png"/>
+        </xpath>
+    </template>
+
+    <!-- Blog banner template-->
+    <template id="sh_opt_blog_cover_post_mobiheal" inherit_id="website_blog.opt_blog_cover_post">
+        <t t-call="website.record_cover" position="replace">
+            <section class="mb_support_banner o_colored_level" data-snippet="mb_support_tmpl" data-name="EventHeal" style="background-image: none;" data-oe-model="ir.ui.view" data-oe-id="4283" data-oe-field="arch" data-oe-xpath="/t[1]/t[1]/div[1]/section[1]">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 o_colored_level">
+                            <div class="left_title">
+                                <h1 class="elementor-heading-title elementor-size-default">Blog</h1>
+                                <p>Comming Soon...</p>		
+                            </div>
+                        </div>
+                        <div class="col-md-4 o_colored_level">
+                            <div class="right_img">
+                                <img src="/theme_mobiheal_website/static/src/img/blog/blog.webp" alt="Event Management In Mobile" loading="lazy" data-original-title="" title="" aria-describedby="tooltip106905" style=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="Chatter" t-inherit="mail.Chatter" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ThreadView" position="before">
+
+            <div class="d-inline" t-if="accesschatgpt">
+                <button t-on-click="click_summary" class="m-2 sh_summary_btn btn btn-primary" t-if="state.show_summary_btn">
+                   Summary
+                </button>
+            </div>
+        </xpath>
+    </t>
+</templates>

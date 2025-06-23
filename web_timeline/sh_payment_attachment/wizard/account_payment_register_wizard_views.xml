@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Add attachment Filed in register payment Wizard-->
+    <record id="sh_payment_attachment_view_account_payment_register_form_inherit" model="ir.ui.view">
+        <field name="name">account.payment.register.view.form.inherit</field>
+        <field name="model">account.payment.register</field>
+        <field name="inherit_id" ref="account.view_account_payment_register_form"/>
+        <field name="arch" type="xml">
+            <field name="group_payment" position="after">
+                <field name="sh_attachments" widget="many2many_binary" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

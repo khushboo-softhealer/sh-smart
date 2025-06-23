@@ -1,0 +1,88 @@
+.js_blog {
+    &.website_blog {
+        .navbar {
+            background: transparent;
+            padding-top: 30px;
+
+            @include media-breakpoint-down(lg) {
+                padding-top: 30px;
+            }
+
+            .s_searchbar_input {
+                .input-group {
+                    input {
+                        border-radius: 10px !important;
+
+                        &:focus {
+                            box-shadow: 0 0 0 0.25rem rgba(241, 63, 72, 0.25);
+                        }
+
+                        &:focus-within {
+                            box-shadow: 0 0 0 0.25rem rgba(241, 63, 72, 0.25);
+                        }
+                    }
+
+                    .btn-primary {
+                        position: absolute;
+                        right: 0;
+                        border-radius: 10px;
+                        background: #e5594f !important;
+                        border-color: #e5594f !important;
+                        z-index: 5;
+
+                        &:hover {
+                            color: #fff;
+                            background: #1c3360 !important;
+                            transition: 0.3s all ease-in-out;
+                            border-color: #1c3360 !important;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        #o_wblog_index_content {
+            margin-bottom: 50px;
+            #o_wblog_posts_loop{
+                .o_wblog_post{
+                    .o_blog_post_title,
+                    .o_wblog_normalize_font.pe-2.pb-2{
+                        time{
+                            color: #1c3360 !important;
+                        }
+                        b{
+                            a{
+                                color: #1c3360 !important;
+                            }
+                        }
+                    }
+                    .o_wblog_post_short_tag_section{
+                        .post_link{
+                            color: #e5594f !important;
+                        }
+                    }
+                    .mt-2.o_wblog_normalize_font{
+                        color: #3E3E3E;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Blog Detail //
+
+.js_blog website_blog{
+    .o_wblog_post_main{
+        .o_wblog_post_content{
+            .breadcrumb{
+                .breadcrumb-item{
+                    a{
+                        color: #e5594f;
+                    }
+                }
+            }
+        }
+    }
+}

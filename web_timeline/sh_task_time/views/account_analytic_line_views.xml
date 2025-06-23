@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="sh_task_time_hr_timesheet_line_search" model="ir.ui.view">
+    <field name="name">account.analytic.line.search</field>
+    <field name="model">account.analytic.line</field>
+    <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_search" />
+    <field name="arch" type="xml">
+      <xpath expr="//separator" position="after">
+        <filter string="Today" name="today" domain="[('date', '&gt;', (context_today() - datetime.timedelta(days=1)).strftime('%Y-%m-%d'))]"/>
+        <filter name="yesterday" string="Yesterday" domain="[('date','>=', ((context_today()-datetime.timedelta(days=1)).strftime('%Y-%m-%d'))), ('date','&lt;', ((context_today()+datetime.timedelta(days=0)).strftime('%Y-%m-%d')))]" />
+        <filter name="this_week" string="This Week" domain="[('date','&gt;=',(context_today()+relativedelta(weeks=-1,days=1,weekday=-1)).strftime('%Y-%m-%d')),('date','&lt;',(context_today()+relativedelta(weekday=6)).strftime('%Y-%m-%d'))]" />
+        <filter name="this_month" string="This Month" domain="[('date','&lt;',(context_today()+relativedelta(months=1)).strftime('%Y-%m-01')), ('date','&gt;=',time.strftime('%Y-%m-01'))]" />
+        <filter name="this_quarter" string="This Quarter" domain="[('date','&lt;',(context_today()+relativedelta(months=4)).strftime('%Y-%m-01')), ('date','&gt;=',time.strftime('%Y-%m-01'))]" />
+        <filter name="this_year" string="This Year" domain="[('date','&lt;=', time.strftime('%Y-12-31')),('date','>=',time.strftime('%Y-01-01'))]" />
+        <filter string="Last 7 days" name="last_7days" domain="[('date','&gt;', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+        <filter string="Last 30 days" name="last_month" domain="[('date','&gt;', (context_today() - datetime.timedelta(days=30)).strftime('%Y-%m-%d'))]"/>
+        <filter string="Last 365 Days" name="last_365_days"   domain="[('date', '>', (datetime.datetime.now() + relativedelta(days=-365)).to_utc().strftime('%Y-%m-%d %H:%M:%S'))]"/>
+        
+        <filter string="Last Week" name="last_week" domain="[
+          ('date', '>=', (datetime.datetime.combine(context_today() + relativedelta(weeks=-2,days=1,weekday=0), datetime.time(0,0,0)).to_utc()).strftime('%Y-%m-%d %H:%M:%S')),
+          ('date', '&lt;', (datetime.datetime.combine(context_today() + relativedelta(weeks=-1,days=1,weekday=0), datetime.time(0,0,0)).to_utc()).strftime('%Y-%m-%d %H:%M:%S'))]"/> 
+        <filter string="Last Month" name="last_month" 
+          domain="[('date','&gt;=',(context_today()-relativedelta(months=1)).strftime('%Y-%m-01')),
+          ('date','&lt;',(context_today()+relativedelta(months=0)).strftime('%Y-%m-01'))]" />
+        <filter string="Last Quarter" name="last_quarter" domain="[('date', '&gt;=', (context_today() - relativedelta(months=3)).strftime('%Y-%m-01')), ('date', '&lt;', (context_today() - relativedelta(days=1)).strftime('%Y-%m-01'))]"/>
+        <filter string="Last Year" name="year" 
+        domain="[('date', '&gt;=', (context_today() - relativedelta(years=1)).strftime('%Y-01-01')),
+         ('date', '&lt;=', (context_today() - relativedelta(years=1)).strftime('%Y-12-31'))]" />
+        </xpath>
+        
+    </field>
+</record>
+
+    <record id="hr_timesheet.act_hr_timesheet_line" model="ir.actions.act_window">
+        <field name="name">My Timesheets</field>
+        <field name="res_model">account.analytic.line</field>
+        <field name="view_mode">tree,form,kanban,pivot,graph</field>
+        <field name="domain">[('project_id', '!=', False), ('user_id', '=', uid)]</field>
+        <field name="context">{
+            "search_default_week":1,
+            "search_default_today":1,
+            "is_timesheet": 1,
+            "manual_create":1,
+        }</field>
+        <field name="search_view_id" ref="hr_timesheet.hr_timesheet_line_my_timesheet_search"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            No activities found. Let's start a new one!
+          </p>
+          <p>
+            Track your working hours by projects every day and invoice this time to your customers.
+          </p>
+        </field>
+    </record>
+
+
+    <record id="hr_timesheet.timesheet_action_all" model="ir.actions.act_window">
+        <field name="name">All Timesheets</field>
+        <field name="res_model">account.analytic.line</field>
+        <field name="view_mode">tree,form,kanban,pivot,graph</field>
+        <field name="search_view_id" ref="hr_timesheet.hr_timesheet_line_search"/>
+        <field name="domain">[('project_id', '!=', False)]</field>
+        <field name="context">{
+            'search_default_week':1,
+            'search_default_today':1,
+            'is_timesheet': 1,
+            "manual_create":1,
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No activities found. Let's start a new one!
+          </p>
+          <p>
+            Track your working hours by projects every day and invoice this time to your customers.
+          </p>
+        </field>
+    </record>
+
+    <record id="sh_hr_timesheet_line_tree_child_domain" model="ir.ui.view">
+      <field name="name">account.analytic.line.tree.hr_timesheet.child.domain</field>
+      <field name="model">account.analytic.line</field>
+      <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree" />
+      <field name="arch" type="xml">
+        <field name="project_id" position="attributes">
+          <attribute name="domain">[('sh_child_ids', '=', False)]</attribute>
+        </field>
+      </field>
+    </record>
+</odoo>

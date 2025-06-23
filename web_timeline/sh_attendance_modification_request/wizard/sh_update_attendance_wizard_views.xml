@@ -1,0 +1,44 @@
+<odoo>
+    <!-- hr.attendance -->
+    <record id="sh_attendance_update_form_view" model="ir.ui.view">
+        <field name="name">sh.hr.attendance.update.wizard.form</field>
+        <field name="model">sh.hr.attendance.update.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Update Attendance">
+                <sheet>
+                	<div class="alert alert-info text-center o_form_header" style="background: #efd9d9; color: maroon; border: 1px solid #e9b4b4;" attrs="{'invisible': [('checkin_alert', '=', False)]}" role="alert">
+	                    <div>
+	                        <strong>Please kindly check your checkin date &amp; timing properly!</strong>
+	                    </div>
+	                </div>
+	                <div class="alert alert-info text-center o_form_header" style="background: #efd9d9; color: maroon; border: 1px solid #e9b4b4;" attrs="{'invisible': [('checkout_alert','=',False)]}" role="alert">
+	                    <div>
+	                        <strong>Please kindly check your checkout date &amp; timing properly!</strong>
+	                    </div>
+	                </div>
+                    <group>
+                        <field name="type" widget="radio" />
+                        <field name="updated_checkin" attrs="{'invisible':[('type','=','checkout')],'required':['|',('type','=','checkin'),('type','=','both')]}" />
+                        <field name="updated_checkout" attrs="{'invisible':[('type','=','checkin')],'required':['|',('type','=','checkout'),('type','=','both')]}" />
+                        <field name="reason" />
+                        <field name="checkin_alert" invisible="1"/>
+                        <field name="checkout_alert" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button name="save_attendance" class='btn-primary' id="saveattendance" string='Create Attendance Modification Request' type='object'></button>
+                        <button string='Cancel' class='btn-secondary' special="cancel"></button>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_attendance_update_action" model="ir.actions.act_window">
+        <field name="name">Update Attendance</field>
+        <field name="res_model">sh.hr.attendance.update.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name='target'>new</field>
+    </record>
+   
+</odoo>

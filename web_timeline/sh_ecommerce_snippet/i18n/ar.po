@@ -1,0 +1,371 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_ecommerce_snippet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-12 11:20+0000\n"
+"PO-Revision-Date: 2020-11-12 11:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_10_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_10_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_1_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_1_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_3_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_3_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_4_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_4_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_5_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_5_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_6_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_6_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_7_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_7_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_9_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_9_item_single_tab
+msgid "<span class=\"fa fa-heart\" role=\"img\" aria-label=\"Add to wishlist\"/>"
+msgstr "<span class=\"fa fa-heart\" role=\"img\" aria-label=\"أضف إلى قائمة الامنيات\"/>"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_6_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_6_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_7_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_7_item_single_tab
+msgid "<span class=\"fa fa-shopping-cart\"/><span>Add To Cart</span>"
+msgstr "<span class=\"fa fa-shopping-cart\"/><span>أضف إلى السلة</span>"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8_item_single_tab
+msgid "<span>Add To Cart</span>"
+msgstr "<span>أضف إلى السلة</span>"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_7
+msgid "<span>BESTSELLER</span>"
+msgstr "<span>الأكثر مبيعا</span>"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_3_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_4_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_4_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_product_snippet_options
+msgid "Add to Cart"
+msgstr "أضف إلى السلة"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_10_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_10_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_1_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_1_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_3_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_3_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_4_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_4_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_5_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_5_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_6_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_6_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_7_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_7_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_9_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_9_item_single_tab
+msgid "Add to Wishlist"
+msgstr "أضف إلى قائمة الامنيات"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__autoplay
+msgid "Automatic Slide?"
+msgstr "الشريحة التلقائية؟"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_product_snippet_options
+msgid "Category"
+msgstr "الفئة"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__create_uid
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__create_date
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_product_snippet_options
+msgid "Description"
+msgstr "وصف"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__display_name
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_10
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_6
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_7
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_9
+msgid ""
+"Display any products as tabs or accordions with optional grid or carousel mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different\n"
+"                        styles per module."
+msgstr ""
+"عرض أي منتجات كعلامات تبويب أو أكورديونات مع الشبكة الاختيارية أو الوضع الدائري. منتجات مخصصة لكل صف لكل وحدة نمطية ولكل نقطة توقف. يمكن لكل وحدة عرض منتجات إما في الشبكة أو عرض القائمة مع مختلف \ n"
+"أنماط لكل وحدة."
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__sequence
+msgid "Display order"
+msgstr "ترتيب العرض"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields.selection,name:sh_ecommerce_snippet.selection__sh_ecom_s_filter__filter_type__domain
+msgid "Domain"
+msgstr "نطاق"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.actions.act_window,name:sh_ecommerce_snippet.sh_ecom_s_filter_action
+#: model:ir.ui.menu,name:sh_ecommerce_snippet.sh_ecom_s_filter_menu
+msgid "Dynamic Product Filters"
+msgstr "مرشحات المنتجات الديناميكية"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_10
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_2
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_4
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_5
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_6
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_7
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_9
+msgid "Featured Products"
+msgstr "منتجات مميزة"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__filter_id
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_product_snippet_options
+msgid "Filter"
+msgstr "منقي"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__filter_type
+msgid "Filter Type"
+msgstr "نوع فلتر"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__id
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__id
+msgid "ID"
+msgstr "هوية شخصية"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__items
+msgid "Items Per Slide"
+msgstr "العناصر في كل شريحة"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter____last_update
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__write_uid
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__write_date
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__limit
+msgid "Limit"
+msgstr "حد"
+
+#. module: sh_ecommerce_snippet
+#: code:addons/sh_ecommerce_snippet/models/filter.py:0
+#, python-format
+msgid "Limit must not be negative."
+msgstr "يجب ألا يكون الحد سالبًا."
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__loop
+msgid "Loop Slide?"
+msgstr "الشريحة الحلقية؟"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8_item
+msgid ""
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer\n"
+"                                                            took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially\n"
+"                                                            unchanged."
+msgstr ""
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer\n"
+"                                                            took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially\n"
+"                                                            unchanged."
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8_item_single_tab
+msgid ""
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type\n"
+"                                        and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+msgstr ""
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type\n"
+"                                        and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields.selection,name:sh_ecommerce_snippet.selection__sh_ecom_s_filter__filter_type__manual
+msgid "Manually"
+msgstr "يدويا"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__name
+msgid "Name"
+msgstr "اسم"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_3
+msgid "New Arrival"
+msgstr "قادم جديد"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_product_snippet_options
+msgid "None"
+msgstr "لا شيء"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_1
+msgid "Popular Products"
+msgstr "المنتجات الشعبية"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model,name:sh_ecommerce_snippet.model_sh_ecom_s_filter_tab_product_line
+msgid "Product Filter Tab"
+msgstr "علامة تبويب عامل تصفية المنتج"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__tab_product_line
+msgid "Product Tabs"
+msgstr "علامات تبويب المنتج"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__product_tmpl_ids
+msgid "Products"
+msgstr "منتجات"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_product_snippet_options
+msgid "Rating"
+msgstr "تقييم"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_product_snippet_options
+msgid "Sale Price"
+msgstr "سعر البيع"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_10_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_10_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_1_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_1_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_2_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_2_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_3_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_3_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_4_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_4_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_5_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_5_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_6_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_6_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_7_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_7_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_8_item_single_tab
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_9_item
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_snippet_tmpl_9_item_single_tab
+msgid "Shopping cart"
+msgstr "عربة التسوق"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__nav
+msgid "Show Navigation Buttons?"
+msgstr "إظهار أزرار التنقل؟"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__is_show_slider
+msgid "Show Slider?"
+msgstr "إظهار شريط التمرير؟"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__is_show_tab
+msgid "Show Tabs?"
+msgstr "إظهار علامات التبويب؟"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_s_filter_form
+msgid "Slide Options"
+msgstr "خيارات الشرائح"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter__speed
+msgid "Slide Speed"
+msgstr "سرعة الانزلاق"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model,name:sh_ecommerce_snippet.model_sh_ecom_s_filter
+msgid "Slider"
+msgstr "المنزلق"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__slider_id
+msgid "Slider Reference"
+msgstr "مرجع شريط التمرير"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_s_filter_form
+msgid "Tab Lines"
+msgstr "خطوط الجدولة"
+
+#. module: sh_ecommerce_snippet
+#: model:ir.model.fields,field_description:sh_ecommerce_snippet.field_sh_ecom_s_filter_tab_product_line__name
+msgid "Tab Name"
+msgstr "اسم علامة التبويب"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecom_s_filter_form
+msgid "Tabs"
+msgstr "نوافذ التبويب"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_product_snippet_options
+msgid "Wish List"
+msgstr "قائمة الرغبات"
+
+#. module: sh_ecommerce_snippet
+#: model_terms:ir.ui.view,arch_db:sh_ecommerce_snippet.sh_ecommerce_snippet_website_snippets
+msgid "ecommerce snippet"
+msgstr "مقتطف التجارة الإلكترونية"

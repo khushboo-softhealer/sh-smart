@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="softhealer_website_base_loyalti_tmpl" name="Custom Loyalti Tmpl" inherit_id="website_sale_loyalty.reduction_coupon_code">
+        <xpath expr="//a[hasclass('show_coupon')]" position="attributes">
+            <attribute name="t-attf-class" separator=" " add="#{'d-none show_coupon' if website_sale_order.order_line and website_sale_order.order_line.sorted('price_unit').mapped('price_unit')[0] &lt; 0 else 'show_coupon'}" remove="" value=""></attribute>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="snippets" inherit_id="website.snippets" name="Dynamic content snippets">
+        <xpath expr="//div[@id='snippet_structure']" position="before">
+            <div id="dynamic_content_snippet_structure" class="o_panel">
+                <div class="o_panel_header">Dynamic Content</div>
+                <div class="o_panel_body">
+                    <t t-snippet="sh_website_dynamic_content.s_sh_dynamic_content" string="Dynamic Content" t-thumbnail="/sh_website_dynamic_content/static/src/img/dynamic_content.svg"/>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+   
+</odoo>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- backend -->
+    <record model="ir.ui.view" id="sh_product_product_normal_form_view_custom_new">
+        <field name="name">sh.product.product.form.view.custom</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="%(sh_product_base.sh_chage_log_action_2)d" class="oe_stat_button"
+                    icon="fa-sliders" type="action"
+                    groups="sh_product_base.group_product_tags_manager">
+                    <field string="Change logs" name="change_log_count" widget="statinfo" />
+                </button>
+            </xpath>
+
+            <xpath expr="//page[@name='sales']" position="after">
+                <!-- ShViewUpdate -->
+                <page string="Features" invisible="1">
+                    <group>
+                        <field name="sh_features" nolabel="1" />
+                    </group>
+                </page>
+                <!-- ShViewUpdate -->
+                <page string="About Module" invisible="1">
+                    <group>
+                        <field name="website_description" string="About Module" nolabel="1" />
+                    </group>
+                </page>
+                <!-- ShViewUpdate -->
+                <page string="Change Log" invisible="1">
+                    <field name="product_variant_change_log_id" nolabel="1">
+                        <tree editable="top">
+                            <field name="product_variant_id" invisible="1" />
+                            <field name="date" />
+                            <field name="log_type" />
+                            <field name="version" />
+                            <field name="details" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+
+            <xpath expr="//page[@name='eCommerce']//field[@name='resposible_user_id']"
+                position="before">
+                <!-- ShViewUpdate -->
+                <field name="sh_sub_task_created" invisible="1" />
+                <field name="related_sub_task" />
+                <!-- ShViewUpdate -->
+                <field name="banner" invisible="1" />
+                <field name="sh_demo_db_template_name" />
+                <!-- ShViewUpdate -->
+                <field name="sh_edition_ids" widget="many2many_tags" invisible="1" />
+                <field name="depends" widget="many2many_tags" />
+                <field name="required_apps" widget="many2many_tags" />
+                <field name="license" />
+                <field name="product_version" />
+                <!-- ShViewUpdate -->
+                <field name="supported_browsers" widget="many2many_tags" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="released_date" invisible="1" />
+                <field name="last_updated_date" />
+                <!-- ShViewUpdate -->
+                <field name="live_demo" widget='url' invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="user_guide" widget='url' invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="related_video" widget="many2many_tags" invisible="1" />
+                <!-- ShViewUpdate (Create New Field For This, Just hide it) -->
+                <field name="sh_blog_post_ids" widget="many2many_tags" invisible="1" />
+                <field name="sh_blog_post_id" readonly="1" />
+                <field name="tag_ids" widget="many2many_tags" />
+                <field name="qty_show" />
+                <!-- <field name="sh_scale_ids" /> -->
+            </xpath>
+
+            <!-- <field name="resposible_user_id" position="before">
+                <field
+            name="banner"/>
+                <field name="sh_edition_ids" widget="many2many_tags" />
+            <field name="depends" widget="many2many_tags"/>
+                <field
+            name="required_apps" widget="many2many_tags"/>
+                <field name="license"/>
+            <field name="product_version"/>
+                <field name="supported_browsers"
+            widget="many2many_tags"/>
+                <field name="released_date"/>
+                <field
+            name="last_updated_date"/>
+                <field name="live_demo" widget='url'/>
+                <field
+            name="related_video" widget="many2many_tags"/>
+                <field
+            name="sh_blog_post_ids" widget="many2many_tags"/>
+            </field> -->
+
+            <field name="taxes_id" position="after">
+                <field name="euro_price" />
+                <field name="usd_price" />
+            </field>
+        </field>
+    </record>
+
+    <!-- sh_backend field view -->
+    <record model="ir.ui.view" id="sh_product_product_easy_custom_edit_view">
+        <field name="name">sh.product.product.easy.edit.view</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_variant_easy_edit_view" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='id']" position="before">
+                <!-- <button name="get_product_image_ids" type="object" class="oe_stat_button"
+                    icon="fa-image" string="Extra Images">
+                </button> -->
+
+                <button name="%(sh_product_base.sh_chage_log_action_2)d" class="oe_stat_button"
+                    icon="fa-sliders" type="action"
+                    groups="sh_product_base.group_product_tags_manager">
+                    <field string="Change logs" name="change_log_count" widget="statinfo" />
+                </button>
+            </xpath>
+
+            <xpath expr="//group[@name='packaging']" position="after">
+                <notebook>
+                    <!-- ShViewUpdate -->
+                    <page string="Sales" invisible="1">
+                        <group string="Description for Customers">
+                            <field name="description_sale" nolabel="1" />
+                        </group>
+                    </page>
+                    <!-- ShViewUpdate -->
+                    <page string="Features" invisible="1">
+                        <group>
+                            <field name="sh_features" nolabel="1" />
+                        </group>
+                    </page>
+                    <!-- ShViewUpdate -->
+                    <page string="About Module" invisible="1">
+                        <group>
+                            <field name="website_description" string="About Module" nolabel="1" />
+                        </group>
+                    </page>
+                    <!-- ShViewUpdate -->
+                    <page string="Change Log" invisible="1">
+                        <field name="product_variant_change_log_id" nolabel="1">
+                            <tree editable="top">
+                                <field name="product_variant_id" invisible="1" />
+                                <field name="date" />
+                                <field name="log_type" />
+                                <field name="version" />
+                                <field name="details" />
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="eCommerce" name="softhealer_shop">
+                        <group>
+                            <group string="Softhealer Shop" name="softhealer_shop">
+                                <!-- ShViewUpdate -->
+                                <field name="sh_sub_task_created" invisible="1" />
+                                <field name="related_sub_task" />
+                                <!-- ShViewUpdate -->
+                                <field name="banner" invisible="1" />
+                                <field name="sh_demo_db_template_name" />
+                                <!-- ShViewUpdate -->
+                                <field name="sh_edition_ids" widget="many2many_tags" invisible="1" />
+                                <field name="depends" widget="many2many_tags" />
+                                <field name="required_apps" widget="many2many_tags" />
+                                <field name="license" />
+                                <field name="product_version" />
+                                <!-- ShViewUpdate -->
+                                <field name="supported_browsers" widget="many2many_tags" invisible="1" />
+                                <!-- ShViewUpdate -->
+                                <field name="released_date" invisible="1" />
+                                <field name="last_updated_date" />
+                                <!-- ShViewUpdate -->
+                                <field name="live_demo" widget='url' invisible="1" />
+                                <!-- ShViewUpdate -->
+                                <field name="user_guide" widget='url' invisible="1" />
+                                <!-- ShViewUpdate -->
+                                <field name="related_video" widget="many2many_tags" invisible="1" />
+                                <!-- ShViewUpdate -->
+                                <field name="sh_blog_post_ids" widget="many2many_tags" invisible="1" />
+                                <field name="sh_blog_post_id" readonly="1" />
+                                <field name="tag_ids" widget="many2many_tags" />
+                                <field name="qty_show" />
+                                <field name="resposible_user_id" />
+                                <field name="other_responsible_users" widget="many2many_tags" />
+                                <field name="website_meta_description"/>
+                                <field name="website_meta_keywords"/>
+                                <field name="website_meta_title"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </xpath>
+
+            <xpath expr="//group[@name='weight']" position="after">
+                <group>
+                    <group>
+                        <field name="euro_price" />
+                        <field name="usd_price" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="product_product_tree_inherit_view">
+        <field name="name">product.product.tree.inherit.view</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view" />
+        <field name="arch" type="xml">
+            <field name="lst_price" position="after">
+                <field name="euro_price" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,40 @@
+body:not(.o_fullscreen) #oe_main_menu_navbar:not(.o_hidden) + #wrapwrap .o_header_affixed, body:not(.o_fullscreen) #oe_main_menu_navbar:not(.o_hidden) + #wrapwrap .modal {
+  display: none;
+}
+
+::-moz-selection {
+  background: #e55a52;
+  color: #fff;
+}
+
+::selection {
+  background: #e55a52;
+  color: #fff;
+}
+
+::-moz-selection {
+  -webkit-text-fill-color: #fff;
+}
+
+::selection {
+  -webkit-text-fill-color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1320px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}/*# sourceMappingURL=mixin.css.map */

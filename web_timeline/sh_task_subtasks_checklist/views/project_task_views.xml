@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- <record id="sh_task_view_inherit" model="ir.ui.view">
+		<field name="name">sh.task.view.inherit</field>
+		<field name="model">project.task</field>
+		<field name="inherit_id" ref="project.view_task_form2" />
+		<field name="arch" type="xml">
+			<xpath expr="//notebook/page[@name='extra_info']" position="after">
+				<page name="sub_task" string="Sub Task">
+					<field name="custom_checklist" string="Checklist Completed"
+						widget="percentpie" style="height:30px;background:White;" />
+					<field name="sh_sub_task_lines"
+						context="{'default_project_id':project_id,'search_default_parent_id': active_id, 'default_name': name + ':' if name else '' + ':'}">
+						<tree>
+							<field name="name" />
+							<field name="project_id" />
+							<field name="user_ids" widget="many2many_tags" />
+							<field name="stage_id" widget="badge"
+								decoration-success="stage_done==True"
+								decoration-danger="stage_cancel==True"
+								decoration-info="stage_draft==True" />
+							<field name="task_runner_ids" widget="many2many_tags" />
+							<button string="Complete" name="action_check" type="object"
+								icon="fa-check" />
+							<field name="stage_done" invisible="1" />
+							<button string="Cancel" name="action_cancel" type="object"
+								icon="fa-close" />
+							<field name="stage_cancel" invisible="1" />
+							<button string="Draft" name="action_draft" type="object"
+								icon="fa-refresh" />
+							<field name="stage_draft" invisible="1" />
+						</tree>
+					</field>
+				</page>
+			</xpath>
+		</field>
+	</record> -->
+
+	<record id="sh_task_kanban_view_inherit" model="ir.ui.view">
+		<field name="name">sh.task.kanban.view.inherit</field>
+		<field name="model">project.task</field>
+		<field name="inherit_id" ref="project.view_task_kanban" />
+		<field name="arch" type="xml">
+			<field name="allow_milestones" position="after">
+				<field name="subtask_count" />
+			</field>
+			<xpath expr="//div[hasclass('o_kanban_record_top')]//div[hasclass('o_dropdown_kanban')]"
+				position="before">
+				<field name="parent_id" invisible="True" />
+				<a name="action_subtask" type="object"
+					attrs="{'invisible' : [('parent_id', '!=', False)]}">
+					<h3 style="border: 1px solid #e2dede;border-radius: 50%;padding: 4px;}">
+						<field name="subtask_count" />
+					</h3>
+				</a>
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

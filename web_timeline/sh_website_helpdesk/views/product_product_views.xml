@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="website_menu_products"
+        action="product.product_normal_action_sell"
+        groups="product.group_product_variant"
+        parent="website_sale.menu_catalog"
+        sequence="2"/>
+</odoo>

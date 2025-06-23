@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Main survey layout -->
+    <template id="layout" name="Survey Layout" inherit_id="survey.layout">
+       
+          
+        <xpath expr="//div[@id='wrapwrap']" position="before">
+			<!-- Style -->
+            <t t-set="survmate_style" t-value="(('height: 100%; overflow: auto; background: url(' + survey.background_image_url + ') no-repeat fixed center; box-shadow: inset 0 0 0 10000px rgba(255,255,255,.7); background-size: cover;') if survey and survey.background_image and answer else 'height: 100%; overflow: auto;')"/>
+        	<t t-if="survey and survey.sh_survmate_settings_id.sh_survmate_bg_color and survey.sh_survmate_settings_id.sh_survmate_show_bg_color">
+	            <t t-set="survmate_style" t-value="'height: 100%; overflow: auto;background: ' + survey.sh_survmate_settings_id.sh_survmate_bg_color"/>    		
+        	</t>
+        	
+        	<!-- Class -->
+            <t t-set="sh_survmate_class_all" t-value="''"/>    
+			<t t-set="sh_survmate_button_class" t-value="''"/>     
+       		<t t-set="sh_survmate_input_class" t-value="''"/>             		
+       		<t t-set="sh_survmate_section_class" t-value="''"/>  
+       		<t t-set="sh_survmate_checkbox_class" t-value="''"/>  
+       		<t t-set="sh_survmate_radio_button_class" t-value="''"/>  	          		
+
+
+			<t t-if="survey and survey.sh_survmate_settings_id.sh_survmate_button_style" t-set="sh_survmate_button_class" t-value="'sh_survmate_button_' + str(survey.sh_survmate_settings_id.sh_survmate_button_style) "/>     
+       		<t t-if="survey and survey.sh_survmate_settings_id.sh_survmate_input_style" t-set="sh_survmate_input_class" t-value="'sh_survmate_input_' + str(survey.sh_survmate_settings_id.sh_survmate_input_style) "/>             		
+       		<t t-if="survey and survey.sh_survmate_settings_id.sh_survmate_section_style" t-set="sh_survmate_section_class" t-value="'sh_survmate_section_' + str(survey.sh_survmate_settings_id.sh_survmate_section_style) "/>  
+       		<t t-if="survey and survey.sh_survmate_settings_id.sh_survmate_checkbox_style" t-set="sh_survmate_checkbox_class" t-value="'sh_survmate_checkbox_' + str(survey.sh_survmate_settings_id.sh_survmate_checkbox_style) "/>  
+       		<t t-if="survey and survey.sh_survmate_settings_id.sh_survmate_radio_button_style" t-set="sh_survmate_radio_button_class" t-value="'sh_survmate_radiobtn_' + str(survey.sh_survmate_settings_id.sh_survmate_radio_button_style) "/>  	          		
+
+
+       		<t t-set="sh_survmate_class_all" t-value="sh_survmate_button_class + ' ' + sh_survmate_input_class + ' ' + sh_survmate_section_class + ' ' + sh_survmate_checkbox_class + ' ' + sh_survmate_radio_button_class "/> 
+
+
+<!-- Inline css -->
+<style type="text/css">
+	
+	.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_1 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_1 .o_survey_question_matrix input:focus,
+	.sh_survmate_input_style_1 .o_survey_question_matrix .sh_textarea:focus
+	{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}	
+	
+	/*Survey Fill*/
+	
+	/*question*/
+	.o_survey_form form .o_survey_form_content .js_question-wrapper h3 span{color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_question_color"/>;}
+	
+	
+	
+	/*answer color*/
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box{border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	.o_survey_question_matrix input,
+	.o_survey_question_matrix .sh_textarea{border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime,
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .fa-calendar{color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_matrix .fa:not(.fa-qrcode):not(.fa-barcode){color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn span{color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;}
+	.o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn .fa{color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;}
+	
+	/*Section Color*/
+	.o_survey_form h1.o_survey_main_title{color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;}
+	
+	
+	/*Section Desc. Color*/
+	.o_survey_form form .o_survey_form_content .oe_no_empty p{color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_question_color"/>;}
+	
+	/*Input answer text color*/
+	
+	
+	/*Survey Review*/
+	
+	#wrapwrap .o_survey_print h1 span{color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;}
+	
+	#wrapwrap .o_survey_print fieldset .js_question-wrapper h2{color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_question_color"/>;}
+	
+	#wrapwrap .o_survey_print fieldset .o_survey_comment_container .o_survey_question_text_box{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	#wrapwrap .o_survey_print fieldset .o_survey_question_color_box{padding: 6px 5px !important;border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	#wrapwrap .o_survey_print fieldset .js_cls_tmpl_sh_location{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	#wrapwrap .o_survey_print fieldset .o_survey_question_email_box{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	#wrapwrap .o_survey_print fieldset .o_survey_question_date{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	#wrapwrap .o_survey_print fieldset .o_survey_question_datetime{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	
+	#wrapwrap .o_survey_print fieldset .o_survey_question_numerical_box{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_answer_text_color"/> !important;}
+	
+	#wrapwrap .o_survey_print fieldset .oe_no_empty p{color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_question_color"/>;}
+	#wrapwrap .o_survey_print fieldset .o_survey_choice_btn{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;}
+	#wrapwrap .o_survey_print fieldset .o_survey_choice_btn span{color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> ;}
+	#wrapwrap .o_survey_print fieldset .o_survey_choice_btn .fa{color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>;}
+	#wrapwrap .o_survey_print fieldset .o_survey_question_numerical_box{border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;}
+	#wrapwrap .o_survey_print fieldset .o_survey_question_matrix .fa:not(.fa-qrcode):not(.fa-barcode){color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;}
+	
+	/* Survey Print */
+	.o_survey_print .o_survey_question_matrix th{background-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;}
+	.o_survey_print .o_survey_question_matrix td{background-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_secondary_color"/> !important;}
+	
+	/* Survey Fill */
+	.o_survey_form .o_survey_question_matrix th{background-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;}
+	.o_survey_form .o_survey_question_matrix td{background-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_secondary_color"/> !important;}
+		
+	.sh_survmate_section_style_1 .wrap .o_survey_print fieldset h1:after{background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;}
+	.sh_survmate_section_style_1 .o_survey_form form .o_survey_form_content h2:after{background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;}
+	.sh_survmate_button_style_1 .o_survey_form .o_survey_form_content .btn-primary,
+	.sh_survmate_button_style_1 .o_survey_print .btn-primary,
+	.sh_survmate_button_style_1 .o_survey_print div p .btn-primary{background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;}
+	.sh_survmate_button_style_1 .o_survey_form .o_survey_form_content .btn-primary:hover,
+	.sh_survmate_button_style_1 .o_survey_print div p .btn-primary:hover{color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;}
+	.sh_survmate_input_style_1 .o_survey_choice_btn,
+	.sh_survmate_input_style_1 .o_survey_print .o_survey_choice_btn{
+		box-shadow: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> 0px 0px 0px 1px !important;
+	}
+	.sh_survmate_section_style_1 .o_survey_form form .o_survey_form_content h2.o_survey_title,
+	.sh_survmate_section_style_1 .wrap .o_survey_print fieldset .o_page_header h1{color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_title_font_color"/> !important;}
+
+
+	
+	.sh_survmate_button_style_2 .o_survey_form .o_survey_form_content .btn-primary:after,
+	.sh_survmate_button_style_2 .o_survey_print .btn-primary:after,
+	.sh_survmate_button_style_2 .o_survey_print div  p .btn-primary:after{background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;}
+	.sh_survmate_section_style_2 .o_survey_form form .o_survey_form_content h2.o_survey_title,
+	.sh_survmate_section_style_2 .wrap .o_survey_print fieldset .o_page_header h1{background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_title_color"/> !important;color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_title_font_color"/>;}
+	.sh_survmate_radiobtn_style_2 .fa-circle-thin{border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;}
+	.sh_survmate_radiobtn_style_2 .o_survey_selected .fa-circle-thin{border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;}
+	.sh_survmate_input_style_2 .o_survey_choice_btn,
+	.sh_survmate_input_style_2 .o_survey_print .o_survey_choice_btn{
+		box-shadow: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> 0px 0px 0px 1px !important;
+	}
+	.sh_survmate_button_style_2 .o_survey_form .o_survey_form_content .btn-primary:hover,
+	.sh_survmate_button_style_2 .o_survey_print .btn-primary:hover,
+	.sh_survmate_button_style_2 .o_survey_print div  p .btn-primary:hover{
+		color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+		border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+	}
+	.sh_survmate_button_style_2 .o_survey_form .o_survey_form_content .btn-primary,
+	.sh_survmate_button_style_2 .o_survey_print .btn-primary,
+	.sh_survmate_button_style_2 .o_survey_print div  p .btn-primary{
+		border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+	}
+	.sh_survmate_button_style_2 .o_survey_print .btn-primary:disabled{
+	background-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;pointer-events: none;}
+	
+	.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary,
+	.sh_survmate_button_style_3 .o_survey_print div  p .btn-primary{background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;}
+	.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary:after,
+	.sh_survmate_button_style_3 .o_survey_print div  p .btn-primary:after,
+	.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary:before,
+	.sh_survmate_button_style_3 .o_survey_print div  p .btn-primary:before{
+		background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+	}
+	.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary:hover,
+	.sh_survmate_button_style_3 .o_survey_print div  p .btn-primary:hover{
+	    color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+	}
+	
+	
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_text_box,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_date,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_datetime,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_choice_btn,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_numerical_box,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_color_box,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .o_survey_question_email_box,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_sh_many2one_wrapper input,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_sh_many2many_select_div .viewbar,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_sh_address_wrapper input,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_sh_address_wrapper select,
+	.sh_survmate_input_style_3 .o_survey_print fieldset .js_cls_tmpl_sh_location{
+		border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;
+	}
+	.sh_survmate_input_style_3 .o_survey_question_matrix input:focus,
+	.sh_survmate_input_style_3 .o_survey_question_matrix .sh_textarea:focus,
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_text_box:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_date:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_datetime:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_numerical_box:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_input_style_3 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location:focus{background-image: linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>), linear-gradient(<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>, <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/>);}
+	.sh_survmate_section_style_3 .o_survey_form form .o_survey_form_content h2.o_survey_title,
+	.sh_survmate_section_style_3 .wrap .o_survey_print fieldset .o_page_header h1{
+		border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+		background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_title_color"/> !important;
+		color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_title_font_color"/>;
+	}
+	.sh_survmate_button_style_3 .o_survey_print .btn-primary:disabled{
+		background-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+		border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+		pointer-events:none;
+	}
+	.sh_survmate_input_style_3 .o_survey_print .o_survey_choice_btn{
+		border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;
+	}
+	.sh_survmate_input_style_3 .o_survey_choice_btn,
+	.sh_survmate_input_style_3 .o_survey_print .o_survey_choice_btn{
+		box-shadow: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> 0px 0px 0px 1px !important;
+	}
+	/* Style 4*/
+	
+	.sh_survmate_section_style_4 .o_survey_form form .o_survey_form_content h2.o_survey_title,
+	.sh_survmate_section_style_4 .wrap .o_survey_print fieldset .o_page_header h1{
+		background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_title_color"/> !important;
+		color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_title_font_color"/>;
+		border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+	}
+	.sh_survmate_button_style_4 .o_survey_form .o_survey_form_content .btn-primary,
+	.sh_survmate_button_style_4 .o_survey_print div  p .btn-primary{
+		border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+		background: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+	}
+	.sh_survmate_button_style_4 .o_survey_form .o_survey_form_content .btn-primary:hover,
+	.sh_survmate_button_style_4 .o_survey_print div  p .btn-primary:hover{
+		color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+	}
+	.sh_survmate_button_style_4 .o_survey_form .o_survey_form_content .btn-primary:after,
+	.sh_survmate_button_style_4 .o_survey_print div  p .btn-primary:after,
+	.sh_survmate_button_style_4 .o_survey_form .o_survey_form_content .btn-primary:before,
+	.sh_survmate_button_style_4 .o_survey_print div  p .btn-primary:before{
+		background-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+	}
+	.sh_survmate_radiobtn_style_4 .js_question-wrapper .o_survey_selected .fa-circle-thin:after{
+		background: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;
+	}
+	.sh_survmate_checkbox_style_4 .o_survey_form_choice .o_survey_selected .fa-square-o:after{
+		background: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;
+	}
+	.sh_survmate_checkbox_style_4 .o_survey_question_matrix .o_survey_matrix_btn.o_survey_selected i.fa-square-o:after{
+		background: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;
+	}
+	.sh_survmate_input_style_4 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_choice_btn,
+	.sh_survmate_input_style_4 .o_survey_print fieldset .o_survey_choice_btn{
+		box-shadow: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> 0px 0px 0px 1px !important;
+	}
+	.sh_survmate_button_style_4 .o_survey_print .btn-primary:disabled{
+		background-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+		border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+		pointer-events:none;
+	}
+	/*Style 5*/
+	.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:hover,
+	.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:hover{
+		color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+		border-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+	}
+	.sh_survmate_section_style_5 .o_survey_form form .o_survey_form_content h2.o_survey_title,
+	.sh_survmate_section_style_5 .wrap .o_survey_print fieldset .o_page_header h1{
+		background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_title_color"/> !important;
+		color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_section_title_font_color"/>;
+		border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+	}
+	.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary,
+	.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary{
+		border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+		background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+	}
+	.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn,
+	.sh_survmate_input_style_5 .o_survey_print fieldset .o_survey_choice_btn{
+		border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;
+	}
+	.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_color_box,
+	.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_email_box,
+	.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2one_wrapper input,
+	.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_many2many_select_div .viewbar,
+	.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper input,
+	.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_sh_address_wrapper select,
+	.sh_survmate_input_style_5 .o_survey_form form .o_survey_form_content .js_question-wrapper .js_cls_tmpl_sh_location,
+	.sh_survmate_input_style_5 .o_survey_print fieldset .o_survey_question_color_box,
+	.sh_survmate_input_style_5 .o_survey_print fieldset .o_survey_question_email_box,
+	.sh_survmate_input_style_5 .o_survey_print fieldset .js_cls_sh_many2one_wrapper input,
+	.sh_survmate_input_style_5 .o_survey_print fieldset .js_cls_sh_many2many_select_div .viewbar,
+	.sh_survmate_input_style_5 .o_survey_print fieldset .js_cls_sh_address_wrapper input,
+	.sh_survmate_input_style_5 .o_survey_print fieldset .js_cls_sh_address_wrapper select,
+	.sh_survmate_input_style_5 .o_survey_print fieldset .js_cls_tmpl_sh_location{
+		border:0;
+		border-bottom:1px solid <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;
+	}
+	.sh_survmate_input_style_5 input[type='range']{
+		background-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;
+	}
+	.sh_survmate_input_style_5 .o_survey_print .btn-primary:disabled{
+		border-color:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+		background:<t t-esc="survey.sh_survmate_settings_id.sh_survmate_theme_primary_color"/> !important;
+		pointer-evenets:none;
+	}
+	
+	input[type=range].o_survey_question_email_box{
+	    background-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;
+		border: 1px <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> solid !important;
+	}
+	input[type=range].o_survey_question_email_box::-webkit-slider-thumb{
+		background-color: <t t-esc="survey.sh_survmate_settings_id.sh_survmate_answer_color"/> !important;
+	}
+	
+</style>
+
+        </xpath>
+        
+        <xpath expr="//div[@id='wrapwrap']" position="attributes">
+            <attribute name="t-att-style">survmate_style</attribute>
+        	<attribute name="t-attf-class" add="#{sh_survmate_class_all}" separator=" "/>            
+        </xpath>
+        
+    </template>
+
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- VIEW: TREE -->
+    <record id="task_type_tree_inherited_inherit_sh_project_task_base" model="ir.ui.view">
+        <field name="name">sh.project.task.type.view.form</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_tree_inherited"/>
+        <field name="arch" type="xml">
+            <field name="project_ids" position="after">
+                <field name="sh_is_appstore_task_state" invisible="1" />
+            </field>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="project.open_task_type_form" model="ir.actions.act_window">
+        <field name="name">Task Stages</field>
+        <field name="res_model">project.task.type</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="view_id" ref="project.task_type_tree_inherited"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            No stages found. Let's create one!
+            </p><p>
+            Define the steps your tasks move through from creation to completion.
+            </p>
+        </field>
+    </record>
+
+</odoo>

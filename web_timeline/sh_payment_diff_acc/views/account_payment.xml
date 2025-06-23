@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   
+    <record id="account_payment_inherit_view_form" model="ir.ui.view">
+        <field name="name">account.payment.inherit.view.form</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button string = "Actual Received Amount" class="oe_highlight" type="action" name="%(sh_payment_diff_acc.sh_received_amount_view_action)d"></button>
+            </xpath>
+            <field name="journal_id" position="after">
+                <field name="actual_received_amount" invisible="1" />
+                <field name="currency" invisible="1"/>
+                <field name="company_id" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="model_account_payment_action_actual_received_pay" model="ir.actions.server">
+        <field name="name">Actual Received Amount</field>
+        <field name="model_id" ref="sh_payment_diff_acc.model_account_payment"/>
+        <field name="binding_model_id" ref="account.model_account_payment"/>
+		<field name="state">code</field>
+        <field name="code">
+            action = records.actual_received_pay()
+        </field>
+    </record>
+</odoo>

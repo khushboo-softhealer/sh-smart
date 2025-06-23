@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_project_task_push_module_details_form_view" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <field name="project_id" position='after'>
+                <field name="sh_push_to_main_date" />
+                <field name="sh_is_testing" invisible="1"/>
+                <field name="is_required_in_testing_stage" invisible="1"/>
+                <field name="sh_push_modules_ids" widget="many2many_tags"
+                    options="{'color_field': 'color', 'no_create_edit': True}" domain="[('sh_project_id' , '=' , project_id)]" 
+                    attrs="{'required': [('is_required_in_testing_stage', '=', True)]}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="sh_smart_push_inherit_kanban_view" model="ir.ui.view">
+        <field name="name">project.task.time.kanban</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban" />
+        <field name="arch" type="xml">
+            <field name="user_ids" position="after">
+                <field name="sh_push_to_main_date" />
+                <field name="sh_push_modules_ids" />
+            </field>
+            <xpath expr="//div[hasclass('o_kanban_record_body')]" position="after">
+                   <t t-if="record.sh_push_to_main_date.raw_value">
+                     <p>Push To main:<field name="sh_push_to_main_date" /></p>
+                   </t> 
+                   <t t-if="record.sh_push_modules_ids">
+                    <field name="is_required_in_testing_stage" invisible="1"/>
+                     <field name="sh_push_modules_ids" attrs="{'required': [('is_required_in_testing_stage', '=', True)]}" />
+                  </t>                
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

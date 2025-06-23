@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+   <t t-name="sh_website.s_sh_website_popular_search.badges">
+        <nav t-if="popularSearches.length > 0" class="nav navbar-light d-grid gap-2 d-md-flex">
+            <a t-foreach="popularSearches" t-as="search" t-attf-href="/website/search?search={{ search['name'] }}&amp;" role="button" t-attf-title="{{ search['is_published'] ? search['name'] : 'Unpublished' }}" t-attf-class="btn {{ search['is_published'] ? 'btn-outline-primary' : 'btn-outline-danger' }}" t-att-data-name="search['name']">
+                <t t-out="search['name']" /></a>
+        </nav>
+        <div t-else="" class="alert alert-warning mt8" role="alert">
+            There are no popular searches yet.
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sh_google_recaptcha" model="ir.config_parameter">
+            <field name="key">google_recaptcha</field>
+            <field name="value">True</field>
+        </record>
+        <record id="sh_site_key" model="ir.config_parameter">
+            <field name="key">site_key</field>
+            <field name="value">test</field>
+        </record>
+        <record id="sh_secret_key" model="ir.config_parameter">
+            <field name="key">secret_key</field>
+            <field name="value">test</field>
+        </record>
+        <record id="sh_attachment_size" model="ir.config_parameter">
+            <field name="key">attachment_size</field>
+            <field name="value">100</field>
+        </record>
+    </data>
+</odoo>

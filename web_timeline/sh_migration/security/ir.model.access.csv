@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sh_migration.access_sh_module_bug,access_sh_module_bug,sh_migration.model_sh_module_bug,base.group_user,1,1,1,1
+sh_migration.access_sh_bug_state,access_sh_bug_state,sh_migration.model_sh_bug_state,base.group_user,1,1,1,1
+access_sh_migrations_dashboard,access_sh_migrations_dashboard,model_sh_migrations_dashboard,base.group_user,1,1,1,1
+sh_migration.access_sh_bug_state_log,access_sh_bug_state_log,sh_migration.model_sh_bug_state_log,base.group_user,1,1,1,1

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_project_mgmt_sale_order_line_view" model="ir.ui.view">
+        <field name="name">sh.project.mgmt.sale.order.line.form</field>
+        <field name="model">sale.order.line</field>
+        <field name="priority">1000</field>
+        <field name="arch" type="xml">
+        
+            <form string="Sale Line Detail">
+                <group>
+                    <field name="estimation_template_id" string="Estimation Template" />
+                </group>
+                <field name="sale_line_estimation_template_line" >
+                    <tree editable='bottom'>
+                        <field name="department_id"/>
+                        <field name="label_id" />
+                        <field name="estimated_hours"/>
+                        <field name="accountable_user_ids" widget='many2many_tags' domain="[('share', '=', False)]"/>
+                        <field name="responsible_user_ids" widget='many2many_tags' domain="[('share', '=', False)]"/>
+                        <field name="other_details" optional="hide"/>
+                        <field name="from_date"/>
+                        <field name="to_date"/>
+                    </tree>
+                </field>
+            </form>
+        </field>
+    </record>
+
+</odoo>

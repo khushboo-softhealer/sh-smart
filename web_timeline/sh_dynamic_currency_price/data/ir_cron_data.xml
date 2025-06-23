@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_dynamic_currency_price_cron" model="ir.cron">
+        <field name="name">Dynamic Currency Price</field>
+        <field name="interval_number">8</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_dynamic_currency_price.model_res_currency" />
+        <field name="code">model._dynamic_currency_price()</field>
+        <field name="state">code</field>
+    </record>
+</odoo>

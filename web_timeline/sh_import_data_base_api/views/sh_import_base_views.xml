@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="0">
+		<!-- Tree view for "model" -->
+		<record id="sh_view_import_base_tree" model="ir.ui.view">
+			<field name="name">sh.view.import.base.tree</field>
+			<field name="model">sh.import.base</field>
+			<field name="type">tree</field>
+			<field name="mode">primary</field>
+			<field name="priority" eval="16" />
+			<field name="active" eval="True" />
+			<field name="arch" type="xml">
+				<tree string="model_tree" create="true" delete="true" edit="true">
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+		<!-- Form view for "model" -->
+		<record id="sh_view_import_base_form" model="ir.ui.view">
+			<field name="name">sh.view.import.base.form</field>
+			<field name="model">sh.import.base</field>
+			<field name="type">form</field>
+			<field name="mode">primary</field>
+			<field name="priority" eval="16" />
+			<field name="active" eval="True" />
+			<field name="arch" type="xml">
+				<form string="model_form" create="true" delete="true" edit="true">
+					<header>
+						<button name="connect_database" string="Authenticate" type="object" class="oe_highlight" />
+						<button name="import_product_pricelist" string="Import Pricelist" type="object" class="oe_highlight m-2"/>
+						<button string="Missing" name="find_missing_order" type="object" class="oe_highlight m-2"/>
+						<field name="state" widget="statusbar" />
+					</header>
+					<sheet>
+						<group>
+							<field name="name" />
+							<field name="base_url" />
+						</group>
+						<notebook>
+							<page name="user_employee" string="Users &amp; Employee">
+								<button name="import_res_users" string="Import Users" type="object" class="oe_highlight m-2"/>
+								<button name="import_employee_basic" string="Import Employee Basic" type="object" class="oe_highlight m-2"/>
+								<button name="import_hr_employee" string="Import Employees" type="object" class="oe_highlight m-2"/>
+								<button name="sh_update_partner_id" string="Update Users Partner" type="object" class="oe_highlight m-2"/>
+								<button string="Import Users From Queue" name="import_update_res_users" type="object" class="oe_highlight"/>
+								<button string="Import Employee From Queue" name="import_filtered_hr_employee" type="object" class="oe_highlight"/>
+								<group>
+									<group>
+										<field name="import_user" />
+										<field name="records_per_page_user" />
+										<field name="current_import_page_user" />
+									</group>
+									<group>
+										<field name="import_employee" />
+										<field name="records_per_page_employee" />
+										<field name="current_import_page_employee" />
+									</group>
+								</group>
+								<group>
+									<group>
+										<field name="users" />
+										<field name="sh_employees"></field>
+										<!-- <field name="update_user" />
+										<field name="update_current_page" /> -->
+									</group>
+
+									<group>
+										<field name="update_user_partner" />
+										<field name="update_user" />
+										<field name="update_current_page" />
+									</group>
+									
+								</group>
+								<h2 class="text-primary mb-2">Log History</h2>
+								<field name="log_historys" readonly="1">
+									<tree decoration-success="state=='success'" decoration-danger="state=='error'">
+										<field name="field_type" />
+										<field name="operation" />
+										<field name="error" />
+										<field name="datetime" />
+										<field name="state" />
+									</tree>
+								</field>
+							</page>
+							<page name="contact_product" string="Contacts &amp; Products">
+								<button name="import_product_cron" string="Import Product" type="object" class="oe_highlight m-2"/>
+								<button name="update_change_log" string="Update Product Change Log" type="object" class="oe_highlight m-2"/>
+								<button name="import_contacts_cron" string="Import Contacts" type="object" class="oe_highlight m-2"/>
+								<group>
+									<group>
+										<field name="import_product" />
+										<field name="sh_product_starting_from" />
+										<field name="sh_product_upto" />
+										<field name="records_per_page_product" />
+										<field name="import_product_change_log"/>
+										<field name="change_log_ids" />
+										<!-- <field name="current_import_page" /> -->
+									</group>
+									<group>
+										<field name="import_contacts" />
+										<field name="records_per_page" />
+										<field name="current_partner_page" />
+									</group>
+								</group>
+								<button string="Link Product" name="link_products_cron" type="object" class="oe_highlight w-20"/>
+
+								<group>
+									<group>
+										<field name="import_product_link" />
+										<field name="records_per_product_link"/>
+										<field name="current_import_page_product_link" />
+									</group>
+								
+								</group>
+								<group string='Product Queue'>
+									<div class="d-grid gap-2 d-md-block">
+										<button name="import_product_filtered_to_queue" string="Import Filtered Products" type="object" class="oe_highlight m-2" attrs="{'invisible':[('sh_import_filter_product', '=', False)]}" />
+										<button name="import_product_from_queue" string="Import Product From Queue Filtered" attrs="{'invisible':[('sh_import_product_ids', '=', False)]}" type="object" class="oe_highlight m-2"/>
+									</div>
+									<group></group>
+								</group>
+								
+								<group>
+									<group>
+										<field name="sh_import_filter_product" />
+										<field name="sh_import_product_ids" />
+										<!-- <field name="json" /> -->
+									</group>
+									<group>
+										<field name="sh_from_date_product" attrs="{'invisible':[('sh_import_filter_product', '=', False)],'required':[('sh_import_filter_product', '=', True)]}" />
+										<field name="sh_to_date_product" attrs="{'invisible':[('sh_import_filter_product', '=', False)],'required':[('sh_import_filter_product', '=', True)]}" />
+									</group>
+								</group>
+
+								<group string='Contact Queue'>
+									<div class="d-grid gap-2 d-md-block">
+										<button name="import_partner_filtered_to_queue" string="Import Filtered Contacts" type="object" class="oe_highlight m-2" attrs="{'invisible':[('sh_import_filter_partner', '=', False)]}" />
+										<button name="import_partner_from_queue" string="Import Partner From Queue Filtered" attrs="{'invisible':[('sh_import_partner_ids', '=', False)]}" type="object" class="oe_highlight m-2"/>
+									</div>
+									<group></group>
+								</group>
+
+								<group>
+									<group>
+										<field name="sh_import_filter_partner" />
+										<field name="sh_import_partner_ids" />
+									</group>
+									<group>
+										<field name="sh_from_date_partner" attrs="{'invisible':[('sh_import_filter_partner', '=', False)],'required':[('sh_import_filter_partner', '=', True)]}" />
+										<field name="sh_to_date_partner" attrs="{'invisible':[('sh_import_filter_partner', '=', False)],'required':[('sh_import_filter_partner', '=', True)]}" />
+									</group>
+								</group>
+
+
+								<h2 class="text-primary mb-2">Log History</h2>
+								<field name="log_historys" readonly="1">
+									<tree decoration-success="state=='success'" decoration-danger="state=='error'">
+										<field name="field_type" />
+										<field name="operation" />
+										<field name="error" />
+										<field name="datetime" />
+										<field name="state" />
+									</tree>
+								</field>
+							</page>
+							<page name="helpdesk_ticket" string="Helpdesk Ticket">
+								<button name="import_basic_helpdesk_cron" string="Import Helpdesk basic" type="object" class="oe_highlight m-2" />
+								<button name="import_helpdesk_ticket_cron" string="Import Helpdesk Ticket" type="object" class="oe_highlight m-2" />
+								<button string="Import Filtered Ticket" name="import_ticket_filtered_to_queue" type="object" class="oe_highlight m-2" attrs="{'invisible':[('sh_import_filter_ticket', '=', False)]}"/>
+								<button string="Import Ticket From Queue Filtered" name="import_ticket_from_queue" type="object" class="oe_highlight m-2"/>
+								<group>
+									<group>
+										<field name="import_ticket" />
+										<field name="records_per_page_ticket" />
+										<field name="current_import_page_ticket" />
+									</group>
+									<group>
+										<field name="sh_import_filter_ticket"/>
+										<field name="sh_import_ticket_ids"/>
+										<field name="sh_from_date_ticket" attrs="{'invisible':[('sh_import_filter_ticket', '=', False)],'required':[('sh_import_filter_ticket', '=', True)]}"/>
+										<field name="sh_to_date_ticket" attrs="{'invisible':[('sh_import_filter_ticket', '=', False)],'required':[('sh_import_filter_ticket', '=', True)]}"/>
+									</group>
+								</group>
+								<h2 class="text-primary mb-2">Log History</h2>
+								<field name="log_historys" readonly="1">
+									<tree decoration-success="state=='success'" decoration-danger="state=='error'">
+										<field name="field_type" />
+										<field name="operation" />
+										<field name="error" />
+										<field name="datetime" />
+										<field name="state" />
+									</tree>
+								</field>
+							</page>
+							<page name="crm_lead" string="Crm lead">
+								<button name="import_basic_crm_cron" string="Import lead basic" type="object" class="oe_highlight m-2" />
+								<button name="import_basic_crm_lead_cron" string="Import lead" type="object" class="oe_highlight m-2" />
+								<button string="Import Filtered crm" name="import_crm_filtered_to_queue" type="object" class="oe_highlight m-2" attrs="{'invisible':[('sh_import_filter_crm', '=', False)]}"/>
+								<button string="Import From Queue Filtered" name="import_crm_from_queue" type="object" class="oe_highlight m-2"/>
+								<group>
+									<group>
+										<field name="import_lead" />
+										<field name="records_per_page_lead" />
+										<field name="current_import_page_lead" />
+									</group>
+									<group>
+										<field name="sh_import_filter_crm"/>
+										<field name="sh_from_date_crm" attrs="{'invisible':[('sh_import_filter_crm', '=', False)],'required':[('sh_import_filter_crm', '=', True)]}"/>
+										<field name="sh_to_date_crm" attrs="{'invisible':[('sh_import_filter_crm', '=', False)],'required':[('sh_import_filter_crm', '=', True)]}"/>
+										<field name="sh_import_crm_ids"/>
+									</group>
+								</group>
+								<h2 class="text-primary mb-2">Log History</h2>
+								<field name="log_historys" readonly="1">
+									<tree decoration-success="state=='success'" decoration-danger="state=='error'">
+										<field name="field_type" />
+										<field name="operation" />
+										<field name="error" />
+										<field name="datetime" />
+										<field name="state" />
+									</tree>
+								</field>
+							</page>
+							<page name="project" string="Projects">
+								<button name="import_basic_project_cron" string="Import Basic Project" type="object" class="oe_highlight m-2"/>
+								<button name="import_project_cron" string="Import Project" type="object" class="oe_highlight m-2"/>
+								<button name="import_task_cron" string="Import Task" type="object" class="oe_highlight m-2"/>
+								<button string="Import Filtered Project"
+                                name="import_project_filtered_to_queue" type="object"
+                                class="oe_highlight m-2"
+                                attrs="{'invisible':[('sh_import_filter_project', '=', False)]}" />
+								<button string="Import Project From Queue Filtered"
+                                name="import_project_from_queue" type="object"
+                                class="oe_highlight m-2" />
+								<button string="Import Filtered Task"
+                                name="import_task_filtered_to_queue" type="object"
+                                class="oe_highlight m-2"
+                                attrs="{'invisible':[('sh_import_filter_task', '=', False)]}" />
+								<button string="Import Task From Queue Filtered"
+                                name="import_task_from_queue" type="object"
+                                class="oe_highlight m-2" />
+								<group>
+									<group>
+										<field name="import_project" />
+										<field name="records_per_page_project" />
+										<field name="current_import_page_project" />
+									</group>
+									<group>
+										<field name="import_task" />
+										<field name="records_per_page_task" />
+										<field name="current_import_page_task" />
+									</group>
+								</group>
+								<group>
+									<group string='For Import Filtered Project'>
+										<field name="sh_import_filter_project" />
+										<field name="sh_import_project_ids" />
+										<field name="sh_from_date_project" attrs="{'invisible':[('sh_import_filter_project', '=', False)],'required':[('sh_import_filter_project', '=', True)]}" />
+										<field name="sh_to_date_project" attrs="{'invisible':[('sh_import_filter_project', '=', False)],'required':[('sh_import_filter_project', '=', True)]}" />
+									</group>
+									<group string='For Import Filtered Task'>
+										<field name="sh_import_filter_task" />
+										<field name="sh_import_task_ids" />
+										<field name="sh_from_date_task" attrs="{'invisible':[('sh_import_filter_task', '=', False)],'required':[('sh_import_filter_task', '=', True)]}" />
+										<field name="sh_to_date_task" attrs="{'invisible':[('sh_import_filter_task', '=', False)],'required':[('sh_import_filter_task', '=', True)]}" />
+									</group>
+								</group>
+								<button string="Link Task to Product" name="link_task_product_cron" type="object" class="oe_highlight w-20 mx-2"/>
+								<button string="Link Task to Product From Filtered" name="link_task_product_from_queue" type="object" class="oe_highlight mx-2"/>
+								<button string="Import Predefine task" name="import_pre_define_task_details" type="object" class="oe_highlight"/>
+								<group>
+									<group string='For Link Task Product'>
+										<field name="import_link_task_product" />
+										<field name="records_per_task_product" />
+										<field name="current_import_page_task_product"  />
+										<field name="sh_task_ids" invisible="0" />
+									</group>
+									<group>
+										<field name="record_per_page_pre_define_task" />
+										<field name="current_import_page_pre_define_task" />
+									</group>
+								</group>
+								<h2 class="text-primary mb-2">Log History</h2>
+								<field name="log_historys" readonly="1">
+									<tree decoration-success="state=='success'" decoration-danger="state=='error'">
+										<field name="field_type" />
+										<field name="operation" />
+										<field name="error" />
+										<field name="datetime" />
+										<field name="state" />
+									</tree>
+								</field>
+							</page>
+							<page name="orders" string="Orders">
+								<button name="import_orders_cron" string="Import Order" type="object" class="oe_highlight m-2" />
+								<button string="Import Filtered Order" name="import_order_filtered_to_queue" type="object" class="oe_highlight m-2" attrs="{'invisible':[('sh_import_filter_order', '=', False)]}"/>
+								<button string="Import From Queue Filtered" name="import_order_from_queue" type="object" class="oe_highlight m-2"/>
+								<button string="Update Missing Fields" name="import_sale_order_missing_fields" type="object" class="oe_highlight"/>
+								<button string="Currency Rates" name="get_currency_values" type="object" class="oe_highlight m-2"/>
+								<group>
+									<group >
+										<field name="import_order" />
+										<field name="records_per_page_so" />
+										<field name="current_import_page_so" invisible="0"/>
+									</group>
+									<group >
+										<field name="sh_import_filter_order" />
+										<field name="sh_import_order_ids" />
+										<field name="sh_from_date"  attrs="{'invisible':[('sh_import_filter_order', '=', False)],'required':[('sh_import_filter_order', '=', True)]}"/>
+										<field name="sh_to_date" attrs="{'invisible':[('sh_import_filter_order', '=', False)],'required':[('sh_import_filter_order', '=', True)]}" />
+									</group>
+								</group>
+								<h2 class="text-primary mb-2">Log History</h2>
+								<field name="log_historys" readonly="1">
+									<tree decoration-success="state=='success'" decoration-danger="state=='error'">
+										<field name="field_type" />
+										<field name="operation" />
+										<field name="error" />
+										<field name="datetime" />
+										<field name="state" />
+									</tree>
+								</field>
+							</page>
+							<page name="invoice" string="Invoice">
+								<button name="import_invoice_cron" string="Import Invoice" type="object" class="oe_highlight m-2"/>
+								<button string="Import Payment" name="auto_import_account_payment" type="object" class="oe_highlight m-2"/>
+								<group>
+									<group>
+										<field name="import_invoice" />
+										<field name="invoice_ids"/>
+										<!-- <field name="records_per_page_invoice" />
+										<field name="current_import_page_invoice" /> -->
+									</group>
+									<group >
+										<field name="import_payment" />
+										<field name="payment_ids"/>
+									</group>
+								</group>
+								<h2 class="text-primary mb-2">Log History</h2>
+								<field name="log_historys" readonly="1">
+									<tree decoration-success="state=='success'" decoration-danger="state=='error'">
+										<field name="field_type" />
+										<field name="operation" />
+										<field name="error" />
+										<field name="datetime" />
+										<field name="state" />
+									</tree>
+								</field>
+							</page>
+
+							<page name="timesheet_import" string="Timesheet">
+								<button name="import_timsheet_cron" string="Import Timesheet" type="object" class="oe_highlight m-2" />
+								<button name="import_timesheet_filtered_to_queue" string="Import Timesheet to queue" type="object" class="oe_highlight m-2" />
+								<button name="update_timsheet_cron" string="Import filter Timesheet from queuea" type="object" class="oe_highlight m-2" />
+								<group>
+									<group>
+										<field name="import_timesheet" />
+										<field name="records_per_page_timesheet"/>
+										<field name="current_import_page_timesheet"/>
+										<field name="sh_from_date_timesheet" />
+										<field name="sh_to_date_timesheet" />
+										<field name="timesheet_ids" />
+									</group>
+								</group>
+								<h2 class="text-primary mb-2">Log History</h2>
+								<field name="log_historys" readonly="1">
+									<tree decoration-success="state=='success'" decoration-danger="state=='error'">
+										<field name="field_type" />
+										<field name="operation" />
+										<field name="error" />
+										<field name="datetime" />
+										<field name="state" />
+									</tree>
+								</field>
+							</page>
+
+							<page name="ir_attachment_import" string="Attachments">
+								<button name="import_ir_attachment_cron" string="Import Attachments" type="object" class="oe_highlight m-2" />
+								<button string="Import Filtered Attachment" name="import_attach_filtered_to_queue" type="object" class="oe_highlight m-2" attrs="{'invisible':[('sh_import_filter_attachment', '=', False)]}"/>
+								<button string="Import From Queue Filtered" name="import_attach_from_queue" type="object" class="oe_highlight m-2"/>
+								<button name="import_mail_messages_cron" string="Mail Messages" type="object" class="oe_highlight m-2" />
+								<button name="import_mail_message_from_queue" string="Mail Messages from Queue" type="object" class="oe_highlight m-2" />
+								<button string="Replace Message" name="process_mail_message_ids" type="object" class="oe_highlight"/>
+								<group>
+									<group>
+										<field name="import_attachment" />
+										<field name="records_per_page_attachment"/>
+										<field name="current_import_page_attachment"/>
+										<field name="sh_import_filter_attachment"/>
+										<field name="sh_from_date_attachment" attrs="{'invisible':[('sh_import_filter_attachment', '=', False)],'required':[('sh_import_filter_attachment', '=', True)]}"/>
+										<field name="sh_to_date_attachment" attrs="{'invisible':[('sh_import_filter_attachment', '=', False)],'required':[('sh_import_filter_attachment', '=', True)]}"/>
+										<field name="sh_import_attachment_ids"/>
+									</group>
+									<group>
+										<field name="import_message" />
+										<field name="records_per_page_message" />
+										<field name="current_import_page_message" />
+										<field name="message_ids" />
+									</group>
+								</group>
+								<h2 class="text-primary mb-2">Log History</h2>
+								<field name="log_historys" readonly="1">
+									<tree decoration-success="state=='success'" decoration-danger="state=='error'">
+										<field name="field_type" />
+										<field name="operation" />
+										<field name="error" />
+										<field name="datetime" />
+										<field name="state" />
+									</tree>
+								</field>
+							</page>
+							<!-- ===== hr contract content -->
+							<page name="hr_contract" string="HR">
+								<button name="import_basic_contract_cron" string="Import HR Basic" type="object" class="oe_highlight m-2" />
+								<button string="Import HR Contract Basic" name="sh_import_hr_basic" type="object" class="oe_highlight"/>
+								<button name="import_hr_contract_cron" string="Import HR Contract" type="object" class="oe_highlight m-2" />
+								<button name="import_hr_leave" string="Import Time Off" type="object" class="oe_highlight m-2" />
+								<group>
+									<group>
+										<field name="is_import_hr" />
+										<field name="records_per_page_hr" />
+										<field name="current_import_page_hr" />
+									</group>
+									<group>
+										<field name="is_import_leaves" />
+										<field name="leave_records_per_page" />
+										<field name="current_import_page_leave" />
+									</group>
+								</group>
+								<!-- <group string="Filter HR Basic"> -->
+									<!-- <div class="d-grid gap-2 d-md-block">
+									</div>
+									 -->
+									<div class="d-flex w-100">
+										<button name="import_hr_basic_to_queue" string="Import Basic To Queue" type="object" class="oe_highlight m-2" />
+										<button name="import_hr_basic_from_queue" string="Import Basic From Queue"
+											attrs="{
+												'invisible': [('sh_import_hr_payslip_line_ids', '=', False)]
+											}" type="object" class="oe_highlight m-2" />
+	
+										<button string="Import filtered Applications" name="import_hr_applicant_filtered" type="object" class="oe_highlight m-2"/>
+										<button string="Import collages" name="import_sh_college" type="object" class="oe_highlight m-2"/>
+									</div>
+								<!-- </group> -->
+								<group>
+									<group string="Filter HR Basic">
+										<field name="sh_is_import_hr_basic" />
+										<field name="sh_from_date_hr_basic" attrs="{'required': [('sh_is_import_hr_basic', '=', True)], 'invisible': [('sh_is_import_hr_basic', '=', False)]}" />
+										<field name="sh_to_date_hr_basic" attrs="{'required': [('sh_is_import_hr_basic', '=', True)], 'invisible': [('sh_is_import_hr_basic', '=', False)]}" />
+										<field name="sh_import_hr_payslip_line_ids" attrs="{'invisible': [('sh_import_hr_payslip_line_ids', 'in', (False, None, []))]}" />
+									</group>
+									<group string="Applications">
+
+										<field  name="application_ids" />
+									</group>
+								</group>
+								<h2 class="text-primary">Time Of Queue</h2>
+								<group>
+									<div class="d-grid gap-2 d-md-block">
+										<button name="import_hr_leave_to_queue" string="Import Time Off To Queue" type="object" class="oe_highlight m-2" />
+										<button name="import_hr_leave_from_queue" string="Import Time Off From Queue"
+                                            attrs="{
+                                                'invisible': [('sh_hr_leave_ids_list', '=', False)]
+                                            }" type="object" class="oe_highlight m-2" />
+									</div>
+									<group></group>
+								</group>
+								<group>
+									<group>
+										<field name="sh_is_import_hr_leave_in_queue" />
+										<field name="sh_hr_leave_ids_list" attrs="{'invisible': [('sh_hr_leave_ids_list', 'in', (False, None, []))]}" />
+									</group>
+									<group>
+										<field name="sh_from_date_hr_leave" attrs="{'required': [('sh_is_import_hr_leave_in_queue', '=', True)], 'invisible': [('sh_is_import_hr_leave_in_queue', '=', False)]}" />
+										<field name="sh_to_date_hr_leave" attrs="{'required': [('sh_is_import_hr_leave_in_queue', '=', True)], 'invisible': [('sh_is_import_hr_leave_in_queue', '=', False)]}" />
+									</group>
+								</group>
+								<h2 class="text-primary mb-2">Log History</h2>
+								<field name="log_historys" readonly="1">
+									<tree decoration-success="state=='success'" decoration-danger="state=='error'">
+										<field name="field_type" />
+										<field name="operation" />
+										<field name="error" />
+										<field name="datetime" />
+										<field name="state" />
+									</tree>
+								</field>
+							</page>
+							<page name="hr_attendance" string="Attendance">
+								<button name="import_hr_attendance_cron" string="Import Attendance" type="object" class="oe_highlight m-2" />
+								<button string="Import Filtered Attendance" name="import_attendance_filtered_to_queue" type="object" class="oe_highlight m-2" attrs="{'invisible':[('sh_import_filter_attendance', '=', False)]}"/>
+								<button string="Import From Queue Filtered" name="import_attendance_from_queue" type="object" class="oe_highlight m-2"/>
+								<button string="Import Attendance Modification" name="import_hr_attendance_modification_request_cron" type="object" class="oe_highlight"/>
+								
+								<group>
+									<group>
+										<field name="import_attendance" />
+										<field name="records_per_page_attendance" />
+										<field name="current_import_page_attendance" />
+									</group>
+									<group >
+										<field name="sh_import_filter_attendance" />
+										<field name="sh_import_attendance_ids" />
+										<field name="sh_from_date_attendance"  attrs="{'invisible':[('sh_import_filter_attendance', '=', False)],'required':[('sh_import_filter_attendance', '=', True)]}"/>
+										<field name="sh_to_date_attendance" attrs="{'invisible':[('sh_import_filter_attendance', '=', False)],'required':[('sh_import_filter_attendance', '=', True)]}" />
+									</group>
+								</group>
+								<h2 class="text-primary mb-2">Log History</h2>
+								<field name="log_historys" readonly="1">
+									<tree decoration-success="state=='success'" decoration-danger="state=='error'">
+										<field name="field_type" />
+										<field name="operation" />
+										<field name="error" />
+										<field name="datetime" />
+										<field name="state" />
+									</tree>
+								</field>
+							</page>
+								<!-- ======================================== Blog ======================================== -->
+                            <page name="blog" string="Blog">
+                                <button name="import_blog_basic" string="Import Blog Basic" type="object" class="oe_highlight m-2" />
+								<button name="import_blog_blog" string="Import Blog" type="object" class="oe_highlight m-2" />
+                                <button name="import_blog_post" string="Import Blog Post" type="object" class="oe_highlight m-2" />
+                                <group>
+                                    <group>
+										<!-- ========== Blog ========== -->
+										<field name="sh_is_import_blog" />
+										<field name="records_per_page_blog_blog" attrs="{'invisible': [('sh_is_import_blog', '=', False)]}" />
+										<field name="sh_blog_blog_starting_from" attrs="{'invisible': [('sh_is_import_blog', '=', False)]}" />
+										<field name="sh_blog_blog_upto" attrs="{'invisible': [('sh_is_import_blog', '=', False)]}" />
+                                    </group>
+                                    <group>
+										<!-- ========== Blog Post ========== -->
+										<field name="sh_is_import_blog_post" />
+										<field name="records_per_page_blog_post" attrs="{'invisible': [('sh_is_import_blog_post', '=', False)]}" />
+										<field name="sh_blog_post_starting_from" attrs="{'invisible': [('sh_is_import_blog_post', '=', False)]}" />
+										<field name="sh_blog_post_upto" attrs="{'invisible': [('sh_is_import_blog_post', '=', False)]}" />
+                                    </group>
+                                </group>
+								<!-- ========== Blog Queue ========== -->
+								<h2 class="text-primary mb-2">Blog Queue</h2>
+								<group>
+									<div class="d-grid gap-2 d-md-block">
+										<button name="import_blog_in_queue" string="Import Blog In Queue" type="object" class="oe_highlight m-2" />
+										<button name="import_blog_from_queue" string="Import Blog From Queue" attrs="{'invisible': [('sh_blog_ids_list', '=', False)]}" type="object" class="oe_highlight m-2" />
+									</div>
+									<group></group>
+								</group>
+								<group>
+									<group>
+										<field name="sh_is_import_blog_in_queue" />
+										<field name="sh_blog_ids_list" attrs="{'invisible': [('sh_blog_ids_list', 'in', (False, None, []))]}" />
+									</group>
+									<group>
+										<field name="sh_blog_from_date" attrs="{'required': [('sh_is_import_blog_in_queue', '=', True)], 'invisible': [('sh_is_import_blog_in_queue', '=', False)]}" />
+										<field name="sh_blog_to_date" attrs="{'required': [('sh_is_import_blog_in_queue', '=', True)], 'invisible': [('sh_is_import_blog_in_queue', '=', False)]}" />
+									</group>
+								</group>
+								<!-- ========== Blog Post Queue ========== -->
+								<h2 class="text-primary mb-2">Blog Post Queue</h2>
+								<group>
+									<div class="d-grid gap-2 d-md-block">
+										<button name="import_blog_post_in_queue" string="Import Blog Post In Queue" type="object" class="oe_highlight m-2" />
+										<button name="import_blog_post_from_queue" string="Import Blog Post From Queue" attrs="{'invisible': [('sh_blog_post_ids_list', '=', False)]}" type="object" class="oe_highlight m-2" />
+									</div>
+									<group></group>
+								</group>
+								<group>
+									<group>
+										<field name="sh_is_import_blog_post_in_queue" />
+										<field name="sh_blog_post_ids_list" attrs="{'invisible': [('sh_blog_post_ids_list', 'in', (False, None, []))]}" />
+									</group>
+									<group>
+										<field name="sh_blog_post_from_date" attrs="{'required': [('sh_is_import_blog_post_in_queue', '=', True)], 'invisible': [('sh_is_import_blog_post_in_queue', '=', False)]}" />
+										<field name="sh_blog_post_to_date" attrs="{'required': [('sh_is_import_blog_post_in_queue', '=', True)], 'invisible': [('sh_is_import_blog_post_in_queue', '=', False)]}" />
+									</group>
+								</group>
+								<!-- ========== Log ========== -->
+                                <h2 class="text-primary mb-2">Log History</h2>
+                                <field name="log_historys" readonly="1">
+                                    <tree decoration-success="state=='success'" decoration-danger="state=='error'">
+                                        <field name="field_type" />
+                                        <field name="operation" />
+                                        <field name="error" />
+                                        <field name="datetime" />
+                                        <field name="state" />
+                                    </tree>
+                                </field>
+                            </page>
+						</notebook>
+						<!-- <field name="json"/> -->
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- Main window action for "model" -->
+		<record id="sh_action_import_base_act_window" model="ir.actions.act_window">
+			<field name="type">ir.actions.act_window</field>
+			<field name="name">Import Base</field>
+			<field name="res_model">sh.import.base</field>
+			<field name="view_mode">tree,form</field>
+			<field name="target">current</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+                Import Base
+                </p>
+			</field>
+		</record>
+	</data>
+</odoo>

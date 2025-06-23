@@ -1,0 +1,306 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_certificate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 07:15+0000\n"
+"PO-Revision-Date: 2020-10-21 07:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_certificate
+#: model:mail.template,report_name:sh_certificate.email_template_edi_letter
+msgid ""
+"${(object.name or '').replace('/','_')}${object.state == 'draft' and "
+"'_draft' or ''}"
+msgstr ""
+"${(object.name or '').replace('/','_')}${object.state == 'draft' and "
+"'_draft' or ''}"
+
+#. module: sh_certificate
+#: model:mail.template,subject:sh_certificate.email_template_edi_letter
+msgid "${object.name})"
+msgstr "${object.name})"
+
+#. module: sh_certificate
+#: model:ir.actions.report,print_report_name:sh_certificate.sh_letter_tmpl_report_action
+msgid "'report letter'"
+msgstr "'رسالة تقرير'"
+
+#. module: sh_certificate
+#: model:mail.template,body_html:sh_certificate.email_template_edi_letter
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<p>Record</p>\n"
+"\t\t\t</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<p>سجل</p>\n"
+"\t\t\t</div>\n"
+"            "
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: sh_certificate
+#: model:ir.model.fields.selection,name:sh_certificate.selection__sh_letter__state__approve
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Approved"
+msgstr "وافق"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: sh_certificate
+#: model:ir.model.fields.selection,name:sh_certificate.selection__sh_letter__state__cancel
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: sh_certificate
+#: model:ir.model,name:sh_certificate.model_res_partner
+msgid "Contact"
+msgstr "اتصل"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__content_html
+msgid "Content Html"
+msgstr "محتوى Html"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__create_uid
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__create_date
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__date
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__display_name
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: sh_certificate
+#: model:ir.model.fields.selection,name:sh_certificate.selection__sh_letter__state__draft
+msgid "Draft"
+msgstr "مشروع"
+
+#. module: sh_certificate
+#: model:ir.model,name:sh_certificate.model_hr_employee
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__employee_id
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+msgid "Employee"
+msgstr "موظف"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+msgid "Group By..."
+msgstr "مجموعة من..."
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee__id
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner__id
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__id
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__id
+msgid "ID"
+msgstr "هوية شخصية"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_needaction
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديدها ، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_is_follower
+msgid "Is Follower"
+msgstr "أتباع"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter____last_update
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__write_uid
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__write_date
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: sh_certificate
+#: model:ir.actions.act_window,name:sh_certificate.sh_letter_menu_action
+#: model:ir.model,name:sh_certificate.model_sh_letter
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee__letter_count
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner__letter_count
+#: model:ir.model.fields,field_description:sh_certificate.field_res_users__letter_count
+#: model:ir.ui.menu,name:sh_certificate.sh_letter_menuitem_root
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_tree
+msgid "Letter"
+msgstr "رسالة"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__letter_content_html
+msgid "Letter Content Html"
+msgstr "محتوى الرسالة Html"
+
+#. module: sh_certificate
+#: model:ir.actions.act_window,name:sh_certificate.sh_letter_template_menu_action
+#: model:ir.model,name:sh_certificate.model_sh_letter_template
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__letter_template
+#: model:ir.ui.menu,name:sh_certificate.sh_letter_template_menuitem_root
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_template_form
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_template_tree
+msgid "Letter Template"
+msgstr "قالب الرسالة"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.view_employee_inherit_form
+#: model_terms:ir.ui.view,arch_db:sh_certificate.view_partner_inherit_form
+msgid "Letters"
+msgstr "حروف"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__name
+msgid "Main Subject"
+msgstr "الموضوع الرئيسي"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__name
+msgid "Name"
+msgstr "اسم"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__sh_partner_id
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+msgid "Partner"
+msgstr "شريك"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__reference
+msgid "References"
+msgstr "المراجع"
+
+#. module: sh_certificate
+#: model:ir.actions.report,name:sh_certificate.sh_letter_tmpl_report_action
+msgid "Report Letter"
+msgstr "خطاب تقرير"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Send by Email"
+msgstr "ارسل بالبريد الإلكترونى"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Set to Draft"
+msgstr "تعيين إلى مسودة"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"

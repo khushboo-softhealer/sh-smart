@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- Removed the query string from eCommerce products item page   -->
+    <template id="products_item" customize_show="True" active="True" name="Remove the query string from eCommerce products item page" inherit_id="website_sale.products_item">
+        <t t-set="product_href" position="attributes">
+            <attribute name="t-value">product.website_url</attribute>
+        </t>
+
+    </template>
+
+</odoo>

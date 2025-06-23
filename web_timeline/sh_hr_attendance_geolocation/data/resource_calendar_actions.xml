@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="sh_add_remove_working_hours" model="ir.actions.server">
+        <field name="name">Add / Remove Working Hours</field>
+        <field name="model_id" ref="resource.model_resource_calendar" />
+        <field name="binding_model_id" ref="resource.model_resource_calendar" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.multi_action_add_remove_working_hours()
+        </field>
+    </record>
+</odoo>

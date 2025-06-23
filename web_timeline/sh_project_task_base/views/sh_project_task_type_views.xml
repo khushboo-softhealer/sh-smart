@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_project_task_type_form_view_inherited" model="ir.ui.view">
+        <field name="name">sh.project.task.type.form.view.inherited</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit" />
+        <field name="arch" type="xml">
+
+            <!-- FOR SH BACKEND -->
+            <xpath expr="//field[@name='mail_template_id']" position="after">
+                <field name="default_add_new_project" />
+            </xpath>
+
+            <!-- FOR TASK TIME MODULE -->
+            <xpath expr="//group" position="after">
+                    <h2>Assigned Employees</h2>
+                    <field name="stage_wize_employee_line" nolabel="1">
+                        <form>
+                            <group>
+                                <group>
+                                    <field name="sequence" invisible="1" />
+                                    <field name="user_id" />
+                                    <field name="task_type_id" invisible="1" />
+                                </group>
+                            </group>
+                        </form>
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle" />
+                            <field name="user_id" />
+                        </tree>
+                    </field>
+              
+                    <h2>Default Employees</h2>
+                    <field name="stage_wize_default_employee_line" nolabel="1">
+                        <form>
+                            <group>
+                                <group>
+                                    <field name="sequence" invisible="1" />
+                                    <field name="user_id" />
+                                    <field name="task_type_id" invisible="1" />
+                                </group>
+                            </group>
+                        </form>
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle" />
+                            <field name="user_id" />
+                        </tree>
+                    </field>
+                
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

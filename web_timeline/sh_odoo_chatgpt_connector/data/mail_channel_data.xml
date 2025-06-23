@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="sh_partner_chatgpt" model="res.partner">
+        <field name="name">ChatGPT</field>
+        <field name="image_1920" type="base64" file="sh_odoo_chatgpt_connector/static/description/chatgpt_icon.png"/>
+    </record>
+
+    <record id="sh_user_chatgpt" model="res.users">
+        <field name="login">chatgpt</field>
+        <field name="password">chatgpt</field>
+        <field name="partner_id" ref="sh_odoo_chatgpt_connector.sh_partner_chatgpt"/>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
+        <field name="company_ids" eval="[(4, ref('base.main_company'))]"/>
+    </record>
+
+    <record model="mail.channel" id="sh_channel_chatgpt">
+        <field name="name">ChatGPT</field>
+        <field name="description">ChatGPT Odoo Connector</field>
+        <field name="image_128" type="base64" file="sh_odoo_chatgpt_connector/static/description/chatgpt_icon.png"/>
+    </record>
+
+    <record model="mail.channel" id="sh_odoo_chatgpt_connector.sh_channel_chatgpt">
+        <field name="group_ids" eval="[Command.link(ref('base.group_user'))]"/>
+    </record>
+</odoo>

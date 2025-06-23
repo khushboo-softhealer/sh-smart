@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="sh_view_project_task_form2" model="ir.ui.view">
+        <field name="name">sh.project.task.form2</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]//h1" position="before">
+                <div class="pb-2">
+                    <label for='sh_move_task_to_preapp_store' class='text-primary fw-bold'>Create Task To PreApp Store</label>
+                    <field name="sh_move_task_to_preapp_store" />
+                </div>
+            </xpath>
+
+            <xpath expr="//notebook" position="inside">
+                <page name="internal_note" string="Notes">
+                    <field name="note" type="html" options="{'collaborative': true, 'resizable': false}" placeholder="Add note here..."/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="sh_project_task_template_id_inherit_form_view" model="ir.ui.view">
+        <field name="name">sh.project.task.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sh_project_task_base.sh_project_task_template_id_form_view" />
+        <field name="arch" type="xml">
+            <!-- <xpath expr="div[hasClass('oe_title')]" position="before">
+                <div>
+                    <field name="sh_move_task_to_preapp_store" />
+                </div>
+            </xpath> -->
+            <xpath expr="//field[@name='coach_ids']" position="after">
+                
+                <field name="sh_created_from_project_id" attrs="{'invisible': [('sh_created_from_project_id', '=', False)]}"/>
+                <field name="sh_created_from_project_stage_id" attrs="{'invisible': [('sh_created_from_project_id', '=', False)]}"/>
+                
+                <field name="sh_created_from_task_id" attrs="{'invisible': [('sh_created_from_task_id', '=', False)]}"/>
+                <field name="sh_created_from_task_stage_id" attrs="{'invisible': [('sh_created_from_task_id', '=', False)]}"/>
+                
+                <field name="sh_created_from_sale_order_id" attrs="{'invisible': [('sh_created_from_sale_order_id', '=', False)]}"/>
+                <field name="sh_created_from_sale_order_state" attrs="{'invisible': [('sh_created_from_sale_order_id', '=', False)]}"/>
+                
+                <field name="sh_created_from_ticket_id" attrs="{'invisible': [('sh_created_from_ticket_id', '=', False)]}"/>
+                <field name="sh_created_from_ticket_stage_id" attrs="{'invisible': [('sh_created_from_ticket_id', '=', False)]}"/>
+
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

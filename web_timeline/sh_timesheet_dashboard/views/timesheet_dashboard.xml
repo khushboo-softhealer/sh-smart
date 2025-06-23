@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="sh_timesheet_dashboard_kanban_view" model="ir.ui.view">
+            <field name="name">Timesheet Dashboard</field>
+            <field name="model">sh.timesheet.dashboard</field>
+            <field name="type">kanban</field>
+            <field name="arch" type="xml">
+                <kanban create="false" class="oe_background_grey" js_class="js_cls_timesheet_dashboard">
+                    <field name="name" />
+                    <templates>
+                            <style>
+                                .o_kanban_view .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record .sh_btn .o_dropdown_kanban {position: relative;visibility: visible;}
+                                .o_kanban_renderer.o_kanban_ungrouped>.o_kanban_record {width: 100% !important;}
+                                .o_kanban_view {background: #eaeaea;}
+                                .o_kanban_view.o_kanban_ungrouped {padding: 0 !important;}
+                                .o_kanban_view .o_kanban_record {border: 0;}
+                            </style>
+                        <t t-name="kanban-box"
+                            style="min-width: 100%!important;width:100%!important;" class="sh_kanban_record">
+
+                            <section id="dashboard_counter" class="sh_timesheet_dashboard_screen"
+                                style="min-width: 100%!important;width:100%!important;">
+                                <div class="container">
+                                    <div class="row drop_btn" id="dashboard_counter">
+                                        <div class="col-md-12 col-sm-6 col-xs-6">
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="sh_btn">
+                                                        <select id="employee_filter_list"
+                                                            class="btn btn-primary sh_select"
+                                                            groups="sh_task_time.group_project_officer">
+                                                            <option value="all" selected="True">Select
+                                                                Employee</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="sh_btn">
+                                                        <select id="timesheet_days_filter_list"
+                                                            class="btn btn-primary sh_select">
+                                                            <option value="all">Select Date</option>
+                                                            <option value="today" selected="True">
+                                                                Today</option>
+                                                            <option value="yesterday">Yesterday</option>
+                                                            <option value="weekly">Current Week</option>
+                                                            <option value="prev_week">Previous Week</option>
+                                                            <option value="monthly">Current Month</option>
+                                                            <option value="prev_month">Previous
+                                                                Month</option>
+                                                            <option value="cur_year">Current Year</option>
+                                                            <option value="prev_year">Previous Year</option>
+                                                            <option value="custom">Custom</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                                    <input type="date" id="start_date"
+                                                        name="start_date" class="form-control"
+                                                        style="display:none" />
+                                                </div>
+                                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                                    <input type="date" id="end_date" name="end_date"
+                                                        class="form-control"
+                                                        style="display:none" />
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="sh_btn">
+                                                        <select id="project_filter_list"
+                                                            class="btn btn-primary sh_select">
+                                                            <option value="all" selected="True">Select
+                                                                Project</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="sh_btn">
+                                                        <select id="task_filter_list"
+                                                            class="btn btn-primary sh_select">
+                                                            <option value="all" selected="True">Select
+                                                                Task</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="js_cls_activity_table_wrapper">
+                                                <div id="sh_timesheet_dashboard_activity"
+                                                    class="sh_timesheet_dashboard">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr style="font-size: 15px;">
+                                                                <th colspan="7" class="text-start">Timesheet
+                                                                    Data - Rachana Gohel</th>
+                                                            </tr>
+                                                            <tr class="active">
+                                                                <th>#</th>
+                                                                <th>Date</th>
+                                                                <th>Project</th>
+                                                                <th>Task</th>
+                                                                <th>Stage</th>
+                                                                <th>Description</th>
+                                                                <th>Hours</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <span>1</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>01/02/2023</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>App Store</span>
+                                                                </td>
+                                                                <td>
+                                                                    <a
+                                                                        href="/mail/view?model=project.task&amp;res_id=13970">Odoo
+                                                                        16/Backmate | Backmate
+                                                                        Backend Theme Basics |
+                                                                        Backmate Backend Theme
+                                                                        Basics [For Community
+                                                                        Edition]</a>
+                                                                </td>
+                                                                <td>
+                                                                    <span>Done</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>In publishing and graphic
+                                                                        design, Lorem ipsum is a
+                                                                        placeholder text commonly
+                                                                        used to demonstrate the
+                                                                        visual form of a document or
+                                                                        a typeface without relying
+                                                                        on meaningful content. Lorem
+                                                                        ipsum may be used as a
+                                                                        placeholder before final
+                                                                        copy is available. It is
+                                                                        also used to temporarily
+                                                                        replace</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>00:12</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span>2</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>01/02/2023</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>v16 - SOFTHEALER PMS,
+                                                                        HRMS, Helpdesk &amp; Other
+                                                                        Internal</span>
+                                                                </td>
+                                                                <td>
+                                                                    <a
+                                                                        href="/mail/view?model=project.task&amp;res_id=15772">
+                                                                        sh_timesheet_dashboard</a>
+                                                                </td>
+                                                                <td>
+                                                                    <span>New</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>In publishing and graphic
+                                                                        design, Lorem ipsum is a
+                                                                        placeholder text commonly
+                                                                        used to demonstrate the
+                                                                        visual form of a document or
+                                                                        a typeface without relying
+                                                                        on meaningful content. Lorem
+                                                                        ipsum may be used as a
+                                                                        placeholder before final
+                                                                        copy is available. It is
+                                                                        also used to temporarily
+                                                                        replace </span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>00:11</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span>3</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>01/02/2023</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>v16 - SOFTHEALER PMS,
+                                                                        HRMS, Helpdesk &amp; Other
+                                                                        Internal</span>
+                                                                </td>
+                                                                <td>
+                                                                    <a
+                                                                        href="/mail/view?model=project.task&amp;res_id=15772">
+                                                                        sh_timesheet_dashboard</a>
+                                                                </td>
+                                                                <td>
+                                                                    <span>New</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>
+                                                                        In publishing and graphic
+                                                                        design, Lorem ipsum is a
+                                                                        placeholder text commonly
+                                                                        used to demonstrate the
+                                                                        visual form of a document or
+                                                                        a typeface without relying
+                                                                        on meaningful content. Lorem
+                                                                        ipsum may be used as a
+                                                                        placeholder before final
+                                                                        copy is available. It is
+                                                                        also used to temporarily
+                                                                        replace.</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>00:13</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td>Total</td>
+                                                                <td>
+                                                                    <span>00:37</span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="js_cls_temporary_table_wrapper">
+                                                <div id="sh_temp_dashboard_activity"
+                                                    class="sh_timesheet_dashboard">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr style="font-size: 15px;">
+                                                                <th colspan="6" class="text-start">Temporary
+                                                                    Tasks - Viraj Kachhadiya</th>
+                                                            </tr>
+                                                            <tr class="active">
+                                                                <th>Date</th>
+                                                                <th>Project</th>
+                                                                <th>Task</th>
+                                                                <th>Description</th>
+                                                                <th>Hours</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <span>01/02/2023</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>Temporary</span>
+                                                                </td>
+                                                                <td>
+                                                                    <a
+                                                                        href="/mail/view?model=project.task&amp;res_id=12310">Temporary
+                                                                        1</a>
+                                                                </td>
+                                                                <td>
+                                                                    <span>/</span>
+                                                                </td>
+                                                                <td>
+                                                                    <span>00:00</span>
+                                                                </td>
+                                                                <td>
+                                                                    <button
+                                                                        class="btn btn-primary timesheet_trasnfer"
+                                                                        data-analytic_id="73727">
+                                                                        Transfer </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td>Total</td>
+                                                                <td>
+                                                                    <span>00:00</span>
+                                                                </td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="js_cls_hours_data">
+                                    </div>
+                                </div>
+                            </section>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="sh_timesheet_dashboard_kanban_action" model="ir.actions.act_window">
+            <field name="name">Timesheet Dashboard</field>
+            <field name="res_model">sh.timesheet.dashboard</field>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="sh_timesheet_dashboard_kanban_view" />
+        </record>
+
+        <!-- <menuitem id="dashboard_menu"
+            name="Timesheet Dashboard"
+            parent="hr_timesheet.timesheet_menu_root"
+            action="sh_timesheet_dashboard_kanban_action"
+            sequence="1"
+            groups="" /> -->
+
+    </data>
+</odoo>

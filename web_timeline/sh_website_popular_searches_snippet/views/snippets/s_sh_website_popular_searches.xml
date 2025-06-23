@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- Website Popular Searches Snippet -->
+    <template id="s_sh_website_popular_searches" name="Website Popular Searches">
+        <section class="s_sh_website_popular_searches pt40 pb40">
+            <div class="container o_not_editable">
+                <h4 class="o_default_snippet_text">Popular searches</h4>
+                <div class="popular_search_snippet_template" />
+            </div>
+        </section>
+    </template>
+
+    <!-- Website Popular Searches Snippet options -->
+    <template id="s_sh_website_popular_searches_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="ShPopularSearches" string="Popular Searches"
+                data-selector=".s_sh_website_popular_searches">
+                <we-input string="Min Search Count" data-select-data-attribute="100"
+                    data-attribute-name="minSearchCount" data-step="1" />
+            </div>
+        </xpath>
+    </template>
+</odoo>

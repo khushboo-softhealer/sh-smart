@@ -1,0 +1,79 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_dev_tool
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-24 07:29+0000\n"
+"PO-Revision-Date: 2020-10-24 07:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_dev_tool
+#: code:addons/sh_dev_tool/models/models.py:0
+#, python-format
+msgid "Apply Schedule Upgrade"
+msgstr "套用时间表升级"
+
+#. module: sh_dev_tool
+#: model:ir.model.fields,field_description:sh_dev_tool.field_ir_module_module__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sh_dev_tool
+#: model:ir.model.fields,field_description:sh_dev_tool.field_ir_module_module__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_dev_tool
+#: model_terms:ir.ui.view,arch_db:sh_dev_tool.sh_base_module_tree_inherit
+msgid "Install"
+msgstr "安装"
+
+#. module: sh_dev_tool
+#: model:ir.model.fields,field_description:sh_dev_tool.field_ir_module_module____last_update
+msgid "Last Modified on"
+msgstr "最后修改时间"
+
+#. module: sh_dev_tool
+#: model:ir.model,name:sh_dev_tool.model_ir_module_module
+msgid "Module"
+msgstr "模组"
+
+#. module: sh_dev_tool
+#: model_terms:ir.ui.view,arch_db:sh_dev_tool.sh_base_module_kanban_inherit
+#: model_terms:ir.ui.view,arch_db:sh_dev_tool.sh_base_module_tree_inherit
+msgid "Uninstall"
+msgstr "卸载"
+
+#. module: sh_dev_tool
+#: model:ir.actions.server,name:sh_dev_tool.action_server_module_immediate_uninstall
+msgid "Uninstall Modules"
+msgstr "卸载模块"
+
+#. module: sh_dev_tool
+#: model_terms:ir.ui.view,arch_db:sh_dev_tool.sh_base_module_kanban_inherit
+#: model_terms:ir.ui.view,arch_db:sh_dev_tool.sh_base_module_tree_inherit
+msgid "Upgrade"
+msgstr "升级"
+
+#. module: sh_dev_tool
+#: model:ir.actions.server,name:sh_dev_tool.action_server_module_immediate_upgrade
+msgid "Upgrade Modules"
+msgstr "升级模块"
+
+#. module: sh_dev_tool
+#: code:addons/sh_dev_tool/models/models.py:0
+#, python-format
+msgid ""
+"You try to upgrade the module %s that depends on the module: %s.\n"
+"But this module is not available in your system."
+msgstr ""
+"你尝试升级依赖于模块 %s 的模块: %s。\n"
+"但是此模块在您的系统中不可用。"

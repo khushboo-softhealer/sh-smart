@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_hr_dashboard,access_sh_hr_dashboard,model_sh_hr_dashboard,base.group_user,1,1,1,1
+access_sh_annoucement,access_sh_annoucement,model_sh_annoucement,base.group_user,1,1,1,1
+access_sh_hr_contract_employee,access_sh_hr_contract_employee,hr_contract.model_hr_contract,base.group_user,1,0,0,0
+access_sh_warning_message,access_sh_warning_message,model_sh_warning_message,base.group_user,1,1,1,1
+hr.access_hr_department_user,hr.department.user,hr.model_hr_department,hr.group_hr_manager,1,1,1,1
+hr_holidays.access_hr_holidays_user_request,hr.holidays.user.request,hr_holidays.model_hr_leave,hr_holidays.group_hr_holidays_user,1,1,1,0
+hr_holidays.access_hr_holidays_user_allocation,hr.holidays.user.allocation,hr_holidays.model_hr_leave_allocation,hr_holidays.group_hr_holidays_user,1,0,0,0
+hr.access_hr_employee_user,hr.employee user,hr.model_hr_employee,base.group_user,1,0,0,0
+hr.access_hr_employee_system_user,hr.employee system user,hr.model_hr_employee,base.group_system,1,1,1,1

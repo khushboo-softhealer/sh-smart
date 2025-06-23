@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="hr_dashboard.dashboard">
+        <section id="dashboard_counter" class="sh_hr_dashboard">
+            <h1 class="main_title fw-bolder">
+                Welcome
+                <span class="user_name" />
+            </h1>
+
+            <div class="row sh_dashboard_row">
+                <div class="col counter_col sh_box_col sh_box_col_1">
+                    <a class="row open_employee_leave sh_dashboard_single_box" name="open_employee_leave" type="object">
+                        <div class="col-8">
+                            <p class="counter_title">LEAVES</p>
+                            <h1 class="counter_count fw-bolder">
+                                <span class="leave_count" />
+                                /
+                                <span class="allocated_leave_count" />
+                            </h1>
+                        </div>
+                        <div class="col-4 text-center">
+                            <img class="counter_img w-50" src="sh_hr_dashboard/static/src/image/2.png" width="100%" alt="Leaves" />
+                        </div>
+                    </a>
+                </div>
+                <div class="col counter_col sh_box_col sh_box_col_2">
+                    <a class="row open_employee_attendnace sh_dashboard_single_box" name="open_employee_attendnace" type="object">
+                        <div class="col-8">
+                            <p class="counter_title">ATTENDANCE</p>
+                            <h1 class="counter_count fw-bolder">
+                                <span class="attendance_count" />
+                            </h1>
+                        </div>
+                        <div class="col-4 text-center">
+                            <img class="counter_img w-50" src="sh_hr_dashboard/static/src/image/3.png" width="100%" alt="Attendance" />
+                        </div>
+                    </a>
+                </div> 
+                <!-- <div class="col counter_col sh_box_col sh_box_col_2 sh_wallet_div" style="display:none;">
+                    <a class="row sh_dashboard_single_box" name="open_expense" type="object">
+                        <div class="col-8">
+                            <p class="counter_title">Wallet</p>
+                            <h1 class="counter_count fw-bolder">
+                                <span class="wallet_amount" />
+                            </h1>
+                        </div>
+                        <div class="col-4 text-center">
+                            <img class="counter_img w-50" src="sh_hr_dashboard/static/src/image/11.png" width="100%" alt="Expense" />
+                        </div>
+                    </a>
+                </div>  -->
+
+                
+            </div>
+
+            <div class="main_content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 main_content_birthday">
+                        <div class="main_birthday_container">
+                            <h3 class="birthday_title fw-bolder">BIRTHDAY</h3>
+                            <div class="birthday_box" id="js_id_sh_birthday_data_tbl_div"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 main_content_anniversary">
+                        <div class="main_anniversary_container">
+                            <h3 class="anniversary_title fw-bolder">ANNIVERSARY</h3>
+                            <div class="anniversary_box" id="js_id_sh_anniversary_data_tbl_div"></div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4 col-md-12 col-sm-12 announcement_part">
+                        <div class="announcement_box">
+                            <h3 class="annoucement_title fw-bolder">ANNOUNCEMENT</h3>
+                            <div class="announcement_container" id="js_id_sh_annoucement_data_tbl_div"></div>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-4 col-md-12 col-sm-12 announcement_part">
+                        <div class="announcement_box">
+                            <h3 class="annoucement_title fw-bolder">EMPLOYEES ON LEAVE</h3>
+                            <div class="announcement_container" id="js_id_sh_all_leave_data_tbl_div"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section_table">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 payslip_table">
+                        <div class="payslip_content">
+                            <div class="row expence_row">
+                                <div class="col-10">
+                                    <h3 class="payslip_title fw-bolder">ATTENDANCE</h3>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn create_attendance" type="object">
+                                        <i title="plus" class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="paylip_container" id="js_id_sh_attendance_data_tbl_div"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 expence_table">
+                        <div class="expence_content">
+                            <div class="row expence_row">
+                                <div class="col-10">
+                                    <h3 class="expence_title fw-bolder">LEAVES</h3>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn create_leave" type="object">
+                                        <i title="plus" class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="expence_container" id="js_id_sh_leave_data_tbl_div"></div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-lg-5 col-md-12 col-sm-12 expence_table">
+                        <div class="expence_content">
+                            <div class="row expence_row">
+                                <div class="col-12">
+                                    <h3 class="expence_title fw-bolder">EMPLOYEES ON LEAVE</h3>
+                                </div>
+                            </div>
+                            <div class="expence_container" id="js_id_sh_all_leave_data_tbl_div"></div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="section_table">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 complain_table">
+                        <div class="complain_content">
+                            <div class="row complain_row">
+                                <div class="col-10">
+                                    <h3 class="complain_title fw-bolder">COMPLAIN</h3>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn create_complain" type="object">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="complain_container" id="js_id_sh_complain_data_tbl_div"></div>
+                        </div>
+                    </div>
+                     <div class="col-lg-6 col-md-12 col-sm-12 idea_table">
+                        <div class="idea_content">
+                            <div class="row idea_row">
+                                <div class="col-10">
+                                    <h3 class="idea_title fw-bolder">IDEA</h3>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn create_idea" type="object">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="idea_container" id="js_id_sh_idea_data_tbl_div"></div>
+                        </div>
+                    </div>
+            </div>
+            <div class="section_table sh_expense_div" style="display:none;">
+                    <div class="row">
+
+                    
+                        <div class="col-lg-6 col-md-12 col-sm-12 idea_table">
+                            <div class="idea_content">
+                                <div class="row idea_row">
+                                    <div class="col-10">
+                                        <h3 class="idea_title fw-bolder">Expense</h3>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn create_expense" type="object">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="expense_container" id="js_id_sh_expense_data_tbl_div"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section_table">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 complain_table">
+                        <div class="complain_content">
+                            <div class="row complain_row">
+                                <div class="col-10">
+                                    <h3 class="complain_title fw-bolder">My Allocations</h3>
+                                </div>
+                            </div>
+                            <div class="complain_container" id="js_id_sh_my_allocation_data_tbl_div"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 idea_table">
+                    </div>
+            </div>
+            </div>
+        </section>
+    </t>
+</templates>

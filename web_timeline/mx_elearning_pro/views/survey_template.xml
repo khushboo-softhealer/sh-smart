@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="survey_fill_form_done_inherited" name="Survey Done" inherit_id="survey.survey_fill_form_done">
+            <xpath expr="//div[hasclass('o_survey_finished')]/div[2]/div[1]/t[1]/div[1]" position="after">
+                <t t-if="survey.is_proctoring">
+                    <div>Your proctoring score is <t t-esc="answer.proctor_scoring_percentage" />%</div>
+                </t>
+            </xpath>
+            <t t-if="answer.scoring_success" position="attributes">
+                <attribute name="t-if" separator="and">answer.proctor_scoring_percentage &gt;= survey.proctoring_passing_score</attribute>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="sh_timesheet_invoice_wizard_form_view" model="ir.ui.view">
+			<field name="name">sh.timesheet.invoice.wizard.form.view</field>
+			<field name="model">sh.timesheet.invoice.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Create Invoice">
+					<group string="Invoice Individual Product">
+						<field name="sh_invoice_product_id"/>
+					</group>			
+					<group string="Group By">
+						<field name="select_type"/>						
+					</group>
+					<footer>
+                        <button string='Create Invoice' name="action_creating_invoice" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+				</form>
+			</field>
+		</record>
+		<record id="sh_action_timesheet_create_invoice_wizard" model="ir.actions.act_window">
+            <field name="name">Create Invoice</field>
+            <field name="res_model">sh.timesheet.invoice.wizard</field>           
+            <field name="view_mode">form</field>
+           <field name="view_id" ref="sh_timesheet_invoice_wizard_form_view"/>
+           <field name="target">new</field>
+        </record>      
+	</data>
+</odoo>

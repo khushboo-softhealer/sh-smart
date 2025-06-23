@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_task_portal_form_view_custom" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_preview_task_portal" type="object" class="oe_stat_button" icon="fa-globe icon">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">Portal</span>
+                        <span class="o_stat_text">Preview</span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_sale_timesheet_project_task_sharing_view" model="ir.ui.view">
+        <field name="name">sh.sale.timesheet.project.task.sharing.view</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sale_timesheet.project_sharing_inherit_project_task_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='child_ids']/tree/field[@name='remaining_hours_so']" position="replace">
+                <field name="remaining_hours_so" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_sale_project_task_sharing_view" model="ir.ui.view">
+        <field name="name">sh.sale.project.task.sharing.view</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sale_project.project_sharing_inherit_project_task_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sale_line_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_project_sharing_view_so']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_hr_timesheet_project_task_sharing_view" model="ir.ui.view">
+        <field name="name">sh.hr.timesheet.project.task.sharing.view</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="hr_timesheet.project_sharing_inherit_project_task_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@id='timesheets_tab']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/tree/field[@name='planned_hours']" position="replace">
+                <field name="planned_hours" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/tree/field[@name='effective_hours']" position="replace">
+                <field name="effective_hours" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/tree/field[@name='subtask_effective_hours']" position="replace">
+                <field name="subtask_effective_hours" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/tree/field[@name='total_hours_spent']" position="replace">
+                <field name="total_hours_spent" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/tree/field[@name='remaining_hours']" position="replace">
+                <field name="remaining_hours" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/tree/field[@name='progress']" position="replace">
+                <field name="progress" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_hr_timesheet_project_task_sharing_tree_view" model="ir.ui.view">
+        <field name="name">sh.hr.timesheet.project.task.sharing.tree.view</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="hr_timesheet.project_sharing_inherit_project_task_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='planned_hours']" position="replace">
+                <field name="planned_hours" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='effective_hours']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='subtask_effective_hours']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='total_hours_spent']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='remaining_hours']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='progress']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_sale_timesheet_project_task_sharing_tree_view" model="ir.ui.view">
+        <field name="name">sh.sale.timesheet.project.task.sharing.tree.view</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sale_timesheet.project_sharing_inherit_project_task_view_tree_sale_timesheet"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='remaining_hours_so']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_task_portal_kanban_view_sharing" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="hr_timesheet.project_sharing_kanban_inherit_project_task_view_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@name='planned_hours']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_task_portal_kanban_view_inherit" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.project_sharing_project_task_view_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_kanban_record_headings')]//span[2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//span[hasclass('pe-2')]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_task_portal_sharing_form_view" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.project_sharing_project_task_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='milestone_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='portal_user_names']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']//tree//field[@name='milestone_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']//tree//field[@name='partner_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']//tree//field[@name='portal_user_names']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']//tree//field[@name='stage_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']//tree//field[@name='kanban_state']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_assign_to_me']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_unassign_me']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='description_page']" position="replace">
+                <page name="description_page" string="Description">
+                    <field name="description" type="html" options="{'collaborative': true}" readonly="0"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_task_portal_sharing_tree_view" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.project_sharing_project_task_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='milestone_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='portal_user_names']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='kanban_state']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_sale_task_portal_form_view" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sale_timesheet.project_sharing_inherit_project_task_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='so_line']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='so_line']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/tree/field[@name='remaining_hours_so']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//span[@id='remaining_hours_so_label']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='remaining_hours_so']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_task_sharing_portal_search_view" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.project_sharing_project_task_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='portal_user_names']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='milestone_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='late_milestone']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='milestone']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='customer']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='kanban_state']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='late']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='tasks_due_today']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='unassigned']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='closed_last_7_days']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='closed_last_30_days']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_sale_project_task_sharing_search_view" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="sale_project.project_sharing_inherit_project_task_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sale_order_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='sale_order_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_timesheet_project_task_sharing_search_view" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="hr_timesheet.project_sharing_project_task_view_search_inherit_timesheet"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='overtime']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='remaining_hours_percentage']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="sh_sale_order_portal_template_inherit" inherit_id="sale.sale_order_portal_template">
+
+        <xpath expr="//div[@id='quote_content']" position="attributes">
+            <attribute name="class" separator=" " add="col-xxl-8 col-xl-8 col-lg-8 col-md-auto justify-content-end" />
+        </xpath>
+
+
+        <xpath expr="//t[@t-set='classes']" position="replace">
+            <t t-set="classes" t-value="'col-xxl-4 col-xl-4 col-lg-4 col-md-auto col-lg-auto d-print-none'"/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sh_claim_details_report_doc">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <div class="text-center" style="padding-top: 70px;">
+                        <h5 style="margin-bottom: 10px; font-weight: bold;">Copyright Claim Details</h5>
+                    </div>
+                    <div style="font-size: 12px;">
+                        <strong>Please describe the nature of your copyright ownership or authorization to act on the owner's behalf.</strong>
+                        <br />
+                        <br />
+                        <span>
+                            We have a different private git repository at https://github.com/softhealer and We sell our all modules on odoo apps store https://apps.odoo.com/apps/modules/browse?author=Softhealer Technologies and here are app
+                            store links
+                        </span>
+                        <br />
+                        <br />
+                        <span>All aboves modules contain Odoo Proprietary License v1.0 (OPL-1) I will give more information about OPL license in below section.</span>
+                        <br />
+                        <br />
+                        <strong>Please provide a detailed description of the original copyrighted work that has allegedly been infringed. If possible, include a URL to where it is posted online.</strong>
+                        <br />
+                        <br />
+                        <span>About OPL license</span>
+                        <br />
+                        <span>Odoo Proprietary License v1.0</span>
+                        <br />
+                        <br />
+                        <span>
+                            This software and associated files (the "Software") may only be used (executed,modified, executed after modifications) if you have purchased a valid license from the authors, typically via Odoo Apps, or if you
+                            have received a written agreement from the authors of the Software (see the COPYRIGHT file).
+                        </span>
+                        <br />
+                        <br />
+                        <span>
+                            You may develop Odoo modules that use the Software as a library (typically by depending on it, importing it and using its resources), but without copying any source code or material from the Software. You may
+                            distribute those modules under the license of your choice, provided that this license is compatible with the terms of the Odoo Proprietary License (For example: LGPL, MIT, or proprietary licenses similar to this
+                            one).
+                        </span>
+                        <br />
+                        <br />
+                        <span>It is forbidden to publish, distribute, sublicense, or sell copies of the Software or modified copies of the Software.</span>
+                        <br />
+                        <br />
+                        <span>The above copyright notice and this permission notice must be included in all copies or substantial portions of the Software.</span>
+                        <br />
+                        <br />
+                        <span>
+                            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+                            EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
+                            THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                        </span>
+                        <br />
+                        <br />
+                        <strong>Do you claim to have any technological measures in place to control access to your copyrighted content? Please see our Complaints about Anti-Circumvention Technology if you are unsure.</strong>
+                        <br />
+                        <br />
+                        <span>No</span>
+                        <br />
+                        <br />
+                        <strong>
+                            Have you searched for any forks of the allegedly infringing files or repositories? Each fork is a distinct repository and must be identified separately if you believe it is infringing and wish to have it taken
+                            down.
+                        </strong>
+                        <br />
+                        <br />
+                        <span>Yes we tried our level to check if any other found than let us know</span>
+                        <br />
+                        <br />
+                        <strong>Is the work licensed under an open source license?</strong>
+                        <br />
+                        <br />
+                        <span>No</span>
+                        <br />
+                        <br />
+                        <strong>What would be the best solution for the alleged infringement?</strong>
+                        <br />
+                        <br />
+                        <span>Repository Can Be Made Private</span>
+                        <br />
+                        <br />
+                        <strong>Do you have the alleged infringer’s contact information? If so, please provide it</strong>
+                        <br />
+                        <br />
+                        <span>No</span>
+                        <br />
+                        <br />
+                        <strong>So that we can get back to you, please provide either your telephone number or physical address.</strong>
+                        <br />
+                        <br />
+                        <span>email : softhealersolutions@gmail.com</span>
+                        <br />
+                        <span>phone: +917984575681</span>
+                        <br />
+                        <br />
+                        <strong>Please type your full legal name below to sign this request.</strong>
+                        <br />
+                        <br />
+                        <span>RIKEN JAYANTILAL PETHAD</span>
+                        <br />
+                        <br />
+                    </div>
+                    <t t-set="sh_datas" t-value="docs.browse(ids)" />
+                    <t t-set="no" t-value="0" />
+                    <t t-set="already_prod_id" t-value="0" />
+                    <t t-foreach="sh_datas.sorted(lambda x: x.product_id.id)" t-as="sh">
+                        <t t-if="already_prod_id != sh.product_id.id">
+                            <t t-if="no != 0">
+                                <br />
+                            </t>
+                            <t t-set="no" t-value="no + 1" />
+                            <strong style="font-size: 14px;">
+                                <span t-esc="no" />
+                                )&amp;nbsp;<span t-esc="sh.product_id.name" />
+                            </strong>
+                            <t t-foreach="sh.product_ids" t-as="products">
+                                ,&amp;nbsp;<strong style="font-size: 14px;">
+                                <span t-esc="products.name" />
+                            </strong>
+                        </t>
+                        <br />
+                        <strong style="font-size: 12px;">Our private github Repo url : &amp;nbsp; </strong>
+                        <span t-esc="sh.git_hub_url" style="font-size: 12px;" />
+                        <t t-if="sh.git_hub_urls"> ,&amp;nbsp; <span style="font-size: 12px;" t-esc="sh.git_hub_urls" />
+                        <br />
+                    </t>
+                    <br />
+                    <strong style="font-size: 12px;">Our odoo Appstore link for module : &amp;nbsp; </strong>
+                    <span t-esc="sh.odoo_url" style="font-size: 12px;" />
+                    <t t-if="sh.odoo_urls"> ,&amp;nbsp; <span style="font-size: 12px;" t-esc="sh.odoo_urls" />
+                    <br />
+                </t>
+                <br />
+                <strong style="font-size: 12px;">Open github repos : &amp;nbsp; </strong>
+                <br />
+                <span t-esc="sh.claim_data" style="font-size: 12px;" />
+            </t>
+            <t t-if="already_prod_id == sh.product_id.id">
+                <br />
+                <span t-esc="sh.claim_data" style="font-size: 12px;" />
+            </t>
+            <br />
+            <t t-set="already_prod_id" t-value="sh.product_id.id" />
+        </t>
+        <br />
+    </div>
+</t>
+</t>
+</template>
+
+<record id="paperformat_sh_claim_details" model="report.paperformat">
+<field name="name">Copyright Claim Report</field>
+<field name="default" eval="True" />
+<field name="format">custom</field>
+<field name="page_height">300</field>
+<field name="page_width">300</field>
+<field name="orientation">Portrait</field>
+<field name="margin_top">1</field>
+<field name="margin_bottom">0</field>
+<field name="margin_left">5</field>
+<field name="margin_right">5</field>
+<field name="header_line" eval="False" />
+<field name="header_spacing">5</field>
+<field name="dpi">90</field>
+</record>
+
+<record id="sh_claim_details_report_action" model="ir.actions.report">
+<field name="name">Copyright Claim Report</field>
+<field name="model">sh.copyright.claim</field>
+<field name="report_type">qweb-pdf</field>
+<field name="report_name">sh_copyright_claim_project.sh_claim_details_report_doc</field>
+<field name="report_file">sh_copyright_claim_project.sh_claim_details_report_doc</field>
+<field name="print_report_name">'Copyright Claim Details Report'</field>
+<field name="paperformat_id" ref="sh_copyright_claim_project.paperformat_sh_claim_details" />
+</record>
+</odoo>

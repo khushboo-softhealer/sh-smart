@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="sh_rca_report_inherit_project_project" model="ir.ui.view">
+        <field name="name">sh.rca.report.view.form.inherit.project.project</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" name="show_project_rca_report" type="object">
+                    <i class="fa fa-fw o_button_icon fa-file text-success" title="Reports" />
+                    <div class="o_field_widget o_stat_info">
+
+                        <span class="o_stat_value">
+                            <field name="sh_total_rca_report" readonly="1" />
+                            RCA
+                        </span>
+                        <span class="o_stat_text">
+                            Report
+                        </span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

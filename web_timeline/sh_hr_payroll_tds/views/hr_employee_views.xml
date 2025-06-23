@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Employee View -->
+    <record id="tds_hr_employee_view_form_inherit" model="ir.ui.view">
+        <field name="name">tds.hr.employee.view.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <field name="work_email" position="after">
+                <field name="having_uan_number"/>
+                <field name="uan_number" attrs="{'invisible':[('having_uan_number','=',False)]}"/>
+                <field name="is_applicable_for_tds" />
+                <field name="employee_contract_type" attrs="{'invisible':[('is_applicable_for_tds','!=',True)]}"/>
+                <field name="tds_scheme_type" attrs="{'invisible':['|',('employee_contract_type','=','contractual'),('is_applicable_for_tds','!=',True)]}"/>
+            </field>
+        </field>
+    </record>
+</odoo>

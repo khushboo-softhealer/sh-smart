@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   
+      <record id="action_mass_update_blog_tags_form" model="ir.ui.view">
+        <field name="name">sh.update.tags.blog.wizard.form</field>
+        <field name="model">sh.update.tags.blog</field>
+        <field name="arch" type="xml">
+            <form string="Add/Update Tags">
+                <group>
+                    <group>
+                        <field name="change_method" widget="radio"/>
+                        <field name="tag_ids" widget="many2many_tags"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Update Tags" name="update_blog_tag" type="object" class="btn-primary" />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_mass_update_blog_tags" model="ir.actions.act_window">
+        <field name="name">Update Tags</field>
+        <field name="res_model">sh.update.tags.blog</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="seq_company_change_log" model="ir.sequence">
+        <field name="name">Company Change Log</field>
+        <field name="code">sh.company.change.log</field>
+        <field name="prefix"></field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False" />
+    </record>
+</odoo>

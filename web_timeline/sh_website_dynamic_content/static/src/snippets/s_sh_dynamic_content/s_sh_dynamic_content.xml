@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="sh_website_dynamic_content.s_sh_dynamic_content.default_content">
+        <div class="container o_not_editable">
+                <t t-if="content">
+                    <t t-out="content"/>
+                </t>
+                <t t-else="">
+                    <h1 style="text-align: center;">
+                        <font style="font-size: 62px; font-weight: bold;">Dynamic Content</font>
+                    </h1>
+                    <p class="lead" style="text-align: center;">Your Dynamic Content will be displayed here..</p>
+                </t>
+        </div>
+    </t>
+</templates>

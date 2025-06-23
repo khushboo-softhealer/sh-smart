@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="br_relatime_feedback_template" t-inherit="web.ListView" t-inherit-mode="primary" owl="1">
+        <xpath expr="//t[@t-component='props.Renderer']" position="replace">
+        <div class="container-fluid">
+            <div class="feedback_panel_main">
+                <div class="row gx-4">
+                    <div class="col-lg-9 col-md-8 col-12 left_side_panel">
+                        <div class="feedback_panel_box">
+                            <div class="feedback_panel_btn_box">
+                                <div class="button_items align-items-center d-flex">
+                                    <div class="button_item collapse_btn me-4">
+                                        <button class="btn btn-outline-primary border-0" id="collapsallbtn" t-on-click="onClickCollapseAllBtn">Collapse all</button>
+                                    </div>
+                                    <div class="button_item expand_btn">
+                                        <button class="btn btn-outline-primary border-0" id="expandallbtn" t-on-click="onClickExpanAllBtn">Expand all</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback_massage_panel_main">
+                                <!-- == Add Group By Creation Date ==  -->
+                                <t t-if="group_by_feedback_list">
+                                    <t t-foreach="group_by_feedback_list" t-as="sh_feedback_grp" t-key="sh_feedback_grp_index">
+                                        <!-- ** Message Box Main Date **  -->
+                                        <div class="massage_panel_box">
+                                            <div class="massage_panel_date_box text-center">
+                                                <p class="massage_panel_date"><t t-esc="sh_feedback_grp"/></p>
+                                            </div>
+                                            <div class="feedback_items">
+                                                <t t-if="all_feedbacks">
+                                                    <t t-foreach="all_feedbacks" t-as="feedback" t-key="feedback_index">
+                                                        <t t-if="sh_feedback_grp == feedback.feedback_create_date">
+                                                            <div class="feedback_item" t-att-id="'feedback_item_' + feedback.backend_record_id" >
+                                                                <!-- <t t-esc="feedback.backend_record_id"/> -->
+                                                                <div class="feedback_user_item align-items-center d-flex">
+                                                                    <div class="feedback_request_user_box align-items-center d-flex">
+                                                                        <div class="feedback_request_user_label">
+                                                                            <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{feedback.feedback_user_id}}" alt="Feedback Users Image" class=""/>
+                                                                        </div>
+                                                                        <div class="feedback_request_user_text">
+                                                                            <p class="feedback_request_user_text_name mb-0">
+                                                                                <!-- ** Code To Display Given Or Received Feedback Type **  -->
+                                                                                <t t-if="feedback.feedback_type == 'give_feedback'">
+                                                                                    <t t-esc="feedback.feedback_user_name"/><span class="fw-normal px-2">Gave Feedback To</span><t t-esc="feedback.receieved_feedback_user_name"/>
+                                                                                </t>
+                                                                                <t t-else="">
+                                                                                    <t t-esc="feedback.feedback_user_name"/><span class="fw-normal px-2">Requested Feedback From</span><t t-esc="feedback.receieved_feedback_user_name"/>
+                                                                                </t>
+                                                                            </p>
+                                                                            <p class="feedback_request_user_text_Date mb-0"><t t-esc="feedback.feedback_create_date"/></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <t t-if="feedback.show_reply_button">
+                                                                        <div class="align-self-start">
+                                                                            <a href="#" class="btn btn-lg btn-primary sh_replybtn" t-on-click="onClickReplyBtn" t-att-data-target="'dynamic_nested_kanban' + feedback_index">
+                                                                                Reply
+                                                                            </a>
+                                                                        </div>
+                                                                        
+                                                                    </t>
+                                                                </div>
+                                                                <div class="feedback_request_user_extra_text">
+                                                                    <p class="feedback_request_user_extra_text_name mb-0">
+                                                                        <t t-esc="feedback.feedback_text"/>
+                                                                    </p>
+                        
+                        
+                                                                    <t t-if="feedback.child_id_details">
+                                                                    <div class="main_kanban_div">
+                                                                            <div class="viewResponcebtn">
+                                                                                <button class="btn btn-outline-primary sh_showresponcebtn border-0 d-none" t-on-click="onClickViewResponce"> 
+                                                                                    View Responce
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="dynamic_conditional_child_kanban">
+                                                                                <div class="child_kanban_user_item">
+                                                                                    <div class="feedback_request_user_box align-items-center d-flex">
+                                                                                        <div class="feedback_request_user_label">
+                                                                                            <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{feedback.child_id_details.feedback_user_id}}" alt="Feedback Users Image" class=""/>
+                                                                                        </div>
+                                                                                        <div class="feedback_request_user_text">
+                                                                                            <p class="feedback_request_user_text_name mb-0">
+                                                                                                <t t-esc="feedback.child_id_details.feedback_user_name"/>
+                                                                                            </p>
+                                                                                            <p class="feedback_request_user_text_Date mb-0"><t t-esc="feedback.child_id_details.feedback_create_date"/></p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                        <p class="child_kanban_user_item_input"><t t-esc="feedback.child_id_details.feedback_text"/></p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </t>
+                        
+                                                                    <!-- Code to Add Dynamic Kanban View  -->
+                                                                    <div class="dynamic_nested_kanban d-none" t-att-class="'dynamic_nested_kanban' + feedback_index">
+                                                                        <div class="feedback_user_item">
+                                                                            <div class="feedback_request_user_box align-items-center d-flex">
+                                                                                <div class="feedback_request_user_label">
+                                                                                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{user_id}}" alt="Feedback Users Image" class=""/>
+                                                                                </div>
+                                                                                <div class="feedback_request_user_text">
+                                                                                    <p class="feedback_request_user_text_name mb-0">
+                                                                                        <t t-esc="login_user_name"/>
+                                                                                    </p>
+                                                                                    <p class="feedback_request_user_text_Date mb-0"><t t-esc="today_date_in_string_format"/></p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="dynamic_nested_kanban_text">
+                                                                                <div class="input-group mb-0">
+                                                                                    <input type="text" class="form-control sh_request_feedback_input" t-att-class="'sh_request_feedback_input_dynamic' + feedback_index" />
+                                                                                    <!-- ADD WARNING OF BLANK INPUT  -->
+                                                                                    <div class="input-group-append align-self-start">
+                                                                                        <a class="btn btn-outline-success mt-0 sh_postbtn" type="button" t-on-click="onClickPostBtn" t-att-id="feedback.backend_record_id"> Post</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <p class="text-danger d-none sh_reply_feedback_required_warning mb-0 mt-2">Reply Feedback Is Required!</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <t t-if="feedback.show_awaiting_responce_text">
+                                                                        <p class="feedback_request_user_extra_text_Date awaiting_respnc_class mt-2 mb-0">Awaiting Response</p>
+                                                                    </t>
+                                                                    <t t-if="feedback.show_reply_button">
+                                                                        <p class="feedback_request_user_extra_text_Date pending_respnc_class mt-2 mb-0">Pending Response</p>
+                                                                    </t>
+                                                                </div>
+                                                            </div>
+                                                        </t>
+                                                    </t>
+                                                </t>
+                                            
+                                                
+                                                <!-- <div class="feedback_item">
+                                                    <div class="feedback_user_item align-items-center d-flex">
+                                                        <div class="feedback_request_user_box align-items-center d-flex">
+                                                            <div class="feedback_request_user_label">
+                                                                <img src="https://i.ibb.co/tz8yqkf/user.png" alt="" class=""/>
+                                                            </div>
+                                                            <div class="feedback_request_user_text">
+                                                                <p class="feedback_request_user_text_name mb-0">
+                                                                    pranav - developer
+                                                                </p>
+                                                                <p class="feedback_request_user_text_Date mb-0">Due Friday, September 15</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="align-self-start">
+                                                            <a href="#" class="btn btn-lg btn-primary">Reply</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="feedback_request_user_extra_text">
+                                                        <p class="feedback_request_user_extra_text_name mb-0">
+                                                            Please share your feedbackon our last meeting.
+                                                        </p>
+                                                        <p class="feedback_request_user_extra_text_Date mb-0">Awaiting Responce</p>
+                                                    </div>
+                                                </div>
+                                                <div class="feedback_item">
+                                                    <div class="feedback_user_item align-items-center d-flex">
+                                                        <div class="feedback_request_user_box align-items-center d-flex">
+                                                            <div class="feedback_request_user_label">
+                                                                <img src="https://i.ibb.co/tz8yqkf/user.png" alt="" class=""/>
+                                                            </div>
+                                                            <div class="feedback_request_user_text">
+                                                                <p class="feedback_request_user_text_name mb-0">
+                                                                    pranav - developer
+                                                                </p>
+                                                                <p class="feedback_request_user_text_Date mb-0">Due Friday, September 15</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="align-self-start">
+                                                            <a href="#" class="btn btn-lg btn-primary">Reply</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="feedback_request_user_extra_text">
+                                                        <p class="feedback_request_user_extra_text_name mb-0">
+                                                            Please share your feedbackon our last meeting.
+                                                        </p>
+                                                        <p class="feedback_request_user_extra_text_Date mb-0">Awaiting Responce</p>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </t>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-12 side_panel">
+                        <div class="pending_request_user_box_main">
+                            <div class="pending_request_user_time_box ">
+                                <div class="pending_request_user_time_title">
+                                    <p class="pending_request_user_title mb-0">
+                                            <!-- pending request <span>(0)</span> -->
+                                            pending request <span>(<t t-esc="pending_request_records_length"/>)</span>
+                                    </p>
+                                </div>
+                                <t t-if="all_feedbacks">
+                                    <t t-foreach="all_feedbacks" t-as="feedback" t-key="feedback_index">
+                                        <t t-if="feedback.show_reply_button">
+                                            <div class="sh_scroll_bar_div">
+                                                <a class="pending_request_user_box align-items-center d-flex" href="#" t-on-click="() => this.onClickPendingRequest(feedback.backend_record_id)">
+                                                    <div class="pending_request_user_label">
+                                                        <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{feedback.feedback_user_id}}" alt="Login Image" class=""/>
+                                                    </div>
+                                                    <div class="pending_request_user_text">
+                                                        <p class="pending_request_user_text_name mb-0">
+                                                            <t t-esc="feedback.feedback_user_name"/>
+                                                        </p>
+                                                        <p class="mb-0 text-break">
+                                                            <t t-esc="feedback.feedback_text"/>
+                                                        </p>
+                                                        <p class="pending_request_user_text_Date mb-0"><t t-esc="feedback.feedback_create_date"/></p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </t>
+    
+                                    </t>
+                                </t>
+                               
+                                <!-- <div class="pending_request_user_box align-items-center d-flex">
+                                    <div class="pending_request_user_label">
+                                        <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{user_id}}" alt="Login Image" class=""/>
+                                    </div>
+                                    <div class="pending_request_user_text">
+                                        <p class="pending_request_user_text_name mb-0">
+                                            <t t-esc="login_user_name"/>
+                                        </p>
+                                        <p class="pending_request_user_text_Date mb-0">September 18, 2023</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </xpath>
+    </t>
+</templates>

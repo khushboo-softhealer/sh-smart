@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="theme_softhealer_store_sale_portal_tmpl_inherit" inherit_id="sale.sale_order_portal_content" name='Sale Order Portal Template'>
+        <xpath expr='//tbody[hasclass("sale_tbody")]//tr//td[last()]' position='after'>
+            <td t-if='sale_order.state == "sale" and not request.env.user._is_public()'>
+                <button class='btn btn-primary js_cls_sale_portal_tmpl_download_btn' t-att-data-line_product_id='line.product_id.id' t-att-data-sale_order_id='sale_order.id'>
+                    <i class='fa fa-download'></i>
+                </button>
+            </td>
+        </xpath>
+    </template>
+</odoo>

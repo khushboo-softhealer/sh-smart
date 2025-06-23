@@ -1,0 +1,65 @@
+.ks-menu-wrapper {
+  position: relative;
+  max-width: 910px;
+  height: 37px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-right: 28px;
+  padding-left: 5px;
+}
+
+.ks-menu {
+  height: 55px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 0px;
+  margin: 0px;
+}
+.ks-menu .btn.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ks-menu .btn.btn-secondary img {
+  margin-right: 2px;
+  height: 16px;
+  width: 16px;
+  margin-left: -6px;
+}
+
+.ks-menu .ks-item {
+  display: inline-block;
+}
+
+.ks-paddle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2em;
+  padding: 0px;
+  outline: none;
+  border: none;
+  background-color: white;
+}
+.ks-paddle:active, .ks-paddle:focus {
+  border: none;
+  outline: none;
+}
+.ks-paddle svg {
+  opacity: 0.6;
+}
+
+.ks-left-paddle {
+  left: 0;
+}
+
+.ks-right-paddle {
+  right: 0;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=ks_control_panel_slider.css.map */

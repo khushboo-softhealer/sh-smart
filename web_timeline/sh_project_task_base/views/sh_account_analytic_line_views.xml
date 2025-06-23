@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record model="ir.ui.view" id="anlytic_line_form_chatter">
+        <field name="name">account.analytic.line.form</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet" position="after">
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </xpath>
+            <field name="unit_amount" position="after">
+                <field name="unit_amount_invoice" string="Duration (Invoice)" groups="sh_project_task_base.group_project_officer,sh_project_mgmt.group_project_task_create"/>
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="anlytic_line_tree">
+        <field name="name">account.analytic.line.tree</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree" />
+        <field name="arch" type="xml">
+            <field name="unit_amount" position="after">
+                <field name="temp_task" invisible="1"></field>
+                <field name="unit_amount_invoice" widget="timesheet_uom" sum="Total" string="Duration (Invoice)" groups="sh_project_task_base.group_project_officer,sh_project_mgmt.group_project_task_create" optional="hide"/>
+                <button string="Transfer Timesheet" type="object" class="btn btn-primary" name="manually_transfer_timehseet" attrs="{'invisible': [('temp_task','=',False)]}"/>
+            </field>
+            <field name="project_id" position="before">
+                    <field name="create_uid" optional="hide"/>
+                    <field name="create_date" optional="hide"/>
+                    <field name="write_uid" optional="hide"/>
+                    <field name="write_date" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_timesheet.timesheet_view_tree_user" model="ir.ui.view">
+        <field name="name">account.analytic.line.view.tree.with.user</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree"/>
+        <field name="mode">primary</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='employee_id']" position="attributes">
+                <attribute name="invisible">0</attribute>
+                <attribute name="required">1</attribute>
+                <attribute name="widget">many2one_avatar_employee</attribute>
+                <attribute name="context">{'active_test': True}</attribute>
+                <attribute name="options">{'no_create':True,'no_create_edit':True}</attribute>
+            </xpath>
+                <!-- <field name="unite_amount_invoice" position="after">
+                <field name="timesheet_billed" group="account.group_account_manager"/>
+                <field name="timesheet_lock" group="sh_project_task_base.group_project_officer"/>
+                </field> -->
+        </field>
+    </record>
+</odoo>

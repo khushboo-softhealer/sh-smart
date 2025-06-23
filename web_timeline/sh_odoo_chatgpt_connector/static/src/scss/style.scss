@@ -1,0 +1,149 @@
+.sh_info_icon{cursor: pointer;}
+.sh_info_icon .cls-2{transition: 0.4s all;}
+.sh_info_icon:hover .cls-2{fill: $o-brand-primary;}
+.sh_textarea{border: 1px solid #bfbfbf;padding: 10px;}
+.sh_textarea textarea{border: 0px;}
+// sh_spinner
+#sh_loading_bubble{display: flex;justify-content: center;align-items: center;width: 70px;height: 35px;margin-left: 10px;border-radius: 5px;box-sizing: border-box;position: relative;background-color: $o-brand-primary;animation: message-bounce 2.5s ease-in-out infinite;animation-fill-mode: both;}
+#sh_loading_bubble::before{display: block;content: " ";width: 0;height: 0;border-style: solid;border-width: 8px 8px 8px 0;border-color: transparent $o-brand-primary transparent transparent;position: absolute;left: -7px;top: 9px;}
+#sh_loading_bubble .sh_spinner{display: flex;align-items: center;}
+.sh_spinner > div { 
+	width: 12px;
+	height: 12px;
+	background-color: #ffffff;
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+	animation: bouncedelay 1400ms ease-in-out infinite;
+	/* Prevent first frame from flickering when animation starts */ -webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+
+}
+.sh_spinner .sh_bounce_1 { 
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+.sh_spinner .sh_bounce_2 { 
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@keyframes bouncedelay {
+	0%, 80%, 100% {
+		transform: scale(0.0);
+		-webkit-transform: scale(0.0);
+	}
+    40% {
+		transform: scale(1.0);
+		-webkit-transform: scale(1.0);
+	}
+}
+
+
+// chatgpt popup scss //
+.modal .modal-dialog:has(.sh_custom_popup) .modal-content .modal-header{border-bottom: 0; padding-bottom: 0px;}
+.modal .modal-dialog:has(.sh_custom_popup) .modal-header > .modal-title{font-size: 22px; color:$o-brand-primary !important;}
+.sh_custom_popup .sh_custom_input_box{flex-direction: column;}
+.sh_custom_popup .sh_custom_input_box .sh_input_label{font-size:15px;font-weight:500; width:100%;}
+.sh_custom_popup .sh_custom_input_box input{width:100%; height:auto;resize:none;border:0;border-radius:5px;color:#9aa3a4;font-size:14px; padding:10px 10px;    box-shadow: rgba(0, 0, 0, 0.1) 4px 6px 13px; transition: 0.4s all; border:1px solid transparent; margin-top: 5px;}
+.sh_custom_popup .sh_custom_input_box input:hover{border:1px solid #71639e75 !important;}
+.sh_custom_popup .sh_custom_input_box input:focus-within{border:1px solid #71639e75 !important;}
+.sh_custom_popup .sh_custom_input_box input:focus{border:1px solid #71639e75 !important;}
+.sh_custom_popup .sh_custom_input_box textarea{width:100%; height:70px;resize: vertical;margin-bottom:0px;box-shadow: rgba(0, 0, 0, 0.1) 4px 6px 13px;border:0;border:0;border-radius:5px;color:#9aa3a4;font-size:14px;padding:10px 10px;overflow-y:hidden; transition: 0.4s all; border:1px solid transparent;}
+.sh_custom_popup .sh_custom_input_box textarea:hover{border:1px solid #71639e75 !important;}
+.sh_custom_popup .sh_custom_input_box textarea:focus-within{border:1px solid #71639e75 !important;}
+.sh_custom_popup .sh_custom_input_box textarea:focus{border:1px solid #71639e75 !important;}
+.sh_custom_popup .sh_dropdown_label{font-size:15px;font-weight:700 !important;}
+.sh_custom_popup .type_of_command{padding:10px 10px;margin-top:5px; box-shadow: rgba(0, 0, 0, 0.1) 4px 6px 13px; border:0; border-radius:5px;color:#9aa3a4;font-size:14px; position: relative; transition: 0.4s all;border:1px solid transparent;}
+.sh_custom_popup .type_of_command:hover{border:1px solid #71639e75 !important;}
+.sh_custom_popup .type_of_command:focus-within{border:1px solid #71639e75 !important;}
+.sh_custom_popup .type_of_command:focus{border:1px solid #71639e75 !important;}
+.sh_custom_popup .type_of_language{padding:10px 10px;margin-top:5px; box-shadow: rgba(0, 0, 0, 0.1) 4px 6px 13px; border:0; border-radius:5px;color:#9aa3a4;font-size:14px;transition: 0.4s all; border:1px solid transparent;}
+.sh_custom_popup .type_of_language:hover{border:1px solid #71639e75 !important;}
+.sh_custom_popup .type_of_language:focus-within{border:1px solid #71639e75 !important;}
+.sh_custom_popup .type_of_language:focus{border:1px solid #71639e75 !important;}
+.sh_custom_popup .length{padding:10px 10px;margin-top:5px; box-shadow: rgba(0, 0, 0, 0.1) 4px 6px 13px; border:0; border-radius:5px;color: #9aa3a4;font-size: 14px;transition: 0.4s all; border:1px solid transparent;}
+.sh_custom_popup .length:hover{border:1px solid #71639e75 !important;}
+.sh_custom_popup .length:focus-within{border:1px solid #71639e75 !important;}
+.sh_custom_popup .length:focus{border:1px solid #71639e75 !important;}
+.sh_custom_popup .style{padding:10px 10px;margin-top:5px; box-shadow: rgba(0, 0, 0, 0.1) 4px 6px 13px; border:0; border-radius:5px;color: #9aa3a4;font-size:14px;transition: 0.4s all; border:1px solid transparent;}
+.sh_custom_popup .style:hover{border:1px solid #71639e75 !important;}
+.sh_custom_popup .style:focus-within{border:1px solid #71639e75 !important;}
+.sh_custom_popup .style:focus{border:1px solid #71639e75 !important;}
+.sh_custom_popup .translate_to_language{padding:10px 10px;margin-top:5px; box-shadow: rgba(0, 0, 0, 0.1) 4px 6px 13px; border:0; border-radius:5px;color: #9aa3a4;font-size:14px;transition: 0.4s all; border:1px solid transparent;}
+.sh_custom_popup .translate_to_language:hover{border:1px solid #71639e75 !important;}
+.sh_custom_popup .translate_to_language:focus-within{border:1px solid #71639e75 !important;}
+.sh_custom_popup .translate_to_language:focus{border:1px solid #71639e75 !important;}
+.sh_custom_popup .sh_input_label_2{font-size:15px;font-weight:500; width:5%;}
+.sh_custom_popup .sh_textarea{box-shadow: rgba(0, 0, 0, 0.1) 4px 6px 13px; border:0; border-radius:5px; height:300px; overflow-y: auto; resize:none;transition: 0.4s all;}
+.sh_custom_popup .output_data{resize:none;height:300px !important; overflow: hidden !important;}
+.sh_custom_popup .sh_textarea:hover{border:1px solid #71639e75 !important;}
+.sh_custom_popup .sh_textarea:focus-within{border:1px solid #71639e75 !important;}
+.sh_custom_popup .sh_textarea:focus{border:1px solid #71639e75 !important;}
+.sh_custom_popup #sh_loading_bubble{background-color:$o-brand-primary !important;}
+.sh_custom_popup #sh_loading_bubble::before{border-color: transparent $o-brand-primary transparent  transparent !important;}
+.modal .modal-dialog:has(.sh_custom_popup){max-width: 85%!important;display: flex; align-items: center;}
+.modal .modal-dialog:has(.sh_custom_popup) .modal-content .modal-footer{border-top: 0;}
+.modal .modal-dialog:has(.sh_custom_popup) .modal-content .modal-footer .btn-primary{padding:8px 25px; background: $o-brand-primary;border-color:$o-brand-primary;    box-shadow: none; font-size:16px;}
+.modal .modal-dialog:has(.sh_custom_popup) .modal-content .modal-footer .btn-primary:hover,.modal .modal-dialog:has(.sh_custom_popup) .modal-content .modal-footer .btn-primary:focus,.modal .modal-dialog:has(.sh_custom_popup) .modal-content .modal-footer .btn-primary.active{background-color:$o-brand-primary; border-color:$o-brand-primary; box-shadow: none;}
+.modal .modal-dialog:has(.sh_custom_popup) .modal-content .modal-footer .btn-secondary{padding:8px 25px;box-shadow: none; font-size:16px; color:$o-brand-primary;}
+.sh_custom_popup .sh_custom_input_box .sh_row{display: flex; align-items: center; width:100%; margin:20px 0px !important;}
+.sh_custom_popup .sh_custom_input_box .sh_row .sh_col{width:20%; padding:0px 5px;}
+@media screen and (min-width:1399.98px) and (max-width:3740px) {
+	.sh_custom_popup .sh_textarea{height:45vh;}
+	
+}
+
+@media  screen  and (min-width: 1199.98px) and (max-width:1399.98px){
+	.modal .modal-dialog:has(.sh_custom_popup){max-width: 1150px !important;}
+}
+@media  screen  and (min-width: 991.99px) and (max-width:1199.99px){
+	.modal .modal-dialog:has(.sh_custom_popup){max-width: 1000px !important;}
+}
+@media screen and (max-width:1180.99px) {
+	.sh_custom_popup .sh_custom_input_box .sh_input_label{font-size:14px;}
+	.sh_custom_popup .sh_dropdown_label{font-size:14px;}
+	.sh_custom_popup .sh_input_label_2{font-size:14px;}
+	.sh_custom_popup .type_of_command{font-size:12px;}
+	.sh_custom_popup .type_of_language{font-size:12px;}
+	.sh_custom_popup .length{font-size:12px;}
+	.sh_custom_popup .style{font-size:12px;}
+	.sh_custom_popup .translate_to_language{font-size:12px;}
+}
+
+@media  screen and (max-width: 991.98px) {
+	.sh_custom_popup .sh_custom_input_box .sh_input_label{width:100%;}
+	.sh_custom_popup .sh_custom_input_box input{width:100%;}
+	.sh_custom_popup .sh_custom_input_box textarea{width:100%;}
+	.sh_custom_popup .type_of_command{margin-bottom:10px;}
+	.sh_custom_popup .type_of_language{margin-bottom:10px;}
+	.sh_custom_popup .length{margin-bottom:10px;}
+	.sh_custom_popup .style{margin-bottom:10px;}
+	.sh_custom_popup .translate_to_language{margin-bottom:10px;}
+	.sh_custom_popup .sh_textarea{height:200px;}
+	.sh_custom_popup .output_data{height:200px !important;}
+	.sh_custom_popup .sh_input_label_2{width:10%;}
+	.sh_custom_popup .sh_custom_input_box .sh_row{flex-wrap: wrap;justify-content: center;}
+	.sh_custom_popup .sh_custom_input_box .sh_row .sh_col{width: 50%;}
+	.modal .modal-dialog:has(.sh_custom_popup){max-width: 90% !important;}
+	
+}
+
+@media  screen and (max-width: 767.98px) {
+	.modal .modal-dialog:has(.sh_custom_popup){max-width: 100% !important;}
+	.sh_custom_popup .sh_custom_input_box{flex-direction: column !important; align-items: flex-start !important;}
+	.sh_custom_popup .sh_custom_input_box .sh_input_label{width:100%;margin-bottom:5px;font-size:14px;}
+	.sh_custom_popup .sh_custom_input_box input{width:100%;}
+	.sh_custom_popup .sh_custom_input_box textarea{width:100%;}
+	.sh_custom_popup .sh_textarea{height:220px;}
+	.sh_custom_popup .output_data{height:220px !important;}
+	.sh_custom_popup .sh_custom_input_box .sh_row{margin: 10px 0px !important;}
+	.sh_custom_popup .sh_custom_input_box .sh_row .sh_col{width: 100%; padding:0;}
+	.sh_custom_popup .sh_dropdown_label{font-size:14px;}
+	.modal .modal-dialog:has(.sh_custom_popup) .modal-content .modal-header{background-color:transparent !important;}
+	.modal .modal-dialog:has(.sh_custom_popup) .modal-content .modal-header .btn{color:$o-brand-primary;}
+	.modal .modal-dialog:has(.sh_custom_popup) .modal-content .modal-footer .btn-primary{padding:8px 20px;}
+	.modal .modal-dialog:has(.sh_custom_popup) .modal-content .modal-footer .btn-secondary{padding:8px 20px;}
+	.modal:has(.sh_custom_popup){z-index: 1057 !important;}
+	.sh_custom_popup .sh_input_label_2{font-size:14px;}
+}

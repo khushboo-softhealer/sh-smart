@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="update_edition_detalis_in_ticket" model="ir.actions.server">
+        <field name="name">Update Edition Details</field>
+        <field name="model_id" ref="sh_helpdesk_customisation.model_sh_helpdesk_ticket" />
+        <field name="binding_model_id" ref="sh_helpdesk_customisation.model_sh_helpdesk_ticket" />
+        <field name="state">code</field>
+        <field name="binding_view_types">list</field>
+        <field name="code"> action = records.action_update_edition_detalis_in_ticket()</field>
+    </record>
+</odoo>

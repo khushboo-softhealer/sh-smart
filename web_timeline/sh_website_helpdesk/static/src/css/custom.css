@@ -1,0 +1,5 @@
+.table-responsive{overflow-x: unset;}
+.filter-multi-select > .viewbar > .selected-items > .item {
+	padding: 2px 0px 2px 8px !important;
+    height: auto !important;
+}

@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_task_time_account_line,access_task_time_account_line,model_task_time_account_line,base.group_user,1,1,1,1
+access_sh_start_timesheet,access_sh_start_timesheet,model_sh_start_timesheet,base.group_user,1,1,1,1
+
+sh_task_time.access_sh_update_timesheet,access_sh_update_timesheet,sh_task_time.model_sh_update_timesheet,base.group_user,1,1,1,1
+sh_task_time.access_sh_add_users,access_sh_add_users,sh_task_time.model_sh_add_users,base.group_user,1,1,1,1
+
+sh_task_time.access_sh_create_new_task_wizard,access_sh_create_new_task_wizard,sh_task_time.model_sh_create_new_task_wizard,base.group_user,1,1,1,1
+
+access_sh_transfer_timesheet,access_sh_transfer_timesheet,model_sh_transfer_timesheet,base.group_user,1,1,1,1
+
+access_sh_pause_task_entry,access_sh_pause_task_entry,model_sh_pause_task_entry,base.group_user,1,1,1,1
+access_sh_edit_timesheet,access_sh_edit_timesheet,model_sh_edit_timesheet,base.group_user,1,1,1,1

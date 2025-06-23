@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="sh_project_timesheet_view_tree">
+        <field name="name">sh.account.analytic.line.project.tree</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree" />
+        <field name="arch" type="xml">
+            <field name="unit_amount" position="after">
+                <field name="sh_pricing_mode" optional="hide"/>
+                <field name="sh_fp_based_on" optional="hide"/>
+                <field name="sh_tm_based_on" optional="hide"/>
+                <field name="project_type_selection" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="project_stage_id" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="project_start_date" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="project_end_date" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="project_allocated_hours" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="sh_hr_timesheet_line_search_view" model="ir.ui.view">
+        <field name="name">sh.account.analytic.line.search.view</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search//filter[@name='month']" position="after">
+                <separator/>
+                <filter name="filter_profitable_project" string="Profitable Project" domain="[('project_total_profit', '>', 0)]" groups="sh_project_mgmt.group_project_pl"/>
+                <filter name="filter_loss_making_project" string="Loss Making Project" domain="[('project_total_profit', '&lt;=', 0)]" groups="sh_project_mgmt.group_project_pl"/>
+                <filter name="filter_success_pack" string="Success Pack" domain="[('sh_tm_based_on', '=', 'success_pack')]" groups="sh_project_task_base.group_project_officer"/>
+                <filter name="filter_billable" string="Billable" domain="[('sh_tm_based_on', '=', 'billable')]"  groups="sh_project_task_base.group_project_officer"/>
+                <filter name="filter_fix_price" string="Fixed Price" domain="[('sh_pricing_mode', '=', 'fp')]" groups="sh_project_task_base.group_project_officer" />
+            </xpath>
+
+            <xpath expr="//search//group//filter[@name='groupby_employee']" position="after">
+                <separator/>
+                <filter string="Project Type" name="group_project_type" context="{'group_by': 'project_type_selection'}"  groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project Stage" name="group_project_stage" context="{'group_by': 'project_stage_id'}"  groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project Start Date" name="group_project_start_date" context="{'group_by': 'project_start_date'}"  groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project End Date" name="group_project_end_date" context="{'group_by': 'project_end_date'}"  groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project Pricing Model" name="group_sh_pricing_mode" context="{'group_by': 'sh_pricing_mode'}"  groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project FP Based On" name="group_sh_fp_based_on" context="{'group_by': 'sh_fp_based_on'}"  groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project TM Based On" name="group_sh_tm_based_on" context="{'group_by': 'sh_tm_based_on'}"  groups="sh_project_task_base.group_project_officer"/>
+
+            </xpath>
+        </field>
+    </record>
+    
+    <!-- <search string="Timesheet">
+        <field name="date"/>
+        <field name="employee_id"/>
+        <field name="project_id"/>
+        <field name="ancestor_task_id" groups="project.group_subtask_project"/>
+        <field name="task_id"/>
+        <field name="name"/>
+        <field name="department_id"/>
+        <field name="manager_id"/>
+        <filter name="mine" string="My Timesheets" domain="[('user_id', '=', uid)]"/>
+        <separator/>
+        <filter name="month" string="Date" date="date"/>
+        <group expand="0" string="Group By">
+            <filter string="Project" name="groupby_project" domain="[]" context="{'group_by': 'project_id'}"/>
+            <filter string="Ancestor Task" name="groupby_parent_task" domain="[]" context="{'group_by': 'ancestor_task_id'}" groups="project.group_subtask_project"/>
+            <filter string="Task" name="groupby_task" domain="[]" context="{'group_by': 'task_id'}"/>
+            <filter string="Date" name="groupby_date" domain="[]" context="{'group_by': 'date'}" help="Timesheet by Date"/>
+            <filter string="Department" name="groupby_department" domain="[]" context="{'group_by': 'department_id'}"/>
+            <filter string="Manager" name="groupby_manager" domain="[]" context="{'group_by': 'manager_id'}"/>
+            <filter string="Employee" name="groupby_employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+        </group>
+    </search> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- <menuitem id="hr_timesheet.timesheet_menu_activity_all"
+            name="All Timesheets"
+            parent="hr_timesheet.menu_hr_time_tracking"
+            action="hr_timesheet.timesheet_action_all"
+            groups="hr_timesheet.group_hr_timesheet_approver,sh_project_mgmt.group_project_task_create"/> -->
+
+
+</odoo>

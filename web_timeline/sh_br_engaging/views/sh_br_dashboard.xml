@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_br_engage_dashboard_action" model="ir.actions.client">
+        <field name="name">BR Dashboard</field>
+        <field name="tag">sh_br_engaging.br_engage_dashboard_component</field>
+    </record>
+</odoo>

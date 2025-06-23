@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_user_wizard_form" model="ir.ui.view">
+        <field name="name">res.user.wizard.form</field>
+        <field name="model">sh.res.user.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="">
+
+                <group>
+                    <group>
+                        <field name="product_ids" invisible="1"/>
+                        <field name="user_id"/>
+                    </group>
+                    <group>
+                        <field name="update_other_respnosible_users"/>
+                        <field name="update_method_user" widget="radio" attrs="{'invisible': [('update_other_respnosible_users', '=', False)]}"/>
+                         <field name="other_responsible_users" attrs="{'invisible': [('update_other_respnosible_users', '=', False)]}" widget = "many2many_tags"/>
+                    </group>
+                </group>
+
+                <footer>
+                    <button  string="Assign User"  class="oe_highlight" type="object" name="assign_user" />
+                    <button string="Cancel" class="btn btn-secondary" special="cancel" icon="fa-remove" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_res_user_wizard" model="ir.actions.act_window">
+        <field name="name">Responsible User</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.res.user.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

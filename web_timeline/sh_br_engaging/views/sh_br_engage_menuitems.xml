@@ -1,0 +1,98 @@
+<odoo>
+   <menuitem id="br_engaging_menu" name="SH-Engage" groups="sh_br_engaging.group_br_engage_user"/>
+
+   <!-- <menuitem id="sh_check_in_main_menu"
+   name="Check-in"
+   sequence="2"
+   parent="sh_br_engaging.br_engaging_menu"
+   />
+
+
+   <menuitem id="sh_my_check_in_menu"
+   action="sh_br_check_in_action"
+   name="My Check-in"
+   sequence="1"
+   parent="sh_br_engaging.sh_check_in_main_menu"/>
+
+
+   <menuitem id="sh_all_check_in_menu_for_all_user"
+   action="sh_br_all_child_check_in_tree_action"
+   name="All Check-in"
+   sequence="2"
+   parent="sh_br_engaging.sh_check_in_main_menu"/> -->
+
+   <!-- <menuitem id="sh_all_check_in_menu"
+   action="sh_br_all_check_in_action_for_admin"
+   name="All Check-in"
+   groups="sh_br_engaging.group_br_engage_manager"
+   sequence="2"
+   parent="sh_br_engaging.sh_check_in_main_menu"/> -->
+
+    <!-- <menuitem id="sh_one_on_ones_root_menu" 
+        name="1-on-1s" parent="sh_br_engaging.br_engaging_menu" sequence="3" />
+
+    <menuitem id="sh_meetings_menu" 
+        action="sh_br_engaging.sh_meetings_custom_action" name="Meetings" parent="sh_br_engaging.sh_one_on_ones_root_menu" sequence="1" />
+
+    <menuitem id="sh_talking_points_menu" 
+        action="sh_talking_points_action" name="1-on-1s" parent="sh_br_engaging.sh_one_on_ones_root_menu" sequence="3" /> -->
+        <!-- action="sh_talking_points_action" name="1-on-1s"  groups="sh_br_engaging.group_br_engage_manager" parent="sh_br_engaging.sh_one_on_ones_root_menu" sequence="3" /> -->
+
+   <menuitem id="br_engage_configuration_menu" 
+        name="Configuration"  
+        parent="sh_br_engaging.br_engaging_menu" groups="sh_br_engaging.group_br_engage_manager">
+
+        <!-- <menuitem id="menu_br_general_settings"
+        name="Settings"
+        sequence="10"
+        action="sh_br_engaging.action_br_config_settings"/> -->
+        
+        <!-- only manager access setting menuitem -->
+        <menuitem id="menu_br_custom_settings"
+        name="Settings"
+        sequence="11"
+        action="sh_br_engaging.sh_br_custom_configuration_update_action" groups="sh_br_engaging.group_br_engage_manager"/>
+    </menuitem>
+
+    <!-- <menuitem id="sh_manage_questions_menu"
+        action="sh_manage_questions_action"
+        name="Manage Questions"
+        sequence="1"
+        parent="sh_br_engaging.br_engage_configuration_menu"/>
+
+    <menuitem id="sh_manage_agenda_menu"
+        action="sh_manage_agenda_action"
+        name="Manage Talking Points"
+        sequence="2"
+        parent="sh_br_engaging.br_engage_configuration_menu"/> -->
+
+    <!-- MANAGE MEETING AGENDA MENU  -->
+    <!-- <menuitem id="sh_meeting_agenda_menu"
+        action="sh_meeting_agenda_action"
+        name="Manage Meeting Agenda"
+        sequence="3"
+        parent="sh_br_engaging.br_engage_configuration_menu"/> -->
+
+    <menuitem id="sh_manage_badge_menu"
+        action="sh_manage_badge_action"
+        name="Badges"
+        sequence="4"
+        parent="sh_br_engaging.br_engage_configuration_menu"/>
+
+    <!-- <menuitem id="sh_realtime_feedback_menu"
+        action="sh_br_realtime_feedback_action"
+        name="Feedback"
+        sequence="5"
+        parent="sh_br_engaging.br_engaging_menu"/> -->
+    
+    <menuitem id="sh_high_fives_menu"
+        action="sh_br_engage_high_five_action"
+        name="High-Five"
+        sequence="6"
+        parent="sh_br_engaging.br_engaging_menu"/>
+    <!-- <menuitem id="sh_br_engage_dashboard_menu"
+        action="sh_br_engage_dashboard_action"
+        name="Dashboard"
+        sequence="1"
+        parent="sh_br_engaging.br_engaging_menu"/> -->
+</odoo>

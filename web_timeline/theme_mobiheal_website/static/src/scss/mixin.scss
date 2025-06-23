@@ -1,0 +1,188 @@
+// Primary Buttton //
+@mixin mb_primary_button{
+    text-decoration: none;   background: #e5594f;color: #fff;border-radius: 15px;padding: 20px 45px;line-height: 1;font-size: 16px;font-weight: 600;position: relative;box-shadow: 0 10px 25px 0 rgba(229, 89, 79,0.40);
+}
+
+//------------------------------------- home page ------------------------------------//
+
+// ========== Section heading Start============ //
+@mixin mb_section_subtitle{
+    color: #e55a52;font-size: 18px;font-weight: 600!important;line-height: 1.9;text-transform: uppercase;letter-spacing: 5px;margin-bottom: 0px !important;
+}
+@mixin mb_section_heading{
+    color:#1c3360;font-size:45px;font-weight: 600;line-height: 1.3;margin-bottom: 20px;text-transform: capitalize;
+}
+@mixin mb_section_text{
+    color:#3E3E3E;letter-spacing: 0.01em;line-height: 1.9;font-size: 16px;margin-bottom: 50px;
+}
+// ========== Section heading end============ //
+
+
+// ============ section inner subtital , inner subtext start ============== //
+@mixin mb_section_sub_heading{
+    color: #e55a52;font-size: 24px;font-weight: 600;
+}
+@mixin mb_section_sub_text{
+    margin: 10px 0px 0px 0px;padding: 0px !important;font-size: 16px;line-height: 1.9;font-weight: 400;color: #3E3E3E;
+}
+// ============ section inner subtital , inner subtext end ============== //
+
+
+// ========== Section Padding Start============ //
+
+//desktop view//
+@mixin mb_section_padding{
+    padding: 50px 0 50px;
+}
+//desktop view//
+
+//table view//
+@mixin mb_table_section_padding{
+    padding: 30px 0 30px;
+}
+//table view//
+// ========== Section Padding end============ //
+
+//------------------------------------- home page ------------------------------------//
+
+
+
+
+
+//------------------------------------- d-man page ------------------------------------//
+
+// ========== Section heading Start============ //
+@mixin mb_d_man_section_subtitle{
+    color: #e55a52;font-size: 18px;font-weight: 600;line-height: 1.9;text-transform: uppercase;letter-spacing: 5px;margin-bottom: 0px !important;
+}
+@mixin mb_d_man_section_heading{
+    color:#1c3360;font-size:45px;font-weight: 600;line-height: 1.3;margin-bottom: 20px;text-transform: capitalize;
+}
+@mixin mb_d_man_section_text{
+    color:#3E3E3E;letter-spacing: 0.01em;line-height: 1.9;font-size: 16px;margin-bottom: 50px;
+}
+// ========== Section heading end============ //
+
+
+// ============ d-man services subtext start ============== //
+@mixin mb_d_man_section_sub_heading{
+    color: #1c3360;font-size: 24px;font-weight: 600;
+}
+@mixin mb_d_man_section_sub_text{
+    margin: 10px 0px 0px 0px;padding: 0px !important;font-size: 16px;line-height: 1.9;font-weight: 400;color: #3E3E3E;
+}
+// ============ d-man services subtext end ============== //
+
+
+// ============ d-man services subtext start ============== //
+@mixin mb_d_man_app_heading{
+    color:#1c3360;font-size:40px;font-weight: 600;line-height: 1.3;margin-bottom: 20px;text-transform: capitalize;
+}
+@mixin mb_d_man_app_sub_title{
+    color: #e55a52;margin-bottom: 21px;max-width: 380px;font-size: 18px;font-weight: 400;line-height: 30px;margin-top: 30px;
+    }
+@mixin mb_d_man_app_text{
+    color:#3E3E3E;letter-spacing: 0.01em;line-height: 1.9;font-size: 16px;margin-bottom: 20px;
+}
+
+// ============ d-man services subtext end ============== //
+
+//------------------------------------- d-man page ------------------------------------//
+
+
+
+//------------------------------------- order page ------------------------------------//
+
+// ========== Section heading Start============ //
+@mixin mb_order_section_subtitle{
+    color: #e55a52;font-size: 18px;font-weight: 600;line-height: 1.9;text-transform: uppercase;letter-spacing: 5px;margin-bottom: 0px !important;
+}
+@mixin mb_order_section_heading{
+    color:#2f3292;font-size:45px;font-weight: 600;line-height: 1.3;margin-bottom: 20px;text-transform: capitalize;
+}
+@mixin mb_order_section_text{
+    color:#3E3E3E;letter-spacing: 0.01em;line-height: 1.9;font-size: 16px;margin-bottom: 50px;
+}
+// ========== Section heading end============ //
+
+
+// ============ d-man services subtext start ============== //
+@mixin mb_order_section_sub_heading{
+    color: #2f3292;font-size: 24px;font-weight: 600;
+}
+@mixin mb_order_section_sub_text{
+    margin: 10px 0px 0px 0px;padding: 0px !important;font-size: 16px;line-height: 1.9;font-weight: 400;color: #3E3E3E;
+}
+// ============ d-man services subtext end ============== //
+
+
+// ============order services subtext start ============== //
+@mixin mb_order_app_heading{
+    color:#2f3292;font-size:43px;font-weight: 600;line-height: 1.3;margin-bottom: 20px;text-transform: capitalize;
+}
+@mixin mb_order_app_sub_title{
+    color: #e55a52;font-size: 18px;font-weight: 600;line-height: 1.9;text-transform: uppercase;letter-spacing: 5px;margin-bottom: 0px !important;
+    }
+@mixin mb_order_app_text{
+    color:#3E3E3E;letter-spacing: 0.01em;line-height: 1.9;font-size: 16px;margin-bottom: 50px;
+}
+
+// ============ order services subtext end ============== //
+
+@mixin mb_order_primary_button{
+    text-decoration: none;background: #2f3292;color: #fff;border-radius: 15px;padding: 20px 45px;line-height: 1;font-size: 16px;font-weight: 600;position: relative;
+}
+
+//------------------------------------- order page ------------------------------------//
+
+
+
+//------------------------------------- event page ------------------------------------//
+// ========== Section heading Start============ //
+@mixin mb_event_section_subtitle{
+    color: #e55a52;font-size: 18px;font-weight: 600;line-height: 1.9;text-transform: uppercase;letter-spacing: 5px;margin-bottom: 0px !important;
+}
+@mixin mb_event_section_heading{
+    color:#3e204e;font-size:45px;font-weight: 600;line-height: 1.3;margin-bottom: 20px;text-transform: capitalize;
+}
+@mixin mb_event_section_text{
+    color:#3E3E3E;letter-spacing: 0.01em;line-height: 1.9;font-size: 16px;margin-bottom: 50px;
+}
+// ========== Section heading end============ //
+
+
+// ============ event services subtext start ============== //
+@mixin mb_event_section_sub_heading{
+    color: #3e204e;font-size: 24px;font-weight: 600;
+}
+@mixin mb_event_section_sub_text{
+    margin: 10px 0px 0px 0px;padding: 0px !important;font-size: 16px;line-height: 1.9;font-weight: 400;color: #3E3E3E;
+}
+// ============ event services subtext end ============== //
+
+
+// ============event services subtext start ============== //
+@mixin mb_event_app_heading{
+    color:#3e204e;font-size:43px;font-weight: 600;line-height: 1.3;margin-bottom: 20px;text-transform: capitalize;
+}
+@mixin mb_event_app_sub_title{
+    color: #e55a52;font-size: 18px;font-weight: 600;line-height: 1.9;text-transform: uppercase;letter-spacing: 5px;margin-bottom: 0px !important;
+    }
+@mixin mb_event_app_text{
+    color:#3E3E3E;letter-spacing: 0.01em;line-height: 1.9;font-size: 16px;margin-bottom: 50px;
+}
+// ============ eventr services subtext end ============== //
+
+//-------------------------------------event  page ------------------------------------//
+
+
+body:not(.o_fullscreen) #oe_main_menu_navbar:not(.o_hidden) + #wrapwrap .o_header_affixed, body:not(.o_fullscreen) #oe_main_menu_navbar:not(.o_hidden) + #wrapwrap .modal{display: none;}
+::selection {background: #e55a52;color: #fff; }
+::selection{-webkit-text-fill-color: #fff;}
+a:hover{text-decoration: none;}
+@media (max-width: 1024px){
+.container {max-width: 1024px;padding-left: 24px; padding-right: 24px;}
+}
+@media (max-width: 1400px){
+.container{max-width: 1320px;padding-left: 24px;padding-right: 24px;}
+}

@@ -1,0 +1,177 @@
+/* ======================
+	COMMON SCSS
+============================= */
+.o_survey_choice_key {
+  display: none !important;
+}
+
+/*===========================
+	Radio button style 1
+=============================*/
+.sh_survmate_radiobtn_style_1 .js_question-wrapper .o_survey_selected .fa-check-circle:before {
+  content: "\f2da";
+}
+
+/*===========================
+	Radio button style 2
+=============================*/
+/*.sh_survmate_radiobtn_style_2 .o_survey_choice_btn{
+	position:relative;
+}
+.sh_survmate_radiobtn_style_2 .fa-circle-thin:before{
+	display:none;
+}*/
+.sh_survmate_radiobtn_style_2 .js_question-wrapper .o_survey_selected .fa-check-circle:before {
+  content: "\f05d";
+}
+
+/*===========================
+	Radio button style 3
+=============================*/
+.sh_survmate_radiobtn_style_3 .js_question-wrapper .o_survey_choice_btn .fa-circle-thin:before {
+  content: "\f10c";
+}
+
+.sh_survmate_radiobtn_style_3 .js_question-wrapper .o_survey_selected .fa-check-circle:before {
+  content: "\f111";
+}
+
+/*.sh_survmate_radiobtn_style_3 .fa-circle-thin{
+	content: '';
+    right: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid;
+    border-radius: 0px;
+	transition: all 0.2s ease;
+}
+.sh_survmate_radiobtn_style_3 .o_survey_selected .fa-circle-thin{
+	display:block !important;
+	content: '';
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid;
+    border-radius: 0px;
+    transition: all 0.2s ease;
+    border-left: 0;
+    border-top: 0;
+    width: 8px;
+    transform:rotate(45deg);
+    top: -2px;
+}*/
+/*===========================
+	Radio button style 4
+=============================*/
+.sh_survmate_radiobtn_style_4 .js_question-wrapper .o_survey_choice_btn .fa-circle-thin:before {
+  content: "\f096";
+  display: none;
+}
+
+.sh_survmate_radiobtn_style_4 .js_question-wrapper .o_survey_selected .fa-check-circle:before {
+  content: "\f046";
+  display: none;
+}
+
+.sh_survmate_radiobtn_style_4 .js_question-wrapper .o_survey_choice_btn .fa-circle-thin {
+  content: "";
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+}
+
+.sh_survmate_radiobtn_style_4 .js_question-wrapper .o_survey_selected .fa-circle-thin {
+  display: block !important;
+  content: "";
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  position: relative;
+}
+
+.sh_survmate_radiobtn_style_4 .js_question-wrapper .o_survey_selected .fa-circle-thin:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.sh_survmate_radiobtn_style_4 .js_question-wrapper .o_survey_question_matrix .o_survey_matrix_btn.o_survey_selected .o_survey_matrix_empty_checkbox.fa-circle-thin {
+  width: 100%;
+  border: 0;
+}
+
+.sh_survmate_radiobtn_style_4 .js_question-wrapper .o_survey_question_matrix .o_survey_matrix_btn.o_survey_selected .o_survey_matrix_empty_checkbox.fa-circle-thin:after {
+  position: absolute;
+  content: "";
+  top: 63%;
+  left: 50%;
+  padding: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/*===========================
+	Radio button style 5
+=============================*/
+.sh_survmate_radiobtn_style_5 .js_question-wrapper .o_survey_choice_btn .fa-circle-thin:before {
+  content: "\f096" !important;
+}
+
+.sh_survmate_radiobtn_style_5 .js_question-wrapper .o_survey_question_matrix .o_survey_matrix_btn .o_survey_matrix_empty_checkbox.fa-circle-thin:before {
+  content: "\f096" !important;
+}
+
+.sh_survmate_radiobtn_style_5 .js_question-wrapper .o_survey_selected .fa-check-circle:before {
+  content: "\f14a";
+}
+
+/*.sh_survmate_radiobtn_style_5 .js_question-wrapper .o_survey_choice_btn .fa-circle-thin{
+	content: '';
+    right: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid;
+    border-radius: 50px;
+	transition: all 0.2s ease;
+}
+.sh_survmate_radiobtn_style_5 .js_question-wrapper .o_survey_selected .fa-circle-thin{
+	display:block !important;
+	content: '';
+    right: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid;
+    border-radius: 50px;
+	transition: all 0.2s ease;
+}
+.sh_survmate_radiobtn_style_5 .js_question-wrapper .o_survey_selected .fa-circle-thin:after{
+
+    display: block !important;
+    content: '';
+    height: 21px;
+    border: 3px solid;
+    border-radius: 0px;
+    transition: all 0.2s ease;
+    border-left: 0;
+    border-top: 0;
+    width: 8px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -9px;
+    left: 8px;
+}*//*# sourceMappingURL=radio_btn.css.map */

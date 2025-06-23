@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_lead_replied_status_form_view" model="ir.ui.view">
+        <field name="name">crm.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <field name="team_id" position="after">
+                <field name="sh_replied_status" invisible="1"/>
+                <field name="sh_replied_status_id"/>
+            </field>
+        </field>
+    </record>
+    <record id="sh_lead_replied_status_kanban_view" model="ir.ui.view">
+        <field name="name">crm.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_lead_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="default_group_by">sh_replied_status_id</attribute>                
+            </xpath>
+            <xpath expr="//div[hasclass('oe_kanban_bottom_right')]" position="replace">
+                <div name="state" class="o_field_widget o_readonly_modifier o_field_label_selection">
+                     <span class="badge text-bg-primary">
+                         <field name="sh_replied_status_id"/>
+                     </span>
+                 </div>
+             </xpath>
+        </field>
+    </record>
+    <record id="sh_lead_replied_status_tree_view" model="ir.ui.view">
+        <field name="name">crm.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+        <field name="arch" type="xml">
+            <field name="team_id" position="after">
+                <field name="sh_replied_status" invisible="1"/>
+                <field name="sh_replied_status_id"/>
+            </field>
+        </field>
+    </record>
+    <!-- <record id="sh_oppo_replied_status_form_view" model="ir.ui.view">
+        <field name="name">crm.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <field name="team_id" position="after">
+                <field name="sh_replied_status"/>
+            </field>
+        </field>
+    </record> -->
+    <record id="sh_lead_replied_status_search_view" model="ir.ui.view">
+        <field name="name">crm.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
+        <field name="arch" type="xml">
+            <filter name="assigned_to_me" position="after">
+                <filter string="Staff Replied" domain="[('sh_replied_status','=','staff_replied')]" name="staff_replied_oppo"/>
+                <filter string="Customer Replied" domain="[('sh_replied_status','=','customer_replied')]" name="customer_replied_oppo"/>
+            </filter>
+        </field>
+    </record>
+    <record id="sh_oppo_replied_status_search_view" model="ir.ui.view">
+        <field name="name">crm.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+        <field name="arch" type="xml">
+            <filter name="assigned_to_me" position="after">
+                <filter string="Staff Replied" domain="[('sh_replied_status','=','staff_replied')]" name="staff_replied_oppo"/>
+                <filter string="Customer Replied" domain="[('sh_replied_status','=','customer_replied')]" name="customer_replied_oppo"/>
+            </filter>
+        </field>
+    </record>
+</odoo>

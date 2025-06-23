@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_odoo_hosted_view_form" model="ir.ui.view">
+        <field name="name">sh.odoo.hosted.view.form</field>
+        <field name="model">sh.odoo.hosted.on</field>
+        <field name="arch" type="xml">
+            <form string="Odoo Hosted On">
+                <sheet>
+                    <!-- <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div> -->
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="sh_display_in_frontend"/>
+                        </group>
+                        <group>
+                            <field name="sh_edtion_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="sh_odoo_hosted_view_tree" model="ir.ui.view">
+        <field name="name">sh.odoo.hosted.view.tree</field>
+        <field name="model">sh.odoo.hosted.on</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="sh_edtion_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_odoo_hosted_action" model="ir.actions.act_window">
+        <field name="name">Odoo Hosted On</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.odoo.hosted.on</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create a new Odoo Host</p>
+        </field>
+    </record>
+
+    <menuitem id="sh_odoo_hosted_menu" name="Odoo Hosted On " parent="sale.product_menu_catalog" action="sh_odoo_hosted_action" sequence="6" />
+</odoo>

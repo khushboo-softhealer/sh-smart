@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- snippet options -->
+    <template id="sh_product_snippet_options" inherit_id="website.snippet_options" name="Product List Options">
+        <xpath expr="//div" position="after">
+            <div data-selector=".js_cls_get_sh_ecom_s_product">
+
+                <!-- Shows   -->
+                <we-checkbox string="Add to Cart" data-select-data-attribute="true" data-attribute-name="displayAddtocart" />
+                <we-checkbox string="Description" data-select-data-attribute="true" data-attribute-name="displayDescription" />
+                <we-checkbox string="Wish List" data-select-data-attribute="true" data-attribute-name="displayWishlist" />
+                <we-checkbox string="Sale Price" data-select-data-attribute="true" data-attribute-name="displaySaleprice" />
+                <we-checkbox string="Rating" data-select-data-attribute="true" data-attribute-name="displayRating" />
+                <we-checkbox string="Category" data-select-data-attribute="true" data-attribute-name="displayCategory" />
+
+                <!-- Filter -->
+                <we-select string="Filter" data-name="sh_filter_opt" data-attribute-name="filterId">
+                    <we-button data-select-data-attribute="">None</we-button>
+                    <t t-set="sh_filters" t-value="request.env['sh.ecom.s.filter'].search([])" />
+                    <t t-if="len(sh_filters)">
+                        <t t-foreach="sh_filters" t-as="sh_filter">
+                            <we-button t-att-data-select-data-attribute="sh_filter.id">
+                                <t t-esc="sh_filter.name" />
+                            </we-button>
+                        </t>
+                    </t>
+                </we-select>
+            </div>
+        </xpath>
+    </template>
+    
+    
+    <template id="sh_ecommerce_snippet_website_snippets" inherit_id="website.snippets" name="Ecommerce Snippet">
+        <xpath expr="//div[@id='snippet_structure']" position="before">
+            <div id="sh_ecommerce_snippet" class="o_panel">
+                <div class="o_panel_header">
+                    Ecommerce Snippet
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="sh_ecommerce_snippet.sh_store_product_boxes" t-thumbnail="/sh_ecommerce_snippet/static/src/img/blocks/sh_store_apps.svg" />
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

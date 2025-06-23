@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="theme_softhealer_store_banner_snippet_template" name="About Banner">
+        <section class="theme_softhealer_store_banner_snippet_template"
+            data-snippet="theme_softhealer_store_banner_snippet_template">
+            <!--banner
+            start-->
+            <section id="sh_store_banner"
+                class="sh_store_privacy_policy_banner sh_other_page_banner">
+                <div class="container">
+                    <div class="sh_banner_content">
+                        <h2 class="sh_banner_title">About Us</h2>
+                        <ul class="sh_banner_breadcrumb">
+                            <li>
+                                <a class="sh_banner_breadcrumb_link" href="/">Home <span
+                                        class="sh_banner_breadcrumb_icon fa fa-angle-right"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <span class="sh_banner_normal_text">About Us</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!--banner
+            end-->
+        </section>
+    </template>
+    <template id="theme_softhealer_store_abouts_us_snippet_template" name="About Us">
+        <section class="theme_softhealer_store_abouts_us_snippet_template"
+            data-snippet="theme_softhealer_store_abouts_us_snippet_template">
+            <!-- store abouts us snippet start -->
+            <section id="sh_store_abouts_us_snippet" class="sh_store_abouts_us_snippet">
+                <div class="container">
+                    <div class="sh_store_abouts_us_main">
+                        <div class="sh_inner_box">
+                            <div class="row align-items-center">
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12 align-self-center">
+                                    <div class="sh_column_inner_box"
+                                        >
+                                        <div class="sh_img_box">
+                                            <img
+                                                src="/theme_softhealer_store/static/src/img/about_us/about_store.webp"
+                                                alt="About Softhealer" loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12">
+                                    <div class="sh_store_abouts_us_content"
+                                        >
+                                        <h5 class="sh_sub_title">About Us</h5>
+                                        <h2 class="sh_store_abouts_us_content_title">Crafting
+                                            Digital Solutions to Empowering Your Business</h2>
+                                        <div class="sh_store_abouts_us_content_box">
+                                            <div
+                                                class="sh_store_abouts_us_content_text">We
+                                                understand that every business is unique, with its
+                                                own set of challenges and goals. That's why we take
+                                                a personalized approach to crafting solutions that
+                                                are tailored to your specific needs. We collaborate
+                                                closely with our clients to gain a deep
+                                                understanding of their business objectives, target
+                                                audience, and industry landscape. This enables us to
+                                                design digital solutions that not only meet your
+                                                immediate needs but also position your business for
+                                                long-term success.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- store abouts us snippet end -->
+        </section>
+    </template>
+    <template id="theme_softhealer_store_why_choose_us_snippet_template" name="About Why Choose Us">
+        <section class="theme_softhealer_store_why_choose_us_snippet_template"
+            data-snippet="theme_softhealer_store_why_choose_us_snippet_template">
+            <!-- store why choose us snippet start -->
+            <section id="sh_store_why_choose_us_snippet" class="sh_store_why_choose_us_snippet">
+                <div class="container">
+                    <div class="sh_store_why_choose_us_main">
+                        <div class="sh_store_why_choose_us_heading">
+                            <h5 class="sh_heading_sub_title">Frames of Achievement</h5>
+                            <h2 class="sh_store_why_choose_us_heading">Visualizing Accomplishments
+                                in a Captivating Manner</h2>
+                        </div>
+                        <div class="sh_store_why_choose_us_counter_main">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12">
+                                    <div class="sh_counter_box">
+                                        <div class="d-flex justify-content-center">
+                                            <h1 class="sh_counter js_cls_counter_number">1200</h1><h1 class='sh_counter'>+</h1>
+                                        </div>
+                                        <p class="sh_counter_text">Total Apps</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12">
+                                    <div class="sh_counter_box">
+                                        <div class="d-flex justify-content-center">
+                                            <h1 class="sh_counter js_cls_counter_number">50</h1><h1 class='sh_counter'>+</h1>
+                                        </div>
+                                        <p class="sh_counter_text">Industrial Solutions</p>
+                                    </div>
+
+                                </div>
+                                <div
+                                    class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12">
+                                    <div class="sh_counter_box">
+                                        <div class="d-flex justify-content-center">
+                                            <h1 class="sh_counter js_cls_counter_number">550</h1><h1 class='sh_counter'>+</h1>
+                                        </div>
+                                        <p class="sh_counter_text">Projects Completed</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12">
+                                    <div class="sh_counter_box">
+                                        <div class="d-flex justify-content-center">
+                                            <h1 class="sh_counter js_cls_counter_number">200</h1><h1 class='sh_counter'>+</h1>
+                                        </div>
+                                        <p class="sh_counter_text">ERP Implementation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- store why choose us snippet end -->
+        </section>
+    </template>
+    <template id="theme_softhealer_store_our_mission_snippet_template" name="Our Mission">
+        <section class="theme_softhealer_store_our_mission_snippet_template"
+            data-snippet="theme_softhealer_store_our_mission_snippet_template">
+            <!-- store our mission snippet start -->
+            <section id="sh_store_our_mission_snippet" class="sh_store_our_mission_snippet">
+                <div class="container">
+                    <div class="sh_store_our_mission_main">
+
+                        <div class="row align-items-center">
+                            <div
+                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12">
+                                <div class="sh_store_our_mission_content"
+                                    >
+                                    <h5 class="sh_sub_title">Our Mission</h5>
+                                    <h2 class="sh_store_our_mission_content_title">Creating a
+                                        Paperless Future for Businesses and Preserving the
+                                        Environment</h2>
+                                    <div class="sh_store_our_mission_content_box">
+                                        <div
+                                            class="sh_store_our_mission_content_text">At Custom
+                                            Business Solutions, our mission is clear: to drive the
+                                            transition towards a paperless business landscape while
+                                            promoting environmental sustainability. We are committed
+                                            to helping businesses embrace digital solutions that not
+                                            only streamline their operations but also reduce their
+                                            ecological footprint.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12 align-self-center">
+                                <div class="sh_column_inner_box"
+                                    >
+                                    <div class="sh_img_box">
+                                        <img
+                                            src="/theme_softhealer_store/static/src/img/about_us/mission_store.webp"
+                                            alt="Digital Solution" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- store our mission us snippet end -->
+        </section>
+    </template>
+
+</odoo>

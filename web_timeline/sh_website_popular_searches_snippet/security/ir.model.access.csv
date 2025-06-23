@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sh_website_popular_searches_snippet.access_sh_website_popular_searches,access_sh_website_popular_searches,sh_website_popular_searches_snippet.model_sh_website_popular_searches,,1,1,1,1

@@ -1,0 +1,140 @@
+/*============
+	Common
+==============*/
+.o_survey_form .o_survey_choice_btn {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.o_page_header {
+  width: 100%;
+}
+
+.o_survey_form_content > .o_survey_form_content_data,
+.o_survey_form_content > h2,
+.o_survey_form_content > div {
+  width: 100%;
+}
+
+#wrapwrap .o_survey_form form .o_survey_form_content .js_question-wrapper {
+  margin-right: 0 !important;
+}
+
+.js_question-wrapper div {
+  margin-bottom: 0 !important;
+}
+
+.wrap .o_survey_print fieldset .o_page_header h1 {
+  margin-top: 1pc;
+}
+
+.wrap .o_survey_print fieldset .o_page_header:nth-child(1) h1 {
+  margin-top: 0;
+}
+
+.wrap .o_survey_print fieldset .js_question-wrapper {
+  margin-bottom: 1pc;
+}
+
+#wrapwrap .o_survey_wrap .o_survey_main_title {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+#wrapwrap .o_survey_timer h1 {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.5);
+  margin-right: 1pc;
+  border-radius: 2px;
+  text-align: center !important;
+}
+
+#wrapwrap .o_survey_form {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  padding-left: 2pc;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+#wrapwrap .o_survey_form form .o_survey_form_content .js_question-wrapper h3 span,
+#wrapwrap .o_survey_print .js_question-wrapper h2 span {
+  font-size: 19px;
+}
+
+#wrapwrap .o_survey_print {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+#wrapwrap .o_survey_print .mt32 {
+  padding-left: 2pc;
+}
+
+.o_survey_form form .o_survey_form_content .js_question-wrapper .o_survey_question_matrix .font-weight-normal {
+  color: #fff !important;
+}
+
+#wrapwrap .js_question-wrapper .o_survey_comment_container {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+#wrapwrap .o_survey_brand_message {
+  border: 0 !important;
+}
+
+#wrapwrap .o_survey_brand_message .o_survey_navigation_wrapper button {
+  border: 1px solid #DEE2E6 !important;
+}
+
+#wrapwrap .o_survey_brand_message .px-2.py-2.d-inline-block {
+  display: none !important;
+}
+
+#wrapwrap .o_survey_brand_message button i {
+  border-left: 0 !important;
+}
+
+#wrapwrap:not(.o_portal) .table-responsive {
+  display: inline-table;
+}
+
+@media (max-width: 1024px) {
+  .sh_survmate_radiobtn_style_4 .js_question-wrapper .o_survey_question_matrix .o_survey_matrix_btn.o_survey_selected .o_survey_matrix_empty_checkbox.fa-circle-thin:after {
+    top: 68%;
+  }
+}
+@media (max-width: 768px) {
+  #wrapwrap .col-10 {
+    flex: 0 0 66.66666667%;
+    max-width: 66.66666667%;
+  }
+  #wrapwrap .col-2 {
+    flex: 0 0 33.33333333%;
+    max-width: 33.33333333%;
+  }
+}
+/*.o_survey_form .o_survey_choice_btn, .o_survey_print .o_survey_choice_btn, .o_survey_session_manage .o_survey_choice_btn, .o_survey_quick_access .o_survey_choice_btn{
+	flex: 1 0 100% !important;
+}*/
+@media (max-width: 414px) {
+  .sh_survmate_radiobtn_style_4 .js_question-wrapper .o_survey_question_matrix .o_survey_matrix_btn.o_survey_selected .o_survey_matrix_empty_checkbox.fa-circle-thin:after {
+    top: 67%;
+  }
+}
+/* Fixed Timer*/
+.o_survey_timer.sh_survmate_timer_fixed {
+  position: absolute;
+  right: 15px;
+  height: 100%;
+}
+
+.o_survey_timer.sh_survmate_timer_fixed > h1 {
+  position: sticky;
+  background: white;
+  z-index: 9;
+  top: 10px;
+}
+
+/* Many2one / Many2many */
+.o_survey_form_choice.cls_custom_label label.o_survey_choice_btn:not(.o_survey_selected) {
+  display: none !important;
+}/*# sourceMappingURL=common_style.css.map */

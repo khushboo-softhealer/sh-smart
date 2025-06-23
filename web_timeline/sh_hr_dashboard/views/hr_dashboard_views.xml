@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_action_hr_dashboard" model="ir.actions.client">
+        <field name="name">My Dashboard</field>
+        <field name="tag">hr_dashboard.dashboard</field>
+    </record>
+
+    <record model="ir.ui.view" id="sh_hr_dashboard_kanban">
+        <field name="name">sh.hr.dashboard.kanban</field>
+        <field name="model">sh.hr.dashboard</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column o_hr_dashboard_kanban" create="0">
+                <field name="name" />
+
+                <templates>
+                    <t t-name="kanban-box"> </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <record id="sh_hr_dashboard_form" model="ir.ui.view">
+        <field name="name">sh.hr.dashboard.form</field>
+        <field name="model">sh.hr.dashboard</field>
+        <field name="arch" type="xml">
+            <form string="HR Dashboard">
+                <group string="HR Dashboard">
+                    <group>
+                        <field name="name" />
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="sh_hr_dashboard_tree" model="ir.ui.view">
+        <field name="name">sh.hr.dashboard.tree.view</field>
+        <field name="model">sh.hr.dashboard</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <!-- Actions -->
+    <record id="sh_hr_dashboard_action" model="ir.actions.act_window">
+        <field name="name">HR Dashboard</field>
+        <field name="res_model">sh.hr.dashboard</field>
+        <field name="res_id" ref="sh_hr_dashboard.sh_dahsboard_rec_1" />
+        <field name="view_mode">kanban</field>
+    </record>
+
+    <!-- Menus -->
+     <menuitem id="sh_hr_dashboard_main_menu"
+              name="Dashboard"
+			  sequence="0"
+              web_icon="sh_hr_dashboard,static/src/image/hr_dashboard.png"/>
+
+    <menuitem id="sh_hr_dashboard_main_sub_menu" 
+              name="Dashboard" 
+              action="sh_action_hr_dashboard" 
+              sequence="1" 
+              parent="sh_hr_dashboard.sh_hr_dashboard_main_menu"/>
+
+    <record id="hr_attendance.menu_hr_attendance_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0,[])]" />
+        <field name="name" >Attendances</field>
+        <field name="parent_id" ref="sh_hr_dashboard.sh_hr_dashboard_main_menu"></field>
+        <field name="sequence" >2</field>
+    </record>
+    
+	<menuitem  id="hr_holidays.menu_hr_holidays_root"
+			   name="Leaves"
+			   sequence="3"			  
+			   groups="base.group_user"
+			   parent="sh_hr_dashboard.sh_hr_dashboard_main_menu"/>
+   
+    <record id="sh_configuration_detail_menu" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="name" >Configuration</field>
+        <field name="parent_id" ref="sh_hr_dashboard.sh_hr_dashboard_main_menu"></field>
+        <field name="sequence" >100</field>
+    </record>
+
+
+	
+	<menuitem  id="sh_annoucement_action_menu" 
+			   name="Annoucement"
+			   action="sh_hr_dashboard.sh_annoucement_action" 
+			   parent="sh_configuration_detail_menu"
+			   sequence="1"  /> 	
+	
+	<menuitem  id="sh_emp_complain.sh_complain_management_menu" 
+			   name="Complain Management"
+			   parent="sh_hr_dashboard.sh_hr_dashboard_main_menu"
+			   sequence="4"  /> 
+	
+	<menuitem  id="sh_emp_idea.sh_idea_management_menu" 
+			   name="Idea Management"
+			   parent="sh_hr_dashboard.sh_hr_dashboard_main_menu"
+			   sequence="5"  /> 
+			   
+	<menuitem  id="hr_holidays.menu_hr_holidays_root"
+			   name="Leaves"
+			   sequence="3"			   
+			   groups="base.group_user"
+			   parent="sh_hr_dashboard.sh_hr_dashboard_main_menu"   />
+
+
+    <record id="sh_hr_payroll.menu_hr_payroll_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="name" >Payroll</field>
+        <field name="parent_id" ref="sh_hr_dashboard.sh_hr_dashboard_main_menu"></field>
+        <field name="sequence" >3</field>
+    </record>
+
+    <record id="sh_hr_payroll.menu_hr_payroll_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="name" >Payroll</field>
+        <field name="parent_id" ref="sh_hr_dashboard.sh_hr_dashboard_main_menu"></field>
+        <field name="sequence" >3</field>
+    </record>
+
+
+    <record id="hr.menu_hr_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="name" >Employees</field>
+        <field name="parent_id" ref="sh_hr_dashboard.sh_hr_dashboard_main_menu"></field>
+        <field name="sequence" >2</field>
+    </record>
+
+    <menuitem id="hr_attendance.menu_hr_attendance_kiosk_no_user_mode" 
+        name="Kiosk Mode" 
+        parent="hr_attendance.menu_hr_attendance_root"
+        active="False"
+        sequence="0" 
+        />
+
+    <record id="hr.menu_hr_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_user')])]" />
+        <field name="name" >Employees</field>
+        <field name="parent_id" ref="sh_hr_dashboard.sh_hr_dashboard_main_menu"></field>
+        <field name="sequence" >2</field>
+        <field name="action" ref="hr_attendance.hr_attendance_report_action"/>
+    </record>
+    <record id="hr_attendance.menu_hr_attendance_report" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="name" >Employees</field>
+        <field name="parent_id" ref="hr_attendance.menu_hr_attendance_root"></field>
+        <field name="sequence" >2</field>
+        <field name="action" ref="hr_attendance.hr_attendance_report_action"/>
+    </record>
+    <record id="sh_working_time" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="name" >Working Times</field>
+        <field name="parent_id" ref="hr.menu_hr_root"></field>
+        <field name="sequence" >2</field>
+        <field name="action" ref="resource.action_resource_calendar_form"/>
+    </record>
+
+    <record id="hr.menu_hr_department_kanban" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="parent_id" ref="hr.menu_hr_root"></field>
+        <field name="action" ref="hr.hr_department_kanban_action"/>
+    </record>
+
+    <record id="hr.menu_human_resources_configuration" model="ir.ui.menu">
+        <field name="name" >Configuration</field>
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="parent_id" ref="hr.menu_hr_root"></field>
+        <field name="sequence" >100</field>
+    </record>
+
+    <record id="sh_complain_category_menu" model="ir.ui.menu">
+        <field name="name" >Complain Category</field>
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="parent_id" ref="sh_hr_dashboard.sh_configuration_detail_menu"></field>
+        <field name="action" ref="sh_emp_complain.sh_complain_categories_view_actions"/>
+        <field name="sequence" >2</field>
+    </record>
+
+    <record id="hr_holidays.menu_hr_holidays_report" model="ir.ui.menu">
+        <field name="name" >Reporting</field>
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="parent_id" ref="hr_holidays.menu_hr_holidays_root"></field>
+        <field name="sequence" >4</field>
+    </record>
+    
+    <record id="sh_ideas_category_menu" model="ir.ui.menu">
+        <field name="name" >Idea Category</field>
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="parent_id" ref="sh_hr_dashboard.sh_configuration_detail_menu"></field>
+        <field name="action" ref="sh_emp_idea.sh_idea_categories_view_actions"/>
+        <field name="sequence" >3</field>
+    </record>
+
+	<menuitem id="hr_expense.menu_hr_expense_root"
+	 		name="Expenses" sequence="6"
+	 		parent="sh_hr_dashboard.sh_hr_dashboard_main_menu"/>
+
+   <menuitem id="base.menu_board_root" name="My Board" sequence="3" 
+   		 groups="base.group_user"
+   		 parent="sh_hr_dashboard.sh_hr_dashboard_main_menu"/>
+
+</odoo>

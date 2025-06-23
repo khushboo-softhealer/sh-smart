@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Employee View -->
+    <record id="tds_hr_payslip_view_form_inherit" model="ir.ui.view">
+        <field name="name">tds.hr.payslip.view.form.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="sh_hr_payroll.view_hr_payslip_form" />
+        <field name="arch" type="xml">
+            <field name="struct_id" position="after">
+                <field name="is_applicable_for_tds" readonly="1"/>
+                <field name="employee_contract_type"  readonly="1" label="Employee Contract Type" attrs="{'invisible':[('is_applicable_for_tds','!=',True)]}"/>
+                <field name="tds_scheme_type" readonly="1" attrs="{'invisible':['|',('employee_contract_type','=','contractual'),('is_applicable_for_tds','!=',True)]}"/>
+            </field>
+            <xpath expr="//page[last()]" position="after">
+                <page string="TDS Calculation">
+                    <group name="Other_info" string="Salary Info" attrs="{'invisible':[('is_applicable_for_tds','!=',True)]}">
+                        <field name="wage" readonly="1"/>
+                        <field name="basic_salary" readonly="1"/>
+                        <field name="dearness_allowance" readonly="1"/>
+                        <field name="special_allowance" readonly="1"/>
+                        <field name="travelling_allowance" readonly="1"/>
+                        <field name="house_rent_allowance" readonly="1"/>
+                        <field name="convenyance_allowance" readonly="1"/>
+                        <field name="other_allowance" readonly="1"/>
+                    </group>
+    
+                    <group name="Other_income_info" string="Other Income Info" attrs="{'invisible':['|',('employee_contract_type','=','contractual'),('is_applicable_for_tds','!=',True)]}">
+                        <field name="net_pay_monthly" readonly="1"/>
+                        <field name="net_pay_yearly" readonly="1"/>
+                        <field name="other_income" readonly="1"/>
+                        <field name="perquisites" readonly="1"/>
+                        <field name="standard_deduction" readonly="1"/>
+                        <field name="other_deductions" readonly="1"/>
+                        <field name="net_yearaly_income" readonly="1"/>
+                        <field name="slab_template_id" readonly="1"/>
+                        <field name="contract_tds_slab_ids">
+                            <tree editable="bottom">
+                                <field name="from_amount"/>
+                                <field name="to_amount"/>
+                                <field name="tax_rate"/>
+                                <field name="actual_amount" sum="total"/>
+                            </tree>
+    
+                        </field>
+                        <field name="total_tax_before_cess" readonly="1"/>
+                        
+        
+                    </group>
+                    <group name="rebate" string="Rebate u/s 87A" attrs="{'invisible':['|',('employee_contract_type','=','contractual'),('is_applicable_for_tds','!=',True)]}">
+                        <field name="rebate_taxable_limit" readonly="1"/>
+                        <field name="rebate_tax_relief_limit" readonly="1"/>
+                        <field name="education_cess" readonly="1"/>
+                        <field name="net_tax_payable_yearly" readonly="1"/>
+                        <field name="net_tax_payable_monthly" readonly="1"/>
+                    </group>
+                    
+                </page>
+               
+            </xpath>
+        
+        </field>
+    </record>
+</odoo>

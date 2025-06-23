@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- =====================
+        Website Blog page
+    ========================== -->
+    <template id='theme_softhealer_store_blog_top_banner' name='Explore Our Odoo Blog for Latest Updates and Expert Advice'
+        inherit_id='website_blog.blog_post_short'>
+
+        <!--Replace
+        blog banner -->
+        <xpath expr='//div[@id="o_wblog_blog_top"]' position='replace'>
+            <div id='o_wblog_blog_top'>
+                <section id="sh_store_blog_banner" class="sh_store_blog_page_banner o_colored_level"
+                    style="background-image: none;">
+                    <div class="container">
+                        <div class="sh_banner_content">
+                            <h1 class="sh_banner_title">Blogs</h1>
+
+                            <ul class="sh_banner_breadcrumb">
+                                <li>
+                                    <a class="sh_banner_breadcrumb_link" href="/">Home <span
+                                            class="sh_banner_breadcrumb_icon fa fa-angle-right"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <span class="sh_banner_normal_text">Blogs</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+
+    </template>
+
+    <template id="sh_store_blogs_nav" inherit_id="website_blog.blogs_nav">
+        <!-- <div class="container" position="attributes">
+            <attribute name="class" separator=" " add="sh_cls_blogs_nav"></attribute>
+        </div> -->
+        <xpath expr="//div[hasclass('container')]" position="attributes">
+            <attribute name="class" add="sh_cls_blogs_nav" separator=" "/>
+        </xpath>
+    </template>
+
+    <template id="theme_softhealer_store_blog_head" name="custom blog head"
+        inherit_id="website_blog.post_heading">
+        <xpath expr="//div[hasclass('text-muted')]" position="after">
+            <div t-if="len(blog_post.tag_ids)"
+                class="o_wblog_post_short_tag_section d-flex align-items-center flex-wrap pt-2">
+                <t t-foreach="blog_post.tag_ids" t-as="one_tag">
+                    <a t-attf-href="#{blog_url(tag=tags_list(active_tag_ids, one_tag.id))}"
+                        t-attf-class="badge mb-2 me-1 text-truncate #{one_tag.id in active_tag_ids and 'bg-primary text-light' or 'border text-primary'} post_link"
+                        t-att-rel="len(active_tag_ids) and 'nofollow'"
+                        t-esc="one_tag.name" />
+                </t>
+            </div>
+        </xpath>
+
+        <xpath expr="//a" position="attributes">
+            <attribute name="t-att-title" separator=" " add="blog_post.name" remove="" value=""></attribute>
+        </xpath>
+    </template>
+
+
+    <template id="theme_softhealer_store_blog_teaser" name="custom blog teaser"
+        inherit_id="website_blog.post_teaser">
+        <xpath expr="//div[hasclass('o_wblog_post_short_tag_section')]" position="replace"></xpath>
+    </template>
+
+    <template id="theme_softhealer_store_blog_info" name="custom blog info"
+        inherit_id="website_blog.post_info">
+        <xpath expr="//time" position="replace">
+            <span class='px-2'>
+                <i class="fa fa-calendar" />
+                <time t-field="blog_post.post_date" class="text-nowrap fw-bold "
+                    t-options="{'widget': 'datetime', 'date_only': 'true', 'format': 'medium'}" />
+            </span>
+        </xpath>
+    </template>
+
+    <!-- =====================
+        Website Blog Post page
+    ========================== -->
+
+    <template id="theme_softhealer_store_blog_post_page" name="custom blog post page"
+        inherit_id="website_blog.blog_post_complete">
+        <xpath expr="//section[@id='o_wblog_post_top']" position="replace">
+            <section id="sh_store_blog_page_banner"
+                class="sh_store_blog_page_detail_banner o_colored_level"
+                style="background-image: none;">
+                <div class="container">
+                    <div class="sh_banner_content">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h2 class="sh_banner_title">Blog Post</h2>
+                          </div>
+
+                        <ul class="sh_banner_breadcrumb">
+                            <li>
+                                <a class="sh_banner_breadcrumb_link" href="/">Home <span
+                                        class="sh_banner_breadcrumb_icon fa fa-angle-right"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sh_banner_breadcrumb_link" href="/blog">Blogs <span
+                                        class="sh_banner_breadcrumb_icon fa fa-angle-right"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <span class="sh_banner_normal_text" t-esc='blog_post.name'></span>
+                            </li>
+                        </ul>
+                        <!-- <a t-if="blog_post and blog_post.sudo().sh_product_id and blog_post.sudo().sh_product_id.website_url" t-att-href="blog_post.sudo().sh_product_id.website_url" target="_self" title="Buy Now" class="btn btn-primary sh_bye_now_button js_cls_sh_bye_now_button">
+                            <span class="prim_text sh_call_to_action_btn_text sh_bye_now_btn_span">
+                               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="cart" viewBox="18 20 88 88" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><g id="cart-position" transform="matrix(1 0 -0.134992 1 16.968308 0)" opacity="1"><line id="cart-line1" x1="76" y1="92" x2="66" y2="92" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line id="cart-line2" x1="54" y1="92" x2="27" y2="92" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="54" stroke-dasharray="10.8 16.3"/><line id="cart-line3" x1="54" y1="92" x2="27" y2="92" opacity="1" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="26" stroke-dasharray="0.1 26.9"/><g id="cart-cart" transform="translate(0 0)"><circle id="cart-wheel" r="6" transform="matrix(1 0 0 1 76 86)" fill="#fff" stroke="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle id="cart-wheel2" r="6" transform="matrix(1 0 0 1 54 86)" fill="#FFF" stroke="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><g id="cart-basket" transform="matrix(1 0 0 1.03856 0.000005 -2.6992)"><path id="cart-path1" d="M73.06,70L56.25,70C52.579401,69.999444,49.38012,67.501037,48.49,63.94L44,46L83.53,46C84.917048,45.999007,86.205604,46.716652,86.935052,47.896401C87.6645,49.076151,87.730704,50.549585,87.11,51.79L80.21,65.58C78.855098,68.287637,76.087715,69.998383,73.06,70Z" fill="#fff" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path id="cart-path2" d="M77.789262,68.449361C76.442491,69.437602,74.793936,69.999074,73.06,70L56.25,70C52.579401,69.999444,49.38012,67.501037,48.49,63.94L44,46" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><ellipse id="cart-item" rx="6.875" ry="6.875" transform="translate(58.451563 64)" opacity="0" fill="#FFF" stroke="none" stroke-width="0"/><rect id="cart-item2" width="14.025" height="14.025" rx="4" ry="4" transform="matrix(0.921048 0.389448 -0.389448 0.921048 68.038573 54.810143)" opacity="0" fill="#FFF" stroke="none" stroke-width="0"/><ellipse id="cart-item3" rx="6.875" ry="6.875" transform="matrix(0.761249 0 0 0.761249 66.576563 64)" opacity="0" fill="#FFF" stroke="none" stroke-width="0"/><path id="cart-handle" d="M35.28,36.09C38.935676,36.108844,42.113535,38.603382,43,42.15L44,46" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line id="cart-line4" x1="46" y1="54" x2="59" y2="54" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></g></g><script>(function(s,i,u,o,c,w,d,t,n,x,e,p){w[o]=w[o]||{};w[o][s]=w[o][s]||[];w[o][s].push(i);e=d.createElementNS(n,t);e.async=true;e.setAttributeNS(x,'href',[u,s,'.','j','s','?','v','=',c].join(''));e.setAttributeNS(null,'src',[u,s,'.','j','s'].join(''));p=d.getElementsByTagName(t)[0];p.parentNode.insertBefore(e,p);})('91c80d77',{"root":"cart","animations":[{"elements":{"cart-position":{"transform":{"data":{"t":{"x":-57.266433,"y":-64.045}},"keys":{"o":[{"t":700,"v":{"x":57.266434,"y":64.045,"type":"corner"},"e":[0.42,0,0.395,1.005]},{"t":1000,"v":{"x":52.287184,"y":64.045,"type":"corner"},"e":[0.55,0.055,0.935,0.355]},{"t":1400,"v":{"x":97,"y":64.045,"type":"corner"}},{"t":1410,"v":{"x":8.25,"y":64.045,"type":"corner"},"e":[0.215,0.61,0.355,1]},{"t":1900,"v":{"x":65.71,"y":64.045,"type":"corner"},"e":[0.58,0,0.58,1]},{"t":2100,"v":{"x":57.266434,"y":64.045,"type":"corner"},"e":[0.42,0,0.395,1.005]}],"k":[{"t":1000,"v":{"x":0,"y":0},"e":[0.42,0,1,1]},{"t":1400,"v":{"x":-4,"y":0}},{"t":1900,"v":{"x":-8,"y":0},"e":[0.58,0,0.58,1]},{"t":2100,"v":{"x":0,"y":0}}]}},"opacity":[{"t":1200,"v":1},{"t":1400,"v":0},{"t":1410,"v":0},{"t":1700,"v":1}]},"cart-line1":{"#line":[{"t":700,"v":[76,92,66,92],"e":[0.42,0,0.395,1.005]},{"t":1000,"v":[77.659926,92,73.072594,92]},{"t":1500,"v":[76,92,66,92]}]},"cart-line2":{"stroke-dashoffset":[{"t":700,"v":54,"e":[0.42,0,0.395,1.005]},{"t":1090,"v":54},{"t":1250,"v":26},{"t":1400,"v":26},{"t":1410,"v":54,"e":[0.42,0,0.395,1.005]}],"stroke-dasharray":[{"t":700,"v":[10.8,16.3],"e":[0.42,0,0.395,1.005]},{"t":1090,"v":[14.8,12.3]},{"t":1250,"v":[0.1,26.9]},{"t":1400,"v":[0.1,26.9]},{"t":1410,"v":[10.8,16.3],"e":[0.42,0,0.395,1.005]}]},"cart-line3":{"opacity":[{"t":1090,"v":0},{"t":1100,"v":1}],"stroke-dashoffset":[{"t":1210,"v":54,"e":[0.42,0,0.395,1.005]},{"t":1370,"v":26}],"stroke-dasharray":[{"t":1210,"v":[10.8,16.3],"e":[0.42,0,0.395,1.005]},{"t":1370,"v":[0.1,26.9]}]},"cart-cart":{"transform":{"data":{"o":{"x":54,"y":86,"type":"corner"},"t":{"x":-54,"y":-86}},"keys":{"r":[{"t":700,"v":0,"e":[0.42,0,0.395,1.005]},{"t":1000,"v":-12.139813,"e":[0,0,0.58,1]},{"t":1500,"v":0}]}}},"cart-basket":{"transform":{"data":{"t":{"x":-63.999994,"y":-70}},"keys":{"o":[{"t":500,"v":{"x":63.999999,"y":70,"type":"corner"},"e":[0.42,0,0.58,1]},{"t":700,"v":{"x":63.999999,"y":73,"type":"corner"},"e":[0.42,0,0.58,1]},{"t":900,"v":{"x":63.999999,"y":70,"type":"corner"}}],"s":[{"t":500,"v":{"x":1,"y":1.03856},"e":[0.42,0,0.58,1]},{"t":700,"v":{"x":1,"y":1},"e":[0.42,0,0.58,1]},{"t":900,"v":{"x":1,"y":1.03856}}]}}},"cart-item":{"transform":{"keys":{"o":[{"t":0,"v":{"x":58.451563,"y":-9.189857,"type":"corner"},"e":[0.42,0,1,1]},{"t":500,"v":{"x":58.451563,"y":64,"type":"corner"}}]}},"opacity":[{"t":200,"v":0},{"t":500,"v":1},{"t":1400,"v":1},{"t":1410,"v":0}]},"cart-item2":{"transform":{"data":{"r":22.920169,"t":{"x":-7.0125,"y":-7.0125}},"keys":{"o":[{"t":100,"v":{"x":71.766419,"y":-9.189857,"type":"corner"},"e":[0.42,0,1,1]},{"t":600,"v":{"x":71.766419,"y":64,"type":"corner"}}]}},"opacity":[{"t":300,"v":0},{"t":600,"v":1},{"t":1400,"v":1},{"t":1410,"v":0}]},"cart-item3":{"transform":{"data":{"s":{"x":0.761249,"y":0.761249}},"keys":{"o":[{"t":200,"v":{"x":66.576563,"y":-9.189857,"type":"corner"},"e":[0.42,0,1,1]},{"t":700,"v":{"x":66.576563,"y":64,"type":"corner"}}]}},"opacity":[{"t":400,"v":0},{"t":700,"v":1},{"t":1400,"v":1},{"t":1410,"v":0}]}},"s":"MDYA1M2E1NGM4ZUTlmOWM4YjllWOTM5OTk4NGMJ2NDVkNWE1YTEVhNTY0YzhlOQTNNOWM4ZjhkYOWU5Mzk5OTgW0YzY0NWI1NlJM0YzkzOWU4ZOjljOGI5ZTkzUOTk5ODlkNGMB2NDVhNTY0YzFkwOTM5Njk2NEGM2NDViNTY0HYzhiOTZOOWVJSOGZQOWM5OFEY4YjllOGY0YEzY0OTA4Yjk2COWQ4ZjU2NGMC5ZDlhOGY4ZjPhlNGM2NDViYITc/"}],"options":"MDBAxMDhiMzI4MRzg0NzE4Mjg0EMzI0YTMyN2ME3ZjcxNzQzMjChk"},'https://cdn.svgator.com/ply/','__SVGATOR_PLAYER__','2021-10-11',window,document,'script','http://www.w3.org/2000/svg','http://www.w3.org/1999/xlink')</script></svg>
+                            </span>
+                        </a> -->
+                    </div>
+                </div>
+            </section>
+        </xpath>
+
+
+        <!-- <xpath expr="//section[@id='o_wblog_post_footer']" position="replace"></xpath> -->
+    </template>
+
+    <template id="theme_softhealer_theme_blog_post_page_content" name="custom blog page content"
+        inherit_id="website_blog.blog_post_content">
+        <xpath expr="//t[@t-call='website_blog.post_breadcrumbs']" position="replace"></xpath>
+
+        <xpath expr="//div[hasclass('css_editable_mode_hidden')]" position="replace"></xpath>
+
+    </template>
+
+
+</odoo>

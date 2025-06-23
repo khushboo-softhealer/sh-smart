@@ -1,0 +1,266 @@
+/*------------------------------ABOUT PAGE START---------------------------------------*/
+
+/*-----about counter------*/
+.mb_about_counter {
+	padding: 100px 0px;position: relative;overflow: hidden;background: #fff;
+    @include media-breakpoint-down(lg){
+        padding: 150px 0px 50px;
+    }
+    @include media-breakpoint-down(md){
+        padding:50px 0px 30px;
+    }
+	.mb_main_row {
+		margin-top: 30px;
+		.mb_main_img {
+			position: relative;padding: 75px 0;top: 0;
+            @include media-breakpoint-down(xl){
+                margin-bottom: 20px;
+            }
+            @include media-breakpoint-only (md){
+                text-align: center;
+            }
+			img {
+				z-index: 1;transition: 0.5s;width: 85%;position: relative;margin-left: 0px;
+               
+				&:hover {
+					transform: scale(1.03);
+				}
+                @include media-breakpoint-down(lg){
+                    img {
+                        margin-left: 65px;
+                    }
+                }
+                @include media-breakpoint-down(lg){
+                    margin-left: 30px;width: 95%;
+                }
+                @include media-breakpoint-only (md){
+                    width:60%; margin-left: 0;
+                }
+                @include media-breakpoint-down(md){
+                    margin-left:5px; height:350px;
+                }
+			}
+			.shape-one {
+				position: absolute;top: 0px;left: 0px;width: 160px;height: 160px;background-color: #f0b4a5;border-radius: 100%;
+                @include media-breakpoint-down(lg){
+                    width: 120px;height: 120px; 
+                 }
+                 @include media-breakpoint-only (md){
+                    left:100px;
+                 }
+			}
+		}
+		.mb_about_content {
+			margin-left: 0px;width: 100%;overflow: hidden;
+			.mb_subtitle {
+				@include mb_section_subtitle; font-weight: 600;
+                @include media-breakpoint-down(md){
+                    font-size: 16px;
+                }
+			}
+			.mb_title {
+				@include mb_section_heading; line-height: 1.2;
+                @include media-breakpoint-down(xl){
+                    font-size: 40px;
+                }
+			}
+            .mb_sub_heading_title {
+				font-size:25px; line-height: 1.2; font-weight:600; color: #1c3360;
+                @include media-breakpoint-down(xl){
+                    font-size: 30px;
+                }
+			}
+			.mb_text {
+				@include mb_section_text; opacity: 1; max-width: 100%; margin-bottom:20px;
+                @include media-breakpoint-down(xl){
+                    margin-top: 15px;font-size: 19px;
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 16px;
+                }
+			}
+		}
+	}
+}
+/*-----about counter------*/
+
+
+/*-----about services section start ------*/
+.mb_our_Service {
+	@include mb_section_padding;overflow: hidden;position: relative;
+    @include media-breakpoint-down(xl){
+        padding: 50px 0px 0px;
+    }
+    @include media-breakpoint-down(xl){
+        padding: 30px 0px 0px;
+    }
+	.mb_main_row {
+		margin-top: 30px;
+		.mb_main_box {
+			width: 100%;overflow: hidden;position: relative;
+			.mb_subtitle {
+				@include mb_section_subtitle; font-weight: 600;
+                @include media-breakpoint-down(md){
+                    font-size: 16px;
+                }
+			}
+			.mb_title {
+				@include mb_section_heading; line-height: 1.2;
+                @include media-breakpoint-down(xl){
+                    font-size: 40px;
+                }
+               
+			}
+			.mb_text {
+				@include mb_section_text; opacity: 1; max-width: 100%;
+                @include media-breakpoint-down(xl){
+                    margin-top: 15px;font-size: 19px;
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 16px;
+                }
+			}
+		}
+		.mb_second_row {
+			margin-top: 30px;position: relative;width: 100%;overflow: hidden;
+			.mb_inner_box {
+				margin-bottom: 30px;margin-right: 20px;
+				.mb_inner_heading {
+					border-bottom: 1px solid #cacdd3;margin-bottom: 10px;padding-bottom: 0px;
+                    @include media-breakpoint-down(xl){
+                        padding-bottom: 0px;
+                    }
+					.mb_title {
+						margin-top: 15px;
+						span {
+							font-size: 24px;color: #e45a62;font-weight: 600;margin-top: 35px;text-decoration: none;
+						}
+					}
+					img {
+						max-width: 80px;transition: ease-in-out 0.5s;
+					}
+				}
+				.mb_inner_heading.mb_time {
+					img {
+						max-width: 80px;
+					}
+				}
+				.mb_inner_text {
+					font-size: 16px;font-weight: 400;line-height: 30px;color: #3E3E3E;max-width: 510px;
+                    @include media-breakpoint-down(xl){
+                        margin-top: 20px;font-size: 19px;line-height: 1.5;
+                    }
+				}
+			}
+		}
+	}
+    .mb_img_bg {
+        background: url('/theme_mobiheal_website/static/src/img/aboutus/mb_about_service.webp');background-position: center center;background-repeat: no-repeat;background-size: contain;height: 100%;position: absolute;right: 0;top: 0;width: 33%;
+        @include media-breakpoint-down (lg){
+            display:none;
+        }
+    }
+}
+/*-----about services section start ------*/
+
+
+.mb_blank_section{
+    color:#fff; padding:50px 0px;
+    @include media-breakpoint-down(xl){
+        padding:30px 0px;
+    }
+    @include media-breakpoint-down(md){
+        padding: 0;
+    }
+}
+
+
+/*-----about team section ------*/
+
+
+
+
+.mb_team_section {
+	padding: 0px 0px 80px 0px;position: relative;overflow: hidden;background: #fff;
+    @include media-breakpoint-down(xl){
+        padding: 0px 0px 50px 0pX;
+    }
+    @include media-breakpoint-down(md){
+        padding:0px 0px 50px;
+    }
+	.mb_main_row {
+		margin-top: 50px;
+		.mb_team_box {
+			width: 100%;
+            @include media-breakpoint-down(md){
+                margin-bottom: 50px;
+            }
+			.mb_subtitle {
+				@include mb_section_subtitle; font-weight: 600;
+                @include media-breakpoint-down(md){
+                    font-size: 16px;
+                }
+			}
+			.mb_title {
+				@include mb_section_heading; line-height: 1.2;
+                @include media-breakpoint-down(xl){
+                    font-size: 40px;
+                }
+               
+			}
+			.mb_text {
+				@include mb_section_text; opacity: 1; max-width: 100%; margin-bottom: 40px;
+                @include media-breakpoint-down(xl){
+                    margin-top: 15px;font-size: 19px;
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 16px;
+                }
+			}
+		}
+		.mb_img_group {
+			width: 100%;position: relative;
+			.mb_img_1 {
+				max-width: 100%;transition: ease-in-out 0.5s;position: absolute;right: 10%;top: 0%;height: 300px;
+                @include media-breakpoint-down(xl){
+                    height: 250px;
+                }
+                @include media-breakpoint-down(lg){
+                    right:15%;
+                }
+			}
+			.mb_img_2 {
+				max-width: 100%;transition: ease-in-out 0.5s;margin-top: 130px;margin-bottom: 160px;position: relative;z-index: 1;height: 300px;border-radius: 25px;
+                @include media-breakpoint-down(xl){
+                    height: 250px;
+                }
+                @include media-breakpoint-down(lg){
+                    left:15%;
+                }
+                @include media-breakpoint-down(md){
+                    left:35%;
+                }
+			}
+			.mb_img_3 {
+				bottom: 0;left: 40%;position: absolute;z-index: 2;max-width: 100%;transition: ease-in-out 0.5s;height: 300px;border-radius: 25px;
+                @include media-breakpoint-down(xl){
+                    height: 250px;bottom: 100px;
+                }
+                 @include media-breakpoint-down(lg){
+                    bottom: 30px;
+                }
+                @include media-breakpoint-down(md){
+                    bottom: 0px; left:5%;
+                }
+			}
+			img {
+				&:hover {
+					transform: scale(1.03);
+				}
+			}
+		}
+	}
+}
+
+/*-----about team section ------*/
+/*------------------------------ABOUT PAGE END---------------------------------------*/

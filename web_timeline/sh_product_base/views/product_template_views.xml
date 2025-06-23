@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- remianing comments -->
+
+    <record model="ir.ui.view" id="product_template_form_inherit_custom_website_view">
+        <field name="name">product.template.product.website.form.inherit.custom</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//page[@name='sales']" position="after">
+                <page name="eCommerce" string="eCommerce">
+                    <group>
+                        <group string="Softhealer Shop WB">
+                            <field
+                                name="sh_technical_name" />
+                            <field name="resposible_user_id" />
+                            <field
+                                name="other_responsible_users" widget="many2many_tags" />
+                            <field
+                                name="sh_scale_ids" string="Product Scale" />
+                            <field name="individual_modules" widget="many2many_tags" />
+                            <field
+                                name="copyright_claim_user" />
+                        </group>
+                    </group>
+                    <!-- ==== Standard Ecommerce Shop ===== -->
+                    <group string="eCommerce Shop" name="shop" attrs="{'invisible': [('sale_ok','=',False)]}">
+                        <field name="website_url" invisible="1"/>
+                        <field name="website_id" options="{'no_create': True}" groups="website.group_multi_website"/>
+                        <field name="website_sequence" groups="base.group_no_one"/>
+                        <field name="public_categ_ids" widget="many2many_tags" string="Categories"/>
+                        <field name="website_ribbon_id" groups="base.group_no_one" options="{'no_quick_create': True}"/>
+
+                        <!-- == custom === -->
+                        <field name="request_for_quotation" />
+
+                    </group>
+                </page>
+            </xpath>
+
+            <xpath expr="//group[@name='shop']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="product_template_form_normal_inherit_custom_view">
+        <field name="name">product.template.product.form.form.inherit.custom</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+
+            <!-- sh_backend  -->
+            <xpath expr="//field[@name='categ_id']" position="after">
+                <field name='sh_product_counter'></field>
+                <field name="git_repo"/>
+                <!-- <field name='is_published' widget="boolean_toggle"/> -->
+                <field name='website_published' widget="boolean_toggle"/>
+                <field name="website_meta_description"/>
+                <field name="website_meta_keywords"/>
+                <field name="website_meta_title"/>
+            </xpath>
+
+            <!-- <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button name="get_product_image_ids" type="object" class="oe_stat_button"
+                    icon="fa-image" string="Extra Images">
+                </button>
+            </xpath> -->
+
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="sh_product_template_only_form_view_custom">
+        <field name="name">sh.product.template.only.form.view.custom</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@name='options']" position="inside">
+                <div>
+                    <field name="not_unique_product" />
+                    <label for="not_unique_product" />
+                </div>
+            </xpath>
+            <xpath expr="//page[@name='sales']" position="after">
+                <page string="Features" invisible="1">
+                    <group>
+                        <field name="sh_features_duplicate" nolabel="1" />
+                    </group>
+                </page>
+                <page string="About Module" invisible="1">
+                    <group>
+                        <field name="website_description_duplicate" string="About Module"
+                            nolabel="1" />
+                    </group>
+                </page>
+            </xpath>
+
+            <field name="barcode" position="after">
+                <!-- ShViewUpdate -->
+                <field name="sh_task_created" invisible="1" />
+                <field name="related_task" />
+            </field>
+
+            <field name="resposible_user_id" position="before">
+
+                <field name="module_last_updated_date" />
+                <field name="last_updated_2" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="banner_duplicate" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="sh_edition_ids_duplicate" widget="many2many_tags" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="depends_duplicate" widget="many2many_tags" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="required_apps_duplicate" widget="many2many_tags" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="license_duplicate" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="product_version_duplicate" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="supported_browsers_duplicate" widget="many2many_tags" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="released_date_duplicate" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="last_updated_date_duplicate" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="live_demo_duplicate" widget='url' invisible="1" />
+                <field name="user_guide_duplicate" widget='url' invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="related_video_duplicate" widget="many2many_tags" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="sh_blog_post_ids_duplicate" widget="many2many_tags" invisible="1" />
+                <!-- ShViewUpdate -->
+                <field name="tag_ids_duplicate" widget="many2many_tags" invisible="1" />
+                <field name="qty_show_duplicate" invisible="1" />
+            </field>
+
+            <field name="taxes_id" position="after">
+                <field name="euro_price_duplicate" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="product_template_tree_inherit_view">
+        <field name="name">product.template.tree.inherit.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view" />
+        <field name="arch" type="xml">
+            <field name="website_id" position="after">
+                <field name="resposible_user_id" />                
+            </field>
+        </field>
+    </record>
+
+
+    <record id="sh_product_template_inherit_search_view" model="ir.ui.view">
+        <field name="name">product.template.search.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view" />
+        <field name="arch" type="xml">
+
+            <search>
+                <field name="sh_technical_name" />
+                <field name="resposible_user_id" />
+                <field name="module_last_updated_date" />
+                <group expand="0" string="Group By">
+                    <filter string="Responsible User" name="group_by_filter" domain="[]"
+                        context="{'group_by':'resposible_user_id'}" />
+                    <filter string="Category" name="group_by_filter" domain="[]"
+                        context="{'group_by':'categ_id'}" />
+                    <filter string="Last Update" name="group_by_filter" domain="[]"
+                        context="{'group_by':'module_last_updated_date'}" />
+                </group>
+            </search>
+            <xpath expr="//search/field[@name='name']" position="replace">
+                <field name="name" string="Product"
+                    filter_domain="['|', '|', '|','|', ('default_code', 'ilike', self), ('product_variant_ids.default_code', 'ilike', self),('name', 'ilike', self), ('barcode', 'ilike', self),('sh_technical_name', 'ilike', self)]" />
+            </xpath>
+            <xpath expr="//filter[@name='services']" position="before">
+                <filter name="small_new_feature" string="Small New Feature Expansion"
+                    domain="[('sh_scale_ids','=','Small'),('last_updated_2', '&lt;=', context_today().strftime('%Y-%m-%d'))]" />
+                <filter name="medium_new_feature" string="Medium New Feature Expansion"
+                    domain="[('sh_scale_ids','=','Medium'),('last_updated_2', '&lt;=', context_today().strftime('%Y-%m-%d'))]" />
+                <filter name="large_new_feature" string="Large New Feature Expansion"
+                    domain="[('sh_scale_ids','=','Large'),('last_updated_2', '&lt;=', context_today().strftime('%Y-%m-%d'))]" />
+                <filter name="extra_large_new_feature" string="Extra Large New Feature Expansion"
+                    domain="[('sh_scale_ids','=','ExtraLarge'),('last_updated_2', '&lt;=', context_today().strftime('%Y-%m-%d'))]" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

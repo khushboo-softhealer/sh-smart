@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Blog footer-->
+    <template id="softhealer_website_base_blog_template_footer_inherit" inherit_id='website_blog.opt_blog_post_read_next' name="Blog footer">
+        <xpath expr='//div[@id="o_wblog_next_container"]//t[@t-call="website.record_cover"]//div' position='attributes'>
+            <attribute name="t-attf-title" separator=" " add="#{next_post.name}" remove="" value=""></attribute>
+        </xpath>
+    </template>
+</odoo>

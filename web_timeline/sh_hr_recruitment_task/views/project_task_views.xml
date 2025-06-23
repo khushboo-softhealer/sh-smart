@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <record model="ir.ui.view" id="sh_hr_recruitment_task_view_task_form2_inherited">
+        <field name="name">sh.hr.recruitment.project.task.form.inherited</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button name="action_get_recruitment_view" class="oe_stat_button" icon="fa-users"
+                    type="object">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">Recruitment</span>
+                    </div>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='date_deadline']" position="after">
+                <field name="int_sch_time"
+                    attrs="{'invisible': [('check_bool_int_sch_time', '=', False)]}" />
+                <field name="check_bool_int_sch_time" invisible="1" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

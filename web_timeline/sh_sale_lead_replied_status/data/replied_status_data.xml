@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sh_staff_replied_stage" model="sh.replied.status">
+            <field name="name">Staff Replied</field>
+            <field name="sh_staff_replied">True</field>
+        </record>
+        <record id="sh_customer_replied_stage" model="sh.replied.status">
+            <field name="name">Customer Replied</field>
+            <field name="sh_customer_replied">True</field>
+        </record>
+        <record id="sh_running_stage" model="sh.replied.status">
+            <field name="name">Running</field>
+            <field name="sh_running">True</field>
+        </record>
+        <record id="sh_closed_stage" model="sh.replied.status">
+            <field name="name">Closed</field>
+            <field name="sh_closed">True</field>
+        </record>
+    </data>
+</odoo>

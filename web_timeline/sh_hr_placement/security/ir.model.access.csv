@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_college,access_sh_college,model_sh_college,base.group_user,1,1,1,1
+access_sh_placement,access_sh_placement,model_sh_placement,base.group_user,1,1,1,1
+access_sh_placement_line,access_sh_placement_line,model_sh_placement_line,base.group_user,1,1,1,1
+access_sh_proposal_reject_reasons,access_sh_proposal_reject_reasons,model_sh_proposal_reject_reasons,base.group_user,1,1,1,1
+sh_hr_placement.access_sh_college_stages,access_sh_college_stages,sh_hr_placement.model_sh_college_stages,base.group_user,1,1,1,1
+sh_hr_placement.access_sh_change_state_wizard,access_sh_change_state_wizard,sh_hr_placement.model_sh_change_state_wizard,base.group_user,1,1,1,1
+sh_hr_placement.access_sh_change_datetime_wizard,access_sh_change_datetime_wizard,sh_hr_placement.model_sh_change_datetime_wizard,base.group_user,1,1,1,1
+sh_hr_placement.access_sh_college_change_stages_wizard,access_sh_college_change_stages_wizard,sh_hr_placement.model_sh_college_change_stages_wizard,base.group_user,1,1,1,1
+hr_recruitment.access_hr_recruitment_stage_user,hr.recruitment.stage.user,hr_recruitment.model_hr_recruitment_stage,hr_recruitment.group_hr_recruitment_user,1,1,1,0

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sh_attendance_sync.access_sh_create_leave,access_sh_create_leave,sh_attendance_sync.model_sh_create_leave,base.group_user,1,1,1,1
+sh_attendance_sync.access_sh_leave_cron_log,access_sh_leave_cron_log,sh_attendance_sync.model_sh_leave_cron_log,base.group_user,1,1,1,0

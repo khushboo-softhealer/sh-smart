@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Checklist -->
+    <menuitem
+        id="sh_checklist_menu"
+        name="Checklist"
+        sequence="5"
+        parent="project.menu_main_pm"
+        groups="sh_project_task_base.group_project_officer"
+    />
+
+    <!-- Task Checklists -->
+    <menuitem
+        id="sh_task_checklist_menu"
+        name="Task Checklists"
+        parent="sh_checklist_menu"
+        action="sh_task_custom_checklist.task_checklist_line_action"
+        groups="sh_project_task_base.group_project_officer"
+        sequence="1"
+    />
+
+    <!-- Stages -->
+    <menuitem
+        id="sh_checklist_state_menu"
+        name="Stages"
+        parent="sh_checklist_menu"
+        action="sh_task_custom_checklist.sh_checklist_state_action"
+        groups="project.group_project_manager"
+        sequence="5"
+    />
+
+    <!-- Checklist -->
+	<menuitem
+        id="menu_task_custom_checklist"
+        name="Checklist"
+        groups="sh_project_task_base.group_project_officer"
+        action="sh_task_custom_checklist.action_menu_task_custom_checklist"
+        parent="sh_checklist_menu"
+        sequence="2"
+    />
+
+    <!-- Task Check List Template -->
+    <menuitem
+        id="menu_task_check_list_template"
+        name="Checklist Template"
+        groups="sh_project_task_base.group_project_officer"
+        action="sh_task_custom_checklist.action_task_checklist_template"
+        parent="sh_checklist_menu"
+        sequence="3"
+    />
+
+    <!-- Project Task Checklist Templates -->
+    <menuitem
+        id="sh_project_task_checklist_menu"
+        name="Task Checklist Templates"
+        parent="sh_checklist_menu"
+        action="sh_task_custom_checklist.sh_project_task_checklist_action"
+        groups="sh_project_task_base.group_project_officer"
+        sequence="4"
+    />
+
+</odoo>

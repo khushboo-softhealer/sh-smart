@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_template_view_form" model="ir.ui.view">
+        <field name="name">sh.template.view.form</field>
+        <field name="model">sh.template</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="group_ids" widget="many2many_tags"/>
+                            <field name = "menu_ids" widget = "many2many_tags"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="sh_template_view_tree" model="ir.ui.view">
+        <field name="name">sh.template.view.tree</field>
+        <field name="model">sh.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="group_ids" widget="many2many_tags"/>
+                <field name = "menu_ids" widget = "many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_template_action" model="ir.actions.act_window">
+        <field name="name">Template</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create A New Template
+            </p>
+        </field>
+    </record>
+
+    <menuitem   id="sh_template_action_menu"
+                name="Template" 
+                action="sh_template_action"  
+                parent="base.menu_users" 
+                sequence="99" />
+</odoo>

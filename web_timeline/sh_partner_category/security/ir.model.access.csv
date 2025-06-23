@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_partner_category,partner.category,model_partner_category,sh_partner_category.group_partner_category,1,1,1,1
+access_sh_partner_category_action_wizard,sh.partner.category.action.wizard,model_sh_partner_category_action_wizard,sh_partner_category.group_partner_category,1,1,1,1
+access_partner_category_sales_manager,partner.category,model_partner_category,sales_team.group_sale_manager,1,1,1,1
+access_partner_category_internal_user,partner.category.user,model_partner_category,base.group_user,1,0,0,0

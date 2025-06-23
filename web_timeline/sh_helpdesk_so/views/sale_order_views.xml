@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_helpdesk_ticket_so_inherited_view_form" model="ir.ui.view">
+        <field name="name">sh.helpdesk.so.inherited.view.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <button class="btn btn-primary" name="action_create_sale_ticket" type="object" string="Create Ticket" groups="sh_helpdesk_so.sh_helpdesk_ticket_so" />
+            </field>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_sale_tickets" type="object" class="oe_stat_button" icon="fa-ticket" context="{'partner_id': partner_id}" attrs="{'invisible':[('sale_ticket_count','=',0)]}" groups="sh_helpdesk_so.sh_helpdesk_ticket_so">
+                    <div class="o_stat_info">
+                        <field name="sale_ticket_count" class="o_stat_value" />
+                        <span class="o_stat_text">Tickets</span>
+                    </div>
+                </button>
+            </xpath>
+            <field name="payment_term_id" position="after">
+                <field name="sh_sale_ticket_ids" options="{'no_quick_create': True, 'no_create_edit': True}" widget="many2many_tags" groups="sh_helpdesk_so.sh_helpdesk_ticket_so" />
+            </field>
+            <xpath expr="//page[last()]" position="after">
+                <page string="Customisation Details">
+                    <group>
+                        <group>
+                            <!-- <field name="sh_edition_id"/> -->
+                            <field name="sh_original_module_send"/>
+                            <field name="sh_invoice_verified"/>
+                            <field name="sh_latest_update"/>
+                        </group>
+                        <group>
+                            <field name="sh_odoo_hosted_id"/>
+                            <field name="sh_custom_module_conflict"/>
+                            <field name="sh_need_to_setup_environment"/>
+                            <field name="sh_deployment_required"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//group[@name='partner_details']" position="inside">
+                <field name="sh_edition_id"></field>
+            </xpath>
+
+            <xpath expr="//page[@name='other_information']//field[@name='origin']" position="before">
+                <field name="ticket_url" readonly="1" />
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_helpdesk_so_inherited_view_search" model="ir.ui.view">
+        <field name="name">sh.helpdesk.po.view.search</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter" />
+        <field name="arch" type="xml">
+            <field name="order_line" position="after">
+                <field name="sh_sale_ticket_ids" />
+            </field>
+            <xpath expr="//filter[1]" position="before">
+                <filter string="Helpdesk Ticket" name="helpdesk_ticket" domain="[('sh_sale_ticket_ids','!=',False)]" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Product Detail Support Buttons -->
+    <template id='theme_softhealer_store_product_detail_support_buttons_tmpl' inherit_id="website_sale.product" name="Product Detail Support Buttons">
+    
+        <xpath expr="//form[@action='/shop/cart/update']//div[@id='add_to_cart_wrap']" position="after">
+            <div class='alert alert-warning js_cls_module_not_available w-100'/>
+            
+            <t t-set="combination_info" t-value="product_variant._get_combination_info_variant()" />
+            <t t-set="sh_editions" t-value="request.env['sh.edition'].sudo().search([])" />
+            <t t-set="sh_attachment_size" t-value="int(request.env['ir.config_parameter'].sudo().get_param('attachment_size'))" />
+            <!-- Technical Support -->
+            <a id="btn_technical_support_product_crate_ticket_id"
+                class="btn btn-primary btn-lg cls_open_pop_form me-2"
+                t-att-data-sh_edition='sh_editions.ids'
+                t-attf-data-user_public="#{request.env.user._is_public()}"
+                t-attf-data-user_name="#{request.env.user.name}"
+                t-attf-data-user_partner_id="#{request.env.user.partner_id.id}"
+                t-attf-data-product_name="#{product_variant.name}"
+                t-attf-data-email="#{request.env.user.partner_id.email}"
+                t-attf-data-attachment_size='#{sh_attachment_size}'
+                t-attf-data-mobile="#{request.env.user.partner_id.mobile}"
+                t-attf-data-button="technical_support" href="#">Support							
+            </a>
+
+            <!-- Demo Support -->
+            <a id="btn_demo_product_crate_ticket_id"
+                class="btn btn-primary btn-lg cls_open_pop_form me-2" 
+                t-att-data-sh_edition='sh_editions.ids'
+                t-attf-data-user_public="#{request.env.user._is_public()}"
+                t-attf-data-user_name="#{request.env.user.name}"
+                t-attf-data-user_partner_id="#{request.env.user.partner_id.id}"
+                t-attf-data-product_name="#{product_variant.name}"
+                t-attf-data-email="#{request.env.user.partner_id.email}"
+                t-attf-data-mobile="#{request.env.user.partner_id.mobile}"
+                t-attf-data-button="demo_support" href="#">Demo						
+            </a>
+
+            <!-- Customization Support -->
+            <a id="btn_demo_product_new_customization_id"
+                class="btn btn-primary btn-lg cls_open_pop_form me-2" 
+                t-att-data-sh_edition='sh_editions.ids'
+                t-attf-data-user_public="#{request.env.user._is_public()}"
+                t-attf-data-user_name="#{request.env.user.name}"
+                t-attf-data-user_partner_id="#{request.env.user.partner_id.id}"
+                t-attf-data-product_name="#{product_variant.name}"
+                t-attf-data-email="#{request.env.user.partner_id.email}"
+                t-attf-data-mobile="#{request.env.user.partner_id.mobile}"
+                t-attf-data-attachment_size='#{sh_attachment_size}'
+                t-attf-data-button="new_customization" href="#">Customisation							
+            </a>
+
+            <!--Add to cart-->
+
+            <!-- Contact us : if Module is not available -->
+            <a id="btn_contact_us_product_model_id"
+                class="btn btn-primary btn-lg cls_open_pop_form d-none me-2 js_cls_get_button_status" 
+                t-att-data-sh_edition='sh_editions.ids'
+                t-attf-data-user_public="#{request.env.user._is_public()}"
+                t-attf-data-user_name="#{request.env.user.name}"
+                t-attf-data-user_partner_id="#{request.env.user.partner_id.id}"
+                t-attf-data-product_name="#{product_variant.name}"
+                t-attf-data-email="#{request.env.user.partner_id.email}"
+                t-attf-data-mobile="#{request.env.user.partner_id.mobile}"
+                t-attf-data-button="sh_contact_us" href="#">Contact Us							
+            </a>
+
+        </xpath>
+    </template>
+</odoo>
+    

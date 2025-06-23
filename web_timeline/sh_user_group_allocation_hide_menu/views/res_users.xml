@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="model_res_company_action_groups_allocation_wizard" model="ir.actions.server">
+        <field name="name">Mass Groups Allocation</field>
+        <field name="model_id" ref="sh_user_group_allocation_hide_menu.model_sh_groups_allocation_wizard"/>
+        <field name="binding_model_id" ref="base.model_res_users"/>
+        <field name="state">code</field>
+        <field name="binding_view_types">list</field>
+        <field name="code"> action = model.action_groups_allocation_wizard() </field>
+    </record>
+
+    <record id="res_users_inherit_view_form" model="ir.ui.view">
+        <field name="name">res.users.inherit.view.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button type = "action" string = "Create Access Template" class="oe_highlight" name="%(sh_user_group_allocation_hide_menu.sh_create_template_wizard_action)d"></button>
+            </xpath>
+            <xpath expr="//div[hasclass('oe_title')]" position="after">
+                <group>
+                    <group>
+                        <field name="template_ids" widget="many2many_tags" options="{'no_create': True}" />
+                    </group>
+                </group> 
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page name="sh_hm_hide_menu_page" string="Hide Menu">
+                    <field name="sh_hm_hide_menu_ids" options="{'no_create': True}">
+                        <tree editable="bottom">
+                            <field name="complete_name" string="Hide Menu"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

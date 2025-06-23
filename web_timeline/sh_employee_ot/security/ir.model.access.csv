@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sh_employee_ot.access_sh_employee_ot,access_sh_employee_ot,sh_employee_ot.model_sh_employee_ot,base.group_user,1,1,1,1

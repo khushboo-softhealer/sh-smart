@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_sales_person_currency_alert_sale_view_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.view.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"></field>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="pricelist_alert" invisible="1"></field>
+            </field>
+            <xpath expr="//sheet/div[@name='button_box']" position="after">
+                <div class="alert alert-info text-center o_form_header"
+                    style="background: #efd9d9; color: maroon; border: 1px solid #e9b4b4;"
+                    role="alert" attrs="{'invisible': [('pricelist_alert','=',False)]}">
+                    <strong>Base Currency ,Please kindly check again !</strong>
+                </div>
+            </xpath>
+            <field name="pricelist_id" position="after">
+                <button name="update_prices" type="object" string="Update Prices"
+                    class="oe_highlight" />
+            </field>
+        </field>
+    </record>
+</odoo>

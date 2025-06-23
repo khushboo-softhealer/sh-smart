@@ -1,0 +1,658 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_sale_order_recurring
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0beta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-05 12:55+0000\n"
+"PO-Revision-Date: 2022-10-05 12:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__sh_invoice_count
+msgid "# of Invoices"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__sh_quote_recurring_count
+msgid "# of Quotations"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__sh_sale_recurring_count
+msgid "# of Sales Orders"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "<span class=\"text-muted\">(If fixed-term contract)</span>"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__access_warning
+msgid "Access warning"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__active
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "Active"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "Archive"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "Archived"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__campaign_id
+msgid "Campaign"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields.selection,name:sh_sale_order_recurring.selection__sale_recurring__state__cancel
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "Cancelled"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model,name:sh_sale_order_recurring.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__company_id
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__company_id
+msgid "Company"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model,name:sh_sale_order_recurring.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "Create Order Manually"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.actions.act_window,help:sh_sale_order_recurring.sh_sale_recurring_action
+msgid "Create a new sale recurring order here"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__create_uid
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__create_date
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__partner_id
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "Customer"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__access_url
+msgid "Customer Portal URL"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__signed_on
+msgid "Date of the signature."
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields.selection,name:sh_sale_order_recurring.selection__sale_recurring__recurring_interval_unit__days
+msgid "Days"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__name
+msgid "Description"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__discount
+msgid "Discount (%)"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__display_name
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "End Date"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__end_date
+msgid "End date"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields.selection,name:sh_sale_order_recurring.selection__sale_recurring__state__done
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "Expired"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__id
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__id
+msgid "ID"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__message_has_error
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "Inactive"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "Internal Notes"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "Internal note..."
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__recurring_interval
+msgid "Interval"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__recurring_interval_unit
+msgid "Interval Unit"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: code:addons/sh_sale_order_recurring/models/sh_sale_recurring.py:0
+#, python-format
+msgid "Interval must be positive."
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "Invoices"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring____last_update
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__write_uid
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__write_date
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__last_generated_date
+msgid "Last date"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__medium_id
+msgid "Medium"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields.selection,name:sh_sale_order_recurring.selection__sale_recurring__recurring_interval_unit__months
+msgid "Months"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__signed_by
+msgid "Name of the person that signed the SO."
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: code:addons/sh_sale_order_recurring/models/sh_sale_recurring.py:0
+#: model:ir.model.fields.selection,name:sh_sale_order_recurring.selection__sale_recurring__state__draft
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__note
+msgid "Note"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__online_signature
+msgid "Online Signature"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__order_line
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "Order Lines"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__sale_recurring_id
+msgid "Order Reference"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "Other Info"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__access_url
+msgid "Portal Access URL"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__product_id
+msgid "Product"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__product_uom_qty
+msgid "Quantity"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "Quotations"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_order__sh_sale_recurring_order_id
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "Recurring Order"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.ui.menu,name:sh_sale_order_recurring.sh_sale_recurring_order_menu
+msgid "Recurring Orders"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields.selection,name:sh_sale_order_recurring.selection__sale_recurring__state__confirm
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "Running"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model,name:sh_sale_order_recurring.model_sale_recurring
+msgid "Sale Order Recurring"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model,name:sh_sale_order_recurring.model_sale_recurring_line
+msgid "Sale Order Recurring Line"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_config_setting_view
+msgid "Sale Order Recurring Signature Configuration"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_res_company__sh_sale_online_signature
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_res_config_settings__sh_sale_online_signature
+msgid "Sale Recurring Online Signature"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.actions.act_window,name:sh_sale_order_recurring.sh_sale_recurring_action
+msgid "Sale Recurring Order"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.actions.server,name:sh_sale_order_recurring.sh_sale_recurring_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_sale_order_recurring.sh_sale_recurring_cron
+#: model:ir.cron,name:sh_sale_order_recurring.sh_sale_recurring_cron
+msgid "Sale Recurring Order Cron"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__name
+msgid "Sale Recurring Reference"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model,name:sh_sale_order_recurring.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "Sales Orders"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sale_recurring_order_view_activity
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.view_sale_recurring_order_calendar
+msgid "Sales Recurring Orders"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "Search recurring Order"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__signature
+msgid "Signature"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_form_view
+msgid "Signature Information"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__signature
+msgid "Signature received through the portal."
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__signed_by
+msgid "Signed By"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__signed_on
+msgid "Signed On"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__source_id
+msgid "Source"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "Start Date"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__start_date
+msgid "Start date"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__state
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "Status"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__stop_recurring_interval_unit
+msgid "Stop Interval Unit"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__stop_recurring_interval
+msgid "Stop after"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: code:addons/sh_sale_order_recurring/models/sh_sale_recurring.py:0
+#, python-format
+msgid "Stop after must be positive."
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__title
+msgid "Title"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields.selection,name:sh_sale_order_recurring.selection__sale_recurring__state__pending
+#: model_terms:ir.ui.view,arch_db:sh_sale_order_recurring.sh_sale_recurring_search_view
+msgid "To Renew"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring_line__price_unit
+msgid "Unit Price"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,field_description:sh_sale_order_recurring.field_sale_recurring__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields,help:sh_sale_order_recurring.field_sale_recurring__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields.selection,name:sh_sale_order_recurring.selection__sale_recurring__recurring_interval_unit__weeks
+msgid "Weeks"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: model:ir.model.fields.selection,name:sh_sale_order_recurring.selection__sale_recurring__recurring_interval_unit__years
+msgid "Years"
+msgstr ""
+
+#. module: sh_sale_order_recurring
+#: code:addons/sh_sale_order_recurring/models/sh_sale_recurring.py:0
+#, python-format
+msgid "start date must be less than end date."
+msgstr ""

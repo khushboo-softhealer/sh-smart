@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_template,access_sh_template,model_sh_template,base.group_user,1,1,1,1
+access_sh_template_wizard,access_sh_template_wizard,model_sh_template_wizard,base.group_user,1,1,1,1
+access_sh_groups_allocation_wizard,access_sh_groups_allocation_wizard,model_sh_groups_allocation_wizard,base.group_user,1,1,1,1
+access_sh_templates_allocation_wizard,access_sh_templates_allocation_wizard,model_sh_templates_allocation_wizard,base.group_user,1,1,1,1

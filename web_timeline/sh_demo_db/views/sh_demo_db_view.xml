@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="sh_demo_db_wizard_view" model="ir.ui.view">
+			<field name="name">sh.demo.db.wizard.view</field>
+			<field name="model">sh.demo.db</field>
+			<field name="arch" type="xml">
+				<form string="Softhealer Demo Database">
+					<group>
+						<group>
+							<field name="sh_server_id" options="{'no_quick_create':True,'no_create_edit':True}"/>
+							<field name="sh_product_id" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True}"/>
+							<field name="sh_user_name"/>
+							<field name="sh_password" password="True"/>
+							<field name="sh_country_id" options="{'no_quick_create':True,'no_create_edit':True}"/>
+						</group>
+					</group>
+					<footer>
+						<button string="Create Database" name="action_create_db" type="object" class="btn-primary"/>
+						<button string="Cancel" class="btn-default" special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+		<record id="action_sh_demo_db" model="ir.actions.act_window">
+			<field name="name">Softhealer Demo Database</field>
+			<field name="res_model">sh.demo.db</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="sh_demo_db_wizard_view"/>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="sh_menu_demo_db_parent" name="Demo Database" parent="crm.crm_menu_root" groups="sh_demo_db.sh_group_demo_db_manager,sh_demo_db.sh_group_demo_db_user"/>
+		<menuitem id="sh_menu_demo_db_child" name="Demo Databse Load" parent="sh_menu_demo_db_parent" action="action_sh_demo_db" groups="sh_demo_db.sh_group_demo_db_manager"/>
+	</data>
+</odoo>

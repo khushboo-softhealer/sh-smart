@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="sh_typr_of_industry_tree_view" model='ir.ui.view'>
+			<field name="name">sh.type.of.industry.tree.view</field>
+			<field name="model">sh.type.of.industry</field>
+			<field name="arch" type="xml">
+				<tree string="Tags" editable="bottom">
+					<field name="name" required="1"/>
+				</tree>
+			</field>
+		</record>
+		<record id="sh_type_of_industry_action" model="ir.actions.act_window">
+     		<field name="name">Type of Industry</field>
+          	<field name="res_model">sh.type.of.industry</field>
+          	<field name="view_mode">tree</field>
+          	<field name="help" type="html">
+              	<p class="oe_view_nocontent_create">Create a New Tag</p>
+          	</field>
+    	</record>
+    	<menuitem id="sh_type_of_industry_menu" name="Type of Industry" parent="contacts.res_partner_menu_config" action="sh_type_of_industry_action" sequence="10"/>
+	</data>
+</odoo>

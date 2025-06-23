@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="sh_review_sheet_line_view_form" model="ir.ui.view">
+        <field name="name">sh_review_sheet_line.view.form</field>
+        <field name="model">sh.review.sheet.line</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                             <field name="project_id" attrs="{'column_invisible': True}" readonly="1"/>
+                            <field name="user_id" readonly="1" />
+                            <field name="project_responsible_type" readonly="1"/>
+                            <field name="project_responsible_id" readonly="1" />
+                        </group>
+                        <group>
+                             <field name="ratings" widget="priority" attrs="{'readonly':[('state','!=','new')]}"/>
+                                <field name="review" attrs="{'readonly':[('state','!=','new')]}"/>
+                                <field name="timesheet" widget="timesheet_uom" readonly="1"/>
+                                <field name="state" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+               
+               
+            </form>
+        </field>
+    </record>
+    <record id="sh_review_sheet_line_view_tree" model="ir.ui.view">
+        <field name="name">sh_review_sheet_line.view.tree</field>
+        <field name="model">sh.review.sheet.line</field>
+        <field name="arch" type="xml">
+            <tree string="" editable="top">
+                <field name="project_id" attrs="{'column_invisible': True}" readonly="1"/>
+                <field name="user_id" readonly="1" />
+                <field name="project_responsible_type" readonly="1"/>
+                <field name="project_responsible_id" readonly="1" />
+                <field name="ratings" widget="priority" attrs="{'readonly':[('state','!=','new')]}"/>
+                <field name="review" attrs="{'readonly':[('state','!=','new')]}"/>
+                <field name="timesheet" widget="timesheet_uom" readonly="1"/>
+                <button icon="fa-eye" name="open_review_sheet" type="object" />
+                 <button icon="fa-bars" name="open_timesheet" type="object" />
+                <field name="state" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+    <record id="sh_review_sheet_line_view_search" model="ir.ui.view">
+        <field name="name">sh.review.sheet.line.view.search</field>
+        <field name="model">sh.review.sheet.line</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="user_id" />
+                <field name="project_id" />
+                <filter string="Review Pending" name="review_pending" domain="[('review','=', False),('state','=','new')]"/>
+                <filter string="Review Done" name="review_done" domain="[('review','!=', False)]"/>
+               
+                <group expand="0" string="Group By">
+                 
+                    <filter name="group_by_project_id" string="Project" context="{'group_by':'project_id'}" help=""/>
+                    <filter name="group_by_project_responsible_type" string="Project Responsible Type" context="{'group_by':'project_responsible_type'}" help=""/>
+                     <filter name="group_by_fill_by" string="Need to Fill By" context="{'group_by':'project_responsible_id'}" help=""/>
+
+                    <filter name="group_by_user_id" string="Employee" context="{'group_by':'user_id'}" help=""/>
+                    <filter name="state" string="State" context="{'group_by':'state'}"/>
+                </group>
+
+
+            </search>
+        </field>
+    </record>
+
+    <!-- Action sh.review.sheet -->
+    <record id="action_sh_review_sheet_line" model="ir.actions.act_window">
+        <field name="name">Review Management</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.review.sheet.line</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{'search_default_group_by_project_id': 1,'search_default_group_by_project_responsible_type': 1, 'search_default_review_pending':1}</field>
+    </record>
+
+    <menuitem id="sh_review_sheet_menu" 
+    groups="sh_review_sheet.group_review_sheet_menu"  
+    web_icon="sh_review_sheet,static/description/icon.png" 
+    name="Review Management" action="action_sh_review_sheet_line" sequence="10"/>
+</odoo>

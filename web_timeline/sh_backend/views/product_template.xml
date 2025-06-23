@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <!--  <record id="view_product_template_tags_custom_inherit_form" model="ir.ui.view">
+        <field
+    name="name">view.product.template.tags.custom.inherit.form</field>
+        <field
+    name="model">product.template</field>
+        <field name="inherit_id"
+    ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath
+    expr="//page[@name='general_information']//field[@name='product_variant_id']" position="after">
+    <field name="tag_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record> -->
+
+    <record model="ir.ui.view" id="sh_backend_product_template_tree_inherit_view">
+        <field name="name">sh.product.template.tree.inherit.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="sh_has_current_version" invisible="1" />
+                <field name="sh_has_current_version_compute" invisible="1" />
+            </field>
+        </field>
+    </record>
+
+    <!-- <record model="ir.ui.view" id="product_product_tree_inherit_view">
+        <field name="name">product.product.tree.inherit.view</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view" />
+        <field name="arch" type="xml">
+            <field name="lst_price" position="after">
+                <field name="euro_price" />
+            </field>
+        </field>
+    </record> -->
+
+    <record id="sh_backend_product_template_inherit_search_view" model="ir.ui.view">
+        <field name="name">sh.product.template.search.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//filter[@name='consumable']" position="after">
+                <separator/>
+                <filter string="Has Current Version" name="has_current_version" domain="[('sh_has_current_version', '=', True)]"/>
+                <filter string="Hasn't Current Version" name="has_not_current_version" domain="[('sh_has_current_version', '=', False)]"/>
+            </xpath>
+            <!-- <search>
+                <field name="sh_technical_name" />
+                <field name="resposible_user_id" />
+                <field name="module_last_updated_date" />
+                <group expand="0" string="Group By">
+                    <filter string="Responsible User" name="group_by_filter" domain="[]"
+                        context="{'group_by':'resposible_user_id'}" />
+                    <filter string="Category" name="group_by_filter" domain="[]"
+                        context="{'group_by':'categ_id'}" />
+                    <filter string="Last Update" name="group_by_filter" domain="[]"
+                        context="{'group_by':'module_last_updated_date'}" />
+                </group>
+            </search>
+            <xpath expr="//search/field[@name='name']" position="replace">
+                <field name="name" string="Product"
+                    filter_domain="['|', '|', '|','|', ('default_code', 'ilike', self), ('product_variant_ids.default_code', 'ilike', self),('name', 'ilike', self), ('barcode', 'ilike', self),('sh_technical_name', 'ilike', self)]" />
+            </xpath>
+            <xpath expr="//filter[@name='services']" position="before">
+                <filter name="small_new_feature" string="Small New Feature Expansion"
+                    domain="[('sh_scale_ids','=','Small'),('last_updated_2', '&lt;=', context_today().strftime('%Y-%m-%d'))]" />
+                <filter name="medium_new_feature" string="Medium New Feature Expansion"
+                    domain="[('sh_scale_ids','=','Medium'),('last_updated_2', '&lt;=', context_today().strftime('%Y-%m-%d'))]" />
+                <filter name="large_new_feature" string="Large New Feature Expansion"
+                    domain="[('sh_scale_ids','=','Large'),('last_updated_2', '&lt;=', context_today().strftime('%Y-%m-%d'))]" />
+                <filter name="extra_large_new_feature" string="Extra Large New Feature Expansion"
+                    domain="[('sh_scale_ids','=','ExtraLarge'),('last_updated_2', '&lt;=', context_today().strftime('%Y-%m-%d'))]" />
+            </xpath> -->
+        </field>
+    </record>
+
+</odoo>

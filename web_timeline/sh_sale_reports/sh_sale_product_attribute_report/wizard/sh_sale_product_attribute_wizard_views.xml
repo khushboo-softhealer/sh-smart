@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<odoo>
+	<record id="sh_sale_product_attribute_wizard_form_view" model="ir.ui.view">
+		<field name="name">Sale Product Attribute Report</field>
+		<field name="model">sh.sale.product.attribute.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Sale Product Attribute Report">
+				<group>
+					<group>
+						<field name="sh_from_date" />
+						<field name="sh_partner_ids" widget="many2many_tags"/>
+						<field name="sh_horizontal_attribute_id" />
+						<field name="sh_select_product_cat" widget="radio" />
+					</group>
+					<group >
+						<field name="sh_to_date" />
+						<field name="sh_sale_order_stage"/>
+						<field name="sh_vertical_attribute_id" />
+						<field name="sh_product_ids" widget="many2many_tags" attrs="{'invisible':[('sh_select_product_cat','=','category')]}" />
+						<field name="sh_category_ids" widget="many2many_tags" attrs="{'invisible':[('sh_select_product_cat','=','product')]}"/>
+					</group>
+				</group>
+				<footer>
+					<button name="sh_print_stock_report" class="btn btn-primary" type="object" string="Print Pdf Report" />
+					<button name="get_xls_report" class="btn btn-primary" type="object" string="Print Xls Report" />
+					<button string="Cancel" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+	<record id="sh_sale_product_attribute_action_view" model="ir.actions.act_window">
+		<field name="name">Sale Product Attribute Report</field>
+		<field name="res_model">sh.sale.product.attribute.wizard</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+	<menuitem id="sh_sale_product_attribute_menu" name="Sale Product Attribute Report" action="sh_sale_product_attribute_action_view" parent="sh_sale_reports.sh_custom_sale_details_report_menu" groups="sh_sale_reports.sh_sale_product_attribute_report_group" />
+</odoo>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+	<!-- Survey Form -->
+    <record id="sh_survmate_theme_survey_settings_form" model="ir.ui.view">
+        <field name="name">sh.survmate.theme.survey.settings.form</field>
+        <field name="model">sh.survmate.settings</field>
+        <field name="arch" type="xml">
+    	<form>
+    	<sheet>
+            <div class="oe_title" style="width: 100%;">
+                <label for="name" class="oe_edit_only"/>
+                <h1><field name="name" placeholder="e.g. Theme Settings for Survey A"/></h1>
+            </div>
+            <group>
+            <group string='Colors'>
+            	<field name='sh_survmate_show_bg_color'/>
+            	<field name="sh_survmate_bg_color" widget="color" attrs="{'invisible': [('sh_survmate_show_bg_color','=',False)]}"/>
+            	<field name="sh_survmate_question_color" widget="color"/>
+            	<field name="sh_survmate_answer_color" widget="color"/>      
+            	<field name="sh_survmate_section_title_color" widget="color"/>   
+            	<field name='sh_survmate_section_title_font_color' widget="color"/>
+            	<field name='sh_survmate_section_answer_text_color' widget="color"/> 
+            	<field name='sh_survmate_theme_primary_color' widget="color"/>
+            	<field name='sh_survmate_theme_secondary_color' widget="color"/>	                            	                            	                       	
+            </group>
+            
+            <group string="Styles" name="group_button" priority="7">							
+					<!-- Button Style -->
+					<label for="sh_survmate_button_style"/>
+					<div>
+						<field name="sh_survmate_button_style" widget="selection" class="oe_inline" style="width: 70% !important;"/>
+						<button
+		                       type="object"
+		                       name="action_preview_theme_style"
+		                       class="btn-sm mb4 fa fa-eye"
+		                       aria-label="Preview"
+		                       title="Preview"
+		                       context="{'which_style': 'button'}"
+		                       />
+	                </div>	
+	                
+	                <!-- Input Style -->
+	                <label for="sh_survmate_input_style"/>
+					<div>
+						<field name="sh_survmate_input_style" widget="selection" class="oe_inline" style="width: 70% !important;"/>
+						<button
+		                       type="object"
+		                       name="action_preview_theme_style"
+		                       class="btn-sm mb4 fa fa-eye"
+		                       aria-label="Preview"
+		                       title="Preview"
+		                       context="{'which_style': 'input'}"
+		                       />
+	                </div>
+	                
+	                <!-- Section Style -->
+	                <label for="sh_survmate_section_style"/>
+					<div>
+						<field name="sh_survmate_section_style" widget="selection" class="oe_inline" style="width: 70% !important;"/>
+						<button
+		                       type="object"
+		                       name="action_preview_theme_style"
+		                       class="btn-sm mb4 fa fa-eye"
+		                       aria-label="Preview"
+		                       title="Preview"
+		                       context="{'which_style': 'section'}"
+		                       />
+	                </div>
+	                
+	                <!-- Checkbox Style -->
+	                <label for="sh_survmate_checkbox_style"/>
+					<div>
+						<field name="sh_survmate_checkbox_style" widget="selection" class="oe_inline" style="width: 70% !important;"/>
+						<button
+		                       type="object"
+		                       name="action_preview_theme_style"
+		                       class="btn-sm mb4 fa fa-eye"
+		                       aria-label="Preview"
+		                       title="Preview"
+		                       context="{'which_style': 'checkbox'}"
+		                       />
+	                </div>
+	                
+	                <!-- Radio Style -->
+	                <label for="sh_survmate_radio_button_style"/>
+					<div>
+						<field name="sh_survmate_radio_button_style" widget="selection" class="oe_inline" style="width: 70% !important;"/>
+						<button
+		                       type="object"
+		                       name="action_preview_theme_style"
+		                       class="btn-sm mb4 fa fa-eye"
+		                       aria-label="Preview"
+		                       title="Preview"
+		                       context="{'which_style': 'radio'}"
+		                       />
+	                </div>
+	                   																		
+				</group>
+        	</group>
+		</sheet>
+    		
+    	</form>
+        </field>
+	</record>
+	
+ 
+    
+    <record id="sh_survmate_theme_survey_settings_tree" model="ir.ui.view">
+        <field name="name">sh.survmate.settings.tree</field>
+        <field name="model">sh.survmate.settings</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_survmate_theme_survey_settings_action" model="ir.actions.act_window">
+        <field name="name">Survmate Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.survmate.settings</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+<menuitem 
+    	id="sh_survmate_theme_survey_settings_menu" 
+    	action="sh_survmate_theme_survey_settings_action" 
+		parent="survey.menu_surveys"
+    	sequence="20"/>
+
+                          
+
+
+
+    <!-- QUESTIONS 
+    <record id="sh_survmate_theme_survey_question_form" model="ir.ui.view">
+        <field name="name">sh.survmate.theme.survey.questions.form</field>
+        <field name="model">survey.question</field>
+        <field name="inherit_id" ref="survey.survey_question_form"/>
+        <field name="arch" type="xml">
+    
+    
+    		<xpath expr="//page[2]" position="inside">
+
+              <group name="group_sh_survmate_layout" string="Layout">
+					<group>
+                   		<field name="sh_survmate_grid_type" required="1" />  
+                   		
+                   </group>  
+              </group>  
+    		
+    		</xpath>
+    		
+    
+        </field>
+	</record>               
+        -->
+
+</odoo>

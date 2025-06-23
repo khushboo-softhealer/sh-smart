@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 	project.project form view inherited-->
+    <record id="sh_internal_project_project_form_view_inherit" model="ir.ui.view">
+        <field name="name">sh.internal.project.project.form.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_open_move_timesheet_wizard" string="Move Timesheet To App Store" 
+                        class="btn btn-primary" type="object" 
+                        attrs="{'invisible':[('project_type_selection','!=','internal')]}"
+                        groups="sh_internal_project_custom.group_move_timesheet_to_appstore"
+                />
+            </xpath>
+
+            <xpath expr="//field[@name='sh_fp_based_on']" position="after">
+                <field name="sh_move_task_to_preapp_store" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

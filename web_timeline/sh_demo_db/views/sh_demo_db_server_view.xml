@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="sh_demo_db_server_form_view" model="ir.ui.view">
+			<field name="name">sh.demo.db.server.form.view</field>
+			<field name="model">sh.servers</field>
+			<field name="arch" type="xml">
+				<form string="Demo Database Server">
+					<group>
+						<group>
+							<field name="sh_server_url" widget="url"/>
+							<field name="sh_master_password" password="True"/>
+							<field name="sh_user_login"/>
+							<field name="sh_user_password" password="True"/>
+						</group>
+						<group>
+							<field name="sh_version_id"/>
+							<field name="sh_edition_id"/>
+						</group>
+					</group>
+				</form>
+			</field>
+		</record>
+		<record id="sh_demo_db_server_tree_view" model="ir.ui.view">
+			<field name="name">sh.demo.db.server.tree.view</field>
+			<field name="model">sh.servers</field>
+			<field name="arch" type="xml">
+				<tree string="Demo Database Server">
+					<field name="sh_server_url" widget="url"/>
+					<field name="sh_version_id"/>
+					<field name="sh_edition_id"/>
+					<field name="sh_master_password" password="True"/>
+					<!-- <field name="sh_user_login"/>
+					<field name="sh_user_password" password="True"/> -->
+				</tree>
+			</field>
+		</record>
+		<record id="action_sh_demo_db_server" model="ir.actions.act_window">
+			<field name="name">Demo Database Server</field>
+			<field name="res_model">sh.servers</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<menuitem id="sh_demo_db_server_menu" name="Demo Servers" action="action_sh_demo_db_server" parent="sh_helpdesk.helpdesk_config_menu" sequence="11"/>
+	</data>
+</odoo>

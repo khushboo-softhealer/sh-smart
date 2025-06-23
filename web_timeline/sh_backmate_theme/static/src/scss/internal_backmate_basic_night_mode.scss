@@ -1,0 +1,72 @@
+@if $theme_style=='style_8' {
+    html .o_web_client.sh_night_mode .o_form_view .o_form_statusbar .o_field_widget .o_arrow_button:not(.disabled):hover, 
+    html .o_web_client.sh_night_mode .o_form_view .o_form_statusbar .o_statusbar_status .o_arrow_button:not(.disabled):focus{background: #4c84ff !important;color: #fff !important; border-color: #4c84ff !important;}
+    html .o_web_client.sh_night_mode .o_main_navbar .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .tile_header_2 .active,
+    .sh_night_mode .sh_timer_div .main_ul_task .sh_timer #task_timer{color: #4c84ff !important;}
+    .sh_night_mode .sh_timer_div .main_ul_task .sh_timer_li #timer_pause, 
+    .sh_night_mode .sh_timer_div .main_ul_task .sh_timer_li #timer_stop,
+    .sh_night_mode .sh_timer_div .main_ul_task .sh_timer_li #timer_resume,
+    .sh_night_mode .sh_timer_div .main_ul_task #user_task:not(:empty){background: #252c48 !important;color: #4c84ff !important;}
+    html .o_web_client.sh_night_mode .o_cw_popover.o_calendar_color_53 .card-header, 
+    html .o_web_client.sh_night_mode .o_cw_popover.o_calendar_color_53 .card-header .popover-header,
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .main_content .main_content_birthday .main_birthday_container, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .main_content .announcement_box, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .section_table .payslip_table .payslip_content, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .section_table .expence_table .expence_content, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .section_table .idea_table .idea_content, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .col.counter_col.sh_box_col, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .section_table .complain_table .complain_content, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .main_content .main_content_anniversary .main_anniversary_container, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .main_content .main_anniversary_container .anniversary_conteiner_rest, 
+    html .o_web_client.sh_night_mode .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .tile_header, 
+    html .o_web_client.sh_night_mode .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .rd_all_btn_left a.sh_view_read_all_btn, 
+    html .o_web_client.sh_night_mode .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .view_all_btn_right a.sh_view_all_btn,
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .main_content .main_content_birthday .birthday_box .birthday_conteiner_rest{background: #252c48 !important;color: #94a2c7 !important;}
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .main_title, 
+    html .o_web_client.sh_night_mode .o_popover_container .o_popover .o_cw_body .list-group  .list-group-item,
+    html .o_web_client.sh_night_mode .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body div h1.mt-5, 
+    html .o_web_client.sh_night_mode .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body div .mt-5.h1, 
+    html .o_web_client.sh_night_mode .o_hr_attendance_kiosk_mode .o_hr_attendance_sign_in_out_icon, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .counter_col .row .counter_title, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .counter_col .row .counter_count,
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .section_table .expence_table .expence_content .no_record, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .section_table .payslip_table .payslip_content .no_record, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .section_table .complain_table .complain_content .no_record, 
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .section_table .idea_table .idea_content .no_record,
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .main_content .main_anniversary_container .anniversary_info .anniversary_name, 
+    html .o_web_client.sh_night_mode .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body .sh_rsn div h4.fw-bolder, 
+    html .o_web_client.sh_night_mode .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body div h3, 
+    html .o_web_client.sh_night_mode .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body div h4,
+    html .o_web_client.sh_night_mode #dashboard_counter .main_content .main_content_birthday .birthday_box .birthday_info .birthday_date,
+    html .o_web_client.sh_night_mode #dashboard_counter .main_content .main_anniversary_container .anniversary_info .anniversary_date,
+    html .o_web_client.sh_night_mode .o_menu_systray .o_MessagingMenu .o_MessagingMenu_dropdownMenu.o-dropdown-menu .o_NotificationList.o_MessagingMenu_notificationList .o_NotificationListItem,
+    html .o_web_client.sh_night_mode .o_Chatter .o_Chatter_scrollPanel .o_Message.sh_right_chat .o_Message_core .o_Message_content p, 
+    html .o_web_client.sh_night_mode .o_Chatter .o_Chatter_scrollPanel .o_MessageList.o_ThreadView_messageList .o_Message.sh_right_chat .o_Message_prettyBody .o_mail_notification .o_channel_redirect,
+    html .o_web_client.sh_night_mode .sh_hr_dashboard .main_content .main_content_birthday .birthday_box .birthday_info .birthday_name{color:#94a2c7 !important;}
+
+    html .o_web_client.sh_night_mode .o_content .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .form-switch input{border-color: #4c84ff !important;}
+    html .o_web_client.sh_night_mode .o_content .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .form-switch .form-check-input:checked{background-color: #4c84ff !important;}
+
+    html .o_web_client.sh_night_mode .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .rd_all_btn_left a.sh_view_project_btn,
+    html .o_web_client.sh_night_mode .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .card-body .sh_rsn .sh_input,
+    html .o_web_client.sh_night_mode .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .tile_header_2{background-color: #171c32 !important; border-radius: 25px !important;} 
+
+    html .o_web_client.sh_night_mode .o_field_statusbar > .o_statusbar_status,
+    html .o_web_client.sh_night_mode .o_action_manager .o_kanban_view .o_kanban_renderer.o_kanban_grouped,
+    html .o_web_client.sh_night_mode .o_control_panel .o_cp_top_right .o_cp_searchview .o_searchview .o_searchview_input_container .o_menu_item.dropdown-item.focus,
+    html .o_web_client.sh_night_mode #dashboard_counter .main_content .announcement_box .announcement_container .main_annoucement,
+    html .o_web_client.sh_night_mode .o_action_manager .o_action.o_view_controller.o_kanban_view .o_content{background-color: #252c48 !important;}
+    html .o_web_client.sh_night_mode .todo_layout .add_todo_section .input-group-append,
+    html .o_web_client.sh_night_mode .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .o_mail_preview:hover,
+    html .o_web_client.sh_night_mode .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .rd_all_btn_left a.sh_view_sales_btn
+    html .o_web_client.sh_night_mode .o_menu_systray .o_notification_systray_item .o_notification_systray_dropdown .o_notification_systray_dropdown_items .o_mail_preview:hover{background-color: #171c32 !important;}
+
+    html .o_web_client.sh_night_mode .o_content .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .sh_break_bye_div .bye .bye_img,
+    html .o_web_client.sh_night_mode .o_content .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .break .bell_img {
+        svg{
+            .cls-2{
+                fill: #4c84ff;
+            }
+        }
+    }
+}

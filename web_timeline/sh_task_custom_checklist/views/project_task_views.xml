@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="sh_project_task_custom_checklist_form_view_inherit" model="ir.ui.view">
+        <field name="name">project.task.custom.checklist.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="custom_checklist" string="Checklist">
+                    <field name="custom_checklist_ids" widget="section_and_note_one2many" options="{'create': False, 'delete': False}">
+                        <tree editable="bottom">
+                            <control>
+                                <create name="add_checklist_control" string="Add a line" />
+                                <create name="add_section_control" string="Add a section" context="{'default_display_type': 'line_section'}" />
+                                <create name="add_note_control" string="Add a note" context="{'default_display_type': 'line_note'}" />
+                            </control>
+                            <field name="display_type" invisible="1" />
+                            <!-- <field name="sh_name" readonly="1" widget="section_and_note_text" /> -->
+                            <field name="name" readonly="1" widget="section_and_note_text" />
+                            <field name="description" readonly="1" optional="show" />
+                            <field name="updated_date" readonly="1" />
+                            <field name="state_id" options="{'no_create': True, 'no_open': True}" />
+                            <field name="state_updated_by" optional="hide" readonly="1" options="{'no_open': True}" />
+                            <field name="comments" optional="show" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

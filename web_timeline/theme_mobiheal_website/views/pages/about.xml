@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- HOME PAGE 2 -->
+  <template id="theme_mobiheal_website_about_us_tmpl" name="Meet Our Team - Expert App Developers | Mobiheal Technologies">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty">
+    <!-- about banner start  -->
+        <section class="mb_about_counter o_colored_level" data-snippet="mb_about_counter_tmpl" data-name="About" style="background-image: none;">
+          <div class="container">
+            <div class="mb_main_row">
+              <div class="row align-items-center">
+                <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 o_colored_level text-lg-center">
+                  <div class="mb_main_img w-xxl-75 w-xl-75 w-lg-50 w-md-75 w-sm-100 text-xxl-left text-xl-left text-lg-center mx-lg-auto mx-md-auto">
+                    <img class=" w-xxl-100 w-xl-100 w-lg-75 w-md-75 w-sm-100" src="/theme_mobiheal_website/static/src/img/aboutus/mb_about_4.webp" alt="Android Apps Development" loading="lazy" title="Meet Our Team - Expert App Developers | Mobiheal Technologies" />
+                    <div class="shape-one wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeIn;"/>
+                  </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 o_colored_level">
+                  <div class="mb_about_content">
+                    <span class="mb_subtitle o_default_snippet_text">We are healers</span>
+                    <h1 class="mb_title o_default_snippet_text">Welcome to Mobiheal Technologies – Where Innovation Meets Mobility!</h1>
+                    <p class="mb_text o_default_snippet_text">At Mobiheal Technologies, we are not just a mobile development company; we are
+                      architects of digital transformation, pioneers of cutting-edge technology, and creators of
+                      exceptional mobile experiences. With a passion for innovation and a commitment to
+                      excellence, we strive to redefine the possibilities of mobile technology.
+                        </p>
+                        <p class="mb_text">
+                          We are a team of visionaries, tech enthusiasts, and creative minds united by a common
+                          goal - to empower businesses through transformative mobile solutions. Our journey
+                          began with a simple idea: to build remarkable digital experiences that seamlessly
+                          integrate into the fabric of our clients' success stories.
+                        </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- about banner end  -->
+
+        <!-- our service section end -->
+        <section class="mb_our_Service o_colored_level" data-snippet="mb_our_Service_tmpl" data-name="Our Service" style="background-image: none;">
+          <div class="mb_img_bg"/>
+          <div class="container">
+            <div class="mb_main_row">
+              <div class="row">
+                <div class="col-12 o_colored_level">
+                  <div class="mb_main_box">
+                    <h2 class="mb_title o_default_snippet_text">Our Core Values</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="mb_second_row">
+                <div class="row">
+                  <div class="col-lg-8 col-md-12 col-12 o_colored_level">
+                    <div class="inner_row">
+                      <div class="row">
+                        <div class="col-md-6 col-sm-6 col-12 o_colored_level">
+                          <div class="mb_inner_box">
+                            <div class="mb_inner_heading">
+                              <img src="/theme_mobiheal_website/static/src/img/aboutus/mb_innovation_solution.svg" alt="icon" title="Meet Our Team - Expert App Developers | Mobiheal Technologies" loading="lazy"/>
+                              <h6 class="mb_title">
+                                <span class="o_default_snippet_text">Innovative Solutions</span>
+                              </h6>
+                            </div>
+                            <p class="mb_inner_text o_default_snippet_text">Our approach is rooted in innovation. We don't just create apps;
+                              we craft solutions that solve real-world problems, enhance user experiences, and drive
+                              business growth.</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12 o_colored_level">
+                          <div class="mb_inner_box">
+                            <div class="mb_inner_heading">
+                              <img src="/theme_mobiheal_website/static/src/img/aboutus/mb_agile_team.svg" title="Meet Our Team - Expert App Developers | Mobiheal Technologies" alt="icon" loading="lazy"/>
+                              <h6 class="mb_title">
+                                <span class="o_default_snippet_text">Agile Development</span>
+                              </h6>
+                            </div>
+                            <p class="mb_inner_text o_default_snippet_text">
+                              Time is of the essence in the digital realm. Our agile
+                              development methodology ensures rapid and flexible delivery, allowing you to stay
+                              ahead of the competition and adapt to market dynamics.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12 o_colored_level">
+                          <div class="mb_inner_box">
+                            <div class="mb_inner_heading mb_time">
+                              <img src="/theme_mobiheal_website/static/src/img/aboutus/mb_be_on_time.svg" title="Meet Our Team - Expert App Developers | Mobiheal Technologies" alt="icon" loading="lazy"/>
+                              <h6 class="mb_title">
+                                <span class="o_default_snippet_text">Diverse Expertise</span>
+                              </h6>
+                            </div>
+                            <p class="mb_inner_text o_default_snippet_text">
+                              From Android to iOS, native to cross-platform, we bring a wealth
+                              of expertise to the table. Our diverse skill set ensures that we can cater to the unique
+                              needs of each project, delivering bespoke solutions that align with your business
+                              objectives.  
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12 o_colored_level">
+                          <div class="mb_inner_box">
+                            <div class="mb_inner_heading">
+                              <img src="/theme_mobiheal_website/static/src/img/aboutus/mb_partnership.svg" title="Meet Our Team - Expert App Developers | Mobiheal Technologies" alt="icon" loading="lazy"/>
+                              <h6 class="mb_title">
+                                <span class="o_default_snippet_text">User-Centric Design</span>
+                              </h6>
+                            </div>
+                            <p class="mb_inner_text o_default_snippet_text">
+                              We believe in the power of design to elevate user experiences.
+                              Our team of UI/UX experts meticulously crafts interfaces that captivate, engage, and
+                              leave a lasting impression.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- our service section end -->
+        <!-- our team section start -->
+        <section class="mb_team_section js_cls_team_section o_colored_level" data-snippet="mb_team_tmpl" data-name="Team" style="background-image: none;">
+          <div class="container">
+            <div class="mb_main_row">
+              <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-6 col-12 o_colored_level">
+                  <div class="mb_team_box">
+                    <span class="mb_subtitle o_default_snippet_text">Our Team </span>
+                    <h2 class="mb_title o_default_snippet_text">A Team for Every Vision:</h2>
+                    <p class="mb_text o_default_snippet_text">Whether you're a budding entrepreneur with a groundbreaking idea or an established brand seeking to enhance your mobile presence, our team is equipped to handle projects of all sizes and complexities. We're not just developers, we're your partners in the journey to mobile app success.
+                    <br/><br/>Ready to unleash your app's potential? Let's get started together.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6 offset-xl-1 col-lg-6 col-12 o_colored_level">
+                  <div class="mb_img_group">
+                    <img src="/theme_mobiheal_website/static/src/img/aboutus/hardik.webp" title="Meet Our Team - Expert App Developers | Mobiheal Technologies" class="mb_img_1 js-tilt" loading="lazy"/>
+                    <img src="/theme_mobiheal_website/static/src/img/aboutus/riken.webp" title="Meet Our Team - Expert App Developers | Mobiheal Technologies" class="mb_img_2 js-tilt" loading="lazy"/>
+                    <img src="/theme_mobiheal_website/static/src/img/aboutus/khilan.webp" title="Meet Our Team - Expert App Developers | Mobiheal Technologies"
+                    
+                    
+                    
+                    class="mb_img_3 js-tilt" loading="lazy"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- our team section end -->
+      </div>
+    </t>
+  </template>
+
+  <data noupdate="1">
+
+    <!-- Default pagese  below 2 record must put in no update 1-->
+    <record id="theme_mobiheal_website_about_us_page" model="website.page">
+        <field name="is_published">True</field>
+        <field name="url">/about</field>
+        <field name="view_id" ref="theme_mobiheal_website.theme_mobiheal_website_about_us_tmpl"/>
+        <field name="track">True</field>
+        <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+    </record>
+
+    <record id="theme_mobiheal_website_about_us_menu" model="website.menu">
+        <field name="name">About Us</field>
+        <field name="url">/about</field>
+        <field name="page_id" ref="theme_mobiheal_website.theme_mobiheal_website_about_us_page"/>
+        <field name="sequence" type="int">2</field>
+        <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+    </record>
+
+</data>
+</odoo>

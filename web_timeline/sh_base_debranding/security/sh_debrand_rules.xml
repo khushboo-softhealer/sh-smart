@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="group_show_modules_menu" model="res.groups">
+			<field name="name">Show Configuration Menu</field>
+			<field name="implied_ids" eval="[(4, ref('base.group_erp_manager'))]"/>
+		</record>
+
+	</data>
+</odoo>

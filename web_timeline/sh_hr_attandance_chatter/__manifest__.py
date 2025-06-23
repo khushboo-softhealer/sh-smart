@@ -1,0 +1,20 @@
+{
+    'name': 'Attandance Chatter',
+    'version': '16.0.1',
+    'summary': 'Attandance Chatter',
+    'author': 'Softhealer Technologies (Kishan P)',
+    'sequence': 10,
+    "license": "OPL-1",
+    'description': 'Attandance Chatter',
+    'category': 'Other',
+    'website': 'www.softhealer.com',
+    'depends': ['base_setup', 'hr_attendance'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/hr_attendance_views.xml',
+    ],
+    'demo': [],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}

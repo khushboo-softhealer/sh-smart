@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Website sale pricelist list template inherit for set image in Dropdown -->
+    <template id="sh_website_sale_popup_pricelist_website_sale_pricelist_list"
+        name="Show Image in Pricelist" inherit_id="website_sale.pricelist_list"
+        customize_show="True">
+        <xpath expr="//div/a/t" position="before">
+            <span t-field="curr_pl.sh_website_sale_popup_pricelist_image"
+                t-options="{'widget': 'image', 'resize': None if product_image_big else '25x25', 'itemprop': 'image'}" />
+        </xpath>
+        <xpath expr="//span[hasclass('switcher_pricelist')]" position="before">
+            <span t-field="pl.sh_website_sale_popup_pricelist_image"
+                t-options="{'widget':'image', 'resize': None if product_image_big else '25x25', 'itemprop': 'image'}" />
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sh_timesheet_tbl" name="Timesheet">
+		<div id="js_id_sh_crm_activity_done_tbl_div" class=""> 			
+      <t t-if="not activities">
+          <p>There are currently no activity done for your account.</p>
+      </t>      
+      <t t-if="activities">        
+        <table class="table table-bordered sh_timesheet_dashboard_activity_table">
+          <thead>
+            <tr style="font-size: 15px;">
+              <th colspan="7" class="text-start">Timesheet Data - <t t-esc="employee.name"/></th>
+            </tr>                
+            <tr class="active">
+              <th class="sh_timesheet_dashboard_act_number_th">#</th>
+              <th class="sh_timesheet_dashboard_act_date_th">Date</th>
+              <th class="sh_timesheet_dashboard_act_project_th">Project</th>
+              <th class="sh_timesheet_dashboard_act_task_th">Task</th>
+              <th class="sh_timesheet_dashboard_act_stage_th">Stage</th>
+              <th class="sh_timesheet_dashboard_act_desc_th">Description</th>        
+              <th class="sh_timesheet_dashboard_act_hours_th">Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+          <t t-set="counter" t-value="1"/>
+          <t t-set="total_hours" t-value="0.0"/>
+          <t t-foreach="activities" t-as="activity">
+            <tr>
+              <td class="sh_timesheet_dashboard_act_number_td"> <span t-esc="counter"></span></td>
+              <td class="sh_timesheet_dashboard_act_date_td"> <span t-field="activity.date"/> </td>              
+              <td class="sh_timesheet_dashboard_act_project_td"> <span t-field="activity.project_id.name"/> </td>
+              <td class="sh_timesheet_dashboard_act_task_td"> <a class="text-primary" t-field="activity.task_id.name" t-attf-href="/mail/view?model=project.task&amp;res_id=#{activity.task_id.id}"/> </td>
+              <td class="sh_timesheet_dashboard_act_stage_td"> <span t-field="activity.task_id.stage_id.name"/> </td>
+              <td class="sh_timesheet_dashboard_act_desc_td"> <span t-field="activity.name"/> </td>
+              <td class="sh_timesheet_dashboard_act_hours_td"> <span t-field="activity.unit_amount" t-options='{"widget": "float_time"}'/></td>
+              <t t-set="counter" t-value="counter + 1"/>
+              <t t-set="total_hours" t-value="total_hours + activity.unit_amount"/>
+            </tr>
+          </t>
+            <tr>
+              <td class="sh_timesheet_dashboard_act_number_td"></td>
+              <td class="sh_timesheet_dashboard_act_date_td"></td>
+              <td class="sh_timesheet_dashboard_act_project_td"></td>
+              <td class="sh_timesheet_dashboard_act_task_td"></td>
+              <td class="sh_timesheet_dashboard_act_stage_td"></td>
+              <td class="sh_timesheet_dashboard_act_desc_td">Total</td>
+              <td class="sh_timesheet_dashboard_act_hours_td"><span><t t-esc="total_hours" t-options='{"widget": "float_time"}'/></span></td>
+            </tr>
+          </tbody>
+          </table>
+        </t>
+		</div>
+    </template>
+
+    <template id="sh_timesheet_tbl_temporary" name="Timesheet">      
+      <div id="js_id_sh_crm_activity_done_tbl_div" class="">
+        <t t-if="activities">        
+          <table class="table table-bordered sh_timesheet_dashboard_temporary_table">
+            <thead>
+              <tr style="font-size: 15px;">
+                <th colspan="6" class="text-start">Temporary Tasks - <t t-esc="employee.name"/></th>
+              </tr>                
+              <tr class="active">
+                <th class="sh_timesheet_dashboard_temp_date_th">Date</th>
+                <th class="sh_timesheet_dashboard_temp_project_th">Project</th>
+                <th class="sh_timesheet_dashboard_temp_task_th">Task</th>
+                <th class="sh_timesheet_dashboard_temp_desc_th">Description</th>        
+                <th class="sh_timesheet_dashboard_temp_hour_th">Hours</th>
+                <th class="sh_timesheet_dashboard_temp_blank_th"></th>
+              </tr>
+            </thead>
+            <tbody>
+            <t t-set="counter" t-value="1"/>
+            <t t-set="total_hours" t-value="0.0"/>
+            <t t-foreach="activities" t-as="activity">
+              <tr >
+                <td class="sh_timesheet_dashboard_temp_date_td"> <span t-field="activity.date"/> </td>              
+                <td class="sh_timesheet_dashboard_temp_project_td"> <span t-field="activity.project_id.name"/> </td>
+                <td class="sh_timesheet_dashboard_temp_task_td"> <a class="text-primary" t-field="activity.task_id.name" t-attf-href="/mail/view?model=project.task&amp;res_id=#{activity.task_id.id}"/> </td>
+                <td class="sh_timesheet_dashboard_temp_desc_td"> <span t-field="activity.name"/> </td>
+                <td class="sh_timesheet_dashboard_temp_hour_td"> <span t-field="activity.unit_amount" t-options='{"widget": "float_time"}'/></td>
+                <td class="sh_timesheet_dashboard_temp_blank_td"><button t-attf-data-analytic_id="#{activity.id}" class="btn btn-primary timesheet_trasnfer"> Transfer </button></td>
+                <t t-set="counter" t-value="counter + 1"/>
+                <t t-set="total_hours" t-value="total_hours + activity.unit_amount"/>
+              </tr>
+            </t>
+              <tr>
+                <td class="sh_timesheet_dashboard_temp_date_td"></td>
+                <td class="sh_timesheet_dashboard_temp_project_td"></td>
+                <td class="sh_timesheet_dashboard_temp_task_td"></td>
+                <td class="sh_timesheet_dashboard_temp_desc_td">Total</td>
+                <td class="sh_timesheet_dashboard_temp_hour_td"><span><t t-esc="total_hours" t-options='{"widget": "float_time"}'/></span></td>
+                <td class="sh_timesheet_dashboard_temp_blank_td"></td>
+              </tr>
+            </tbody>
+            </table>
+          </t>
+      </div>
+      </template>
+</odoo>

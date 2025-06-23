@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="theme_softhealer_store_sale_portal_tmpl_inherit" inherit_id="sale.sale_order_portal_content" name='Sale Order Portal Template'>
+        
+        <!-- download all button-->
+        <xpath expr='//section[@id="details"]/h3' position='replace'>
+            <div class='d-flex align-items-center justify-content-between mb-3'>
+                <div>
+                    <h3 id="details" class='m-0'>Pricing</h3>
+                </div>
+                <div t-if='sale_order and sale_order.is_sh_confirm_sale and sale_order.order_line and request.env.user.partner_id.id == sale_order.partner_id.id and sale_order.state in ["sale","done"] and not request.env.user._is_public()'>
+                    
+                    <t t-if='sale_order and sale_order.order_line' t-set='line_product_id' t-value='sale_order.order_line.product_id.filtered(lambda pro: pro.sh_technical_name).ids'></t>
+                    <t t-if='line_product_id'>
+                        <t t-set='multi_line_product_id' t-value="','.join(map(str, line_product_id))"></t>
+                    </t>
+
+                    <t t-if='sale_order' t-set='sh_sale_order_id' t-value='sale_order.id'></t>
+
+                    <t t-if='sale_order and sale_order.access_token' t-set='sh_sale_order_access_token' t-value='sale_order.access_token'></t>
+                    
+                    <a t-if='multi_line_product_id and line_product_id and sh_sale_order_id and sh_sale_order_access_token'
+                        t-attf-href='/theme_softhealer_store/sh_get_app_data?product_id=#{multi_line_product_id}&amp;sale_order_id=#{sh_sale_order_id}&amp;access_token=#{sh_sale_order_access_token}'
+                        class='btn btn-primary' title='Download All'>
+                        <i class='fa fa-download me-2'></i>Download All
+                    </a>
+                </div>
+                
+            </div>
+        </xpath>
+
+        <!-- Separate download button-->
+        <xpath expr='//tbody[hasclass("sale_tbody")]//tr//td[last()]' position='after'>
+            <td t-if='line.product_id.sudo().sh_technical_name and sale_order.is_sh_confirm_sale and sale_order.state in ["sale","done"] and request.env.user.partner_id.id == sale_order.partner_id.id and not request.env.user._is_public()'>
+                <t t-if='line and line.product_id' t-set='line_product_id' t-value='line.product_id.id'></t>
+                <t t-if='sale_order' t-set='sh_sale_order_id' t-value='sale_order.id'></t>
+                <t t-if='sale_order and sale_order.access_token' t-set='sh_sale_order_access_token' t-value='sale_order.access_token'></t>
+                
+                <a t-if='line_product_id and sh_sale_order_id and sh_sale_order_access_token'
+                    t-attf-href='/theme_softhealer_store/sh_get_app_data?product_id=#{line_product_id}&amp;sale_order_id=#{sh_sale_order_id}&amp;access_token=#{sh_sale_order_access_token}'
+                    class='btn btn-primary' t-att-title='line.product_id.name'>
+                    <i class='fa fa-download'></i>
+                </a>
+            </td>
+            <td t-if='line.product_id.sudo().sh_technical_name and sale_order.is_sh_confirm_sale and sale_order.state in ["sale","done"] and request.env.user.partner_id.id == sale_order.partner_id.id and not request.env.user._is_public()'>
+                <t t-if='line and line.product_id' t-set='line_product_id' t-value='line.product_id.id'></t>
+                <t t-if='sale_order' t-set='sh_sale_order_id' t-value='sale_order.id'></t>
+                <t t-if='sale_order and sale_order.access_token' t-set='sh_sale_order_access_token' t-value='sale_order.access_token'></t>
+                
+                  <t t-if='line_product_id and sh_sale_order_id and sh_sale_order_access_token'>
+                    
+                    <div class="tick_create">
+                        <div id="Ticketmodal" class="modal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Support Ticket</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="hidden" name="pr_id" id="pr_id"/>
+                                        <input type="hidden" name="ref" id="ref"/>
+                                        <input type="hidden" name="categ_id" id="categ_id"/>
+                                        <input type="hidden" name="current" id="current"/>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p class="alert alert-danger o_hidden" style="margin-top:10px;" id="error_ticket_message"/>
+                                            </div>
+                                            <div class="col-12">
+                                                <p class="alert alert-success o_hidden" style="margin-top:10px;" id="success_ticket_message"/>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="email_subject">Subject</label>
+                                                    <input type="text" class="form-control" id="email_subject" name="email_subject" required="True"/>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="tick_type">Ticket Type</label>
+                                                    <select class="form-control form-field o_website_form_required_custom" id="tick_type" name="tick_type" required="True">
+                                                        <option value="tick_type" selected="True">Select Type</option>
+                                                        <t t-foreach="request.env['sh.helpdesk.ticket.type'].sudo().search([('sh_display_at_so_portal','=',True)])" t-as="type">
+                                                            <option t-att-data-name="type.name" t-att-value="type.id">
+                                                                <t t-esc="type.name"/>
+                                                            </option>
+                                                        </t>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="edition">Edition</label>
+                                                    <select class="form-control form-field o_website_form_required_custom" id="edition" name="edition" required="True">
+                                                        <option value="tick_edition" selected="True">Select Edition</option>
+                                                        <t t-foreach="request.env['sh.edition'].sudo().search([])" t-as="ed">
+                                                            <option t-att-data-name="ed.name" t-att-value="ed.id">
+                                                                <t t-esc="ed.name"/>
+                                                            </option>
+                                                        </t>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="host">Odoo Hosted On</label>
+                                                    <select class="form-control form-field o_website_form_required_custom" id="host" name="host" required="True">
+                                                        <option value="host_on" selected="True">Select Odoo Hosted On</option>
+                                                        <t t-foreach="request.env['sh.odoo.hosted.on'].sudo().search([])" t-as="hosted_on">
+                                                            <option t-att-data-name="hosted_on.name" t-att-value="hosted_on.id">
+                                                                <t t-esc="hosted_on.name"/>
+                                                            </option>
+                                                        </t>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="description">Description</label>
+                                                    <textarea id="description" name="description" class="form-control form-field o_website_form_required_custom" placeholder="Description"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="file">Attachments</label>
+                                                    <t t-set="file_size" t-value="int(request.env['ir.config_parameter'].sudo().get_param('attachment_size'))"/>
+                                                    <input name="files" id="files" type="file" class="form-control form-field o_website_form_required_custom" multiple="multiple" t-att-data-attachment-size="file_size"/>
+                                                    <span class="custom-file-control"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="sh_portal_ticket_reCaptcha_legal_terms"></div>
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                        <div class="sh_so_portal_loader o_hidden"></div>
+                                        <button type="button" class="btn btn-outline-primary btn_add_ticket">Create</button>
+                                        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Discard</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" t-att-data-pr-id="line.product_id.id" t-att-data-current="line.order_id.id" t-att-data-ref="line.order_id.name" t-att-data-categ-id="line.product_id.categ_id.id" class="btn btn-primary" id="help_create">
+                            <i class='fa fa-ticket'></i>
+                        </button>
+                    </div>
+                  </t>
+            </td>
+        </xpath>
+    </template>
+</odoo>

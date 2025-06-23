@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_sh_onboarding_form">
+        <field name="name">sh.hr.onboarding.form</field>
+        <field name="model">sh.hr.onboarding</field>
+        <field name="arch" type="xml">
+            <form string="Onboarding">
+                <header>
+                    <button name="action_confirm" 
+                    string="Confirm"
+                    class="btn-primary"
+                    type="object"
+                    confirm="Are you sure you want to confirm ? This action will create User, Employee and contract !"
+                    states="approved"/>
+
+                    <button name="action_quotation_send" 
+                    string="Send Employee For Approve" type="object"
+                     states="draft" class="btn-primary"/>
+
+                     <button name="action_approve" 
+                    string="Approved" type="object"
+                     states="waiting" class="btn-primary"/>
+
+                     <button name="action_reject" 
+                    string="Reject" type="object"
+                    confirm="Please add Reason for Rejection in Chatter section. Click on Log Note button to add reason !"
+                     states="waiting" class="btn-primary"/>
+
+
+                     <button name="action_draft" 
+                     string="Reset To Draft"
+                     type="object"
+                     states="waiting,approved,cancel,reject"  groups="hr.group_hr_manager"/>
+ 
+                    <button name="action_print_contract_report" 
+                    string="Print Contract Report"
+                    type="object"
+                    states="confirm" class="btn-primary"/>
+
+                    <button name="action_print_confirmation_report" 
+                    string="Print Confirmation Report"
+                    type="object"
+                    states="confirm" class="btn-primary"/>
+
+
+                    <button name="action_cancel" 
+                    string="Cancel"
+                    type="object"
+                    states="draft,confirm"  groups="hr.group_hr_manager"/>
+
+                    <field name="state" widget="statusbar" />
+                </header>
+                <div class="alert alert-success text-center o_form_header alert-dismissible" attrs="{'invisible': [('state', '!=', 'confirm')]}" role="status">
+                    <button class="btn-close" data-bs-dismiss="alert" aria-label="Close"/>
+                   
+                    <div attrs="{'invisible': [('state', '!=', 'confirm')]}">
+                        <strong>An invitation email containing the following subscription link has been sent:</strong>
+                    </div>
+                    <div><field name="signup_url" widget="url" readonly="1"/></div>
+                 </div>
+
+
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="e.g. Employee Name" string="Name" 
+                            attrs="{'readonly':[('state','not in',['draft','waiting'])]}" required="1"/>
+                        </h1>
+                    </div>
+                    <group  string="Employee Details">
+                        <group>
+                            <field name="job_id" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="job_title" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="category_ids" widget="many2many_tags" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="department_id" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="parent_id" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="coach_id" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="work_email" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="date_of_joining" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                        </group>
+                        <group>
+                            <field name="company_id"  attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="private_email" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="gender" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="birthday" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>    
+                            <field name="mobile"  attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="hr_responsible_id" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            <field name="resource_calendar_id" attrs="{'readonly':[('state','not in',['draft','waiting'])]}" required="1"/>
+                            <field name="address_home_id"
+                                            context="{
+                                                'show_address': 1,
+                                                'default_type': 'private',
+                                                'form_view_ref': 'base.res_partner_view_form_private'}"
+                                            options='{"always_reload": True, "highlight_first_line": True}' attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                            
+                        </group>
+                       
+                    </group>
+                    <notebook>
+                        <page string="Contract Details">
+                            <group  string="Contract Details">
+                                <group>
+                                    <field name="adhar_card" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="emp_pic" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="bank_statement" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="pan_card" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="past_payslip" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="salary_offered" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+
+                                    <field name="date" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="signature_date" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="date_start" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="date_end" required="1" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <label for="contract_period" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <div class="o_row"  attrs="{'invisible':[('contract_period','=',False)]}">
+                                        <field name="contract_period" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                        <field name="contract_type" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    </div>
+                                    <field name="contract_type_id"  attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    
+                                    <field name="having_uan_number"  attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="uan_number" attrs="{'invisible':[('having_uan_number','=',False)],'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="is_applicable_for_tds"  attrs="{'readonly':[('state','not in',['draft','waiting'])]}" />
+                                    <field name="employee_contract_type" attrs="{'invisible':[('is_applicable_for_tds','!=',True)],'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="tds_scheme_type" attrs="{'invisible':['|',('employee_contract_type','=','contractual'),('is_applicable_for_tds','!=',True)],'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    
+                                    <field name="structure_type_id"  attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="struct_id"  attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+        
+                                </group>
+                                
+                            </group>
+                        </page>
+                        <page string="Bond Details">
+                            <group>
+                                <group name="bond_group" string="BOND">
+                                    <field name="bond" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                    <field name="cheque_amount"
+                                        attrs="{'readonly':[('state','not in',['draft','waiting'])],'invisible':[('bond','in',['none','certificate'])]}" />
+                                    <field name="cheque_number"
+                                        attrs="{'readonly':[('state','not in',['draft','waiting'])],'invisible':[('bond','in',['none','certificate'])]}" />
+                                    <field name="period" attrs="{'readonly':[('state','not in',['draft','waiting'])],'invisible':[('bond','in',['none'])]}" />
+                                    <field name="bond_duration" attrs="{'readonly':[('state','not in',['draft','waiting'])],'invisible':[('bond','in',['none'])]}" />
+                                    <field name="degree_ids" widget="many2many_tags"
+                                        attrs="{'readonly':[('state','not in',['draft','waiting'])],'invisible':[('bond','in',['none','cheque'])]}" />
+                                    <field name="sh_contract_bond_detail_report" options="{'codeview':true}" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Annexure - B" name="sh_annexure_b_notes">
+                            <label for="sh_annexure_b_notes">Annexure
+                                - B</label>
+                            <field name="sh_annexure_b_notes" options="{'codeview':true}" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"/>
+                        </page>
+                        <page string="Salary structure" name="Salary structure">
+                            <field name="salary_structure_line" attrs="{'readonly':[('state','not in',['draft','waiting'])]}">
+                                <tree editable="bottom">
+                                    <field name="sequence" widget="handle" />
+                                    <field name="name" />
+                                    <field name="amount" />
+                                </tree>
+                            </field>
+                        </page>
+                        
+                        <page string="Access Rights Details">
+                            <group>
+                                <group string="User Access Rights">
+                                    <field name="template_ids" required="1" widget="many2many_tags" attrs="{'readonly':[('state','not in',['draft','waiting'])]}"></field>
+                                    
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Other"  groups="hr.group_hr_manager">
+                            <group>
+                                <group string="Related User">
+                                    <field name="employee_id" readonly="1"></field>
+                                    <field name="user_id" readonly="1"></field>
+                                    <field name="signup_url" widget="url" readonly="1"></field>
+                                    <field name="contract_id" readonly="1" ></field>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                    
+                    
+                    
+                    
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="view_sh_onboarding_tree">
+        <field name="name">sh.hr.onboarding.tree</field>
+        <field name="model">sh.hr.onboarding</field>
+        <field name="arch" type="xml">
+            <tree string="Employee Onboarding">
+                <field name="name" />
+                <field name="job_id" />
+                <field name="department_id" />
+                <field name="company_id" />
+                <field name="work_email" />
+                <field name="coach_id" />
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_hr_onboarding_view_search" model="ir.ui.view">
+		<field name="name">sh.hr.onboarding.search</field>
+		<field name="model">sh.hr.onboarding</field>
+		<field name="arch" type="xml">
+			<search string="Employee Onboarding">
+				<field name="name" />
+                <field name="job_id" />
+                <field name="department_id" />
+				<filter name="state_new" string="Draft" domain="[('state','=','draft')]" />
+				<filter name="state_confirm" string="Confirmed"
+					domain="[('state','=','confirm')]" />
+				<filter name="state_cancel" string="Cancel" domain="[('state','=','cancel')]" />
+				<group name="group" string="Group By">
+					<filter name="group_by_employee" string="Employee"
+						context="{'group_by':'employee_id'}" />
+					<filter name="group_by_state" string="State" context="{'group_by':'state'}" />
+                    <filter name="group_by_job" string="Job" context="{'group_by':'job_id'}" />
+                    <filter name="group_by_depart" string="Department" context="{'group_by':'department_id'}" />
+                    <filter name="group_by_company_id" string="Company" context="{'group_by':'company_id'}" />
+                    <filter name="group_by_category_ids" string="Category" context="{'group_by':'category_ids'}" />
+                   
+				</group>
+			</search>
+		</field>
+	</record>
+
+    <record model="ir.actions.act_window" id="action_sh_hr_onboarding">
+        <field name="name">Employee Onboarding</field>
+        <field name="res_model">sh.hr.onboarding</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="sh_hr_onboarding_menu" name="Employee Onboarding"
+        parent="sh_hr_dashboard.sh_hr_dashboard_main_menu" sequence="3"
+        groups="sh_hr_onboarding.group_hr_onboarding_user"
+        action="action_sh_hr_onboarding" />
+
+</odoo>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_signup_otp_email_view_tree" model="ir.ui.view">
+        <field name="name">sh.signup.otp.email.view.tree</field>
+        <field name="model">sh.signup.otp.email</field>
+        <field name="arch" type="xml">
+            <tree string="Email Blacklist">
+                <field name="create_date" />
+                <field name="email"/>
+                <field name="state"
+                    decoration-success="state == 'verified'"
+                    decoration-info="state == 'draft'"
+                    widget="badge"
+                    />
+
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="sh_signup_otp_email_view_search" model="ir.ui.view">
+        <field name="name">sh.signup.otp.email.view.search</field>
+        <field name="model">sh.signup.otp.email</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="email"/>
+                <field name="state"/>
+                
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_signup_otp_email_action" model="ir.actions.act_window">
+        <field name="name">signup otp verification Email Addresses</field>
+        <field name="res_model">sh.signup.otp.email</field>
+        <field name="view_id" ref="sh_signup_otp_email_view_tree"/>
+        <field name="search_view_id" ref="sh_signup_otp_email_view_search"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Add an email address to the pending otp verification
+          </p><p>
+            Email addresses that are in pending top vefication don't signup through api/bot
+        </p>
+        </field>
+    </record>
+
+    <menuitem id="menuitem_sh_signup_otp_email_" 
+    parent="website.menu_website_global_configuration" 
+    action="sh_signup_otp_email_action" />
+
+
+
+</odoo>

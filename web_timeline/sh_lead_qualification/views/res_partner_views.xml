@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_lead_qualification_partner_form_view" model="ir.ui.view">
+        <field name="name">res.partner</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='internal_notes']" position="after">
+                <page name="extra_details" string="Lead Qualification" attrs="{'invisible': [('is_company', '=', False)]}" groups="sh_lead_qualification.group_lead_qualification">
+                    <form>
+                        <group>
+                            <group >
+                                <field name="partner_name" invisible="1" />
+                                <field name="year_of_establishment" />
+                                <field name="lead_source" />
+                                <label for="google_reviews"/>
+                                <div name="google_review">
+                                    <field name="google_reviews" class="oe_inline" placeholder="No of Review"/>
+                                    <field name="google_rating" class="oe_inline" placeholder="Rating"/>
+                                </div>
+                                <field name="client_type" widget="radio"/>                                
+                                                               
+                            </group>
+                            <group >
+                                <field name="type_of_industry_id" options="{'no_create':True}"/>
+                                <field name="career_page_analysis" />
+                                <field name="customer_history" />
+                                <label for="service_review"/>
+                                <div name="service_review">
+                                    <field name="service_review" class="oe_inline" placeholder="No of Review"/>
+                                    <field name="service_rating" class="oe_inline" placeholder="Rating"/>
+                                </div>
+                                <field name="updated_by" />
+                                <field name="updated_on" />                                
+
+                            </group>
+                        
+                        </group>
+                        <notebook>
+                            <page name="country_of_operations" string="Country of Operations">
+                                <field name="sh_country_of_operations_ids">
+                                    <tree editable="bottom">
+                                        <field name="country_id" />
+                                        <field name="country_group_ids" widget="many2many_tags"/>
+                                        <field name="country_type" />
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="social_media_presence" string="Social media presence">
+                                <field name="sh_social_media_presence_ids">
+                                    <tree editable="bottom">
+                                        <field name="social_media_url" />
+                                        <field name="no_of_followers" />
+                                        <field name="no_of_employees" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </form>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

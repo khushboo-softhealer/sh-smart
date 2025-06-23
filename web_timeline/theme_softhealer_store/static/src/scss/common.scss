@@ -1,0 +1,74 @@
+// contact thankyou page scss start //
+.sh_cls_contact_us_thank_you{
+    .me-lg-auto{
+        width: 100% !important;
+    }
+    .col-lg-4{
+        display: none !important;
+        @include media-breakpoint-down(md) {
+               margin-top: 20px; 
+        }
+    }
+    .fa.rounded-circle.fa-4x{
+        color:#fff;
+        @include media-breakpoint-down(md){
+            width: 5rem;height: 5rem;line-height: 5rem;font-size: 45px;
+        }
+    }
+    h1{
+        font-size: var(--sh-store-section-heading-font-size);font-weight: var(--sh-store-section-heading-font-weight);line-height: var(--sh-store-section-heading-line-height);color: var(--sh-store-section-heading-font-color);margin-bottom:10px;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-store-section-heading-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-store-section-heading-font-size-mobile);
+        }
+    }
+    hr.s_hr{border-top: 1px solid o-color(o-color-1) !important;}
+    h5{
+        font-size: var(--sh-store-heading-title-font-size);color: var(--sh-store-heading-title-font-color);font-weight: var(--sh-store-heading-title-font-weight);margin-bottom:10px;line-height: var(--sh-store-heading-title-line-height);
+    }
+    p{
+        font-size: var(--sh-store-normal-text-font-size);font-weight: var(--sh-store-normal-text-font-weight);color: var(--sh-store-normal-text-font-color);line-height: var(--sh-store-normal-text-line-height);margin-bottom:10px;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-store-normal-text-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-store-normal-text-font-size-mobile);
+        }
+    }
+    .list-unstyled{
+        li{
+            color:o-color(o-color-1) !important;   font-size: var(--sh-store-normal-text-font-size);font-weight: var(--sh-store-normal-text-font-weight);color: var(--sh-store-normal-text-font-color);line-height: var(--sh-store-normal-text-line-height);
+            &:first-child{
+                font-size: var(--sh-store-heading-title-font-size) !important;color: var(--sh-store-heading-title-font-color) !important;font-weight: var(--sh-store-heading-title-font-weight);margin-bottom:10px;line-height: var(--sh-store-heading-title-line-height);    
+            }
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-store-normal-text-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-store-normal-text-font-size-mobile);
+            }
+                i{
+                    font-size:20px; color:o-color(o-color-1);
+                }
+            
+        }
+    }
+}
+
+
+#oe_structure_website_sale_recommended_products{display: none !important;}
+
+
+// contact thankyou page scss end //
+
+
+
+
+// theme_softhealer_store.shEcommerceSupportTemplate country contact page
+
+
+.country-with-contact .iti{
+    width : 100%;
+}

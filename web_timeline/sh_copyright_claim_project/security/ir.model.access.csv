@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_copyright_claim,access_sh_copyright_claim,model_sh_copyright_claim,base.group_user,1,1,1,1
+sh_copyright_claim_project.access_sh_copyright_claim_wizard,access_sh_copyright_claim_wizard,sh_copyright_claim_project.model_sh_copyright_claim_wizard,base.group_user,1,1,1,1
+sh_copyright_claim_project.access_sh_claim_user_wizard,access_sh_claim_user_wizard,sh_copyright_claim_project.model_sh_claim_user_wizard,base.group_user,1,1,1,1

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="sh_add_remove_follower_wizard_view" model="ir.ui.view">
+		<field name="name">sh.add.remove.followers</field>
+		<field name="model">sh.add.remove.followers</field>
+		<field name="arch" type="xml">
+			<form string="Add/Remove Followers">
+				<group>
+					<group>
+						<field name="partner_ids" widget="many2many_tags"/>
+					</group>
+					<group>
+						<field name="follower_action" widget="radio"/>
+					</group>
+				</group>
+				<footer>
+                   <button string='Add/Remove' name="action_follower" type="object" class="btn-primary"/>
+                   <button string="Cancel" class="btn-default" special="cancel"/>
+               	</footer>
+			</form>
+		</field>
+	</record>
+	<!-- <act_window id="sh_mass_add_remove_follower_action"
+            name="Add/Remove Followers"
+            src_model="sh.helpdesk.ticket"
+            res_model="sh.add.remove.followers"
+            view_type="form" view_mode="form"
+            key2="client_action_multi" target="new"
+			groups="sh_helpdesk.helpdesk_group_team_leader"
+            />	 -->
+</odoo>

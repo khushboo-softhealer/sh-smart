@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+<data noupdate="1">
+
+        <record id="sh_survmate_theme_style_1" model="sh.survmate.settings">
+            
+            <field name="name">Theme 1</field>
+            
+            <field name='sh_survmate_show_bg_color'>True</field>
+            <field name="sh_survmate_bg_color">#FFFFFF</field>
+            <field name="sh_survmate_question_color">#585858</field>
+            <field name="sh_survmate_answer_color">#0042BC</field>    
+           	<field name='sh_survmate_section_title_color'>#FFFFFF</field>
+           	<field name='sh_survmate_section_title_font_color'>#444444</field>
+           	<field name='sh_survmate_section_answer_text_color'>#444444</field>
+           	<field name='sh_survmate_theme_primary_color'>#0043A8</field>
+           	<field name='sh_survmate_theme_secondary_color'>#FAFAFA</field>
+           
+            <field name="sh_survmate_button_style">style_1</field>
+            <field name="sh_survmate_input_style">style_1</field>
+            <field name="sh_survmate_checkbox_style">style_1</field>
+            <field name="sh_survmate_radio_button_style">style_1</field>    
+            <field name="sh_survmate_section_style">style_1</field>   
+                                                                           
+        </record>
+        <record id="sh_survmate_theme_style_2" model="sh.survmate.settings">
+            
+            <field name="name">Theme 2</field>
+            
+            <field name='sh_survmate_show_bg_color'>True</field>
+            <field name="sh_survmate_bg_color">#FFFFFF</field>
+            <field name="sh_survmate_question_color">#474747</field>
+            <field name="sh_survmate_answer_color">#571839</field>    
+           	<field name='sh_survmate_section_title_color'>#BB377D</field>
+           	<field name='sh_survmate_section_title_font_color'>#FFFFFF</field>
+           	<field name='sh_survmate_section_answer_text_color'>#1F4037</field>
+           	<field name='sh_survmate_theme_primary_color'>#BB377D</field>
+           	<field name='sh_survmate_theme_secondary_color'>#F4F4F4</field>
+           
+            <field name="sh_survmate_button_style">style_2</field>
+            <field name="sh_survmate_input_style">style_2</field>
+            <field name="sh_survmate_checkbox_style">style_2</field>
+            <field name="sh_survmate_radio_button_style">style_2</field>    
+            <field name="sh_survmate_section_style">style_2</field>   
+                                                                           
+        </record>
+        
+        <record id="sh_survmate_theme_style_3" model="sh.survmate.settings">
+            
+            <field name="name">Theme 3</field>
+            
+            <field name='sh_survmate_show_bg_color'>True</field>
+            <field name="sh_survmate_bg_color">#FFFFFF</field>
+            <field name="sh_survmate_question_color">#666666</field>
+            <field name="sh_survmate_answer_color">#183543</field>    
+           	<field name='sh_survmate_section_title_color'>#FFFFFF</field>
+           	<field name='sh_survmate_section_title_font_color'>#1B343F</field>
+           	<field name='sh_survmate_section_answer_text_color'>#1F4037</field>
+           	<field name='sh_survmate_theme_primary_color'>#337899</field>
+           	<field name='sh_survmate_theme_secondary_color'>#F4F4F4</field>
+           
+            <field name="sh_survmate_button_style">style_3</field>
+            <field name="sh_survmate_input_style">style_3</field>
+            <field name="sh_survmate_checkbox_style">style_3</field>
+            <field name="sh_survmate_radio_button_style">style_3</field>    
+            <field name="sh_survmate_section_style">style_3</field>   
+                                                                           
+        </record>
+        
+         <record id="sh_survmate_theme_style_4" model="sh.survmate.settings">
+            
+            <field name="name">Theme 4</field>
+            
+            <field name='sh_survmate_show_bg_color'>true</field>
+            <field name="sh_survmate_bg_color">#FFFFFF</field>
+            <field name="sh_survmate_question_color">#474747</field>
+            <field name="sh_survmate_answer_color">#1F4037</field>    
+           	<field name='sh_survmate_section_title_color'>#01592F</field>
+           	<field name='sh_survmate_section_title_font_color'>#F5F5F5</field>
+           	<field name='sh_survmate_section_answer_text_color'>#1F4037</field>
+           	<field name='sh_survmate_theme_primary_color'>#01592F</field>
+           	<field name='sh_survmate_theme_secondary_color'>#F4F4F4</field>
+           
+            <field name="sh_survmate_button_style">style_4</field>
+            <field name="sh_survmate_input_style">style_4</field>
+            <field name="sh_survmate_checkbox_style">style_4</field>
+            <field name="sh_survmate_radio_button_style">style_4</field>    
+            <field name="sh_survmate_section_style">style_4</field>   
+            
+        </record>
+        
+        <record id="sh_survmate_theme_style_5" model="sh.survmate.settings">
+            <field name="name">Theme 5</field>
+            <field name='sh_survmate_show_bg_color'>True</field>
+            <field name="sh_survmate_bg_color">#FFFFFF</field>
+            <field name="sh_survmate_question_color">#474747</field>
+            <field name="sh_survmate_answer_color">#61045F</field>    
+           	<field name='sh_survmate_section_title_color'>#F1F5F8</field>
+           	<field name='sh_survmate_section_title_font_color'>#61045F</field>
+           	<field name='sh_survmate_section_answer_text_color'>#1F4037</field>
+           	<field name='sh_survmate_theme_primary_color'>#61045F</field>
+           	<field name='sh_survmate_theme_secondary_color'>#F4F4F4</field>
+            <field name="sh_survmate_button_style">style_5</field>
+            <field name="sh_survmate_input_style">style_5</field>
+            <field name="sh_survmate_checkbox_style">style_5</field>
+            <field name="sh_survmate_radio_button_style">style_5</field>    
+            <field name="sh_survmate_section_style">style_5</field>   
+        </record>
+    </data>
+         
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_inherited_view_form" model="ir.ui.view">
+        <field name="name">sale.order.view.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='order_lines']//tree//field[@name='product_id']" position="before">
+                
+            </xpath>
+        </field>
+    </record>
+    <record id="sh_odoo_ref_sale_list_view" model="ir.ui.view">
+        <field name="name">sale.order.line</field>
+        <field name="model">sale.order.line</field>
+        <field name="inherit_id" ref="sh_sol_views.sh_sol_sale_order_line_tree_view_inherit"/>
+        <field name="arch" type="xml">
+            <field name="order_id" position="after">
+                <field name="odoo_partner_id" optional="show"/>
+            </field>
+        </field>
+    </record>
+    <record id="remove_odoo_customer_from_order_line" model="ir.actions.server">
+        <field name="name">Remove Odoo Customer</field>
+        <field name="model_id" ref="sale.model_sale_order_line" />
+        <field name="binding_model_id" ref="sale.model_sale_order_line" />
+        <field name="state">code</field>
+        <field name="binding_view_types">list</field>
+        <field name="code"> action = records.action_remove_odoo_customer()</field>
+    </record>
+</odoo>

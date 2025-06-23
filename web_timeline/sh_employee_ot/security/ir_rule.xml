@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="sh_employee_ot_base_user_rule" model="ir.rule">
+        <field name="name">Employee OverTime Own record </field>
+        <field name="model_id" ref="model_sh_employee_ot" />
+        <field name="domain_force">[('sh_user_id','=',user.id)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    </record>
+
+    <record id="sh_employee_ot_officer_rule" model="ir.rule">
+        <field name="name">Employee OverTime officer rule</field>
+        <field name="model_id" ref="model_sh_employee_ot" />
+        <field name="domain_force">['|',('sh_user_id','=',user.id),('sh_project_manager_id','=',user.id)]</field>
+        <field name="groups"
+            eval="[(4, ref('sh_project_task_base.group_project_officer'))]" />
+    </record>
+
+    <record id="sh_employee_ot_mgmt_rule" model="ir.rule">
+        <field name="name">Employee OverTime admin</field>
+        <field name="model_id" ref="model_sh_employee_ot" />
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups"
+            eval="[(4, ref('account.group_account_manager')),(4, ref('project.group_project_manager'))]" />
+    </record>
+</odoo>

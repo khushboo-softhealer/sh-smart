@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <!-- <template id="asset_backend" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+      
+            <link rel="stylesheet" type="text/scss" href="/sh_backmate_theme_adv_custom/static/src/scss/theme.scss"/>
+        </xpath>
+    </template>
+    <template id="backmate_assets_bootstrap" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+             <link href="/sh_backmate_theme_adv_custom/static/src/scss/frontend.scss" rel="stylesheet" type="text/scss"/>	
+        </xpath>
+    </template> -->
+
+     <record id="view_users_form_simple_inherit_modif_custom" model="ir.ui.view">
+        <field name="name">res.users.preferences.form.custom</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="sh_backmate_theme_adv.view_users_form_simple_inherit_modif" />
+        <field name="arch" type="xml">
+           <field name="sh_enable_gloabl_search_mode" position="replace">
+                <field name="sh_enable_gloabl_search_mode" groups="base.group_system"/>
+           </field>
+        </field>
+    </record>
+</odoo>

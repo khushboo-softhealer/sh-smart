@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="sh_report_timesheet_group_task">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-set="show_task" t-value="bool(docs.mapped('task_id'))" />
+                <t t-set="show_project" t-value="len(docs.mapped('project_id')) > 1" />
+                <t t-set="mapped_tasks" t-value="docs.mapped('task_id')" />
+                <t t-set="total_hrs_group_by" t-value="0"/>
+                <t t-set="total_min_group_by" t-value="0"/>
+
+                <div class="page">
+                    <t t-foreach="mapped_tasks" t-as="each_task">
+                        <div style="page-break-inside: avoid;">
+                            <div class="oe_structure" />
+
+                            <t t-set="each_docs" t-value="docs.filtered(lambda x : x.task_id.id == each_task.id)" />
+                            <t t-set="timesheet_blank_rec_set" t-value="request.env['account.analytic.line'].sudo().browse()" />
+                            <t t-set="datas" t-value="timesheet_blank_rec_set.prepare_each_master_dictonary(each_docs)" />
+                            <t t-set="merged_records_list" t-value="datas.get('master_dictonary_for_timesheet').get('merged_records_list')" />
+
+                            <t t-set="check_total_invoice_amount" t-value="timesheet_blank_rec_set.check_total_invoice_amount(merged_records_list)" />
+                            <t t-if="check_total_invoice_amount">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2>
+                                            <span t-if="each_task.parent_id">
+                                                <span t-esc="each_task.parent_id.name"/> /     
+                                            </span>
+                                            <span t-esc="each_task.name"></span>
+                                        </h2>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <span>Date</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>Responsible</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>Description</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>Time</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-set="total_unit_amount" t-value="0"/>
+                                                <t t-set="total_hours" t-value="0"/>
+                                                <t t-set="total_minutes" t-value="0"/>
+
+                                                <tr t-foreach="merged_records_list" t-as="each_dictonary">
+                                                    <td style="white-space: nowrap;">
+                                                        <t t-esc="each_dictonary.get('date')" />
+                                                    </td>
+                                                    <td style="white-space: nowrap;">
+                                                        <t t-esc="each_dictonary.get('employee_id')" />
+                                                    </td>
+                                                    <td>
+                                                        <t t-foreach="each_dictonary.get('name').split('#@%')" t-as="each_line">
+                                                            -&gt; <t t-esc="each_line" />
+                                                        <br />
+                                                    </t>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="each_dictonary.get('unit_amount_invoice')" />
+                                                    <span>
+                                                    <t t-set="amount" t-value="each_dictonary.get('unit_amount_invoice')" />
+                                                    <t t-set="amount" t-value="amount.split(':')" />
+                                                    <t t-set="hours" t-value="amount[0]"/>
+                                                    <t t-set="minutes" t-value="amount[1]"/>
+
+                                                    <t t-set="total_hours" t-value="total_hours+int(hours)"/>
+                                                    <t t-set="total_minutes" t-value="total_minutes+int(minutes)"/>
+                                                    <t t-set="total_hrs_group_by" t-value="total_hrs_group_by+total_hours"/>
+                                                    <t t-set="total_min_group_by" t-value="total_min_group_by+total_minutes"/>
+
+                                                </span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td />
+                                                <td />
+                                                <td>
+                                                    <strong>Total</strong>
+                                                </td>
+                                                <td>
+                                                   <t t-set="total_timesheet_unit" t-value="docs.calculate_timesheet_time(total_hours,total_minutes)"/>
+                                            <strong t-esc="total_timesheet_unit"/>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </t>
+                        <div class="oe_structure" />
+                    </div>
+                </t>
+
+                <div class="oe_structure" />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr style="visibility: hidden;">
+                                    <th>
+                                        <span>Date</span>
+                                    </th>
+                                    <th>
+                                        <span>Responsible</span>
+                                    </th>
+                                    <th>
+                                        <span>Description</span>
+                                    </th>
+                                    <th>
+                                        <span>Time</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td />
+                                    <td />
+                                    <td>
+                                        <strong>Total</strong>
+                                    </td>
+                                    <td>
+                                     <t t-set="total_timesheet_unit" t-value="docs.calculate_timesheet_time(total_hrs_group_by,total_min_group_by)"/>
+                                            <strong t-esc="total_timesheet_unit"/>
+                                        <!-- <strong t-esc="sum(docs.mapped('unit_amount_invoice'))" t-options="{'widget': 'duration', 'digital': True, 'unit': 'hour', 'round': 'minute'}" /> -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="oe_structure" />
+            </div>
+        </t>
+    </t>
+</template>
+
+<record id="sh_report_timesheet_group_task_action" model="ir.actions.report">
+    <field name="name">Timesheet Entries</field>
+    <field name="model">account.analytic.line</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">sh_timesheet_report.sh_report_timesheet_group_task</field>
+    <field name="report_file">sh_report_timesheet_group_task</field>
+    <field name="print_report_name">'Timesheet Entries'</field>
+</record>
+</odoo>

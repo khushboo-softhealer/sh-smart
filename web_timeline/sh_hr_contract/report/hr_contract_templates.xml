@@ -1,0 +1,280 @@
+<odoo>
+    <template id="hr_contract">
+        <t t-call="web.html_container">
+            <t t-foreach="docs.sudo()" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div calss="page" style="color: black;">
+                        <div class="oe_structure" />
+                        <div style="font-size: 16px;color: rgb(0, 0, 0);font-style: initial;">
+                            <br /> Date : <span t-field="doc.date" />
+                            <br /> To, <br />
+                            <t
+                                t-if="doc.employee_id.address_home_id">
+                                <span t-field="doc.employee_id.name" />
+                                <br />
+                                <span t-field="doc.employee_id.address_home_id.street" />
+                                <br />
+                                <t t-if="doc.employee_id.address_home_id.street2">
+                                    <span t-field="doc.employee_id.address_home_id.street2" />
+                                    <br />
+                                </t>
+                                <t t-if="doc.employee_id.address_home_id.city"><span
+                                        t-field="doc.employee_id.address_home_id.city" /> - <span
+                                        t-field="doc.employee_id.address_home_id.zip" /></t>
+                                <br />
+                                <span t-field="doc.employee_id.address_home_id.state_id" />
+                                <br />
+                                <span t-field="doc.employee_id.address_home_id.country_id" />
+                            </t>
+                        </div>
+                        <br />
+                        <div>
+                            <h5 style="text-align:center; font-size: 16px;color: rgb(0, 0, 0);font-style: initial;">
+                                <b>LETTER OF OFFER FOR EMPLOYMENT</b>
+                            </h5>
+                        </div>
+                        <br />
+                        <div style="font-size: 16px;color: rgb(0, 0, 0);font-style: initial;">
+                            <span> We are pleased to offer you the position of <t t-if="doc.job_id">
+                                    <span t-field="doc.job_id" />
+                                </t>
+                                in our organization. </span>
+                            <br />
+                            <span>You will be paid gross emoluments as detailed in Annexure – A.</span>
+                            <br />
+                            <span> Your employment with us will be governed by the Terms &amp;
+                                Conditions as detailed in Annexure – B.</span>
+                            <br />
+                            <br />
+                            <p>Please sign this letter in token of your acceptance.</p>
+                            <p>We hope
+                                that you will find this offer acceptable. We are also confident that
+                                your contribution will take us further in our journey. We assure you
+                                of our support for your professional development and growth.</p>
+                            <p> Yours truly, For <span t-field="doc.company_id" />
+                            </p>
+                        </div>
+                        <br />
+                        <div style="font-size: 16px;color: rgb(0, 0, 0);font-style: initial;">
+                            <b>
+                                <span t-field="doc.employee_id.hr_manager" />
+                            </b>
+                            <br />
+                            <span t-field="doc.employee_id.hr_manager.job_id" />
+                            <br />
+                            <span t-field="doc.company_id" />
+                        </div>
+                    </div>
+                    <div style="page-break-before:always;"></div>
+                    <br />
+                    <br />
+                    <div class="oe_structure" style="color: black;">
+                        <div>
+                            <span style="font-size: 12pt;font-weight: bold;color: rgb(0, 0, 0);font-style: initial;">
+                                <b> Annexure – A</b>
+                            </span>
+                            <br />
+                            <span style="font-size: 16px;color: rgb(0, 0, 0);font-style: initial;">
+                                Salary structure is bifurcated as like below</span>
+                            <br />
+                            <br />
+                            
+                                <table class="table table table-bordered table-sm"
+                                style="border-right: 1px solid #dee2e6 !important;">
+                                <tr>
+                                    <td><b>Label</b></td>
+
+                                    <td><b>Salary</b></td>
+                                </tr>
+                                
+                                <tr t-foreach="doc.salary_structure_line" t-as="line">
+                                    <td t-esc="line.name" style="border-right:0px;" />
+                                    <td t-esc="line.amount" style="border-right:0px;" />
+                                </tr>
+                            </table>
+                            
+                            
+                        </div>
+                        <br />
+                        <div>
+                            <span style="font-size: 16px;;color: rgb(0, 0, 0);font-style: initial;" t-field="doc.sh_contract_bond_detail_report" />
+                        </div>
+                        <br />
+                        <div >
+                           <span  style="font-size: 12pt;font-weight: bold;color: rgb(0, 0, 0);font-style: initial;"><b >Annexure – B</b></span> 
+                            <br />
+                            <br />
+                            <span t-field="doc.sh_annexure_b_notes" />
+                            <br />
+                            <span  style="font-size: 16px;color: rgb(0, 0, 0);font-style: initial;">
+
+
+                            
+                            The above terms and conditions are based on the company’s policy,
+                            procedures and other rules currently applicable in India and are subject
+                            to amendments and adjustments from time to time. In all matter including
+                            those not specifically covered here such as traveling, retirement, etc.
+                            you will be governed by the rules of the company as shall be in force
+                            from time to time. <br />
+                            <br /> I, <span t-field="doc.employee_id" /> ,
+                            accept this offer for employment and agree to the terms and conditions
+                            outlined above. <br />
+                            <br />
+
+                            <span>
+                            _____________________________________________</span>
+                            <br /> Signature
+                            Date: <span t-field="doc.signature_date" />
+                            <br />
+                            <br /> For <b>
+                                <span t-field="doc.company_id" />
+                            </b>
+                            <br />
+                        </span>
+                            <t
+                                t-if="doc.print_in_report==True">
+                                <t t-if="doc.digital_signature">
+                                    <img t-att-src="image_data_uri(doc.digital_signature)"
+                                        style="height:80px;width:150px" />
+                                </t>
+                            </t>
+                            <br />
+                            <span>
+                            _____________________________________________</span>
+                            <br /> Signature
+                            Date: <span t-field="doc.signature_date" />
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    <record id="paperformat_contract_report" model="report.paperformat">
+        <field name="name">Contract Report</field>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">50</field>
+        <field name="margin_bottom">32</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">45</field>
+        <field name="dpi">90</field>
+        </record>
+        
+    <record id="action_report_hr_contract" model="ir.actions.report">
+        <field name="name">Contract Report</field>
+        <field name="model">hr.contract</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sh_hr_contract.hr_contract</field>
+        <field name="report_file">sh_hr_contract.hr_contract</field>
+        <field name="print_report_name">'Hr Contract - %s' % (object.name)</field>
+        <field name="paperformat_id" ref="sh_hr_contract.paperformat_contract_report" />
+
+        <field name="binding_model_id" ref="model_hr_contract" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="hr_confirmation">
+        <t t-call="web.html_container">
+            <t t-foreach="docs.sudo()" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure" /> Date : <span t-field="doc.date" />
+                        <br />
+                        <br />
+                        To, <br />
+                        <t t-if="doc.employee_id.address_id">
+                            <span t-field="doc.employee_id.name" />
+                            <br />
+                            <span t-field="doc.employee_id.address_id.street" />
+                            <br />
+                            <span t-field="doc.employee_id.address_id.state_id" />
+                            <br />
+                            <span t-field="doc.employee_id.address_id.country_id" />
+                        </t>
+
+                        <br />
+
+                        <h5
+                            style="text-align:center">JOB CONFIRMATION LETTER</h5>
+
+                        <br />
+                        <h6>
+                        Congratulations! We are pleased to offer you the position of <t
+                                t-if="doc.job_id">
+                                <span t-field="doc.job_id" />
+                            </t> in our
+                        organization. </h6>
+                        <br />
+                        <div class="oe_structure" />
+                        <t
+                            t-if="doc.bond=='cheque'">
+                            <p> You have deposit us cheque <span t-field="doc.cheque_number" /> of <span
+                                    t-field="doc.cheque_amount" /> as security for the time period
+                        of <span t-field="doc.period" />
+                                <span t-field="doc.bond_duration" /> which
+                        will be given back after <span t-field="doc.period" />
+                                <span
+                                    t-field="doc.bond_duration" /> . If employee resigns before term
+                        end. <span t-field="doc.company_id" /> will have rights to deposit cheque
+                        and legal action against employee. </p>
+                        </t>
+                        <t
+                            t-if="doc.bond=='certificate'">
+                            <p> You have deposit us Certificate of your <span
+                                    t-field="doc.degree_ids" /> as security for the time period of <span
+                                    t-field="doc.period" />
+                                <span t-field="doc.bond_duration" />
+                        which will be given back after <span t-field="doc.period" />
+                                <span
+                                    t-field="doc.bond_duration" /> . If employee resigns before term
+                        end. <span t-field="doc.company_id" /> will have rights to forfeit the
+                        certificate and legal action against employee. </p>
+                        </t>
+                        We hope that you will find this offer acceptable. We are also confident that
+                        your contribution will take us further in our journey. We assure you of our
+                        support for your professional development and growth. <br />
+                        <br /> I, <span
+                            t-field="doc.employee_id.name" /> ,accept this offer for employment and
+                        agree to the terms and conditions of bond. <br />
+                        <br />
+
+                        <span>
+                        _____________________________________________</span>
+                        <br /> Signature Date: <span
+                            t-field="doc.signature_date" />
+                        <br />
+                        <br /> For <span
+                            t-field="doc.company_id" />
+                        <br />
+                        <t t-if="doc.print_in_report==True">
+                            <t t-if="doc.digital_signature">
+                                <img t-att-src="image_data_uri(doc.digital_signature)"
+                                    style="height:80px;width:150px" />
+                            </t>
+                        </t>
+                        <br />
+                        <span>
+                        _____________________________________________</span>
+                        <br /> Signature Date: <span
+                            t-field="doc.signature_date" />
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    <record id="action_report_hr_confirmation" model="ir.actions.report">
+        <field name="name">Confirmation Report</field>
+        <field name="model">hr.contract</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sh_hr_contract.hr_confirmation</field>
+        <field name="report_file">sh_hr_contract.hr_confirmation</field>
+        <field name="print_report_name">'Hr Confirmation - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="model_hr_contract" />
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

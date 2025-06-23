@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="sh_global_leave_wizard_form_view" model="ir.ui.view">
+        <field name="name">sh.global.leave.wizard.form</field>
+        <field name="model">sh.global.leave.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Update Mass Global Leave">
+                <group>
+                    <group string="Update Global Leave">
+                        <field name="calendar_ids" invisible="1" />
+                        <field name="name" />
+                        <field name="date_from" required="1" />
+                        <field name="date_to" required="1" />
+                    </group>
+                </group>
+                <footer>
+                    <button string="Confirm" class="oe_highlight" type="object"
+                        name="update_global_leave" />
+                    <button string="Cancel" class="btn btn-secondary" special="cancel"
+                        icon="fa-remove" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

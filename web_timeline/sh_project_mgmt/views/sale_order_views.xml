@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_project_mgmt_view_order_form" model="ir.ui.view">
+        <field name="name">sh.project.mgmt.sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <field name="sh_is_sales_order_approval_required" invisible="1"/>
+                <button name="manually_create_project" string="Create Project Manually" type="object"/>
+                <button name="approve_sale_order" string="Approve" type="object" gropus="sales_team.group_sale_manager" attrs="{'invisible': [('sh_is_sales_order_approval_required','=',False)]}"/>
+
+            </xpath>
+            <!-- Add Detail Estimation -->
+            <xpath expr="//sheet//notebook//field[@name='order_line']//tree" position="inside">
+                <button icon='fa-bars' name="btn_add_detail_estimation" type="object" class="oe_highlight" title="Add Detail Estimation"/>
+                <field name="project_id" invisible="1" />
+                <button icon='fa-puzzle-piece' name="btn_show_line_project" type="object" class="oe_highlight" attrs="{'invisible': [('project_id', '=', False)]}" title="Show Project Lines"/>
+            </xpath>
+
+            <xpath expr="//sheet//notebook" position="inside">
+                <page name="project_details" string="Project Details">
+                    <group>
+                        <group>
+                            <!-- Approx Planned Date -->
+                            <label for="sh_planned_date_from" string="Approx Planned Date"/>
+                            <div class="o_row">
+                                <field name="sh_planned_date_from" class="oe_inline" />
+                                <span class="text-muted">To</span>
+                                <field name="sh_planned_date_to" />
+                            </div>
+                            <field name="sh_total_work_duration" />
+                            <!-- <field name="sh_actual_planned_date" /> -->
+                            <!-- Actual Planned Date -->
+                            <!-- <label for="sh_actual_planned_date_from" string="Actual Planned Date"/>
+                            <div class="o_row">
+                                <field name="sh_actual_planned_date_from" class="oe_inline" />
+                                <span class="text-muted">To</span>
+                                <field name="sh_actual_planned_date_to" />
+                            </div> -->
+                        </group>
+                        <group>
+                            <field name="sh_project_stage_tmpl_id" />
+                            <!-- Pricing Mode -->
+                            <field name="sh_pricing_mode"/>
+                            <field name="sh_fp_based_on" attrs="{'invisible': [('sh_pricing_mode', '!=', 'fp')], 'required': [('sh_pricing_mode', '=', 'fp')]}" />
+                            <field name="sh_tm_based_on" attrs="{'invisible': [('sh_pricing_mode', '!=', 'tm')], 'required': [('sh_pricing_mode', '=', 'tm')]}" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+            <field name="payment_term_id" position="after">
+                <field name="project_id"/>
+                <field name="project_manager" />
+                <field name="sh_designing_head"/>
+                <field name="pricing_model_alert" invisible="1"/>
+                <field name="sh_is_sales_order_approved" />
+            </field>
+            <xpath expr="//sheet/div[@name='button_box']" position="after">
+                
+                <div class="alert alert-info text-center o_form_header"
+                    style="background: #efd9d9; color: maroon; border: 1px solid #e9b4b4;"
+                    role="alert" attrs="{'invisible': [('pricing_model_alert','=',False)]}">
+                    <strong>Please make sure Pricing mode is properly set !</strong>
+                </div>
+            </xpath>
+        
+
+        </field>
+    </record>
+
+</odoo>

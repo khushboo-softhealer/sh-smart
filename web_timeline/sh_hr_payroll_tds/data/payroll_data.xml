@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Leave deduction rule-->
+        <record id="leave_dedcution_rule" model="hr.salary.rule">
+            <field name="name">Leave Deduction</field>
+            <field name="sequence" eval="101"/>
+            <field name="code">UNPAID</field>
+            <field name="category_id" ref="sh_hr_payroll.DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=employee.get_leave_deduction_salary(contract,payslip)</field>
+        </record>
+
+        <!-- Professional Tax rule-->
+
+        <record id="pt_dedcution_rule" model="hr.salary.rule">
+            <field name="name">Professional Tax Deduction</field>
+            <field name="sequence" eval="102"/>
+            <field name="code">PT</field>
+            <field name="category_id" ref="sh_hr_payroll.DED"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result=contract.wage &gt;12000</field>
+            <field name="amount_select">fix</field>
+            <field name="amount_fix">-200</field>
+        </record>
+
+        <!-- Providend Fund rule-->
+
+        <record id="pf_dedcution_rule" model="hr.salary.rule">
+            <field name="name">Providend Fund Deduction</field>
+            <field name="sequence" eval="103"/>
+            <field name="code">PF</field>
+            <field name="category_id" ref="sh_hr_payroll.DED"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result=employee.having_uan_number or (contract.basic_salary+contract.dearness_allowance) &lt; 15000</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result= (-((contract.basic_salary+contract.dearness_allowance)*0.12) if ((contract.basic_salary+contract.dearness_allowance)*0.12) &lt; 1800 
+                else -1800)</field>
+        </record>
+
+        <!-- TDS rule-->
+
+        <record id="tds_dedcution_rule" model="hr.salary.rule">
+            <field name="name">TDS Deduction</field>
+            <field name="sequence" eval="105"/>
+            <field name="code">TDS</field>
+            <field name="category_id" ref="sh_hr_payroll.DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = (categories.BASIC + categories.ALW + categories.DED)*(contract.tds_percentage/100)*(-1)</field>
+        </record>
+
+        <!-- Basic for salaried employee-->
+        <record id="hr_rule_basic_salaried" model="hr.salary.rule">
+            <field name="name">Basic Salary</field>
+            <field name="sequence" eval="1"/>
+            <field name="code">BASIC</field>
+            <field name="category_id" ref="sh_hr_payroll.BASIC"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = employee.get_basic_salary_salaried(contract.basic_salary,contract,payslip)</field>
+        </record>
+
+        <!-- Allowances for Salaried Employee -->
+        <record id="hr_rule_dearness_salaried" model="hr.salary.rule">
+            <field name="name">Dearness Allowance</field>
+            <field name="sequence" eval="5"/>
+            <field name="code">DA</field>
+            <field name="category_id" ref="sh_hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = employee.get_basic_salary_salaried(contract.dearness_allowance,contract,payslip)</field>
+        </record>
+
+        <record id="hr_rule_special_salaried" model="hr.salary.rule">
+            <field name="name">Special Allowance</field>
+            <field name="sequence" eval="6"/>
+            <field name="code">SA</field>
+            <field name="category_id" ref="sh_hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = employee.get_basic_salary_salaried(contract.special_allowance,contract,payslip)</field>
+        </record>
+
+        <record id="hr_rule_travelling_salaried" model="hr.salary.rule">
+            <field name="name">Travelling Allowance</field>
+            <field name="sequence" eval="8"/>
+            <field name="code">TA</field>
+            <field name="category_id" ref="sh_hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = employee.get_basic_salary_salaried(contract.travelling_allowance,contract,payslip)</field>
+        </record>
+
+        <record id="hr_rule_house_rent_salaried" model="hr.salary.rule">
+            <field name="name">House Rent Allowance</field>
+            <field name="sequence" eval="10"/>
+            <field name="code">HRA</field>
+            <field name="category_id" ref="sh_hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = employee.get_basic_salary_salaried(contract.house_rent_allowance,contract,payslip)</field>
+        </record>
+
+        <record id="hr_rule_convenyance_salaried" model="hr.salary.rule">
+            <field name="name">Convenyance Allowance</field>
+            <field name="sequence" eval="12"/>
+            <field name="code">CA</field>
+            <field name="category_id" ref="sh_hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = employee.get_basic_salary_salaried(contract.convenyance_allowance,contract,payslip)</field>
+        </record>
+
+        <record id="hr_rule_other_allowance_salaried" model="hr.salary.rule">
+            <field name="name">Other Allowance</field>
+            <field name="sequence" eval="14"/>
+            <field name="code">OA</field>
+            <field name="category_id" ref="sh_hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = employee.get_basic_salary_salaried(contract.other_allowance,contract,payslip)</field>
+        </record>
+
+        <!-- TDS rule Salaried-->
+
+        <record id="tds_dedcution_rule_salaried" model="hr.salary.rule">
+            <field name="name">TDS Deduction</field>
+            <field name="sequence" eval="105"/>
+            <field name="code">TDS</field>
+            <field name="category_id" ref="sh_hr_payroll.DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = payslip.net_tax_payable_monthly * (-1)</field>
+        </record>
+        
+
+         <!-- Salary Structure -->
+        
+         <record id="structure_base_employee" model="hr.payroll.structure">
+            <field name="code">EMPLOYEE</field>
+            <field name="name">Structure for Base Employee</field>
+            <field eval="[(6, 0, [ref('sh_hr_payroll.hr_rule_basic'), ref('sh_hr_payroll.hr_rule_taxable'),ref('sh_hr_payroll_tds.leave_dedcution_rule'),ref('sh_hr_payroll.hr_rule_net')])]" name="rule_ids"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+         <record id="structure_contractual_employee" model="hr.payroll.structure">
+            <field name="code">CONTRACTUAL</field>
+            <field name="name">Structure for Contractual Employee</field>
+            <field eval="[(6, 0, [ref('sh_hr_payroll.hr_rule_basic'), 
+            ref('sh_hr_payroll.hr_rule_taxable'),
+            ref('sh_hr_payroll_tds.leave_dedcution_rule'),
+            ref('sh_hr_payroll_tds.pt_dedcution_rule'),
+            ref('sh_hr_payroll_tds.pf_dedcution_rule'),
+            ref('sh_hr_payroll_tds.tds_dedcution_rule'),
+            ref('sh_hr_payroll.hr_rule_net')])]" name="rule_ids"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="structure_salaries_employee_old_scheme" model="hr.payroll.structure">
+            <field name="code">SALARIED-O</field>
+            <field name="name">Structure for Salaries Employee(Old Scheme)</field>
+            <field eval="[(6, 0, [ref('sh_hr_payroll_tds.hr_rule_basic_salaried'), 
+            ref('sh_hr_payroll_tds.hr_rule_dearness_salaried'),
+            ref('sh_hr_payroll_tds.hr_rule_special_salaried'),
+            ref('sh_hr_payroll_tds.hr_rule_travelling_salaried'),
+            ref('sh_hr_payroll_tds.hr_rule_house_rent_salaried'),
+            ref('sh_hr_payroll_tds.hr_rule_convenyance_salaried'),
+            ref('sh_hr_payroll_tds.hr_rule_other_allowance_salaried'),
+            ref('sh_hr_payroll.hr_rule_taxable'),
+            ref('sh_hr_payroll_tds.leave_dedcution_rule'),
+            ref('sh_hr_payroll_tds.pt_dedcution_rule'),
+            ref('sh_hr_payroll_tds.pf_dedcution_rule'),
+            ref('sh_hr_payroll_tds.tds_dedcution_rule_salaried'),
+            ref('sh_hr_payroll.hr_rule_net')])]" name="rule_ids"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="structure_salaries_employee_new_scheme" model="hr.payroll.structure">
+            <field name="code">SALARIED-N</field>
+            <field name="name">Structure for Salaries Employee(New Scheme)</field>
+            <field eval="[(6, 0, [ref('sh_hr_payroll_tds.hr_rule_basic_salaried'), 
+            ref('sh_hr_payroll_tds.hr_rule_dearness_salaried'),
+            ref('sh_hr_payroll_tds.hr_rule_special_salaried'),
+            ref('sh_hr_payroll_tds.hr_rule_travelling_salaried'),
+            ref('sh_hr_payroll_tds.hr_rule_house_rent_salaried'),
+            ref('sh_hr_payroll_tds.hr_rule_convenyance_salaried'),
+            ref('sh_hr_payroll_tds.hr_rule_other_allowance_salaried'),
+            ref('sh_hr_payroll.hr_rule_taxable'),
+            ref('sh_hr_payroll_tds.leave_dedcution_rule'),
+            ref('sh_hr_payroll_tds.pt_dedcution_rule'),
+            ref('sh_hr_payroll_tds.pf_dedcution_rule'),
+            ref('sh_hr_payroll_tds.tds_dedcution_rule_salaried'),
+            ref('sh_hr_payroll.hr_rule_net')])]" name="rule_ids"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+
+    </data>
+</odoo>

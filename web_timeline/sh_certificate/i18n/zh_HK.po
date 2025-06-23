@@ -1,0 +1,306 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_certificate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 07:15+0000\n"
+"PO-Revision-Date: 2020-10-21 07:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_certificate
+#: model:mail.template,report_name:sh_certificate.email_template_edi_letter
+msgid ""
+"${(object.name or '').replace('/','_')}${object.state == 'draft' and "
+"'_draft' or ''}"
+msgstr ""
+"${(object.name or '').replace('/','_')}${object.state == 'draft' and "
+"'_draft' or ''}"
+
+#. module: sh_certificate
+#: model:mail.template,subject:sh_certificate.email_template_edi_letter
+msgid "${object.name})"
+msgstr "${object.name})"
+
+#. module: sh_certificate
+#: model:ir.actions.report,print_report_name:sh_certificate.sh_letter_tmpl_report_action
+msgid "'report letter'"
+msgstr "'报告信'"
+
+#. module: sh_certificate
+#: model:mail.template,body_html:sh_certificate.email_template_edi_letter
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<p>Record</p>\n"
+"\t\t\t</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<p>记录</p>\n"
+"\t\t\t</div>\n"
+"            "
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_needaction
+msgid "Action Needed"
+msgstr "需要采取的行动"
+
+#. module: sh_certificate
+#: model:ir.model.fields.selection,name:sh_certificate.selection__sh_letter__state__approve
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Approved"
+msgstr "已批准"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数"
+
+#. module: sh_certificate
+#: model:ir.model.fields.selection,name:sh_certificate.selection__sh_letter__state__cancel
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: sh_certificate
+#: model:ir.model,name:sh_certificate.model_res_partner
+msgid "Contact"
+msgstr "联系"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__content_html
+msgid "Content Html"
+msgstr "内容HTML"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__create_uid
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__create_uid
+msgid "Created by"
+msgstr "由...制作"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__create_date
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__date
+msgid "Date"
+msgstr "日期"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__display_name
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sh_certificate
+#: model:ir.model.fields.selection,name:sh_certificate.selection__sh_letter__state__draft
+msgid "Draft"
+msgstr "草案"
+
+#. module: sh_certificate
+#: model:ir.model,name:sh_certificate.model_hr_employee
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__employee_id
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+msgid "Employee"
+msgstr "雇员"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_follower_ids
+msgid "Followers"
+msgstr "追随者"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "追随者（渠道）"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者（合作伙伴）"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+msgid "Group By..."
+msgstr "通过...分组..."
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee__id
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner__id
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__id
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_needaction
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "如果选中，则需要注意新消息。"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果选中，则某些邮件有传递错误。"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_is_follower
+msgid "Is Follower"
+msgstr "是追随者"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter____last_update
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template____last_update
+msgid "Last Modified on"
+msgstr "最后修改时间"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__write_uid
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__write_date
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间："
+
+#. module: sh_certificate
+#: model:ir.actions.act_window,name:sh_certificate.sh_letter_menu_action
+#: model:ir.model,name:sh_certificate.model_sh_letter
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee__letter_count
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner__letter_count
+#: model:ir.model.fields,field_description:sh_certificate.field_res_users__letter_count
+#: model:ir.ui.menu,name:sh_certificate.sh_letter_menuitem_root
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_tree
+msgid "Letter"
+msgstr "信"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__letter_content_html
+msgid "Letter Content Html"
+msgstr "信件内容HTML"
+
+#. module: sh_certificate
+#: model:ir.actions.act_window,name:sh_certificate.sh_letter_template_menu_action
+#: model:ir.model,name:sh_certificate.model_sh_letter_template
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__letter_template
+#: model:ir.ui.menu,name:sh_certificate.sh_letter_template_menuitem_root
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_template_form
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_template_tree
+msgid "Letter Template"
+msgstr "信模板"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.view_employee_inherit_form
+#: model_terms:ir.ui.view,arch_db:sh_certificate.view_partner_inherit_form
+msgid "Letters"
+msgstr "字母"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "主要附件"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__name
+msgid "Main Subject"
+msgstr "主要科目"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_has_error
+msgid "Message Delivery error"
+msgstr "邮件传递错误"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_ids
+msgid "Messages"
+msgstr "留言内容"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__name
+msgid "Name"
+msgstr "名称"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_needaction_counter
+msgid "Number of Actions"
+msgstr "动作数"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_has_error_counter
+msgid "Number of errors"
+msgstr "错误数"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要采取措施的消息数"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "传递错误的邮件数"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读邮件数"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__sh_partner_id
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+msgid "Partner"
+msgstr "伙伴"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__reference
+msgid "References"
+msgstr "参考文献"
+
+#. module: sh_certificate
+#: model:ir.actions.report,name:sh_certificate.sh_letter_tmpl_report_action
+msgid "Report Letter"
+msgstr "报告信"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Send by Email"
+msgstr "通过电子邮件发送"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Set to Draft"
+msgstr "设置为草稿"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__state
+msgid "Status"
+msgstr "状态"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_unread
+msgid "Unread Messages"
+msgstr "未读邮件"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读邮件计数器"

@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+# Part of Softhealer Technologies.
+{
+    "name": "Product Base",
+    "author": "Softhealer Technologies (Kishan Patadiya)",
+    "website": "https://www.softhealer.com",
+    "support": "support@softhealer.com",
+    "category": "Product Base",
+    "summary": "",
+    "license": "OPL-1",
+    "description": """""",
+    "version": "16.0.1",
+    "depends": ["sale_management",'sh_push_notification_tile','website_blog', 'website', 'website_sale', ],
+    "application": True,
+    "data": [
+            "security/security_groups.xml",
+            "security/ir.model.access.csv",
+            "data/sh_product_base_actions.xml",
+            "wizard/sh_responsible_users_wizard_views.xml",
+            "views/product_change_log.xml",
+            "views/product_tags_views.xml",
+            "views/sh_odoo_hosted_on.xml",
+            "views/sh_required_apps_views.xml",
+            "views/sh_edition_views.xml",
+            "views/sh_version_views.xml",
+            "views/sh_depends_views.xml",
+            "views/sh_licence_views.xml",
+            "views/blog_post_video_views.xml",
+            "views/git_repo.xml",            
+            "views/product_template_views.xml",
+            "views/product_product_views.xml",
+            "views/res_company_views.xml",
+
+            "data/product_data.xml",
+    ],
+    "auto_install": False,
+    "installable": True,
+}

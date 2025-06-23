@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="product_template_editor_view_tree" model="ir.ui.view">
+        <field name="name">product.template.editor.view.tree</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" readonly="1"/>
+                <field name="website_meta_description" />
+                <field name="website_meta_keywords" />
+                <field name="website_meta_og_img" />
+                <field name="website_meta_title" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_template_editor_view_form" model="ir.ui.view">
+        <field name="name">product.template.editor.view.form</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name" readonly="1"/>
+                        <field name="website_meta_description" />
+                        <field name="website_meta_keywords" />
+                        <field name="website_meta_og_img" />
+                        <field name="website_meta_title" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_template_editor_action" model="ir.actions.act_window">
+        <field name="name">Product (for meta)</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids"
+        eval="[(5, 0, 0),(0, 0, {'view_mode': 'tree', 'view_id': ref('product_template_editor_view_tree')}),(0, 0, {'view_mode': 'form', 'view_id': ref('product_template_editor_view_form')})]" />
+    </record>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- VIEW: Search -->
+    <record id="sh_confirm_sale_sale_order_view_search" model="ir.ui.view">
+        <field name="name">sh.sale.order.search</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter" position="inside">
+                <separator/>
+                <filter string="Confirm Sale" name="confirm_sale" domain="[('is_sh_confirm_sale', '=', True)]"/>
+                <filter string="Module Mail Not Sent" name="sh_is_download_module_mail_sent" domain="[('sh_is_download_module_mail_sent', '=', False), ('is_sh_confirm_sale', '=', True)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- VIEW: Tree -->
+    <!-- <record id="sh_confirm_sale_view_quotation_tree_with_onboarding" model="ir.ui.view">
+        <field name="name">sh.sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_order']" position="after">
+                <field name="is_sh_confirm_sale" optional="hide" />
+                <field name="sh_is_download_module_mail_sent" optional="hide" />
+            </xpath>
+        </field>
+    </record> -->
+
+    <!-- VIEW: Form -->
+    <record id="sh_confirm_sale_view_order_form" model="ir.ui.view">
+        <field name="name">sale.order</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group/group" position="inside">
+                <field name="is_sh_confirm_sale" readonly="1" />
+                <field name="sh_is_download_module_mail_sent" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

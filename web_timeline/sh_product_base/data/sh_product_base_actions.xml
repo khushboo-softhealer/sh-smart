@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Multi Action (Add Responsible Users) -->
+    <record id="sh_add_resposible_users" model="ir.actions.server" >
+        <field name="name">Add Responsible Users</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_product_template" />
+        <field name="binding_model_id" ref="model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.multi_action_add_responsible_users()
+        </field>
+    </record>
+
+</odoo>

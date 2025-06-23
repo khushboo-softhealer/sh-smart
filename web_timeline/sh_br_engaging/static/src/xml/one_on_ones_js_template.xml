@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+  <t t-name="one_on_ones_templates" t-inherit="web.FormView" t-inherit-mode="primary" owl="1">
+    <xpath expr="//t[5]" position="before">
+
+
+      <div class=" container-fluid">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between align-items-center">
+            <div class="one_on_ones_panel">
+              <div class="my_one_on_ones_panel">
+                <span class="one_on_ones_time text-bold">my 1-on-1s with <t t-esc='takling_point_employee_name.employee_name' />
+                </span>
+                <div class="">
+                  <a href="#" class="btn btn-outline-primary sh_save_oneonone_btn ms-5 border-0 d-none"  t-on-click="SaveOneonOnes"><i class="fa fa-cloud-upload fa-fw"/></a>
+                  <a href="#" class="btn btn-outline-primary sh_discard_oneonone_btn border-0 d-none" t-on-click="DiscardOneOnOnes"><i class="fa fa-times fa-fw"/></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="one_on_ones_talking_panel container-fluid">
+        <div class="row gx-4">
+            <div class="col-lg-9 col-md-12 col-12 left_side_panel">
+              <div class="one_on_ones_talking_panel_box">
+                <div class="one_on_ones_talking_panel_heading">
+                  <p class="mb-0 pe-3">
+                    Meeting Talking Point's
+                  </p>
+                  <t t-if='!is_submitted'>
+                    <div class="plus_icon btn btn-primary" t-on-click='UpdateAgendaList'>
+                      <span class="fa fa-plus"></span>
+                    </div>
+                  </t>
+                </div>
+
+                <div class="checkbox_items">
+                  <t t-foreach="list_of_agenda_dict" t-as="agenda" t-key="agenda_index">
+                    <div class="checkbox_item">
+                      <div class="d-flex">
+                        <div class="checkbox_item_box">
+                          <input t-att-disabled="is_submitted ? true : false" class="form-check-input sh_checked_ageda" type="checkbox"  t-att-id="agenda.id" name="option1" t-att-checked='agenda.checked' t-on-change="handleCheckboxChange" />
+                        </div>
+                        <div class="checkbox_item_label">
+                          <span class="form-check-label ms-2">
+                            <t t-esc="agenda.name"/>
+                          </span>
+                        </div>
+                        <div class="checkbox_item_delete">
+                          <t t-if='is_allow_delete_meeting_agenda'>
+                            <t t-if="!is_submitted">
+                              <a href="#" class="float-end" t-on-click="(ev) => this.onClickDeleteAgenda(agenda.id, ev)">
+                                <span class="fa fa-trash-o"></span>
+                              </a>
+                            </t>
+                          </t>
+                        </div>
+                      </div>
+                      <!-- <button class="btn btn-primary ms-5" t-on-click="(ev) => this.onClickDeleteAgenda(agenda.id, ev)">delete</button> -->
+
+                       <!-- === CREATE ONE TEMP JS TEXT AREA FOR SHOWING PURPOSE ONLY ===  -->
+                      <div id="sh_temp_js_textarea" class="d-none sh_temp_textarea mt-2">
+                        <textarea class="form-control sh_one_ones_textarea" t-att-readonly="is_submitted" placeholder="Enter Description" t-on-keydown="handleTempJsTexatarea"></textarea>
+                      </div>
+                      <!-- === CREATE ANOTHER ONE TEXT AREA GET DATA FROM BACKEND ===  -->
+                      <t t-if="agenda.checked">
+                        <div id="sh_main_backend_data_description" class="sh_temp_textarea mt-2">
+                          <textarea class="form-control sh_one_ones_textarea" t-att-readonly="is_submitted" placeholder="Enter Description" t-on-keydown="handleMainTexatarea"><t t-esc="agenda.description"/></textarea>
+                        </div>
+                      </t>
+                      </div>
+                  </t>
+                </div>
+              </div>
+              <div class="shared_notes_panel_box" id='shared_note_id'>
+                <div class="shared_notes_panel_heading d-block">
+                  <h4 class="">Shared Notes</h4>
+                  <p class="mb-0">
+                    
+                    <div>These notes will be shared in real-time with <t t-esc='takling_point_employee_name.employee_name' />, even before the 1-on-1 is concluded. Keep the communication flowing seamlessly!</div>
+
+                  </p>
+                </div>
+
+
+                <div class="input-items">
+                  <div class="input-item">
+                    <t t-if='takling_point_employee_name.one_on_one_user_name'>
+                        <label class="o_form_label">
+                          <t t-esc='takling_point_employee_name.one_on_one_user_name' />'s notes
+                        </label>
+                    </t>
+                    <t t-else=''>
+                      <label class="o_form_label">your notes</label>
+                    </t>
+
+                    <div class="input-group">
+                      <input type="text" class="form-control your_notes" t-att-readonly="is_submitted" placeholder="here are some notes form this 1-on-1s" t-att-value="answers_value_dict.your_notes" aria-label="Input group example" aria-describedby="btnGroupAddon" t-on-keydown="handleKeyDown"/>
+                      <!-- <a href="#" class="input-group-text " id="btnGroupAddon">
+                        <span class="fa fa-paperclip"></span>
+                      </a> -->
+                    </div>
+                  </div>
+                  <h3 class="alert alert-danger text-center d-none validation_your_notes">*Please fill Your Notes !</h3>
+
+                  <div class="input-item">
+                    <label class="o_form_label">
+                      <t t-esc='takling_point_employee_name.employee_name' />'s notes</label>
+                    <div class="input-group">
+                      <input type="text"  t-att-readonly="is_submitted" class="form-control employee_notes" placeholder="here are some notes form this 1-on-1s" t-att-value="answers_value_dict.employee_notes" aria-label="Input group example" aria-describedby="btnGroupAddon" t-on-keydown="handleKeyDown"/>
+                      <!-- <a href="#" class="input-group-text " id="btnGroupAddon">
+                        <span class="fa fa-paperclip"></span>
+                      </a> -->
+                    </div>
+                  </div>
+                  <h3 class="alert alert-danger text-center d-none validation_employee_notes">*Please fill <t t-esc='takling_point_employee_name.employee_name' />'s Notes !</h3>
+
+                </div>
+              </div>
+
+              <t t-if='answers_value_dict.is_created_user'>
+              <!-- <t t-if='answers_value_dict.is_employee_user'> -->
+                <div class="private_notes_panel_box ">
+                  <div class="private_notes_panel_heading d-block">
+                    <h4 class="">My Private Notes</h4>
+                    <p class="mb-0">
+                      <div>Utilize this area for personal Talking Point organization — confidential to your eyes only.</div>
+                    </p>
+                  </div>
+                  <div class="input-items">
+                    <div class="input-item">
+                      <label class="o_form_label">your notes</label>
+                      <div class="input-group">
+                        <input type="text"  t-att-readonly="is_submitted" class="form-control private_note" placeholder="here are some notes form this 1-on-1s" t-att-value="answers_value_dict.private_notes" aria-label="Input group example" aria-describedby="btnGroupAddon" t-on-keydown="handleKeyDown"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </t>
+
+              <t t-if='answers_value_dict.is_employee_user'>
+              <!-- <t t-if='answers_value_dict.is_created_user'> -->
+                <div class="private_notes_panel_box ">
+                  <div class="private_notes_panel_heading d-block">
+                    <h4 class="">My Private Notes</h4>
+                    <p class="mb-0">
+                      <div>Utilize this area for personal Talking Point organization — confidential to your eyes only.</div>
+                    </p>
+                  </div>
+                  <div class="input-items">
+                    <div class="input-item">
+                      <label class="o_form_label">your notes</label>
+                      <div class="input-group">
+                        <input type="text"  t-att-readonly="is_submitted" class="form-control user_note" placeholder="here are some notes form this 1-on-1s" t-att-value="answers_value_dict.user_notes" aria-label="Input group example" aria-describedby="btnGroupAddon" t-on-keydown="handleKeyDown"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </t>
+
+
+              <t t-if='previous_talking_points_value_dict'>
+
+                <div class="previous_notes_panel_box">
+                  <div class="previous_notes_panel_heading">
+                    <p class="mb-0">
+                    Previous Notes
+                    </p>
+                  </div>
+                  <div class="previous_notes_table">
+                    <table class="table">
+                      <thead class="table-lightt">
+                        <tr>
+                          <th scope="col" class="sequence">Sequence</th>
+                          <th scope="col" class="event">Event</th>
+                          <th scope="col" class="your_notes">Your Notes</th>
+                          <th scope="col" class="admin_Notes"><t t-esc='takling_point_employee_name.employee_name' />'s Notes</th>
+                          <th scope="col" class="private_notes">Your Private Notes</th>
+                          <th scope="col" class="agenda_details">Agenda Deatils</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <t t-set='prev_seq' t-value='0'/>
+
+                        <t t-foreach='previous_talking_points_value_dict' t-as='previous_record' t-key="previous_record_index">
+
+                          <tr>
+                            <th scope="row">
+                              <t t-set='prev_seq' t-value='prev_seq + 1'/>
+                              <t t-esc='prev_seq'/>
+                            </th>
+                            <th scope="row">
+                              <!-- <t t-esc='previous_record.id'/> -->
+                              <t t-esc='previous_record.sh_calender_event_id'/>
+                            </th>
+                            <td>
+                              <t t-if='previous_record.sh_your_notes'>
+                                <t t-esc='previous_record.sh_your_notes'/>
+                              </t>
+                            </td>
+                            <td>
+                              <t t-if='previous_record.sh_employee_notes'>
+                                <t t-esc='previous_record.sh_employee_notes'/>
+                              </t>
+                            </td>
+                            <td>
+
+                              <t t-if='answers_value_dict.is_created_user'>
+                                <t t-if='previous_record.sh_your_private_notes'>
+                                  <t t-esc='previous_record.sh_your_private_notes'/>
+                                </t>
+                              </t>
+
+                              <t t-if='answers_value_dict.is_employee_user'>
+                                <t t-if='previous_record.sh_user_private_notes'>
+                                  <t t-esc='previous_record.sh_user_private_notes'/>
+                                </t>
+                              </t>
+
+
+                            </td>
+
+                            <!-- JATIN'S CUSTOM CODE FOR AGENDA BUTTON  -->
+                            <td>
+                              <button class="btn btn-outline-primary" t-on-click="() => this.ViewAgenda(previous_record.id)"> View Agenda</button>
+                            </td>
+                          </tr>
+                        </t>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </t>
+              <div class="mb-3">
+                <t t-if='!is_submitted'>
+                  <!-- <t t-if="is_allow_delete_meeting_agenda">
+                    <a href="#" t-on-click='EndOneonOnes' class="btn btn-primary sh_ent_one_btn">end 1-on-1s</a>
+                  </t> -->
+                  <t t-if="allow_to_end_one_on_one">
+                    <a href="#" t-on-click='EndOneonOnes' class="btn btn-primary sh_ent_one_btn">end 1-on-1s</a>
+                  </t>
+                </t>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-12 col-12 side_panel">
+              <div class="employe_one_on_ones_box">
+                <div class="employe_one_on_ones_time_box align-items-center d-flex">
+                  <div class="employe_one_on_ones_label">
+                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{takling_point_employee_name.employee_user_id}}" alt="Employee" class=""/>
+                  </div>
+                  <div class="employe_one_on_ones_time">
+                    <p class="employe_one_on_ones_date mb-0">
+                      <t t-esc='takling_point_employee_name.employee_name' />
+                    </p>
+                    <!-- <p class="employe_one_on_ones_time_text mb-0">Due <t t-esc='date_information.due_date'/></p> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="recent_one_on_ones_box">
+
+
+              <t t-if='current_scheduled_event'>
+                <div class="employe_one_on_ones_time_box align-items-center d-flex" t-att-id='current_scheduled_event.id' t-on-click="() => this.OpenExistEvent(current_scheduled_event.id)" >
+                  <div class="employe_one_on_ones_time">
+                    <p class="employe_one_on_ones_date mb-0">
+                      <t t-esc='current_scheduled_event.name'/>
+                    </p>
+                    <p class="employe_one_on_ones_time_text mb-0"><t t-esc="current_scheduled_event.meeting_date"/></p>
+                  </div>
+                  <div class="employe_one_on_ones_label" t-on-click="(ev) => this.EditEvent(current_scheduled_event.id, ev)">
+                    <a href="#" class="fa fa-pencil"></a>
+                    </div>
+                </div>
+              </t>
+
+              <t t-if='previous_scheduled_event_list'>
+                <t t-foreach='previous_scheduled_event_list' t-as='previous_event' t-key='previous_event_index'>
+                  <div class="employe_one_on_ones_time_box align-items-center d-flex" t-att-id='previous_event.id' t-on-click="() => this.OpenExistEvent(previous_event.id)">
+                    <div class="employe_one_on_ones_time">
+                      <p class="employe_one_on_ones_date mb-0">
+                        <t t-esc='previous_event.name'/>
+                      </p>
+                      <p class="employe_one_on_ones_time_text mb-0"><t t-esc="previous_event.meeting_date_previous"/></p>
+                    </div>
+                    <div class="employe_one_on_ones_label" t-on-click="(ev) => this.EditEvent(previous_event.id, ev)">
+                      <a href="#" class="fa fa-pencil"></a>
+                    </div>
+                  </div>
+                </t>
+              </t>
+
+              <!-- <div class="employe_one_on_ones_time_box align-items-center d-flex">
+                <div class="employe_one_on_ones_time">
+                  <p class="employe_one_on_ones_date mb-0">
+                    1-on-1s settings
+                  </p>
+                  <p class="employe_one_on_ones_time_text mb-0">does not repeat</p>
+                </div>
+                <div class="employe_one_on_ones_label">
+                  <a href="#" class="fa fa-pencil"></span>
+                </div>
+              </div> -->
+
+              <div class="button_box">
+                <t t-if='!is_submitted'>
+                    <t t-if='even_id'>
+                      <a href="#" t-on-click='ReScheduleOneonOnes' class="btn btn-outline-primary sh_reschedule_btn">Reschedule Meeting</a>
+                    </t>
+                    <t t-else=''>
+                      <a href="#" t-on-click='ScheduleOneonOnes' class="btn btn-outline-primary sh_schedule_btn">schedule Meeting</a>
+                    </t>
+                  </t>
+
+                  <!-- <p class="create_text mb-0">created by <t t-esc='takling_point_employee_name.employee_name' /> on <t t-esc='date_information.start_date'/> </p> -->
+              </div>
+
+            </div>
+          </div>            
+        </div>
+      </div>
+      </xpath>
+    </t>
+
+  </templates>

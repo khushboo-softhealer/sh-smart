@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="cron_partner_name_email_clean" model="ir.cron">
+	        <field name="name">Clean Contact Name/email</field>
+	        <field name="interval_number">3</field>
+	        <field name="interval_type">hours</field>
+	        <field name="numbercall">-1</field>
+	        <field name="doall" eval="False"/>
+	        <field name="model_id" ref="model_res_partner"/>
+	        <field name="code">model._run_clean_contact_name_email()</field>
+	        <field name="state">code</field>
+	    </record>
+        <record id="cron_partner_type_change" model="ir.cron">
+	        <field name="name">Other Contact Type Update</field>
+	        <field name="interval_number">3</field>
+	        <field name="interval_type">hours</field>
+	        <field name="numbercall">-1</field>
+	        <field name="doall" eval="False"/>
+	        <field name="model_id" ref="model_res_partner"/>
+	        <field name="code">model._run_update_contact_type_as_other()</field>
+	        <field name="state">code</field>
+	    </record>
+    </data>
+</odoo>

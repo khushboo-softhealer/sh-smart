@@ -1,0 +1,937 @@
+.o_web_client {
+    .o_action_manager{
+        .o_action {
+                &.sh_talking_point_custom_class{
+                &.o_kanban_view{
+                    .o_control_panel {
+                        background: #ffffff;
+                        border-radius: 10px;
+                        margin: 16px 16px;
+                        margin-bottom: 15px;
+                        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                        padding: 1.5rem 16px !important;
+                        @include media-breakpoint-down(md) {
+                            margin: 10px 16px;
+                        }
+                        .o_cp_top{
+                            margin-bottom: 10px;
+                            .o_cp_top_left {
+                                .breadcrumb {
+                                    .breadcrumb-item{
+                                        span {
+                                            color: #000 !important;
+                                            font-weight: 700;
+                                        }
+                                    }
+                                }
+                            }
+                            .o_cp_top_right{
+                                .o_cp_searchview {
+                                    .o_searchview {
+                                        border: 1px solid #ccc !important;
+                                        border-radius: 8px !important;
+                                        padding: 6px 5px !important;
+                                        &:focus,
+                                        &:hover {
+                                            border-color: $primaryColor !important;
+                                        }
+                                        .o_searchview_icon{
+                                            top: 11px !important;
+                                            right: 8px !important;
+                                            z-index: 99;
+                                        }
+                                    }
+                                }                                
+                            }
+                        }
+                        .o_cp_bottom{
+                            .o_cp_bottom_right{
+                                .o-dropdown{
+                                    &.btn-group{
+                                        .btn-light{
+                                            background-color: transparent !important;
+                                            border-color: transparent;
+                                            font-weight: 600;
+                                            .fa{
+                                                font-weight: 600;
+                                            }
+                                        }
+                                    }
+                                } 
+                                .o_cp_pager{
+                                    .o_pager {
+                                       font-weight: 600;
+                                       .btn-group{
+                                            .btn-secondary{
+                                                background-color: transparent !important;
+                                                border-color: transparent;
+                                                font-weight: 600;
+                                                .fa{
+                                                    font-weight: 600;
+                                                }
+                                            }
+                                       } 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .o_content{
+                        overflow: auto !important;
+                        margin: 5px 16px !important;
+                        border-radius: 8px;
+                        background-color: #fff !important;
+                        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                        @include media-breakpoint-down(md) {
+                            margin: 0px 16px !important;
+                        }
+                        .o_kanban_renderer {
+                            
+                            .o_kanban_group{
+                                // box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                background: #eee !important;
+                                margin: 20px 15px !important;
+                                border-radius: 8px;
+                                .o_kanban_header {
+                                    border-bottom: 0.13rem solid #a8a8a8;
+                                    .o_kanban_header_title {
+                                        .o_column_title {
+                                            font-weight: 700 !important;
+                                        }.o_kanban_config {
+                                            background-color: transparent;
+                                            border-radius: 5px !important;
+                                            margin-right: 5px !important;
+                                            .fa-gear {
+                                                display: flex !important;
+                                                align-items: center;
+                                                justify-content: center;
+                                                font-size: 12px;
+                                                color:  #495057 !important;
+                                                opacity: 1 !important;
+                                            }
+                                        }
+                                        .o_kanban_quick_add {
+                                            background-color:  $primaryColor;
+                                            border-radius: 5px !important;
+                                            display: none;
+                                            .fa-plus {
+                                                display: flex !important;
+                                                align-items: center;
+                                                justify-content: center;
+                                                font-size: 12px;
+                                                color: #fff !important;
+                                                opacity: 1 !important;
+                                                &::before{
+                                                    color: #fff  !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .o_kanban_quick_create {
+                                    border-radius: 8px !important;
+                                    .o_form_nosheet {
+                                        .o_field_char{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            .o_kanban_record {
+                                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                background: #e2e2e2 !important;
+                                border-radius: 8px;
+                                .oe_kanban_global_click{
+                                    border-radius: 8px !important;
+                                }
+                            }
+                            .o_column_quick_create{
+                                margin: 20px 15px !important;
+                                display: none ;
+                                .o_quick_create_folded {
+                                    margin-top: 0 !important;
+                                    margin-left: 0 !important;
+                                    margin-bottom: 0 !important;
+                                    .o_kanban_add_column {
+                                        border-radius: 8px;
+                                        margin-bottom: 20px;
+                                        border-bottom: 0px;
+                                        background: #e2e2e2 !important;
+                                    }
+                                }
+                                .o_quick_create_unfolded {
+                                    padding: 0 !important;
+                                    .o_kanban_muted_record {
+                                        border-radius: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.o_xxl_form_view {
+                    .sh_one_on_ones_form {
+                        height: auto !important;
+                        padding: 0 !important;
+                        .o_form_sheet_bg{
+                            display: none;
+                        }
+
+                        .o_FormRenderer_chatterContainer {
+                            &.oe_chatter{
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .o_action_manager {
+        .o_action {
+                &.sh_talking_point_custom_class{
+                .o_form_view_container {
+                    .o_control_panel {
+                        background: #ffffff;
+                        border-radius: 10px;
+                        margin: 16px 15px;
+                        margin-bottom: 10px;
+                        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                        @include media-breakpoint-down(md) {
+                            margin: 10px 16px;
+                        }
+                    }
+    
+                    .o_content {
+                        // overflow: hidden;
+                        // @include media-breakpoint-down(lg) {
+                        //     overflow: auto !important;
+                        // }
+                        .o_form_nosheet {
+                            &.sh_one_on_ones_form {
+                                @include media-breakpoint-down(md) {
+                                   padding: 0   !important;
+                                   margin: 0 !important; 
+                                }
+                                .o_ChatterContainer {
+                                    max-width: 100% !important;
+                                    width: 100% !important;
+                                }
+                            }
+                        }
+                        .one_on_ones_panel {
+                            background: #ffffff;
+                            border-radius: 10px;
+                            margin-bottom: 15px;
+                            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                            padding: 1.2rem 16px;
+                            margin-top: 0px !important;
+                            width: 100%;
+                            position: sticky;
+                            top: 0;
+                            z-index: 9;
+                            @include media-breakpoint-down(md) {
+                                margin-bottom: 10px;
+                                position: unset;
+                            }
+                            .my_one_on_ones_panel {
+                                font-size: 15px;
+                                font-weight: bold;
+                                width: 100%;
+                                text-transform: capitalize;
+                                display: flex;
+                                @include media-breakpoint-down(sm) {
+                                    width: 100%;
+                                    display: unset;
+                                }
+                            }
+                        }
+    
+                        .one_on_ones_talking_panel {
+                            position: relative;
+                            .one_on_ones_talking_panel_box {
+                                background: #ffffff;
+                                border-radius: 10px;
+                                padding: 0.6rem 16px;
+                                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                margin: 0px 0 15px;
+                                padding-bottom: 15px;
+    
+                                @include media-breakpoint-down(sm) {
+                                    margin: 5px 0 16px;
+                                }
+    
+                                .one_on_ones_talking_panel_heading {
+                                    border-bottom: 1px solid $secondaryColor;
+                                    padding-top: 10px;
+                                    padding-bottom: 15px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+    
+                                    p {
+                                        font-size: 17px;
+                                        font-weight: 700;
+                                        text-transform: capitalize;
+                                    }
+    
+                                    .plus_icon {
+                                        font-size: 13px;
+                                        .fa-plus{
+                                            &::before{
+                                                color: #fff !important;
+                                            }
+                                        }                                        
+                                    }
+                                }
+                                .checkbox_items{
+                                    .checkbox_item{
+                                        padding: 0.6rem 16px;
+                                        border: 1px solid $secondaryColor;
+                                        border-radius: 5px;
+                                        margin: 15px 0;
+                                        &:hover{
+                                            .float-end{
+                                                display: block;
+                                                color: #777777;
+                                                &:hover{
+                                                    color: $primaryColor;
+                                                }
+                                            }
+                                        }
+                                        .checkbox_item_box{
+                                            width: 2%;
+                                            .form-check-input{
+                                                width: 1.2em;
+                                                height: 1.2em;
+                                                margin-top: 2px !important;
+                                                cursor: pointer;
+                                                &:disabled {
+                                                    ~ {
+                                                        .form-check-label {
+                                                            opacity: 1;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .checkbox_item_label{
+                                            width: 92%;
+                                            .form-check-label{
+                                                line-height: 22px !important;
+                                                font-size: 15px;
+                                                font-weight: 600;
+                                                text-transform: capitalize;
+                                            }
+                                        }
+                                        .checkbox_item_delete{
+                                            width: 6%;
+                                            .float-end{
+                                                color: #777777;
+                                                &:hover{
+                                                    color: $primaryColor;
+                                                }
+                                            }
+                                        }                                        
+                                    }
+                                    .sh_temp_textarea{
+                                        textarea{
+                                            &.form-control{
+                                                resize: none;
+                                                min-height: 70px;
+                                                max-height: 70px;
+                                            }
+                                        }                                        
+                                    }
+                                }
+                            }
+                            .shared_notes_panel_box {
+                                background: #ffffff;
+                                border-radius: 10px;
+                                padding: 0.6rem 16px;
+                                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                margin: 0px 0 15px;
+                                padding-bottom: 15px;
+    
+                                @include media-breakpoint-down(sm) {
+                                    margin: 5px 0 16px;
+                                }
+    
+                                .shared_notes_panel_heading {
+                                    border-bottom: 1px solid $secondaryColor;
+                                    padding-top: 10px;
+                                    padding-bottom: 15px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+    
+                                    h4 {
+                                        font-size: 17px;
+                                        font-weight: 700;
+                                        text-transform: capitalize;
+                                    }
+                                }
+                                .input-items{
+                                    .input-item{
+                                        margin: 15px 0; 
+                                        .o_form_label{
+                                            margin-bottom: 10px;
+                                            text-transform: capitalize;
+                                            font-weight: 600;
+                                        }                              
+                                        .input-group{
+                                            &:focus-within{
+                                                .form-control,.input-group-text{
+                                                    border-color:  $primaryColor;
+                                                }
+                                            }
+                                            .form-control{
+                                                padding: 0.6rem 16px;
+                                                border-radius: 5px;       
+                                                font-weight: 600;
+                                                background-color: transparent !important;
+                                                &:focus {
+                                                    box-shadow: none !important;
+                                                    + {
+                                                        .input-group-text {
+                                                            background-color: #fff;
+                                                            border-color:  $primaryColor;
+                                                            outline: 0;
+                                                            box-shadow: none;
+                                                        }
+                                                    }
+                                                }
+                                                &::placeholder{
+                                                    color: #b9b9b9;
+                                                }
+                                            }
+                                            .input-group-text{
+                                                background-color: #fff;    
+                                                border-radius: 5px;
+                                                border-top-left-radius: 0;
+                                                border-bottom-left-radius: 0;
+                                                border-left: 0 !important;
+                                                position: relative;
+                                                cursor: pointer;
+                                                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                                                &::before{
+                                                    content: "";
+                                                    background-color: $secondaryColor;
+                                                    width: 0.16rem;
+                                                    height: 100%;
+                                                }
+                                                &:focus {                                                
+                                                    background-color: #fff;
+                                                    border-color:  $primaryColor;
+                                                    outline: 0;
+                                                    box-shadow: none !important;
+                                                }
+                                                span{
+                                                    padding-left: 20px;
+                                                    padding-right: 15px;
+                                                    font-weight: 600;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .private_notes_panel_box {
+                                background: #ffffff;
+                                border-radius: 10px;
+                                padding: 0.6rem 16px;
+                                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                margin: 0px 0 15px;
+                                padding-bottom: 15px;
+    
+                                @include media-breakpoint-down(sm) {
+                                    margin: 5px 0 16px;
+                                }
+    
+                                .private_notes_panel_heading {
+                                    border-bottom: 1px solid $secondaryColor;
+                                    padding-top: 10px;
+                                    padding-bottom: 15px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+    
+                                    h4 {
+                                        font-size: 17px;
+                                        font-weight: 700;
+                                        text-transform: capitalize;
+                                    }
+                                }
+                                .input-items{
+                                    .input-item{
+                                        margin: 15px 0; 
+                                        .o_form_label{
+                                            margin-bottom: 10px;
+                                            text-transform: capitalize;
+                                            font-weight: 600;
+                                        }                              
+                                        .input-group{
+                                            &:focus-within{
+                                                .form-control,.input-group-text{
+                                                    border-color:  $primaryColor;
+                                                }
+                                            }
+                                            .form-control{
+                                                padding: 0.6rem 16px;
+                                                border-radius: 5px;        
+                                                box-shadow: none !important;
+                                                font-weight: 600;
+                                                background-color: transparent !important;
+                                                &:focus {
+                                                    + {
+                                                        .input-group-text {
+                                                            background-color: #fff;
+                                                            border-color:  $primaryColor;
+                                                            outline: 0;
+                                                            box-shadow: none !important;
+                                                        }
+                                                    }
+                                                }
+                                                &::placeholder{
+                                                    color: #b9b9b9;
+                                                }
+                                            }
+                                            .input-group-text{
+                                                background-color: #fff;    
+                                                border-radius: 5px;
+                                                border-top-left-radius: 0;
+                                                border-bottom-left-radius: 0;
+                                                border-left: 0 !important;
+                                                position: relative;
+                                                cursor: pointer;
+                                                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                                                &::before{
+                                                    content: "";
+                                                    background-color: $secondaryColor;
+                                                    width: 0.16rem;
+                                                    height: 100%;
+                                                }
+                                                &:focus {                                                
+                                                    background-color: #fff;
+                                                    border-color:  $primaryColor;
+                                                    outline: 0;
+                                                    box-shadow: none !important;
+                                                }
+                                                span{
+                                                    padding-left: 20px;
+                                                    padding-right: 15px;
+                                                    font-weight: 600;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .previous_notes_panel_box {
+                                background: #ffffff;
+                                border-radius: 10px;
+                                padding: 0.6rem 16px;
+                                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                margin: 0px 0 15px;
+                                padding-bottom: 15px;
+    
+                                @include media-breakpoint-down(sm) {
+                                    margin: 5px 0 16px;
+                                }
+    
+                                .previous_notes_panel_heading {
+                                    border-bottom: 1px solid $secondaryColor;
+                                    padding-top: 10px;
+                                    padding-bottom: 12px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+    
+                                    p {
+                                        font-size: 17px;
+                                        font-weight: 600;
+                                        text-transform: capitalize;
+                                    }
+                                }   
+                                .previous_notes_table{
+                                    margin-top: 15px;
+                                    overflow: auto;
+                                    .table{
+                                        width: 100%;
+                                        white-space: nowrap;
+                                        .table-lightt{
+                                            tr{
+                                                .sequence{
+                                                    width: 10%;
+                                                    background-color: #eee;
+                                                }
+                                                .event{
+                                                    width: 10%;
+                                                    background-color: #eee;
+                                                }
+                                                .your_notes{
+                                                    width: 25%;
+                                                    background-color: #eee;
+                                                }
+                                                .admin_Notes{
+                                                    width: 25%;
+                                                    background-color: #eee;
+                                                }
+                                                .private_notes{
+                                                    width: 25%;
+                                                    background-color: #eee;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }                             
+                            }
+                            .left_side_panel{
+                                // overflow: auto;
+                                // display: block !important;
+                                // height: calc(100vh - 17.5rem);  
+                                // @include media-breakpoint-down(lg) {
+                                //         height: auto;                        
+                                // }
+                                // &::-webkit-scrollbar{
+                                //     width: 3px !important;
+                                // }
+                            }
+                            .side_panel{
+                                .employe_one_on_ones_box {
+                                    background: #ffffff;
+                                    border-radius: 10px;
+                                    padding: 1rem 16px;
+                                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                    margin: 0px 0 15px;
+        
+                                    @include media-breakpoint-down(sm) {
+                                        margin: 16px 0;
+                                    }
+        
+                                    .employe_one_on_ones_heading {
+                                        border-bottom: 1px solid $secondaryColor;
+                                        padding-top: 10px;
+                                        padding-bottom: 10px;
+        
+                                        p {
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            text-transform: capitalize;
+                                        }
+                                    }
+        
+                                    .employe_one_on_ones_time_box {
+        
+                                        .employe_one_on_ones_label {
+                                            width: 50px;
+                                            height: 50px;
+                                            margin-right: 15px;
+                                            @include media-breakpoint-between(md, lg) {
+                                                width: 45px;
+                                                height: 45px;
+                                            }
+                                            @include media-breakpoint-down(md) {
+                                                width: 45px;
+                                                height: 45px;
+                                            }
+                                            img {
+                                                width: 100%;
+                                                height: 100%;
+                                                object-fit: cover;
+                                                border-radius: 10px;
+                                            }
+                                        }
+        
+                                        .employe_one_on_ones_time {
+                                            width: 70%;
+                                            .employe_one_on_ones_date {
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                text-transform: capitalize;
+                                                word-break: break-word;
+                                            }
+        
+                                            .employe_one_on_ones_time_text {
+                                                font-size: 13px;
+                                                font-weight: 600;
+                                                color: #777777;
+                                                text-transform: capitalize;
+                                            }
+                                        }
+                                    }
+                                }
+        
+                                .recent_one_on_ones_box {
+                                    background: #ffffff;
+                                    border-radius: 10px;                                  
+                                    padding: 15px !important;
+                                    padding-top: 5px !important;
+                                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                    margin: 0px 0 15px;
+                                    overflow: auto;
+                                    display: block;
+                                    // max-height: calc(100vh - 22.5rem);  
+                                    // @include media-breakpoint-down(md) {
+                                    //     max-height: auto;
+                                    //     height: auto;                        
+                                    // }
+                                    // &::-webkit-scrollbar{
+                                    //     width: 3px !important;
+                                    // }
+                                    .employe_one_on_ones_time_box {
+                                        justify-content: space-between;
+                                        border-bottom: 1px solid $secondaryColor;
+                                        margin-bottom: 8px;
+                                        padding: 8px;
+                                        transition: 0.2s all;
+                                        &:hover{
+                                            background: #ededed;
+                                            border-radius: 8px;
+                                            cursor: pointer;
+                                            .employe_one_on_ones_label {
+                                                display: block;
+                                                a{
+                                                    color: #777777;
+                                                    &:hover{
+                                                        color: $primaryColor;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .employe_one_on_ones_time {
+                                            .employe_one_on_ones_date {
+                                                font-size: 13px;
+                                                font-weight: bold;
+                                                text-transform: capitalize;
+                                            }
+        
+                                            .employe_one_on_ones_time_text {
+                                                font-size: 12px;
+                                                font-weight: 600;
+                                                color: #777777;
+                                                text-transform: capitalize;
+                                            }
+                                        }
+        
+                                        .employe_one_on_ones_label {
+                                            font-size: 18px;
+                                            font-weight: 600;
+                                            color: #777777;
+                                            display: none;
+                                        }
+                                    }
+        
+                                    .button_box {
+                                        .sh_schedule_btn,.sh_reschedule_btn {
+                                            width: 100%;
+                                            text-transform: capitalize;
+                                            font-weight: 600;
+                                        }
+        
+                                        .create_text {
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                            text-transform: capitalize;
+                                            padding: 13px 0 3px;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                            }                        
+                        }
+                        .o_form_nosheet{
+                            &.sh_one_on_ones_form{
+                                &:empty{
+                                    padding: 0 !important;
+                                    margin: 0 !important;
+                                }
+                            }
+                        } 
+                    }
+                }
+                
+            }
+        }
+    }   
+    &.sh_talking_point_popups  {
+        .o_technical_modal{
+            &.modal:not([data-bs-backdrop="false"]) {
+                background-color: rgba(0, 0, 0, 0.75) !important;
+            }
+            .modal-dialog{
+                &.modal-lg{
+                    .modal-content{                        
+                        border-radius: 10px;
+                        .modal-header{                                              
+                            padding-left: 32px;
+                            padding-right: 32px;
+                            background: #fff !important;
+                            border-radius: 10px 10px 0 0;
+                            .modal-title {
+                                line-height: 14px;
+                                font-size: 14px;
+                                font-weight: 700;
+                                color: #000 !important;
+                            }
+                        }
+                        .modal-body{
+                            .o_form_view{
+                                background-color: #fff;
+                                .o_form_sheet_bg{
+                                    background-color: #FFF !important;      
+                                    border-color: transparent !important;                      
+                                    .o_form_sheet {
+                                        background-color: transparent !important;                                  
+                                        .oe_title{
+                                            width: 100% !important;
+                                            max-width: 100%;
+                                            h1{
+                                                min-height: auto !important;
+                                            }
+                                            .o_form_label{
+                                                font-size: 14px;
+                                                font-weight: 700;
+                                                color: #000 !important;
+                                            }
+                                            .o_field_widget{
+                                                margin-bottom: 0 !important;
+                                                .o_input{
+                                                    background: transparent !important;
+                                                    border: 1px solid $secondaryColor;
+                                                    border-radius: 8px;
+                                                    padding: 8px 10px !important;
+                                                    margin-bottom: 0 !important;
+                                                    &:focus,
+                                                    &:hover {
+                                                        border-color: $primaryColor;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .d-flex {
+                                            &.align-items-baseline{
+                                                
+                                                .o_field_widget {
+                                                    width: 78% !important;  
+                                                    @include media-breakpoint-down(lg) {
+                                                        width: 76% !important;
+                                                    }
+                                                    .o_field_tags{
+                                                        border: 1px solid $secondaryColor;
+                                                        width: 100% !important;
+                                                        border-radius: 8px;
+                                                        .o_tag_color_0 {
+                                                            padding: 5px 7px;
+                                                            border-radius: 8px  !important;
+                                                        } 
+                                                    }
+                                                }
+                                                .sm-2{
+                                                    align-self: flex-start;
+                                                    .btn.btn-secondary{
+                                                        border-radius: 8px !important;
+                                                        border: 1px solid $secondaryColor;
+                                                        line-height: 2.5;
+                                                        margin-left: 15px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .o_notebook {
+                                            .o_notebook_headers{
+                                                .nav-tabs{
+                                                    background-color: transparent !important;
+                                                    .nav-item{
+                                                        border: 1px solid $secondaryColor !important;
+                                                        border-radius: 8px 8px 0 0;
+                                                        .nav-link{
+                                                            border-color: transparent !important;
+                                                            &::before{
+                                                                z-index: unset !important;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .o_notebook_content{
+                                                .tab-pane{
+                                                    .o_group {
+                                                        .o_inner_group {
+                                                            .o_wrap_label{
+                                                                .o_form_label{
+                                                                    color: #000 !important;
+                                                                }
+                                                            }
+                                                            .o_field_widget {
+                                                                &.oe_inline{
+                                                                    .d-grid{
+                                                                        border: none !important;
+                                                                    }
+                                                                }
+                                                                .o_field_tags {
+                                                                    &.o_input {                                                                    
+                                                                        background: transparent !important;
+                                                                        border: 0px solid $secondaryColor;
+                                                                        border-radius: 0 ;
+                                                                        padding: 0 !important;
+                                                                        margin-bottom: 0 !important;
+                                                                    }
+                                                                }
+                                                                .o_input {
+                                                                    &:not(.o_tags_input ){
+                                                                        background: transparent !important;
+                                                                        border: 1px solid $secondaryColor !important;
+                                                                        border-radius: 8px;
+                                                                        padding: 6px 10px !important;
+                                                                        margin-bottom: 0 !important;
+                                                                    }
+                                                                    &:hover,
+                                                                    &:focus{
+                                                                        border-color: $primaryColor !important;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .o_inner_group{
+                                                        &.grid{
+                                                            // grid: none !important;
+                                                            .o_wrap_input  {
+                                                                .o_field_html{
+                                                                    .note-editable{                                                                        
+                                                                        background: transparent !important;
+                                                                        border: 1px solid $secondaryColor;
+                                                                        border-radius: 8px;
+                                                                        padding: 8px 10px !important;
+                                                                        margin-bottom: 0 !important;
+                                                                        &:focus,
+                                                                        &:hover {
+                                                                            border-color: $primaryColor;
+                                                                        }
+                                                                    }
+                                                                } 
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .modal-footer{
+                            padding-left: 32px;
+                            padding-right: 32px;
+                            justify-content: unset !important;
+                            border: none !important;
+                        }
+                    }
+                }
+            }
+        }    
+    } 
+}

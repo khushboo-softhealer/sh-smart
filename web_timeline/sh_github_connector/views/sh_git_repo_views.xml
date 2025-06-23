@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh__github_connector_git_repo_tree" model="ir.ui.view">
+        <field name="name">sh.github_connector.git.repo.tree</field>
+        <field name="model">sh.git.repo</field>
+        <field name="inherit_id" ref="sh_product_base.sh_git_repo_tree"/>
+        <field name="arch" type="xml">
+            <field name="responsible_user" position="after">
+                <button string="Sync Repo" name="sync_github" type="object" class="btn btn-primary" />
+            </field>
+        </field>
+    </record>
+
+    <!-- Inherit Repo From View -->
+    <record id="sh_git_repo_sync_form" model="ir.ui.view">
+        <field name="name">sh.git.repo.sync</field>
+        <field name="model">sh.git.repo</field>
+        <field name="inherit_id" ref="sh_product_base.sh_git_repo_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <!-- Add Button -->
+                <header>
+                    <button string="Sync Repo" name="sync_github" type="object" class="btn btn-primary" groups="sh_github_connector.sh_github_connector_manager" />
+                    <button string="Get New Products" name="btn_sync_new_products" type="object" class="btn btn-primary" groups="sh_github_connector.sh_github_connector_manager" />
+                    <button string="Import Branchs" name="import_branch_action" type="object" groups="sh_github_connector.sh_github_connector_manager" />
+                    <button string="Sync Repo Wizard" name="btn_sync_repo_wizard" class="btn btn-primary" type="object" groups="sh_github_connector.sh_github_connector_manager" />
+                </header>
+            </xpath>
+            <field name="responsible_user" position="attributes">
+                <attribute name="required">1</attribute>
+            </field>
+            <xpath expr="//sheet" position="inside">
+                <!-- Add Fields -->
+                <group>
+                    <group>
+                        <field name="other_responsible_user_ids" widget="many2many_tags"/>
+                        <field name="last_sync_date"/>
+                    </group>
+                </group>
+                <notebook groups="sh_github_connector.sh_github_connector_manager">
+                    <page name="page_branch_line" string="Branch Line">
+                        <field name="branch_line" readonly="1">
+                            <!-- <tree no_open="True"> -->
+                            <tree>
+                                <field name="name"/>
+                                <field name="module_line"/>
+                                <button string="Sync Branch" name="sync_branch" context="{'pop_up': True}" type="object" class="btn btn-primary" />
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ====================== ACTION ========================== -->
+    <record id="sh_github_git_repo_action" model="ir.actions.act_window">
+        <field name="name">Git Repo</field>
+        <field name="res_model">sh.git.repo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

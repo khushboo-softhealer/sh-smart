@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Snippet 11 -->
+    <template id="sh_store_product_boxes" name="Product Ecommerce Snippet">
+        <section id="sh_store_product_box" class="sh_store_product_box_section js_cls_get_sh_ecom_s_product" data-column_class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 pr-0 pl-0 pb-3" data-owl_item_mobile="1" data-owl_item_tablet="2" data-item_template="sh_ecommerce_snippet.sh_ecom_snippet_tmpl_11_item" data-single_tab_item_template="sh_ecommerce_snippet.sh_ecom_snippet_tmpl_11_item_single_tab">
+            <div class="container">
+            <header>
+                <div class="sh_store_hading">
+                    <h5 class="sh_sub_title">Suggested Apps</h5>
+                    <h2>Best Selling Apps</h2>
+                </div>
+               
+            </header>
+                <div class="js_cls_render_dynamic_product_area oe_website_sale o_not_editable" />
+            </div>
+        </section>
+    </template>
+    <!-- Snippet 11 -->
+
+</odoo>

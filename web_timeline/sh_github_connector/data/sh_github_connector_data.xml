@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Multi Action (Sync Repo) -->
+    <record id="sh_sync_github" model="ir.actions.server" >
+        <field name="name">Sync Repo(s)</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_sh_git_repo" />
+        <field name="binding_model_id" ref="model_sh_git_repo" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.sync_github()
+        </field>
+    </record>
+    <!-- Multi Action (Sync Repo Branches) -->
+    <record id="sh_import_branches" model="ir.actions.server" >
+        <field name="name">Import Branch(s)</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_sh_git_repo" />
+        <field name="binding_model_id" ref="model_sh_git_repo" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.import_branch_action()
+        </field>
+    </record>
+    <!-- Multi Action (Sync Full Index) -->
+    <record id="sh_sync_full_index" model="ir.actions.server" >
+        <field name="name">Sync Full Index</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_sh_index_queue" />
+        <field name="binding_model_id" ref="model_sh_index_queue" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.sync_full_index()
+        </field>
+    </record>
+    <!-- Multi Action (Sync Index) -->
+    <record id="sh_sync_index" model="ir.actions.server" >
+        <field name="name">Sync Index</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_sh_index_queue" />
+        <field name="binding_model_id" ref="model_sh_index_queue" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.sync_index_from_queue()
+        </field>
+    </record>
+    <!-- Multi Action (Sync Module) -->
+    <record id="sh_sync_module" model="ir.actions.server" >
+        <field name="name">Sync Module</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_sh_module" />
+        <field name="binding_model_id" ref="model_sh_module" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.sync_module_from_queue()
+        </field>
+    </record>
+    <!-- Multi Action (Unlink Multiple Blogs For A Product) -->
+    <record id="sh_unlink_mul_blogs" model="ir.actions.server" >
+        <field name="name">Unlink Mul. Blogs</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_product_product" />
+        <field name="binding_model_id" ref="model_product_product" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.mul_action_unlink_mul_blogs()
+        </field>
+    </record>
+    <!-- Multi Action (Add Product(Module) In Queue) -->
+    <record id="sh_product_module_in_queue" model="ir.actions.server" >
+        <field name="name">Module In Queue</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_product_product" />
+        <field name="binding_model_id" ref="model_product_product" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.mul_action_add_module_in_queue()
+        </field>
+    </record>
+    <!-- Multi Action (Get New Products) -->
+    <record id="sh_action_get_new_products" model="ir.actions.server" >
+        <field name="name">Get New Products</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_sh_git_repo" />
+        <field name="binding_model_id" ref="model_sh_git_repo" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.action_get_new_products()
+        </field>
+    </record>
+</odoo>

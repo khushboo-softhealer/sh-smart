@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sh_resource_calendar_view" model="ir.ui.view">
+		<field name="name">resource.calendar</field>
+		<field name="model">resource.calendar</field>
+		<field name="inherit_id" ref="resource.resource_calendar_form"/>
+		<field name="arch" type="xml">
+			<field name="tz" position="after">
+				<field name="sh_late_early_restriction" widget="float_time"/>
+				<field name="except_from_half_day"/>
+				<field name = "timesheet_hrs"/>
+				
+				<label for="timesheet_validation_after"/>
+				<div class="row">
+					
+					<div class="text-danger" style="display:inline-flex;">
+						<field name="timesheet_validation_after" widget="float_time"  nolabel="1"/>
+						Please ensure that time is calculated in a 24-hour format !
+					</div>
+				</div>  
+
+			</field>
+			<xpath expr="//header" position="inside">
+				<button string="Add / Remove Working Hours" class="oe_highlight" type="action" name="%(sh_hr_attendance_geolocation.sh_calender_entry_wizard_action)d" />
+            </xpath>
+			<xpath expr="//div[@name='button_box']/button[1]" position="before">
+                <button string="Working Hours" icon="fa-calendar-check-o" class="oe_stat_button" type="action" name="%(sh_hr_attendance_geolocation.resource_calendar_form_action_from_calendar)d" />
+            </xpath>
+		</field>
+	</record>
+
+	<record id="resource_calendar_attendance_inherit_view_form" model="ir.ui.view">
+        <field name="name">resource.calendar.attendance.inherit.view.form</field>
+        <field name="model">resource.calendar.attendance</field>
+        <field name="inherit_id" ref="resource.view_resource_calendar_attendance_tree"/>
+        <field name="arch" type="xml">
+            <field name="day_period" position="after">
+                <field name="high_priority"/>
+                <button  class="fa fa-copy" title="Quick Copy" name="copy_line" type="object"></button>
+            </field>            
+        </field>
+    </record>
+</odoo>

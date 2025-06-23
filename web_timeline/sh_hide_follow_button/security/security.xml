@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="group_show_follow_button" model="res.groups">
+        <field name="name">Show Follower/Unfollow Button</field>
+    </record>
+</odoo>

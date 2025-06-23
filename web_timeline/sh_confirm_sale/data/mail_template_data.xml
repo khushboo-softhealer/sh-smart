@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_confirm_sale_download_module_mail" model="mail.template">
+        <field name="name">Send Mail To Download Module</field>
+        <field name="subject">Download Link for Your Recent Purchase</field>
+        <field name="email_from">{{object.company_id.email}}</field>
+        <field name="email_to">{{object.partner_id.email}}</field>
+        <field name="model_id" ref="sale.model_sale_order" />
+        <field name="lang">{{object.partner_id.lang}}</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p>
+                    Hello
+                    <b>
+                        <t t-if="object.partner_id">
+                            <t t-esc="object.partner_id.name" />
+                        </t>
+                        <t t-else="">
+                            User
+                        </t>,
+                    </b>
+                </p>
+                <p>Thank you for your recent purchase!</p><br/>
+
+                <p>
+                    You can download the module using the link below:
+                    <br/>
+                    <a t-att-href="object._get_sale_order_link()">Click Here to Download</a>
+                </p>
+                <strong>
+                    <p>
+                        Instructions:
+                        <ol>
+                            <li>
+                                You need to sign in to see the download button; it will only be visible if you are signed in.
+                            </li>
+                            <li>
+                                You will find a download button on each product line to download them separately. Additionally, there will be a "Download All" button just before the product list to download all purchased items in one zip file.
+                            </li>
+                        </ol>
+                    </p>
+                </strong>
+                <br/>
+
+                <p>
+                    If you encounter any issues or have questions, please feel free to reach out to our support team at support@softhealer.com.
+                    <!-- <br/>
+                    Thank you once again for choosing our product.
+                    <br/>
+                    Best regards,
+                    <br/>
+                    Team Softhealer
+                    <br/>
+                    [Contact Information] -->
+                </p>
+                <!-- <p>IF you have any inquiries or require assistance, please feel free to contact our dedicated support team at support@softhealer.com.</p><br/>
+                <p>Thank you for choosing Softhealer!</p>
+                <p>Team Softhealer</p> -->
+            </div>
+        </field>
+    </record>
+</odoo>

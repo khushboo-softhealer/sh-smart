@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sh_lead_qualification.access_sh_social_media_presence,access_sh_social_media_presence,sh_lead_qualification.model_sh_social_media_presence,base.group_user,1,1,1,1
+sh_lead_qualification.access_sh_country_of_operations,access_sh_country_of_operations,sh_lead_qualification.model_sh_country_of_operations,base.group_user,1,1,1,1
+sh_lead_qualification.access_sh_type_of_industry,access_sh_type_of_industry,sh_lead_qualification.model_sh_type_of_industry,base.group_user,1,1,1,1

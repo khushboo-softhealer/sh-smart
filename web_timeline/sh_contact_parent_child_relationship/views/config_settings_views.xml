@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+    <record id="sh_crm_lead_extra_details_config_setting_view" model="ir.ui.view">
+        <field name="name">res.config.settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sh_helpdesk.helpdesk_config_setting_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='multi_users_div']" position="after">
+                <h2 id="multi_users">Common Mail domains</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-md-6 o_setting_box">
+                       <div class="o_setting_right_pane">
+                          <label for="sh_common_mail_domains_ids" />
+                          <br />
+                          <field name="sh_common_mail_domains_ids" widget="many2many_tags" />
+                       </div>
+                       <div class="o_setting_left_pane" />
+                    </div>
+                 </div>
+               
+            </xpath>
+        </field>
+        </record>
+    </data>
+</odoo>

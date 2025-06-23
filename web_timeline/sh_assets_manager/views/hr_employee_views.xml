@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- <record id="view_employee_form" model="ir.ui.view">
+		<field name="name">hr.employee</field>
+		<field name="model">hr.employee</field>
+		<field name="inherit_id" ref="hr.view_employee_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//page[@name='hr_settings']" position="after">
+				<page string="About Assets" groups="sh_assets_manager.asset_management_group">
+					<group>
+						<group colspan='4'>
+							<field colspan='2' name="asset_ids" widget="many2many" nolabel='1'/>
+						</group>
+					</group>
+				</page>
+			</xpath>
+			<xpath expr="//div[@name='button_box']" position="inside">
+				<button name="action_view_assets" type="object" class="oe_stat_button"
+					icon="fa-arrow-right" groups="sh_assets_manager.asset_management_group">
+					<field name="assets_count" widget="statinfo" string="Assets" />
+				</button>
+				<button name="action_view_requests" type="object" class="oe_stat_button"
+					icon="fa-ticket" groups="sh_assets_manager.asset_management_group">
+					<field name="requests_count" widget="statinfo" string="Maintenance Requests" />
+				</button>
+			</xpath>
+		</field>
+	</record> -->
+</odoo>

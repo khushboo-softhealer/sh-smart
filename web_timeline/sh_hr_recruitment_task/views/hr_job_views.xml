@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_hr_job_form_sh_hr_recruitment_task" model="ir.ui.view">
+        <field name="name">hr.job.form.form.sh.hr.recruitment.task</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form" />
+        <field name="arch" type="xml">
+            <field name="contract_type_id" position="after">
+                <field name="min_salary" />
+                <field name="max_salary" />
+            </field>
+        </field>
+    </record>
+</odoo>

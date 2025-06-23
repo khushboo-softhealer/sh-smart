@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<!-- privacy policy Page -->
+
+	<record id="theme_softhealer_store_website_privacy_policy_page" model="website.page">
+		<field name="name">Privacy Policy</field>
+		<field name="url">/privacy-policy</field>
+		<field name="website_published">True</field>
+		<field name="type">qweb</field>
+		<field name="key">
+			theme_softhealer_store.theme_softhealer_store_website_privacy_policy_template</field>
+		<field name="arch" type="xml">
+			<t name="Privacy Policy Page Template"
+				t-name="theme_softhealer_store.theme_softhealer_store_website_privacy_policy_template">
+				<t t-call="website.layout">
+					<div class="oe_structure oe_empty" id="wrap">
+
+						<!--banner
+						start-->
+						<section id="sh_terms_condition_banner"
+							class="sh_softhealer_store_terms_condition_banner sh_other_page_banner o_colored_level"
+							data-snippet="theme_softhealer_store_privacy_policy_banner_snippet_template"
+							data-name="Banner" style="background-image: none;">
+							<div class="container">
+								<div class="sh_banner_content">
+									<h2 class="sh_banner_title o_default_snippet_text">Privacy
+										Policy</h2>
+									
+									<ul class="sh_banner_breadcrumb">
+										<li>
+											<a
+												class="sh_banner_breadcrumb_link o_default_snippet_text"
+												href="/">Home <span
+													class="sh_banner_breadcrumb_icon fa fa-angle-right" />
+											</a>
+										</li>
+										<li>
+											<span
+												class="sh_banner_normal_text o_default_snippet_text">Privacy
+												Policy</span>
+										</li>
+									</ul>
+									<p class="sh_banner_date o_default_snippet_text">
+										This Privacy Policy governs the manner in which Softhealer Technologies Pvt. Ltd. collects, uses, maintains, and discloses information collected from users of our website and any related software or services. This Privacy Policy applies to the Services provided by Softhealer Technologies Pvt. Ltd.</p>
+								</div>
+							</div>
+						</section>
+						<!--banner
+						end-->
+						<section class="sh_softhealer_store_terms_condition o_colored_level"
+							id="sh_softhealer_store_terms_condition"
+							data-snippet="theme_softhealer_store_privacy_policy_rules_snippet_template"
+							data-name="Terms and Conditions" style="background-image: none;">
+							<div class="container">
+								<div class="sh_terms_condition">
+									<div class="row sh_content_box">
+										<div
+											class="col-xxl-10 col-xl-10 col-lg-10 col-md-12 mx-auto d-block o_colored_level">
+											<h2 class="sh_sub_heading o_default_snippet_text">1. Information Collection</h2>
+											<p class="sh_text o_default_snippet_text">
+												We may collect personal identification information from Users in various ways, including but not limited to when Users visit our website, register on the site, place an order, subscribe to our newsletter, respond to a survey, fill out a form, or interact with other activities, services, features, or resources we make available on our website. Users may be asked for their name, email address, mailing address, phone number, and payment information as appropriate. We will collect personal identification information from Users only if they voluntarily submit such information to us.
+											</p>
+
+											<h2 class="sh_sub_heading o_default_snippet_text">2. Information Use</h2>
+											<div class="sh_text">
+											We collect and use Users' personal information for the following purposes:
+											</div>
+											<div class="sh_text">
+												<div class="sh_icon">
+													<span class="fa fa-circle" />
+												</div>
+												<div class="sh_desc o_default_snippet_text"><span
+														class="sub_title o_default_snippet_text"> To process transactions
+													: </span>  We may use the information Users provide when placing an order only to provide service to that order. We do not share this information with outside parties except to the extent necessary to provide the service.</div>
+											</div>
+											<div class="sh_text">
+												<div class="sh_icon">
+													<span class="fa fa-circle" />
+												</div>
+												<div class="sh_desc o_default_snippet_text"><span
+														class="sub_title o_default_snippet_text">
+													 To send periodic emails : </span> We may use the email address to send Users information and updates pertaining to their orders. It may also be used to respond to their inquiries, questions, and/or other requests. If a User decides to opt-in to our mailing list, they will receive emails that may include company news, updates, related product or service information, etc. If at any time the User would like to unsubscribe from receiving future emails, we include detailed unsubscribe instructions at the bottom of each email or the User may contact us via our website.</div>
+											</div>
+											<h2 class="sh_sub_heading o_default_snippet_text">3.
+												Information Protection</h2>
+											<div class="sh_text">
+												<div class="sh_desc o_default_snippet_text">We adopt appropriate data collection, storage, and processing practices and security measures to protect against unauthorized access, alteration, disclosure, or destruction of Users' personal information, username, password, transaction information, and data stored on our website.</div>
+											</div>
+											<h2 class="sh_sub_heading o_default_snippet_text">4. Information Disclosure</h2>
+											<div class="sh_text">
+												We do not sell, trade, or rent Users' personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates, and advertisers for the purposes outlined above.
+											</div>
+											<h2 class="sh_sub_heading o_default_snippet_text">5. Changes to this Privacy Policy</h2>
+											<div class="sh_text">
+												Softhealer Tecnologies Pvt. Ltd. has the discretion to update this Privacy Policy at any time. When we do, we will revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. Users acknowledge and agree that it is their responsibility to review this Privacy Policy periodically and become aware of modifications.
+											</div>
+											<h2 class="sh_sub_heading o_default_snippet_text">6. Acceptance of these Terms</h2>
+											<div class="sh_text">
+												By using our Services, Users signify their acceptance of this Privacy Policy. If Users do not agree to this Privacy Policy, they should not use our Services. Continued use of the Services following the posting of changes to this Privacy Policy will be deemed as acceptance of those changes.
+											</div>
+											<div class="sh_text">
+												If you have any questions about this Privacy Policy, the practices of our Services, or your dealings with us, please contact us at <br/>info@softhealer.com
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</section>
+
+
+					</div>
+				</t>
+			</t>
+		</field>
+	</record>
+
+</odoo>

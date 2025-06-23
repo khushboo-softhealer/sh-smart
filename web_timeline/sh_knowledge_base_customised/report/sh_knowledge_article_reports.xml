@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>    
+    <template id="report_knowledge_article">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">               
+                <t t-call="web.external_layout">                                   
+                    <div class="page">
+                        <div class="row col-12 m-4">
+                            <div class="col-12 text-center"><h1><span t-field="doc.sh_title"/></h1></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-10 border">                               
+                                <div class="row col-12 text-center">                                    
+                                    <div class="col-3 border"><strong>Document Number</strong></div>
+                                    <div class="col-3 border"><span t-field="doc.sh_document_no"/></div>
+                                    <div class="col-3 border"><strong>Revision Number</strong></div>
+                                    <div class="col-3 border"><span t-field="doc.sh_revision_no"/></div>                                   
+                                </div> 
+                                <div class="row col-12 text-center">                                                                
+                                    <div class="col-3 border"><strong>Create Date</strong></div>
+                                    <div class="col-3 border"><span t-field="doc.sh_create_date"/></div> 
+                                    <div class="col-3 border"><strong>Create By</strong></div>
+                                    <div class="col-3 border"><span t-field="doc.create_uid.name"/></div>                                                                                        
+                                </div>   
+                                <div class="row col-12 text-center">                                    
+                                    <div class="col-3 border"><strong>Review Date</strong></div>
+                                    <div class="col-3 border"><span t-field="doc.review_date"/></div>
+                                    <div class="col-3 border"><strong>Review By</strong></div>
+                                    <div class="col-3 border"><span t-field="doc.review_by"/></div>                                    
+                                </div>                                                        
+                                <div class="row col-12 text-center">                                                           
+                                    <div class="col-3 border"><strong>Approved Date</strong></div>
+                                    <div class="col-3 border"><span t-field="doc.approve_date"/></div>
+                                    <div class="col-3 border"><strong>Approved By</strong></div>
+                                    <div class="col-3 border"><span t-field="doc.approve_by.name"/></div>                                    
+                                </div>  
+                            </div>
+                            <div class="col-1"></div>
+                        </div>   
+                        <div class="row">
+                            <div class="col-12 text-center"><div t-field="doc.banner"/></div>
+                        </div>                     
+                    </div>
+                    <div style="page-break-before:always;">                           
+                        <div class="page">                                                 
+                            <div t-field="doc.sh_content"> 
+                                <div style="position: absolute; opacity: 0.10; z-index: 1000; transform: rotate(300deg); -webkit-transform: rotate(300deg); width: 130%; left: 0; top: 75%; transform: translateY(-50%) rotate(300deg); font-size: 100px;">
+                                    <strong style="color:grey;opacity: 0.10">DUPLICATED</strong>
+                                </div>  
+                            </div>                                                                                                                          
+                        </div> 
+                    </div>                    
+                </t>             
+            </t>
+        </t>
+    </template>
+</odoo>

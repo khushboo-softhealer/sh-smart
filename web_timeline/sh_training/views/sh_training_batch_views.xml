@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_training_batch_view_form" model="ir.ui.view">
+        <field name="name">sh.training.batch.view.form</field>
+        <field name="model">sh.training.batch</field>
+        <field name="arch" type="xml">
+            <form string="Training Batch">
+                <header>
+                    <button name="action_generate_training_master" type="object" string="Generate Master Data" class="oe_highlight" attrs="{'invisible': [('stage', '!=', 'new')]}"/>
+                    <field name="stage" widget="statusbar" options="{'clickable': '1'}" />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="sh_training_course_ids" widget="many2many_tags" attrs="{'readonly': [('stage', '!=', 'new')]}"/>
+                            <field name="sh_trainee_ids" widget="many2many_tags" attrs="{'readonly': [('stage', '!=', 'new')]}"/>
+                            <field name="from_date" attrs="{'readonly': [('stage', '!=', 'new')]}" />
+                            <field name="to_date" attrs="{'readonly': [('stage', '!=', 'new')]}" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="master" string="Master">
+                            <field name="training_master_line" widget="section_and_note_one2many">
+                                <tree editable="bottom">
+                                    <control>
+                                        <create name="add_product_control" string="Add a line"/>
+                                        <create name="add_section_control" string="Add a section" context="{'default_display_type': 'line_section'}"/>
+                                        <create name="add_note_control" string="Add a note" context="{'default_display_type': 'line_note'}"/>
+                                    </control>
+                                    <field name="sequence" widget="handle" />
+                                    <field name="display_type" invisible="1"/>
+                                    <field name="sr_no"/>
+                                    <field name="sh_training_course_ids" invisible="1"/>
+                                    <field name="sh_course_id" domain="[('id','in',sh_training_course_ids)]"/>
+                                    <field name="name" widget="section_and_note_text" />
+                                    <field name="responsible_user_ids" widget="many2many_tags"/>
+                                    <field name="approx_days" />
+                                    <field name="start_date" />
+                                    <field name="end_date" />
+                                    <field name="deadline" />
+                                    <field name="state" />
+                                    <button name="action_open_trainee_ratings"
+                                        nolabel="1" class="fa fa-info-circle"
+                                        type="object"
+                                        title="Open Trainee Ratings"
+                                    />  
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_training_batch_view_tree" model="ir.ui.view">
+        <field name="name">sh.training.batch.view.tree</field>
+        <field name="model">sh.training.batch</field>
+        <field name="arch" type="xml">
+            <tree string="Training">
+                <field name="name" />
+                <field name="sh_training_course_ids" widget="many2many_tags" />
+                <field name="sh_trainee_ids" widget="many2many_tags" />
+                <field name="from_date" />
+                <field name="to_date" />
+                <field name="stage" widget="badge" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_training_batch_view_kanban" model="ir.ui.view">
+        <field name="name">sh.training.batch.view.kanban</field>
+        <field name="model">sh.training.batch</field>
+        <field name="arch" type="xml">
+            <kanban string="Kanban Description">
+                <field name="name" />
+                <field name="sh_training_course_ids" />
+                <field name="sh_trainee_ids" />
+                <field name="from_date" />
+                <field name="to_date" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div
+                            class='oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban'>
+                            <div class="o_dropdown_kanban dropdown">
+                                <a class="dropdown-toggle o-no-caret btn" role="button"
+                                    data-toggle="dropdown" data-display="static" href="#"
+                                    aria-label="Dropdown menu" title="Dropdown menu">
+                                    <span class="fa fa-ellipsis-v" />
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <t t-if="widget.deletable">
+                                        <a role="menuitem" type="delete" class="dropdown-item">
+                                            Delete</a>
+                                    </t>
+                                </div>
+                            </div>
+                            <div class="oe_kanban_content">
+                                <div class="o_kanban_record_title">
+                                    <strong>
+                                        <field name="name" />
+                                    </strong>
+                                </div>
+                                <div class="o_kanban_record_subtitle">
+                                    <t t-if="record.sh_training_course_ids.raw_value">
+                                        <field name="sh_training_course_ids" />
+                                    </t>
+                                </div>
+                                <div class="o_kanban_record_subtitle">
+                                    <t t-if="record.sh_trainee_ids.raw_value">
+                                        <field name="sh_trainee_ids" />
+                                    </t>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <t t-if="record.from_date.raw_value">
+                                        <field name="from_date" />
+                                    </t>
+                                    <t t-if="record.to_date.raw_value"> - <field name="to_date" />
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="sh_training_batch_view_search" model="ir.ui.view">
+        <field name="name">sh.training.batch</field>
+        <field name="model">sh.training.batch</field>
+        <field name="arch" type="xml">
+            <search string="Search Batch">
+                <field name="name" />
+                <field name="sh_training_course_ids" />
+                <field name="sh_trainee_ids" />
+                <field name="stage" />
+                <field name="from_date" />
+                <field name="to_date" />
+                <filter string="New" name="new_stage" domain="[('stage', '=', 'new')]" />
+                <filter string="In Progress" name="in_progress_stage"
+                    domain="[('stage', '=', 'in_progress')]" />
+                <filter string="Done" name="done_stage" domain="[('stage', '=', 'done')]" />
+                <filter string="Cancel" name="cancel_stage" domain="[('stage', '=', 'cancel')]" />
+                <group expand="0" name="group_by" string="Group">
+                    <filter name="groupByStage" string="Stage" domain="[]"
+                        context="{'group_by' : 'stage'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_training_batch_view_action" model="ir.actions.act_window">
+        <field name="name">Training Batch</field>
+        <field name="res_model">sh.training.batch</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create a new Record</p>
+        </field>
+    </record>
+
+    <menuitem name="Training Batch" action="sh_training_batch_view_action"
+        id="sh_training_batch_menu" parent="sh_config_details_menu" sequence="2" />
+
+</odoo>

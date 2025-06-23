@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_leave_attachment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-23 07:22+0000\n"
+"PO-Revision-Date: 2020-10-23 07:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_leave_attachment
+#: model:ir.model.fields,field_description:sh_leave_attachment.field_hr_leave__sh_leave_req_attachment
+#: model:ir.model.fields,field_description:sh_leave_attachment.field_hr_leave_type__sh_leave_attachment
+msgid "Attachment"
+msgstr "Anhang"
+
+#. module: sh_leave_attachment
+#: model:ir.model.fields,field_description:sh_leave_attachment.field_hr_leave__display_name
+#: model:ir.model.fields,field_description:sh_leave_attachment.field_hr_leave_type__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: sh_leave_attachment
+#: model:ir.model.fields,field_description:sh_leave_attachment.field_hr_leave__id
+#: model:ir.model.fields,field_description:sh_leave_attachment.field_hr_leave_type__id
+msgid "ID"
+msgstr "ICH WÜRDE"
+
+#. module: sh_leave_attachment
+#: model:ir.model.fields,field_description:sh_leave_attachment.field_hr_leave____last_update
+#: model:ir.model.fields,field_description:sh_leave_attachment.field_hr_leave_type____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert am"
+
+#. module: sh_leave_attachment
+#: model:ir.model,name:sh_leave_attachment.model_hr_leave
+msgid "Time Off"
+msgstr "Auszeit"
+
+#. module: sh_leave_attachment
+#: model:ir.model,name:sh_leave_attachment.model_hr_leave_type
+msgid "Time Off Type"
+msgstr "Freizeittyp"
+
+#. module: sh_leave_attachment
+#: model:ir.model.fields,field_description:sh_leave_attachment.field_hr_leave__leave_attach
+msgid "leave attach"
+msgstr "anhängen lassen"

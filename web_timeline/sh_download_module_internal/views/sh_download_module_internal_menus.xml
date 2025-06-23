@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Download Req -->
+    <menuitem
+        id="sh_download_module_req_menu"
+        name="Download Req"
+        action="sh_download_module_req_action"
+        parent="project.menu_main_pm"
+        groups="project.group_project_user"
+        sequence="91"/>
+
+    <!-- Download Log -->
+    <menuitem
+        id="sh_download_module_log_menu"
+        name="Download Log"
+        action="sh_download_module_log_action"
+        parent="project.menu_main_pm"
+        groups="project.group_project_manager"
+        sequence="92"/>
+
+</odoo>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<template id="mb_mobiheal_footer_custom" inherit_id="website.footer_custom" name="Mobiheal Footer">
+    <xpath expr="//div[@id='footer']" position="replace">
+       <section>
+          <footer class="mb_footer">
+             <div class="mb_shape-two">
+                <img src="/theme_mobiheal_website/static/src/img/shape-10.png" alt="Footer-Shape" />
+             </div>
+             <div class="container">
+                <div class="mb_footer_main">
+                   <div class="mb_call_to_action">
+                      <div class="container">
+                         <div class="row">
+                            <div class="col-12">
+                               <div class="mb_banner">
+                                  <div class="mb_header">
+                                     <span class="mb_subtitle">We Are Here For You</span>
+                                     <h2 class="mb_title">Let’s Make Digitize Your Idea</h2>
+                                  </div>
+                                  <a class="mb_footer_btn" href="/contact">Let's Talk</a>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="mb_footer_inner_row">
+                      <div class="row">
+                         <div class="col-lg-5 col-md-5 col-12 first">
+                            <div class="mb_footer_logo">
+                               <a href="/" t-attf-class="navbar-brand logo #{_link_class}">
+                               <!-- <span t-field="website.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name" /> -->
+                              <img src="/theme_mobiheal_website/static/src/img/footer/footer_white.png"></img> 
+                              </a>
+                            </div>
+                            <ul class="mb_footer_details">
+                               <li>
+                                  <i class="fa fa-map-marker"></i>
+                                  <span>
+                                  <a href="/contact">905, Corporate Levels, 150 Ft. Ring RD,<br></br> 
+                                  Nr. Ayodya Chowk, Opp Synergy Hospital,<br></br> Rajkot 360006<br></br>Gujarat GJ<br></br>India</a>
+                                  </span>
+                               </li>
+                               <li>
+                                  <i class="fa fa-envelope"></i>
+                                  <span>
+                                  <a href="mailto:info@mobiheal.tech">info@mobiheal.tech </a>
+                                  </span>
+                               </li>
+                               <li>
+                                  <i class="fa fa-phone"></i>
+                                  <span>
+                                  <a href="tel:+917984575681"> +91 - 932 882 5451</a>
+                                  </span>
+                               </li>
+                            </ul>
+                         </div>
+                         <div class="col-lg-4 col-md-3 second">
+                            <div class="mb_footer_links">
+                               <h4>Services</h4>
+                               <ul class="mb_service_links">
+                                  <li>
+                                     <a href="/service">Mobile App</a>
+                                  </li>
+                                  <li>
+                                     <a href="/service?service_section=1"> Mobile ERP Solution</a>
+                                  </li>
+                                  <li>
+                                     <a href="/service?service_section=2">UI/UX Design </a>
+                                  </li>
+                                 
+                               </ul>
+                            </div>
+                         </div>                         
+                         <div class="col-lg-3 col-md-4 last">
+                            <div class="mb_footer_links">
+                               <h4>About Us</h4>
+                               <ul class="mb_service_links">
+                                  <li>
+                                     <a href="/about">About Us</a>
+                                  </li>
+                                  <li>
+                                     <a href="/contact"> Office Location Map </a>
+                                  </li>
+                                  <li>
+                                    <a href="/about?team_section=1">Team </a>
+                                  </li>                                 
+                                  <li>
+                                     <a href="/privacy-policy">Privacy Policy </a>
+                                  </li>
+                                  <li>
+                                    <a href="/terms-and-condition">Terms &amp; Conditions</a>
+                                 </li>
+                               </ul>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="mb_copy_right">
+                      <div class="mb_text">
+                         Copyright © 2024.All Rights Reserved By
+                         <a href="/">Mobiheal</a>
+                      </div>
+                      <ul class="social-icon">
+                         <li>
+                            <a href="https://www.facebook.com/profile.php?id=100089206841993&amp;mibextid=ZbWKwL" class="facebook">
+                            <i class="fa fa-facebook"></i>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="https://www.linkedin.com/in/mobiheal-technologies-164a11260" class="linkedin">
+                            <i class="fa fa-linkedin"></i>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="https://instagram.com/mobiheal.tech?igshid=YmMyMTA2M2Y=" class="instagram">
+                            <i class="fa fa-instagram"></i>
+                            </a>
+                         </li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+          </footer>
+       </section>
+    </xpath>
+ </template>
+ </odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="sh_update_agenda_wizard_action_form_view" model="ir.ui.view">
+            <field name="name">sh.update.agenda.wizard.form</field>
+            <field name="model">sh.update.agenda.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" placeholder="Write New Agenda Here"/>
+                                <field name="sh_talking_point_id" invisible='1'/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button string="Add" class="oe_highlight" type="object" name="update_agenda_record" data-hotkey="q"/>
+                        <button string="Discard" special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="sh_update_agenda_wizard_action" model="ir.actions.act_window">
+            <field name="name">Update Agenda</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sh.update.agenda.wizard</field>
+            <field name="target">new</field>
+            <field name="view_mode">form</field>
+        </record>
+
+    </data>
+</odoo>

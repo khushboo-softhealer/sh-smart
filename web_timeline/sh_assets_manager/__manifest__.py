@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+# Part of Softhealer Technologies.
+{
+    'name': 'Assets Manager',
+    'version': '16.0.1',
+    'summary': 'Assets Manager',
+    'author': 'Softhealer Technologies - Nayan',
+    'sequence': 10,
+    "license": "OPL-1",
+    'description': 'Assets Manager',
+    'category': 'Other',
+    'website': 'www.softhealer.com',
+    'depends': ['account', 'hr', 'mail', 'utm', 'sh_hr_dashboard'],
+    'data': [
+        'security/account_asset_security.xml',
+        'security/ir.model.access.csv',
+        'views/sh_asset_request_views.xml',
+        'views/sh_asset_type_views.xml',
+        'views/sh_asset_views.xml',
+        'report/sh_asset_templates.xml',
+        'report/sh_employee_wizard_templates.xml',
+        'views/hr_employee_views.xml',
+        "wizard/sh_emp_mass_update_wizard_views.xml",
+        "wizard/sh_assets_request_wizard_views.xml",
+        "wizard/sh_employee_wizard_views.xml",
+    ],
+    'demo': [],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}

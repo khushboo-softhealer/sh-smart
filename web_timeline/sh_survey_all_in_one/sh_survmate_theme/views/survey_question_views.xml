@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Survey Form -->
+    <record id="sh_survmate_theme_survey_question_form_inherit" model="ir.ui.view">
+        <field name="name">sh.survmate.theme.survey.question.form.inherit</field>
+        <field name="model">survey.question</field>
+        <field name="inherit_id" ref="survey.survey_question_form"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//page[@name='options']//group" position="after">
+        		<group string='Layout'>
+        			<group>
+        				<field name='sh_survmate_theme_grid_type'/>
+						<field name='sh_is_rating_question' attrs="{'invisible': [('question_type', '!=', 'simple_choice')]}"/>
+        			</group>
+        		</group>
+        	</xpath>
+        </field>
+    </record>
+</odoo>

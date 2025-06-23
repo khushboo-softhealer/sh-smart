@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_log_note_view" model="ir.ui.view">
+        <field name="name">sh.log.note</field>
+        <field name="model">sh.log.note</field>
+        <field name="arch" type="xml">
+            <form string="Add a log note">
+                <sheet>
+                    <field name="sh_description" nolabel="1"/>
+                    <footer>
+						<button string='Log' name="action_log" type="object" class="btn-primary"/>
+						<button string="Cancel" class="btn-default" special="cancel"/>
+					</footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="sh_log_note_action" model="ir.actions.act_window">
+		<field name="name">Add a log note</field>
+		<field name="res_model">sh.log.note</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+</odoo>

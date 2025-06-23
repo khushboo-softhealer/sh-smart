@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sh_module_bug_sequence" model="ir.sequence">
+            <field name="name">Module Bug Seq</field>
+            <field name="code">sh.bug.seq</field>
+            <field name="active">TRUE</field>
+            <field name="prefix">BUG</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  
+    <data>
+        <!-- Leave -->
+
+        <!-- <record id="hr_leave_rule_employee" model="ir.rule">
+            <field name="name">Leaves: employee: read all</field>
+            <field name="model_id" ref="hr_holidays.model_hr_leave"/>
+            <field name="domain_force">[('employee_id.user_id','=',user.id)]</field>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+        </record> -->
+
+        <record id="hr_holidays.hr_leave_rule_employee_update" model="ir.rule">
+            <field name="name">Leaves: employee: create/write/unlink not validated own</field>
+            <field name="model_id" ref="hr_holidays.model_hr_leave"/>
+            <field name="domain_force">[('employee_id.user_id','=',user.id),('state', 'in', ['draft', 'confirm', 'cancel', 'refuse'])]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+        <record id="hr_holidays.hr_leave_allocation_rule_officer_update" model="ir.rule">
+            <field name="name">Allocations: holiday user : create/write</field>
+            <field name="model_id" ref="hr_holidays.model_hr_leave_allocation"/>
+            <field name="domain_force">[
+                ('holiday_type', '=', 'employee'),('employee_id.user_id', '=', user.id)
+            ]</field>
+            <field name="groups" eval="[(4,ref('hr_holidays.group_hr_holidays_user'))]"/>
+        </record>
+
+
+        <record id="hr_holidays_hr_leave_rule_officer_update" model="ir.rule">
+            <field name="name">Leaves: officer: create/write/unlink own + managed employee + without department + same or managed department</field>
+            <field name="model_id" ref="hr_holidays.model_hr_leave"/>
+            <field name="domain_force">['|','|','|',('employee_id.user_id', '=', user.id), ('employee_id.coach_id.user_id', '=', user.id),('employee_id.coach_id.coach_id.user_id', '=', user.id),('employee_id.coach_id.coach_id.coach_id.user_id', '=', user.id)]</field>
+           <field name="perm_read" eval="True"/>
+            <field name="groups" eval="[(4, ref('hr_holidays.group_hr_holidays_user'))]"/>
+        </record>
+
+        <record id="hr_holidays.hr_leave_rule_employee_unlink" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+        <record id="hr_holidays.hr_leave_rule_officer_update" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+        <record id="hr_holidays.hr_leave_rule_responsible_read" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+        <record id="hr_holidays.hr_leave_rule_responsible_update" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+        <record id="hr_holidays.hr_leave_rule_user_read" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+
+
+        <!-- Leave Allocations -->
+
+        <record id="hr_holidays.hr_leave_allocation_rule_employee" model="ir.rule">
+            <field name="name">Allocations: employee: read own</field>
+            <field name="model_id" ref="hr_holidays.model_hr_leave_allocation"/>
+            <field name="domain_force">[
+                    ('employee_id.user_id', '=', user.id),
+            ]</field>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+        <record id="hr_holidays.hr_leave_allocation_rule_officer_read" model="ir.rule">
+            <field name="name">Allocations: officer: read all</field>
+            <field name="model_id" ref="hr_holidays.model_hr_leave_allocation"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="active" eval="False"/>
+            <field name="groups" eval="[(4, ref('hr_holidays.group_hr_holidays_user'))]"/>
+        </record>
+
+        <record id="hr_holidays.hr_leav_allocation_rule_employee_unlink" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+        <record id="hr_holidays.hr_leave_allocation_rule_employee_update" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+        <record id="hr_holidays.hr_leave_allocation_rule_multicompany" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+
+
+        <!-- Hide Multi Action -->
+
+        <record id="hr_holidays.action_manager_approval" model="ir.actions.server">
+            <field name="binding_model_id" eval="False" />
+        </record>
+
+        <record id="hr_holidays.action_hr_approval" model="ir.actions.server">
+            <field name="binding_model_id" eval="False" />
+        </record>
+
+        <!-- Remove Implied Ids -->
+
+        <record id="hr_holidays.group_hr_holidays_user" model="res.groups">
+            <field name="implied_ids" eval="[(3, ref('hr_attendance.group_hr_attendance_user'))]"/>
+        </record>
+    </data>
+
+
+
+</odoo>

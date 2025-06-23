@@ -1,0 +1,306 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_certificate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 07:15+0000\n"
+"PO-Revision-Date: 2020-10-21 07:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_certificate
+#: model:mail.template,report_name:sh_certificate.email_template_edi_letter
+msgid ""
+"${(object.name or '').replace('/','_')}${object.state == 'draft' and "
+"'_draft' or ''}"
+msgstr ""
+"${(object.name or '').replace('/','_')}${object.state == 'draft' and "
+"'_draft' or ''}"
+
+#. module: sh_certificate
+#: model:mail.template,subject:sh_certificate.email_template_edi_letter
+msgid "${object.name})"
+msgstr "${object.name})"
+
+#. module: sh_certificate
+#: model:ir.actions.report,print_report_name:sh_certificate.sh_letter_tmpl_report_action
+msgid "'report letter'"
+msgstr "'lettre de rapport'"
+
+#. module: sh_certificate
+#: model:mail.template,body_html:sh_certificate.email_template_edi_letter
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<p>Record</p>\n"
+"\t\t\t</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<p>Record</p>\n"
+"\t\t\t</div>\n"
+"            "
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_needaction
+msgid "Action Needed"
+msgstr "Action nécessaire"
+
+#. module: sh_certificate
+#: model:ir.model.fields.selection,name:sh_certificate.selection__sh_letter__state__approve
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Approved"
+msgstr "Approuvée"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: sh_certificate
+#: model:ir.model.fields.selection,name:sh_certificate.selection__sh_letter__state__cancel
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: sh_certificate
+#: model:ir.model,name:sh_certificate.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__content_html
+msgid "Content Html"
+msgstr "Contenu Html"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__create_uid
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__create_date
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__create_date
+msgid "Created on"
+msgstr "Créé sur"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__date
+msgid "Date"
+msgstr "Date"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__display_name
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__display_name
+msgid "Display Name"
+msgstr "Afficher un nom"
+
+#. module: sh_certificate
+#: model:ir.model.fields.selection,name:sh_certificate.selection__sh_letter__state__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: sh_certificate
+#: model:ir.model,name:sh_certificate.model_hr_employee
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__employee_id
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+msgid "Employee"
+msgstr "Employée"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_follower_ids
+msgid "Followers"
+msgstr "Suiveuses"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Abonnés (canaux)"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (partenaires)"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+msgid "Group By..."
+msgstr "Par groupe..."
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee__id
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner__id
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__id
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_needaction
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, les nouveaux messages nécessitent votre attention."
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si coché, certains messages ont une erreur de livraison."
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_is_follower
+msgid "Is Follower"
+msgstr "Est un suiveur"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter____last_update
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__write_uid
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__write_date
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: sh_certificate
+#: model:ir.actions.act_window,name:sh_certificate.sh_letter_menu_action
+#: model:ir.model,name:sh_certificate.model_sh_letter
+#: model:ir.model.fields,field_description:sh_certificate.field_hr_employee__letter_count
+#: model:ir.model.fields,field_description:sh_certificate.field_res_partner__letter_count
+#: model:ir.model.fields,field_description:sh_certificate.field_res_users__letter_count
+#: model:ir.ui.menu,name:sh_certificate.sh_letter_menuitem_root
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_tree
+msgid "Letter"
+msgstr "Lettre"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__letter_content_html
+msgid "Letter Content Html"
+msgstr "Contenu de la lettre Html"
+
+#. module: sh_certificate
+#: model:ir.actions.act_window,name:sh_certificate.sh_letter_template_menu_action
+#: model:ir.model,name:sh_certificate.model_sh_letter_template
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__letter_template
+#: model:ir.ui.menu,name:sh_certificate.sh_letter_template_menuitem_root
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_template_form
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_template_tree
+msgid "Letter Template"
+msgstr "Modèle de lettre"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.view_employee_inherit_form
+#: model_terms:ir.ui.view,arch_db:sh_certificate.view_partner_inherit_form
+msgid "Letters"
+msgstr "Des lettres"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe principale"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__name
+msgid "Main Subject"
+msgstr "Sujet principal"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur de livraison de message"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_ids
+msgid "Messages"
+msgstr "messages"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter_template__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec erreur de livraison"
+
+#. module: sh_certificate
+#: model:ir.model.fields,help:sh_certificate.field_sh_letter__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Nombre de messages non lus"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__sh_partner_id
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_filter
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__reference
+msgid "References"
+msgstr "Les références"
+
+#. module: sh_certificate
+#: model:ir.actions.report,name:sh_certificate.sh_letter_tmpl_report_action
+msgid "Report Letter"
+msgstr "Lettre de rapport"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Send by Email"
+msgstr "Envoyé par email"
+
+#. module: sh_certificate
+#: model_terms:ir.ui.view,arch_db:sh_certificate.sh_letter_form
+msgid "Set to Draft"
+msgstr "Définir sur brouillon"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__state
+msgid "Status"
+msgstr "Statut"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_unread
+msgid "Unread Messages"
+msgstr "Messages non lus"
+
+#. module: sh_certificate
+#: model:ir.model.fields,field_description:sh_certificate.field_sh_letter__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Compteur de messages non lus"

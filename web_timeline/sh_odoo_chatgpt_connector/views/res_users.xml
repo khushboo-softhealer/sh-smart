@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="sh_view_users_form_simple_inherit_modif" model="ir.ui.view">
+        <field name="name">res.users.preferences.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr.res_users_view_form_profile" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="ChatGpt" groups="sh_odoo_chatgpt_connector.chatgpt_group_user">
+                    <group>
+                        <group>
+                            <field name="enable_type_of_command" readonly="0"/>
+                            <field name="type_of_command_id" readonly="0" attrs="{'invisible':[('enable_type_of_command','=',False)]}"/>
+
+                            <field name="enable_type_of_language" readonly="0"/>
+                            <field name="type_of_language_id" readonly="0"  attrs="{'invisible':[('enable_type_of_language','=',False)]}"/>
+
+                            <field name="enable_translate_to_language" readonly="0"/>
+                            <field name="sh_translate_to_language" readonly="0"  attrs="{'invisible':[('enable_translate_to_language','=',False)]}"/>
+                            
+                            <field name="show_summary_button" readonly="0"/>
+                        </group>
+                        <group>
+                            <field name="enable_style" readonly="0"/>
+                            <field name="style_id" readonly="0"  attrs="{'invisible':[('enable_style','=',False)]}"/>
+                            <field name="enable_length" readonly="0"/>
+                            <field name="length_id"  readonly="0"  attrs="{'invisible':[('enable_length','=',False)]}"/>
+                            <field name="auto_generate_response" readonly="0"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

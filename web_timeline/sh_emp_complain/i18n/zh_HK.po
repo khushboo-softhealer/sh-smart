@@ -1,0 +1,766 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_emp_complain
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-24 12:51+0000\n"
+"PO-Revision-Date: 2020-09-24 12:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_emp_complain
+#: model:ir.ui.menu,name:sh_emp_complain.sh_complain_category_menu
+msgid " Complain Category"
+msgstr "投诉类别"
+
+#. module: sh_emp_complain
+#: model:mail.template,subject:sh_emp_complain.send_new_complain_notification_responsible_user
+msgid ""
+"${object.created_by.company_id.name} -Complain ${object.name} - "
+"${object.subject}"
+msgstr ""
+"${object.created_by.company_id.name} -抱怨 ${object.name} - "
+"${object.subject}"
+
+#. module: sh_emp_complain
+#: model:mail.template,subject:sh_emp_complain.send_complain_refused_notification_created_user
+msgid ""
+"${object.created_by.company_id.name} -Complain ${object.name} - "
+"${object.subject} - Refused"
+msgstr ""
+"${object.created_by.company_id.name} -抱怨 ${object.name} - "
+"${object.subject} - 拒绝"
+
+#. module: sh_emp_complain
+#: model:mail.template,subject:sh_emp_complain.send_complain_resolved_notification_created_user
+msgid ""
+"${object.created_by.company_id.name} -Complain ${object.name} - "
+"${object.subject} - Resolved"
+msgstr ""
+"${object.created_by.company_id.name} -抱怨 ${object.name} - "
+"${object.subject} - 解决"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>About Refused</b>"
+msgstr "<b>关于拒绝</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>About Resolved</b>"
+msgstr "<b>关于已解决</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Comment</b>"
+msgstr "<b>评论</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Complaint Category</b>"
+msgstr "<b>投诉类别</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Complaint Raised By</b>"
+msgstr "<b>投诉人</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Complain Description</b>"
+msgstr "<b>投诉说明</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Date Of Complain</b>"
+msgstr "<b>投诉日期</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Has Effect On</b>"
+msgstr "<b>对有影响</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Rating</b>"
+msgstr "<b>评分</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Refused By</b>"
+msgstr "<b>拒绝者</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Resolved By</b>"
+msgstr "<b>解决者</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Responsible Person</b>"
+msgstr "<b>负责人</b>"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "<b>Subject</b>"
+msgstr "<b>学科</b>"
+
+#. module: sh_emp_complain
+#: model:mail.template,body_html:sh_emp_complain.send_new_complain_notification_responsible_user
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/>\n"
+"\t\t\t<br/>\n"
+"\t\t\tComplain\n"
+"\t\t\t<b>${object.subject}</b>\n"
+"\t\t\t-\n"
+"\t\t\t<b>${object.name}</b>\n"
+"\t\t\tsubmitted by \n"
+"\t\t\t<b>${object.created_by.partner_id.name}</b>\n"
+"\t\t\t.\n"
+"\t\t\t<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div>\n"
+"\t\t\t<br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/>\n"
+"\t\t\t<br/>\n"
+"\t\t\tComplain\n"
+"\t\t\t<b>${object.subject}</b>\n"
+"\t\t\t-\n"
+"\t\t\t<b>${object.name}</b>\n"
+"\t\t\tsubmitted by \n"
+"\t\t\t<b>${object.created_by.partner_id.name}</b>\n"
+"\t\t\t.\n"
+"\t\t\t<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div>\n"
+"\t\t\t<br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: sh_emp_complain
+#: model:mail.template,body_html:sh_emp_complain.send_complain_refused_notification_created_user
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/><br/>\n"
+"\t\t\tYour Complain <b>${object.subject}</b> - <b>${object.name}</b> Refused by <b>${object.refused_by.name}</b>.<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div><br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/><br/>\n"
+"\t\t\tYour Complain <b>${object.subject}</b> - <b>${object.name}</b> Refused by <b>${object.refused_by.name}</b>.<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div><br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: sh_emp_complain
+#: model:mail.template,body_html:sh_emp_complain.send_complain_resolved_notification_created_user
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/><br/>\n"
+"\t\t\tYour Complain <b>${object.subject}</b> - <b>${object.name}</b> Resolved by <b>${object.resolved_by.name}</b> Successfully.<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div><br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\tHello There,\n"
+"\t\t\t<br/><br/>\n"
+"\t\t\tYour Complain <b>${object.subject}</b> - <b>${object.name}</b> Resolved by <b>${object.resolved_by.name}</b> Successfully.<br/>\n"
+"\t\t\t<div style=\"display: inline-block; margin: 15px 0px; text-align: center;\">\n"
+"\t\t\t<a href=\"/mail/view?model=sh.complain&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Click here to view</a>\n"
+"\t\t\t</div><br/>\n"
+"\t\t\tThank you.\n"
+"\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_needaction
+msgid "Action Needed"
+msgstr "需要采取的行动"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活动例外装饰"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活动类型图标"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_refuse_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_resolve_wizard_form_view
+msgid "Cancel"
+msgstr "取消"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Close"
+msgstr "关闭"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain__state__closed
+msgid "Closed"
+msgstr "关闭"
+
+#. module: sh_emp_complain
+#: model:ir.actions.report,name:sh_emp_complain.report_compain
+msgid "Complaint Report"
+msgstr "投诉报告"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: sh_emp_complain
+#: model:ir.actions.act_window,name:sh_emp_complain.sh_complain_view_actions
+#: model:ir.model,name:sh_emp_complain.model_sh_complain
+#: model:ir.ui.menu,name:sh_emp_complain.sh_complain_menu
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_refuse_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_resolve_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_tree_view
+msgid "Complain"
+msgstr "抱怨"
+
+#. module: sh_emp_complain
+#: model:ir.actions.act_window,name:sh_emp_complain.sh_complain_categories_view_actions
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__name
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_categorie_search_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_categories_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_categories_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Complain Categories"
+msgstr "投诉类别"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__complain_category
+msgid "Complain Category"
+msgstr "Categoría de quejas"
+
+#. module: sh_emp_complain
+#: model:ir.ui.menu,name:sh_emp_complain.sh_complain_management_menu
+msgid "Complain Management"
+msgstr "投诉类别"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__name
+msgid "Complain Sequence"
+msgstr "投诉顺序"
+
+#. module: sh_emp_complain
+#: model:ir.ui.menu,name:sh_emp_complain.sh_emp_complain_configure_menu
+msgid "Configuration"
+msgstr "配置"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__create_date
+msgid "Create Date"
+msgstr "建立日期"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__created_by
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Created By"
+msgstr "由...制作"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Created Date"
+msgstr "创建日期"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__create_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__create_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__create_uid
+msgid "Created by"
+msgstr "由...制作"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__create_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__create_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__create_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__department
+msgid "Department"
+msgstr "部"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__description
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Description"
+msgstr "描述"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__display_name
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__display_name
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__display_name
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__display_name
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_search_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_tree_view
+msgid "Effect"
+msgstr "影响"
+
+#. module: sh_emp_complain
+#: model:ir.actions.act_window,name:sh_emp_complain.sh_effect_model_view_actions
+#: model:ir.ui.menu,name:sh_emp_complain.sh_effect_model_menu
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_search_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_tree_view
+msgid "Effect On"
+msgstr "作用于"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.report_complain_view
+msgid "Employee Complain Report-"
+msgstr "员工投诉报告-"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_refuse_wizard_form_view
+msgid "Enter Refuse Comment"
+msgstr "输入拒绝评论"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_resolve_wizard_form_view
+msgid "Enter Resolve Comment"
+msgstr "输入解决评论"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__ref_comment
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__res_comment
+msgid "Enter your Comment"
+msgstr "输入您的评论"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_follower_ids
+msgid "Followers"
+msgstr "追随者"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "追随者（渠道）"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者（合作伙伴）"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "字体真棒图标任务"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_categorie_search_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_effect_model_search_view
+msgid "Group by..."
+msgstr "通过...分组..."
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__has_effect_on
+msgid "Has Effect On"
+msgstr "对有影响"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__3
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__3
+msgid "High"
+msgstr "高"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__id
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__id
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__id
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__id
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_exception_icon
+msgid "Icon"
+msgstr "图标"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "表示异常活动的图标。"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_needaction
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "如果选中，则需要注意新消息。"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果选中，则某些邮件有传递错误。"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_is_follower
+msgid "Is Follower"
+msgstr "是追随者"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__is_resolve
+msgid "Is Resolve"
+msgstr "决心"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain____last_update
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories____last_update
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard____last_update
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard____last_update
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model____last_update
+msgid "Last Modified on"
+msgstr "最后修改时间"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__write_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__write_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__write_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__write_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__write_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__write_date
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间："
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__0
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__0
+msgid "Low"
+msgstr "低"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "主要附件"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__5
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__5
+msgid "Max"
+msgstr "最高"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__4
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__4
+msgid "Maximum"
+msgstr "最大"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_has_error
+msgid "Message Delivery error"
+msgstr "邮件传递错误"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_ids
+msgid "Messages"
+msgstr "留言内容"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__2
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__2
+msgid "Minimum"
+msgstr "最低要求"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_effect_model__name
+msgid "Name"
+msgstr "名称"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain__state__new
+msgid "New"
+msgstr "新"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一个活动截止日期"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一个活动摘要"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一个活动类型"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_refuse_wizard__priority__1
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain_resolve_wizard__priority__1
+msgid "Normal"
+msgstr "正常"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_needaction_counter
+msgid "Number of Actions"
+msgstr "动作数"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_has_error_counter
+msgid "Number of errors"
+msgstr "错误数"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要采取措施的消息数"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "传递错误的邮件数"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读邮件数"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_refuse_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_resolve_wizard_form_view
+msgid "Ok"
+msgstr "行"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Post Complain"
+msgstr "投诉后"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__rating
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_refuse_wizard__priority
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_resolve_wizard__priority
+msgid "Rating"
+msgstr "评分"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Refuse"
+msgstr "垃圾"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain__state__refused
+msgid "Refused"
+msgstr "拒绝"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__refused_comment
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Refused Comment"
+msgstr "拒绝评论"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Refused Complain"
+msgstr "拒绝投诉"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Reset To Draft"
+msgstr "重置为草稿"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Resolve"
+msgstr "解决"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_form_view
+msgid "Resolve Comment"
+msgstr "解决评论"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain__state__resolve
+msgid "Resolved"
+msgstr "解决"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__resolved_comment
+msgid "Resolved Comment"
+msgstr "解决的评论"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Resolved Complain"
+msgstr "解决投诉"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__refused_by
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__resolved_by
+msgid "Responsible Person"
+msgstr "负责人"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__resp_persons
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain_categories__responsible_persons
+msgid "Responsible Persons"
+msgstr "负责人"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__activity_user_id
+msgid "Responsible User"
+msgstr "负责用户"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_tree_view
+msgid "Sequence"
+msgstr "序列"
+
+#. module: sh_emp_complain
+#: model:ir.model,name:sh_emp_complain.model_sh_complain_categories
+msgid "Sh Complain Categories"
+msgstr "Sh投诉类别"
+
+#. module: sh_emp_complain
+#: model:ir.model,name:sh_emp_complain.model_sh_complain_refuse_wizard
+msgid "Sh Complain Refuse Wizard"
+msgstr "嘘投诉拒绝向导"
+
+#. module: sh_emp_complain
+#: model:ir.model,name:sh_emp_complain.model_sh_complain_resolve_wizard
+msgid "Sh Complain Resolve Wizard"
+msgstr "Sh投诉解决向导"
+
+#. module: sh_emp_complain
+#: model:ir.model,name:sh_emp_complain.model_sh_effect_model
+msgid "Sh Effect"
+msgstr "Sh效应"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__state
+msgid "State"
+msgstr "州"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基于活动的状态\n"
+"逾期：截止日期已过\n"
+"今天：活动日期是今天\n"
+"计划：未来活动."
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__subject
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "Subject"
+msgstr "学科"
+
+#. module: sh_emp_complain
+#: model_terms:ir.ui.view,arch_db:sh_emp_complain.sh_complain_search_views
+msgid "To resolve Complain"
+msgstr "解决投诉"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,help:sh_emp_complain.field_sh_complain__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "记录的异常活动的类型。"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_unread
+msgid "Unread Messages"
+msgstr "未读邮件"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields,field_description:sh_emp_complain.field_sh_complain__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读邮件计数器"
+
+#. module: sh_emp_complain
+#: model:ir.model.fields.selection,name:sh_emp_complain.selection__sh_complain__state__waiting
+msgid "Waiting For Approval"
+msgstr "等待批准"
+
+#. module: sh_emp_complain
+#: model:ir.actions.act_window,name:sh_emp_complain.sh_complain_refuse_wizard_view_actions
+#: model:ir.actions.act_window,name:sh_emp_complain.sh_complain_resolve_wizard_view_actions
+msgid "resolve Comment"
+msgstr "解决评论"

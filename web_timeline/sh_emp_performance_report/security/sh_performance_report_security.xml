@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.module.category" id="module_sh_emp_performance_report">
+			<field name="name">Performance</field>
+			<field name="description">Performance</field>
+			<field name="sequence">20</field>
+		</record>
+
+		<record id="sh_emp_performance_report_group_user" model="res.groups">
+			<field name="name"> User </field>
+			<field name="category_id" ref="module_sh_emp_performance_report"/>
+			<field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+		</record>
+
+        <record id="sh_emp_performance_report_group_manager" model="res.groups">
+			<field name="name"> Manager </field>
+			<field name="category_id" ref="module_sh_emp_performance_report"/>
+			<field name="implied_ids" eval="[(4,ref('sh_emp_performance_report_group_user'))]"/>
+		</record>
+    </data>
+</odoo>

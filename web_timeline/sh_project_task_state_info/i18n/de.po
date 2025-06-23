@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_project_task_state_info
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-29 04:25+0000\n"
+"PO-Revision-Date: 2022-06-29 04:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__date_in
+msgid "Date In"
+msgstr "Datum in"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__date_in_by
+msgid "Date In By"
+msgstr "Datum in durch"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__date_out
+msgid "Date Out"
+msgstr "Datum"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__date_out_by
+msgid "Date Out By"
+msgstr "Datum von"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__day_diff
+msgid "Day Diff"
+msgstr "Tag diff"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: sh_project_task_state_info
+#: model_terms:ir.ui.view,arch_db:sh_project_task_state_info.view_stage_change_records_search
+msgid "Group By"
+msgstr "Gruppiere nach"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__id
+msgid "ID"
+msgstr "ICH WÜRDE"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt modifiziert auf"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: sh_project_task_state_info
+#: model:ir.model,name:sh_project_task_state_info.model_sh_project_task_info
+msgid "Project Task Information"
+msgstr "Projektaufgabeninformationen"
+
+#. module: sh_project_task_state_info
+#: model:res.groups,name:sh_project_task_state_info.sh_stage_change_history_group
+msgid "Show Stage Change History"
+msgstr "Historie zur Veränderung der Showwechsel"
+
+#. module: sh_project_task_state_info
+#: model:ir.actions.act_window,name:sh_project_task_state_info.stage_change_analysis_action
+#: model:ir.ui.menu,name:sh_project_task_state_info.menu_stage_change_analysis
+#: model_terms:ir.ui.view,arch_db:sh_project_task_state_info.view_stage_change_records_pivot
+#: model_terms:ir.ui.view,arch_db:sh_project_task_state_info.view_stage_change_records_search
+msgid "Stage Change Analysis"
+msgstr "Analyse der Stufeänderung"
+
+#. module: sh_project_task_state_info
+#: model_terms:ir.ui.view,arch_db:sh_project_task_state_info.view_project_task_form_inherit
+msgid "Stage Change History"
+msgstr "Bühnenveränderungsgeschichte"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_project_task__stage_history_line
+msgid "Stage History Line"
+msgstr "Bühnengeschichtenlinie"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__stage_name
+#: model_terms:ir.ui.view,arch_db:sh_project_task_state_info.view_stage_change_records_search
+msgid "Stage Name"
+msgstr "Künstlername"
+
+#. module: sh_project_task_state_info
+#: model_terms:ir.ui.view,arch_db:sh_project_task_state_info.view_stage_change_records_search
+msgid "Stage Task"
+msgstr "Bühnenaufgabe"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__stage_task_id
+msgid "Stage task"
+msgstr "Bühnenaufgabe"
+
+#. module: sh_project_task_state_info
+#: model:ir.model,name:sh_project_task_state_info.model_project_task
+msgid "Task"
+msgstr "Aufgabe"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__time_diff
+msgid "Time Diff"
+msgstr "Zeitdiff"
+
+#. module: sh_project_task_state_info
+#: model:ir.model.fields,field_description:sh_project_task_state_info.field_sh_project_task_info__total_time_diff
+msgid "Total Time Diff"
+msgstr "Gesamtzeit diff"

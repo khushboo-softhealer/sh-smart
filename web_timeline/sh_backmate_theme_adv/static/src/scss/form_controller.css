@@ -1,0 +1,7 @@
+button.btn.btn-outline-primary.sh_form_button_edit.dirty {
+  display: none;
+}
+
+button.btn.btn-outline-primary.sh_form_button_edit.saved {
+  display: block;
+}/*# sourceMappingURL=form_controller.css.map */

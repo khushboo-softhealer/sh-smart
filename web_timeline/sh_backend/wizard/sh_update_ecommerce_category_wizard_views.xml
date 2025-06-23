@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mass_update_product_ecommerce_category_form" model="ir.ui.view">
+        <field name="name">sh.update.ecommerce.category.wizard.form</field>
+        <field name="model">sh.update.ecommerce.category.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="ecommerce_catagory_ids" widget="many2many_tags"/>
+                    </group>
+                </group>
+                <footer>
+                    <button  string="Update Product Ecommerce Category"  class="oe_highlight" type="object" name="mass_update_ecommerce_category" />
+                    <button string="Cancel" class="btn btn-secondary" special="cancel" icon="fa-remove" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_mass_update_product_ecommerce_category" model="ir.actions.act_window">
+        <field name="name">Mass Update Product Ecommerce Category</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.update.ecommerce.category.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

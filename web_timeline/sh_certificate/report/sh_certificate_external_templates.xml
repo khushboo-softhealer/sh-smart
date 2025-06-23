@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sh_letter_template_doc">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-if="o.sh_layout_selection == 'with_layout'">
+                    <t t-call="web.external_layout">                
+                        <div class="page">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p style="font-size: 26px; font-weight: bold; text-align: center; margin: 0px; padding: 20px;" t-field="o.name" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="padding-left: 0px; padding-right: 0px;">
+                                        <t t-if="o.letter_content_html">
+                                            <style>
+                                                .col-12 p:first-child {
+                                                    text-align: right;
+                                                }
+                                            </style>
+                                            <div class="col-12" t-field="o.letter_content_html" style="padding-left: 40px; padding-top: 20px;" />
+                                        </t>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>            
+                <t t-else="">
+                    <t t-call="web.internal_layout">
+                            <div class="page">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p style="font-size: 26px; font-weight: bold; text-align: center; margin: 0px; padding: 20px;" t-field="o.name" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12" style="padding-left: 0px; padding-right: 0px;">
+                                            <t t-if="o.letter_content_html">
+                                                <style>
+                                                    .col-12 p:first-child {
+                                                        text-align: right;
+                                                    }
+                                                </style>
+                                                <div class="col-12" t-field="o.letter_content_html" style="padding-left: 40px; padding-top: 20px;" />
+                                            </t>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </t>
+                </t>
+               
+            </t>
+        </t>
+    </template>
+    <!-- Action -->
+    <record id="sh_letter_tmpl_report_action" model="ir.actions.report">
+        <field name="name">Report Letter</field>
+        <field name="model">sh.letter</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sh_certificate.sh_letter_template_doc</field>
+        <field name="report_file">sh_certificate.sh_letter_template_doc</field>
+        <field name="print_report_name">'report letter'</field>
+        <field name="binding_model_id" ref="model_sh_letter" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

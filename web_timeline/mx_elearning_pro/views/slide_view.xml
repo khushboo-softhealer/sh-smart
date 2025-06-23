@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_slide_slide_form_inherit_manprax" model="ir.ui.view">
+            <field name="name">slide.slide.form.inherit</field>
+            <field name="model">slide.slide</field>
+            <field name="inherit_id" ref="website_slides.view_slide_slide_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button name="action_publish" type="object" string="Publish" class="oe_highlight" attrs="{'invisible':[('is_published','=',True)]}"/>
+                        <button name="action_unpublish" type="object" string="Unpublish" class="oe_highlight" attrs="{'invisible':[('is_published','=',False)]}"/>
+                    </header>
+                </xpath>
+                <field name="is_preview" position="before">
+                   <label for="min_duration"/>
+                    <div>
+                        <field name="min_duration" widget="float_time" class="oe_inline"/>
+                        <span> hours</span>
+                    </div>
+                </field>
+                <field name="slide_category" position="after">
+                    <field name="is_tincan" attrs="{'invisible': [('slide_category', '!=', 'scorm')]}"/>
+                    <field name="tincan_xp" attrs="{'invisible': [('is_tincan', '!=', True)]}"/>
+                </field>
+            </field>
+        </record>
+        <record id="mx_view_slide_channel_form_inherit" model="ir.ui.view">
+            <field name="name">slide.channel.form</field>
+            <field name="model">slide.channel</field>
+            <field name="inherit_id" ref="website_slides.view_slide_channel_form"/>
+            <field name="arch" type="xml">
+                <page name="karma_rules" position="after">
+                    <page name="course_dependency" string="Dependent Courses">
+                        <field name="mx_slide_channel_ids">
+                            <tree editable="bottom">
+                                <field name="mx_course_id" domain="[('id', '!=', parent.id)]"/>
+                                <field name="mx_completion_percent" string="Completion Percent"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page name="learning_path" string="Learning Paths" attrs="{'invisible':[('channel_type', '=', 'learning_path')]}">
+                        <field name="learning_path_ids"/>
+                    </page>
+                </page>
+                <field name="slide_ids" position="attributes">
+                    <attribute name="attrs">{'invisible':[('channel_type','=','learning_path')]}</attribute>
+                </field>
+                <field name="slide_ids" position="after">
+                    <field name="channel_ids" attrs="{'invisible':[('channel_type','!=','learning_path')]}"
+                        domain="[('channel_type','!=','learning_path')]"/>
+                </field>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="start_date"/>
+                    <field name="end_date" />
+                    <field name="is_sequential" />
+                    <field name="is_timer" />
+                    <field name="intro_video_url" placeholder='e.g "www.youtube.com/watch?v=ebBez6bcSEc"' widget="url"/>
+                </xpath>
+                <xpath expr="//field[@name='enroll_group_ids']" position="after">
+                    <field name="enrollment_start_date"/>
+                    <field name="enrollment_end_date" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="mx_view_slide_slide_tree_report" model="ir.ui.view">
+            <field name="name">slide.slide.view.tree.report</field>
+            <field name="model">slide.slide</field>
+            <field name="inherit_id" ref="website_slides.slide_slide_view_tree_report"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='total_views']" position="after">
+                    <field name="completed_user_count" />
+                </xpath>
+                <xpath expr="//field[@name='completion_time']" position="after">
+                    <field name="completion_duration" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="statement_scorm_view_form" model="ir.ui.view">
+			<field name="name">Tincan Response View Form</field>
+			<field name="model">user.tincan.response</field>
+			<field name="arch" type="xml">
+				<form string="Tincan Response" create="0" edit="0">
+					<sheet>
+						 <group col="2">
+                            <group>
+                                <field name="channel_name"/>
+                                <field name="content_name" readonly="1"/>
+                                <field name="update_date" readonly="1" widget="date"/>
+                                <field name="user_name" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="question_name" readonly="1"/>
+                                <field name="attempts_count" readonly="1"/>
+                                <field name="response_type" readonly="1"/>
+                                <field name="chosen_choice" readonly="1"/>
+                                <field name="marks_allotted" readonly="1"/>
+                                <field name="check_answer" readonly="1"/>
+                            </group>
+                        </group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="tincan_response_view_tree" model="ir.ui.view">
+			<field name="name">statement.scorm.view.tree</field>
+			<field name="model">user.tincan.response</field>
+			<field name="arch" type="xml">
+				<tree string="Tincan Response" create="0">
+                    <field name="update_date" widget="date"/>
+                    <field name="channel_name"/>
+					<field name="content_name" />
+					<field name="question_name" />
+					<field name="response_type" />
+                    <field name="user_name" />
+                    <field name="chosen_choice" />
+                    <field name="attempts_count" />
+                    <field name="marks_allotted" />
+                    <field name="check_answer" />
+				</tree>
+			</field>
+		</record>
+        <record id="tincan_user_input_view_search" model="ir.ui.view">
+            <field name="name">user.tincan.response.search</field>
+            <field name="model">user.tincan.response</field>
+            <field name="arch" type="xml">
+                <search string="Tincan Responses">
+                    <field name="channel_name"/>
+                    <field name="content_name"/>
+                    <field name="user_name"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Course" name="group_by_channel" domain="[]" context="{'group_by': 'channel_name'}"/>
+                        <filter string="Content" name="group_by_content" domain="[]" context="{'group_by': 'content_name'}"/>
+                        <filter string="User" name="group_by_user" domain="[]" context="{'group_by': 'user_name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_tincan_response_reporting">
+            <field name="name">Tincan Responses</field>
+            <field name="res_model">user.tincan.response</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="tincan_response_view_tree"></field>
+            <field name="search_view_id" ref="tincan_user_input_view_search"/>
+            <field name="help" type="html">
+				<p class="o_view_nocontent_empty_folder">
+					Nobody has attempted questions yet!
+				</p>
+			</field>
+        </record>
+        <menuitem name="Tincan Responses"
+            id="menu_tincan_responses_reporting"
+            action="action_tincan_response_reporting"
+            parent="website_slides.website_slides_menu_report"
+            sequence="101"/>
+        
+        <record id="question_choice_view_graph" model="ir.ui.view">
+            <field name="name">question.choice.view.graph</field>
+            <field name="model">question.choice</field>
+            <field name="arch" type="xml">
+                <graph string="Graph of Contents" stacked="False" sample="1">
+                    <field name="question" type="row"/>
+                    <field name="choice" type="col"/>
+                    <field name="user_attempts_count" type="measure"/>
+                </graph>
+            </field>
+        </record>
+        <record id="question_choice_view_form" model="ir.ui.view">
+			<field name="name">Question Choice View Form</field>
+			<field name="model">question.choice</field>
+			<field name="arch" type="xml">
+				<form string="Tincan Choice" create="0" edit="0">
+					<sheet>
+						 <group col="2">
+                            <group>
+                                <field name="create_date" readonly="1" widget="date"/>
+                                <field name="question" readonly="1"/>
+                            </group>
+                            <group>
+                                <!-- <field name="resp_type" readonly="1"/> -->
+                                <field name="choice"/>
+                                <field name="user_attempts_count" readonly="1"/>
+                            </group>
+                        </group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="question_choice_view_tree" model="ir.ui.view">
+			<field name="name">question.choice.view.tree</field>
+			<field name="model">question.choice</field>
+			<field name="arch" type="xml">
+				<tree string="Tincan Choice" create="0">
+                    <field name="create_date" readonly="1" widget="date"/>
+                    <field name="question" readonly="1"/>
+					<!-- <field name="resp_type" readonly="1"/> -->
+                    <field name="choice" readonly="1"/>
+                    <field name="user_attempts_count" readonly="1"/>
+				</tree>
+			</field>
+		</record>
+        <record id="question_choice_input_view_search" model="ir.ui.view">
+            <field name="name">question.choice.search</field>
+            <field name="model">question.choice</field>
+            <field name="arch" type="xml">
+                <search string="Tincan Choice">
+                    <field name="question"/>
+                    <field name="choice"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Question" name="group_by_question" domain="[]" context="{'group_by': 'question'}"/>
+                        <filter string="Choice" name="group_by_choice" domain="[]" context="{'group_by': 'choice'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_question_choice_reporting">
+            <field name="name">Tincan Choice</field>
+            <field name="res_model">question.choice</field>
+            <field name="view_mode">graph,tree,form</field>
+            <field name="view_id" ref="question_choice_view_graph"></field>
+            <field name="search_view_id" ref="question_choice_input_view_search"/>
+            <field name="help" type="html">
+				<p class="o_view_nocontent_empty_folder">
+					Nobody has attempted questions yet!
+				</p>
+			</field>
+        </record>
+        <menuitem name="Tincan Choices"
+            id="menu_question_choice_reporting"
+            action="action_question_choice_reporting"
+            parent="website_slides.website_slides_menu_report"
+            sequence="102"/>
+
+
+        <!-- <record id="question_attempt_view_graph" model="ir.ui.view">
+            <field name="name">question.attempt.view.graph</field>
+            <field name="model">question.attempt.view</field>
+            <field name="arch" type="xml">
+                <graph string="Graph of Contents" stacked="False" sample="1">
+                    <field name="question" type="row"/>
+                    <field name="choice" type="col"/>
+                    <field name="user_attempts_count" type="measure"/>
+                </graph>
+            </field>
+        </record> -->
+        <record id="question_attempt_view_form" model="ir.ui.view">
+			<field name="name">Question Attempt View Form</field>
+			<field name="model">question.attempt.view</field>
+			<field name="arch" type="xml">
+				<form string="Question Attempt" create="0" edit="0">
+					<sheet>
+						 <group col="2">
+                            <group>
+                                <field name="create_date" readonly="1" widget="date"/>
+                                <field name="question" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="first_attempt_count" readonly="1"/>
+                                <field name="second_attempt_count" readonly="1"/>
+                                <field name="third_attempt_count" readonly="1"/>
+                                <field name="more_attempt_count" readonly="1"/>
+                                <field name="wrong_answer_count" readonly="1"/>
+                            </group>
+                        </group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="question_attempt_view_tree" model="ir.ui.view">
+			<field name="name">question.attempt.view.tree</field>
+			<field name="model">question.attempt.view</field>
+			<field name="arch" type="xml">
+				<tree string="Question Attempt" create="0">
+                    <field name="create_date" readonly="1" widget="date"/>
+                    <field name="question" readonly="1"/>
+					<field name="first_attempt_count" readonly="1"/>
+                    <field name="second_attempt_count" readonly="1"/>
+                    <field name="third_attempt_count" readonly="1"/>
+                    <field name="more_attempt_count" readonly="1"/>
+                    <field name="wrong_answer_count" readonly="1"/>
+				</tree>
+			</field>
+		</record>
+        <record id="question_attempt_input_view_search" model="ir.ui.view">
+            <field name="name">question.attempt.view.search</field>
+            <field name="model">question.attempt.view</field>
+            <field name="arch" type="xml">
+                <search string="Question Attempt">
+                    <field name="question"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Question" name="group_by_question" domain="[]" context="{'group_by': 'question'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_question_attempt_reporting">
+            <field name="name">Question Attempt</field>
+            <field name="res_model">question.attempt.view</field>
+            <field name="view_mode">graph,tree,form</field>
+            <field name="view_id" ref="question_attempt_view_tree"></field>
+            <field name="search_view_id" ref="question_attempt_input_view_search"/>
+            <field name="help" type="html">
+				<p class="o_view_nocontent_empty_folder">
+					Nobody has attempted questions yet!
+				</p>
+			</field>
+        </record>
+        <menuitem name="Tincan Question Attempt"
+            id="menu_question_attempt_reporting"
+            action="action_question_attempt_reporting"
+            parent="website_slides.website_slides_menu_report"
+            sequence="103"/>
+    </data>
+</odoo>

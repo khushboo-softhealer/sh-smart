@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="sh_res_partner_update_wizard_form_view" model="ir.ui.view">
+        <field name="name">sh.res.partner.mass.update.wizard.form</field>
+        <field name="model">sh.res.partner.mass.update.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Update Mass Wizard">
+                <group>
+                    <group string="Update Pricelist">
+                        <field name="update_pricelist_bool" />
+                        <field name="update_pricelist_id" attrs="{'invisible': [('update_pricelist_bool', '=', False)]}" />
+                    </group>
+                </group>
+                <footer>
+                    <button name="update_record" class="btn btn-primary" type="object" string="Done" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_res_partner_mass_pricelist_wizard_action" model="ir.actions.act_window">
+        <field name="name">Mass Update</field>
+        <field name="res_model">sh.res.partner.mass.update.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

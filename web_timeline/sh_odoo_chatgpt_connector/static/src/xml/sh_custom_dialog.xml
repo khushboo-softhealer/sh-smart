@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="sh_odoo_chatgpt_connector.shCustomDialog" owl="1">
+       
+        <Dialog size="props.size" title="props.title" withBodyPadding="false" modalRef="modalRef">
+            <div class="sh_custom_popup">
+            <div class="p-4">
+            <div class="d-flex  sh_custom_input_box">
+            <div class="sh_input_label_2">Input</div>
+                <textarea  class="input_data" t-att-value="props.context.input_data" />
+            </div>
+                <div class="d-flex align-items-center sh_custom_input_box">
+                <div class="sh_row mt-3">
+                <t t-esc="console.log('\n\n\n 14',typeof props.context.commands_dict)"/>
+                    <div class="sh_col" t-if="Object.keys(props.context.commands_dict).length != 0">
+                        <span title="select command to perform for above input" class="sh_dropdown_label"><b>Type of Command</b></span><br/>
+
+                        <select class="type_of_command form-select">
+                            <t t-foreach="props.context.commands_dict" t-as="command_id" t-key="command_id">
+                                        <!-- <div class=""> -->
+                                    <option t-att-id="'command_'+ command_id"  name="type_of_command" t-attf-selected="{{command_id == props.context.default_values[0]}}" t-att-value="command_id" >
+                                    <label t-att-for="'command_'+ command_id"><t t-esc="props.context.commands_dict[command_id]"/></label></option>
+                                        <!-- </div> -->
+                            </t>
+
+                                    <!-- <div class=""> -->
+                                <option  id="command_none" name="type_of_command" value="command_none" >
+                                <label for="command_none"></label></option>
+                                    <!-- </div> -->
+                        
+                        </select>
+
+                        
+                    </div>
+                    <div class="sh_col" t-if="Object.keys(props.context.languages_dict).length != 0">
+                        <span title="select language to perform for above input" class="sh_dropdown_label"><b>Type of Language</b></span><br/>
+
+                        <select class="type_of_language form-select">
+
+                            <t t-foreach="props.context.languages_dict" t-as="language_id" t-key="language_id">
+                                        <!-- <div class=""> -->
+                                    <option  t-att-id="'language_'+ language_id"  name="type_of_language" t-attf-selected="{{language_id == props.context.default_values[1]}}" t-att-value="language_id" >
+                                    <label t-att-for="'language_'+ language_id"><t t-esc="props.context.languages_dict[language_id]"/></label></option>
+                                        <!-- </div> -->
+                            </t>
+
+                                    <!-- <div class=""> -->
+                                <option  id="language_none" name="type_of_language" value="language_none" >
+                                <label for="language_none"></label></option>
+                                    <!-- </div> -->
+                            
+                        </select>
+                    </div>
+                    
+
+                    <div class="sh_col" t-if="Object.keys(props.context.lengths_dict).length != 0">
+                        <span title="select length to apply for above input" class="sh_dropdown_label"><b>Length</b></span><br/>
+
+                        <select class="length form-select">
+
+                            <t t-foreach="props.context.lengths_dict" t-as="length_id" t-key="length_id">
+                                        <!-- <div class=""> -->
+                                    <option  t-att-id="'length_'+ length_id"  name="length" t-attf-selected="{{length_id == props.context.default_values[2]}}" t-att-value="length_id">
+                                    <label t-att-for="'length_'+ length_id"><t t-esc="props.context.lengths_dict[length_id]"/></label></option>
+                                        <!-- </div> -->
+                            </t>
+
+                                    <!-- <div class=""> -->
+                                <option  id="length_none" name="length" value="length_none" >
+                                <label for="length_none"></label></option>
+                                    <!-- </div> -->
+                            
+                        </select>
+                    
+                    </div>
+                    <div class="sh_col" t-if="Object.keys(props.context.styles_dict).length != 0">
+                        <span title="select style to perform for above input" class="sh_dropdown_label"><b>Style</b></span><br/>
+
+                        <select class="style form-select">
+
+                            <t t-foreach="props.context.styles_dict" t-as="style_id" t-key="style_id">
+                                        <!-- <div class=""> -->
+                                    <option  t-att-id="'style_'+ style_id"  name="style" t-attf-selected="{{style_id == props.context.default_values[3]}}" t-att-value="style_id">
+                                    <label t-att-for="'style_'+ style_id"><t t-esc="props.context.styles_dict[style_id]"/></label></option>
+                                        <!-- </div> -->
+                            </t>
+
+                                    <!-- <div class=""> -->
+                                <option  id="style_none" name="style" value="style_none">
+                                <label for="style_none"></label></option>
+                                    <!-- </div> -->
+                            
+                        </select>
+                    
+                    </div>
+
+
+                    <div class="sh_col" t-if="Object.keys(props.context.translate_to_languages_dict).length != 0">
+                        <span title="In which language you want to show oputput" class="sh_dropdown_label"><b>Translate to Language</b></span><br/>
+
+                        <select class="translate_to_language form-select">
+                            <t t-foreach="props.context.translate_to_languages_dict" t-as="tra_to_lang_id" t-key="tra_to_lang_id">
+                                        <!-- <div class=""> -->
+                                    <option t-att-id="'tra_to_lang_'+ tra_to_lang_id"  name="translate_to_language" t-attf-selected="{{tra_to_lang_id == props.context.default_values[4]}}" t-att-value="tra_to_lang_id" >
+                                    <label t-att-for="'tra_to_lang_'+ tra_to_lang_id"><t t-esc="props.context.translate_to_languages_dict[tra_to_lang_id]"/></label></option>
+                                        <!-- </div> -->
+                            </t>
+
+                                    <!-- <div class=""> -->
+                                <option  id="tra_to_lang_none" name="translate_to_language" value="tra_to_lang_none" >
+                                <label for="tra_to_lang_none"></label></option>
+                                    <!-- </div> -->
+                        
+                        </select>
+
+                        
+                    </div>
+
+
+
+
+
+
+                    <div class="sh_col">
+                        <div class="sh_input_label">Key Words</div>
+                        <input type="text" class="key_words"/>
+                        </div>
+                </div>
+                </div>
+
+               
+                
+                <span class="sh_input_label_2">Output</span>
+                <div class="position-relative sh_textarea">
+                    <div id="sh_loading_bubble">
+                        <div class="sh_spinner">
+                            <div class="sh_bounce_1"></div>
+                            <div class="sh_bounce_2"></div>
+                            <div class="sh_bounce_3"></div>
+                        </div>
+                    </div>
+                    <textarea  class="output_data" style="height:400px;" t-att-value="props.context.default_output">
+                        
+                    </textarea><br />
+                </div>
+
+                <t t-set-slot="footer" owl="1">
+                    <button class="btn btn-primary" t-on-click="props._confirm" t-esc="props.confirmLabel" />
+                    <button class="btn btn-primary" t-on-click="props._preview" t-esc="props.previewLabel" />
+                    <button class="btn btn-secondary" t-on-click="props._cancel" t-esc="props.cancelLabel" />
+                </t>
+            </div>
+            </div>
+        </Dialog>
+    </t>
+</templates>

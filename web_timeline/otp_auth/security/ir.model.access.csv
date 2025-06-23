@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_website_otp_settings,website.otp.settings,model_website_otp_settings,website.group_website_designer,1,1,1,1
+access_send_otp,send.otp,model_send_otp,website.group_website_designer,1,1,1,1
+access_sh_signup_otp_email_all,sh.signup.otp.email.all,model_sh_signup_otp_email,,0,0,0,0
+access_sh_signup_otp_email_user,sh.signup.otp.email.user,model_sh_signup_otp_email,base.group_user,0,0,0,0
+access_sh_signup_otp_email_system,sh.signup.otp.email.system,model_sh_signup_otp_email,base.group_system,1,1,1,1

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="sh_update_timesheet_wizard_form_view" model="ir.ui.view">
+			<field name="name">sh.update.timesheet.wizard.form.view</field>
+			<field name="model">sh.update.timesheet.wizard</field>
+			<field name="arch" type="xml">
+				<form>
+					<group>
+						<group>
+							<field name="sh_timesheet_update_minutes" />
+							<field name="account_analytic_line_ids" widget='many2many_tags'
+								invisible='1' />
+						</group>
+						<group>
+							<field name="sh_update_type" widget='radio' />
+						</group>
+					</group>
+					<footer>
+						<button string='Update Timesheets' name="action_update_timesheets"
+							type="object" class="btn-primary" />
+						<button string="Cancel" class="btn-default" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+		<record id="sh_update_timesheets_wizard_action" model="ir.actions.act_window">
+			<field name="name">Update Timesheets</field>
+			<field name="res_model">sh.update.timesheet.wizard</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="sh_update_timesheet_wizard_form_view" />
+			<field name="target">new</field>
+		</record>
+	</data>
+</odoo>

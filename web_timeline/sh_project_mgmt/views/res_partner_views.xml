@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_project_mgmt_view_partner_form" model="ir.ui.view">
+        <field name="name">sh.project.mgmt.res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <div name="button_box" position="inside">
+                <!-- Smart Button: Project -->
+                <button
+                    name="show_customer_projects"
+                    class="oe_stat_button"
+                    type="object"
+                    icon="fa-puzzle-piece"
+                    attrs="{'invisible': [('sh_project_count', '=', 0)]}"
+                >
+                    <field string="Project" name="sh_project_count" widget="statinfo"/>
+                </button>
+            </div>
+
+            <!-- Add Fields In the Form View -->
+            <field name="function" position="before">
+                <field name="sh_project_mgmt_customer_type" />
+            </field>
+
+        </field>
+    </record>
+
+</odoo>

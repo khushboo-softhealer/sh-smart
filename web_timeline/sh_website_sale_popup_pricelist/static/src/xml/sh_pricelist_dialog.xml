@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <!-- These templates are accessible in Frontend -->
+    <main t-name="ShPricelistDialog">
+        <!-- <h2 class="modal-heading">Select Currency</h2> -->
+        <t t-if="ShWebsiteSalePriceLists">
+            <div class="d-flex justify-content-center flex-wrap sh_modal_body_div">
+                <t t-foreach="ShWebsiteSalePriceLists" t-as="pl">
+                    <a role="button" t-attf-data-pricelist_url="/sh_website_sale_popup_pricelist/change_pricelist/#{pl.id}" t-att-data-pricelist_id='pl.id' class="btn btn-secondary sh_currency_button js_cls_sh_currency_button">
+                        <t t-if="pl.show_image">
+                            <img t-attf-src="/web/image/product.pricelist/#{pl.id}/sh_website_sale_popup_pricelist_image/25x25" class="img img-fluid mx-auto d-inline" itemprop="image"></img>
+                        </t>
+                        <span class="switcher_pricelist d-inline" t-att-data-pl_id="pl.id" t-esc="pl.name" />
+                    </a>
+                </t>
+            </div>
+        </t>      
+    </main>
+</templates>

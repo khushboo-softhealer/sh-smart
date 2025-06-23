@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Sync (Draft) Moduels -->
+    <record id="sh_sync_module_cron" model="ir.cron">
+        <field name="name">Sync Modules</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_github_connector.model_sh_module" />
+        <field name="code">model._cron_sync_modules_from_queue()</field>
+        <field name="state">code</field>
+    </record>
+    <!-- Sync (Draft) Index -->
+    <record id="sh_sync_index_cron" model="ir.cron">
+        <field name="name">Sync Index</field>
+        <field name="interval_number">7</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_github_connector.model_sh_index_queue" />
+        <field name="code">model._sync_index_from_queue_cron()</field>
+        <field name="state">code</field>
+    </record>
+    <!-- Sync (In Progress) Index -->
+    <record id="sh_sync_in_progress_index_cron" model="ir.cron">
+        <field name="name">Sync In Progress Index</field>
+        <field name="interval_number">3</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_github_connector.model_sh_index_queue" />
+        <field name="code">model._cron_sync_in_progress_index()</field>
+        <field name="state">code</field>
+    </record>
+    <!-- Sync (Draft) Small Index -->
+    <record id="sh_sync_small_index_cron" model="ir.cron">
+        <field name="name">Sync Small Index</field>
+        <field name="interval_number">7</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_github_connector.model_sh_index_queue" />
+        <field name="code">model._cron_sync_small_index_from_queue()</field>
+        <field name="state">code</field>
+    </record>
+    <!-- Sync All Repos -->
+    <record id="sh_sync_all_repos_cron" model="ir.cron">
+        <field name="name">Sync All Repos</field>
+        <field name="interval_number">3</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_github_connector.model_sh_git_repo" />
+        <field name="state">code</field>
+        <field name="code">model._cron_sync_all_repos()</field>
+    </record>
+</odoo>

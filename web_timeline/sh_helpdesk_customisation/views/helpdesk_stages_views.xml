@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_helpdesk_stage_inherited_view_form" model="ir.ui.view">
+        <field name="name">sh.helpdesk.stages.inherit.view.form</field>
+        <field name="model">sh.helpdesk.stages</field>
+        <field name="inherit_id" ref="sh_helpdesk.sh_helpdesk_stages_form_view" />
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name='sh_visible_to_support_user']" position="after">
+                <field name="sh_res_users_ids" widget="many2many_tags"/>
+          </xpath>
+          <xpath expr="//field[@name='sh_portal_stage_name']" position="after" >
+                <field name="sh_helpdesk_ticket_type_id" />
+                <field name="sh_remove_responsible_user"/>
+          </xpath>
+        </field>
+    </record>
+</odoo>

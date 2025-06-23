@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="res.groups" id="group_sh_stop_quick_create_quick_m2o_field">
+            <field name="name">Allow Quick Create Many2one field</field>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]" />
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo> 
+        <record id='sh_project_task_timesheet_inherit_form' model="ir.ui.view">
+            <field name='name'>project.task.inherit</field>
+            <field name='model'>project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2" />
+            <field name="arch" type='xml'>
+                <xpath expr='//button[@name="action_dependent_tasks"]' position="before">
+
+                <button class="oe_stat_button" icon="fa-clock-o" name="action_open_related_timesheet" type="object">
+                    <div class="o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="timesheet_count" widget="float_time"/> Hours
+                        </span>
+                        <span class="o_stat_text">
+                            Timesheet
+                        </span>
+                    </div>
+                </button>
+                
+                </xpath>
+            </field>
+        </record>
+</odoo>

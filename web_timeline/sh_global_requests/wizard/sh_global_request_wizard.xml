@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Idea Approve views and action -->
+    <record id="sh_global_request_wizard_form_view" model="ir.ui.view">
+        <field name="name">sh.global.request.wizard.form</field>
+        <field name="model">sh.global.request.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Idea">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="request_type" invisible='1' />
+
+                            <field name="name"  attrs="{'invisible':[('request_type','in',['complain','idea'])]}"/>
+                            <field name="name" string='Subject'  attrs="{'invisible':[('request_type','not in',['complain','idea'])]}"/>
+
+                            <field name="sh_knowledge_sop_category_id" attrs="{'invisible':[('request_type','not in',['knowledge'])]}" />
+                            <field name="sh_sop_category_id" attrs="{'invisible':[('request_type','not in',['sop'])]}" />
+                            <field name="sh_complain_category" attrs="{'invisible':[('request_type','!=','complain')]}" />
+                            <field name="sh_idea_category" attrs="{'invisible':[('request_type','!=','idea')]}" />
+                            
+                            <field name='owner_ids' attrs="{'invisible':[('request_type','!=','sop')]}" widget='many2many_tags'/>
+                            <field name='manager_ids' attrs="{'invisible':[('request_type','!=','sop')]}" widget='many2many_tags'/>
+
+                        </group>
+                    </group>
+                    <group>
+                        <field name="sh_content" attrs="{'invisible':[('request_type','not in',['knowledge','sop'])]}" />
+                        <field name="sh_content" string='Description' attrs="{'invisible':[('request_type','not in',['idea','complain'])]}" />
+                    </group>
+                    <footer>
+                        <button name="create_request" string="Create" type="object" class="btn-primary" />
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+    <record id="sh_global_request_wizard_view_actions" model="ir.actions.act_window">
+        <field name="name">Global Request</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.global.request.wizard</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<odoo>
+	<!--  Hr Applicant Form view -->
+	<record id="sh_hr_placement_hr_applicant_form_view" model="ir.ui.view">
+		<field name="name">hr.applicant.form</field>
+		<field name="model">hr.applicant</field>
+		<field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form" />
+		<field name="arch" type="xml">
+			<field name="department_id" position="after">
+				<field name="sh_hr_placement_is_confirm" />
+				<field name="sh_hr_placement_schedule_datetime" />
+				<field name="reject_reason_id" />
+			</field>
+			<field name="type_id" position="after">
+				<field name="placement_id" />
+				<field name="college_id" />
+				<field name="interview_ids" widget="many2many_tags" />
+			</field>
+			<field name="medium_id" position="after">
+				<field name="interview_type" widget="radio" />
+			</field>
+		</field>
+	</record>
+
+	<!--  Hr Applicant Tree view -->
+	<record id="sh_hr_placement_hr_applicant_tree_view" model="ir.ui.view">
+		<field name="name">hr.applicant.tree</field>
+		<field name="model">hr.applicant</field>
+		<field name="inherit_id" ref="hr_recruitment.crm_case_tree_view_job"></field>
+		<field name="arch" type="xml">
+			<field name="stage_id" position="after">
+				<field name="sh_hr_placement_is_confirm" />
+				<field name="sh_hr_placement_schedule_datetime" />
+			</field>
+		</field>
+	</record>
+
+	<record id="sh_hr_applicant_inherit_kanban_view" model="ir.ui.view">
+		<field name="name">hr.applicant.inherit.view.form</field>
+		<field name="model">hr.applicant</field>
+		<field name="inherit_id" ref="hr_recruitment.hr_kanban_view_applicant" />
+		<field name="arch" type="xml">
+			<xpath expr="//templates//t//div//div[2]//div[2]" position="before">
+				<field name="sh_hr_placement_schedule_datetime" />
+				<div>
+					<b>
+						<field name="interview_type" />
+					</b>
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+	<!--Hr Applicant Search view-->
+	<record id="sh_hr_placement_hr_applicant_search_view" model="ir.ui.view">
+		<field name="name">
+			hr.applicant.search</field>
+		<field name="model">hr.applicant</field>
+		<field name="inherit_id" ref="hr_recruitment.hr_applicant_view_search_bis" />
+		<field name="arch" type="xml">
+			<search>
+				<filter string="Confirm" name="sh_hr_placement_is_confirm"
+					domain="[('sh_hr_placement_is_confirm', '=', True)]" />
+				<filter domain="[['interview_type','ilike','video']]" name="Interview Type"
+					string="Video Interview" />
+				<filter domain="[['interview_type','ilike','telephonic']]" name="Interview Type"
+					string="Telephonic Interview" />
+				<filter domain="[['interview_type','ilike','office']]" name="Interview Type"
+					string="Office Location Interview" />
+				<filter string="Today Interview" name="sh_hr_placement_today"
+					domain="[('sh_hr_placement_schedule_datetime', '&gt;', context_today().strftime('%Y/%m/%d 00:00:00')),('sh_hr_placement_schedule_datetime', '&lt;', context_today().strftime('%Y/%m/%d 23:59:59'))]" />
+				<filter string="Yesterday" name="sh_hr_placement_yesterday"
+					domain="[('sh_hr_placement_schedule_datetime','>=', ((context_today()-datetime.timedelta(days=1)).strftime('%Y-%m-%d 00:00:00'))), ('sh_hr_placement_schedule_datetime','&lt;=', ((context_today()+datetime.timedelta(days=0)).strftime('%Y-%m-%d 00:00:00')))]" />
+				<filter string="This Week Interview" name="current_week"
+					domain="[('sh_hr_placement_schedule_datetime', '&lt;=', ((context_today()+relativedelta(weeks=0, weekday=-1)).strftime('%Y-%m-%d'))), 
+('sh_hr_placement_schedule_datetime', '&gt;=', ((context_today()-relativedelta(weeks=1, weekday=0)).strftime('%Y-%m-%d')))]" />
+
+				<group expand="0" string="Group By">
+					<filter string="Confirm" name="sh_hr_placement_is_confirm"
+						context="{'group_by':'sh_hr_placement_is_confirm'}" />
+				</group>
+				<group expand="0" string="Group By">
+					<filter string="All Interviews" name="interview_type"
+						context="{'group_by':'interview_type'}" />
+				</group>
+				<group expand="0" string="Group By">
+					<filter string="Schedule" name="sh_hr_placement_schedule_datetime"
+						context="{'group_by':'sh_hr_placement_schedule_datetime'}" />
+				</group>
+				<group expand="0" string="Group By">
+					<filter string="Proposal Reject Reasons" name="reject_reason_id"
+						context="{'group_by':'reject_reason_id'}" />
+				</group>
+
+			</search>
+		</field>
+	</record>
+
+	<!-- CONFIRM ALL APPLICANT -->
+	<record id="sh_hr_placement_is_confirm_true" model="ir.actions.server">
+		<field name="name">Confirm All</field>
+		<field name="model_id" ref="model_hr_applicant" />
+		<field name="binding_model_id" ref="hr_recruitment.model_hr_applicant" />
+		<field name="state">code</field>
+		<field name="code">
+			if records:
+				records.write({'sh_hr_placement_is_confirm':True})
+		</field>
+	</record>
+
+	<!-- UNCONFIRM ALL APPLICANT -->
+	<record id="sh_hr_placement_is_confirm_false" model="ir.actions.server">
+		<field name="name">Unconfirm All</field>
+		<field name="model_id" ref="model_hr_applicant" />
+		<field name="binding_model_id" ref="hr_recruitment.model_hr_applicant" />
+		<field name="state">code</field>
+		<field name="code">
+			if records:
+				records.write({'sh_hr_placement_is_confirm':False})
+		</field>
+	</record>
+
+</odoo>

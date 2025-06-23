@@ -1,0 +1,17 @@
+<odoo>
+    <record id="sh_users_form_timer_view" model="ir.ui.view">
+        <field name="name">res.users</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="sh_notifications.sh_notification_res_users_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='notifications']" position="inside">
+                <group>
+                    <group string="Timer Update" name="timer_update">
+                        <field name="task_id" readonly="0" options="{'no_create':True,'no_create_edit':True}" />
+                        <field name="support_task_id" readonly="0" options="{'no_create':True,'no_create_edit':True}" />                        
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

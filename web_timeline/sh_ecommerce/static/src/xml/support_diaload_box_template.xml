@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="sh_ecommerce.shEcommerceSupportTemplate">
+        <div class="form-group row sh_support_button_custom_dialoag_wrapper"> 
+            <label class="col-sm-3 control-label" for="input_firstname">Name <span style='color:red;'>*</span></label>
+            <div class="col-sm-9 mb-3"> 
+                <input t-if='user_public' type="text" class="form-control" name="input_firstname" id="input_firstname" placeholder="Name..." value=''/> 
+                <input t-if='!user_public' type="text" class="form-control" name="input_firstname" id="input_firstname" placeholder="Name..." t-att-value='user_name'/>
+            </div> 
+
+            <label class="col-sm-3 control-label" for="input_productname">Product</label>
+            <div class="col-sm-9 mb-3" id="product_name_id"> 
+                <input type="text" class="form-control" name="input_product_name" id="input_product_name" t-att-value='product_name' readonly='readonly'/> 
+            </div> 
+
+            <label class="col-sm-3 control-label" for="input_productname">Version</label>
+            <div class="col-sm-9 mb-3" id="product_version"> 
+                <input type="text" class="form-control" name="input_version" id="input_version" t-att-value='version' readonly='readonly'/> 
+            </div> 
+
+            <label class="col-sm-3 control-label" for="input_contactno">Contact No.</label> 
+            <div class="col-sm-9 mb-3">
+                <input type="text" class="form-control" name="input_contactno" id="input_contactno" placeholder="Contact No..." t-att-value='mobile'/> 
+            </div>
+
+            <label class="col-sm-3 control-label" for="input_email">Email <span style='color:red;'>*</span></label> 
+            <div class="col-sm-9 mb-3">
+                <input type="email" class="form-control" name="input_email" id="input_eamil" placeholder="Email" t-att-value='email'/> 
+            </div> 
+
+            <label class="col-sm-3 control-label" for="input_message_for">Message <span style='color:red;'>*</span></label> 
+            <div class="col-sm-9 mb-3">
+                <textarea class="form-control" name="input_message_name" id="input_message" placeholder="Message..." ></textarea>                     
+            </div> 
+
+            <label class="col-sm-3 control-label" for="input_attachment" t-if='btn_origin != "demo_support"'>Attachment <span style='color:red;'>*</span></label> 
+            <div class="col-sm-9 mb-3 file_box" t-if='btn_origin != "demo_support"'>
+                <input type='file' id="ticket_attachment" class='image-uploader ticket_attachment' multiple="multiple"></input>                   
+            </div> 
+
+            <div class='col-sm-3'></div>
+            <div class='col-sm-9 sh_support_wrapper_warning'></div>
+        </div>
+
+    </t>
+</templates>

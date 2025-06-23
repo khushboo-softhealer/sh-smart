@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Add reason wizard -->
+    <record id="sh_attendance_modification_request_reason_form_view" model="ir.ui.view">
+        <field name="name">sh.attendance.modification.request.reason.form</field>
+        <field name="model">sh.attendance.modification.request.reason</field>
+        <field name="arch" type="xml">
+            <form string="Rejection Reason">
+                <sheet>
+                    <group>
+                        <field name="myreason" />
+                    </group>
+                    <footer>
+                        <button name="add_reason" class='btn-primary' id="addReason" string='Save Reason' type='object'></button>
+                        <button string='Remove Reason' class='btn-secondary' special="cancel"></button>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Add reason wizard Action -->
+    <record id="sh_attendance_modification_request_reason_action" model="ir.actions.act_window">
+        <field name="name">Rejection Reason</field>
+        <field name="res_model">sh.attendance.modification.request.reason</field>      
+        <field name="view_mode">form</field>
+        <field name='target'>new</field>
+    </record>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_action_send_mass_email_purchase" model="ir.actions.server">
+        <field name="name">Confirm Purchase Order</field>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="model_id" ref="purchase.model_purchase_order" />
+        <field name="binding_model_id" ref="purchase.model_purchase_order" />
+        <field name="code">
+            records.sh_mass_rfq_confirm()
+        </field>
+    </record>
+
+</odoo>

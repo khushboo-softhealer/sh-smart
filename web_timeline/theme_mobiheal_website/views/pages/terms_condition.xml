@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- HOME PAGE 2 -->
+  <template id="theme_mobiheal_website_terms_condition_tmpl" name="Read Our Terms &amp; Conditions for Mobiheal Technologies">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure">
+        <section class="mb_terms_and_condition_page o_colored_level" data-snippet="mb_our_terms_and_condition_tmpl" data-name="Terms and Condition" style="background-image: none;">
+          <div class="mb_terms_and_condition_heading">
+            <div class="container">
+              <img src="/theme_mobiheal_website/static/src/img/contact/contact_1.png" title="Read Our Terms &amp; Conditions for Mobiheal Technologies" alt="" class="mb_shapes mb_shape_one" loading="lazy"/>
+              <img src="/theme_mobiheal_website/static/src/img/contact/contact_2.png" title="Read Our Terms &amp; Conditions for Mobiheal Technologies" alt="" class="mb_shapes mb_shape_two" loading="lazy"/>
+              <div class="heading">
+                <h1 class="mb_title o_default_snippet_text">Terms &amp;amp;<span class="o_default_snippet_text"> Conditions</span></h1>
+              </div>
+            </div>
+          </div>
+          <div class="mb_terms_and_condition_content">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 o_colored_level">
+                  <div class="mb_terms_and_condition_text">
+                    <div class="mb_terms_and_condition_text_rules">
+                      <div class="mb_title sh_first">
+                        <div class="mb_icon">
+                          <img src="/theme_mobiheal_website/static/src/img/tcpage/arrow.png" title="Read Our Terms &amp; Conditions for Mobiheal Technologies" loading="lazy"/>
+                        </div>
+                        <div class="mb_heading o_default_snippet_text ">Definition of Apps &amp;amp; Custom Modules</div>
+                      </div>
+                      <div class="mb_text o_default_snippet_text">
+                        An “App” is a specialized group of features available for installation in the app list, and
+                        listed in the public pricing section of the Mobiheal website (https://mobiheal.tech). A
+                        custom module is a directory of source code files or a Python and Android-based set
+                        created in a database that adds features or changes the standard behavior of the apps.
+                        It may have been developed by the customer. For custom modules, customers have to
+                        pay extra costs and support charges separately.
+                      </div>
+                      <div class="mb_title">
+                        <div class="mb_icon">
+                          <img src="/theme_mobiheal_website/static/src/img/tcpage/arrow.png" title="Read Our Terms &amp; Conditions for Mobiheal Technologies" loading="lazy"/>
+                        </div>
+                        <div class="mb_heading o_default_snippet_text">Bugs and Errors</div>
+                      </div>
+                      <div class="mb_text o_default_snippet_text">
+                        A bug is defined as any failure within the apps or a custom module that leads to a complete
+                        stop, error traceback, or security breach, not directly caused by a defective installation or
+                        configuration. We are not responsible for the effects on the flow of our apps caused by any
+                        third-party modules. When developing custom apps, we adhere to Mobiheal's standard apps
+                        and flow.
+                      </div>
+                      <div class="mb_title">
+                        <div class="mb_icon">
+                          <img src="/theme_mobiheal_website/static/src/img/tcpage/arrow.png" title="Read Our Terms &amp; Conditions for Mobiheal Technologies" loading="lazy"/>
+                        </div>
+                        <div class="mb_heading o_default_snippet_text">Get Updates</div>
+                      </div>
+                      <div class="mb_text o_default_snippet_text">
+                        We will provide free updates for any custom module throughout the lifespan of the application.
+                        Your text is almost clear, but there are a couple of grammatical improvements.
+                      </div>
+                      <div class="mb_title">
+                        <div class="mb_icon">
+                          <img src="/theme_mobiheal_website/static/src/img/tcpage/arrow.png" title="Read Our Terms &amp; Conditions for Mobiheal Technologies" loading="lazy"/>
+                        </div>
+                        <div class="mb_heading o_default_snippet_text">Mobiheal Agile Support</div>
+                      </div>
+                      <div class="mb_text o_default_snippet_text">Mobiheal Agile Support provides 30 days of free support from the date of purchasing the
+                        application.</div>
+                      <ul>
+                        <li class="o_default_snippet_text">Support includes addressing errors encountered during the installation of the application.</li>
+                        <li class="o_default_snippet_text">If the flow does not work or does not behave as described in the index file, please let us
+                          know.</li>
+                        <li class="o_default_snippet_text">
+                          Please note that we are not responsible for any issues arising from the influence of
+                          third-party apps on the flow of our application.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+
+  <data noupdate="1">
+
+    <!-- Default pagese  below 2 record must put in no update 1-->
+    <record id="theme_mobiheal_website_terms_and_condition_page" model="website.page">
+        <field name="is_published">True</field>
+        <field name="url">/terms-and-condition</field>
+        <field name="view_id" ref="theme_mobiheal_website.theme_mobiheal_website_terms_condition_tmpl"/>
+        <field name="track">True</field>
+        <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+    </record>
+
+</data>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_helpdesk_project_task_form_view" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <field name="tag_ids" position="after">
+                <field name="is_manager" invisible="1" />
+                <field name="sh_ticket_ids" options="{'no_quick_create': True, 'no_create_edit': True}"  attrs="{'readonly':[('is_manager','=',False)]}" widget="many2many_tags" groups="sh_helpdesk.helpdesk_group_user" />
+            </field>
+        </field>
+    </record>
+</odoo>

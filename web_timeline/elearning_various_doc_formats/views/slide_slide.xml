@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_slide_slide_form_inherits" model="ir.ui.view">
+            <field name="name">slide.slide.form.inherits</field>
+            <field name="model">slide.slide</field>
+            <field name="inherit_id" ref="website_slides.view_slide_slide_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='source_type']" position="after">
+                    <field name="various_doc_formats"
+                           attrs="{'invisible': [('source_type', '!=', 'local_file'),('slide_category','!=','document')]}"/>
+                    <field name="type_viewer" string="Type Viewer"
+                           attrs="{'invisible': [('various_doc_formats', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='document_binary_content']" position="replace">
+                    <field name="filename"/>
+                    <field name="document_binary_content" string="" filename="filename"
+                           attrs="{
+                                                'invisible': ['|', ('source_type', '=', 'external'), ('slide_category', '!=', 'document')],
+                                                'readonly': ['|', ('source_type', '=', 'external'), ('slide_category', '!=', 'document')]}"/>
+
+
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

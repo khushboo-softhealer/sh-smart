@@ -1,0 +1,462 @@
+.o_web_client {
+    .o_action_manager {
+        .o_action {
+                &.sh_realtime_feedback_custom_class{
+                .o_control_panel {
+                    background: #ffffff;
+                    border-radius: 10px;
+                    margin: 10px 15px;
+                    margin-bottom: 10px;
+                    padding: 15px !important;
+                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                    padding: 1.5rem 16px !important;
+                    .o_cp_top{
+                        margin-bottom: 10px;
+                        .o_cp_top_left {
+                            .breadcrumb {
+                                .breadcrumb-item{
+                                    span {
+                                        color: #000 !important;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                        }
+                        .o_cp_top_right{
+                            .o_cp_searchview {
+                                .o_searchview {
+                                    border: 1px solid #ccc !important;
+                                    border-radius: 8px !important;
+                                    padding: 6px 5px !important;
+                                    &:focus,
+                                    &:hover {
+                                        border-color: $primaryColor !important;
+                                    }
+                                    .o_searchview_icon{
+                                        top: 11px !important;
+                                        right: 8px !important;
+                                        z-index: 99;
+                                    }
+                                }
+                            }                                
+                        }
+                    }
+                    .o_cp_bottom{
+                        @include media-breakpoint-down(md) {
+                            flex-direction: column  !important;
+                        }
+                        .o_cp_bottom_right{
+                            .o-dropdown{
+                                &.btn-group{
+                                    .btn-light{
+                                        background-color: transparent !important;
+                                        border-color: transparent;
+                                        font-weight: 600;
+                                        .fa{
+                                            font-weight: 600;
+                                        }
+                                    }
+                                }
+                            } 
+                            .o_cp_pager{
+                                display: none;
+                                .o_pager {
+                                   font-weight: 600;
+                                   .btn-group{
+                                        .btn-secondary{
+                                            background-color: transparent !important;
+                                            border-color: transparent;
+                                            font-weight: 600;
+                                            .fa{
+                                                font-weight: 600;
+                                            }
+                                        }
+                                   } 
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .o_content {
+                    overflow: hidden !important;
+                    @include media-breakpoint-down(md) {
+                        overflow: auto !important;
+                    }
+                    .feedback_panel_main {
+                        .left_side_panel{
+                            
+                            .feedback_panel_box {
+                                background: #ffffff;
+                                border-radius: 10px;
+                                padding: 0.6rem 16px;
+                                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                padding-bottom: 15px;
+    
+                                @include media-breakpoint-down(sm) {
+                                    margin: 5px 0 16px;
+                                    padding: 10px;
+                                }
+                                .feedback_panel_btn_box{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    @include media-breakpoint-down(sm) {
+                                        padding-top:5px;
+                                    }
+                                    .button_items{
+                                        .button_item{
+                                            a{
+                                                font-weight: 600;
+                                                font-size: 16px;
+                                                box-shadow: none !important;
+                                                &:hover{
+                                                    background-color: transparent !important;
+                                                    border-color: transparent !important;
+                                                    color: #495057 !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .feedback_massage_panel_main{
+                                    overflow: auto;
+                                    height: calc(100vh - 20rem);
+                                    &::-webkit-scrollbar{
+                                        width: 3px !important;
+                                    }
+                                    @include media-breakpoint-down(md) {
+                                        height: auto;
+                                    }
+                                    .massage_panel_box{
+                                        .massage_panel_date_box{
+                                            .massage_panel_date{
+                                                font-weight: bold !important;
+                                                text-align: center;
+                                                font-size: 15px;
+                                                margin: 5px 0 8px;
+                                            }
+                                        }
+                                        .feedback_items{
+                                            .feedback_item{
+                                                padding: 10px 15px;
+                                                border: 1px solid #bfbebe;
+                                                border-radius: 5px;
+                                                margin: 10px 0 10px;
+                                                margin-bottom: 0 !important;
+                                                @include media-breakpoint-down(sm) {
+                                                    padding:13px;
+                                                }
+                                                &.sh_feedback_highlight{
+                                                    background-color: rgba(189, 33, 38, 0.07);
+                                                }
+                                                .feedback_user_item{
+                                                    justify-content: space-between;
+                                                    .feedback_request_user_box{
+                                                        .feedback_request_user_label{
+                                                            width: 50px;
+                                                            height: 50px;
+                                                            margin-right: 15px;
+                                                            @include media-breakpoint-down(sm) {
+                                                                width: 40px;
+                                                                height: 40px;
+                                                            }
+                                                            img {
+                                                                width: 100%;
+                                                                height: 100%;
+                                                                object-fit: cover;
+                                                                border-radius: 10px;
+                                                            }
+                                                        }
+                                                        .feedback_request_user_text{
+                                                            .feedback_request_user_text_name{
+                                                                font-size: 15px;
+                                                                font-weight: bold;
+                                                                text-transform: capitalize;
+                                                            }
+                                                            .feedback_request_user_text_Date{
+                                                                font-size: 13px;
+                                                                font-weight: 600;
+                                                                color: #999999;
+                                                                text-transform: capitalize;
+                                                            }
+                                                        }    
+                                                    }
+                                                }
+                                                .feedback_request_user_extra_text{
+                                                    margin: 5px 0 5px;
+                                                    .feedback_request_user_extra_text_name{
+                                                        font-size: 17px;
+                                                        color: #000;
+                                                        font-weight: 500;
+                                                        text-transform: capitalize;
+                                                    }
+                                                    .feedback_request_user_extra_text_Date{
+                                                        font-size: 14px;
+                                                        color: #999999;
+                                                        font-weight: 600;
+                                                        text-transform: capitalize;
+                                                    }
+                                                    .dynamic_nested_kanban{
+                                                        padding:15px;
+                                                        border: 1px solid $secondaryColor;
+                                                        border-radius: 5px;
+                                                        margin: 15px 0 0px;
+                                                        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                                                        @include media-breakpoint-down(sm) {
+                                                            padding:13px;
+                                                        }
+                                                        .dynamic_nested_kanban_text{
+                                                            font-size: 13px;
+                                                            font-weight: 500;
+                                                            color: #000000;
+                                                            text-transform: capitalize;
+                                                            margin-top: 10px;
+                                                            .sh_request_feedback_input{
+                                                                border-radius: 5px !important;
+                                                            }
+                                                            .sh_postbtn{
+                                                                border-radius: 5px !important;
+                                                                margin-left: 5px !important;  
+                                                                background-color: #fff;
+                                                                color: #000;
+                                                                box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+                                                                transition: all 0.3s ease-in-out;
+                                                                &:hover{
+                                                                    transform: scale(1.1);
+                                                                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                                                                }                 
+                                                            }
+                                                        }
+                                                    }
+                                                    .dynamic_conditional_child_kanban {
+                                                        .child_kanban_user_item {
+                                                            margin: 15px 0 5px;
+                                                            padding: 12px 12px;
+                                                            border: 1px solid #e6e6e6;
+                                                            border-radius: 5px;
+                                                            .feedback_request_user_box {
+                                                            .feedback_request_user_label {
+                                                                width: 50px;
+                                                                height: 50px;
+                                                                margin-right: 15px;
+                                                                @include media-breakpoint-down(sm) {
+                                                                    width: 40px;
+                                                                    height: 40px;
+                                                                }
+                                                                img {
+                                                                    width: 100%;
+                                                                    height: 100%;
+                                                                    object-fit: cover;
+                                                                    border-radius: 10px;
+                                                                }
+                                                            }                        
+                                                            .feedback_request_user_text {
+                                                                .feedback_request_user_text_name {
+                                                                    font-size: 15px;
+                                                                    font-weight: bold;
+                                                                    text-transform: capitalize;
+                                                                }
+                                                                .feedback_request_user_text_Date {
+                                                                    font-size: 13px;
+                                                                    font-weight: 500;
+                                                                    color: #999999;
+                                                                    text-transform: capitalize;
+                                                                }
+                                                                }
+                                                            }
+                                                            .child_kanban_user_item_input{
+                                                                background-color:white; 
+                                                                border: none;
+                                                                outline: none;
+                                                                box-shadow: none;
+                                                                font-size: 16px;
+                                                                color: #000;
+                                                                font-weight: 500;
+                                                                text-transform: capitalize;
+                                                                margin-top: 20px;
+                                                                &:empty{
+                                                                    margin: 0 !important;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }                        
+                        .side_panel{
+                            position: fixed;
+                            right: 6px;
+                            @include media-breakpoint-down(md) {
+                                position: unset;
+                            }
+                            .pending_request_user_box_main {
+                                background: #ffffff;
+                                border-radius: 10px;
+                                padding: 0.6rem 16px 10px;
+                                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                margin: 0px 0 10px;
+                                
+                                .pending_request_user_time_box{
+                                    .pending_request_user_time_title{
+                                        border-bottom: 1px solid $secondaryColor;
+                                        padding-bottom: 13px;
+                                        padding-top: 10px;
+                                        .pending_request_user_title{
+                                            font-size: 17px;
+                                            font-weight: bold;
+                                            text-transform: capitalize;
+                                        }
+                                    }
+                                    .sh_scroll_bar_div{
+                                        overflow: auto;
+                                        max-height: calc(100vh - 22rem);
+                                        @include media-breakpoint-down(md) {
+                                            height: auto;
+                                        }
+                                        &::-webkit-scrollbar{
+                                            width: 3px !important;
+                                        }
+                                    }
+                                    .pending_request_user_box{
+                                        margin: 15px 0;
+                                        &:hover{
+                                            cursor: pointer;
+                                        }
+                                        .pending_request_user_label{
+                                            width: 16%;
+                                            height: 50px;
+                                            margin-right: 15px;
+                                            @include media-breakpoint-down(sm) {
+                                                
+                                                height: 40px;
+                                            }
+                                            img {
+                                                width: 100%;
+                                                height: 100%;
+                                                object-fit: cover;
+                                                border-radius: 10px;
+                                            }
+                                        }
+                                        .pending_request_user_text{
+                                            width: 80%;
+                                            .pending_request_user_text_name{
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                text-transform: capitalize;
+                                            }
+                                            .pending_request_user_text_Date{
+                                                font-size: 13px;
+                                                font-weight: 600;
+                                                color: #777777;
+                                                text-transform: capitalize;
+                                            }
+                                        }                                    
+                                    }
+                                }
+                            }
+                        }                        
+                    }
+                    .o_form_nosheet{
+                        &.sh_one_on_ones_form{
+                            &:empty{
+                                padding: 0 !important;
+                                margin: 0 !important;
+                            }
+                        }
+                    } 
+                    
+                    
+                }
+            }
+        }
+    }
+    &.sh_create_1o1s_wizard_class,
+    &.sh_givefeedback,
+    &.sh_requestfeedback {
+        .o_technical_modal{
+            &.modal:not([data-bs-backdrop="false"]) {
+                background-color: rgba(0, 0, 0, 0.75) !important;
+            }
+            .modal-dialog{
+                &.modal-lg{
+                    max-width: 680px !important;
+                    .modal-content{
+                        padding: 15px;
+                        border-radius: 10px;
+                        .modal-header{
+                            padding: 0 !important;                    
+                            padding-bottom: 15px !important;
+                            background: #fff !important;
+                            .modal-title {
+                                line-height: 14px;
+                                font-size: 14px;
+                                font-weight: 700;
+                                color: #4E4E4E !important;
+                            }
+                        }
+                        .modal-body{
+                            .o_form_view{
+                                background-color: #fff;
+                                .o_form_sheet_bg{
+                                    background-color: #FFF !important;      
+                                    border-color: transparent !important;                      
+                                    .o_form_sheet {
+                                        padding: 15px 0!important;
+                                        background-color: transparent !important;
+                                        padding-bottom: 0 !important;
+                                        .o_group {
+                                            .o_inner_group {
+                                                width: 100% !important;
+                                                padding: 0;
+                                                grid-template: unset;
+                                                .o_wrap_field {
+                                                    .o_wrap_input {
+                                                        .o_input{
+                                                            border: 1px solid #dedede;
+                                                            border-radius: 5px !important;
+                                                            transition: 0.2s all;
+                                                            &:hover, &:focus{
+                                                                border-color:  $primaryColor !important;
+                                                                background-image: none  !important;
+                                                            }
+                                                        }
+                                                        .o_field_text{
+                                                            > div{
+                                                                height: auto !important;
+                                                            }
+                                                            textarea{
+                                                                max-height: 200px !important;
+                                                                overflow: auto ;
+                                                                &::-webkit-scrollbar{
+                                                                    width: 2px !important;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .o_form_label {
+                                                    font-weight: 600 !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .modal-footer{
+                            padding: 0 !important;
+                            justify-content: unset !important;
+                            border: none !important;
+                        }
+                    }
+                }
+            }
+        }    
+    }    
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record model="ir.rule" id="sh_letter_template_company_rule">
+        <field name="name">Latter Tempalte multi-company</field>
+        <field name="model_id" ref="model_sh_letter_template" />
+        <field name="global" eval="True" />
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record model="ir.rule" id="sh_letter_company_rule">
+        <field name="name">Latter multi-company</field>
+        <field name="model_id" ref="model_sh_letter" />
+        <field name="global" eval="True" />
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <data noupdate="1">
+        <record id="sh_letter_seq" model="ir.sequence">
+            <field name="name">Letter Entry sequence</field>
+            <field name="code">letter.entry</field>
+            <field name="prefix">LT</field>
+            <field eval="1" name="number_next" />
+            <field eval="5" name="padding" />
+            <field eval="1" name="number_increment" />
+            <field eval="False" name="company_id" />
+        </record>
+    </data>
+</odoo>

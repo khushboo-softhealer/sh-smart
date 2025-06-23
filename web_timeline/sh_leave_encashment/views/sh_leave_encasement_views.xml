@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View sh.leave.encasement View Tree -->
+    <record id="view_sh_leave_encasement_tree" model="ir.ui.view">
+        <field name="name">view.sh.leave.encasement.tree</field>
+        <field name="model">sh.leave.encasement</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee"/>
+                <field name="contract_start"/>
+                <field name="contract_end"/>
+                <field name="total_leave" />
+                <field name="remaining_leave" />
+                <field name="leave_encasement" />
+                <field name="current_contract_id" readonly="1" />
+                <field name="stage" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- View sh.leave.encasement form -->
+    <record id="view_sh_leave_encasement_form" model="ir.ui.view">
+        <field name="name">view.sh.leave.encasement.form</field>
+        <field name="model">sh.leave.encasement</field>
+        <field name="arch" type="xml">
+            <form string="Sh Leave Encasement">
+                <header>
+                    <field name="stage" widget="statusbar" />
+                    <button string="Cancel Encasement" name="cancel_encasement" type="object" class="oe_highlight" attrs="{'invisible':[('stage','=','cancel')]}"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="employee"/>
+                        <h1>
+                            <field name="employee"/>
+                        </h1>
+                    </div>
+
+                    <group >
+                        <group >
+                            <field name="current_contract_id" />
+                            <field name="contract_start" />
+                            <field name="contract_end"/>
+                        </group>
+
+                        <group>
+                        <field name="total_leave" />
+                        <field name="remaining_leave" />
+                        <field name="leave_encasement" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View sh.leave.encasement search 
+    <record id="view_sh_leave_encasement_search" model="ir.ui.view">
+        <field name="name">view.sh.leave.encasement.search</field>
+        <field name="model">sh.leave.encasement</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record> -->
+
+    <!-- Action sh.leave.encasement -->
+    <record id="action_sh_leave_encasement" model="ir.actions.act_window">
+        <field name="name">Sh Leave Encasement</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.leave.encasement</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="sh_leave_encasement_menu" name="Leave Encasement" action="action_sh_leave_encasement" sequence="10"/>
+    <!-- parent="hr_holidays.menu_hr_holidays_root" -->
+    <!-- groups="hr.hr_group_manager" -->
+
+</odoo>

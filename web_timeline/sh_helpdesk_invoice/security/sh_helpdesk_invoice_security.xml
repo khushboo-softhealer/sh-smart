@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="sh_helpdesk_ticket_invoice" model="res.groups">
+        <field name="name">Invoice Helpdesk Ticket</field>
+    </record>
+</odoo>

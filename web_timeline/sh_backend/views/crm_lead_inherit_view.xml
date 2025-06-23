@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	 <!--  View as Lead -->
+	 <record id="crm_case_form_view_custom_inherit_leads" model="ir.ui.view">
+        <field name="name">crm.lead.form.custom.inherit.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+        	<field name="partner_id" position="after">
+        		<field name="product_id"/>
+        	</field>
+        </field>
+      </record>
+      
+      <!--  View As Group By in Lead -->
+      <record id="view_crm_case_leads_custom_inherit_filter" model="ir.ui.view">
+            <field name="name">crm.lead.search.custom.inherit.lead</field>
+            <field name="model">crm.lead</field>
+           	<field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
+            <field name="arch" type="xml">
+      			<xpath expr="//group/filter[@name='country']" position="after">
+      				<filter string="Lead" name="lead_id" context="{'group_by':'name'}" />
+      			</xpath>
+      		</field>
+   		</record>
+      		
+      <!--  View as Opportunity -->
+
+      <!-- same view as lead form view in odoo 16 -->
+
+      <!-- <record id="crm_case_form_view_custom_inherit_oppor" model="ir.ui.view">
+            <field name="name">crm.lead.form.custom.inherit.opportunity</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+   			<field name="partner_id" position="after">
+        		<field name="product_id"/>
+        	</field>
+        </field>
+      </record> -->
+      
+      <!--  View As Group By in Opportunity -->
+      <record id="view_crm_case_opportunities_custom_inherit_filter" model="ir.ui.view">
+            <field name="name">crm.lead.search.custom.inherit.opportunity</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+            <field name="arch" type="xml">
+      			<xpath expr="//group/filter[@name='country']" position="after">
+      				<filter string="Opportunity" name="opportunity_id" context="{'group_by':'name'}" />
+      			</xpath>
+      		</field>
+   		</record>
+
+</odoo>

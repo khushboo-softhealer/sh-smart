@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_leave_request_view_inherit" model="ir.ui.view">
+        <field name="name">sh.leave.request.view.inherit</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form" />
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="is_sick_leave" />
+                <field name="sh_leave_req_attachment"
+                    attrs="{'required':[('is_required_attach','=', True)], 'invisible':[('leave_type_support_document','=',False), ('is_sick_leave','=',False)]}" />
+                <field name="is_required_attach" invisible="1" />
+            </field>
+            <label for="supported_attachment_ids" position="replace">
+                <label for="supported_attachment_ids" invisible="1" />
+            </label>
+            <field name="supported_attachment_ids" position="replace">
+                <field name="supported_attachment_ids" invisible="1" />
+            </field>
+        </field>
+    </record>
+</odoo>

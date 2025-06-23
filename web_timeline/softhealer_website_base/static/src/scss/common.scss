@@ -1,0 +1,60 @@
+.o_website_livechat_button{
+    bottom:50px !important;
+}
+.o_PublicLivechatFloatingTextView_text{display: none !important;}
+#o_wblog_index_content #o_wblog_posts_loop .o_wblog_post_list_author div{display: none !important;}
+.o_kanban_view .o_theme_preview .o_button_area [name="button_remove_theme"]{display: none !important;}
+.cls_job_apply_form_sh{
+.radio-custom {
+                opacity: 0;
+                position: absolute;   
+            }
+            
+            .radio-custom, .radio-custom-label {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 5px;
+                cursor: pointer;
+            }
+            
+            .radio-custom-label {
+                position: relative;
+            }
+            
+            .radio-custom + .radio-custom-label:before {
+                content: '';
+                background: #fff;
+                border: 2px solid #ddd;
+                display: inline-block;
+                vertical-align: middle;
+                width: 26px;
+                height: 26px;
+                padding: 0px;
+                margin-right: 10px;
+                text-align: center;
+            }
+            
+            
+            .radio-custom + .radio-custom-label:before {
+                border-radius: 3px;
+                border-color:#CED4DA;
+            }
+            
+            .radio-custom:checked + .radio-custom-label:before {
+                content: "\f00c";
+                font-family: 'FontAwesome';
+                color: #564BC6;
+            }
+        }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

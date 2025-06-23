@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+       <record id="paypal_fee_product" model="product.product">
+            <field name="name">Paypal Fees</field>
+            <field name="default_code">PAYPAL_FEES</field>
+            <field name="taxes_id" eval="[Command.clear()]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_assign_new_version_wizard_form" model="ir.ui.view">
+        <field name="name">assign.new.version.wizard.form</field>
+        <field name="model">sh.assign.new.version.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <group>
+                    <group>
+                        <field name="version_ids" widget="many2many_tags" />
+                        <field name="product_ids" invisible="1" />
+                    </group>
+                </group>
+
+                <footer>
+                    <button string="Add New Versions" class="oe_highlight" type="object"
+                        name="assign_new_versions" />
+                    <button string="Cancel" class="btn btn-secondary" special="cancel"
+                        icon="fa-remove" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

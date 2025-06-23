@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="global_request_access_group" model="res.groups">
+            <field name="name">Allow Global Request</field>
+            <field name="users" eval="[(4, ref('base.user_admin'))]" />
+        </record>
+        <record id="allow_idea_global_request_access_group" model="res.groups">
+            <field name="name">Allow Idea Global Request</field>
+            <field name="users" eval="[(4, ref('base.user_admin'))]" />
+        </record>
+        <record id="allow_complain_request_access_group" model="res.groups">
+            <field name="name">Allow Complain Global Request</field>
+            <field name="users" eval="[(4, ref('base.user_admin'))]" />
+        </record>
+        <record id="allow_knowledge_request_access_group" model="res.groups">
+            <field name="name">Allow Knowledge Global Request</field>
+            <field name="users" eval="[(4, ref('base.user_admin'))]" />
+        </record>
+        <record id="allow_sop_request_access_group" model="res.groups">
+            <field name="name">Allow SOP Global Request</field>
+            <field name="users" eval="[(4, ref('base.user_admin'))]" />
+        </record>
+        <record id="allow_maintenance_request_access_group" model="res.groups">
+            <field name="name">Allow Maintenance Global Request</field>
+            <field name="users" eval="[(4, ref('base.user_admin'))]" />
+        </record>
+        <record id="allow_assignment_request_access_group" model="res.groups">
+            <field name="name">Allow Assignment Global Request</field>
+            <field name="users" eval="[(4, ref('base.user_admin'))]" />
+        </record>
+        <record id="allow_project_create_access_group" model="res.groups">
+            <field name="name">Allow Project Global Request</field>
+            <field name="users" eval="[(4, ref('base.user_admin'))]" />
+        </record>
+    </data>
+</odoo>

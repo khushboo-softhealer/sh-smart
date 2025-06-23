@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- <data> -->
+        <record id="sh_project_task_time_inherit_form_view" model="ir.ui.view">
+            <field name="name">project.task.time.form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2" />
+            <field name="arch" type="xml">
+
+                <!-- <xpath expr="//sheet/notebook" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_manager', '==', False)]}</attribute>
+                </xpath> -->
+                
+                <xpath expr="//field[@name='child_ids']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('is_manager','=',False)]}</attribute>
+                </xpath>
+
+                <!-- <xpath expr="//button[@name='%(portal.portal_share_action)d']" position="replace">
+                    <button name="%(portal.portal_share_action)d" groups="project.group_project_manager" string="Share" type="action" class="oe_highlight oe_read_only" />
+                </xpath> -->
+                <!-- <xpath expr="//button[@name='toggle_active']" position="replace">
+                    <button name="toggle_active" type="object" groups="base.group_user" class="oe_stat_button" icon="fa-archive" attrs="{'invisible':[('is_manager','=',False)]}">
+                        <field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+                    </button>
+                </xpath> -->
+
+
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button class="oe_stat_button" type="object" name="get_invoices" icon="fa-file"
+                    string="Invoices" groups="account.group_account_invoice" />
+            </xpath>
+
+
+            <field name="sale_line_id" position="before">
+                <field name="is_appstore_project" invisible="1" />
+                <field name="sh_sale_id" groups="sales_team.group_sale_salesman" attrs="{'invisible' : [('is_appstore_project','=',True)]}" />
+                <!-- added in baswe -->
+                <!-- <field name="account_move_id" groups="sales_team.group_sale_salesman"/> -->
+            </field>
+
+
+                <xpath expr="//header" position="inside">
+                    <field name="sh_is_preappstore_task" invisible="1" />
+                    <field name="end_task_bool" invisible="1" />
+                    <field name="start_task_bool" invisible="1" />
+                    <button name="action_task_start" string="Start Task" attrs="{'invisible': ['|',('start_task_bool','=',False),('project_id','=',False)]}" type="object" class="oe_highlight" />
+                    <button name="action_task_end" string="End Task" attrs="{'invisible': ['|',('start_task_bool','=', True),('project_id','=',False)]}" type="object" class="oe_highlight" />
+                    <button type="object" string="Add Users" class="oe_highlight" name="assign_user_to_current_task"   attrs="{'invisible': [('sh_is_preappstore_task','=',False)]}"  />
+                    <button class="btn btn-primary" name="action_sale_create_order" type="object" string="Create Sale Order" 
+                    groups="sales_team.group_sale_salesman" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sh_project_task_time_inherit_tree_view" model="ir.ui.view">
+            <field name="name">project.task.time.tree</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_tree2" />
+            <field name="arch" type="xml">
+                <field name="project_id" position="before">
+                    <field name="version_ids" widget="many2many_tags"  />
+                </field>
+                <field name="user_ids" position="after">
+                <field name="is_manager" invisible="1" />
+					<field name="sh_last_update_date" groups="sh_project_task_base.group_project_officer"/>
+					<field name="sh_no_of_days" groups="sh_project_task_base.group_project_officer"/>
+				</field>
+                <field name="stage_id" position="before">
+                    <field name="is_appstore_project" invisible="1"></field>
+                    <field name="sh_is_issue" attrs="{'readonly':[('is_manager','=',False)],'invisible':[('is_appstore_project','=', True)]}" />
+                </field>
+                <field name="priority" position="attributes">
+                    <attribute name="attrs">{'readonly':[('is_manager','=',False)]}</attribute>
+                </field>
+                 <field name="name" position="attributes">
+                    <attribute name="attrs">{'readonly':[('is_manager','=',False)]}</attribute>
+                </field>
+                 <field name="partner_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('is_manager','=',False)]}</attribute>
+                </field>
+                 <field name="parent_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('is_manager','=',False)]}</attribute>
+                </field>
+
+                <field name="user_ids" position="attributes">
+                    <attribute name="attrs">{'readonly':[('is_manager','=',False)]}</attribute>
+                </field>
+                 <field name="date_deadline" position="attributes">
+                    <attribute name="attrs">{'readonly':[('is_manager','=',False)],'invisible': [('is_closed', '=', True)]}</attribute>
+                </field>
+                 <field name="tag_ids" position="attributes">
+                    <attribute name="attrs">{'readonly':[('is_manager','=',False)]}</attribute>
+                </field>
+                <field name="rating_last_text" position="attributes">
+                    <attribute name="attrs">{'readonly':[('is_manager','=',False)]}</attribute>
+                </field>
+
+            </field>
+        </record>
+
+        <record id="sh_project_task_time_inherit_kanban_view" model="ir.ui.view">
+            <field name="name">project.task.time.kanban</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban" />
+            <field name="arch" type="xml">
+                <field name="user_ids" position="after">
+                    <!-- <field name="start_time" />
+                    <field name="task_running" />
+                    <field name="task_runner" />
+                    <field name="version_ids" />
+                    <field name="sh_product_counter"/> -->
+                    <field name="end_task_bool" invisible="1" />
+                    <field name="start_task_bool" invisible="1" />
+                    <!-- <field name="task_runner_ids" />
+                    <field name="responsible_user_names" /> -->
+                </field>
+                <!-- <xpath expr="//div[hasclass('o_kanban_record_body')]" position="after">
+                    <p>
+                        Versions:
+                        <field name="version_ids" />
+                    </p>
+                     <p>
+                        Scale:
+                        <field name="sh_scale_ids" />
+                    </p>
+                    <t t-if="record.is_appstore_project.raw_value">
+                        <span style="color:#721c24;">Total Downloads :  <field name="sh_product_counter"/> <br /></span>
+                    </t>
+                </xpath> -->
+
+                <!-- <xpath expr="//div[hasclass('oe_kanban_bottom_left')]" position="inside">
+                    <t t-foreach="record.task_runner_ids.raw_value" t-as="runner">
+                        <img t-att-src="kanban_image('res.users', 'image_small', runner)" t-att-title="record.responsible_user_names.raw_value" t-att-alt="runner" width="24" height="24" class="oe_kanban_avatar" />
+                    </t>
+                </xpath> -->
+
+                <xpath expr="//div[hasclass('oe_kanban_bottom_right')]" position="replace">
+                    <div>
+                        <button name="action_task_start" string="Start Task" attrs="{'invisible': ['|',('start_task_bool','=',False),('project_id','=',False)]}" title='Start' type="object" class="o_follow_btn o_following btn btn-xs btn-primary">
+                            <span class="fa fa-play"></span>
+                        </button>
+
+                        <button name="action_task_end" string="End Task" attrs="{'invisible': ['|',('start_task_bool','=', True),('project_id','=',False)]}" title='Stop' type="object" class="o_follow_btn o_following btn btn-xs btn-primary">
+                            <span class="fa fa-stop"></span>
+                        </button>
+                        <field name="kanban_state" widget="state_selection" groups="base.group_user" />
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sh_project_task_analytic_line_inherit_form_view" model="ir.ui.view">
+            <field name="name">project.task.analytic.line.form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='timesheet_ids']/tree//field[@name='date']" position="after">
+                    <field name="start_date" />
+                    <field name="end_date" />
+                    <field name="is_manager" invisible="1" />
+                </xpath>
+                <xpath expr="//field[@name='planned_hours']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('is_manager','=',False)]}</attribute> 
+                </xpath>
+                <!-- <field name="planned_hours" position="replace">
+                    <field name="planned_hours" widget="float_time" attrs="{'readonly':[('is_manager','=',False)]}" />
+                    <label for="subtask_planned_hours" groups="project.group_subtask_project" attrs="{'invisible': [('subtask_count', '=', 0)]}" />
+                    <div class="o_row" groups="project.group_subtask_project" attrs="{'invisible': [('subtask_count', '=', 0)]}">
+                        <field name="subtask_planned_hours" widget="float_time" />
+                        <span> planned hours</span>
+                    </div>
+                </field> -->
+
+                <field name="progress" position="replace">
+                    <field name="progress" widget="progressbar" attrs="{'readonly':[('is_manager','=',False)]}" />
+                </field>
+
+                <!-- <xpath expr="//page[@id='timesheets_tab']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('allow_timesheets', '=', False)],'readonly':[('is_manager','=',False)]}</attribute>
+                </xpath> -->
+
+                <field name="timesheet_ids" position="replace">
+                    <field name="timesheet_ids" mode="tree,kanban" attrs="{'readonly':[('is_manager','=',False)], 'invisible': [('analytic_account_active', '=', False)]}" context="{'default_project_id': project_id, 'default_name':''}">
+                        <tree editable="bottom" string="Timesheet Activities" default_order="date">
+                            <field name="date" />
+                            <field name="user_id" invisible="1" />
+                            <field name="employee_id" required="1" />
+                            <field name="name" />
+                            <field name="unit_amount" widget="timesheet_uom" />
+                            <field name="unit_amount_invoice" widget="timesheet_uom" groups="sh_project_task_base.group_project_officer,sh_project_mgmt.group_project_task_create" optional="hide"/>
+                            <field name="project_id" invisible="1" />
+                            <field name="task_id" invisible="1"/>
+                            <field name="company_id" invisible="1"/>
+                        </tree>
+                        <kanban class="o_kanban_mobile">
+                            <field name="date" />
+                            <field name="user_id" />
+                            <field name="unit_amount_invoice" groups="sh_project_task_base.group_project_officer,sh_project_mgmt.group_project_task_create" optional="hide"/>
+                            <field name="employee_id" />
+                            <field name="name" />
+                            <field name="unit_amount" />
+                            <field name="project_id" />
+                            <field name="task_id" invisible="1"/>
+
+                            <templates>
+                                <t t-name="kanban-box">
+                                    <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <field name="employee_id" widget="many2one_avatar_employee" context="{'active_test': True}"/>
+                                                <strong><span><t t-esc="record.employee_id.value"/></span></strong>
+                                            </div>
+                                            <div class="col-6 float-end text-end">
+                                                <strong><t t-esc="record.date.value"/></strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 text-muted">
+                                                <span><t t-esc="record.name.value"/></span>
+                                            </div>
+                                            <div class="col-6">
+                                                <span class="float-end text-end">
+                                                    <field name="unit_amount" widget="float_time"/>
+                                                    <field name="unit_amount_invoice" widget="float_time" groups="sh_project_task_base.group_project_officer,sh_project_mgmt.group_project_task_create" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </templates>
+                        </kanban>
+                        <form  string="Timesheet Activities">
+                            <sheet>
+                                 <group>
+                                    <field name="date"/>
+                                    <field name="user_id" invisible="1"/>
+                                    <field name="employee_id" required="1" widget="many2one_avatar_employee" context="{'active_test': True}"/>
+                                    <field name="name" required="0"/>
+                                    <field name="unit_amount" string="Duration" widget="float_time" decoration-danger="unit_amount &gt; 24"/>
+                                    <field name="unit_amount_invoice" string="Duration(Invoice)" widget="float_time" groups="sh_project_task_base.group_project_officer,sh_project_mgmt.group_project_task_create" />
+                                    <field name="project_id" invisible="1"/>
+                                    <field name="task_id" invisible="1"/>
+                                    <field name="company_id" invisible="1"/>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </field>
+                <field name="unit_amount" position="attributes">
+                    <attribute name="widget">float_time</attribute>
+                </field>
+                <field name="tag_ids" position="after">
+                    <field name="sh_scale_ids" widget="selection"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- <act_window
+            id="hr_timesheet.project_task_action_view_timesheet"
+            name="Timesheet Entries"
+            src_model="project.task"
+            res_model="account.analytic.line"
+            view_mode="tree"
+            groups="project.group_project_manager"
+            view_id="hr_timesheet.hr_timesheet_line_tree"
+            context="{
+                'search_default_task_id': [active_id],
+                'default_task_id': active_id,
+            }"
+        /> -->
+
+        <record id="project.action_view_task" model="ir.actions.act_window">
+            <field name="name">Tasks</field>
+            <field name="res_model">project.task</field>
+            <field name="view_mode">kanban,tree,form,calendar,pivot,graph,activity</field>
+            <field name="context">{'search_default_my_tasks': 1,'search_default_parent_only': 1}</field>
+            <field name="search_view_id" ref="project.view_task_search_form" />
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new task
+                </p>
+                <p>
+                    Odoo's project management allows you to manage the pipeline of your tasks efficiently.
+                    <br />
+                    You can track progress, discuss on tasks, attach documents, etc.
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="project_task_kanban_view_inherit">
+            <field name="name">Project Task Kanban Inherit</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban" />
+            <field name="arch" type="xml">
+                <kanban position="attributes">
+                    <attribute name="edit">false</attribute>
+                    <attribute name="quick_create">false</attribute>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="sh_project_task_inherit_search_view" model="ir.ui.view">
+            <field name="name">project.task.search.view</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_search_form" />
+            <field name="arch" type="xml">
+                <search>
+                    <filter string="Parent tasks" name="parent_only" domain="[('parent_id','=',False)]" />
+                </search>
+            </field>
+        </record>
+
+        <record id="project.act_project_project_2_project_task_all" model="ir.actions.act_window">
+            <field name="context">{'search_default_parent_only': 1, 'search_default_project_id': [active_id], 'default_project_id': active_id, } </field>
+            <field name="domain">[('project_id', '=', active_id)]</field>
+        </record>
+
+        <!-- Timesheet root menus -->
+        
+        <record id="hr_timesheet.timesheet_menu_root" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('hr_timesheet.group_hr_timesheet_user')), (4, ref('sh_project_task_base.group_project_officer'))]" />
+            <field name="parent_id" ref="project.menu_main_pm" />
+        </record>
+        
+        <record id="hr_timesheet.timesheet_menu_activity_all" model="ir.ui.menu">
+            <field name="groups_id" eval="[(3, ref('hr_timesheet.group_hr_timesheet_user')), (4, ref('sh_project_task_base.group_project_officer'))]" />
+        </record>
+    <!-- </data> -->
+</odoo>

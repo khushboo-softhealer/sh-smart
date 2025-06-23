@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Multi TnC Tree -->
+    <record id="sh_website_tnc_multi_tnc_tree_view" model="ir.ui.view">
+        <field name="name">sh.website.tnc.tree.view</field>
+        <field name="model">sh.website.tnc.multi</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="sh_website_multi_tnc_label" />
+                <field name="sh_website_multi_default_check" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Multi TnC Form -->
+    <record id="sh_website_tnc_multi_tnc_form_view" model="ir.ui.view">
+        <field name="name">sh.website.tnc.form.view</field>
+        <field name="model">sh.website.tnc.multi</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="sh_website_multi_tnc_label" />
+                            <field name="sh_website_multi_default_check" />
+                        </group>
+                        <br />
+                        <h6>Terms and Conditions</h6>
+                        <field name="sh_website_multi_tnc_terms_text" widget="html"
+                        options="{'style-inline': false, 'codeview': true}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Multi TnC search -->
+    <record id="sh_website_tnc_multi_tnc_search_view" model="ir.ui.view">
+        <field name="name">sh.website.tnc.search.view</field>
+        <field name="model">sh.website.tnc.multi</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" filter_domain="['|',('name', 'ilike', self),('sh_website_multi_tnc_label', 'ilike', self)]" />
+                <field name="sh_website_multi_tnc_label" filter_domain="[('sh_website_multi_tnc_label', 'ilike', self)]" />
+                <filter name="sh_website_multi_default_check" string="Default Check" domain="[('sh_website_multi_default_check','=',True)]" />
+                <filter name="sh_website_multi_default_check" string="Default Uncheck" domain="[('sh_website_multi_default_check','=',False)]" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Multi TnC Action -->
+    <record id="sh_website_tnc_multi_tnc_action" model="ir.actions.act_window">
+        <field name="name">Multi Terms and Conditions</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.website.tnc.multi</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

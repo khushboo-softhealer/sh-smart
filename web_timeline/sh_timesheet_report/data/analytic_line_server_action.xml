@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+     <!-- Action To Print Timesheet Entries -->
+    <record id="model_account_analytic_line_open_wizard" model="ir.actions.server">
+        <field name="name">Timesheet Entries</field>
+        <field name="model_id" ref="sh_timesheet_report.model_account_analytic_line"/>
+        <field name="binding_model_id" ref="hr_timesheet.model_account_analytic_line"/>
+        <field name="state">code</field>
+        <field name="code">action = records.open_wizard()</field>
+    </record>
+
+    <!-- Action To lock Timesheet  -->
+    <record id="model_account_analytic_line_lock_timesheet" model="ir.actions.server">
+        <field name="name">Lock Timesheet</field>
+        <field name="model_id" ref="sh_timesheet_report.model_account_analytic_line"/>
+        <field name="binding_model_id" ref="hr_timesheet.model_account_analytic_line"/>
+        <field name="state">code</field>
+        <field name="code">action = records.lock_timesheet()</field>
+        <field name="groups_id" eval="[(6,0,[ref('project.group_project_manager')])]" />
+    </record>
+
+    <!-- Action To Un-lock Timesheet  -->
+    <record id="model_account_analytic_line_unlock_timesheet" model="ir.actions.server">
+        <field name="name">Un-Lock Timesheet</field>
+        <field name="model_id" ref="sh_timesheet_report.model_account_analytic_line"/>
+        <field name="binding_model_id" ref="hr_timesheet.model_account_analytic_line"/>
+        <field name="state">code</field>
+        <field name="code">action = records.unlock_timesheet()</field>
+        <field name="groups_id" eval="[(6,0,[ref('project.group_project_manager')])]" />
+    </record>
+
+    <!-- Action To Billed Timesheet  -->
+    <record id="model_account_analytic_line_billed_timesheet" model="ir.actions.server">
+        <field name="name">Billed Timesheet</field>
+        <field name="model_id" ref="sh_timesheet_report.model_account_analytic_line"/>
+        <field name="binding_model_id" ref="hr_timesheet.model_account_analytic_line"/>
+        <field name="state">code</field>
+        <field name="code">action = records.billed_timesheet()</field>
+        <field name="groups_id" eval="[(6,0,[ref('account.group_account_manager')])]" />
+    </record>
+
+    <!--  Cron to Auto checkout -->
+    <data> 
+        <record model="ir.cron" id="sh_auto_lock_timesheet_cron">
+            <field name="name">Auto Lock Timesheet</field>
+            <field name="active" eval="True" />
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False" />
+            <field name="model_id" ref="sh_timesheet_report.model_account_analytic_line" />
+            <field name="state">code</field>
+            <field name="code">model.auto_lock_timesheet()</field>
+        </record>    
+
+    </data>
+    
+</odoo>

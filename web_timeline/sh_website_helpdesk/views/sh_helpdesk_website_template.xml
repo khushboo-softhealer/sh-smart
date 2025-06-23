@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="theme_mobiheal_website_helpdesk_form" name="Theme Mobiheal Helpdesk Form">
+        <t t-call="website.layout">
+            <div id="sh_website_support_banner" class="sh_website_other_page_banner">
+                <t t-set="contactus_form_values" t-value="{
+                    'name': request.params.get('name', ''),
+                    'phone': request.params.get('phone', ''),
+                    'email_from': request.params.get('email_from', ''),
+                }" />
+                <span class="hidden" data-for="frm_id" t-att-data-values="contactus_form_values" />
+                
+                <!-- Helpdesk Form banner start -->
+                <section class="mb_support_banner o_colored_level" data-snippet="mb_support_tmpl" data-name="EventHeal" style="background-image: none;">
+                    <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 o_colored_level">
+                        <div class="left_title">
+                        <h1 class="elementor-heading-title elementor-size-default">Helpdesk</h1>
+                        <p>To assist you promptly and effectively, please complete the following form with as much detail as possible. Your satisfaction is our top priority, and we look forward to resolving your issue.</p>		
+                        </div>
+                        </div>
+                        <div class="col-md-4 o_colored_level">
+                        <div class="right_img">
+                            <img src="/theme_mobiheal_website/static/src/img/support/support.webp" alt="Event Management In Mobile" loading="lazy" data-original-title="" title="" aria-describedby="tooltip106905" style=""/>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <!-- Helpdesk Form banner end -->
+
+                <section class="mb_support_form">
+                    <form action="/support/ticket/submit" id="frm_id" method="POST" class="container form-horizontal sh_website_helpdesk_form mt32" enctype="multipart/form-data" data-pre-fill="true">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <div class="mb_sub_box"> 
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <t t-set="readonly_name" t-value="False"/>
+                                        <t t-set="readonly_email" t-value="False"/>
+                                        <t t-if="request.env.user.has_group('base.group_portal') or request.env.user.has_group('base.group_user')">
+                                            <t t-set="readonly_name" t-value="True"/>
+                                            <t t-set="readonly_email" t-value="True"/>
+                                        </t>
+                                        <div t-attf-class="form-group #{error and 'contact_name' in error and 'has-error' or ''}">
+                                            <label class="form-label" for="contact_name">Name</label>
+                                            <input type="text" class="form-control" id="contact_name" name="contact_name" required="True" data-fill-with="name" t-att-readonly="readonly_name"/>
+                                            <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_name"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div name="email_from_container" t-attf-class="form-group #{error and 'email' in error and 'has-error' or ''}">
+                                            <label class="form-label" for="email">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" required="True" data-fill-with="email_form" t-att-readonly="readonly_email"/>
+                                            <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_email"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div name="mobile_from_container" t-attf-class="form-group #{error and 'mobile' in error and 'has-error' or ''}">
+                                            <label class="form-label" for="mobile">Mobile</label>
+                                            <input type="text" class="form-control" id="mobile" name="mobile" data-fill-with="phone"/>
+                                            <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_mobile"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div t-attf-class="form-group">
+                                            <label class="form-label" for="category">Category</label>
+                                            <select class="form-control form-field o_website_form_required_custom" id="category" name="category" required="True">
+                                                <option value="category" selected="True">Select Category</option>
+                                                <t t-foreach="request.env['sh.helpdesk.category'].sudo().search([])" t-as="category">
+                                                    <option t-att-data-name="category.name" t-att-value="category.id">
+                                                        <t t-esc="category.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                            <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_category"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div t-attf-class="form-group">
+                                            <label class="form-label" for="ticket_type">Ticket Type</label>
+                                            <!--  ++++++++++++++++++++++++++++++++++++++
+                     Get ticket
+                                            type from URL Query params
+                     in order to use it in contact us
+                                            page or any href link
+                       ++++++++++++++++++++++++++++++++++++++  -->
+                                            <t t-set="btn_type_id" t-value="ticket_type.get('ticket_type')"/>
+            
+                                            <select class="form-control form-field o_website_form_required_custom" id="ticket_type" name="ticket_type" required="True">
+                                                <option value="type" selected="True">Select Type</option>
+                                                <t t-foreach="request.env['sh.helpdesk.ticket.type'].sudo().search([('sh_display_in_frontend','=',True)])" t-as="type">
+                                                    <t t-if="btn_type_id == type.id">
+                                                        <option t-att-value="type.id" selected="True">
+                                                            <t t-esc="type.name"/>
+                                                        </option>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <option t-att-value="type.id">
+                                                            <t t-esc="type.name"/>
+                                                        </option>
+                                                    </t>
+                                                </t>
+                                            </select>
+            
+                                            <!--  ++++++++++++++++++++++++++++++++++++++
+                     Get ticket
+                                            type from URL Query params
+                     in order to use it in contact us
+                                            page or any href link
+                       ++++++++++++++++++++++++++++++++++++++  -->
+            
+                                            <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_type"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div id="products_div" class="o_hidden"/>
+                                    </div>
+                                    <div class="col-md-6" style="display: flex;align-items: center;">
+                                        <div id="invoice_div" class="o_hidden">
+                                            <label class="form-label" for="file">Invoice (Purchase Proof)</label>
+                                            <label class="custom-file">
+                                                <input name="invoice_file" id="invoice_file" type="file" multiple="multiple"/>
+                                                <span class="custom-file-control"/>
+                                            </label>
+                                            <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_invoice"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <div t-attf-class="form-group">
+                                            <label class="form-label" for="edition">Edition</label>
+                                            <select class="form-control form-field o_website_form_required_custom" id="edition" name="edition" required="True">
+                                                <option value="odoo_edition" selected="True">Select Edition</option>
+                                                <t t-foreach="request.env['sh.edition'].sudo().search([('sh_display_in_frontend','=',True)])" t-as="ed">
+                                                    <option t-att-value="ed.id">
+                                                        <t t-esc="ed.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                            <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_edition"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div t-attf-class="form-group">
+                                            <label class="form-label" for="edition">Odoo Hosted On</label>
+                                            <select class="form-control form-field o_website_form_required_custom" id="hosted" name="hosted" required="True">
+                                            </select>
+                                            <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_hosted"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div t-attf-class="form-group">
+                                            <label class="form-label" for="edition">Version</label>
+                                            <select class="form-control form-field o_website_form_required_custom" id="version" name="version" required="True">
+                                                <option value="odoo_version" selected="True">Select Version</option>
+                                                <t t-foreach="request.env['sh.version'].sudo().search([])" t-as="v">
+                                                    <option t-att-value="v.id">
+                                                        <t t-esc="v.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                            <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_version"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <!-- <div class="col-md-6">
+                                        <div t-attf-class="form-group">
+                                            <label class="form-label" for="priority">Priority</label>
+                                            <select class="form-control form-field o_website_form_required_custom" id="priority" name="priority">
+                                                <option value="ticket_priority" selected="True">Select Priority</option>
+                                                <t t-foreach="request.env['helpdesk.priority'].sudo().search([])" t-as="priority">
+                                                    <option t-att-value="priority.id">
+                                                        <t t-esc="priority.name" />
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-12">
+                                        <div t-attf-class="form-group #{error and 'description' in error and 'has-error' or ''}">
+                                            <label class="form-label" for="description">Description</label>
+                                            <textarea id="description" name="description" class="form-control form-field o_website_form_required_custom" placeholder="Description"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div name="file_container" t-attf-class="form-group #{error and 'file' in error and 'has-error' or ''}">
+                                            <label class="form-label" for="file">Attachments</label>
+                                            <label class="custom-file">
+                                                <input name="file" id="file" type="file" multiple="multiple" t-att-data-attachment-size="file_size"/>
+                                                <span class="custom-file-control"/>
+                                            </label>
+
+                                <input type="hidden" id="ticket_form_url" name="ticket_form_url" t-att-value="request.httprequest.url" /> 
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <!-- <div class="col-md-6">
+                                        <t t-if="google_recaptcha and google_captcha_site_key">
+                                            <script src="https://www.google.com/recaptcha/api.js"/>
+                                            <div t-attf-class="form-group #{error and 'description' in error and 'has-error' or ''}">
+                                                <label class="form-label" for="reCAPTCHA">reCAPTCHA</label>
+                                                <div class="g-recaptcha" t-attf-data-sitekey="#{google_captcha_site_key}"/>
+                                            </div>
+                                            <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_captcha"/>
+                                        </t>
+                                    </div> -->
+
+                    <!-- CODE BY KISHAN GHELANI -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                                    <input name="recaptcha_token_response" type="hidden" />
+
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_captcha"></p>
+                          
+                        </div>
+                    </div>
+                    
+                                    <div class="form-group mb_button">
+                                        <button id="submit_ticket" name="submit_ticket" class="btn btn-primary btn-lg">Submit Ticket <span class=" sh_link_right">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-right" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                    <polyline points="7 7 12 12 7 17"/>
+                                                    <polyline points="13 7 18 12 13 17"/>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+            
+                                
+                                </div>
+                            </form>
+        
+                        </section>
+                <section class="sh_supprt_section">
+                    <div class="container">
+                        <div class="sh_support">
+                            <div class="sh_support_row">
+                                <div class="row">
+                                    <div class="col-md-6 col-12 sh_support_time_col">
+                                        <div class="sh_support_time">
+                                            <div class="support_icon">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style></defs><title>Help &amp;amp; Support</title><rect class="cls-1" width="14" height="14"/><path class="cls-2" d="M12.76,7.74a8.85,8.85,0,0,0-.17-2.12A5.76,5.76,0,0,0,2.84,3,6.27,6.27,0,0,0,1.26,8.09a.34.34,0,0,0,.55.26c.13-.09.13-.22.13-.36A10.26,10.26,0,0,1,2,6.07a5.06,5.06,0,0,1,9.91-.19,8.69,8.69,0,0,1,.14,1.83c0,.81,0,1.62,0,2.42a1.12,1.12,0,0,1-1.24,1.2c-.51,0-1,0-1.53,0A.32.32,0,0,1,9,11.15a1,1,0,0,0-.92-.53H6.69a1.06,1.06,0,0,0-1.1,1.05,1,1,0,0,0,1.08,1.07H8.05A1,1,0,0,0,9,12.2.34.34,0,0,1,9.35,12h1.58a1.72,1.72,0,0,0,1.82-1.8c0-.57,0-1.15,0-1.73C12.75,8.23,12.75,8,12.76,7.74ZM8.13,12c-.5,0-1,0-1.52,0a.32.32,0,0,1-.33-.38.35.35,0,0,1,.38-.35H8.1a.33.33,0,0,1,.35.34A.32.32,0,0,1,8.13,12ZM5.55,6.3A.65.65,0,0,0,5,5.6a1.94,1.94,0,0,0-2,.74,2.85,2.85,0,0,0-.22,2.3A1.71,1.71,0,0,0,4.6,9.87c.73,0,1-.21,1-.93V7.7h0C5.55,7.24,5.56,6.77,5.55,6.3Zm-1,2.89a1.15,1.15,0,0,1-1.2-1.12,3.09,3.09,0,0,1,0-.91,1.17,1.17,0,0,1,1.29-.91c.16,0,.17.12.17.24V7.73c0,.39,0,.78,0,1.18C4.89,9.15,4.79,9.2,4.58,9.19Zm6.57-2.57a1.8,1.8,0,0,0-1.9-1.06.72.72,0,0,0-.79.79V7.7c0,.48,0,1,0,1.44A.64.64,0,0,0,9,9.83a1.87,1.87,0,0,0,2.19-1A2.94,2.94,0,0,0,11.15,6.62Zm-.53,1.53a1.14,1.14,0,0,1-1.23,1c-.18,0-.26,0-.25-.25,0-.4,0-.8,0-1.2s0-.83,0-1.24c0-.19.06-.25.25-.25a1.14,1.14,0,0,1,1.22,1A2.42,2.42,0,0,1,10.62,8.15Z" transform="translate(0 0)"/></svg>
+                                            </div>
+                                            <div class="support_content">
+                                                <h2 class="sh_support_content_h2">Support Hours</h2>
+                                                <p class="sh_support_content_p">Mon - Fri (10:00 AM IST, 7:00 PM IST)</p>
+                                            </div>
+                                            <div class="sub-div">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style></defs><title>Help &amp;amp; Support</title><rect class="cls-1" width="14" height="14"/><path class="cls-2" d="M12.76,7.74a8.85,8.85,0,0,0-.17-2.12A5.76,5.76,0,0,0,2.84,3,6.27,6.27,0,0,0,1.26,8.09a.34.34,0,0,0,.55.26c.13-.09.13-.22.13-.36A10.26,10.26,0,0,1,2,6.07a5.06,5.06,0,0,1,9.91-.19,8.69,8.69,0,0,1,.14,1.83c0,.81,0,1.62,0,2.42a1.12,1.12,0,0,1-1.24,1.2c-.51,0-1,0-1.53,0A.32.32,0,0,1,9,11.15a1,1,0,0,0-.92-.53H6.69a1.06,1.06,0,0,0-1.1,1.05,1,1,0,0,0,1.08,1.07H8.05A1,1,0,0,0,9,12.2.34.34,0,0,1,9.35,12h1.58a1.72,1.72,0,0,0,1.82-1.8c0-.57,0-1.15,0-1.73C12.75,8.23,12.75,8,12.76,7.74ZM8.13,12c-.5,0-1,0-1.52,0a.32.32,0,0,1-.33-.38.35.35,0,0,1,.38-.35H8.1a.33.33,0,0,1,.35.34A.32.32,0,0,1,8.13,12ZM5.55,6.3A.65.65,0,0,0,5,5.6a1.94,1.94,0,0,0-2,.74,2.85,2.85,0,0,0-.22,2.3A1.71,1.71,0,0,0,4.6,9.87c.73,0,1-.21,1-.93V7.7h0C5.55,7.24,5.56,6.77,5.55,6.3Zm-1,2.89a1.15,1.15,0,0,1-1.2-1.12,3.09,3.09,0,0,1,0-.91,1.17,1.17,0,0,1,1.29-.91c.16,0,.17.12.17.24V7.73c0,.39,0,.78,0,1.18C4.89,9.15,4.79,9.2,4.58,9.19Zm6.57-2.57a1.8,1.8,0,0,0-1.9-1.06.72.72,0,0,0-.79.79V7.7c0,.48,0,1,0,1.44A.64.64,0,0,0,9,9.83a1.87,1.87,0,0,0,2.19-1A2.94,2.94,0,0,0,11.15,6.62Zm-.53,1.53a1.14,1.14,0,0,1-1.23,1c-.18,0-.26,0-.25-.25,0-.4,0-.8,0-1.2s0-.83,0-1.24c0-.19.06-.25.25-.25a1.14,1.14,0,0,1,1.22,1A2.42,2.42,0,0,1,10.62,8.15Z" transform="translate(0 0)"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12 sh_support_time_col">
+                                        <div class="sh_support_time">
+                                            <div class="support_icon">
+                                               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style></defs><title>helpdesk timesheet</title><rect class="cls-1" width="14" height="14"/><path class="cls-2" d="M7,1.38A5.62,5.62,0,1,0,12.62,7,5.64,5.64,0,0,0,7,1.38ZM7,11.94a4.94,4.94,0,1,1,4.95-4.89A4.93,4.93,0,0,1,7,11.94ZM6.67,5.4V3.94c0-.23,0-.42.33-.42s.34.11.34.41c0,.82,0,1.65,0,2.47,0,.21.06.28.27.27H9.4c.29,0,.43.16.39.4a.32.32,0,0,1-.34.27H7c-.25,0-.33-.17-.33-.39Z" transform="translate(0 0)"/></svg>
+                                            </div>
+                                            <div class="support_content">
+                                                <h2 class="sh_support_content_h2">Response Time</h2>
+                                                <p class="sh_support_content_p">48 Hours (Working days)</p>
+                                            </div>
+                                            <div class="sub-div">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style></defs><title>helpdesk timesheet</title><rect class="cls-1" width="14" height="14"/><path class="cls-2" d="M7,1.38A5.62,5.62,0,1,0,12.62,7,5.64,5.64,0,0,0,7,1.38ZM7,11.94a4.94,4.94,0,1,1,4.95-4.89A4.93,4.93,0,0,1,7,11.94ZM6.67,5.4V3.94c0-.23,0-.42.33-.42s.34.11.34.41c0,.82,0,1.65,0,2.47,0,.21.06.28.27.27H9.4c.29,0,.43.16.39.4a.32.32,0,0,1-.34.27H7c-.25,0-.33-.17-.33-.39Z" transform="translate(0 0)"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div id="loading" class="sh_loading" style="display: none;"></div>
+            </div>
+        </t>
+    </template>
+
+
+
+    <template id="helpdesk_form" name="Helpdesk Form">
+        <t t-call="website.layout">
+            <div id="sh_website_support_banner" class="sh_website_other_page_banner">
+                <t t-set="contactus_form_values" t-value="{
+                    'name': request.params.get('name', ''),
+                    'phone': request.params.get('phone', ''),
+                    'email_from': request.params.get('email_from', ''),
+                }" />
+                <span class="hidden" data-for="frm_id" t-att-data-values="contactus_form_values" />
+                
+                <!-- Helpdesk Form banner start -->
+                <section id="sh_store_banner"
+                    class="sh_store_privacy_policy_banner sh_other_page_banner">
+                    <div class="container">
+                        <div class="sh_banner_content">
+                            <h1 class="sh_banner_title">Helpdesk</h1>
+                            <ul class="sh_banner_breadcrumb">
+                                <li>
+                                    <a class="sh_banner_breadcrumb_link" href="/">Home <span
+                                            class="sh_banner_breadcrumb_icon fa fa-angle-right"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <span class="sh_banner_normal_text">Support</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- Helpdesk Form banner end -->
+
+                <form action="/support/ticket/submit" id="frm_id" method="POST" class="container form-horizontal sh_website_helpdesk_form mt32" enctype="multipart/form-data" data-pre-fill="true">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <t t-set="readonly_name" t-value="False" />
+                            <t t-set="readonly_email" t-value="False" />
+                            <t t-if="request.env.user.has_group('base.group_portal') or request.env.user.has_group('base.group_user')">
+                                <t t-set="readonly_name" t-value="True" />
+                                <t t-set="readonly_email" t-value="True" />
+                            </t>
+                            <div t-attf-class="form-group #{error and 'contact_name' in error and 'has-error' or ''}">
+                                <label class="form-label" for="contact_name">Name</label>
+                                <input type="text" class="form-control" id="contact_name" name="contact_name" required="True" data-fill-with="name" t-att-readonly="readonly_name" />
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_name"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div name="email_from_container" t-attf-class="form-group #{error and 'email' in error and 'has-error' or ''}">
+                                <label class="form-label" for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required="True" data-fill-with="email_form" t-att-readonly="readonly_email" />
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_email"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div name="mobile_from_container" t-attf-class="form-group #{error and 'mobile' in error and 'has-error' or ''}">
+                                <label class="form-label" for="mobile">Mobile</label>
+                                <input type="text" class="form-control" id="mobile" name="mobile" data-fill-with="phone" />
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_mobile"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div t-attf-class="form-group">
+                                <label class="form-label" for="category">Category</label>
+                                <select class="form-control form-field o_website_form_required_custom" id="category" name="category" required="True">
+                                    <option value="category" selected="True">Select Category</option>
+                                    <t t-foreach="request.env['sh.helpdesk.category'].sudo().search([])" t-as="category">
+                                        <option t-att-data-name="category.name" t-att-value="category.id">
+                                            <t t-esc="category.name" />
+                                        </option>
+                                    </t>
+                                </select>
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_category"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div t-attf-class="form-group">
+                                <label class="form-label" for="ticket_type">Ticket Type</label>
+                                <!--  ++++++++++++++++++++++++++++++++++++++
+         Get ticket
+                                type from URL Query params
+         in order to use it in contact us
+                                page or any href link
+           ++++++++++++++++++++++++++++++++++++++  -->
+                                <t t-set="btn_type_id" t-value="ticket_type.get('ticket_type')" />
+
+                                <select class="form-control form-field o_website_form_required_custom" id="ticket_type" name="ticket_type" required="True">
+                                    <option value="type" selected="True">Select Type</option>
+                                    <t t-foreach="request.env['sh.helpdesk.ticket.type'].sudo().search([('sh_display_in_frontend','=',True)])" t-as="type">
+                                        <t t-if="btn_type_id == type.id">
+                                            <option t-att-value="type.id" selected="True">
+                                                <t t-esc="type.name" />
+                                            </option>
+                                        </t>
+                                        <t t-else="">
+                                            <option t-att-value="type.id">
+                                                <t t-esc="type.name" />
+                                            </option>
+                                        </t>
+                                    </t>
+                                </select>
+
+                                <!--  ++++++++++++++++++++++++++++++++++++++
+         Get ticket
+                                type from URL Query params
+         in order to use it in contact us
+                                page or any href link
+           ++++++++++++++++++++++++++++++++++++++  -->
+
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_type"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div id="products_div" class="o_hidden"></div>
+                        </div>
+                        <div class="col-md-6" style='display: flex;align-items: center;'>
+                            <div id="invoice_div" class="o_hidden">
+                                <label class="form-label" for="file">Invoice (Purchase Proof)</label>
+                                <label class="custom-file">
+                                    <input name="invoice_file" id="invoice_file" type="file" multiple="multiple" />
+                                    <span class="custom-file-control" />
+                                </label>
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_invoice"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <div t-attf-class="form-group">
+                                <label class="form-label" for="edition">Edition</label>
+                                <select class="form-control form-field o_website_form_required_custom" id="edition" name="edition" required="True">
+                                    <option value="odoo_edition" selected="True">Select Edition</option>
+                                    <t t-foreach="request.env['sh.edition'].sudo().search([('sh_display_in_frontend','=',True)])" t-as="ed">
+                                        <option t-att-value="ed.id">
+                                            <t t-esc="ed.name" />
+                                        </option>
+                                    </t>
+                                </select>
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_edition"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div t-attf-class="form-group">
+                                <label class="form-label" for="edition">Odoo Hosted On</label>
+                                <select class="form-control form-field o_website_form_required_custom" id="hosted" name="hosted" required="True">
+                                </select>
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_hosted"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div t-attf-class="form-group">
+                                <label class="form-label" for="edition">Version</label>
+                                <select class="form-control form-field o_website_form_required_custom" id="version" name="version" required="True">
+                                    <option value="odoo_version" selected="True">Select Version</option>
+                                    <t t-foreach="request.env['sh.version'].sudo().search([])" t-as="v">
+                                        <option t-att-value="v.id">
+                                            <t t-esc="v.name" />
+                                        </option>
+                                    </t>
+                                </select>
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_version"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <!-- <div class="col-md-6">
+                            <div t-attf-class="form-group">
+                                <label class="form-label" for="priority">Priority</label>
+                                <select class="form-control form-field o_website_form_required_custom" id="priority" name="priority">
+                                    <option value="ticket_priority" selected="True">Select Priority</option>
+                                    <t t-foreach="request.env['helpdesk.priority'].sudo().search([])" t-as="priority">
+                                        <option t-att-value="priority.id">
+                                            <t t-esc="priority.name" />
+                                        </option>
+                                    </t>
+                                </select>
+                            </div>
+                        </div> -->
+                        <div class="col-12">
+                            <div t-attf-class="form-group #{error and 'description' in error and 'has-error' or ''}">
+                                <label class="form-label" for="description">Description</label>
+                                <textarea id="description" name="description" class="form-control form-field o_website_form_required_custom" placeholder="Description" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div name="file_container" t-attf-class="form-group #{error and 'file' in error and 'has-error' or ''}">
+                                <label class="form-label" for="file">Attachments</label>
+                                <label class="custom-file">
+                                    <input name="file" id="file" type="file" multiple="multiple" t-att-data-attachment-size="file_size" />
+                                    <span class="custom-file-control" />
+                                </label>
+
+                                <input type="hidden" id="ticket_form_url" name="ticket_form_url" t-att-value="request.httprequest.url" /> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row mb-3">
+                        <div class="col-md-6">
+                            <t t-if="google_recaptcha and google_captcha_site_key">
+                                <script src="https://www.google.com/recaptcha/api.js"></script>
+                                <div t-attf-class="form-group #{error and 'description' in error and 'has-error' or ''}">
+                                    <label class="form-label" for="reCAPTCHA">reCAPTCHA</label>
+                                    <div class="g-recaptcha" t-attf-data-sitekey="#{google_captcha_site_key}" />
+                                </div>
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_captcha"></p>
+                            </t>
+                        </div>
+                    </div> -->
+
+
+                    <!-- CODE BY KISHAN GHELANI -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                                    <input name="recaptcha_token_response" type="hidden" />
+
+                                <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_captcha"></p>
+                          
+                        </div>
+                    </div>
+                    <!-- CODE BY KISHAN GHELANI -->
+                    <div class="form-group">
+                        <button id="submit_ticket" name="submit_ticket"
+                            class="btn btn-primary btn-lg">Submit Ticket <span
+                                class=" sh_link_right">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-chevrons-right"
+                                    viewBox="0 0 24 24" stroke-width="1" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <polyline points="7 7 12 12 7 17"></polyline>
+                                    <polyline points="13 7 18 12 13 17"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+                <section class="sh_supprt_section">
+                    <div class="container">
+                        <div class="sh_support">
+                            <div class="sh_support_row">
+                                <div class="row">
+                                    <div class="col-md-6 col-12 sh_support_time_col">
+                                        <div class="sh_support_time">
+                                            <div class="support_icon">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style></defs><title>Help &amp;amp; Support</title><rect class="cls-1" width="14" height="14"/><path class="cls-2" d="M12.76,7.74a8.85,8.85,0,0,0-.17-2.12A5.76,5.76,0,0,0,2.84,3,6.27,6.27,0,0,0,1.26,8.09a.34.34,0,0,0,.55.26c.13-.09.13-.22.13-.36A10.26,10.26,0,0,1,2,6.07a5.06,5.06,0,0,1,9.91-.19,8.69,8.69,0,0,1,.14,1.83c0,.81,0,1.62,0,2.42a1.12,1.12,0,0,1-1.24,1.2c-.51,0-1,0-1.53,0A.32.32,0,0,1,9,11.15a1,1,0,0,0-.92-.53H6.69a1.06,1.06,0,0,0-1.1,1.05,1,1,0,0,0,1.08,1.07H8.05A1,1,0,0,0,9,12.2.34.34,0,0,1,9.35,12h1.58a1.72,1.72,0,0,0,1.82-1.8c0-.57,0-1.15,0-1.73C12.75,8.23,12.75,8,12.76,7.74ZM8.13,12c-.5,0-1,0-1.52,0a.32.32,0,0,1-.33-.38.35.35,0,0,1,.38-.35H8.1a.33.33,0,0,1,.35.34A.32.32,0,0,1,8.13,12ZM5.55,6.3A.65.65,0,0,0,5,5.6a1.94,1.94,0,0,0-2,.74,2.85,2.85,0,0,0-.22,2.3A1.71,1.71,0,0,0,4.6,9.87c.73,0,1-.21,1-.93V7.7h0C5.55,7.24,5.56,6.77,5.55,6.3Zm-1,2.89a1.15,1.15,0,0,1-1.2-1.12,3.09,3.09,0,0,1,0-.91,1.17,1.17,0,0,1,1.29-.91c.16,0,.17.12.17.24V7.73c0,.39,0,.78,0,1.18C4.89,9.15,4.79,9.2,4.58,9.19Zm6.57-2.57a1.8,1.8,0,0,0-1.9-1.06.72.72,0,0,0-.79.79V7.7c0,.48,0,1,0,1.44A.64.64,0,0,0,9,9.83a1.87,1.87,0,0,0,2.19-1A2.94,2.94,0,0,0,11.15,6.62Zm-.53,1.53a1.14,1.14,0,0,1-1.23,1c-.18,0-.26,0-.25-.25,0-.4,0-.8,0-1.2s0-.83,0-1.24c0-.19.06-.25.25-.25a1.14,1.14,0,0,1,1.22,1A2.42,2.42,0,0,1,10.62,8.15Z" transform="translate(0 0)"/></svg>
+                                            </div>
+                                            <div class="support_content">
+                                                <h2 class="sh_support_content_h2">Support Hours</h2>
+                                                <p class="sh_support_content_p">Mon - Fri (10:00 AM IST, 7:00 PM IST)</p>
+                                            </div>
+                                            <div class="sub-div">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style></defs><title>Help &amp;amp; Support</title><rect class="cls-1" width="14" height="14"/><path class="cls-2" d="M12.76,7.74a8.85,8.85,0,0,0-.17-2.12A5.76,5.76,0,0,0,2.84,3,6.27,6.27,0,0,0,1.26,8.09a.34.34,0,0,0,.55.26c.13-.09.13-.22.13-.36A10.26,10.26,0,0,1,2,6.07a5.06,5.06,0,0,1,9.91-.19,8.69,8.69,0,0,1,.14,1.83c0,.81,0,1.62,0,2.42a1.12,1.12,0,0,1-1.24,1.2c-.51,0-1,0-1.53,0A.32.32,0,0,1,9,11.15a1,1,0,0,0-.92-.53H6.69a1.06,1.06,0,0,0-1.1,1.05,1,1,0,0,0,1.08,1.07H8.05A1,1,0,0,0,9,12.2.34.34,0,0,1,9.35,12h1.58a1.72,1.72,0,0,0,1.82-1.8c0-.57,0-1.15,0-1.73C12.75,8.23,12.75,8,12.76,7.74ZM8.13,12c-.5,0-1,0-1.52,0a.32.32,0,0,1-.33-.38.35.35,0,0,1,.38-.35H8.1a.33.33,0,0,1,.35.34A.32.32,0,0,1,8.13,12ZM5.55,6.3A.65.65,0,0,0,5,5.6a1.94,1.94,0,0,0-2,.74,2.85,2.85,0,0,0-.22,2.3A1.71,1.71,0,0,0,4.6,9.87c.73,0,1-.21,1-.93V7.7h0C5.55,7.24,5.56,6.77,5.55,6.3Zm-1,2.89a1.15,1.15,0,0,1-1.2-1.12,3.09,3.09,0,0,1,0-.91,1.17,1.17,0,0,1,1.29-.91c.16,0,.17.12.17.24V7.73c0,.39,0,.78,0,1.18C4.89,9.15,4.79,9.2,4.58,9.19Zm6.57-2.57a1.8,1.8,0,0,0-1.9-1.06.72.72,0,0,0-.79.79V7.7c0,.48,0,1,0,1.44A.64.64,0,0,0,9,9.83a1.87,1.87,0,0,0,2.19-1A2.94,2.94,0,0,0,11.15,6.62Zm-.53,1.53a1.14,1.14,0,0,1-1.23,1c-.18,0-.26,0-.25-.25,0-.4,0-.8,0-1.2s0-.83,0-1.24c0-.19.06-.25.25-.25a1.14,1.14,0,0,1,1.22,1A2.42,2.42,0,0,1,10.62,8.15Z" transform="translate(0 0)"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12 sh_support_time_col">
+                                        <div class="sh_support_time">
+                                            <div class="support_icon">
+                                               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style></defs><title>helpdesk timesheet</title><rect class="cls-1" width="14" height="14"/><path class="cls-2" d="M7,1.38A5.62,5.62,0,1,0,12.62,7,5.64,5.64,0,0,0,7,1.38ZM7,11.94a4.94,4.94,0,1,1,4.95-4.89A4.93,4.93,0,0,1,7,11.94ZM6.67,5.4V3.94c0-.23,0-.42.33-.42s.34.11.34.41c0,.82,0,1.65,0,2.47,0,.21.06.28.27.27H9.4c.29,0,.43.16.39.4a.32.32,0,0,1-.34.27H7c-.25,0-.33-.17-.33-.39Z" transform="translate(0 0)"/></svg>
+                                            </div>
+                                            <div class="support_content">
+                                                <h2 class="sh_support_content_h2">Response Time</h2>
+                                                <p class="sh_support_content_p">48 Hours (Working days)</p>
+                                            </div>
+                                            <div class="sub-div">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs><style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style></defs><title>helpdesk timesheet</title><rect class="cls-1" width="14" height="14"/><path class="cls-2" d="M7,1.38A5.62,5.62,0,1,0,12.62,7,5.64,5.64,0,0,0,7,1.38ZM7,11.94a4.94,4.94,0,1,1,4.95-4.89A4.93,4.93,0,0,1,7,11.94ZM6.67,5.4V3.94c0-.23,0-.42.33-.42s.34.11.34.41c0,.82,0,1.65,0,2.47,0,.21.06.28.27.27H9.4c.29,0,.43.16.39.4a.32.32,0,0,1-.34.27H7c-.25,0-.33-.17-.33-.39Z" transform="translate(0 0)"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div id="loading" class="sh_loading" style="display: none;"></div>
+            </div>
+        </t>
+    </template>
+    
+    <template id="helpdesk_thank_you" name="Helpdesk Ticket Thank You">
+        <t t-call="website.layout">
+            <div class="container sh_helpdesk_ticket_submitted_page">
+                <div class="row">
+                    <script>
+                        if ( window.history.replaceState ) {
+                          window.history.replaceState( null, null, window.location.href );
+                        }
+                    </script>
+                    <t t-if="success_msg">
+                        <div class="col-md-12">
+                            <div class="alert alert-success" role="status">
+                                <t t-esc="success_msg" />
+                            </div>
+                            <p>
+                                We will get back to you shortly.
+                            </p>
+                        </div>
+                        <!-- <div class="col-md-4">
+                            <t t-call="website.company_description" />
+                        </div> -->
+                    </t>
+                    <t t-if="error_msg">
+                        <div class="col-md-12">
+                            <div class="alert alert-danger" role="status">
+                                <t t-esc="error_msg" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="/support" string="Support" role="button" class="btn btn-primary">Back To Support</a>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

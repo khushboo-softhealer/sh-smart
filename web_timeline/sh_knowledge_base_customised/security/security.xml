@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sh_record_rule_for_admin" model="ir.rule">
+            <field name="name">Show All Records for Admin</field>
+            <field name="model_id" ref="model_sh_sop_article"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="groups" eval="[(4, ref('base.group_erp_manager'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="sh_record_rule_owner_ids" model="ir.rule">
+            <field name="name">Show All Records for Owners</field>
+            <field name="model_id" ref="model_sh_sop_article"/>
+            <field name="domain_force">[('owner_ids', 'in', [user.id])]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="sh_record_rule_department_users" model="ir.rule">
+            <field name="name">Show Published Records for Department Users</field>
+            <field name="model_id" ref="model_sh_sop_article"/>
+            <field name="domain_force">[('state', '=', 'publish'), '|', ('sh_department_user_ids', 'in', [user.id]), ('sh_user_ids', 'in', [user.id])]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="sh_knowledge_manager_rule" model="ir.rule">
+            <field name="name">SOP Manager</field>
+            <field ref="model_sh_sop_article" name="model_id"/>
+            <field name="domain_force">['|',('owner_id.id','=',user.id),('manager_ids','in',user.ids),('state','!=','draft')]</field>
+            <!-- <field name="domain_force">['|',('owner_id.id','=',user.id),('manager_ids','in',user.ids),('state','in',['submit','draft'])]</field> -->
+            <!-- <field name="domain_force">[(1,'=',1)]</field> -->
+            <field name="groups" eval="[(4, ref('sh_project_task_base.group_project_officer'))]"/>
+        </record>
+    </data>
+</odoo>

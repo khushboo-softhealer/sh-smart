@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_project_task_time_account_line_form_view_sh_task_time" model="ir.ui.view">
+        <field name="name">task.time.account.line.view.form.inherit</field>
+        <field name="model">task.time.account.line</field>
+        <field name="inherit_id" ref="sh_task_time.sh_project_task_time_account_line_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='stage_id']" position="after">
+                <field name="ticket_id" options="{'no_create':True,'no_create_edit':True}"  />
+            </xpath>
+        </field>
+    </record>
+</odoo>

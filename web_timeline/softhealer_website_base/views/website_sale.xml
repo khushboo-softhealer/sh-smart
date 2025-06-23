@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--form -->
+    <record id="theme_softhealer_store_ecom_form_view_inherit" model="ir.ui.view">
+        <field name="name">theme.softhealer.store.ecom.form.view.inherit</field>
+        <field name="model">product.public.category</field>
+        <field name="inherit_id" ref="website_sale.product_public_category_form_view"/>
+        <field name="arch" type="xml">
+            <field name="sequence" position="after">
+                <field name="sh_is_app"/>
+                <field name="sh_is_theme"/>
+                <field name="sh_svg_text" placeholder='SVG CODE....' style='width:800px;'/>
+            </field>								
+        </field>
+    </record>
+
+    <!--tree -->
+    <record id="theme_softhealer_store_ecom_tree_view_inherit" model="ir.ui.view">
+        <field name="name">theme.softhealer.store.ecom.tree.view.inherit</field>
+        <field name="model">product.public.category</field>
+        <field name="inherit_id" ref="website_sale.product_public_category_tree_view"/>
+        <field name="arch" type="xml">
+            <tree position="attributes">
+                <attribute name="multi_edit">1</attribute>
+            </tree>
+            <field name="display_name" position="after">
+                <field name="sh_is_app"/>
+                <field name="sh_is_theme"/>
+            </field>							
+        </field>
+    </record>
+
+    <!--payment flow-->
+    <template id="theme_softhealer_store_payment_flow" name="custom payment flow" inherit_id="website_sale.confirmation">
+        <xpath expr="//div[@id='wrap']" position="attributes">
+            <attribute name="class" separator=" " add="cls_sh_softhealer_store_payment" remove="" value=""></attribute>
+        </xpath>
+    </template>
+</odoo>

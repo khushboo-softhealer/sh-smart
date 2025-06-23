@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- sh.push.module form view -->
+    <record id="sh_push_module_details_form_view" model="ir.ui.view">
+        <field name="name">sh.push.module.view.form</field>
+        <field name="model">sh.push.module</field>
+        <field name="arch" type="xml">
+            <form string="Module Technical Names">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <field name="sh_project_id" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree view -->
+    <record id="sh_push_module_details_tree_view" model="ir.ui.view">
+        <field name="name">sh.push.module.view.tree</field>
+        <field name="model">sh.push.module</field>
+        <field name="arch" type="xml">
+            <tree edit="True" sample="1">
+                <field name="name" />
+                <field name="sh_project_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Main window action -->
+    <record id="sh_push_module_details_actions" model="ir.actions.act_window">
+        <field name="name">Module Technical Names</field>
+        <field name="res_model">sh.push.module</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="sh_push_module_details_menu"
+        name="Module Technical Names"
+        parent="project.menu_main_pm"
+        action="sh_smart_push_details.sh_push_module_details_actions" sequence="99" />
+</odoo>

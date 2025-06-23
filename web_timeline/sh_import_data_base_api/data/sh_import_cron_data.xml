@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_import_base_hr_cron" model="ir.cron">
+        <field name="name">Import HR From Other database</field>
+        <field name="interval_number">50000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_hr_contract_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_time_off_cron" model="ir.cron">
+        <field name="name">Import Time Off From Other database</field>
+        <field name="interval_number">500000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_hr_leave()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_hr_attendance_cron" model="ir.cron">
+        <field name="name">Import Attendance From Other database</field>
+        <field name="interval_number">500000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_hr_attendance_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_attachments_cron" model="ir.cron">
+        <field name="name">Import Attachments From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_ir_attachment_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+    <record id="sh_update_base_messages_cron" model="ir.cron">
+        <field name="name">UPDATE Messages From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_mail_message_from_queue()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_leave_cron" model="ir.cron">
+        <field name="name">Import Leave From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_hr_leave()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_link_product_cron" model="ir.cron">
+        <field name="name">Link Product From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.link_products_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_change_log_cron" model="ir.cron">
+        <field name="name">Change Log Product From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.update_change_log()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_messages_cron" model="ir.cron">
+        <field name="name">Import Messages From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_mail_messages_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_link_task_product_cron" model="ir.cron">
+        <field name="name">Import Link Product Task From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.link_task_product_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+
+    <record id="sh_import_base_employee_cron" model="ir.cron">
+        <field name="name">Import Employee From Other database</field>
+        <field name="interval_number">500000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_hr_employee()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_product_cron" model="ir.cron">
+        <field name="name">Import Products From Other database</field>
+        <field name="interval_number">500000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_product_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_order_cron" model="ir.cron">
+        <field name="name">Import orders From Other database</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_orders_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_contact_cron" model="ir.cron">
+        <field name="name">Import Contacts From Other database</field>
+        <field name="interval_number">500000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_contacts_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_users_cron" model="ir.cron">
+        <field name="name">Import Users From Other database</field>
+        <field name="interval_number">500000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_res_users()</field>
+        <field name="state">code</field>
+    </record>
+
+    <record id="sh_import_base_filtered_users_cron" model="ir.cron">
+        <field name="name">Import Filtered Users From Other database</field>
+        <field name="interval_number">500000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_update_res_users()</field>
+        <field name="state">code</field>
+    </record>
+
+    <record id="sh_import_base_filtered_product_cron" model="ir.cron">
+        <field name="name">Import Filtered Product From Other database</field>
+        <field name="interval_number">500000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_product_from_queue()</field>
+        <field name="state">code</field>
+    </record>
+    
+    <record id="sh_update_base_users_cron" model="ir.cron">
+        <field name="name">Update Users From Other database</field>
+        <field name="interval_number">500000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.sh_update_partner_id()</field>
+        <field name="state">code</field>
+    </record>
+
+    <record id="sh_import_base_helpdesk_ticket_cron" model="ir.cron">
+        <field name="name">Import Helpdesk Ticket From Other database</field>
+        <field name="interval_number">500000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_helpdesk_ticket_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_update_helpdesk_ticket_cron" model="ir.cron">
+        <field name="name">Import Filtered Helpdesk Ticket From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_ticket_from_queue()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_order_filter_cron" model="ir.cron">
+        <field name="name">Import Filtered orders From Other database</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_order_from_queue()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_crm_lead_cron" model="ir.cron">
+        <field name="name">Import Crm Lead From Other database</field>
+        <field name="interval_number">500000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_basic_crm_lead_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_project_cron" model="ir.cron">
+        <field name="name">Import Project From Other database</field>
+        <field name="interval_number">50000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_project_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_task_cron" model="ir.cron">
+        <field name="name">Import Project Task From Other database</field>
+        <field name="interval_number">50000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_task_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_filtered_task_cron" model="ir.cron">
+        <field name="name">Import Filtered Task From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_task_from_queue()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_blog_cron" model="ir.cron">
+        <field name="name">Import Blog From Other database</field>
+        <field name="interval_number">50000</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_blog_post()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_invoice_cron" model="ir.cron">
+        <field name="name">Import Invoice From Other database</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_invoice_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+    <record id="sh_import_base_payment_cron" model="ir.cron">
+        <field name="name">Import Payment From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.auto_import_account_payment()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+    <record id="sh_import_base_timesheet_cron" model="ir.cron">
+        <field name="name">Import filter Timesheet From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.update_timsheet_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_attendance_modification_cron" model="ir.cron">
+        <field name="name">Import Attendance Modification From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.import_hr_attendance_modification_request_cron()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+    <record id="sh_import_base_replace_message_cron" model="ir.cron">
+        <field name="name">Replace Message From Other database</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="model_id" ref="sh_import_data_base_api.model_sh_import_base" />
+        <field name="code">model.process_mail_message_ids()</field>
+        <field name="state">code</field>
+        <field name="active">false</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_update_task_product_linking" model="ir.actions.server">
+        <field name="name">Link Remote Product to Task</field>
+        <field name="model_id" ref="sh_import_data_base_api.model_project_task" />
+        <field name="binding_model_id" ref="project.model_project_task" />
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.update_remote_products_with_task()
+        </field>
+    </record>
+
+    <record id="sh_find_merge_task" model="ir.actions.server">
+        <field name="name">Remove duplicate Task</field>
+        <field name="model_id" ref="sh_import_data_base_api.model_project_task" />
+        <field name="binding_model_id" ref="project.model_project_task" />
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.find_duplicate_merge_task()
+        </field>
+    </record>
+</odoo>

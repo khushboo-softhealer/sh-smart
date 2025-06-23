@@ -1,0 +1,737 @@
+.o_web_client {
+    .o_action_manager{
+        .o_action {
+                &.sh_high_five_custom_class{
+                &.o_list_view{
+                    .o_control_panel {
+                        background: #ffffff;
+                        border-radius: 10px;
+                        margin: 15px 16px;
+                        margin-bottom: 10px;
+                        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                        padding: 1.5rem 16px !important;
+                        @include media-breakpoint-down(md) {
+                            margin: 10px 16px;
+                        }
+                        .o_cp_top{
+                            margin-bottom: 10px;
+                            .o_cp_top_left {
+                                .breadcrumb {
+                                    .breadcrumb-item{
+                                        span {
+                                            color: #000 !important;
+                                            font-weight: 700;
+                                        }
+                                    }
+                                }
+                            }
+                            .o_cp_top_right{
+                                .o_cp_searchview {
+                                    .o_searchview {
+                                        border: 1px solid #ccc !important;
+                                        border-radius: 8px !important;
+                                        padding: 6px 5px !important;
+                                        &:focus,
+                                        &:hover {
+                                            border-color: $primaryColor !important;
+                                        }
+                                        .o_searchview_icon{
+                                            top: 11px !important;
+                                            right: 8px !important;
+                                            z-index: 99;
+                                        }
+                                    }
+                                }                                
+                            }
+                        }
+                        .o_cp_bottom{
+                            .o_cp_bottom_right{
+                                .o-dropdown{
+                                    &.btn-group{
+                                        .btn-light{
+                                            background-color: transparent !important;
+                                            border-color: transparent;
+                                            font-weight: 600;
+                                            .fa{
+                                                font-weight: 600;
+                                            }
+                                        }
+                                    }
+                                } 
+                                .o_cp_pager{
+                                    display: none;
+                                    .o_pager {
+                                       font-weight: 600;
+                                       .btn-group{
+                                            .btn-secondary{
+                                                background-color: transparent !important;
+                                                border-color: transparent;
+                                                font-weight: 600;
+                                                .fa{
+                                                    font-weight: 600;
+                                                }
+                                            }
+                                       } 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .o_content{
+                        .sh_high_five_main_box{
+                            .sh_high_five_left_panel{
+                                .sh_high_five_main{
+                                    background: #ffffff;
+                                    border-radius: 10px;
+                                    padding: 0.6rem 16px;
+                                    margin: 0px 0 15px;
+                                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                    .sh_high_five_heading{
+                                        border-bottom: 1px solid $secondaryColor;
+                                        padding-top: 10px;
+                                        padding-bottom: 15px;
+                                
+                                        p {
+                                            font-size: 17px;
+                                            font-weight: 600;
+                                        }
+                                    }
+                                    .sh_high_five_ideas{
+                                        margin: 15px 0;
+                                        .o_mail_emojis_dropdown{
+                                            bottom: 30px !important;
+                                        }
+                                        .employee_list_main_div{
+                                            .dropdown{
+                                                .dropdown-menu{
+                                                    border-radius: 4px !important;
+                                                }
+                                            }
+                                        } 
+                                        .form-label{
+                                            margin-bottom: 10px;
+                                            text-transform: capitalize;
+                                            font-weight: 600;
+                                        }
+                                        .form-control {
+                                            border-radius: 7px;
+                                            padding: 0.6rem 0.75rem !important;
+                                            &::placeholder{
+                                                color: #b9b9b9;
+                                            }
+                                        }
+                                        .sh_high_five_btn{
+                                            border-radius: 7px  !important;
+                                        }
+
+                                        h4{
+                                            #employee_list{
+
+                                                li.hovered{
+                                                    color: red;
+                                                }
+                                                li.active{
+                                                    color: rgb(0, 60, 255);
+                                                }
+                                            }
+                    
+
+                                            #badge_list{
+
+                                                li.hovered{
+                                                    color: rgb(174, 255, 0);
+                                                }
+                                                li.active{
+                                                    color: rgb(0, 17, 255);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }  
+                                .massage_panel_box {
+                                    background: #ffffff;
+                                    border-radius: 10px;
+                                    padding: 0.6rem 16px;
+                                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                    padding-bottom: 15px;
+                                    margin: 0px 0 15px;
+                                    @include media-breakpoint-down(sm) {
+                                        margin: 5px 0 16px;
+                                        padding: 10px;
+                                    }
+                                    .massage_panel_date_box{
+                                        .massage_panel_date{
+                                            font-weight: bold;
+                                            text-align: center;
+                                            font-size: 15px;
+                                            margin: 5px 0 8px;
+                                        }
+                                    }
+                                    .massage_items{
+                                        &::-webkit-scrollbar{
+                                            width: 3px !important;
+                                        }
+                                        .massage_item{
+                                            padding: 10px 15px;
+                                            border: 1px solid #bfbebe;
+                                            border-radius: 5px;
+                                            margin: 10px 0 10px;
+                                            margin-bottom: 0 !important;
+                                            @include media-breakpoint-down(sm) {
+                                                padding:13px;
+                                            }
+                                            .massage_user_item{
+                                                justify-content: space-between;
+                                                .massage_reply_user_box{
+                                                    .massage_reply_user_label{
+                                                        width: 50px;
+                                                        height: 50px;
+                                                        margin-right: 15px;
+                                                        @include media-breakpoint-down(sm) {
+                                                            width: 40px;
+                                                            height: 40px;
+                                                        }
+                                                        img {
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            object-fit: cover;
+                                                            border-radius: 10px;
+                                                        }
+                                                    }
+                                                    .massage_reply_user_text{
+                                                        .massage_reply_user_text_name{
+                                                            font-size: 15px;
+                                                            font-weight: bold;
+                                                            text-transform: capitalize;
+                                                        }
+                                                        .massage_reply_user_text_Date{
+                                                            font-size: 13px;
+                                                            font-weight: 600;
+                                                            color: #999999;
+                                                            text-transform: capitalize;
+                                                        }
+                                                    }    
+                                                }
+                                            }
+                                            .massage_reply_user_extra_text{
+                                                margin: 10px 0 5px;
+                                                .massage_reply_user_extra_text_name{
+                                                    font-size: 16px;
+                                                    text-transform: capitalize;
+                                                    font-weight: normal;
+                                                    span{
+                                                        font-weight: bold !important;
+                                                    }
+                                                }
+                                                .child_massage_reply_user_extra_text_name{
+                                                    font-size: 16px;
+                                                    text-transform: capitalize;
+                                                    font-weight: normal;
+                                                    span{
+                                                        font-weight: bold !important;
+                                                    }
+                                                }
+                                                .massage_reply_user_extra_text_Date{
+                                                    font-size: 14px;
+                                                    color: #999999;
+                                                    font-weight: 600;
+                                                    text-transform: capitalize;
+                                                }
+                                                .like_box{
+                                                    .list-group{
+                                                        .list-group-item{
+                                                            position: relative;
+                                                            padding: 0.5rem 1.2rem;
+                                                            .list-item-link{
+                                                                color: #7d7d7d;
+                                                                font-weight: 700;
+                                                                span{
+                                                                    svg{
+                                                                        width: 16px;
+                                                                        fill: #7d7d7d;
+                                                                    }
+                                                                }
+                                                            }
+                                                            &.like_btn{
+                                                                .list-item-link{
+                                                                    svg{
+                                                                        .cls-2{
+                                                                            fill: #7d7d7d;
+                                                                        }
+                                                                        .cls-3{
+                                                                            fill: $primaryColor;
+                                                                        }                                                                        
+                                                                    }
+                                                                }
+                                                            }
+                                                            &.delete_btn{
+                                                                .list-item-link{
+                                                                    color: $primaryColor;
+                                                                    font-weight: 700;
+                                                                }
+                                                            }
+                                                            &:first-child{
+                                                                &::before{
+                                                                    content: none !important;  
+                                                                }
+                                                            }
+                                                            &::before{
+                                                                content: "";
+                                                                background-color: #7d7d7d;
+                                                                width: 4px;
+                                                                height: 4px;
+                                                                position: absolute;
+                                                                top: 45%;
+                                                                left: 0;
+                                                                border-radius: 20px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .main_kanban_div{
+                                                    margin: 10px 0 0;
+                                                    .dynamic_conditional_child_kanban {
+                                                        
+                                                        .child_kanban_user_item {
+                                                            border-radius: 5px;
+                                                            padding: 15px;
+                                                            border: 1px solid #bfbebe;
+                                                            .massage_reply_user_box {
+                                                                .massage_reply_user_label {
+                                                                    width: 50px;
+                                                                    height: 50px;
+                                                                    margin-right: 15px;
+                                                                    @include media-breakpoint-down(sm) {
+                                                                        width: 40px;
+                                                                        height: 40px;
+                                                                    }
+                                                                    img {
+                                                                        width: 100%;
+                                                                        height: 100%;
+                                                                        object-fit: cover;
+                                                                        border-radius: 10px;
+                                                                    }
+                                                                }                        
+                                                                .massage_reply_user_text{
+                                                                    .massage_reply_user_text_name{
+                                                                        font-size: 15px;
+                                                                        font-weight: bold;
+                                                                        text-transform: capitalize;
+                                                                    }
+                                                                    .massage_reply_user_text_Date{
+                                                                        font-size: 13px;
+                                                                        font-weight: 600;
+                                                                        color: #999999;
+                                                                        text-transform: capitalize;
+                                                                    }
+                                                                }
+                                                                .delet_edit_icon_box{
+                                                                    .list-group{
+                                                                        .list-group-item{
+                                                                            a{
+                                                                                color: #777777;
+                                                                                &:hover{
+                                                                                    color: $primaryColor;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }                                                                    
+                                                                }
+                                                            }
+                                                        }
+                                                        .message_sub_replay_box{
+                                                            padding: 15px;
+                                                            border: 1px solid #bfbebe;
+                                                            border-radius: 7px;
+                                                            .message_sub_replay_main{
+                                                                display: flex;
+                                                                align-items: center;
+                                                                .message_sub_replay_img_box{
+                                                                    width: 50px;
+                                                                    height: 50px;
+                                                                    margin-right: 15px;
+                                                                    @include media-breakpoint-down(sm) {
+                                                                        width: 40px;
+                                                                        height: 40px;
+                                                                    }
+                                                                    img {
+                                                                        width: 100%;
+                                                                        height: 100%;
+                                                                        object-fit: cover;
+                                                                        border-radius: 10px;
+                                                                    }
+                                                                }
+                                                                .message_sub_replay_input{
+                                                                    width: 94%;
+                                                                        .input-group-main{
+                                                                            &:focus-within{
+                                                                                .form-control,.input-group-text{
+                                                                                    border-color:  $primaryColor;
+                                                                                }
+                                                                            }
+                                                                            .form-control{
+                                                                                padding: 1.1rem 0.75rem;
+                                                                                border-radius: 5px;           
+                                                                                font-weight: 600;
+                                                                                &:focus {
+                                                                                    box-shadow: none !important;
+                                                                                    + {
+                                                                                        .input-group-text {
+                                                                                            background-color: #fff;
+                                                                                            border-color:  $primaryColor;
+                                                                                            outline: 0;
+                                                                                            box-shadow: none;
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                                &::placeholder{
+                                                                                    color: #b9b9b9;
+                                                                                }
+                                                                            }
+                                                                            .input-group-text{
+                                                                                background-color: #fff;    
+                                                                                border-radius: 5px;
+                                                                                border-top-left-radius: 0;
+                                                                                border-bottom-left-radius: 0;
+                                                                                border-left: 0 !important;
+                                                                                position: relative;
+                                                                                cursor: pointer;
+                                                                                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                                                                                &:focus {                                                
+                                                                                    background-color: #fff;
+                                                                                    border-color:  $primaryColor;
+                                                                                    outline: 0;
+                                                                                    box-shadow: none !important;
+                                                                                }
+                                                                                span{
+                                                                                    padding-left: 20px;
+                                                                                    padding-right: 15px;
+                                                                                    font-weight: 600;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        .o_mail_emojis_dropdown{
+                                                                            bottom: 36px !important;
+                                                                        }
+                                                                        h4{
+                                                                            .select_employee_list_ul{
+                                
+                                                                                li.hovered{
+                                                                                    color: red;
+                                                                                }
+                                                                                li.active{
+                                                                                    color: rgb(0, 60, 255);
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    
+                                                                    .input-group-text{
+                                                                        svg{
+                                                                            width: 16px;
+                                                                            fill: #7d7d7d;
+                                                                            &:hover{
+                                                                                fill: $primaryColor;
+                                                                            }
+                                                                        }
+                                                                    } 
+                                                                    .select_employee_list_div{
+                                                                        .dropdown{
+                                                                            .dropdown-menu{
+                                                                                border-radius: 4px !important;
+                                                                            }
+                                                                        }
+                                                                    }                                                                      
+                                                                }                                                                
+                                                            }
+                                                            .checkbox_private_box{
+                                                                border-radius: 5px;
+                                                                margin: 15px 0;
+                                                                .form-check-input{
+                                                                    width: 1.2em;
+                                                                    height: 1.2em;
+                                                                    margin-top: 2px !important;
+                                                                    cursor: pointer;
+                                                                    &:disabled {
+                                                                        ~ {
+                                                                            .form-check-label {
+                                                                                opacity: 1;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                .form-check-label{
+                                                                    line-height: 22px !important;
+                                                                    padding-left: 15px;
+                                                                    font-size: 13px;
+                                                                    font-weight: 600;
+                                                                    text-transform: capitalize;
+                                                                }
+                                                            }
+                                                            .post_comment_btn_box{
+                                                                .post_comment_btn{
+                                                                    border-color: #7d7d7d;
+                                                                    color: #7d7d7d;
+                                                                    text-transform: capitalize;
+                                                                    &:hover{
+                                                                        background-color: #acacac;
+                                                                        border-color: #acacac;
+                                                                        color: #fff;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            } 
+                            .sh_high_five_right_panel{
+                                .sh_high_five_right_box{
+                                    background: #ffffff;
+                                    border-radius: 10px;
+                                    padding: 16px;
+                                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                    margin: 0px 0 20px;
+        
+                                    @include media-breakpoint-down(sm) {
+                                        margin: 16px 0;
+                                    }
+
+                                    .sh_high_five_right_user_box {
+                                        border-bottom: 1px solid $secondaryColor;
+                                        padding-bottom: 10px;
+                                        margin-bottom: 10px;        
+                                        .sh_high_five_label {
+                                            width: 20%;
+                                            height: 50px;
+                                            margin-right: 15px;
+        
+                                            img {
+                                                width: 100%;
+                                                height: 100%;
+                                                object-fit: cover;
+                                                border-radius: 10px;
+                                            }
+                                        }
+        
+                                        .sh_high_five_user_text {
+                                            width: 80%;
+                                            .sh_high_five_label_date {
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                word-break: break-word;
+                                            }
+        
+                                            .sh_high_five_label_text {
+                                                font-size: 13px;
+                                                font-weight: 600;
+                                                opacity: 0.8;
+                                                word-break: break-word;
+                                            }
+                                        }
+                                    }
+                                    .sh_count_box{
+                                        display: flex;
+                                        .sh_give_count_box{
+                                            background-color: $secondaryColor;
+                                            padding: 15px;
+                                            margin-right: 15px;
+                                            border-radius: 10px;
+                                            text-align: center;
+                                            width: 50%;
+                                            .sh_give_count_number{
+                                                margin-bottom: 10px;
+                                                text-transform: capitalize;
+                                                font-weight: 700;
+                                                font-size: 15px;
+                                            }
+                                            .sh_give_count_name{
+                                                margin-bottom: 10px;
+                                                text-transform: uppercase;
+                                                font-weight: 600;
+                                                opacity: 0.8;
+                                            }
+                                        }
+                                    }
+                                }
+                                .sh_high_five_total_box{
+                                    background: #ffffff;
+                                    border-radius: 10px;
+                                    padding: 16px;
+                                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                    margin: 0px 0 20px;
+        
+                                    @include media-breakpoint-down(sm) {
+                                        margin: 16px 0;
+                                    }
+
+                                    .sh_high_five_right_total_box {
+                                        border-bottom: 1px solid $secondaryColor;
+                                        padding-bottom: 10px;
+                                        margin-bottom: 10px;     
+                                        justify-content: space-between;
+                                        .sh_high_five_right_total_heading {
+                                            .sh_high_five_right_total_title {
+                                                font-size: 15px;
+                                                font-weight: bold;
+                                                word-break: break-word;
+                                            }
+                                        }
+                                        .sh_high_five_right_total_number {
+                                            .sh_high_five_right_total_count{
+                                                font-size: 15px;
+                                                font-weight: 600;
+                                                background-color: $secondaryColor;
+                                                padding: 4px 10px;
+                                                border-radius: 5px;
+                                            }
+                                        }
+                                    }
+                                    .sh_high_five_right_total_items_box{                                    
+                                        .sh_high_five_right_total_item_box{
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            margin: 10px 0;
+                                            .sh_high_five_right_total_items_name {
+                                                .sh_high_five_right_total_items_text {
+                                                    font-size: 13px;
+                                                    font-weight: 500;
+                                                    word-break: break-word;
+                                                }
+                                            }
+                                            .sh_high_five_right_total_items_count {
+                                                .sh_high_five_right_total_items_number{
+                                                    font-size: 13px;
+                                                    font-weight: 500;
+                                                    background-color: $secondaryColor;
+                                                    padding: 4px 8px;
+                                                    border-radius: 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .sh_top_high_five_box{
+                                    background: #ffffff;
+                                    border-radius: 10px;
+                                    padding: 16px;
+                                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                                    margin: 0px 0 20px;
+        
+                                    @include media-breakpoint-down(sm) {
+                                        margin: 16px 0;
+                                    }
+                                    .sh_top_high_five_right_main_img_box{
+                                        width: 100%;
+                                        height: 300px;
+                                        margin: 0 auto;
+                                        .sh_top_high_five_right_main_img{
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            border-radius: 10px;
+                                        }
+                                    }
+                                    .sh_top_high_five_right_box {
+                                        border-bottom: 1px solid $secondaryColor;
+                                        padding: 10px 0;
+                                        margin: 10px 0;     
+                                        justify-content: space-between;
+                                        .sh_top_high_five_right_heading {
+                                            .sh_top_high_five_right_title {
+                                                font-size: 15px;
+                                                font-weight: bold;
+                                                word-break: break-word;
+                                                text-transform: uppercase;
+                                            }
+                                        }
+                                    }
+                                    .sh_top_high_five_right_items_box{                                   
+                                        .sh_top_high_five_right_item_box{
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            margin: 10px 0;
+                                            .sh_top_high_five_right_items_name {
+                                                align-items: center;
+                                                width: 80%;
+                                                .sh_top_high_five_right_img_box{
+                                                    width: 20%;
+                                                    height: 45px;
+                                                    margin-right: 10px;
+                                                    .sh_top_high_five_right_img{
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        object-fit: cover;
+                                                        border-radius: 10px;
+                                                    }
+                                                }                                        
+                                                .sh_top_high_five_right_items_text {
+                                                    font-size: 13px;
+                                                    font-weight: 500;
+                                                    word-break: break-word;
+                                                    width: 80%;
+                                                }
+                                            }
+                                            .sh_top_high_five_right_items_count {
+                                                .sh_top_high_five_right_items_number{
+                                                    font-size: 13px;
+                                                    font-weight: 500;
+                                                    background-color: $secondaryColor;
+                                                    padding: 4px 8px;
+                                                    border-radius: 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
+
+.sh_high_five_main_box {
+    .modal{
+        &:not([data-bs-backdrop="false"]){
+            background: rgba(217, 217, 217, 0.40);
+            .sh_select_badge_model{
+                .modal-content{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 15px;
+                    background: #FFF;
+                    box-shadow: 9px 13px 16px 0px rgba(0, 0, 0, 0.08);
+                    border: 0;
+                    .modal-header{
+                        .modal-title{
+                            &h5{
+                                color: #212529 !important;
+                                font-size: 1.25rem !important;
+                            }
+                        }
+                    }
+                    .modal-body{
+                        .list-group{
+                            .list-group-item{
+                                border-top-width: 1px !important ;
+                                margin-bottom: 10px !important;
+                                &:hover{
+                                    border-color:  $primaryColor;
+                                }
+                            }
+                        }                        
+                    }  
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="mass_assign_edition_wizard_form" model="ir.ui.view">
+        <field name="name">mass.assign.edition.wizard.form</field>
+        <field name="model">sh.assign.edition.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="edition_ids" widget="many2many_tags" />
+                </group>
+                
+                <footer>
+                    <button  string="Assign Editions"  class="oe_highlight" type="object" name="assign_mass_edition" />
+                    <button string="Cancel" class="btn btn-secondary" special="cancel" icon="fa-remove" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_assign_edition_wizard" model="ir.actions.act_window">
+        <field name="name">Assign Editions</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.assign.edition.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

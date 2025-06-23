@@ -1,0 +1,241 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_expense_wallet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-20 10:09+0000\n"
+"PO-Revision-Date: 2021-07-20 10:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_expense_wallet
+#: model_terms:ir.ui.view,arch_db:sh_expense_wallet.sh_wallet_detail_form
+#: model_terms:ir.ui.view,arch_db:sh_expense_wallet.sh_wallet_transaction_wizard__view_form
+msgid "Add Payment"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__amount
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard__amount
+msgid "Amount"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model_terms:ir.ui.view,arch_db:sh_expense_wallet.sh_wallet_transaction_wizard__view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model,name:sh_expense_wallet.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__company_id
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__company_id
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard__company_id
+#: model:ir.model.fields.selection,name:sh_expense_wallet.selection__hr_expense__payment_mode__company_account
+msgid "Company"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model,name:sh_expense_wallet.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model_terms:ir.actions.act_window,help:sh_expense_wallet.sh_wallet_action
+msgid "Create A New Wallet for Employee"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__create_uid
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__create_uid
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__create_date
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__create_date
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__currency_id
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__currency_id
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__date
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard__date
+msgid "Date"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__desc
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__desc
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard__desc
+msgid "Description"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_hr_expense__display_name
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_hr_expense_sheet__display_name
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_company__display_name
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_users__display_name
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__display_name
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__display_name
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__user_id
+msgid "Emoloyee"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields.selection,name:sh_expense_wallet.selection__hr_expense__payment_mode__own_account
+msgid "Employee (to reimburse)"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_users__employee_account_id
+msgid "Employee Account"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model,name:sh_expense_wallet.model_hr_expense
+msgid "Expense"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model,name:sh_expense_wallet.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:res.groups,name:sh_expense_wallet.group_expense_wallet
+msgid "Expense Wallet"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_hr_expense__id
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_hr_expense_sheet__id
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_company__id
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_users__id
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__id
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__id
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_hr_expense____last_update
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_hr_expense_sheet____last_update
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_company____last_update
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_users____last_update
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet____last_update
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction____last_update
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__write_uid
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__write_uid
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__write_date
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__write_date
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__name
+msgid "Name"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_hr_expense__payment_mode
+msgid "Paid By"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: code:addons/sh_expense_wallet/models/wallet.py:0
+#, python-format
+msgid "This Employee Already exists!!!"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__transaction_ids
+msgid "Transaction"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model,name:sh_expense_wallet.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.actions.act_window,name:sh_expense_wallet.action_sh_wallet_transaction_wizard_view
+#: model:ir.actions.act_window,name:sh_expense_wallet.sh_wallet_action
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet_transaction__wallet_id
+#: model:ir.ui.menu,name:sh_expense_wallet.sh_wallet_action_menu
+msgid "Wallet"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_hr_expense__wallet_amount
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_sh_wallet__wallet_amount
+msgid "Wallet Amount"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model_terms:ir.ui.view,arch_db:sh_expense_wallet.sh_wallet_transaction_wizard__view_form
+msgid "Wallet Details"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_company__wallet_journal
+#: model:ir.model.fields,field_description:sh_expense_wallet.field_res_config_settings__wallet_journal
+msgid "Wallet Journal"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model_terms:ir.ui.view,arch_db:sh_expense_wallet.sh_expense_wallet_config_settings
+msgid "Wallet Journal for Expense"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model,name:sh_expense_wallet.model_sh_wallet
+msgid "sh.wallet"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model,name:sh_expense_wallet.model_sh_wallet_transaction
+msgid "sh.wallet.transaction"
+msgstr ""
+
+#. module: sh_expense_wallet
+#: model:ir.model,name:sh_expense_wallet.model_sh_wallet_transaction_wizard
+msgid "sh.wallet.transaction.wizard"
+msgstr ""

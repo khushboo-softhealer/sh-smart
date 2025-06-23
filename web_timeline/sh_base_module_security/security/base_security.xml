@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_group_base_install" model="res.groups">
+        <field name="name">Apps Install Permission </field>
+    </record>
+    <record id="sh_group_base_uninstall" model="res.groups">
+        <field name="name">Apps Uninstall Permission </field>
+    </record>
+    <record id="sh_group_base_upgrade" model="res.groups">
+        <field name="name">Apps Upgrade Permission </field>
+    </record>
+    
+    <data noupdate="1">
+        <record id="base.menu_apps" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('base.group_system'))]"/>
+        </record>
+    </data>
+</odoo>

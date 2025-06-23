@@ -1,0 +1,19 @@
+
+.modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content{    position: relative;top: 50%;transform: translateY(-50%) !important;background: url('/sh_website_sale_popup_pricelist/static/src/img/sh_bg_image.png');background-size: cover;height:auto;padding: 1rem;}
+.modal-open .modal-dialog.sh_cls_wsale_price_list_popup {border-radius: 10px;max-width: 600px !important;}
+.modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content .modal-header{border-bottom: 0;padding:0rem;}
+.modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content .modal-header h4{text-align: center;font-size: var(--sh-store-section-heading-font-size);font-weight: var(--sh-store-section-heading-font-weight);line-height: var(--sh-store-section-heading-line-height);color: var(--sh-store-section-heading-font-color);margin-bottom: var(--sh-store-section-heading-margin-bottom);text-transform: capitalize; width:100%;}
+.modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content .modal-body .sh_currency_button .switcher_pricelist {margin-top: 5px;text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 100%; font-size:15px; font-weight: var(--sh-store-section-heading-font-weight); color: var(--sh-store-section-heading-font-color);line-height: var(--sh-store-section-heading-line-height);}
+.modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content .modal-body{overflow: auto;display: flex;justify-content: center;align-items: center;flex-direction: column;background-position: center;border-radius: 10px;padding:0rem 0rem 1rem!important}
+.modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content .modal-body .sh_currency_button{display: flex;justify-content: center;flex-direction: column;margin:20px 10px 0px;height: 100px;width: 100px;border-radius: 5px;background: #fff;color: #000;border: 0;box-shadow:var(--sh-store-common-box-shadow);padding:17px 0px;}
+.modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content .modal-body .sh_currency_button:focus{box-shadow: 0 0 0 0.25rem rgba(86, 75, 198, 0.25);}
+.modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content .modal-body .sh_currency_button img{height:45px; width:45px; border-radius:3px; background: #1e266d; color:#fff; padding:12px;}
+.modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content .btn-close{display:none;}
+@media screen and (max-width:992px) {
+    .modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content .modal-header h4{font-size:var(--sh-store-section-heading-font-size-tablet);}
+}
+
+@media screen and (max-width:576px) {
+    .modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content{transform: translateY(50%) !important;}  
+    .modal-open .modal-dialog.sh_cls_wsale_price_list_popup .modal-content .modal-header h4{font-size:var(--sh-store-section-heading-font-size-mobile);margin-bottom:10px;}
+}

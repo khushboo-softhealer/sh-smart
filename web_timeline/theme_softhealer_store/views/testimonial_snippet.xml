@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Sh Snippet 1 -->
+    <template id="sh_testimonial_snippet_s_1" name="Testimonial Snippet">
+        <section id="sh_store_testimonial_section_dyn" class="sh_store_testimonial_section js_cls_get_testimonial_s_post sh_testimonial_snippet" data-item_template="theme_softhealer_store.sh_testimonial_s_test_1_item">
+            <div class="oe_structure"/>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4">
+                            <div class="sh_store_testimonial">
+                                <div class="testimonial-title">
+                                <i class="bi bi-quote display-1"></i>
+                                <h5 class="sh_sub_title">What our clients say</h5>
+                                <h2>Testimonials</h2>
+                                <p>We have helped over 500 businesses achieve their goals with our expertise.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-8 col-xl-8 col-lg-8">
+                            <div class="sh_testi-wrap o_not_editable" t-ignore='true'>
+                                <section class="custom_owl">
+                                    <div class="owl-carousel">
+                                        <div class="js_cls_render_dynamic_testimonial_area" />
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="oe_structure"/>
+        </section>
+    </template>
+    <!-- Sh Snippet 1 -->
+</odoo>

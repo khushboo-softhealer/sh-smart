@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_leave_days_alert_hr_holidays" model="ir.ui.view">
+        <field name="name">sh.leave.days.alert.hr.holidays</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form" />
+        <field name="arch" type="xml">
+            <field name="name" position="attributes">
+                <attribute name="attrs">{'readonly': [('state', 'not in', ('draft',
+                    'confirm'))],'invisible':[('is_desc_hide','=',True)] }</attribute>
+            </field>
+            <xpath expr="//sheet/div" position="before">
+                <field name="bool_field" invisible="1" />
+                <field name="is_desc_hide" invisible="1" />
+                <div class="alert alert-info text-center o_form_header"
+                    style="background: #efd9d9;color: maroon;border:1px solid #e9b4b4;"
+                    attrs="{'invisible': [('bool_field','=',True)] }" role="alert">
+                    <div>
+                        <strong>
+                            <field name="warning" readonly="1" force_save="1" />
+                        </strong>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

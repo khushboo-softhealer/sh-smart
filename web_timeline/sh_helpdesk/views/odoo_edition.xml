@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sh_edition_form_view" model="ir.ui.view">
+		<field name="name">sh.edition</field>
+		<field name="model">sh.edition</field>
+		<field name="arch" type="xml">
+			<form string="Odoo Edition">
+				<sheet>
+					<group>
+						<group>
+							<field name="name"/>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="sh_edition_tree_view" model="ir.ui.view">
+		<field name="name">sh.edition</field>
+		<field name="model">sh.edition</field>
+		<field name="arch" type="xml">
+			<tree string="Odoo Edition">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+	<record id="sh_edition_action" model="ir.actions.act_window">
+		<field name="name">Odoo Edition</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">sh.edition</field>
+		
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem id="sh_menu_edition" parent="sh_helpdesk.helpdesk_config_menu" sequence="9" action="sh_edition_action"/>
+</odoo>

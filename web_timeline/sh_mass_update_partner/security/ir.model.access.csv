@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sh_mass_update_partner.access_sh_res_partner_mass_update_wizard,access_sh_res_partner_mass_update_wizard,sh_mass_update_partner.model_sh_res_partner_mass_update_wizard,base.group_user,1,1,1,1

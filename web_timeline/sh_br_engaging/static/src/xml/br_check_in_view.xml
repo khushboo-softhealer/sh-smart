@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="br_check_in_templates" t-inherit="web.FormView" t-inherit-mode="primary" owl="1">
+        <xpath expr="//t[5]" position="before">
+            <div class="container-fluid">
+              <div class="checkin_panel">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="my_checkin_panel">
+                      <div class="checkin_panel_title">
+                        <span class="fa fa-star me-2"></span>
+                        <!-- <span class="checkin_time">My Check-in : Sep 9 - Sep 15 </span> -->
+                        <span class="checkin_time">My Check-in : <t t-esc="name"/> </span>
+                      </div>
+                        <!-- Save Button Code  -->
+                      <t t-if="stage=='draft'">
+                        <div class="save_discard_btn_box">
+                          <a href="#" class="btn btn-outline-primary sh_save_checkIn_btn  border-0 d-none" t-on-click="SaveCheckIn"><i class="fa fa-cloud-upload fa-fw"/></a>
+                          <a href="#" class="btn btn-outline-primary sh_discard_checkIn_btn border-0 d-none" t-on-click="DiscardCheckIn"><i class="fa fa-times fa-fw"/></a>
+                        </div>
+                      </t>
+                    </div>
+                    <div class="d-flex history_btn_rightside">
+                      <button class="btn btn-outline-primary" t-on-click="ViewHistory"> View My History</button>
+                      <span class="line"></span>
+
+                      <div class="d-flex history_calendar align-items-center"  t-on-click="() => this.SmartButtonEvents(smart_button_1_on_1s_data)">
+                        <div class="fa fa-calendar"></div>
+                        <div class="canedar_text">
+                          <span class="canedar_date">
+                            <t t-if='smart_button_1_on_1s_data'>
+                              <p class="m-0"><t t-esc='smart_button_1_on_1s_data.count' /></p>
+                            </t>
+                          </span>
+                          <span class="canedar_time">
+                            <p class="m-0">1 on 1s</p>
+                          </span>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+            
+            
+              <div class="checkin_work_panel">
+                  <div class="row gx-4">
+                      <div class="col-lg-9 col-md-7 col-12 left_panel">
+                        <!-- <t t-set="dynamic_id" t-value="0"/> -->
+                        <t t-foreach='rating_questions' t-as="rating_question" t-key="rating_question_index">
+                        <!-- <t t-set="dynamic_id" t-value="dynamic_id+1"/> -->
+                          <div class="checkin_reating_box">
+                            <div class="checkin_heading">
+                                <p class="mb-0"><t t-esc="rating_question.question_text"/></p>
+                            </div>
+                            <div class="progress_bar_main">
+                              <div class="steps_div" t-att-data-id="rating_question.question_id">
+                                <div class="step_box_text_awful">
+                                  <div class="step_box_starting_text">
+                                    <img src="sh_br_engaging/static/images/awful.svg" alt="Awful" class=""/>
+                                  </div>
+                                </div>
+                                <!-- <div class="step_box ps-5 active" id="1" t-on-click="onClickProgressBar"></div> -->
+                                <div class="step_box ps-5" id="1" t-on-click="onClickProgressBar"></div>
+                                <div class="step_box" id="2" t-on-click="onClickProgressBar"></div>
+                                <div class="step_box" id="3" t-on-click="onClickProgressBar"></div>
+                                <div class="step_box" id="4" t-on-click="onClickProgressBar"></div>
+                                <div class="step_box pe-5" id="5" t-on-click="onClickProgressBar"></div>
+                                <h3 class="rating_questions_answer_element d-none"></h3>
+                                <div class="step_box_text_amazing">
+                                  <div class="step_box_starting_text"> 
+                                    <img src="sh_br_engaging/static/images/amazing.svg" alt="Amazing" class=""/>
+                                  </div>
+                                </div>
+                              </div>
+                             <!-- == Code For How Feel Question Section ==  -->
+                              <t t-if="rating_question.sh_how_feel_question">
+                                <h2 class="count_text text-center">
+                                  <!-- <p class="mb-0">happens to all of us.  Anything you need?</p> -->
+                                  <p class="mb-0"></p>
+                                </h2>
+                              </t>
+
+                              <!-- == Low Rating Reason Code ==  -->
+                              <div class="form-group row why_functionality_section text-center d-none">
+                                <label class="col-lg-1 col-form-label">Why</label>
+                                <div class="col-lg-11">
+                                  <input class="form-control why_funct_input_element" placeholder="Add Reason" t-on-keydown="handleKeyLowReasonInput"/>
+                                </div>
+                              </div>
+                              <!-- == Show Low Rating Reason After Submit ==  -->
+                              <t t-if="rating_question.sh_low_rating_reason">
+                                <h3 class="text-center"><b>Low Rating Reason :-</b> <t t-esc="rating_question.sh_low_rating_reason"/> </h3>
+                              </t>
+                            </div>
+                        </div>
+                        </t>
+
+                         
+                        <t t-if='non_rating_questions.length>0'>
+                          <div class="quations_box_main">
+                              <t t-if="stage=='draft'">
+                                <div class="quations_heading">
+                                  <p class="mb-0">questions</p>
+                                </div>
+                              </t>
+                              
+                              <t t-foreach='non_rating_questions' t-as="non_rating_question" t-key="non_rating_question_index">
+                                <div class="quations_ideas" t-att-data-id="non_rating_question.question_id">
+                                  <label class="form-label" > <t t-esc="non_rating_question.question_text"/> </label>
+                                  <input type="text" class="form-control sh_answers" t-on-keydown="handleKeyDown"/>
+                                </div>
+                              </t>
+                              <!-- <div class="quations_input_box">
+                                <div class="quations_ideas mb-4">
+                                  <label class="form-label" > any ideas you have to improve your roleor the company? <span class="optipnal_span">(Optional)</span> </label>
+                                  <input type="text" class="form-control"/>
+                                </div>
+                                <div class="quations_week mb-5 mt-1">
+                                  <label class="form-label" > what went well this week?</label>
+                                  <input type="text" class="form-control"/>
+                                </div>                    
+                              </div> -->
+                            </div>
+                          </t>
+                          <!-- <h3 class="float-end text-danger pt-1 d-none validation_element">*Please fill out all the questions</h3> -->
+                          <t t-if="stage=='draft'">
+                            <h3 class="alert alert-danger text-center d-none validation_element">*Please fill out all the questions</h3>
+                          </t>  
+                          
+                          <t t-if="stage=='draft'">
+                            <div class="mt-4">
+                              <a href="#" class="btn btn-primary sh_submit_btn" t-on-click="SubmitCheckIn">Submit</a>
+                            </div>
+                          </t>
+                          
+                      </div>
+                      <div class="col-lg-3 col-md-5 col-12 right_panel">
+                          <div class="employe_checkin_box">
+                              <div class="employe_checkin_time_box align-items-center d-flex">
+                                  <div class="employe_checkin_label">
+                                    <img t-attf-src="web/image?model=res.users&amp;field=avatar_128&amp;id={{user_id}}" alt="Login Image" class=""/>
+                                    <t t-esc="img_src"/>
+                                  </div>
+                                  <div class="employe_checkin_time">
+                                      <!-- <p class="employe_checkin_date mb-0">Employe 1 - manager </p> -->
+                                      <p class="employe_checkin_date mb-0"><t t-esc="login_user_name"/></p>
+                                      <!-- <p class="employe_checkin_time_text mb-0">Due Friday, September 15</p> -->
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="recent_checkin_box">
+                              <div class="recent_checkin_heading">
+                                  <p class="mb-0">My recent Check-ins</p>
+                              </div>
+                              <div class="recent_checkin_time_box mb-3 d-flex">
+                                  <div class="recent_checkin_label">
+                                    <span class="recent_checkin_label_span"></span>
+                                  </div>
+                                  <div class="recent_checkin_time">
+                                      <!-- <p class="recent_checkin_date mb-0">Sep 9 - Sep 15 </p> -->
+                                      <p class="recent_checkin_date mb-0"><t t-esc="name"/> </p>
+                                      <p class="recent_checkin_time_text mb-0">Current</p>
+                                  </div>
+                              </div>
+                              
+                              <!-- Code To Display The History Of All Past Check-in Records  -->
+                              <!-- === Hide History Record Code Currently ===  -->
+                              <!-- <t t-foreach="id_name_dict" t-as="id_name" t-key="id">
+                                <t t-set="id" t-value="id_name.id"/>
+                                <t t-set="name" t-value="id_name.name"/>
+                                <div class="recent_checkin_time_box history_main_div mb-3 d-flex" t-on-click="onClickHistoryRecords" t-att-data-id="id">
+                                  <div class="recent_checkin_label">
+                                  </div>
+                                  <div class="recent_checkin_time">
+                                      <p class="recent_checkin_date mb-0"><t t-esc="name"/> </p>
+                                      <p class="recent_checkin_time_text mb-0">History</p>
+                                  </div>
+                              </div>
+                            </t> -->
+                          </div>
+                      
+                      </div>
+                  </div>
+                  
+              </div>
+              </div>
+        </xpath>
+    </t>
+
+</templates>

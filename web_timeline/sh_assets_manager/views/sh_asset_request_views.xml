@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="assets_maintenance_request_form_view" model="ir.ui.view">
+		<field name="name">asset.request</field>
+		<field name="model">asset.request</field>
+		<field name="arch" type="xml">
+			<form string="Maintenance Request">
+				<header>
+					<button class="btn btn-primary" name="scrap" type="object" string="Scrap" attrs="{'invisible':[('state','in',['scrap','cancel','solved'])]}" />
+					<button class="btn btn-primary" name="repair" type="object" string="Repair" attrs="{'invisible':[('state','!=','new')]}"/>
+					<button class="btn btn-primary" name="repairing_done" type="object"
+						string="Repairing Done" attrs="{'invisible':[('state','!=','under_process')]}"/>
+					<button class="btn btn-primary" name="cancel_request" type="object"
+						string="Cancel" attrs="{'invisible':[('state','in',['cancel','solved'])]}"/>
+					<field name="state" widget="statusbar" clickable="True" />
+				</header>
+				<sheet>
+					<group>
+						<group>
+							<field name="employee_id" required="1" />
+							<field name="create_date" />
+							<field name="update_date" />
+							<field name="technician_id" />
+							<field name="problem" />
+						</group>
+						<group>
+							<field name="request_type" />
+							<field name="asset_ids" widget="many2many_tags"
+								domain="[('employee_id','=',employee_id),('state','=','running'),('is_child','=',False)]"
+								options="{'no_create':True,'no_create_edit':True}"
+								attrs="{'required':[('request_type','=','device'),('request_type','=','other')],'invisible':[('request_type','!=','device'),('request_type','!=','other')]}" />
+							<field name="asset_type_id" options="{'no_create':True,'no_create_edit':True}"
+								attrs="{'required':[('request_type','=','new')],'invisible':[('request_type','!=','new')]}"/>
+							<field name="user_id" />
+							<field name="partner_id" />
+							<field name="priority" widget="radio"/>
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers" />
+					<field name="activity_ids" widget="mail_activity" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+	<record id="assets_maintenance_request_tree_view" model="ir.ui.view">
+		<field name="name">asset.request</field>
+		<field name="model">asset.request</field>
+		<field name="arch" type="xml">
+			<tree string="Maintenance Request">
+				<field name="asset_ids" widget="many2many_tags" />
+				<field name="asset_type_id"/>
+				<field name="create_date" />
+				<field name="update_date" />
+				<field name="technician_id" />
+				<field name="problem" />
+				<field name="employee_id" />
+				<field name="user_id" />
+				<field name="state" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="asset_request_view_search" model="ir.ui.view">
+		<field name="name">asset.requestsearch</field>
+		<field name="model">asset.request</field>
+		<field name="arch" type="xml">
+			<search string="Assets Request">
+				<field name="employee_id" />
+				<filter name="state_new" string="New" domain="[('state','=','new')]" />
+				<filter name="state_underprocess" string="UnderProcess"
+					domain="[('state','=','under_process')]" />
+				<filter name="state_solved" string="Solved" domain="[('state','=','solved')]" />
+				<filter name="state_cancel" string="Cancel" domain="[('state','=','cancel')]" />
+				<group name="group" string="Group By">
+					<filter name="group_by_employee" string="Employee"
+						context="{'group_by':'employee_id'}" />
+					<filter name="group_by_state" string="State" context="{'group_by':'state'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+	<record id="assets_maintenance_request_action" model="ir.actions.act_window">
+		<field name="name">Maintenance Request</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">asset.request</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+</odoo>

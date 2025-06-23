@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <template id="sh_mail_notification_light" inherit_id="mail.mail_notification_light">
+        <xpath expr="//a[@href='https://www.odoo.com?utm_source=db&amp;utm_medium=email']" position="replace">
+            <a
+                target="_blank"
+                href="https://www.softhealer.com"
+                style="color: #875A7B;">Softhealer</a>
+        </xpath>
+    </template>
+
+
+    <!--Email Template For Contract -->
+    <record id="email_template_hr_contract" model="mail.template">
+        <field name="name">Hr Contract Email</field>
+        <field name="model_id" ref="sh_hr_contract.model_hr_contract" />
+        <field name="email_from">{{(object.company_id.email)}}</field>
+        <field name="email_to">{{(object.employee_id.work_email)}}</field>
+        <field name="subject">{{object.company_id.name}}(Ref {{object.name or 'n/a' }})</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p style="margin: 0px; padding: 0px; font-size: 13px;">Dear, <t
+                        t-out="object.employee_id.name" />
+                </p>
+                <br />
+                <p style="margin: 0px; padding: 0px; font-size: 13px;"> We are pleased to offer you
+                    the position of <b>
+                        <t t-out="object.job_id.name" />
+                    </b> in our
+                    organization. </p>
+                <br />
+                <p>Do not hesitate to contact us if you have any question.</p>
+            </div>
+        </field>
+        <field name="report_template" ref="action_report_hr_contract" />
+        <field name="report_name">{{(object.name or'').replace('/','_')}}</field>
+        <field name="lang">{{object.employee_id.lang}}</field>
+    </record>
+
+    <!--Email template For Confirmation -->
+    <record id="email_template_hr_cofirmation" model="mail.template">
+        <field name="name">Hr Confirmation Email</field>
+        <field name="model_id" ref="sh_hr_contract.model_hr_contract" />
+        <field name="email_from">{{(object.company_id.email)}}</field>
+        <field name="email_to">{{(object.employee_id.work_email)}}</field>
+        <field name="subject">{{object.company_id.name}} (Ref{{object.name or 'n/a' }})</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p style="margin: 0px; padding: 0px; font-size: 13px;">Dear, <t
+                        t-out="object.employee_id.name" /></p>
+                <br />
+                <p style="margin: 0px; padding: 0px; font-size: 13px;"> Congratulations! We are
+                    pleased to offer you the position of <b>
+                        <t t-out="object.job_id.name" />
+                    </b> in our
+                    organization. </p>
+                <br />
+                <p>Do
+                    not hesitate to contact us if you have any question.</p>
+            </div>
+        </field>
+        <field name="report_template" ref="action_report_hr_confirmation" />
+        <field name="report_name">{{(object.name or '').replace('/','_')}}</field>
+        <field name="lang">{{object.employee_id.lang}}</field>
+    </record>
+
+</odoo>

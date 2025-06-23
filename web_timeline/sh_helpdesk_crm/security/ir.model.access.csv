@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_lead_ticket_to_lead,ticket.crm.lead,crm.model_crm_lead,sh_helpdesk_crm.sh_helpdesk_ticket_crm,1,1,1,1
+access_crm_teamt_icket_to_lead,ticket.crm.team,crm.model_crm_team,sh_helpdesk_crm.sh_helpdesk_ticket_crm,1,0,0,0
+access_crm_stage_ticket_to_lead,ticket.crm.stage,crm.model_crm_stage,sh_helpdesk_crm.sh_helpdesk_ticket_crm,1,0,0,0
+crm.access_res_partner,res.partner.crm.user,base.model_res_partner,sales_team.group_sale_salesman,1,1,0,0

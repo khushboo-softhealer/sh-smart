@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+hr_holidays.access_hr_holidays_employee_request,hr.holidays.employee.request,model_hr_leave,base.group_user,1,1,1,0
+hr_holidays.access_hr_holidays_employee_allocation,hr.holidays.employee.allocation,model_hr_leave_allocation,base.group_user,1,0,0,0
+sh_leave_custom.access_sh_global_leave_wizard,access_sh_global_leave_wizard,sh_leave_custom.model_sh_global_leave_wizard,base.group_user,1,1,1,1
+sh_leave_custom.access_sh_employee_leave_allocation_wizard,access_sh_employee_leave_allocation_wizard,sh_leave_custom.model_sh_employee_leave_allocation_wizard,base.group_user,1,1,1,1

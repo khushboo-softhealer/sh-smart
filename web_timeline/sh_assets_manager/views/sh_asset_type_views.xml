@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_sh_asset_type_form">
+        <field name="name">sh.asset.type.form</field>
+        <field name="model">sh.asset.type</field>
+        <field name="arch" type="xml">
+            <form string="Asset category">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_sh_asset_type_kanban" model="ir.ui.view">
+        <field name="name">sh.asset.type.kanban</field>
+        <field name="model">sh.asset.type</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="name" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                            <div class="row mb4">
+                                <div class="col-6">
+                                    <strong>
+                                        <span>
+                                            <field name="name" />
+                                        </span>
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_sh_asset_type_tree">
+        <field name="name">sh.asset.type.tree</field>
+        <field name="model">sh.asset.type</field>
+        <field name="arch" type="xml">
+            <tree string="Asset category">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    
+    <record id="view_sh_asset_type_search" model="ir.ui.view">
+        <field name="name">sh.asset.type.search</field>
+        <field name="model">sh.asset.type</field>
+        <field name="arch" type="xml">
+            <search string="Search By">
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_sh_asset_type">
+        <field name="name">Assets Type</field>
+        <field name="res_model">sh.asset.type</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+
+</odoo>

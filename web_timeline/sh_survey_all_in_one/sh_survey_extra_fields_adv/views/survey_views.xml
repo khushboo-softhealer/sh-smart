@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- QUESTIONS -->
+    <!-- <record id="sh_survey_extra_fields_adv_survey_que_form_view" model="ir.ui.view">
+        <field name="name">sh.survey.extra.fields.adv.survey.que.form.view</field>
+        <field name="model">survey.question</field>
+        <field name="inherit_id" ref="survey.survey_question_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[1]/div/div" position="attributes">
+                <attribute name="attrs">
+                    {'invisible': [('question_type', 'not in', ['char_box', 'numerical_box', 'date', 'datetime', 'que_sh_time','que_sh_range','que_sh_week','que_sh_month','que_sh_password' ])]}
+                </attribute>
+            </xpath>
+        </field>
+    </record> -->
+
+    <!-- USER INPUT LINES
+	     .. note:: these views are useful mainly for technical users/administrators -->
+    <record id="sh_survey_extra_fields_adv_survey_user_input_line_form" model="ir.ui.view">
+        <field name="name">sh.survey.extra.fields.adv.survey.user.input.line.form</field>
+        <field name="model">survey.user_input.line</field>
+        <field name="inherit_id" ref="survey.survey_user_input_line_view_form" />
+        <field name="arch" type="xml">
+            <field name="value_text_box" position="after">
+                <field name="value_ans_sh_qrcode" colspan="2" attrs="{'invisible': [('answer_type','!=','ans_sh_qrcode')]}" />
+
+                <field name="value_ans_sh_barcode" colspan="2" attrs="{'invisible': [('answer_type','!=','ans_sh_barcode')]}" />
+
+                <field name="value_sh_location_latitude" colspan="2" attrs="{'invisible': [('answer_type','!=','ans_sh_location')]}" />
+                <field name="value_sh_location_longitude" colspan="2" attrs="{'invisible': [('answer_type','!=','ans_sh_location')]}" />
+
+                <field name="value_ans_sh_location" colspan="2" attrs="{'invisible': [('answer_type','!=','ans_sh_location')]}" />
+            </field>
+        </field>
+    </record>
+</odoo>

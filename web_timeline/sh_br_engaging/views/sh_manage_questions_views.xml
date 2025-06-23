@@ -1,0 +1,57 @@
+<odoo>
+
+    <record model="ir.ui.view" id="sh_manage_questions_search">
+        <field name="name">sh.manage.questions.search</field>
+        <field name="model">sh.manage.questions</field>
+        <field name="arch" type="xml">
+            <search string="UTM Campaigns">
+                <field name="name"></field>
+                <group expand="0" string="Group By">
+                    <filter string="Category" name="group_category_id"
+                        context="{'group_by': 'sh_question_category'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record  id="sh_manage_questions_form" model="ir.ui.view">
+        <field name="name">sh.manage.questions.form</field>
+        <field name="model">sh.manage.questions</field>
+        <field name="arch" type="xml">
+            <form class="sh_manage_questions_form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"></field>
+                            <field name="sh_in_every_check_in"></field>  
+                            <field name="sh_question_category"></field>       
+                            <field name="sh_is_active"></field>                
+                            <field name="sequence"></field>                
+                            <field name="sh_is_rating_question"></field>                
+                        </group>
+                    </group>                            
+                </sheet>
+            </form>
+        </field>
+    </record>   
+    <record  id="sh_manage_questions_tree" model="ir.ui.view">
+        <field name="name">sh.manage.questions.tree</field>
+        <field name="model">sh.manage.questions</field>
+        <field name="arch" type="xml">
+            <tree editable='bottom'>
+                <field name="sequence" widget="handle"></field>
+                <field name="name"></field>
+                <field name="sh_in_every_check_in"></field>                
+                <field name="sh_question_category"></field>                
+                <field name="sh_is_active"></field>                
+                <field name="sh_is_rating_question"></field>                
+            </tree>
+        </field>
+    </record>    
+    <record id="sh_manage_questions_action" model="ir.actions.act_window">
+        <field name="name">Manage Questions</field>
+        <field name="res_model">sh.manage.questions</field>        
+        <field name="view_mode">tree,form,search</field>   
+        <field name="context">{'search_default_group_category_id': 1}</field>
+    </record>  
+
+</odoo>

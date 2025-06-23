@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_icici_payroll_category" model="ir.module.category">
+        <field name="name">Payroll Manager</field>
+        <field name="sequence">60</field>
+    </record>
+    <record id="sh_payroll_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="sh_icici_payroll_category"/>
+    </record>
+</odoo>

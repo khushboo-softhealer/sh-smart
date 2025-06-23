@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+
+        <record id="sh_view_teamlogger_attendance_tree" model="ir.ui.view">
+            <field name="name">sh.teamlogger.attendance.tree</field>
+            <field name="model">sh.teamlogger.attendance</field>
+            <field name="arch" type="xml">
+                <tree string="Teamlogger Attendance" create="0">
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="punch_in" widget="datetime"/>
+                    <field name="punch_out" widget="datetime"/>
+                    <field name="total_hours"/>
+                    <field name="break_hours"/>
+                    <field name="span_hours"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sh_view_teamlogger_attendance_form" model="ir.ui.view">
+            <field name="name">sh.teamlogger.attendance.form</field>
+            <field name="model">sh.teamlogger.attendance</field>
+            <field name="arch" type="xml">
+                <form string="Teamlogger Attendance" create="0">
+                    <group>
+                        <field name="employee_id"/>
+                        <field name="date"/>
+                        <field name="punch_in"/>
+                        <field name="punch_out"/>
+                        <field name="total_hours"/>
+                        <field name="break_hours"/>
+                        <field name="span_hours"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="sh_view_teamlogger_attendance_search" model="ir.ui.view">
+            <field name="name">teamlogger.attendance.search</field>
+            <field name="model">sh.teamlogger.attendance</field>
+            <field name="arch" type="xml">
+                <search string="Search Attendance">
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <filter name="today" string="Today" domain="[('date', '=', context_today())]"/>
+                    <group expand="1" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by':'employee_id'}"/>
+                        <filter name="group_date" string="Date" domain="[]" context="{'group_by':'date'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+=        <record id="sh_action_teamlogger_attendance" model="ir.actions.act_window">
+            <field name="name">Teamlogger Attendance</field>
+            <field name="res_model">sh.teamlogger.attendance</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="sh_view_teamlogger_attendance_search"/>
+        </record>
+
+        <menuitem id="menu_teamlogger_attendance" name="TeamLogger Daily Attendance"
+         action="sh_action_teamlogger_attendance"
+          sequence="100"
+          parent="hr_attendance.menu_hr_attendance_manage_attendances"
+          groups="sh_teamlogger_api.group_rmm_attendance"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+<!--    Employee Res Configuration Setting Annexure - B   -->
+    <record id="sh_hr_confi_setting_annexure_b_notes" model="ir.ui.view">
+        <field name="name">hr.res.config.setting</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="hr.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='hr']" position="inside">
+                <h2>Annexure - B</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-12 o_setting_box">
+                        <div>
+                            <field name="annexure_b_notes" />
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM -->
+	<record id="sh_module_req_wizard_view" model="ir.ui.view">
+		<field name="name">sh.module.req.wizard</field>
+		<field name="model">sh.module.req.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Module Request">
+				<group>
+
+					<group>
+
+						<field name="for_which" required="1" />
+
+						<field name="project_id"
+							attrs="{
+								'invisible': [('for_which', '!=', 'project')],
+								'required': [('for_which', '=', 'project')]
+							}"
+                            options="{'no_create': True, 'no_open': True}" />
+
+						<field name="task_id"
+							attrs="{
+								'invisible': [('for_which', '!=', 'project')],
+								'required': [('for_which', '=', 'project')]
+							}"
+                            domain="[('project_id', '=', project_id)]"
+                            options="{'no_create': True, 'no_open': True}" />
+
+						<field
+							name="product_ids"
+							string="Module Task"
+							domain="[('related_sub_task','!=',False)]"
+							attrs="{
+								'invisible': [('for_which', '!=', 'project')],
+								'required': [('for_which', '=', 'project')]
+							}"
+							widget="many2many_tags"
+							options="{'no_create': True, 'no_open': True}"
+							context="{'sh_module_req_wizard': True}"
+
+						/>
+						<!-- domain="[
+								('sh_technical_name', '!=', False),
+								('sh_product_id', '!=', False),
+							]" -->
+
+						<field name="ticket_id"
+							attrs="{
+								'invisible': [('for_which', '!=', 'ticket')],
+								'required': [('for_which', '=', 'ticket')]
+							}"
+							options="{'no_create': True, 'no_open': True}" />
+
+						<!-- <field
+							string="Modules"
+							name="product_ids"
+							attrs="{
+								'invisible': [('for_which', '!=', 'ticket')]
+							}"
+							widget="many2many_tags"
+						/> -->
+
+						<field name="btn_already_pressed" invisible="1" />
+					</group>
+
+				</group>
+				<footer>
+					<button name="btn_module_request" string="Module Request" type="object" class="oe_highlight" attrs="{'invisible': [('btn_already_pressed', '=', True)]}" />
+					<button special="cancel" string="Cancel" class="oe_link" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+    <!-- ACTION -->
+	<record id="sh_module_req_wizard_action" model="ir.actions.act_window">
+		<field name="name">Module Request</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">sh.module.req.wizard</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+
+</odoo>

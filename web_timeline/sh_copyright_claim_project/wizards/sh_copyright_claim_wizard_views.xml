@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_claim_wizard_view" model="ir.ui.view">
+        <field name="name">Copyright Claim</field>
+        <field name="model">sh.copyright.claim.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Copyright Claim Wizard">
+                <group>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                    </group>
+                </group>
+
+                <footer>
+                    <button name="sh_print_report" string="Print" type="object" class="oe_highlight" />
+                    <button string="Cancel" class="oe_highlight" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_claim_wizard_action" model="ir.actions.act_window">
+        <field name="name">Copyright Claim</field>
+        <field name="view_id" ref="sh_claim_wizard_view" />
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_mode">form</field>
+        <field name="res_model">sh.copyright.claim.wizard</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

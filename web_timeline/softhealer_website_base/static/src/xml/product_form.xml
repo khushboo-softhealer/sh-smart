@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <!-- <t t-name="softhealer_website_base.WidgetWebsiteButtonIcon" t-inherit="website.WidgetWebsiteButtonIcon" t-inherit-mode="extension">
+        <xpath expr="//button" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+    </t> -->
+
+    <!-- <t t-extend="website.GoToButtons">
+        <t t-jquery="a.btn" t-operation="append">
+            <span> = SAGAR =</span>
+        </t>
+    </t> -->
+
+    <t t-name="WidgetWebsiteButtonIcon">
+        <button type="button" class="btn oe_stat_button">
+            <i class="fa fa-fw o_button_icon fa-globe"/>
+            <div class="o_stat_info">
+                <span class="o_stat_text">Go to<br/>Website 11111111111</span>
+            </div>
+        </button>
+    </t>
+
+</templates>

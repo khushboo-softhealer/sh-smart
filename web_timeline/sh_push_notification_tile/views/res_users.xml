@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="sh_push_notification_users_form_simple_inherit_modif" model="ir.ui.view">
+        <field name="name">res.users</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="sh_notifications.sh_notification_res_users_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='notifications']" position="inside">
+                    <group string="Notifications Model" name="sh_push_notifications">
+                        <group >
+                            
+                            <field name="notify_models" context="{'model_access': True}" widget="many2many_tags"/>
+                        </group>
+                    </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Hr Job List View -->
+    <record id="sh_website_editor_hr_job_tree_view" model="ir.ui.view">
+        <field name="name">sh.website.editor.hr.job.view.tree</field>
+        <field name="model">hr.job</field>
+        <field name="arch" type="xml">
+            <tree string="Job" sample="1">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="department_id" />
+                <field name="application_count" string="Applications" />
+                <field name="no_of_recruitment" />
+                <field name="is_published" string="Is Published" optional="hide"/>
+                <field name="website_published" string="Is Website Published" optional="hide"/>
+                <field name="website_id" options="{'no_create': True}"
+                    domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"
+                    groups="website.group_multi_website" optional="show" />
+                <field name="no_of_employee" optional="hide" />
+                <field name="expected_employees" optional="hide" />
+                <field name="no_of_hired_employee" optional="hide" />
+                <field name="alias_name" invisible="1" />
+                <field name="alias_id" attrs="{'invisible': [('alias_name', '=', False)]}"
+                    optional="hide" />
+                <field name="user_id" widget="many2one_avatar_user" optional="hide" />
+                <field name="message_needaction" invisible="1" />
+                <field name="company_id" groups="base.group_multi_company" optional="hide" />
+                <field name="company_id" invisible="1" />
+                <button name="action_code_job_position_website_description" type="object"
+                    title="Code" icon="fa-code fa-lg"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Hr Job Form View -->
+    <record id="sh_website_editor_hr_job_form_view" model="ir.ui.view">
+        <field name="name">sh.website.editor.hr.job.view.form</field>
+        <field name="model">hr.job</field>
+        <field name="arch" type="xml">
+            <form string="Job">
+                <field name="active" invisible="1" />
+                <field name="company_id" invisible="1" />
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" icon="fa-pencil" name="308"
+                            context="{'default_user_id': user_id, 'active_test': False}"
+                            type="action">
+                            <field name="all_application_count" widget="statinfo"
+                                string="Job Applications" />
+                        </button>
+                        <button class="oe_stat_button" icon="fa-file-text-o"
+                            name="action_open_attachments" type="object"
+                            attrs="{'invisible': [('documents_count','=',0)]}">
+                            <field name="documents_count" widget="statinfo" string="Documents" />
+                        </button>
+                        <button class="oe_stat_button" type="action" name="309"
+                            icon="fa-bar-chart-o" context="{'default_job_id': active_id}">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Trackers</span>
+                            </div>
+                        </button>
+                    </div>
+                    <field name="sh_job_image" widget="image" class="oe_avatar" />
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1>
+                            <field name="name" placeholder="e.g. Sales Manager" />
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="sh_position"/>
+                        <field name="sh_custom_description"/>
+                        <field name="sh_urgent"/>
+                    </group>
+                    <notebook>
+                        <page string="Recruitment" name="recruitment_page">
+                            <group>
+                                <group name="recruitment">
+                                    <field name="company_id" options="{'no_create': True}"
+                                        invisible="1" groups="base.group_multi_company" />
+                                    <field name="department_id" />
+                                    <label for="address_id" />
+                                    <div class="o_row">
+                                        <span attrs="{'invisible': [('address_id', '!=', False)]}"
+                                            class="oe_read_only">Remote</span>
+                                        <field name="address_id" context="{'show_address': 1}"
+                                            options="{'always_reload': True}" placeholder="Remote" />
+                                    </div>
+                                    <field name="sh_job_location" />
+
+                                    <label for="alias_name" string="Email Alias"
+                                        attrs="{'invisible': [('alias_domain', '=', False)]}"
+                                        help="Define a specific contact address for this job position. If you keep it empty, the default email address will be used which is in human resources settings" />
+                                    <div name="alias_def"
+                                        attrs="{'invisible': [('alias_domain', '=', False)]}">
+                                        <field name="alias_id" class="oe_read_only"
+                                            string="Email Alias" required="0" />
+                                        <div class="oe_edit_only" name="edit_alias">
+                                            <field name="alias_name" class="oe_inline" />@<field
+                                                name="alias_domain" class="oe_inline" readonly="1" />
+                                        </div>
+                                    </div>
+                                    <field name="contract_type_id" />
+                                </group>
+                                <group name="recruitment2">
+                                    <label for="no_of_recruitment" />
+                                    <div class="o_row" name="recruitment_target">
+                                        <field name="no_of_recruitment" class="o_hr_narrow_field" />
+                                        <span>new Employees</span>
+                                    </div>
+                                    <field name="user_id" widget="many2one_avatar_user" />
+                                    <field name="interviewer_ids" widget="many2many_tags"
+                                        options="{'no_create': True, 'no_create_edit': True}" />
+                                        <field name='is_published' widget="boolean_toggle"/>
+                                        <field name='website_published' widget="boolean_toggle"/>
+                                    <field name="website_id" options="{'no_create': True}"
+                                        domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"
+                                        groups="website.group_multi_website" />
+                                </group>
+                            </group>
+                            <label for="job_details" class="mb-2" />
+                            <field name="job_details" />
+                        </page>
+                        <page string="Job Summary" name="job_description_page">
+                            <field name="description" options="{'collaborative': true}"
+                                placeholder="You can write here a short description of your Job Description that will be displayed on the main Jobs' list page." />
+                        </page>
+                        <page string="Website Description" name="website_description_page">
+                            <field name="website_description" widget="html" options="{'style-inline': false, 'resizable':true, 'codeview': true}" />
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" options="{'open_attachments': True}" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Hr Job code form view -->
+    <record id="sh_website_editor_hr_job_form_wizard_code_view" model="ir.ui.view">
+        <field name="name">sh.website.editor.hr.job.wizard.code.view.form</field>
+        <field name="model">hr.job</field>
+        <field name="arch" type="xml">
+            <form string="Job">
+                <sheet>
+                    <group>
+                        <field name="name" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Website Description" name="website_description_page">
+                            <field name="website_description" widget="ace" options="{'mode': 'xml'}"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Hr Job Action -->
+    <record id="sh_website_editor_hr_job_action" model="ir.actions.act_window">
+        <field name="name">Job Positions</field>
+        <field name="res_model">hr.job</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids"
+            eval="[(5, 0, 0),(0, 0, {'view_mode': 'tree', 'view_id': ref('sh_website_editor_hr_job_tree_view')}),(0, 0, {'view_mode': 'form', 'view_id': ref('sh_website_editor_hr_job_form_view')})]" />
+    </record>
+
+</odoo>

@@ -1,0 +1,73 @@
+/* login page */
+.oe_website_login_container form.oe_login_form .form-group.field-db,
+.oe_website_login_container form.oe_login_form .form-group.field-login,
+.oe_website_login_container form.oe_login_form .form-group.field-password {
+  align-items: center;
+  border: 1.5px solid #e2e4e6 !important;
+  border-radius: 50rem !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+  padding: 5px 10px 5px 16px !important;
+  border-bottom: 3px solid #d4d7da !important;
+  transition: all 0.5s;
+}
+
+.oe_website_login_container form.oe_login_form .form-group.field-login .input-group.input-group-sm.mb-3,
+.oe_website_login_container form.oe_login_form .form-group.field-password .input-group.input-group-sm.mb-3 {
+  background: transparent !important;
+  margin-bottom: 0px !important;
+}
+
+.oe_website_login_container form.oe_login_form .form-group.field-db .input-group .input-group-append .btn.btn-secondary,
+.oe_website_login_container form.oe_login_form .oe_login_buttons .btn.btn-primary.btn-block {
+  background: #2C3782;
+  border: 1.5px solid #2C3782;
+  border-radius: 50rem !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+  border-bottom: 3px solid #262f6f !important;
+  transition: all 0.5s;
+}
+
+.oe_website_login_container form.oe_login_form .form-group.field-db .input-group input[id=db][name=db],
+.oe_website_login_container form.oe_login_form .form-group.field-login .input-group input[id=login][name=login],
+.oe_website_login_container form.oe_login_form .form-group.field-password .input-group input[id=password][name=password] {
+  background: transparent;
+  border: 0px;
+  box-shadow: none;
+}
+
+.oe_website_login_container form.oe_login_form .form-group.field-db .input-group-prepend,
+.oe_website_login_container form.oe_login_form .form-group.field-login .input-group.input-group-sm.mb-3 .input-group-prepend,
+.oe_website_login_container form.oe_login_form .form-group.field-password .input-group.input-group-sm.mb-3 .input-group-prepend {
+  align-items: center;
+  color: #74788d;
+  margin-right: 2px;
+}
+
+.oe_website_login_container form.oe_login_form .form-group.field-db .input-group-prepend > .fa,
+.oe_website_login_container form.oe_login_form .form-group.field-login .input-group.input-group-sm.mb-3 .input-group-prepend > .fa,
+.oe_website_login_container form.oe_login_form .form-group.field-password .input-group.input-group-sm.mb-3 .input-group-prepend > .fa {
+  margin-right: 10px;
+  color: #74788d;
+}
+
+.oe_website_login_container form.oe_login_form .form-group.field-db {
+  padding: 0px 0px 0px 15px !important;
+}
+
+.oe_website_login_container form.oe_login_form {
+  max-width: 350px;
+}
+
+.oe_website_login_container form.oe_login_form .form-group.field-login:hover,
+.oe_website_login_container form.oe_login_form .form-group.field-password:hover,
+.oe_website_login_container form.oe_login_form .form-group.field-login:focus,
+.oe_website_login_container form.oe_login_form .form-group.field-password:focus {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.01), 0 6px 10px -5px #2c3782 !important;
+  transition: all 0.5s;
+  border: 1.5px solid #2c3782 !important;
+  border-bottom: 3px solid #262f6f !important;
+}
+
+.oe_website_login_container form.oe_login_form .form-group.field-password + .alert.alert-danger {
+  border-radius: 30px;
+}/*# sourceMappingURL=frontend.css.map */

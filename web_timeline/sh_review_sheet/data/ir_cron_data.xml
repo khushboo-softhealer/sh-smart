@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sh_review_sheet_generation_cron" model="ir.cron">
+	        <field name="name">Review Sheet Generation Cron</field>
+	        <field name="interval_number">1</field>
+	        <field name="interval_type">days</field>
+	        <field name="numbercall">-1</field>
+	        <field name="doall" eval="False"/>
+	        <field name="model_id" ref="model_sh_review_sheet"/>
+	        <field name="code">model.auto_review_sheet_generation_cron()</field>
+	        <field name="state">code</field>
+	    </record>        
+
+		<record id="review_sheet_timesheet_limit" model="ir.config_parameter">
+    	  <field name="key">sh_review_sheet.review_sheet_timesheet_limit</field>
+		  <field name="value">10:00</field>
+	    </record>
+
+    </data>
+</odoo>

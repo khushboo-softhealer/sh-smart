@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_goal_marks_tree" model="ir.ui.view">
+        <field name="name">sh.goal.marks.tree</field>
+        <field name="model">sh.goal.marks</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                 <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="is_required_for_emp"/>
+                <field name="is_required_for_coach"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_goal_marks_action" model="ir.actions.act_window">
+        <field name="name">Goal Marks</field>
+        <field name="res_model">sh.goal.marks</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Goal Marks</p>
+        </field>
+    </record>
+    
+    <menuitem name="Goal Marks" id="sh_goal_marks_root" action="sh_goal_marks_action" parent="sh_goal_configuration" sequence="30" />
+</odoo>

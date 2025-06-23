@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="sh_hr_geolocation_hr_kanban_view_employees" model="ir.ui.view">
+        <field name="name">hr.employee.form.view</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.hr_kanban_view_employees" />
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='name']" position="before">
+                <div class="float-end">
+                    <field name="sh_allow_late_check_in" invisible="1" />
+                    <button string="Allow Check-in" name="sh_allow_late_employee_action" type="object" class="oe_highlight" attrs="{'invisible': [('sh_allow_late_check_in', '=', False)]}"  groups="sh_hr_attendance_geolocation.group_access_extra_allow_check_in" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_hr_geolocation_view_employee_tree" model="ir.ui.view">
+        <field name="name">hr.employee.tree.view</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree" />
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+
+            <xpath expr="//tree" position="inside">
+                <field name="sh_allow_late_check_in" invisible="1" />
+                <button string="Allow Check-in"  name="sh_allow_late_employee_action" type="object" class="oe_highlight" attrs="{'invisible': [('sh_allow_late_check_in', '=', False)]}"  groups="sh_hr_attendance_geolocation.group_access_extra_allow_check_in" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

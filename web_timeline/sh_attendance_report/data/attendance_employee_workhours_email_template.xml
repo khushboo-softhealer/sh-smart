@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1"> 
+ 		<record id="sh_template_employee_work_hours_notify_email" model="mail.template">
+			<field name="name">Employee Work Hours Email Notification</field>
+            <field name="subject">Work Hours Notification ${object.emp_name}</field>
+            <field name="email_from"></field>
+            <field name="email_to">${object.emp_email}</field>
+            <field name="model_id" ref="sh_attendance_report.model_sh_employee_workhours_email" />
+            <field name="auto_delete" eval="False"/>		
+            <field name="body_html" type="html">
+          		<div style="margin: 0px; padding: 0px;">
+				<table border="0" width="100%" cellpadding="0" bgcolor="#ededed" style="padding: 20px; background-color: #ededed; border-collapse:separate;" summary="o_mail_notification">
+                    <tbody>
+
+                      <!-- HEADER -->
+                      <tr>
+                        <td align="center" style="min-width: 590px;">
+                          <table width="590" border="0" cellpadding="0" bgcolor="#875A7B" style="min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;">
+                            <tr>
+                              <td valign="middle">
+                                  <span style="font-size:20px; color:white; font-weight: bold;">
+                                      Employee Worked Hours Notification
+                                  </span>
+                              </td>
+                              <td valign="middle" align="right">
+                                  <img src="/logo.png?company=${object.company_id.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${object.company_id.name}"/>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+
+                      <!-- CONTENT -->
+                      <tr>
+                        <td align="center" style="min-width: 590px;">
+                          <table width="590" border="0" cellpadding="0" bgcolor="#ffffff" style="min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;">
+                            <tbody>
+                            % if not object.emp_summ :
+                              <td valign="top" style="font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;">
+                              	<p>
+                                    <strong>Dear ${object.notify_ids.emp_id.name},</strong>
+                                </p>
+                                <br />
+                                <p>
+                                    <strong>
+                                        Your Attendance hours ${object.notify_ids.worked_hours} on date ${object.notify_ids.worked_date} is less than minimum working hours ${object.notify_ids.min_work_hours} specified.
+                                    </strong>
+                                </p>
+					            <br/>
+                              </td>
+                              % endif
+                            </tbody>
+                          </table>
+                          % if object.emp_summ :
+	                          <table width="590" border="0" cellpadding="0" bgcolor="#ffffff" style="min-width: 590px; background-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px; border-collapse: separate;">
+                                        <tr>
+                                            <td><strong>Employees List as on date ${object.worked_date} </strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="33.33%" style="border: 1px solid gray; background-color: #875a7b; text-decoration: none; color: #fff; font-size: 16px;">
+                                                Employee Name
+                                            </td>
+                                            <td width="33.33%" style="border: 1px solid gray; background-color: #875a7b; text-decoration: none; color: #fff; font-size: 16px;">
+                                                Worked Hours
+                                            </td>
+                                            <td width="33.33%" style="border: 1px solid gray; background-color: #875a7b; text-decoration: none; color: #fff; font-size: 16px;">
+                                                Minimum Working Hours
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    % for row in object.notify_ids :
+                                    <table width="590" border="0" cellpadding="0" bgcolor="#ffffff" style="min-width: 590px; background-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px; border-collapse: separate;">
+                                        <tr>
+                                            <td width="33.33%" style="border: 1px solid gray;">
+                                                <span> ${row.emp_id.name}</span>
+                                            </td>
+                                            <td width="33.33%" style="border: 1px solid gray;">
+                                                <span> ${row.worked_hours}</span>
+                                            </td>
+                                            <td width="33.33%" style="border: 1px solid gray;">
+                                                <span> ${row.min_work_hours}</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+						           	%endfor
+						    % endif
+                        </td>
+                      </tr>
+
+                      <!-- FOOTER -->
+                      <tr>
+                        <td align="center" style="min-width: 590px;">
+                          <table width="590" border="0" cellpadding="0" bgcolor="#875A7B" style="min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;">
+                            <tr>
+                              <td valign="middle" align="left" style="color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;">
+                                ${object.company_id.name}<br/>
+                                ${object.company_id.phone or ''}
+                              </td>
+                              <td valign="middle" align="right" style="color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;">
+                                % if object.company_id.email:
+                                <a href="mailto:${object.company_id.email}" style="text-decoration:none; color: white;">${object.company_id.email}</a><br/>
+                                % endif
+                                % if object.company_id.website:
+                                    <a href="${object.company_id.website}" style="text-decoration:none; color: white;">
+                                        ${object.company_id.website}
+                                    </a>
+                                % endif
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+				</div>
+            </field>
+        </record>	
+	</data>
+</odoo>	

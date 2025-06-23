@@ -1,0 +1,133 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_hide_feature
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-25 07:09+0000\n"
+"PO-Revision-Date: 2021-02-25 07:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_hide_feature
+#. openerp-web
+#: code:addons/sh_hide_feature/static/src/js/hide_button.js:0
+#: code:addons/sh_hide_feature/static/src/js/hide_button.js:0
+#, python-format
+msgid "Archive"
+msgstr "أرشيف"
+
+#. module: sh_hide_feature
+#. openerp-web
+#: code:addons/sh_hide_feature/static/src/js/hide_button.js:0
+#, python-format
+msgid "Are you sure that you want to archive all the selected records?"
+msgstr "هل أنت متأكد من أنك تريد أرشفة جميع السجلات المحددة؟"
+
+#. module: sh_hide_feature
+#. openerp-web
+#: code:addons/sh_hide_feature/static/src/js/hide_button.js:0
+#, python-format
+msgid "Are you sure that you want to archive this record?"
+msgstr "هل أنت متأكد من أنك تريد أرشفة هذا السجل؟"
+
+#. module: sh_hide_feature
+#. openerp-web
+#: code:addons/sh_hide_feature/static/src/xml/base.xml:0
+#: code:addons/sh_hide_feature/static/src/xml/base.xml:0
+#, python-format
+msgid "Create"
+msgstr "إنشاء"
+
+#. module: sh_hide_feature
+#. openerp-web
+#: code:addons/sh_hide_feature/static/src/js/hide_button.js:0
+#: code:addons/sh_hide_feature/static/src/js/hide_button.js:0
+#, python-format
+msgid "Delete"
+msgstr "حذف"
+
+#. module: sh_hide_feature
+#. openerp-web
+#: code:addons/sh_hide_feature/static/src/js/hide_button.js:0
+#, python-format
+msgid "Duplicate"
+msgstr "ينسخ"
+
+#. module: sh_hide_feature
+#. openerp-web
+#: code:addons/sh_hide_feature/static/src/xml/base.xml:0
+#, python-format
+msgid "Edit"
+msgstr "يحرر"
+
+#. module: sh_hide_feature
+#. openerp-web
+#: code:addons/sh_hide_feature/static/src/js/hide_button.js:0
+#, python-format
+msgid "Export"
+msgstr "يصدر"
+
+#. module: sh_hide_feature
+#: model:res.groups,name:sh_hide_feature.group_show_create
+msgid "Show Create Button"
+msgstr "إظهار زر إنشاء"
+
+#. module: sh_hide_feature
+#: model:res.groups,name:sh_hide_feature.group_show_delete
+msgid "Show Delete Button"
+msgstr "إظهار حذف زر"
+
+#. module: sh_hide_feature
+#: model:res.groups,name:sh_hide_feature.group_show_duplicate
+msgid "Show Duplicate Button"
+msgstr "إظهار زر مكررة"
+
+#. module: sh_hide_feature
+#: model:res.groups,name:sh_hide_feature.group_show_edit
+msgid "Show Edit Button"
+msgstr "عرض زر تحرير"
+
+#. module: sh_hide_feature
+#: model:res.groups,name:sh_hide_feature.group_show_export
+msgid "Show Export Button"
+msgstr "إظهار زر التصدير"
+
+#. module: sh_hide_feature
+#: model:res.groups,comment:sh_hide_feature.group_show_create
+msgid "This user will be able to Show Create button"
+msgstr "سيتمكن هذا المستخدم من إظهار زر إنشاء"
+
+#. module: sh_hide_feature
+#: model:res.groups,comment:sh_hide_feature.group_show_delete
+msgid "This user will be able to Show Delete button"
+msgstr "سيتمكن هذا المستخدم من إظهار زر حذف"
+
+#. module: sh_hide_feature
+#: model:res.groups,comment:sh_hide_feature.group_show_duplicate
+msgid "This user will be able to Show Duplicate button"
+msgstr "سيتمكن هذا المستخدم من إظهار زر مكرر"
+
+#. module: sh_hide_feature
+#: model:res.groups,comment:sh_hide_feature.group_show_edit
+msgid "This user will be able to Show Edit button"
+msgstr "سيتمكن هذا المستخدم من إظهار زر التحرير"
+
+#. module: sh_hide_feature
+#: model:res.groups,comment:sh_hide_feature.group_show_export
+msgid "This user will be able to Show Export button"
+msgstr "سيتمكن هذا المستخدم من إظهار زر التصدير"
+
+#. module: sh_hide_feature
+#. openerp-web
+#: code:addons/sh_hide_feature/static/src/js/hide_button.js:0
+#: code:addons/sh_hide_feature/static/src/js/hide_button.js:0
+#, python-format
+msgid "Unarchive"
+msgstr "unrashive."

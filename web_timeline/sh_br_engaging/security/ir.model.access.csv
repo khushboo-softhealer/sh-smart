@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sh_br_engaging.access_sh_high_five,access_sh_high_five,sh_br_engaging.model_sh_high_five,base.group_user,1,1,1,1
+sh_br_engaging.access_sh_manage_badge,access_sh_manage_badge,sh_br_engaging.model_sh_manage_badge,base.group_user,1,1,1,1
+sh_br_engaging.access_sh_br_custom_configuration,access_sh_br_custom_configuration,sh_br_engaging.model_sh_br_custom_configuration,base.group_user,0,0,0,0
+sh_br_engaging.access_sh_br_custom_configuration_manager,access_sh_br_custom_configuration_manager,sh_br_engaging.model_sh_br_custom_configuration,sh_br_engaging.group_br_engage_manager,1,1,1,1
+

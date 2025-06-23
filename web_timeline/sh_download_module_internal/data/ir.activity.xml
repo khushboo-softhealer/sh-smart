@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+     <record id="mail_activity_data_billing" model="mail.activity.type">
+            <field name="name">Billing</field>
+            <field name="icon">fa-money</field>
+            <field name="sequence">10</field>
+        </record>
+</odoo>

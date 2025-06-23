@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="project_project_kanban_view_inherit">
+            <field name="name">Project Project Kanban Inherit</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project_kanban" />
+            <field name="arch" type="xml">
+                <kanban position="attributes">
+                    <attribute name="edit">false</attribute>
+                    <attribute name="on_create"></attribute>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- in 12 we are adding tree view, but in 16 already added by standard -->
+        <!-- <record id="open_view_project_all" model="ir.actions.act_window">
+            <field name="name">Projects</field>
+            <field name="res_model">project.project</field>
+            <field name="domain">[]</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_id" ref="project.view_project_kanban" />
+            <field name="search_view_id" ref="project.view_project_project_filter" />
+            <field name="target">main</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new project
+                </p>
+                <p>Or <a type="action" name="%(project.ir_actions_server_project_sample)d"
+                        tabindex="-1">activate a sample project</a> to play with.</p>
+            </field>
+        </record> -->
+    </data>
+</odoo>

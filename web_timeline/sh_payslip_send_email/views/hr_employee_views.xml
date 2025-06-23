@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>    
+    <record id="sh_hr_employee_payslip_send_by_email_form_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet//notebook//page[@name='hr_settings']//group//group//field[@name='user_id']" position="after">
+                <field name="send_payslip" string="Send Payslip ?" />
+            </xpath>
+        </field>
+    </record>
+</odoo>    

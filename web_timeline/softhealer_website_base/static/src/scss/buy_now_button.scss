@@ -1,0 +1,28 @@
+// bye now button scss //
+a.btn.sh_bye_now_button{position:fixed !important;display: flex;right:30px;bottom:16px;z-index:11;padding: 0px !important; background-color: o-color(o-color-1) !important;  border-radius: 50px;border: 2px solid o-color(o-color-1);margin: 0 !important;transition:0.6s ease all;
+    @include media-breakpoint-down(lg){
+        right: 10px;
+    }
+}
+a.btn.sh_bye_now_button .sh_bye_now_btn_span{padding: 9px;border: 3px solid #fff;border-radius: 50px;
+    @include media-breakpoint-down(md){
+        padding: 4px;
+    }
+}
+a.btn.sh_bye_now_button .sh_bye_now_btn_span svg{width: 30px; height: 30px;}
+
+
+
+// live chat button scss //
+.o_website_livechat_button{
+    background-color:#564bc6 !important; transition:0.6s ease all !important;
+    @include media-breakpoint-only(md){
+        margin: 0 12px 20px 0 !important;
+    }
+    @include media-breakpoint-down(md){
+        margin: 0 10px 10px 0 !important;width: 50px !important;height: 50px !important;min-width: 50px !important;font-size: 24px !important;
+    }
+}
+.sh_cls_website_blog_post ~ .o_website_livechat_button{
+    background-color:#564bc6 !important; transition:0.6s ease all !important; margin:0 30px 25px 0 !important;
+}

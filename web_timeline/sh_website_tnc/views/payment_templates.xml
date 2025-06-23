@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="sh_template_website_terms_and_conditions" inherit_id="website_sale.payment" customize_show="True" name="Website Terms &amp; conditions">
+        <xpath expr="//div[@id='payment_method']" position="before">
+            <div class="panel-body" t-if="website.sh_website_show_terms_conditions_website and request.env['website'].get_current_website().sh_website_tnc_type == 'single'">
+                <div class="mt-3">
+                    <h4 class="mb18">
+                        <span t-if="website.sh_website_tnc_terms_title" t-field="website.sh_website_tnc_terms_title" />
+                    </h4>
+
+                    <input id="show_terms_website" name="show_terms_website" type="hidden" t-att-value="website.sh_website_show_terms_conditions_website" />
+                    <t t-if="request.env['website'].get_current_website().sh_website_tnc_default_check and request.env['website'].get_current_website().sh_website_tnc_type == 'single'">
+                        <input id="chk_terms" type="checkbox" class="mr8 chk_terms_multi" checked="true" style="padding-top: 10px;" />
+	                    <span t-if="website.sh_website_tnc_terms_label" t-field="website.sh_website_tnc_terms_label" style="padding-right: 10px;" />
+                    </t>
+                    <t t-else="">
+                        <input id="chk_terms" type="checkbox" class="mr8 chk_terms_multi" style="padding-top: 10px;" />
+                        <span t-if="website.sh_website_tnc_terms_label" t-field="website.sh_website_tnc_terms_label" style="padding-right: 10px;" />
+                    </t>
+
+                    <a href="#" id="btn_website_terms_conditions" type="action" string="Terms Conditions" data-toggle="modal" data-target="#website_terms_modal" data-backdrop="static" data-keyboard="false" style='text-decoration:none;'>See Terms &amp; Conditions</a>
+
+                    <div id="website_terms_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel">
+                                        <span t-if="website.sh_website_tnc_terms_title" t-field="website.sh_website_tnc_terms_title" />
+                                    </h4>
+                                </div>
+
+                                <div class="modal-body">
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <span t-if="website.sh_website_tnc_terms_text" t-field="website.sh_website_tnc_terms_text" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-body" t-if="website.sh_website_show_terms_conditions_website and request.env['website'].get_current_website().sh_website_tnc_type == 'multiple'">
+                <div class="mt-3">
+                    <t t-foreach="request.env['sh.website.tnc.multi'].sudo().search([])" t-as="data">
+                        <h4 class="mb18 mt-3">
+                            <span t-if="data.name" t-esc="data.name" />
+                        </h4>
+                        <input id="show_terms_website" name="show_terms_website" type="hidden" t-att-value="website.sh_website_show_terms_conditions_website" />
+
+                        <t t-if="data.sh_website_multi_default_check">
+                            <label class="control sh_custom_control_checkbox"> 
+                                <input class="chk_terms_multi mr8" type="checkbox" name="input_checkbox" checked="checked"/>
+                                <span t-if="data.sh_website_multi_tnc_label" t-field="data.sh_website_multi_tnc_label" style="padding-right: 10px;" />
+                                <div class="sh_custom_control_indicator"></div>
+                            </label>
+
+                            <!-- <input class="chk_terms_multi mr8" type="checkbox" name="input_checkbox" checked="true" style="padding-top: 10px; margin-bottom: 20px;" />
+                            <span t-if="data.sh_website_multi_tnc_label" t-field="data.sh_website_multi_tnc_label" style="padding-right: 10px;" /> -->
+                        </t>
+                        <t t-else="">
+                            <label class="control sh_custom_control_checkbox"> 
+                                <input class="chk_terms_multi mr8" type="checkbox" name="input_checkbox"/>
+                                <span t-if="data.sh_website_multi_tnc_label" t-field="data.sh_website_multi_tnc_label" style="padding-right: 10px; margin-bottom: 20px;" />
+                                <div class="sh_custom_control_indicator"></div>
+                            </label>
+                            <!-- <input class="chk_terms_multi mr8" type="checkbox" name="input_checkbox" style="padding-top: 10px; margin-bottom: 20px;" />
+                            <span t-if="data.sh_website_multi_tnc_label" t-field="data.sh_website_multi_tnc_label" style="padding-right: 10px; margin-bottom: 20px;" /> -->
+                        </t>
+                        <a
+                            href="#"
+                            id="btn_website_terms_conditions_multi"
+                            type="action"
+                            string="Terms Conditions"
+                            data-toggle="modal"
+                            t-att-data-target="'#website_terms_modal_multi_%s' %(data.id)"
+                            data-backdrop="static"
+                            data-keyboard="false"
+                            style='text-decoration:none;'
+                        >
+                            See Terms &amp; Conditions
+                        </a>
+
+                        <div t-att-id="'website_terms_modal_multi_%s' %(data.id)" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            <span t-if="data.name" t-field="data.name" />
+                                        </h4>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <span t-if="data.sh_website_multi_tnc_terms_text" t-field="data.sh_website_multi_tnc_terms_text" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="sh_website_sale_payment_method" inherit_id="payment.checkout" name="Website Sale Payment Method">
+        <xpath expr="//form[@name='o_payment_checkout']//div[hasclass('card')]" position="after">
+            <style>
+                p {
+                    margin: 0.5pc 0 0 0;
+                }
+            </style>
+            <span id="tnc_msg_alert" t-if="website.sh_website_tnc_alert_msg and website.sh_website_show_terms_conditions_website" t-field="website.sh_website_tnc_alert_msg" />
+        </xpath>
+    </template>
+</odoo>

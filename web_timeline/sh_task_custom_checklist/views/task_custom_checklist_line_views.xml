@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- VIEW: SEARCH -->
+    <record id="sh_task_checklist_line_view_search" model="ir.ui.view">
+        <field name="name">task.custom.checklist.line.view.search</field>
+        <field name="model">task.custom.checklist.line</field>
+        <field name="arch" type="xml">
+            <search string="Task Checklists">
+                <!-- SEARCH -->
+                <field name="task_custom_checklist_id" />
+                <field name="task_id" />
+                <field name="comments" />
+                <!-- FILTER -->
+                <filter string="Archived" name="unactive" domain="[('active', '=', False)]" />
+                <!-- GROUP BY -->
+                <group name="group" string="Group By">
+                    <filter string='Task' name="group_by_task_id" context="{'group_by': 'task_id'}" />
+                    <filter string='Checklist' name="group_by_task_custom_checklist_id" context="{'group_by': 'task_custom_checklist_id'}" />
+                    <filter string='State Updated By' name="group_by_state_updated_by" context="{'group_by': 'state_updated_by'}" />
+                    <filter string='State' name="group_by_state_id" context="{'group_by': 'state_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- VIEW: TREE -->
+    <record id="sh_task_checklist_line_view_tree" model="ir.ui.view">
+        <field name="name">sh_task_checklist_line.view.tree</field>
+        <field name="model">task.custom.checklist.line</field>
+        <field name="arch" type="xml">
+            <tree string="Task Checklists" decoration-success="display_type=='line_section'" decoration-info="display_type=='line_note'">
+                <field name="id" optional="hide" />
+                <field name="name" string="Name" optional="show" />
+                <field name="task_custom_checklist_id" optional="show" />
+                <field name="description" optional="hide" />
+                <field name="updated_date" />
+                <field name="state_id" />
+                <field name="state_updated_by" optional="show" />
+                <field name="comments" optional="hide" />
+                <field name="task_id" optional="hide" />
+                <field name="display_type" optional="hide" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="task_checklist_line_action" model="ir.actions.act_window">
+        <field name="name">Task Checklists</field>
+        <field name="res_model">task.custom.checklist.line</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{'search_default_group_by_task_id': '1'}</field>
+        <!-- <field name="domain">[('display_type', '=', False)]</field> -->
+    </record>
+
+</odoo>

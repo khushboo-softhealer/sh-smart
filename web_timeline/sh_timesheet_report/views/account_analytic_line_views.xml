@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="sh_analytic_line_inherit_tree_view" model="ir.ui.view">
+        <field name="name">sh.account.analytic.line.tree.hr_timesheet</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree//field[@name='user_id']" position="after">
+                <field name="timesheet_billed" groups="account.group_account_manager" optional="hide" />
+                <field name="timesheet_lock" groups="project.group_project_manager" optional="hide"/>
+
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_analytic_line_inherit_form_view" model="ir.ui.view">
+        <field name="name">sh.account.analytic.line.form.hr_timesheet</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//field[@name='name']" position="after">
+                <field name="timesheet_billed" groups="account.group_account_manager" />
+                <field name="timesheet_lock" groups="project.group_project_manager" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_analytic_line_inherit_search_view" model="ir.ui.view">
+        <field name="name">sh.account.analytic.line.search.hr_timesheet</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search//field[@name='manager_id']" position="after">
+                <field name="timesheet_billed"  groups="account.group_account_manager"/>
+                <field name="timesheet_lock" groups="project.group_project_manager" />
+            </xpath>
+
+            <xpath expr="//search//filter[@name='month']" position="before">
+                <filter string="Locked Timesheet" name="locked_timesheet" domain="[('timesheet_lock','=',True)]" groups="project.group_project_manager"/>
+                <filter string="UnLocked Timesheet" name="unlock_timesheet" domain="[('timesheet_lock','=',False)]" groups="account.group_account_manager"/>
+                <filter string="Billed Timesheet" name="billed_timesheet" domain="[('timesheet_billed','=',True)]" groups="account.group_account_manager"/>
+                <filter string="Remaining Billed" name="billed_timesheet" domain="[('timesheet_billed','=',False)]" groups="account.group_account_manager"/>
+
+                <separator/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

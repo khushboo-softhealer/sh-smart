@@ -1,0 +1,839 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_survey_all_in_one
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-28 07:30+0000\n"
+"PO-Revision-Date: 2022-06-28 07:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_textbox_for_pattern
+msgid "#{question.validation_sh_textbox_placeholder}"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__sh_survmate_theme_grid_type__10
+msgid "10"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__sh_survmate_theme_grid_type__11
+msgid "11"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__sh_survmate_theme_grid_type__12
+msgid "12"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "18:00"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "20"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "2018-03"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "2018-05"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "2018-W18"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "2018-W26"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "60 (In seconds)"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "9:00"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.survey_page_fill
+msgid ""
+"<span style=\"display: block;\">Result:</span>\n"
+"                                            <code id=\"js_id_sh_survey_barcode_mobile_result\"/>"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.survey_page_fill
+msgid "<strong style=\"align-self: center;\" class=\"col-3\">Camera</strong>"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: code:addons/sh_survey_all_in_one/sh_survey_matrix_adv/models/survey.py:0
+#, python-format
+msgid "A question is either skipped, either answered. Not both."
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_address
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_address
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_address
+msgid "Address"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_answer_color
+msgid "Answer Color"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_section_answer_text_color
+msgid "Answer Text Color"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__answer_type
+msgid "Answer Type"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_bg_color
+msgid "Background Color"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_barcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_barcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_barcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_barcode
+msgid "Barcode"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.survey_page_fill
+msgid "Barcode Scanner"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_button_style
+msgid "Button Style"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_button_style_wizard_view
+msgid "Cancel"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_checkbox_style
+msgid "Checkbox Style"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question_answer__sh_value_type
+msgid "Choices Type"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "City"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_signature
+msgid "Clear"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.matrix
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_file_print
+msgid "Click here to download file"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.survey_page_fill
+msgid "Close"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_color
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_color
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_color
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_color
+msgid "Color"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_settings_form
+msgid "Colors"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_country_id
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "Country"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "Country..."
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__create_uid
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__create_date
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__matrix_subtype__sh_custom_matrix
+msgid "Custom Matrix"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__date
+msgid "Date"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__datetime
+msgid "Datetime"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__display_name
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_email
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_email
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_email
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_email
+msgid "E-mail"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_file
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_file
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_file
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_file
+msgid "File"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_file_fname
+msgid "File Name"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_survmate_theme_grid_type
+msgid "Grid"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_ir_http
+msgid "HTTP Routing"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__id
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__access_token
+msgid "Identification token"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__img_src
+msgid "Image Src"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_survey_question
+msgid "Inherit Survey Question for extra fields"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_input_style
+msgid "Input Style"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_is_sh_textbox_pattern
+msgid "Input must be in specified pattern"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_survey__sh_is_time_fixed
+msgid "Is Fixed Timer Position?"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings____last_update
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__write_uid
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__write_date
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_sh_location_latitude
+msgid "Latitude"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_question_form_inherit
+msgid "Layout"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_location
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_location
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_location
+msgid "Location"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_sh_location_longitude
+msgid "Longitude"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_many2many
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_many2many
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_many2many
+msgid "Many2many"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_many2one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_many2one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_many2one
+msgid "Many2one"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__matrix_subtype
+msgid "Matrix Type"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question_answer__sh_matrix_range_max
+msgid "Maximum"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_month_max
+msgid "Maximum Month"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_range_max
+msgid "Maximum Range"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_time_max
+msgid "Maximum Time"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_week_max
+msgid "Maximum Week"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question_answer__sh_matrix_range_min
+msgid "Minimum"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_month_min
+msgid "Minimum Month"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_range_min
+msgid "Minimum Range"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_time_min
+msgid "Minimum Time"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_week_min
+msgid "Minimum Week"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__que_sh_many2many_model_id
+msgid "Model"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__que_sh_many2one_model_id
+msgid "Model "
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_month
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_month
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_month
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_month
+msgid "Month"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_month_step
+msgid "Month Step"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__free_text
+msgid "Multiple Lines Text Box"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__name
+msgid "Name"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__numerical_box
+msgid "Numerical Value"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_password
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_password
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_password
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_password
+msgid "Password"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_password_maxlen
+msgid "Password Maximum Length"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_password_minlen
+msgid "Password Minimum Length"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_settings_form
+msgid "Preview"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: code:addons/sh_survey_all_in_one/sh_survmate_theme/models/survey.py:0
+#, python-format
+msgid "Preview Style"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_theme_primary_color
+msgid "Primary Color"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_qrcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_qrcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_qrcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_qrcode
+msgid "QR Code"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_question_color
+msgid "Question Color"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__question_type
+msgid "Question Type"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_radio_button_style
+msgid "Radio Button Style"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_range
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_range
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_range
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_range
+msgid "Range"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_range_step
+msgid "Range Step"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_theme_secondary_color
+msgid "Secondary Color"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_section_title_color
+msgid "Section Background Color"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_section_title_font_color
+msgid "Section Font Color"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_section_style
+msgid "Section Style"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_many2one
+msgid "Select..."
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_show_bg_color
+msgid "Show Background Color"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_city
+msgid "Show City Field?"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_country_id
+msgid "Show Country Field?"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_state_id
+msgid "Show State Field?"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_street
+msgid "Show Street Field?"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_street2
+msgid "Show Street2 Field?"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_zip
+msgid "Show Zip Field?"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_signature
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_signature
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_signature
+msgid "Signature"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_signature_src
+msgid "Signature src"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__textbox
+msgid "Single Line Text Box"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_state_id
+msgid "State"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "State / Province"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "State / Province..."
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question_answer__sh_matrix_range_step
+msgid "Step"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "Street 2"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "Street <span class=\"d-none d-md-inline\"> and Number</span>"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_button_style__style_1
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_checkbox_style__style_1
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_input_style__style_1
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_radio_button_style__style_1
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_section_style__style_1
+msgid "Style 1"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_button_style__style_2
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_checkbox_style__style_2
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_input_style__style_2
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_radio_button_style__style_2
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_section_style__style_2
+msgid "Style 2"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_button_style__style_3
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_checkbox_style__style_3
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_input_style__style_3
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_radio_button_style__style_3
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_section_style__style_3
+msgid "Style 3"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_button_style__style_4
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_checkbox_style__style_4
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_input_style__style_4
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_radio_button_style__style_4
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_section_style__style_4
+msgid "Style 4"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_button_style__style_5
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_checkbox_style__style_5
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_input_style__style_5
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_radio_button_style__style_5
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_section_style__style_5
+msgid "Style 5"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_settings_form
+msgid "Styles"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_survey_survey
+msgid "Survey"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_survey_question_answer
+msgid "Survey Label"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_survey_user_input_line
+msgid "Survey User Input Line for extra fields"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_survey_user_input
+msgid "Survey User Input for custom matrix"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.actions.act_window,name:sh_survey_all_in_one.sh_survmate_theme_survey_settings_action
+#: model:ir.model,name:sh_survey_all_in_one.model_sh_survmate_settings
+#: model:ir.ui.menu,name:sh_survey_all_in_one.sh_survmate_theme_survey_settings_menu
+msgid "Survmate Settings"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_survey__sh_survmate_settings_id
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_form_inherit
+msgid "Survmate Theme"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_sh_survmate_theme_button_design_wizard
+msgid "Survmate Theme Button Design"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_textbox_pattern
+msgid "Textbox Pattern"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_textbox_placeholder
+msgid "Textbox Placeholder"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_button_style_wizard_view
+msgid "Theme Preview"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#. openerp-web
+#: code:addons/sh_survey_all_in_one/static/src/js/extra_addons/sh_survey_extra_fields/survey_form.js:0
+#, python-format
+msgid "This answer must be an URL."
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#. openerp-web
+#: code:addons/sh_survey_all_in_one/static/src/js/extra_addons/sh_survey_extra_fields/survey_form.js:0
+#, python-format
+msgid "This answer must be an email address."
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#. openerp-web
+#: code:addons/sh_survey_all_in_one/static/src/js/extra_addons/sh_survey_extra_fields/survey_form.js:0
+#, python-format
+msgid "This is not a date"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_time
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_time
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_time
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_time
+msgid "Time"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_time_step
+msgid "Time Step"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_url
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_url
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_url
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_url
+msgid "URL"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_city
+msgid "Value Ans Sh City"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_street
+msgid "Value Ans Sh Street"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_street2
+msgid "Value Ans Sh Street2"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_zip
+msgid "Value Ans Sh Zip"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_week
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_week
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_week
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_week
+msgid "Week"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_week_step
+msgid "Week Step"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "Zip Code"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "[0-9]{4}"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_settings_form
+msgid "e.g. Theme Settings for Survey A"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.matrix
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_email
+msgid "example@domain.com"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.matrix
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_time
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_url
+msgid "https://example.com"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "nnnn"
+msgstr ""
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_button_style_wizard_view
+msgid "preview image"
+msgstr ""

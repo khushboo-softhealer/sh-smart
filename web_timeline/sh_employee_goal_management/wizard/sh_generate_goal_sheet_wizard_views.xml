@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sh_generate_goal_sheet_wizard_Form" model="ir.ui.view">
+        <field name="name">sh.generate.goal.sheet.form</field>
+        <field name="model">sh.generate.goal.sheet.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Generate Sheet">
+                <sheet>
+                    <group name="name" string="string">
+                        <group>
+                            <field name="date_from" string="From Date" />
+                            <field name="want_to_duplicate"/>
+                        </group>
+                        <group>
+                            <field name="date_to" string="To Date" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="employee_ids" widget="many2many_tags" />
+                    </group>
+                    <footer>
+                        <button class="btn btn-primary" type="object" name="generate_goals" string="Generate" />
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="sh_generate_goal_sheet_action" model="ir.actions.act_window">
+        <field name="name">sh.genearte.sheet.wizard.action</field>
+        <field name="res_model">sh.generate.goal.sheet.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

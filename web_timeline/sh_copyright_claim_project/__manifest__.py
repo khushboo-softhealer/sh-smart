@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+# Part of Softhealer Technologies.
+{
+    "name": "Copyright Claim",
+    "author": "Softhealer Technologies - Nitin Ubhadiya",
+    "website": "https://www.softhealer.com",
+    "support": "suppport@softhealer.com",
+    "category": 'Extra Tools',
+    "license": "OPL-1",
+    "summary": "",
+    "description": """""",
+    "version": "16.0.1",
+    "depends": ['project', 'product', 'sh_product_base', 'sh_project_task_base'],
+    "data": [
+        "security/ir.model.access.csv",
+        "security/sh_copyright_claim_groups.xml",
+        "data/ir_cron_data.xml",
+        "report/sh_copyright_claim_report_views.xml",
+        "wizards/sh_copyright_claim_wizard_views.xml",
+        "wizards/sh_claim_user_wizard_views.xml",
+        "views/project_task_views.xml",
+        "views/sh_copyright_claim_views.xml",
+        "views/res_config_settings_views.xml",
+        "views/product_template_views.xml",
+        "views/sh_scale_views.xml",
+    ],
+    "application": True,
+    "auto_install": False,
+    "installable": True,
+}

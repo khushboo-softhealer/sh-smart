@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="sh_not_billable_reason_wizard_view_form" model="ir.ui.view">
+        <field name="name">sh.not.billable.reason.wizard.view.form</field>
+        <field name="model">sh.not.billable.reason.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Reason of Not Billable">
+                <sheet>
+                    <group>
+                        <field name="reason" />
+                    </group>
+                </sheet>
+                 <footer>
+                        <button name="save" class="oe_highlight" string="Save" type="object" data-hotkey="s" />
+                        <button string="Cancel"  name="cancel" type="object" data-hotkey="j"/>
+                    </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_not_billable_reason_wizard_action" model="ir.actions.act_window">
+        <field name="name">Not Billable Reason Wizard</field>
+        <field name="res_model">sh.not.billable.reason.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
