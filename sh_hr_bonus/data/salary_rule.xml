@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <data>
+        <record id="hr_rule_bonus" model="hr.salary.rule">
+            <field name="name">Bonus</field>
+            <field name="sequence" eval="10" />
+            <field name="code">BONUS</field>
+            <field name="category_id" ref="sh_hr_payroll.ALW" />
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.get_bonus_data(employee,payslip)</field>
+        </record>
+    </data>
+
+</odoo>

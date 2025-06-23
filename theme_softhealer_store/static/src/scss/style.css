@@ -1,0 +1,40 @@
+#top_menu_collapse .cls_theme_softhealer_store_button_part li {
+  list-style-type: none;
+}
+
+.cls_theme_softhealer_store_custom_product_detail_page #product_detail div#product_details form[action="/shop/cart/update"] #o_wsale_cta_wrapper .css_quantity.input-group {
+  display: none !important;
+}
+
+#wrapwrap .o_shop_discussion_rating {
+  display: none;
+}
+#wrapwrap:not(.login_signup_reset_password_page):not(.o_portal) .o_header_standard.o_top_fixed_element .sh_softhealer_website_navbar_brand_website_logo_scrolled {
+  display: none;
+}
+#wrapwrap:not(.login_signup_reset_password_page):not(.o_portal) .o_header_standard.o_top_fixed_element .sh_softhealer_website_navbar_brand_website_logo {
+  display: block;
+}
+#wrapwrap:not(.login_signup_reset_password_page):not(.o_portal) .o_header_standard.o_header_affixed.o_header_is_scrolled.o_top_fixed_element .sh_softhealer_website_navbar_brand_website_logo {
+  display: none;
+}
+#wrapwrap:not(.login_signup_reset_password_page):not(.o_portal) .o_header_standard.o_header_affixed.o_header_is_scrolled.o_top_fixed_element .sh_softhealer_website_navbar_brand_website_logo_scrolled {
+  display: block !important;
+}
+
+.cls_theme_softhealer_store_custom_product_detail_page #product_detail #product_details form .js_add_cart_variants .o_wsale_product_attribute .radio_input_value {
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+body:not(.modal-open) > #wrapwrap.cls_theme_softhealer_store_custom_product_detail_page #product_detail #product_details form .js_add_cart_variants .o_wsale_product_attribute .radio_input_value:hover,
+body:not(.modal-open) > #wrapwrap.cls_theme_softhealer_store_custom_product_detail_page #product_detail #product_details form .js_add_cart_variants .o_wsale_product_attribute input:checked + .radio_input_value {
+  background: o-color(o-color-1) !important;
+  transition: 0.5s all;
+}
+
+.cls_theme_softhealer_store_custom_product_detail_page #product_details .modal .js_add_cart_variants .js_attribute_value .radio_input_value:hover,
+.cls_theme_softhealer_store_custom_product_detail_page #product_details .modal .js_add_cart_variants .js_attribute_value input:checked + .radio_input_value {
+  background: transparent !important;
+  transition: 0.5s all;
+}/*# sourceMappingURL=style.css.map */

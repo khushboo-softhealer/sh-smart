@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- type of command -->
+        <record model = "sh.type.of.command" id = "sh_create_content">
+            <field name = "name">Create Content</field>
+        </record>
+
+        <record model = "sh.type.of.command" id = "sh_beautify">
+            <field name = "name">Beautify</field>
+        </record>
+
+        <record model = "sh.type.of.command" id = "sh_grammar_correction">
+            <field name = "name">Grammar Correction</field>
+        </record>
+
+        <record model = "sh.type.of.command" id = "sh_translation">
+            <field name = "name">Translate to English</field>
+        </record>
+
+        <!-- type of language -->
+
+        <record model = "sh.type.of.language" id = "sh_formal">
+            <field name = "name">Formal</field>
+        </record>
+
+        <record model = "sh.type.of.language" id = "sh_informal">
+            <field name = "name">Informal</field>
+        </record>
+
+        <record model = "sh.type.of.language" id = "sh_questioning">
+            <field name = "name">Questioning</field>
+        </record>
+
+        <record model = "sh.type.of.language" id = "sh_informative">
+            <field name = "name">Informative</field>
+        </record>
+
+        <record model = "sh.type.of.language" id = "sh_humorous">
+            <field name = "name">Humorous</field>
+        </record>
+
+        <record model = "sh.type.of.language" id = "sh_polite">
+            <field name = "name">Polite/Soft/Respectful</field>
+        </record>
+
+        <record model = "sh.type.of.language" id = "sh_motivating">
+            <field name = "name">Motivating</field>
+        </record>
+
+        <!-- length -->
+
+        <record model = "sh.length" id = "sh_short">
+            <field name = "name">Short</field>
+        </record>
+
+        <record model = "sh.length" id = "sh_medium">
+            <field name = "name">Medium</field>
+        </record>
+
+        <record model = "sh.length" id = "sh_long">
+            <field name = "name">Long</field>
+        </record>
+
+        <!-- style -->
+
+        <record model = "sh.style" id = "sh_description">
+            <field name = "name">Description</field>
+        </record>
+
+        <record model = "sh.style" id = "sh_list">
+            <field name = "name">List</field>
+        </record>
+
+        <record model = "sh.style" id = "sh_paragraph">
+            <field name = "name">Paragraph</field>
+        </record>
+
+        <record model = "sh.style" id = "sh_email">
+            <field name = "name">Email</field>
+        </record>
+
+        <!-- default setting -->
+        <record model = "res.company" id="base.main_company">
+            <field name = "type_of_command_id" ref = "sh_odoo_chatgpt_connector.sh_create_content"></field>
+        </record>
+
+        <record model = "res.company" id="base.main_company">
+            <field name = "type_of_language_id" ref = "sh_odoo_chatgpt_connector.sh_formal"></field>
+        </record>
+
+        <record model = "res.company" id="base.main_company">
+            <field name = "style_id" ref = "sh_odoo_chatgpt_connector.sh_medium"></field>
+        </record>
+
+        <record model = "res.company" id="base.main_company">
+            <field name = "length_id" ref = "sh_odoo_chatgpt_connector.sh_paragraph"></field>
+        </record>
+
+    </data>
+    
+</odoo>

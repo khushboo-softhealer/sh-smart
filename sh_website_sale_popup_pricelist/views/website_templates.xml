@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Website layout inherit for set data attributes popup enabled and pages Url -->
+    <template id="user_navbar" inherit_id="website.layout">
+        <xpath expr="//div[@id='wrapwrap']" position="attributes">
+            <attribute name="t-attf-data-show-website-sale-pricelist-popup"
+                add="{{ website.is_sh_website_sale_popup_pricelist }}" />
+        </xpath>
+        <xpath expr="//div[@id='wrapwrap']/header" position="before">
+            <input type="hidden" name="sh_website_sale_popup_pricelist_pages_url"
+                t-att-value="website.sh_website_sale_popup_pricelist_pages_url if website.is_sh_website_sale_popup_pricelist else ''"></input>
+        </xpath>
+    </template>
+
+</odoo>

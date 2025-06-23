@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="model_mass_lock_action_sale" model="ir.actions.server">
+        <field name="name">Mass AutoLock Sale order</field>
+        <field name="model_id" ref="sale.model_sale_order" />
+        <field name="binding_model_id" ref="sale.model_sale_order" />
+        <field name="state">code</field>
+        <field name="binding_view_types">list</field>
+        <field name="code"> action = model.action_lock_sale_order()</field>
+    </record>
+
+    <record id="sh_so_state_search_view" model="ir.ui.view">
+        <field name="name">sale.order.state</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter" />
+        <field name="arch" type="xml">
+            <filter name="order_month" position="after">
+                <filter string="Status" name="state" domain="[]" context="{'group_by':'state'}" />
+            </filter>
+        </field>
+    </record>
+</odoo>

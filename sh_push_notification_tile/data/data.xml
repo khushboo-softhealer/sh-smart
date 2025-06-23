@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Update Old Tasks Stage Change History Multi Action -->
+    <record id="sh_break_extend" model="user.push.notification.sub.type">
+        <field name="name">Break Extend</field>
+    </record>
+    <record id="sh_early_going" model="user.push.notification.sub.type">
+        <field name="name">Early Going</field>
+    </record>
+    <record id="sh_late_coming" model="user.push.notification.sub.type">
+        <field name="name">Late Coming</field>
+    </record>
+    <record id="sh_less_work_hours" model="user.push.notification.sub.type">
+        <field name="name">Less Work Hours</field>
+    </record>
+    <record id="sh_attendance_modification" model="user.push.notification.sub.type">
+        <field name="name">Attendance Modification</field>
+    </record>
+
+    <!-- Mass Approve Multi Action -->
+    <record id="action_mass_subtype_update" model="ir.actions.server">
+        <field name="name">Mass Update Subtype</field>
+        <field name="model_id" ref="sh_push_notification_tile.model_user_push_notification"/>
+        <field name="binding_model_id" ref="sh_push_notification_tile.model_user_push_notification"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_update_subtype()</field>
+    </record>
+
+</odoo>

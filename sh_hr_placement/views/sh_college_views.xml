@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_college_view_form" model="ir.ui.view">
+        <field name="name">sh.college.view.form</field>
+        <field name="model">sh.college</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <field name="stage_id" widget="statusbar"
+                        options="{'clickable': '1', 'fold_field': 'fold'}" />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <label for="street" string="Address" />
+                            <div class="o_address_format">
+                                <field name="street" placeholder="Street..."
+                                    class="o_address_street" />
+                                <field name="street2" placeholder="Street 2..."
+                                    class="o_address_street" />
+                                <field name="city" placeholder="City" class="o_address_city" />
+                                <field name="state_id" class="o_address_state" placeholder="State"
+                                    options='{"no_open": True}'
+                                    context="{'country_id': country_id, 'zip': zip}" />
+                                <field name="zip" placeholder="ZIP" class="o_address_zip" />
+                                <field name="country_id" placeholder="Country"
+                                    class="o_address_country"
+                                    options='{"no_open": True, "no_create": True}' />
+                            </div>
+                        </group>
+                        <group>
+                            <field name="contact_person_ids" widget="many2many_tags" />
+                            <field name="colloge_contact_no" />
+                            <field name="tpo_contact_no" />
+                            <field name="email" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="o_attachment_preview" />
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_college_view_tree" model="ir.ui.view">
+        <field name="name">sh.college.view.tree</field>
+        <field name="model">sh.college</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="contact_person_ids" widget="many2many_tags" />
+                <field name="stage_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_college_stages_kanban" model="ir.ui.view">
+        <field name="name">sh.college.kanban</field>
+        <field name="model">sh.college</field>
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+            <kanban default_group_by="stage_id" class="o_kanban_small_column o_kanban_project_tasks">
+                <field name="contact_person_ids" string="Project Manager" />
+                <field name="stage_id" />
+                <field name="colloge_contact_no" />
+                <field name="email" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div
+                            t-attf-class="oe_kanban_content oe_kanban_global_click o_kanban_get_form">
+                            <div class="row">
+                                <div class="col-12">
+                                    <strong>
+                                        <field name="name" string="College Name" />
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <field name="contact_person_ids" string="Contact" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <field name="colloge_contact_no" string="College Contact Number" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <field name="email" string="Email" />
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="sh_college_stages_search" model="ir.ui.view">
+        <field name="name">sh.college.search</field>
+        <field name="model">sh.college</field>
+        <field name="arch" type="xml">
+            <search string="Search College">
+                <field name='name'/>
+                <field name="email"/>
+                <field name="colloge_contact_no" />
+                <filter string="College Stages" name="stage_id" context="{'group_by': 'stage_id'}" />
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_college_action" model="ir.actions.act_window">
+        <field name="name">College</field>
+        <field name="res_model">sh.college</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">kanban,tree,form,search</field>
+    </record>
+
+    <menuitem id="colleges_sub_main_menu" name="Colleges" action="sh_college_action"
+        parent="placement_main_menu" sequence="2" />
+
+    <record id="model_college_update_mass_update_college_stage" model="ir.actions.server">
+        <field name="name">Mass Update College Stages</field>
+        <field name="model_id" ref="sh_hr_placement.model_sh_college" />
+        <field name="binding_model_id" ref="sh_hr_placement.model_sh_college" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.change_state_action()
+        </field>
+    </record>
+
+</odoo>

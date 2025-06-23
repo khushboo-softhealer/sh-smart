@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="sh_project_task_base.OpenWizard" owl="1">
+		<span t-esc="this.props.record.data.not_billable"/>
+    </t>
+</templates>

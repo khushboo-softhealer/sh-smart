@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Snippets menu -->
+    <template id="theme_softhealer_store_snippets" inherit_id="website.snippets" name="Blog Filter Snippet">
+        <xpath expr="//div[@id='snippet_structure']"
+            position="before">
+
+            <div id="sh_testimonial_snippet_1" class="o_panel">
+                <div class="o_panel_header">Testimonial</div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_softhealer_store.sh_testimonial_snippet_s_1" t-thumbnail="/theme_softhealer_store/static/src/img/block/home/5.svg"/>
+                </div>
+            </div>
+
+
+            <div id="sh_website_popular_searches_snippet" class="o_panel" t-if="request.env['website'].get_current_website().enable_website_popular_searches">
+                <div class="o_panel_header">Popular Searches</div>
+                <div class="o_panel_body">
+                    <t t-snippet="softhealer_website_base.s_sh_website_popular_searches"
+                        string="Badges" t-thumbnail="/theme_softhealer_store/static/src/img/populer_searches.svg"/>
+                </div>
+            </div>
+       
+            <div id="theme_softhealer_store_effect" class="o_panel">
+                
+                <div class="o_panel_header">
+                    Store Home Page 
+                </div>
+                <div class="o_panel_body">
+                     <t t-snippet="theme_softhealer_store.theme_softhealer_store_home_snippet_template" string="Banner 1" t-thumbnail="/theme_softhealer_store/static/src/img/block/home/1.svg"/>
+                     <t t-snippet="theme_softhealer_store.theme_softhealer_store_home_snippet_template_two" string="Banner 2" t-thumbnail="/theme_softhealer_store/static/src/img/block/home/1.svg"/>
+                     <t t-snippet="theme_softhealer_store.theme_softhealer_store_home_snippet_template_three" string="Banner 3" t-thumbnail="/theme_softhealer_store/static/src/img/block/home/1.svg"/>
+                     <t t-snippet="theme_softhealer_store.theme_softhealer_store_services_snippet_template" string="Services" t-thumbnail="/theme_softhealer_store/static/src/img/block/home/2.svg"/>
+                     <t t-snippet="theme_softhealer_store.theme_softhealer_store_chatgpt_snippet_template" string="Coming Soon" t-thumbnail="/theme_softhealer_store/static/src/img/block/home/3.svg"/>
+                     <!-- <t t-snippet="theme_softhealer_store.theme_softhealer_store_coming_soon_snippet_template" string="Coming Soon" t-thumbnail="/theme_softhealer_store/static/src/img/block/home/3.svg"/> -->
+                     <t t-snippet="theme_softhealer_store.theme_softhealer_store_call_to_action_snippet_template" string="Call to Action" t-thumbnail="/theme_softhealer_store/static/src/img/block/home/4.svg"/>
+                     <t t-snippet="theme_softhealer_store.theme_softhealer_store_newslatter_snippet_template" string="Newslatter" t-thumbnail="/theme_softhealer_store/static/src/img/block/home/6.svg"/>
+                </div>
+                
+                <div class="o_panel_header">
+                    Store About Us Page
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_softhealer_store.theme_softhealer_store_banner_snippet_template" string="About Banner" t-thumbnail="/theme_softhealer_store/static/src/img/block/about_us/1.svg" />
+                    <!-- <t t-snippet="theme_softhealer_store.theme_softhealer_store_abouts_us_snippet_template" string="About Us" t-thumbnail="/theme_softhealer_store/static/src/img/block/about_us/2.svg" /> -->
+                    <t t-snippet="theme_softhealer_store.theme_softhealer_store_why_choose_us_snippet_template" string="About Why Choose us" t-thumbnail="/theme_softhealer_store/static/src/img/block/about_us/3.svg" />
+                    <t t-snippet="theme_softhealer_store.theme_softhealer_store_our_mission_snippet_template" string="Our Mission" t-thumbnail="/theme_softhealer_store/static/src/img/block/about_us/4.svg" />
+                </div>
+
+                <div class="o_panel_header">
+                    Store contact Us Page
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_softhealer_store.theme_softhealer_store_contact_us_banner_snippet_template" string="Contact Us" t-thumbnail="/theme_softhealer_store/static/src/img/block/contact_us/1.svg" />
+                    <t t-snippet="theme_softhealer_store.theme_softhealer_store_contact_us_form_snippet_template" string="Contact Us" t-thumbnail="/theme_softhealer_store/static/src/img/block/contact_us/2.svg" />
+                </div>
+
+                <div class="o_panel_header">
+                    Store Privacy Policy Page
+                </div>
+                <div class="o_panel_body">
+                      <t t-snippet="theme_softhealer_store.theme_softhealer_store_privacy_policy_banner_snippet_template" string="Banner" t-thumbnail="/theme_softhealer_store/static/src/img/block/terms_and_condition/1.svg"/>
+                     <t t-snippet="theme_softhealer_store.theme_softhealer_store_privacy_policy_rules_snippet_template" string="Privacy Policy" t-thumbnail="/theme_softhealer_store/static/src/img/block/terms_and_condition/2.svg"/>
+                </div>
+
+                <div class="o_panel_header">
+                    Store terms and conditions Page
+                </div>
+                <div class="o_panel_body">
+                     <t t-snippet="theme_softhealer_store.theme_softhealer_store_terms_and_conditions_banner_snippet_template" string="Banner" t-thumbnail="/theme_softhealer_store/static/src/img/block/terms_and_condition/1.svg"/>
+                     <t t-snippet="theme_softhealer_store.theme_softhealer_store_terms_and_conditions_rules_snippet_template" string="Terms and Conditions" t-thumbnail="/theme_softhealer_store/static/src/img/block/terms_and_condition/2.svg"/>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

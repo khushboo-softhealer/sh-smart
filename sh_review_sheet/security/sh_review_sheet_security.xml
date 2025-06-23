@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Reviews Sheet Line-->
+    <record id="sh_review_sheet_line_admin_rule" model="ir.rule">
+        <field name="name">Sh Review Sheet Line Admin Rule</field>
+        <field name="model_id" ref="sh_review_sheet.model_sh_review_sheet_line"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('sh_review_sheet.group_review_sheet_admin'))]" />
+    </record>
+
+    <record id="sh_review_sheet_line_leaders_rule" model="ir.rule">
+        <field name="name">Sh Review Sheet Line Leader's Access</field>
+        <field name="model_id" ref="sh_review_sheet.model_sh_review_sheet_line"/>
+        <field name="domain_force">[('project_responsible_id.id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+
+</odoo>

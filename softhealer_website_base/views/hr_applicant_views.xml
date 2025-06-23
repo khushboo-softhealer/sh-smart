@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="hr_applicant_inherit_view" model="ir.ui.view">
+        <field name="name">hr.applicant.view.form.inherit</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='recruitment_contract']" position="after">
+                <group name="applicant_details" string="Applicant Info">
+                    <field name="sh_city" />
+                    <field name="sh_state_id" />
+                    <field name="sh_country_id" />
+                    <field name="sh_current_salary_pm" />
+                    <field name="sh_expected_salary_pm" />
+                    <field name="sh_notice_period" />
+                    <field name="sh_open_to_relocate" />
+                </group>     
+            </xpath>
+        </field>
+    </record>
+</odoo>            

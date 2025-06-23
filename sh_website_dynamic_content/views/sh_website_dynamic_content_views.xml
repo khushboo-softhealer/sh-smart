@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- Website Dynamic Content List -->
+    <record id="sh_website_dynamic_content_view_tree" model="ir.ui.view">
+        <field name="name">sh.website.dynamic.content.view.tree</field>
+        <field name="model">sh.website.dynamic.content</field>
+        <field name="arch" type="xml">
+            <tree string="Dynamic Content List">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="website_id" groups="website.group_multi_website" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Website Dynamic Content Form -->
+    <record id="sh_website_dynamic_content_view_form" model="ir.ui.view">
+        <field name="name">sh.website.dynamic.content.view.form</field>
+        <field name="model">sh.website.dynamic.content</field>
+        <field name="arch" type="xml">
+            <form string="Dynamic Content Form">
+                <sheet>
+                    <div class="oe_title mb8">
+                        <label for="name" />
+                        <h1 class="o_row">
+                            <field name="name" placeholder="e.g. Store Content" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="website_id" groups="website.group_multi_website" />
+                        </group>
+                        <group>
+                            <field name="create_uid" />
+                        </group>
+                    </group>
+                    <group>
+                        <!-- <field name="html_body" widget="html"/> -->
+                        <field name="html_body" widget="ace" options="{'mode': 'xml'}" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Website Dynamic Content Action -->
+    <record id="sh_website_dynamic_content_action" model="ir.actions.act_window">
+        <field name="name">Dynamic Content</field>
+        <field name="res_model">sh.website.dynamic.content</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids"
+            eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('sh_website_dynamic_content_view_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sh_website_dynamic_content_view_form')}),
+        ]" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Dynamic Content Yet
+            </p>
+        </field>
+    </record>
+
+    <!-- Website Dynamic Content Menu -->
+    <menuitem id="sh_website_dynamic_content_menu" name="Dynamic Content"
+        action="sh_website_dynamic_content_action"
+        parent="website.menu_website_global_configuration" sequence="10" />
+</odoo>

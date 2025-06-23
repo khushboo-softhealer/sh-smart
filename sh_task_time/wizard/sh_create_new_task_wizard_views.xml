@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="create_task_wizard_invoice_account_view" model="ir.ui.view">
+        <field name="name">create.task.wizard.invoice.account</field>
+        <field name="model">sh.create.new.task.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create New Task">
+                <sheet>
+                    <group>
+                        <field name="title" />
+                        <field name="project_id" />
+                        <field name="user_id" />
+                        <field name="sh_responsible_user_ids" widget="many2many_tags"/>
+                        <field name="sh_deadline"/>
+                        <field name="description" />
+                    </group>
+                    <footer>
+                        <button class="btn btn-primary" name="create_task" id="create_task" string="Create" type="object" />
+                        <button string="Cancel" special="cancel" />
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="create_task_wizard_invoice_account_action" model="ir.actions.act_window">
+        <field name="name">Create Task</field>
+        <field name="res_model">sh.create.new.task.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

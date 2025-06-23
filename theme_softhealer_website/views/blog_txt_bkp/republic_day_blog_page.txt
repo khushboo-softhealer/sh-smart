@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sh_softhealer_website_default_republic_day_blog_page_tmpl_latest" name="Republic Day">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+            <!--  start banner Republic Day section  -->
+                <section id="sh_republic_day_banner_blog"
+                    class="sh_republic_day_banner_blog sh_other_page_banner">
+                    <div class="sh_banner_content">
+                        <h2 class="sh_banner_title">Republic Day Celebration</h2>
+                        <p class="sh_banner_text">Uniting as a team, we proudly celebrate Republic Day, embracing our shared values and commitment towards a prosperous nation.</p>
+                        <ul class="sh_banner_breadcrumb">
+                            <li>
+                                <a class="sh_banner_breadcrumb_link" href="/">Home<span
+                                        class="sh_banner_breadcrumb_icon fa fa-angle-right"></span></a>
+                            </li>
+                            <li>
+                                <span class="sh_banner_normal_text">Republic Day Blog</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!--  end banner Republic Day section  -->
+                <!--sh_republic_day_about_section
+                strat-->
+                <section id="sh_republic_day_about_section" class="sh_republic_day_about_section">
+                    <div class="container">
+                        <h2 class="sh_heading">Celebrating Republic Day Together in the Office
+                        </h2>
+                        <div class="sh_inner_section"></div>
+                        <div class="row mt-5">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="sh_workflow_box" data-aos="fade-up">
+                                <div class="sh_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-flag" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M5 5a5 5 0 0 1 7 0a5 5 0 0 0 7 0v9a5 5 0 0 1 -7 0a5 5 0 0 0 -7 0v-9z" />
+                                  <path d="M5 21v-7" />
+                                </svg>
+                                </div>
+                                <div class="sh_box_desc">
+                                    <h2 class="sh_box_title">Flag Hosting Ceremony</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="sh_workflow_box" data-aos="fade-up"
+                                data-aos-delay="300">
+                                <div class="sh_icon_2">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users-group" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                      <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                      <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" />
+                                      <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                      <path d="M17 10h2a2 2 0 0 1 2 2v1" />
+                                      <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                      <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
+                                    </svg>  
+                                </div>
+                                <div class="sh_box_desc">
+                                    <h2 class="sh_box_title">Grand Parade With Chief Guests</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="sh_workflow_box box-1" data-aos="fade-up"
+                                data-aos-delay="500">
+                                <div class="sh_icon_3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-check" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                      <path d="M9 12l2 2l4 -4" />
+                                      <path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" />
+                                    </svg>
+                                </div>
+                                <div class="sh_box_desc">
+                                    <h2 class="sh_box_title">Salute To Freedom Fighters</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <!--sh_republic_day_about_section end-->
+                <section id="sh_republic_celebration" class="sh_republic_celebration">
+                    <div class="container">
+                    <div class="sh_heading_box">
+                            <h1 class="sh_title_box">Republic Day Celebration 2022</h1>
+                            <p class="sh_text">Republic day is celebrated because the constitution of India came into effect after independence. We had arranged flag hosting activity and wear flag color clothes. On the 26th January, we have decorated our office and played some activities that make republic day more vibrant.</p>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-xxl-6 col-xl-8 col-lg-6 col-md-6 col-12">
+                            <div class="sh_image_1">
+                            <img src="/theme_softhealer_website/static/src/img/blogs_bkp/republic_blog/sh_image_1.webp" alt="" loading="lazy"/>
+                            </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-2 col-lg-6 col-md-6 col-12 align-self-end">
+                            <div class="sh_image_2">
+                               <img src="/theme_softhealer_website/static/src/img/blogs_bkp/republic_blog/sh_image_2.webp" alt="" loading="lazy"/> 
+                            </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-2 col-lg-6 col-md-6 col-12 align-self-end">
+                            <div class="sh_image_3">
+                               <img src="/theme_softhealer_website/static/src/img/blogs_bkp/republic_blog/sh_image_3.webp" alt="" loading="lazy"/> 
+                            </div>
+                            </div>
+                            
+                            <div class="col-xxl-4 col-xl-2 col-lg-6 col-md-6 col-12 ">
+                            <div class="sh_image_4">
+                               <img src="/theme_softhealer_website/static/src/img/blogs_bkp/republic_blog/sh_image_4.webp" alt="" loading="lazy"/> 
+                            </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-2 col-lg-6 col-md-6 col-12 ">
+                            <div class="sh_image_5">
+                               <img src="/theme_softhealer_website/static/src/img/blogs_bkp/republic_blog/sh_image_5.webp" alt="" loading="lazy"/> 
+                            </div>
+                            </div>
+                             <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-12">
+                            <div class="sh_image_6">
+                            <img src="/theme_softhealer_website/static/src/img/blogs_bkp/republic_blog/sh_image_6.webp" alt="" loading="lazy"/>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>

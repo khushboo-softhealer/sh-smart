@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- VIEW: Tree -->
+    <record id="sh_bug_state_view_tree" model="ir.ui.view">
+        <field name="name">sh.bug.state.view.tree</field>
+        <field name="model">sh.bug.state</field>
+        <field name="arch" type="xml">
+            <tree string="Bug States" editable="bottom">
+                <field name="name" required="1" />
+                <field name="is_default_state" />
+                <field name="is_testing_state" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION: Bug States -->
+    <record id="sh_bug_state_action" model="ir.actions.act_window">
+        <field name="name">Bug States</field>
+        <field name="res_model">sh.bug.state</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+</odoo>

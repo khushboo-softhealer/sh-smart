@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!-- Template  Contact Us for website basic view -->
+    <template id="theme_softhealer_website_contact_us_tmpl" name="Contact Us for Website">
+        <t t-call="website.layout">
+            <!-- 
+    
+==================================
+ Contact Us for website
+==================================
+
+-->
+
+            <div class="oe_structure oe_empty" id="wrap">
+
+                <!-- 
+    
+==================================
+ Contact Us for website
+==================================
+
+-->
+
+                <!-- start contact banner section -->
+                <section id="sh_contact_us_banner" class="sh_contact_us_banner sh_other_page_banner">
+                    <div class="sh_banner_content">
+                        <h1 class="sh_banner_title">We're here to help - Let's connect</h1>
+                        <p class="sh_banner_text">We provide Odoo ERP Services, cloud-based systems,
+                            and mobile app development services globally for timely, cost-effective
+                            solutions. Interested?</p>
+                        <ul class="sh_banner_breadcrumb">
+                            <li>
+                                <a class="sh_banner_breadcrumb_link" href="/">Home<span
+                                        class="sh_banner_breadcrumb_icon fa fa-angle-right"></span></a>
+                            </li>
+                            <li>
+                                <span class="sh_banner_normal_text">Contact Us</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- end contact banner section -->
+                <!-- start contact form section -->
+                <section
+                    class="s_text_block o_colored_level sh_softhealer_website_default_contact_us_page aos-init aos-animate"
+                    id="sh_softhealer_website_default_contact_us_page"
+                    data-snippet="s_text_block" style="background-image: none;">
+                    <div class="container s_allow_columns">
+                        <div class="sh_contact_main_div ">
+                            <div class="row  align-items-xxl-center">
+                                 <div
+                                    class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 col-12 align-self-center"
+                                    data-aos="fade-left">
+                                    <div class="sh_contact_side_img">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/contact_us/contact_us_new.webp"
+                                            alt="Top ERP Service Provider"
+                                            loading="lazy"
+                                            class="sh_contact_img w-100 h-100" />
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 col-12 mt-4 mt-lg-0 o_colored_level"
+                                    data-aos="fade-right">
+                                    <section class="s_website_form sh_form_box" data-vcss="001"
+                                        data-snippet="s_website_form">
+                                        <div class="container">
+                                            <h3 class="sh_contact_form_title">Send Message.</h3>
+                                            <t t-call="softhealer_website_base.sh_website_form_for_solution_page_form">
+                                                <t t-set="is_show_tnc" t-value="false"/>
+                                            </t>
+                                        </div>
+                                    </section>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end contact form section -->
+                <!-- start contact service -->
+                <section id="sh_contact_service_box"
+                    class="sh_contact_service_box aos-init aos-animate">
+                    <div class="sh_section_bg_img">
+                        <img
+                            src="/theme_softhealer_website/static/src/img/images/contact_us/sh_map_img_1.webp"
+                            alt="sh_map_img_1" class="" loading="lazy" />
+                    </div>
+                    <div class="container">
+                        <div class="sh_section_heading">
+                            <h2 class="sh_section_heading_title">We build long-term relationships
+                                with our clients</h2>
+                            <p class="sh_section_heading_text">You contact us at any time, and we
+                                will endeavour to provide you with a prompt response.</p>
+                        </div>
+                        <div class="row">
+                            <div
+                                class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12"
+                                data-aos="fade-up">
+
+                                <div class="sh_contact_support_box">
+                                    <a href="/support" target="_blank">
+                                        <div class="sh_contact_support_img">
+                                            <svg id="Layer_1" data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 14 14">
+                                                <defs>
+                                                    <style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                </defs>
+                                                <title>Help &amp;amp; Support</title>
+                                                <rect class="cls-1" width="14" height="14" />
+                                                <path class="cls-2"
+                                                    d="M12.76,7.74a8.85,8.85,0,0,0-.17-2.12A5.76,5.76,0,0,0,2.84,3,6.27,6.27,0,0,0,1.26,8.09a.34.34,0,0,0,.55.26c.13-.09.13-.22.13-.36A10.26,10.26,0,0,1,2,6.07a5.06,5.06,0,0,1,9.91-.19,8.69,8.69,0,0,1,.14,1.83c0,.81,0,1.62,0,2.42a1.12,1.12,0,0,1-1.24,1.2c-.51,0-1,0-1.53,0A.32.32,0,0,1,9,11.15a1,1,0,0,0-.92-.53H6.69a1.06,1.06,0,0,0-1.1,1.05,1,1,0,0,0,1.08,1.07H8.05A1,1,0,0,0,9,12.2.34.34,0,0,1,9.35,12h1.58a1.72,1.72,0,0,0,1.82-1.8c0-.57,0-1.15,0-1.73C12.75,8.23,12.75,8,12.76,7.74ZM8.13,12c-.5,0-1,0-1.52,0a.32.32,0,0,1-.33-.38.35.35,0,0,1,.38-.35H8.1a.33.33,0,0,1,.35.34A.32.32,0,0,1,8.13,12ZM5.55,6.3A.65.65,0,0,0,5,5.6a1.94,1.94,0,0,0-2,.74,2.85,2.85,0,0,0-.22,2.3A1.71,1.71,0,0,0,4.6,9.87c.73,0,1-.21,1-.93V7.7h0C5.55,7.24,5.56,6.77,5.55,6.3Zm-1,2.89a1.15,1.15,0,0,1-1.2-1.12,3.09,3.09,0,0,1,0-.91,1.17,1.17,0,0,1,1.29-.91c.16,0,.17.12.17.24V7.73c0,.39,0,.78,0,1.18C4.89,9.15,4.79,9.2,4.58,9.19Zm6.57-2.57a1.8,1.8,0,0,0-1.9-1.06.72.72,0,0,0-.79.79V7.7c0,.48,0,1,0,1.44A.64.64,0,0,0,9,9.83a1.87,1.87,0,0,0,2.19-1A2.94,2.94,0,0,0,11.15,6.62Zm-.53,1.53a1.14,1.14,0,0,1-1.23,1c-.18,0-.26,0-.25-.25,0-.4,0-.8,0-1.2s0-.83,0-1.24c0-.19.06-.25.25-.25a1.14,1.14,0,0,1,1.22,1A2.42,2.42,0,0,1,10.62,8.15Z"
+                                                    transform="translate(0 0)" />
+                                            </svg>
+                                        </div>
+                                        <div class="sh_contact_support_content">
+                                            <h4 class="sh_contact_box_title">Help &amp; Support</h4>
+                                            <p class="sh_contact_box_text">Expert guidance and
+                                                support
+                                                to optimize business
+                                                operations.</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div
+                                class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12"
+                                data-aos="fade-up"
+                                data-aos-delay="300">
+                                <div class="sh_contact_support_box">
+                                    <a href="/support" target="_blank">
+                                        <div class="sh_contact_support_img">
+                                            <svg id="Layer_1" data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 14 14">
+                                                <defs>
+                                                    <style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                </defs>
+                                                <title>Request Demo</title>
+                                                <rect class="cls-1" width="14" height="14" />
+                                                <path class="cls-2"
+                                                    d="M10.9,3.45c-.3,0-.3,0-.32-.28A1.21,1.21,0,0,0,8.92,2.06c-.19.06-.22,0-.29-.15a1.22,1.22,0,0,0-2.16,0c-.1.17-.17.2-.35.15A1.2,1.2,0,0,0,4.52,3.1c-.07.65,0,1.31,0,2V7.71a4.85,4.85,0,0,1-.69-.65,1.27,1.27,0,0,0-1.18-.38,1.18,1.18,0,0,0-.94.84A1.18,1.18,0,0,0,2,8.79c.74.75,1.49,1.47,2.23,2.22a5.65,5.65,0,0,0,4.36,1.73,4,4,0,0,0,3.81-3.92c0-1.35,0-2.7,0-4.06A1.2,1.2,0,0,0,10.9,3.45Zm.8,5.29A3.18,3.18,0,0,1,9.09,12,4.61,4.61,0,0,1,4.9,10.71C4.09,10,3.32,9.15,2.53,8.35a.55.55,0,0,1,.19-1,.58.58,0,0,1,.61.22L4.52,8.77c.11.11.22.24.42.16a.41.41,0,0,0,.24-.44V3.39c0-.26,0-.51.29-.64a.56.56,0,0,1,.83.57c0,1,0,2.07,0,3.11a2.35,2.35,0,0,0,0,.26.3.3,0,0,0,.3.29A.31.31,0,0,0,7,6.72,1.67,1.67,0,0,0,7,6.4V2.6c0-.36.12-.54.4-.62a.53.53,0,0,1,.69.43,1.94,1.94,0,0,1,0,.34V6.58c0,.24.1.4.35.4s.33-.17.33-.39v-1c0-.75,0-1.49,0-2.24a.57.57,0,1,1,1.12,0V6.57c0,.22.08.4.34.41s.34-.18.35-.41V4.87a1.31,1.31,0,0,1,0-.34.5.5,0,0,1,.49-.41.52.52,0,0,1,.54.34.93.93,0,0,1,.06.37C11.71,6.13,11.71,7.44,11.7,8.74Z"
+                                                    transform="translate(0 0)" />
+                                            </svg>
+                                        </div>
+                                        <div class="sh_contact_support_content">
+                                            <h4 class="sh_contact_box_title">Request Demo</h4>
+                                            <p class="sh_contact_box_text">Request a demo and find
+                                                out
+                                                what our product can do for
+                                                you.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12"
+                                data-aos="fade-up"
+                                data-aos-delay="900">
+                                <div class="sh_contact_support_box">
+                                    <a href="/support" target="_blank">
+                                        <div class="sh_contact_support_img">
+                                            <svg id="Layer_1" data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 14 14">
+                                                <defs>
+                                                    <style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                </defs>
+                                                <title>New Requirement</title>
+                                                <rect class="cls-1" width="14" height="14" />
+                                                <path class="cls-2"
+                                                    d="M8.61,4.41C7.85,3.69,7.12,2.94,6.39,2.2a1,1,0,0,0-.74-.33H2.57A1.29,1.29,0,0,0,1.26,3.21q0,3.78,0,7.58A1.28,1.28,0,0,0,2.6,12.13H7.82a3.8,3.8,0,0,1-.45-.41.54.54,0,0,0-.49-.21H2.59a.63.63,0,0,1-.71-.71V3.19a.61.61,0,0,1,.68-.68H4.87c.22,0,.26.08.26.27,0,.63,0,1.27,0,1.9a1,1,0,0,0,1,1H8c.17,0,.33,0,.29.23a.1.1,0,0,0,0,.09A1.15,1.15,0,0,0,9,5.75,1.64,1.64,0,0,0,8.61,4.41ZM8.27,5c0,.08-.11,0-.18,0h-2c-.25,0-.36-.11-.36-.36,0-.67,0-1.34,0-2,0-.06,0-.13,0-.16s.1,0,.14.08L8.18,4.89C8.23,4.93,8.29,5,8.27,5ZM10,6.38A2.87,2.87,0,0,0,7.05,9.2,2.88,2.88,0,1,0,10,6.38Zm-.88,5A2.29,2.29,0,0,1,7.67,9.09a2.31,2.31,0,0,1,1.8-2,2.28,2.28,0,0,1,2.68,1.77,2.82,2.82,0,0,1,0,.87A2.27,2.27,0,0,1,9.1,11.36Zm1.11-.71a.26.26,0,0,1-.34.19.27.27,0,0,1-.24-.29,5.3,5.3,0,0,1,0-.69c0-.22,0-.32-.28-.29s-.43,0-.64,0-.34-.07-.35-.3S8.47,9,8.66,9s.5,0,.75,0,.21-.06.2-.21,0-.49,0-.74a.27.27,0,0,1,.3-.31c.22,0,.3.13.31.32a5.77,5.77,0,0,1,0,.72c0,.16,0,.23.21.22s.48,0,.72,0a.31.31,0,0,1,.35.32c0,.23-.18.3-.38.3a6.58,6.58,0,0,0-.89,0,3.49,3.49,0,0,0,0,.79A1.23,1.23,0,0,1,10.21,10.65Z"
+                                                    transform="translate(0 0)" />
+                                            </svg>
+                                        </div>
+                                        <div class="sh_contact_support_content">
+                                            <h4 class="sh_contact_box_title">New Requirement</h4>
+                                            <p class="sh_contact_box_text">Innovative approaches to
+                                                fulfill your business's need.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12"
+                                data-aos="fade-up"
+                                data-aos-delay="1200">
+                                <div class="sh_contact_support_box">
+                                    <a href="https://www.linkedin.com/company/softhealer-technologies-pvt-ltd/" target="_blank">
+                                        <div class="sh_contact_support_img">
+                                            <svg id="Layer_1" data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 14 14">
+                                                <defs>
+                                                    <style>.cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                </defs>
+                                                <title>Join Our Community</title>
+                                                <rect class="cls-1" width="14" height="14" />
+                                                <path class="cls-2"
+                                                    d="M3.69,5.05c-.06-.25.08-.39.24-.54a3.1,3.1,0,0,1,1.93-.87c.06,0,.14,0,.18,0s0,.11-.09.15a2.43,2.43,0,0,1-.84.6A4,4,0,0,0,4,5.2c-.09.07-.18.23-.29.18S3.71,5.16,3.69,5.05Zm9.5,4.39a.9.9,0,0,1-1,.93,1.35,1.35,0,0,1-.69-.12.93.93,0,0,1-.47-.89c0-.21-.06-.28-.26-.25h-.2c-.34,0-.57,0-.72.4a1,1,0,0,1-1.1.62.28.28,0,0,0-.29.17,1.19,1.19,0,0,1-1.72.48.24.24,0,0,0-.28,0,1.24,1.24,0,0,1-1.71-.18L3.63,9.49a1.12,1.12,0,0,0-.2-.18c-.09-.07-.2-.16-.31-.12s-.05.19-.07.28a.91.91,0,0,1-.82.89A1,1,0,0,1,1,9.74l0-.09a.31.31,0,0,1,0-.19v-4a.32.32,0,0,1,0-.19.62.62,0,0,1,.67-.41H3a.5.5,0,0,1,0,.27V8.24c0,.09,0,.18,0,.26A2.75,2.75,0,0,1,3.94,9l.65.63.64.64a.67.67,0,0,0,1.09-.1.34.34,0,0,1,.56-.06l.12.12a.58.58,0,0,0,.61.14A.6.6,0,0,0,8,9.84c.08-.46.14-.49.58-.34a.63.63,0,0,0,.74-.23.55.55,0,0,0-.06-.76C8.78,8,8.25,7.45,7.73,6.92c-.1-.1-.16-.06-.24,0-.27.25-.54.51-.83.74A1.27,1.27,0,0,1,5,5.73l1.5-1.41a2.47,2.47,0,0,1,3.23-.15,2.78,2.78,0,0,0,.33.27.71.71,0,0,1,.36.8c0,.06,0,.14,0,.18s-.13,0-.18-.09l-.78-.64a1.89,1.89,0,0,0-2.53.06L5.45,6.14a1.56,1.56,0,0,0-.23.34.63.63,0,0,0,0,.36c.31.61.75.69,1.25.23l1.3-1.2c.21-.19.42-.15.52.07a.26.26,0,0,1-.07.33c-.15.11-.13.18,0,.3.45.43.89.88,1.33,1.31a1.55,1.55,0,0,1,.4.52.21.21,0,0,0,.24.13c.23,0,.46,0,.69,0s.21-.07.21-.23c0-1.07,0-2.14,0-3.22,0-.18,0-.23.23-.23.43,0,.85,0,1.28,0a.56.56,0,0,1,.63.59C13.2,6.79,13.21,8.12,13.19,9.44ZM2.46,6.19c0-.23.1-.54,0-.68s-.47,0-.71-.06-.2,0-.2.19c0,1.24,0,2.48,0,3.73,0,.33.11.42.51.41s.43-.1.43-.42V6.19Zm10.15-.57c0-.13,0-.18-.17-.17h-.56c-.19,0-.22.06-.22.23,0,.61,0,1.22,0,1.84V9.38c0,.29.12.4.43.4s.51-.07.52-.39Z"
+                                                    transform="translate(0 0)" />
+                                            </svg>
+                                        </div>
+                                        <div class="sh_contact_support_content">
+                                            <h4 class="sh_contact_box_title">Join our Community</h4>
+                                            <p class="sh_contact_box_text">Join our community and
+                                                discover new business
+                                                opportunities.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end contact service -->
+                <!-- start contact map -->
+                <section id="sh_contact_map_box" class="sh_contact_map_box aos-init aos-animate">
+                    <div class="sh_contact_map_main" data-aos="fade-left">
+                        <div class="sh_contact_map">
+                            <div class="sh_contact_map_iframe">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.8192363277667!2d70.76543041419302!3d22.322675147725015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca18fbb8df83%3A0xc5d2508a38a14110!2sSofthealer%20Technologies!5e0!3m2!1sen!2sin!4v1680865859897!5m2!1sen!2sin"
+                                    width="100%" height="650" style="border:0;" allowfullscreen=""
+                                    loading="lazy" alt="contact map"></iframe>
+                            </div>
+                            <div class="container">
+                                <div class="sh_map_address_box">
+                                    <div
+                                        class="row justify-content-center ">
+                                        <div
+                                            class="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-xs-12 col-12">
+                                            <div class="sh_address_card">
+                                                <div class="sh_address_icon_box">
+                                                    <svg id="Layer_1" data-name="Layer 1"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 14 14">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                        </defs>
+                                                        <title>Location</title>
+                                                        <rect class="cls-1" width="14" height="14" />
+                                                        <path class="cls-2"
+                                                            d="M10.89,3.66A4.27,4.27,0,0,0,6.54,1.25a4.27,4.27,0,0,0-3.85,4,5.08,5.08,0,0,0,.73,2.68,29.92,29.92,0,0,0,3,4.48.67.67,0,0,0,1.16,0,29.56,29.56,0,0,0,3-4.55,5.56,5.56,0,0,0,.7-2.32A4.49,4.49,0,0,0,10.89,3.66Zm-.67,3.41a24.64,24.64,0,0,1-3.09,4.79c-.07.09-.14.16-.24,0A22.31,22.31,0,0,1,3.63,6.72a3.37,3.37,0,0,1,1-3.88,3.47,3.47,0,0,1,3.92-.58,3.51,3.51,0,0,1,2.11,3.22A3.63,3.63,0,0,1,10.22,7.07ZM7,3.75a1.79,1.79,0,1,0,1.75,1.8A1.79,1.79,0,0,0,7,3.75ZM7,6.64A1.1,1.1,0,0,1,5.9,5.55,1.09,1.09,0,0,1,7,4.45,1.1,1.1,0,1,1,7,6.64Z"
+                                                            transform="translate(0 0)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="sh_address_content">
+                                                    <h5 class="sh_address_title">Head Branch</h5>
+                                                    <p class="sh_address_text"> 905,Corporate
+                                                        Levels, <br /> 150ft.Ring Road,<br /> Nr.
+                                                        Ayodya Chowk,<br /> Opp Synergy Hospital,<br />
+                                                        Rajkot - 360006</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-xs-12 col-12">
+                                            <div class="sh_address_card">
+                                                <div class="sh_address_icon_box">
+                                                    <svg id="Layer_1" data-name="Layer 1"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 14 14">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                        </defs>
+                                                        <title>Contact</title>
+                                                        <rect class="cls-1" width="14" height="14" />
+                                                        <path class="cls-2"
+                                                            d="M12.06,8.48c-.8-.35-1.61-.7-2.43-1a.84.84,0,0,0-1.07.29c-.19.22-.38.44-.55.67s-.19.14-.34,0A6.91,6.91,0,0,1,5.53,6.32c-.1-.16-.07-.24.07-.35s.48-.38.71-.59a.82.82,0,0,0,.25-1c-.34-.82-.69-1.63-1-2.44a.85.85,0,0,0-1-.49L2.1,2a.85.85,0,0,0-.69.87,9.48,9.48,0,0,0,.17,1.77A9.26,9.26,0,0,0,3.84,9.24a9.67,9.67,0,0,0,6.81,3.33c1,0,1.26-.16,1.44-1s.31-1.43.46-2.15A.85.85,0,0,0,12.06,8.48Zm-.18.91c-.16.75-.33,1.51-.48,2.26-.05.22-.18.25-.37.25a8.93,8.93,0,0,1-5.58-2A9,9,0,0,1,2.23,4.5c0-.16,0-.31-.08-.47s0-.32,0-.47,0-.45,0-.67a.24.24,0,0,1,.22-.29l2.32-.5c.15,0,.23,0,.28.17.33.78.66,1.56,1,2.33a.24.24,0,0,1-.11.33l-.71.58a.7.7,0,0,0-.2,1A6.85,6.85,0,0,0,7.47,9.11a.7.7,0,0,0,1-.19c.2-.24.4-.49.59-.74a.28.28,0,0,1,.37-.09l2.31,1A.24.24,0,0,1,11.88,9.39Z"
+                                                            transform="translate(0 0)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="sh_address_content">
+                                                    <h5 class="sh_address_title">Contact Info</h5>
+                                                    <span class="sh_address_mail_item">
+                                                        <a href="tel:+919023246069'">
+                                                        </a>
+                                                    </span>
+                                                    <span class="sh_address_mail_item">
+                                                        <a href="tel:+919023246069'">
+                                                            HR:+919023246069</a>
+                                                    </span>
+                                                    <br />
+                                                    <span class="sh_address_mail_item">
+                                                        <a href="tel:+919023246069'"></a>
+                                                    </span>
+                                                    <span class="sh_address_mail_item">
+                                                        <a href="tel:+919328825451">
+                                                            Sales:+919328825451
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-xxl-12 col-xl-12 col-lg-12 col-md-6 col-sm-12 col-xs-12 col-12">
+                                            <div class="sh_address_card">
+                                                <div class="sh_address_icon_box">
+                                                    <svg id="Layer_1" data-name="Layer 1"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 14 14">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                        </defs>
+                                                        <title>Email</title>
+                                                        <rect class="cls-1" width="14" height="14" />
+                                                        <path class="cls-2"
+                                                            d="M12.93,4.16a1.71,1.71,0,0,0,0-.39,1.51,1.51,0,0,0-1.62-1.18H2.79A1.55,1.55,0,0,0,1.1,3.81a.46.46,0,0,0,0,.23v6a.45.45,0,0,0,0,.23,1.56,1.56,0,0,0,1.69,1.2h8.54a1.5,1.5,0,0,0,1.6-1.6ZM12.21,10a.72.72,0,0,1-.79.79H2.69c-.62,0-.89-.26-.89-.87,0-1.22,0-2.44,0-3.65,0-.09-.05-.2,0-.25s.16.06.23.11L5.91,8.9a1.82,1.82,0,0,0,2.19,0L12,6.09c.07,0,.13-.13.21-.1s.05.16.05.24C12.22,7.47,12.22,8.72,12.21,10Zm-.67-4.45C10.24,6.4,9,7.35,7.74,8.27a1.11,1.11,0,0,1-1.47,0L2.05,5.19A.49.49,0,0,1,1.8,4.7a5.8,5.8,0,0,0,0-.59.71.71,0,0,1,.79-.79h8.79c.57,0,.79.26.85.83A1.35,1.35,0,0,1,11.54,5.52Z"
+                                                            transform="translate(0 0)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="sh_address_content">
+                                                    <h5 class="sh_address_title">Official Email</h5>
+                                                    <ul class="sh_address_mail">
+                                                        <li class="sh_address_mail_item">
+                                                            <a href="mailto:career@softhealer.com"
+                                                                style="padding-bottom: 0px; display: block;">
+                                                                HR: career@softhealer.com
+                                                            </a>
+                                                        </li>
+                                                        <!-- <li class="sh_address_mail_item">
+                                                <a href="mailto:info@softhealer.com">
+                                                    Other: info@softhealer.com
+                                                </a>
+                                            </li>
+                                            <li class="sh_address_mail_item">
+                                                <a href="mailto:support@softhealer.com">
+                                                    Support: support@softhealer.com
+                                                </a>
+                                            </li> -->
+                                                        <li class="sh_address_mail_item">
+                                                            <a href="mailto:sales@softhealer.com">
+                                                                Sales: sales@softhealer.com
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end contact map -->
+
+                <!-- start contact service -->
+                <section id="sh_contact_partner_box"
+                    class="sh_contact_partner_box aos-init aos-animate">
+                    <div class="sh_section_bg_img">
+                        <img
+                            src="/theme_softhealer_website/static/src/img/images/contact_us/sh_map_img_1.webp"
+                            alt="sh_map_img_1" class="" loading="lazy" />
+                    </div>
+                    <div class="container">
+                        <div class="sh_section_heading">
+                            <h2 class="sh_section_heading_title">Our
+                                Branches</h2>
+                            <p class="sh_section_heading_text">Discover a network of expertise that
+                                helps us achieve your goals.</p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div
+                                class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 sh_spacing_box"
+                                data-aos="fade-up">
+                                <div class="sh_contact_support_box">
+                                    <div class="sh_contact_support_img">
+                                        <svg id="Layer_1" data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 14 14">
+                                            <defs>
+                                                <style>
+                                                    .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                            </defs>
+                                            <title>Location</title>
+                                            <rect class="cls-1" width="14" height="14" />
+                                            <path class="cls-2"
+                                                d="M10.89,3.66A4.27,4.27,0,0,0,6.54,1.25a4.27,4.27,0,0,0-3.85,4,5.08,5.08,0,0,0,.73,2.68,29.92,29.92,0,0,0,3,4.48.67.67,0,0,0,1.16,0,29.56,29.56,0,0,0,3-4.55,5.56,5.56,0,0,0,.7-2.32A4.49,4.49,0,0,0,10.89,3.66Zm-.67,3.41a24.64,24.64,0,0,1-3.09,4.79c-.07.09-.14.16-.24,0A22.31,22.31,0,0,1,3.63,6.72a3.37,3.37,0,0,1,1-3.88,3.47,3.47,0,0,1,3.92-.58,3.51,3.51,0,0,1,2.11,3.22A3.63,3.63,0,0,1,10.22,7.07ZM7,3.75a1.79,1.79,0,1,0,1.75,1.8A1.79,1.79,0,0,0,7,3.75ZM7,6.64A1.1,1.1,0,0,1,5.9,5.55,1.09,1.09,0,0,1,7,4.45,1.1,1.1,0,1,1,7,6.64Z"
+                                                transform="translate(0 0)" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_contact_support_content">
+                                        <h4 class="sh_contact_box_title">Surat Branch</h4>
+                                        <p class="sh_contact_box_text">
+                                            21, Nandanvan Society, Nr. Bank of Baroda,
+                                            Singanpore to Causeway Road, Singanpore
+                                            Surat
+                                            Gujarat GJ
+                                            India
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 sh_spacing_box"
+                                data-aos="fade-up"
+                                data-aos-delay="300">
+                                <div class="sh_contact_support_box">
+                                    <div class="sh_contact_support_img">
+                                        <svg id="Layer_1" data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 14 14">
+                                            <defs>
+                                                <style>
+                                                    .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                            </defs>
+                                            <title>Location</title>
+                                            <rect class="cls-1" width="14" height="14" />
+                                            <path class="cls-2"
+                                                d="M10.89,3.66A4.27,4.27,0,0,0,6.54,1.25a4.27,4.27,0,0,0-3.85,4,5.08,5.08,0,0,0,.73,2.68,29.92,29.92,0,0,0,3,4.48.67.67,0,0,0,1.16,0,29.56,29.56,0,0,0,3-4.55,5.56,5.56,0,0,0,.7-2.32A4.49,4.49,0,0,0,10.89,3.66Zm-.67,3.41a24.64,24.64,0,0,1-3.09,4.79c-.07.09-.14.16-.24,0A22.31,22.31,0,0,1,3.63,6.72a3.37,3.37,0,0,1,1-3.88,3.47,3.47,0,0,1,3.92-.58,3.51,3.51,0,0,1,2.11,3.22A3.63,3.63,0,0,1,10.22,7.07ZM7,3.75a1.79,1.79,0,1,0,1.75,1.8A1.79,1.79,0,0,0,7,3.75ZM7,6.64A1.1,1.1,0,0,1,5.9,5.55,1.09,1.09,0,0,1,7,4.45,1.1,1.1,0,1,1,7,6.64Z"
+                                                transform="translate(0 0)" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_contact_support_content">
+                                        <h4 class="sh_contact_box_title">Australia Branch</h4>
+                                        <p class="sh_contact_box_text">A101, 1-3 Anderson Street,
+                                            Westmead NSW 2145
+                                            Australia</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 sh_spacing_box"
+                                data-aos="fade-up" data-aos-delay="600">
+                                <div class="sh_contact_support_box">
+                                    <div class="sh_contact_support_img">
+                                        <svg id="Layer_1" data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 14 14">
+                                            <defs>
+                                                <style>
+                                                    .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                            </defs>
+                                            <title>Location</title>
+                                            <rect class="cls-1" width="14" height="14" />
+                                            <path class="cls-2"
+                                                d="M10.89,3.66A4.27,4.27,0,0,0,6.54,1.25a4.27,4.27,0,0,0-3.85,4,5.08,5.08,0,0,0,.73,2.68,29.92,29.92,0,0,0,3,4.48.67.67,0,0,0,1.16,0,29.56,29.56,0,0,0,3-4.55,5.56,5.56,0,0,0,.7-2.32A4.49,4.49,0,0,0,10.89,3.66Zm-.67,3.41a24.64,24.64,0,0,1-3.09,4.79c-.07.09-.14.16-.24,0A22.31,22.31,0,0,1,3.63,6.72a3.37,3.37,0,0,1,1-3.88,3.47,3.47,0,0,1,3.92-.58,3.51,3.51,0,0,1,2.11,3.22A3.63,3.63,0,0,1,10.22,7.07ZM7,3.75a1.79,1.79,0,1,0,1.75,1.8A1.79,1.79,0,0,0,7,3.75ZM7,6.64A1.1,1.1,0,0,1,5.9,5.55,1.09,1.09,0,0,1,7,4.45,1.1,1.1,0,1,1,7,6.64Z"
+                                                transform="translate(0 0)" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_contact_support_content">
+                                        <h4 class="sh_contact_box_title">UAE Branch</h4>
+                                        <p class="sh_contact_box_text">
+                                            Area, Latifa Tower - 404,
+                                            West Wing - Sheikh Zayed Rd - Trade Centre
+                                            Dubai
+                                            United Arab Emirates
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 sh_spacing_box"
+                                data-aos="fade-up"
+                                data-aos-delay="900">
+                                <div class="sh_contact_support_box">
+                                    <div class="sh_contact_support_img">
+                                        <svg id="Layer_1" data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 14 14">
+                                            <defs>
+                                                <style>
+                                                    .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                            </defs>
+                                            <title>Location</title>
+                                            <rect class="cls-1" width="14" height="14" />
+                                            <path class="cls-2"
+                                                d="M10.89,3.66A4.27,4.27,0,0,0,6.54,1.25a4.27,4.27,0,0,0-3.85,4,5.08,5.08,0,0,0,.73,2.68,29.92,29.92,0,0,0,3,4.48.67.67,0,0,0,1.16,0,29.56,29.56,0,0,0,3-4.55,5.56,5.56,0,0,0,.7-2.32A4.49,4.49,0,0,0,10.89,3.66Zm-.67,3.41a24.64,24.64,0,0,1-3.09,4.79c-.07.09-.14.16-.24,0A22.31,22.31,0,0,1,3.63,6.72a3.37,3.37,0,0,1,1-3.88,3.47,3.47,0,0,1,3.92-.58,3.51,3.51,0,0,1,2.11,3.22A3.63,3.63,0,0,1,10.22,7.07ZM7,3.75a1.79,1.79,0,1,0,1.75,1.8A1.79,1.79,0,0,0,7,3.75ZM7,6.64A1.1,1.1,0,0,1,5.9,5.55,1.09,1.09,0,0,1,7,4.45,1.1,1.1,0,1,1,7,6.64Z"
+                                                transform="translate(0 0)" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_contact_support_content">
+                                        <h4 class="sh_contact_box_title">Kenya Branch</h4>
+                                        <p class="sh_contact_box_text">
+                                            Gikomba, Kombomuniraly Road,
+                                            Nairobi, Kenya
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                            class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 sh_spacing_box"
+                            data-aos="fade-up"
+                            data-aos-delay="1200">
+                            <div class="sh_contact_support_box">
+                                <div class="sh_contact_support_img">
+                                    <svg id="Layer_1" data-name="Layer 1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 14 14">
+                                        <defs>
+                                            <style>
+                                                .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                        </defs>
+                                        <title>Location</title>
+                                        <rect class="cls-1" width="14" height="14" />
+                                        <path class="cls-2"
+                                            d="M10.89,3.66A4.27,4.27,0,0,0,6.54,1.25a4.27,4.27,0,0,0-3.85,4,5.08,5.08,0,0,0,.73,2.68,29.92,29.92,0,0,0,3,4.48.67.67,0,0,0,1.16,0,29.56,29.56,0,0,0,3-4.55,5.56,5.56,0,0,0,.7-2.32A4.49,4.49,0,0,0,10.89,3.66Zm-.67,3.41a24.64,24.64,0,0,1-3.09,4.79c-.07.09-.14.16-.24,0A22.31,22.31,0,0,1,3.63,6.72a3.37,3.37,0,0,1,1-3.88,3.47,3.47,0,0,1,3.92-.58,3.51,3.51,0,0,1,2.11,3.22A3.63,3.63,0,0,1,10.22,7.07ZM7,3.75a1.79,1.79,0,1,0,1.75,1.8A1.79,1.79,0,0,0,7,3.75ZM7,6.64A1.1,1.1,0,0,1,5.9,5.55,1.09,1.09,0,0,1,7,4.45,1.1,1.1,0,1,1,7,6.64Z"
+                                            transform="translate(0 0)" />
+                                    </svg>
+                                </div>
+                                <div class="sh_contact_support_content">
+                                    <h4 class="sh_contact_box_title">Maldives Branch</h4>
+                                    <p class="sh_contact_box_text">
+                                        8th Floor, Marina Building, KUM Goalhi , Male, Maldives
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        </div>
+                    </div>
+                </section>
+                <!-- end contact service -->
+
+            </div>
+
+
+        </t>
+    </template>
+
+
+    <data noupdate="1">
+
+        <!-- Default pagese  below 2 record must put in no update 1-->
+        <record id="theme_softhealer_website_contact_us_page" model="website.page">
+            <field name="is_published">True</field>
+            <field name="url">/contact-us</field>
+            <field name="view_id"
+                ref="theme_softhealer_website.theme_softhealer_website_contact_us_tmpl" />
+            <field name="track">True</field>
+            <field name="website_id" model="website"
+                eval="obj().env['website'].sudo().get_current_website()" />
+        </record>
+
+        <record id="theme_softhealer_website_contact_us_menu" model="website.menu">
+            <field name="name">Contact Us</field>
+            <field name="url">/contact-us</field>
+            <field name="page_id"
+                ref="theme_softhealer_website.theme_softhealer_website_contact_us_page" />
+            <field name="sequence" type="int">10</field>
+            <field name="website_id" model="website"
+                eval="obj().env['website'].sudo().get_current_website()" />
+            <!-- <field name="parent_id" model="website.menu"
+            eval="obj().env['website'].sudo().get_current_website().menu_id"/> -->
+        </record>
+
+    </data>
+
+
+</odoo>

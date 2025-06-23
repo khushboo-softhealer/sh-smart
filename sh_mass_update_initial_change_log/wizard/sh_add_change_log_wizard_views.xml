@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="add_initial_change_log_form" model="ir.ui.view">
+        <field name="name">sh.add.change.log.wizard.form</field>
+        <field name="model">sh.add.change.log.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Add Initial Change Log">
+                <group>
+                    <group>
+                        <field name="date"/>
+                        <field name="log_type"/>
+                        <field name="version" placeholder="ex. 0.1"/>
+                        <field name="details"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Add Log" name="add_change_log" type="object" class="btn-primary" />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_add_initial_change_log" model="ir.actions.act_window">
+        <field name="name">Add Initial Change Log</field>
+        <field name="res_model">sh.add.change.log.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

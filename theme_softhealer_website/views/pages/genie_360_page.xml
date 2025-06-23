@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- appointment management Page -->
+    <template id="theme_softhealer_genie_360" name="Genie-360 for website">
+        <t t-call="website.layout">
+            <div class="oe_structure oe_empty sh_genie_page" id="wrap">
+                <!-- Event-Management Page Banner Section Start -->
+                <section id="sh_genie_360_banner"
+                    class="sh_genie_360_banner">
+                    <div class="container">
+                        <div class="sh_banner_content">
+                            <div class="sh_heading">Genie-360</div>
+                            <p class="sh_text">
+                                Empower your support team with Genie-360, our advanced solution
+                                designed to streamline ticket resolution through proactive
+                                automations and customizable workflows, boosting productivity across
+                                your organization.
+                            </p>
+                            <div class="sh_btn_group">
+                                <div class="sh_btn_1">
+                                    <a href="#">Buy Now</a>
+                                </div>
+                                <div class="sh_btn_2">
+                                    <a href="#">Get Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Event-Management Page Banner Section end -->
+                <section id="sh_genie_360_whatsapp" class="">
+                    <div class="sh_shape">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"
+                            preserveAspectRatio="none">
+                            <path class="shape-fill"
+                                d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"></path>
+                        </svg>
+                        <div class="sh_image_content">
+                            <img
+                                src="/theme_softhealer_website/static/src/img/images/genie_360/about_bg.webp"
+                                loading="lazy" />
+                            <div class="sh_icon_box">
+                                <img
+                                    src="/theme_softhealer_website/static/src/img/images/genie_360/sh_heart.webp" />
+                            </div>
+                            <div class="sh_icon_box-1">
+                                <img
+                                    src="/theme_softhealer_website/static/src/img/images/genie_360/sh_heart.webp" />
+                            </div>
+                            <div class="sh_icon_box-2">
+                                <img
+                                    src="/theme_softhealer_website/static/src/img/images/genie_360/sh_heart.webp" />
+                            </div>
+                            <div class="sh_icon_box-3">
+                                <img
+                                    src="/theme_softhealer_website/static/src/img/images/genie_360/sh_heart.webp" />
+                            </div>
+                            <div class="sh_icon_box-4">
+                                <img
+                                    src="/theme_softhealer_website/static/src/img/images/genie_360/sh_heart.webp" />
+                            </div>
+                            <div class="sh_image">
+                                <img
+                                    src="/theme_softhealer_website/static/src/img/images/genie_360/main.webp" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="sh_why_genie_360" class="sh_why_genie_360">
+                    <div class="container">
+                        <div class="sh_heading">
+                            Why Genie-360
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 h-100">
+                                <div class="sh_content_box">
+                                    <div class="sh_icon_box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <div class="sh_title">Dynamic Dashboard</div>
+                                    <div class="sh_text">
+                                        Get real-time insights into support performance, fully customizable to your needs.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 h-100">
+                                <div class="sh_content_box">
+                                    <div class="sh_icon_box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <div class="sh_title">Team Management</div>
+                                    <div class="sh_text">
+                                        Create and manage teams effortlessly, with roles and performance tracking.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 h-100">
+                                <div class="sh_content_box">
+                                    <div class="sh_icon_box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <div class="sh_title">Auto Ticket Assignment</div>
+                                    <div class="sh_text">
+                                        Automate ticket distribution based on skills and workload for swift resolutions.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 h-100">
+                                <div class="sh_content_box">
+                                    <div class="sh_icon_box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <div class="sh_title">SLA Policies</div>
+                                    <div class="sh_text">
+                                        Ensure consistent service quality with predefined agreements.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 h-100">
+                                <div class="sh_content_box">
+                                    <div class="sh_icon_box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <div class="sh_title">Task Management</div>
+                                    <div class="sh_text">
+                                        Break down complex issues into manageable tasks for streamlined collaboration.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 h-100">
+                                <div class="sh_content_box">
+                                    <div class="sh_icon_box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <div class="sh_title">Timesheet Management</div>
+                                    <div class="sh_text">
+                                        Accurate time tracking for better efficiency and billing precision.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 h-100">
+                                <div class="sh_content_box">
+                                    <div class="sh_icon_box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <div class="sh_title">Customer Portal</div>
+                                    <div class="sh_text">
+                                        Empower customers with a self-service portal for ticket submission and tracking.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 h-100">
+                                <div class="sh_content_box">
+                                    <div class="sh_icon_box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <div class="sh_title">Create Tickets</div>
+                                    <div class="sh_text">
+                                        Seamlessly generate tickets from inbound emails and WhatsApp messages.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 h-100">
+                                <div class="sh_content_box">
+                                    <div class="sh_icon_box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <div class="sh_title">Auto Stage Change</div>
+                                    <div class="sh_text">
+                                        Keep your ticket workflow organized and efficient with automated stage updates.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 h-100">
+                                <div class="sh_content_box">
+                                    <div class="sh_icon_box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <div class="sh_title">Dynamic Calendar</div>
+                                    <div class="sh_text">
+                                        Efficiently schedule and manage appointments and activities right from your helpdesk.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="sh_genie_helpdesk" class="sh_genie_helpdesk">
+                    <div class="container">
+                        <div class="sh_heading">
+                            The Power of WhatsApp Helpdesk
+                        </div>
+                        <div class="sh_text">
+                            WhatsApp has become a ubiquitous messaging platform, with over two billion users worldwide. Leveraging this platform for your customer support can greatly enhance your business's reputation and customer satisfaction.
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-10 col-xl-10 col-lg-12">
+                                
+                                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                                    <!-- Indicators/dots -->
+                                    <div class="carousel-indicators">
+                                      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                                      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                                      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                                    </div>
+                                  
+                                    <!-- The slideshow/carousel -->
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                        <div class="sh_slider_main">
+                                            <div class="sh_slider_box">
+                                                <div class="sh_slider_img">
+                                                    <img src="/theme_softhealer_website/static/src/img/images/genie_360/1.webp"/>
+                                                </div>
+                                                <div class="sh_slider_content">
+                                                    <div class="sh_desc">
+                                                        Instant Accessibility
+                                                    </div>
+                                                    <div class="sh_sub_desc">
+                                                        With whatsApp, customers can easily reach out to your support team with a simple text message. This instant accessibility means quicker response times and a seamless customer experience.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="carousel-item">
+                                        <div class="sh_slider_main">
+                                            <div class="sh_slider_box">
+                                                <div class="sh_slider_img">
+                                                    <img src="/theme_softhealer_website/static/src/img/images/genie_360/1.webp"/>
+                                                </div>
+                                                <div class="sh_slider_content">
+                                                    <div class="sh_desc">
+                                                        Multimedia Support
+                                                    </div>
+                                                    <div class="sh_sub_desc">
+                                                        WhatsApp allows you to send not only text but also multimedia files such as images, videos, and documents. This versatility enables your support team to provide visual instructions or receive screenshots from customers to resolve issues faster.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="carousel-item">
+                                        <div class="sh_slider_main">
+                                            <div class="sh_slider_box">
+                                                <div class="sh_slider_img">
+                                                    <img src="/theme_softhealer_website/static/src/img/images/genie_360/1.webp"/>
+                                                </div>
+                                                <div class="sh_slider_content">
+                                                    <div class="sh_desc">
+                                                        Personalized Interaction
+                                                    </div>
+                                                    <div class="sh_sub_desc">
+                                                        WhatsApp helps you establish a personal connection with your customers. Using their first names and engaging in friendly conversations can make customers feel valued and appreciated.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  
+                                    <!-- Left and right controls/icons -->
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                                      <span class="fa fa-arrow-left"></span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                                      <span class="fa fa-arrow-right"></span>
+                                    </button>
+                                  </div>
+                            </div>  
+                          </div>
+                    </div>
+                </section>
+                <section id="sh_subscribe_form" class="sh_subscribe_form">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-10 col-xl-10 col-lg-12">
+                                <div class="sh_subscribe_box">
+                                    <div class="sh_heading">
+                                        Subscribe Form
+                                    </div>
+                                    <div class="sh_form">
+                                        <div class="sh_title">
+                                            Please fill in the information below.
+                                        </div>
+                                        <div class="sh_form_box">
+                                            <div class="sh_label">
+                                                Business Name
+                                            </div>
+                                            <div class="sh_input">
+                                                <input type="text" placeholder="Your Company Name"/>
+                                            </div>
+                                        </div>
+                                        <div class="sh_form_box">
+                                            <div class="sh_label">
+                                                Business Type
+                                            </div>
+                                            <div class="sh_input">
+                                                <input type="text" placeholder="Your Business Type"/>
+                                            </div>
+                                        </div>
+                                        <div class="sh_form_box">
+                                            <div class="sh_label">
+                                                No of Employees
+                                            </div>
+                                            <div class="sh_input">
+                                                <input type="number" placeholder="No. of Employees"/>
+                                            </div>
+                                        </div>
+                                        <div class="sh_form_box">
+                                            <div class="sh_label">
+                                                Phone 
+                                            </div>
+                                            <div class="sh_input">
+                                                <input type="tel" placeholder="Enter Your Number..."/>
+                                            </div>
+                                        </div>
+                                        <div class="sh_form_box">
+                                            <div class="sh_label">
+                                                Email
+                                            </div>
+                                            <div class="sh_input">
+                                                <input type="email" placeholder="Enter Your Email..."/>
+                                            </div>
+                                        </div>
+                                        <div class="sh_form_box">
+                                            <div class="sh_label">
+                                                Designation
+                                            </div>
+                                            <div class="sh_input">
+                                                <input type="text" placeholder="Enter Your Designation..."/>
+                                            </div>
+                                        </div>
+                                        <div class="sh_form_btn btn-block">
+                                            <a href="#" target="_blank">Subscribe Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+
+    <data noupdate="1">
+
+        <!-- Default pagese  below 2 record must put in no update 1-->
+        <record id="theme_softhealer_website_genie_360_page" model="website.page">
+            <field name="is_published">True</field>
+            <field name="url">/genie-360</field>
+            <field name="view_id" ref="theme_softhealer_website.theme_softhealer_genie_360" />
+            <field name="track">True</field>
+            <field name="website_id" model="website"
+                eval="obj().env['website'].sudo().get_current_website()" />
+        </record>
+
+        <!-- <record id="theme_softhealer_website_appointment_management_menu" model="website.menu">
+          <field name="name">Appointment Management</field>
+          <field name="url">/genie-360</field>
+          <field name="page_id"
+        ref="theme_softhealer_website.theme_softhealer_website_appointment_management_page"/>
+          <field name="sequence" type="int">10</field>
+          <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+      </record> -->
+
+    </data>
+
+</odoo>

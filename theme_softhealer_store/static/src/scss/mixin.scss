@@ -1,0 +1,166 @@
+// Primary Buttton //
+@mixin sh_primary_button{
+    position: relative;color: #ffffff;background: o-color(o-color-1);box-shadow: 0 15px 35px rgba(86, 75, 198, 0.15);border-radius: 5px;width: max-content;display: flex;align-items: center;justify-content: center;outline: none;overflow: hidden;font-size: 18px;padding: 12px 30px;transition: .2s;border: 1px solid o-color(o-color-1);letter-spacing: .01em;cursor: pointer;min-width: auto;transition: .3s ease-in-out;
+    @include media-breakpoint-down(md){
+        padding: 12px 18px !important;
+        font-size: 16px !important;
+    }
+    &:before{
+        content: "";height: 120px;width: 120px;background-color: #fdfdfe;position: absolute;right: -55px;top: -10px;transition: .3s ease-in-out;transform: translateX(-220%) translateY(-50px) rotate(20deg);opacity: 0;
+    }
+    &:after{
+        content: "";height: 120px;width: 120px;background-color: #fdfdfe;position: absolute;right: -55px;top: -10px;transition: .3s ease-in-out;transform: translateX(-220%) translateY(-50px) rotate(20deg);opacity: 0;
+    }
+    &:hover,&:active,&:focus{
+        &:before {
+            transform: translateX(0) translateY(0) rotate(20deg);
+            opacity: .15;
+        }
+    } 
+    &:hover,&:active,&:focus{
+        &:after {
+            transform: translateX(220%) translateY(-50px) rotate(20deg);
+            opacity: 0;
+    }
+    }    
+}
+
+// Other Page Banner //
+@mixin sh_other_page_banner{
+        padding-top: 65px;padding-bottom: 45px;display: flex;justify-content:center;align-items: center;flex-direction:column;position: relative;z-index:1;background-color: #fff;
+        @include media-breakpoint-only(md) {
+            padding: 50px 0px 10px;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 40px 0px 10px;
+        }
+        .sh_banner_content{
+           text-align:left;
+            @include media-breakpoint-down(lg){
+                width: 100%;
+            }
+            h1.sh_banner_title{
+                 color:var(--sh-store-other-page-banner-content-h2-color);font-size: var(--sh-store-other-page-banner-content-h2);font-weight: 600;letter-spacing: -.01em;line-height: 1.1;margin-bottom: 15px;
+                 @include media-breakpoint-only(md){
+                    font-size: var( --sh-store-other-page-banner-content-h2-tablet);
+                 }
+                  @include media-breakpoint-down(md){
+                    font-size: var(--sh-store-other-page-banner-content-h2-mobile);
+                 }
+            }
+            p.sh_banner_date{
+                font-size:var(--sh-store-other-page-banner-content-p);font-weight: 500;margin-top: 15px;color:var( --sh-store-other-page-banner-content-p-color); 
+                     @include media-breakpoint-down(lg){
+                     font-size: var( --sh-store-other-page-banner-content-p-tablet);
+                 }
+                 @include media-breakpoint-down(md){
+                    font-size:16px;
+                }
+                  
+            }
+    
+        ul.sh_banner_breadcrumb{
+            list-style: none;display:flex;align-items: flex-start;padding-left: 0px;margin-bottom: 0px;flex-flow: wrap;
+            li{
+                 margin-right:10px;font-size:var( --sh-store-other-page-banner-content-breadcrumb-font-size-tablet);color:var(--sh-store-other-page-banner-content-p-color);
+    
+                 @include media-breakpoint-only(md){
+                     font-size: var(--sh-sh-other-page-banner-content-breadcrumb-font-size-tablet);
+                 }
+                  @include media-breakpoint-down(md){
+                     font-size: var(--sh-store-other-page-banner-content-breadcrumb-font-size-mobile);
+                 }
+                 a.sh_banner_breadcrumb_link{
+                    text-decoration:none;color: o-color(o-color-1);transition:0.4s;
+                    &:hover{
+                         opacity:0.7;
+                    }
+    
+                    span.sh_normal_text{
+                    color: #ffffff;
+                    }
+                    span.sh_banner_breadcrumb_icon{
+                         margin-left:10px;
+                    }
+                 }
+            }
+        }
+    }
+}
+@mixin sh_sub_badge{
+    width:fit-content; color:o-color(o-color-1);border-radius:5px; font-size:16px;background: rgba(87, 74, 199,0.10);padding: 7px 20px 7px 20px;font-weight: 400;margin-bottom:15px;text-transform: capitalize;
+}
+// Footer // 
+@mixin sh_footer{
+    background-color:var(--sh-store-common-color) !important;padding: 0px 0px;
+}
+@mixin sh_footer_menu{
+    position: relative;color: #ffffff !important;font-size: 17px;text-align: left;transition: all .1s ease-in-out;text-decoration: none;font-weight: 400;
+}
+@mixin sh_footer_menu_heading{
+    color: #ffffff;font-size: 20px;text-align: left;transition: all .1s ease-in-out;text-decoration: none;font-weight: 600;margin-bottom: 1.6rem;
+}
+@mixin sh_fixed_button_slider_text{
+    color: #5b6674;font-size: 16px;line-height: 22px;text-decoration: none;transition:all 0.4s ease;
+}
+
+@mixin sh_other_page_contact_banner{
+    padding-top: 180px;padding-bottom: 100px;display: flex;justify-content:center;align-items: center;flex-direction:column;position: relative;z-index:1;padding-left: 50px;padding-right: 50px;background: #040433 !important;
+    @include media-breakpoint-only(md) {
+        padding: 100px 50px;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 70px 15px;
+    }
+    .sh_banner_content{
+        width: 65%;text-align: center;margin:0px auto;
+        @include media-breakpoint-down(lg){
+            width: 100%;
+        }
+        .sh_banner_title{
+             color: #fff;font-size: 40px;font-weight: 600;letter-spacing: -.01em;line-height: 1.1;margin-bottom: 0px;
+             @include media-breakpoint-only(md){
+                font-size: var(--sh-sh-other-page-banner-content-h2-tablet);
+             }
+              @include media-breakpoint-down(md){
+                font-size: var(--sh-sh-other-page-banner-content-h2-mobile);
+             }
+        }
+        .sh_banner_text{
+                 color: #fff;font-size: 18px;letter-spacing: .01em;margin: 8px 0px;text-align: center;
+                 @include media-breakpoint-only(md){
+                 font-size: var(--sh-sh-other-page-banner-content-text-tablet);
+             }
+              @include media-breakpoint-down(md){
+                 font-size: var(--sh-sh-other-page-banner-content-text-mobile);
+             }
+        }
+
+    ul.sh_banner_breadcrumb{
+        list-style: none;display:flex;align-items: center;padding-left: 0px;margin-bottom: 0px;justify-content: center;
+        li{
+             margin-right:10px;font-size: 18px;color:#fff;
+
+             @include media-breakpoint-only(md){
+                 font-size: var(--sh-sh-other-page-banner-content-breadcrumb-font-size-tablet);
+             }
+              @include media-breakpoint-down(md){
+                 font-size: var(--sh-sh-other-page-banner-content-breadcrumb-font-size-mobile);
+             }
+             a.sh_banner_breadcrumb_link{
+                text-decoration:none;color:#fff;transition:0.4s;
+                &:hover{
+                     opacity:0.7;
+                }
+
+                span.sh_normal_text{
+                color: #ffffff;
+                }
+                span.sh_banner_breadcrumb_icon{
+                     margin-left:10px;
+                }
+             }
+        }
+    }
+}
+}

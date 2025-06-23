@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_training_course_view_form" model="ir.ui.view">
+        <field name="name">sh.training.course.view.form</field>
+        <field name="model">sh.training.course</field>
+        <field name="arch" type="xml">
+            <form string="Training Course">
+                <header>
+                    <button class="btn btn-primary" name="open_create_task_wizard" type="object"
+                        string="Generate Task" />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="responsible_user_ids" widget="many2many_tags" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Predefine Task">
+                            <div class="o_row" style="margin:15px 0;">
+                                <button name="action_check" icon="fa-check" title="Check" class="btn btn-primary"
+                                    type="object" />
+                                <button name="action_uncheck" icon="fa-close" title="Uncheck"
+                                    class="btn btn-primary" type="object" />
+                            </div>
+                            <field name="pre_define_task_ids">
+                                <tree>
+                                    <button name="btn_tick_untick" type="object"
+                                        class="oe_stat_button btn-primary btn-sm"
+                                        string="Tick/Untick" />
+                                    <field name="sequence" widget="handle" />
+                                    <field name="tick" />
+                                    <field name="name" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_training_course_view_tree" model="ir.ui.view">
+        <field name="name">sh.training.course.view.tree</field>
+        <field name="model">sh.training.course</field>
+        <field name="arch" type="xml">
+            <tree string="Training Course">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_training_course_view_search" model="ir.ui.view">
+        <field name="name">sh.training.course</field>
+        <field name="model">sh.training.course</field>
+        <field name="arch" type="xml">
+            <search string="Search Course">
+                <field name="name" />
+                <field name="responsible_user_ids" />
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_training_course_view_action" model="ir.actions.act_window">
+        <field name="name">Training Course</field>
+        <field name="res_model">sh.training.course</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create a new Record</p>
+            <p></p>
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_view_task">
+        <field name="name">Tasks</field>
+        <field name="model_id" ref="project.model_project_task" />
+        <field name="state">code</field>
+        <field name="code">
+            action = model.action_view_training_task()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="timesheet_action_from_plan">
+        <field name="name">Timesheet</field>
+        <field name="model_id" ref="hr_timesheet.model_account_analytic_line" />
+        <field name="state">code</field>
+        <field name="code">
+            action = model.action_view_training_timesheet()
+        </field>
+    </record>
+
+    <menuitem name="Training" id="sh_training" web_icon="sh_training,static/description/icon.png" />
+    <menuitem name="Tasks" id="sh_task_menu" action="action_view_task" parent="sh_training"
+        sequence="1"
+        groups="sh_training.group_manager,sh_training.group_trainer,sh_training.group_trainee" />
+    <menuitem name="Reporting" id="sh_training_reporting_menu" parent="sh_training" sequence="2"
+        groups="sh_training.group_manager,sh_training.group_trainer" />
+    <menuitem name="Configuration" id="sh_config_details_menu" parent="sh_training" sequence="3"
+        groups="sh_training.group_manager,sh_training.group_trainer" />
+    <menuitem name="Timesheet Analysis" action="timesheet_action_from_plan"
+        id="sh_training_analysis_menu" parent="sh_training_reporting_menu" sequence="1" />
+    <menuitem name="Training Course" action="sh_training_course_view_action"
+        id="sh_training_course_menu" parent="sh_config_details_menu" sequence="1" />
+        
+</odoo>

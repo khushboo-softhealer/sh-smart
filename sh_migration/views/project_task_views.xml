@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- INHERIT VIEW: SEARCH -->
+    <record id="view_task_search_form_inherit_sh_migration" model="ir.ui.view">
+        <field name="name">project.view.form.inherit.sh.migration</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group//filter[@name='stage']" position="after">
+                <!-- Filter -->
+                <filter string="Is Current Odoo Version" name="sh_migration_is_current_odoo_version"
+                    domain="[('sh_migration_is_v17_task', '=', True)]" />
+                <filter string="Is Appstore Project Task"
+                    name="sh_migration_is_appstore_project_task"
+                    domain="[('sh_migration_is_appstore_project_task', '=', True)]" />
+                <!-- Group By -->
+                <filter string="Responsible User" name="group_by_responsible_user"
+                    context="{'group_by': 'sh_project_task_base_responsible_tl_id'}" />
+                <filter string="Repo" name="group_by_repo" context="{'group_by': 'git_repo'}" />
+                <filter string="Developer" name="group_by_dev"
+                    context="{'group_by': 'sh_project_task_base_dev_id'}" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- INHERIT VIEW: FORM -->
+    <record id="view_task_form2_inherit_sh_migration" model="ir.ui.view">
+        <field name="name">project.task.view.form.inherit.sh.migration</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <!-- SMART BUTTON: Bugs -->
+                <button name="smart_btn_open_bugs" type="object" class="oe_stat_button">
+                    <i class="fa fa-fw o_button_icon fa-bug text-success" title="Bugs" />
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="sh_migration_pending_bugs" nolabel="1" />
+                        </span>
+                        <span class="o_stat_text">Bugs</span>
+                    </div>
+                </button>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <!-- BUG -->
+                <page name="bug_line" string="Bug &amp; CR Tracker">
+                    <field name="sh_migration_bug_line" context="{'default_task_id':id}"
+                        options="{'delete': False}" />
+                </page>
+                <!-- CR -->
+                <page name="cr_line" string="CR (Change Request)">
+                    <field name="sh_migration_cr_line" options="{'delete': False}" />
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- VIEW: Tree -->
+    <record id="sh_migration_project_task_view_tree" model="ir.ui.view">
+        <field name="name">sh.migration.project.task.view.tree</field>
+        <field name="model">project.task</field>
+        <field name="arch" type="xml">
+            <tree string="Tasks" editable="bottom" create="0">
+                <!-- INVISIBLE -->
+                <field name="is_manager" invisible="1" />
+                <field name="company_id" invisible="1" />
+                <field name="project_id" invisible="1" />
+                <field name="sh_migration_is_appstore_project_task" invisible="1" />
+                <field name="sh_migration_is_v17_task" invisible="1" />
+                <!-- -->
+                <field name="priority" widget="priority" nolabel="1" options="{'autosave': False}" />
+                <field name="name" readonly="1" />
+                <field name="stage_id" options="{'no_open': True, 'no_create': True}" required="1" />
+                <field name="sh_technical_name" readonly="1" optional="show" />
+                <field name="sh_project_task_base_responsible_tl_id" readonly="1" optional="show"
+                    options="{'no_open': True}" />
+                <field name="sh_project_task_base_dev_id" readonly="1" optional="hide"
+                    options="{'no_open': True}" />
+                <field name="sh_project_task_base_support_dev_id" readonly="1" optional="hide"
+                    options="{'no_open': True}" />
+                <field name="sh_project_task_base_tester_id" readonly="1" optional="hide"
+                    options="{'no_open': True}" />
+                <field name="sh_project_task_base_designer_id" readonly="1" optional="hide"
+                    options="{'no_open': True}" />
+                <field name="sh_project_task_base_index_by_id" readonly="1" optional="hide"
+                    options="{'no_open': True}" />
+                <field name="sh_project_task_base_marketed_by_id" readonly="1" optional="hide"
+                    options="{'no_open': True}" />
+                <!-- USER EDITABLE -->
+                <field name="pylint_score" optional="show" />
+                <field name="sh_need_testing" optional="show"
+                    attrs="{'readonly': [('is_manager', '=', False)]}" />
+                <field name="sh_pending_ss" optional="hide" />
+                <field name="sh_targeted_app" optional="hide" />
+                <field name="sh_project_task_base_multi_comapy" optional="show" />
+                <field name="sh_project_task_base_multi_website" optional="show" />
+                <field name="sh_project_task_base_check_downgrade" optional="show" />
+                <field name="sh_migration_need_functional_support" optional="hide" />
+                <!-- BUTTON -->
+                <button string="Show Task" name="btn_show_task" type="object"
+                    class="btn btn-primary" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION: Tasks -->
+    <record id="sh_migration_project_task_action1" model="ir.actions.act_window">
+        <field name="name">Tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="sh_migration_project_task_view_tree" />
+        <field name="domain">[
+            ('sh_migration_is_appstore_project_task', '=', True),
+            ('sh_migration_is_v17_task', '=', True),
+            ]</field>
+    </record>
+
+</odoo>

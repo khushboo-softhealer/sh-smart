@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="sh_survmate_theme_question_matrix_inherit" inherit_id="survey.question_matrix" name="Survmate Question Matrix">
+		<xpath expr="//table[hasclass('table','table-borderless','o_survey_question_matrix','text-white','text-center','mb-0')]" position="attributes">
+			<attribute name="class">table table-borderless o_survey_question_matrix text-white text-center mb-0</attribute>
+		</xpath>
+	</template>
+</odoo>

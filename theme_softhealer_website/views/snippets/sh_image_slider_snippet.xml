@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <template id="sh_image_slider_website_snippets" inherit_id="website.snippets" name="Image Slider Snippet">
+        <xpath expr="//div[@id='snippet_structure']" position="before">
+            <div id="sh_category_snippet" class="o_panel">
+                <div class="o_panel_header">
+                    Image SLider snippet
+                </div>
+                <div class="o_panel_body">
+                    <t t-snippet="theme_softhealer_website.sh_image_slider_snippet" />
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

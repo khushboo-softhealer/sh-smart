@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- PURCHASE ORDER FORM VIEW -->
+    <record id="sh_inherit_purchase_order_form" model="ir.ui.view">
+        <field name="name">sh.inherit.purchase.order.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+            <field name="tax_totals" position="after">
+                <field name="sh_billed_total_amount" />
+                <field name="sh_billed_due_amount" />
+                <field name="sh_billed_paid_amount" />
+            </field>
+
+            <!-- payment smart button -->
+            <xpath expr="//sheet/div[hasclass('oe_button_box')]" position="inside">
+                <button type="object" class="oe_stat_button" icon="fa-money" name="action_view_invoice">
+                    <div class="o_form_field o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="sh_billed_paid_amount_in_percent" />
+                            %
+                        </span>
+                        <span class="o_stat_text">Amount Paid</span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+    <!-- PURCHASE ORDER TREE VIEW -->
+    <record id="sh_inherit_purchase_order_tree" model="ir.ui.view">
+        <field name="name">sh.inherit.purchase.order.tree</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="sh_billed_total_amount" sum="Billed Total amount" />
+                <field name="sh_billed_due_amount" sum="Billed Due amount" />
+                <field name="sh_billed_paid_amount" sum="Billed Paid amount" />
+                <field name="sh_billed_paid_amount_in_percent" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_inherit_purchase_order_search" model="ir.ui.view">
+        <field name="name">sh.inherit.purchase.order.search</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_view_search" />
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field name="sh_total_bill" />
+                <field name="sh_due_bill" />
+                <field name="sh_paid_bill" />
+                <field name="sh_paid_bill_percent"/>
+                <filter string="Billed Amount" name='user' context="{'group_by':'sh_total_bill'}"/>
+                <filter string="Due Amount" name='user' context="{'group_by':'sh_due_bill'}"/>
+                <filter string="Paid Amount" name='user' context="{'group_by':'sh_paid_bill'}"/>
+                <filter string="Paid Amount(%)" name='user' context="{'group_by':'sh_paid_bill_percent'}"/>
+            </field>
+
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sh_project_task_portal_my_home_menu_template_id" inherit_id="project.portal_my_home">
+        <!-- <xpath expr="//t[2]" position="replace"> -->
+        <xpath expr="//t[@t-set='placeholder_count' and contains(@t-value, 'task_count')]" position="replace">
+            <t t-if="request.env.user.sh_display_task_menu">
+                <t t-call="portal.portal_docs_entry">
+                    <t t-set="title">Tasks</t>
+                    <t t-set="url" t-value="'/my/tasks'"/>
+                    <t t-set="placeholder_count" t-value="'task_count'"/>
+                </t>
+            </t>
+        </xpath>
+    </template>
+    <template id="sh_portal_my_task_hr_timesheet" inherit_id="hr_timesheet.portal_my_task">
+        <xpath expr="//li[@id='nav-report']" position="replace">
+            <t t-if="request.env.user.sh_display_timesheet">
+                <li t-if="timesheets and allow_timesheets" class="list-group-item d-grid flex-grow-1" id='nav-report'>
+                    <div class="o_download_pdf d-flex gap-1">
+                        <a class="btn btn-secondary flex-fill o_download_btn" t-att-href="task.get_portal_url(report_type='pdf', download=True)" title="Download"><i class="fa fa-download"/> Download</a>
+                        <a class="btn btn-secondary flex-fill o_print_btn o_project_timesheet_print" t-att-href="task.get_portal_url(report_type='pdf')" href="#" title="Print" target="_blank"><i class="fa fa-print"/> Print</a>
+                    </div>
+                </li>
+            </t>
+        </xpath>
+        <xpath expr="//a[@href='#task_timesheets']" position="replace">
+            <t t-if="request.env.user.sh_display_timesheet">
+                <a class="nav-link ps-3" href="#task_timesheets">
+                    Timesheets
+                </a>
+            </t>
+        </xpath>
+        <xpath expr="//h5[@id='task_timesheets']" position="replace">
+            <t t-if="request.env.user.sh_display_timesheet">
+                <h5 id="task_timesheets" class="mt-2 mb-2" data-anchor="true">Timesheets</h5>
+            </t>
+        </xpath>
+        <xpath expr="//div[@t-if='task.planned_hours > 0']" position="replace">
+            <t t-if="request.env.user.sh_display_progress">
+                <div t-if="task.planned_hours > 0"><strong>Progress:</strong> <span t-field="task.progress"/>%</div>
+            </t>
+        </xpath>
+    </template>
+    <template id="project.portal_my_task_planned_hours_template">
+        <t t-if="request.env.user.sh_display_allocated_hours">
+            <strong>Allocated Hours:</strong> <span t-esc="task.planned_hours" t-options='{"widget": "float_time"}'/>
+        </t>
+    </template>
+    <template id="hr_timesheet.portal_my_task_planned_hours_template">
+        <t t-if="request.env.user.sh_display_allocated_hours">
+            <t t-if="is_uom_day and timesheets._convert_hours_to_days(task.planned_hours) > 0">
+                <strong>Allocated Days:</strong> <span t-esc="timesheets._convert_hours_to_days(task.planned_hours)" t-options='{"widget": "timesheet_uom"}'/>
+            </t>
+            <t t-if="not is_uom_day and task.planned_hours > 0" t-call="project.portal_my_task_planned_hours_template"></t>
+        </t>
+        
+    </template>
+    <template id="sh_portal_timesheet_table" inherit_id="hr_timesheet.portal_timesheet_table">
+        <xpath expr="//table[1]" position="attributes">
+            <attribute name="t-if">request.env.user.sh_display_timesheet</attribute>
+        </xpath>
+    </template>
+    <template id="hr_timesheet.portal_tasks_list_inherit" inherit_id="project.portal_tasks_list" name="Portal: My Tasks with Timesheets">
+        
+        <xpath expr="//t[@t-foreach='tasks']/tr" position="before">
+            <t t-if="request.env.user.sh_display_timesheet">
+                <t t-set="timesheet_ids" t-value="task.sudo().timesheet_ids"/>
+                <t t-set="is_uom_day" t-value="timesheet_ids._is_timesheet_encode_uom_day()"/>
+            </t>
+        </xpath>
+        <xpath expr="//thead/tr/t[@t-set='number_of_header']" position="attributes">
+            <attribute name="t-value">9</attribute>
+        </xpath>
+        <xpath expr="//thead/tr/th[@name='project_portal_milestones']" position="after">
+            <t t-if="request.env.user.sh_display_timesheet">
+                <th t-if="is_uom_day" class="text-end">Days Spent</th>
+                <th t-else="" class="text-end">Hours Spent</th>
+            </t>
+        </xpath>
+        <xpath expr="//tbody/t/tr/td[@name='project_portal_milestones']" position="after">
+            <t t-if="request.env.user.sh_display_timesheet">
+                <td class="text-end">
+                    <t t-if="is_uom_day">
+                        <t t-out="timesheet_ids._convert_hours_to_days(task.effective_hours)"/>
+                        <span t-if="task.planned_hours > 0"> / <t t-out="timesheet_ids._convert_hours_to_days(task.planned_hours)"/></span>
+                    </t>
+                    <t t-else="">
+                        <span t-field="task.effective_hours" t-options='{"widget": "float_time"}'/>
+                        <t t-if="task.planned_hours > 0">
+                            /
+                            <span t-field="task.planned_hours" t-options='{"widget": "float_time"}'/>
+                        </t>
+                    </t>
+                </td>
+            </t>
+        </xpath>
+        <xpath expr="//thead/tr/th[@name='project_portal_milestones']" position="attributes">
+            <attribute name="t-if">request.env.user.sh_display_milestone</attribute>
+        </xpath>
+        <xpath expr="//tbody/t/tr/td[@name='project_portal_milestones']" position="attributes">
+            <attribute name="t-if">request.env.user.sh_display_milestone</attribute>
+        </xpath>
+        <xpath expr="//th[3]" position="attributes">
+            <attribute name="t-if">request.env.user.sh_display_assignees</attribute>
+        </xpath>
+        <xpath expr="//tbody[2]//t[1]//tr[1]//td[4]" position="attributes">
+            <attribute name="t-if">request.env.user.sh_display_assignees</attribute>
+        </xpath>
+    </template>
+    <template id="sh_task_portal_portal_my_task" inherit_id="project.portal_my_task">
+        <xpath expr="//li[@t-if='task.user_ids or task.partner_id']" position="attributes">
+            <attribute name="t-if">request.env.user.sh_display_assignees</attribute>
+        </xpath>
+    </template>
+</odoo>

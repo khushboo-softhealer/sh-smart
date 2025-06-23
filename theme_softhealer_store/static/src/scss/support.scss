@@ -1,0 +1,201 @@
+.sh_website_helpdesk_form {
+    .row.mb-3{
+        @include media-breakpoint-down(md) {   
+            margin-bottom: 0 !important;
+        }
+    }
+    div {
+        label.form-label {
+            color: var(--sh-store-section-heading-font-color);
+        }
+        @include media-breakpoint-down(md) {        
+            margin-bottom: 15px;
+        }
+    }
+
+    .form-control {
+        transition: 0.5s all;
+        padding: 0.7rem;
+        resize: none;
+        box-shadow: 0px 16px 24px rgba(189, 196, 205, 0.13);
+
+        &:hover,
+        &:focus {
+            border: 1px solid o-color(o-color-1);
+            box-shadow: none;
+        }
+    }
+
+    .sh_link_right svg {
+        stroke: #fff;
+        display: inline-block;
+        width: 20px;
+        margin-left: 5px;
+    }
+
+    #submit_ticket {
+        position: relative;
+        color: #ffffff;
+        background: o-color(o-color-1);
+        box-shadow: 0 15px 35px rgba(86, 75, 198, 0.15);
+        border-radius: 5px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        overflow: hidden;
+        font-size: 18px;
+        padding: 12px 30px;
+        transition: .2s;
+        border: 1px solid o-color(o-color-1);
+        letter-spacing: .01em;
+        cursor: pointer;
+        min-width: auto;
+        @include sh_primary_button;
+    }
+
+    ::placeholder {
+        color: #777;
+    }
+    .select2-container {
+        .select2-choice{background:#fff;padding:0;box-shadow: none;
+        .select2-arrow{
+            background:#fff; border:0;
+        }
+        .select2-drop-active{
+            border: 1px solid o-color(o-color-1);
+        }
+        .select2-search{
+            background: #fff;border: 1px solid #e6f0fa;box-shadow: var(--sh-store-common-box-shadow);border-radius: 5px;padding: 5px;display: -webkit-box;display: -webkit-flex;display: flex;align-items: center;width: 98%;transition: 0.5s all;margin: 0px auto;
+            &:hover{
+                border: 1px solid o-color(o-color-1);
+            }
+            &:focus{
+                border: 1px solid o-color(o-color-1);
+            }
+            &:focus-within{
+                border: 1px solid o-color(o-color-1);
+            }
+            .select2-search input{
+                background: #fff url(/web/static/lib/select2/select2.png) no-repeat 100% -22px;
+            }
+        }
+        }
+        .select2-dropdown-open{
+            border: 1px solid o-color(o-color-1);
+        }
+        .select2-results {
+            .select2-highlighted {background: o-color(o-color-1) !important;}
+        }
+    }
+
+}
+
+.sh_supprt_section {
+    
+    padding-bottom: var(--sh-store-section-bottom-padding);
+
+    @include media-breakpoint-down(lg) {        
+        padding-bottom: var(--sh-store-section-bottom-padding-mobile);
+    }
+    .sh_support {
+        .sh_support_row {
+            .sh_support_time_col {
+                margin-top: 30px;
+                @include media-breakpoint-down(md) {
+                    margin-top: 20px;
+                }
+                .sh_support_time {
+                    background-color: #ffffff !important;
+                    border: 1px solid #e7e7e7;
+                    box-shadow: 0 10px 35px rgba(38, 42, 76, 0.10);
+                    transition: .15s ease-in-out;
+                    height: 100%;
+
+                    &:hover {
+                        box-shadow: var(--sh-store-box-shadow);
+                        transform: translateY(-10px);
+                        border-color: transparent;
+                        border-bottom: none;
+
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+
+                    &:after {
+                        content: "";
+                        transition: .2s all ease;
+                        backface-visibility: hidden;
+                        position: absolute;
+                        left: 50%;
+                        height: 5px;
+                        width: 0;
+                        bottom: 0;
+                        transform: translateX(-50%);
+                        background-color: o-color(o-color-1);
+                        border-radius: 0 0 5px 5px;
+                    }
+
+                    .support_icon {
+                        svg {
+                            width: 90px;
+                            height: 90px;
+
+                            .cls-2 {
+                                fill: o-color(o-color-1);
+                            }
+
+                            @include media-breakpoint-down(lg) {
+                                width: 60px;
+                                height: 60px;
+                            }
+                        }
+
+                        @include media-breakpoint-down(lg) {
+                            margin: 15px 0px;
+                            margin-right: 15px;
+                        }
+
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-store-normal-text-font-size-mobile);
+                        }
+                    }
+
+                    .support_content {
+                        .sh_support_content_h2 {
+                            font-size: 25px;
+                            color: var(--sh-store-heading-title-font-color);
+                            font-weight: var(--sh-store-heading-title-font-weight);
+                            line-height: var(--sh-store-heading-title-line-height);
+                            margin-bottom: 0;
+                        }
+
+                        .sh_support_content_p {
+                            font-size: 16px;
+                            color: var(--sh-store-price-text-font-color);
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .sub-div {
+                        position: absolute;
+                        top: auto;
+                        bottom: 0;
+                        right: 0;
+                        left: auto;
+                        height: 100px;
+                        width: 100px;
+                        opacity: 0.1;
+
+                        @include media-breakpoint-down(lg) {
+                            width: 45px;
+                            height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

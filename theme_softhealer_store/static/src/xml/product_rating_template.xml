@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- update th element of product rating -->
+    <t t-inherit="portal_rating.rating_card" t-inherit-mode="extension" t-name="portal_rating.rating_card">
+        <xpath expr="//div[hasclass('o_website_rating_card_container')]//h1" position="replace">
+            <h2><t t-esc="widget.get('rating_card_values')['avg']"/></h2>
+        </xpath>
+    </t>
+</templates>

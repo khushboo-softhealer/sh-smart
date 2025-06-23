@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Pages List View -->
+    <record id="sh_website_editor_pages_tree_view" model="ir.ui.view">
+        <field name="name">sh.website.page.editor.list</field>
+        <field name="model">website.page</field>
+        <field name="arch" type="xml">
+            <tree type="object" js_class="website_pages_list" multi_edit="1"
+                default_order="url asc, id asc">
+                <field name="is_homepage" invisible="1" />
+                <field name="name" string="Page Title" />
+                <field name="website_url" string="Page URL" />
+                <field name="view_id" invisible="1" />
+
+                <field name="website_indexed" />
+                <field name="is_in_menu" string="Is In Main Menu" />
+                <field name="is_seo_optimized" />
+                <field name="is_published" />
+
+                <field name="create_uid" invisible="1" />
+                <field name="write_uid" widget="many2one_avatar" optional="hide" />
+                <field name="write_date" optional="hide" />
+                <field name="track" optional="hide" />
+                <field name="website_id" groups="website.group_multi_website" />
+
+                <field name="website_meta_title" optional="hide" />
+                <field name="website_meta_description" optional="hide" />
+                <field name="website_meta_keywords" optional="hide" />
+                <field name="website_meta_og_img" optional="hide" />
+
+
+                <button
+                    name="%(softhealer_website_base.softhealer_website_base_ir_ui_view_wizard_action)d"
+                    type="action" title="Code"
+                    icon="fa-code fa-lg" attrs="{'column_invisible': [('view_id', '!=', False)]}" />
+
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="sh_website_editor_pages_form_view" model="ir.ui.view">
+        <field name="name">sh.website.editor.pages.form.view</field>
+        <field name="model">website.page</field>
+        <field name="arch" type="xml">
+            <form string="Website Page Settings">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="url" />
+                            <field name="view_id" attrs="{'readonly':[('id','!=',False)]}" context="{'display_website': True}"
+                                options="{'always_reload': True}" />
+                            <field name="website_id" options="{'no_create': True}"
+                                groups="website.group_multi_website" />
+                            <field name="track" />
+                        </group>
+                        <group>
+                            <field name="website_indexed" />
+                            <field name="is_published" />
+                            <field name="date_publish" />
+                        </group>
+                    </group>
+                    <label for="menu_ids" string="Related Menu Items" />
+                    <field name="menu_ids" />
+                    <notebook>
+                        <page string="Optimize SEO">
+                            <group class="mt-4">
+                                <field name="website_meta_title" readonly="1"/>
+                                <field name="website_meta_description" readonly="1"/>
+                                <field name="website_meta_keywords" readonly="1"/>
+                                <field name="website_meta_og_img" readonly="1"/>
+                            </group>
+
+                            <button
+                            name="%(softhealer_website_base.softhealer_website_base_ir_ui_view_wizard_action)d"
+                            type="action" title="Code"
+                            string="Update optimize SEO"
+                            icon="fa-code fa-lg" attrs="{'column_invisible': [('view_id', '!=', False)]}" />
+
+                            
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Pages Action -->
+    <record id="sh_website_editor_pages_action" model="ir.actions.act_window">
+        <field name="name">Pages</field>
+        <field name="res_model">website.page</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids"
+            eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('sh_website_editor_pages_tree_view')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('sh_website_editor_pages_form_view')})]" />
+    </record>
+
+</odoo>

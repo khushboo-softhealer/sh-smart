@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_project_task_template_id_form_view" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+
+            <field name="project_id" position='before'>
+                <field name="sh_technical_name" readonly="1" />
+                            </field>
+
+            <xpath expr="//header//button[@name='action_assign_to_me']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <field name="project_id" position='after'>
+                <field name="product_template_id" invisible='1' />
+                <field name="is_manager_temp" invisible='1' />
+                <field name="check_config_setting_bool" invisible="True" />
+                <field name="is_manager" invisible="1" />
+            </field>
+
+            <xpath expr="//page[@name='extra_info']//field[@name='parent_id']" position="attributes">
+                <attribute name="attrs">{'invisible': [('allow_subtasks', '=', False)],'readonly':[('is_manager','=',False)]}</attribute>
+            </xpath>
+
+             <xpath expr="//page[@name='extra_info']//field[@name='sequence']" position="attributes">
+                <attribute name="attrs">{'readonly':[('is_manager','=',False)]}</attribute>
+            </xpath>
+
+            <!-- TASK TIME FIELDS -->
+
+            <field name="tag_ids" position="after">
+                <field name="is_appstore_project" invisible="1"/>
+                <field name="allow_timesheet_edit" groups="project.group_project_manager" attrs="{'invisible':[('is_appstore_project','=',True)]}"/>
+                <!-- <field name="sh_product_id"
+                attrs="{'readonly':[('is_manager','=',False)],'invisible':[('parent_id','=',False)]}" 
+                />-->
+                <!-- <field name="sh_product_id" /> -->
+                <!-- <field name="is_appstore_project" invisible="1"/> -->
+                <field name="product_template_id" widget="selection"
+                    attrs="{'readonly':[('is_manager','=',False)],'invisible': ['|',('parent_id', '!=', False),('is_appstore_project','=',True)]}" />
+                <field name="git_repo" readonly="1"
+                    groups="sh_project_task_base.group_project_officer,sh_product_base.group_product_tags_manager" />
+            </field>
+
+            <field name="course_id" position="after">
+                <field name="coach_ids" widget="many2many_tags" groups="sh_project_task_base.group_project_officer" />
+                <field name="task_type" />
+            </field>
+            <xpath expr="//form//notebook" position="inside">
+                <page string="Action Taken For Bug" attrs="{'invisible': [('task_type', '!=', 'bug')]}">
+                    <group>
+                        <group>
+                            <field name="bug_root_cause" />
+                            <field name="corrective_action_for_bug" />
+                            <field name="preventive_action_for_bug" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+             
+            <!-- <xpath expr="//form//notebook//page[@name='extra_info']" position="after">
+                <page string="Market Place" groups="sh_product_base.group_product_tags_manager"
+                    attrs="{'invisible': [('check_config_setting_bool', '=', True)]}"> -->
+                    <!-- <page string="Softhealer Shop"
+                    groups="sh_product_base.group_product_tags_manager" attrs="{'invisible':
+                    [('check_config_setting_bool', '=', True)]}"> -->
+                    <!-- <group>
+                        <group>
+                            <field name="sh_technical_name" />
+                            <field name="depends" widget="many2many_tags" />
+                            <field name="product_version" />
+                            <field name="last_updated_date" /> -->
+                            <!-- ======= ShViewUpdate (Invisible Below Fields) ======= -->
+                            <!-- <field name="banner" invisible="1" />
+                            <field name="sh_edition_ids" widget="many2many_tags" invisible="1" />
+                            <field name="license" invisible="1" />
+                            <field name="supported_browsers" widget="many2many_tags" invisible="1" />
+                            <field name="released_date" invisible="1" />
+                            <field name="live_demo" widget="url" invisible="1" />
+                            <field name="user_guide" widget="url" invisible="1" />
+                            <field name="related_video" widget="many2many_tags" invisible="1" />
+                            <field name="sh_blog_post_ids" widget="many2many_tags" invisible="1" />
+                            <field name="sh_tag_ids" widget="many2many_tags" invisible="1" />
+                        </group>
+                    </group>
+                </page>
+            </xpath> -->
+
+            <xpath expr="//field[@name='project_id']" position="before">
+                <field name="is_manager" invisible="1"  />
+                <field name="is_appstore_project" invisible="1"  />
+                <field name="sh_deadline_n_estimated_hours_mendatory" invisible="1"  />
+            </xpath>
+            
+            <field name="date" position="attributes">
+                <attribute name="string">Creation Date</attribute>
+            </field>
+
+            <xpath expr="//field[@name='name']" position="replace">
+                <field name="name" attrs="{'readonly':[('is_manager','=',False)]}"
+                    class="o_task_name text-truncate" placeholder="Task Title..." />
+            </xpath>
+
+            <field name="date_deadline" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_manager','=',False)], 'required': [('is_deadline_n_estimated_hrs_mendatory','=',True)]}</attribute>
+                <!-- <attribute name="attrs">{'readonly': [('is_manager','=',False)]}</attribute> -->
+            </field>
+
+
+            <xpath expr="//field[@name='tag_ids']" position="replace">
+                <field name="tag_ids" attrs="{'readonly':[('is_manager','=',False)],'invisible':[('is_appstore_project','=',True)]}"
+                    widget="many2many_tags" />
+            </xpath>
+
+            <xpath expr="//field[@name='sequence']" position="before">
+               <field name="is_manager" invisible="1" />
+               <field name="is_appstore_project" invisible="1" />
+            </xpath>
+            <xpath expr="//field[@name='sequence']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_manager','=',False)]}</attribute>
+            </xpath>
+
+
+            <field name="partner_id" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_manager','=',False)],'invisible':[('is_appstore_project','=',True)]}</attribute>
+                <attribute name="options">{'no_quick_create': True, 'no_create_edit': True}</attribute>
+            </field>
+
+            <field name="email_from" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_manager','=',False)]}</attribute>
+            </field>
+
+            <field name="email_cc" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_manager','=',False)]}</attribute>
+            </field>
+
+            <field name="parent_id" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_manager','=',False)]}</attribute>
+            </field>
+
+            <field name="displayed_image_id" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_manager','=',False)]}</attribute>
+            </field>
+
+            <xpath expr="//form//notebook//page[@name='extra_info']" position="after">
+                <page string="Softhealer Extra Info" name='softhealer_extra_info' attrs="{'readonly': [('is_manager','=',False)]}">
+                    <group>
+                        <group>
+                            <field name="task_runner_ids" widget="many2many_tags" readonly="1" />
+                            <field name="version_ids" widget="many2many_tags"
+                                options="{'no_create':True,'no_create_edit':True}" />
+                            <field name="odoo_edition"  attrs="{'readonly': [('is_manager','=',False)]}" />
+                            <!-- <field name="pylint_score" attrs="{'readonly': [('is_manager','=',False)]}" /> -->
+                            <field name="start_time" invisible="1" />
+                            <field name="is_user_working" invisible="1" />
+                            <field name="partner_id" groups="sales_team.group_sale_salesman" options="{'no_quick_create': True, 'no_create_edit': True}"   />
+                            <field name="sale_product_id" groups="sales_team.group_sale_salesman" options="{'no_quick_create': True, 'no_create_edit': True}"  />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+            <field name="date_deadline" position="after">
+                <field name="not_billable" widget="openWizard" groups="sh_project_task_base.group_project_officer"/>
+                <field name="timesheet_zero_for_not_billable_task" invisible="1"/>
+                <field name="is_appstore_project" invisible="1"></field>
+                <field name="sh_is_issue" attrs="{'readonly':[('is_manager','=',False)],'invisible':[('is_appstore_project','=', True)]}" />
+            </field>
+            <field name="description" position="replace">
+                <!-- <field name="description" attrs="{'readonly':[('is_manager','=',False)]}" type="html" /> -->
+                <field name="description" readonly="0" type="html" />
+            </field>
+
+            <xpath expr="//form//notebook//page[@name='extra_info']" position="inside">
+                <group>
+                    <group string="Appstore Ralated">
+                        <field name="already_add_exist" invisible="1" />
+                        <field name="feature_expansion" nolabel="1" widget="radio" attrs="{'readonly':[('is_manager','=',False)]}" />
+
+                        <field name="existing_related_task"
+                            attrs="{'invisible': [('feature_expansion', '!=', 'existing')],'readonly':['|',('already_add_exist','=',True),('is_manager','=',False)]}" />
+                        <button class="btn btn-primary" string="Add Description as New feature"
+                            type="object" name="create_task"
+                            attrs="{'invisible':['|',('already_add_exist','=',True),('feature_expansion','!=','existing')],'readonly':[('is_manager','=',False)]}"></button>
+                        <field name="existing_related_task_state"
+                            attrs="{'invisible':[('feature_expansion','!=', 'existing')],'readonly':[('is_manager','=',False)]}" />
+
+                        <field name="related_task"
+                            attrs="{'invisible':[('feature_expansion','!=','new')],'readonly':[('is_manager','=',False)]}" readonly="True" />
+                        <button class="btn btn-primary" string="Create Task" type="object"
+                            name="create_task"
+                            attrs="{'invisible':['|',('related_task','!=',False),('feature_expansion','!=','new')],'readonly':[('is_manager','=',False)]}"></button>
+                        <field name="related_task_state"
+                            attrs="{'invisible':[('feature_expansion','!=','new')],'readonly':[('is_manager','=',False)]}" />
+                    </group>
+                </group>
+            </xpath>
+
+            <xpath expr="//form//notebook//page[@name='extra_info']" position="after">
+                <!-- ShViewUpdate -->
+                <page string="Change Log" attrs="{'invisible':[('parent_id','=',False)]}" invisible="1">
+                    <field name="project_task_change_log_ids">
+                        <tree editable="bottom" create="0" edit="0" delete="0">
+                            <field name="project_task_id" invisible="1" />
+                            <field name="date" />
+                            <field name="log_type" />
+                            <field name="version" />
+                            <field name="details" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+
+            <field name="sale_line_id" position="before">
+                <!-- <field name="sh_sale_id" groups="sales_team.group_sale_salesman"/> -->
+                <field name="is_appstore_project" invisible="1" />
+                <field name="account_move_id" groups="sales_team.group_sale_salesman" attrs="{'invisible' : [('is_appstore_project','=',True)]}" />
+            </field>
+
+            <xpath expr="//header" position="inside">
+                <field name="end_task_bool" invisible="1" />
+                <field name="start_task_bool" invisible="1" />
+            </xpath>
+            <xpath expr="//notebook//page[@name='recurrence']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//notebook" position="before">
+                <group name="migration" string="Migration">
+                    <group>
+                        <field name="pylint_score" />
+                        <field name="sh_project_task_base_multi_comapy" />
+                        <field name="sh_project_task_base_check_downgrade" />
+                        <field name="sh_project_task_base_multi_website" />
+                        <field name="sh_migration_need_functional_support" />
+                        <field name="sh_need_testing" attrs="{'readonly': [('is_manager', '=', False)]}" />
+                        <field name="sh_pending_ss" />
+                        <field name="sh_targeted_app" />
+                    </group>
+                    <group>
+                        <field name="sh_project_task_base_responsible_tl_id" options="{'no_create': True, 'no_open': True}" attrs="{'readonly': [('is_manager', '=', False)]}" />
+                        <field name="sh_project_task_base_support_dev_id" options="{'no_create': True, 'no_open': True}" attrs="{'readonly': [('is_manager', '=', False)]}"  />
+                        <field name="sh_project_task_base_dev_id" options="{'no_create': True, 'no_open': True}" attrs="{'readonly': [('is_manager', '=', False)]}" />
+                        <field name="sh_project_task_base_dev2_id" options="{'no_create': True, 'no_open': True}" attrs="{'readonly': [('is_manager', '=', False)]}" />
+                        <field name="sh_project_task_base_designer_id" options="{'no_create': True, 'no_open': True}" attrs="{'readonly': [('is_manager', '=', False)]}" />
+                        <field name="sh_project_task_base_tester_id" options="{'no_create': True, 'no_open': True}" attrs="{'readonly': [('is_manager', '=', False)]}" />
+                        <field name="sh_project_task_base_functional_id" options="{'no_create': True, 'no_open': True}" attrs="{'readonly': [('is_manager', '=', False)]}" />
+                        <field name="sh_project_task_base_index_by_id" options="{'no_create': True, 'no_open': True}" attrs="{'readonly': [('is_manager', '=', False)]}" />
+                        <field name="sh_project_task_base_marketed_by_id" options="{'no_create': True, 'no_open': True}" attrs="{'readonly': [('is_manager', '=', False)]}" />
+                    </group>
+                </group>
+            </xpath>
+
+            <!-- ====== sh_task_estimation views ======== -->
+
+            <field name="date_deadline" position="after">
+                <field name="is_deadline_n_estimated_hrs_mendatory" invisible="1" />
+                <field name="is_appstore_project" invisible="1" />
+                <field name="estimated_hrs" widget="float_time" groups="sh_project_task_base.group_project_officer,sh_project_mgmt.group_project_task_create" attrs="{'invisible' : [('is_appstore_project','=',True)], 'required': [('is_deadline_n_estimated_hrs_mendatory','=',True)]}"  />
+                <field name="estimated_internal_hrs" widget="float_time" groups="sh_project_task_base.group_project_officer,sh_project_mgmt.group_project_task_create" attrs="{'invisible' : [('is_appstore_project','=',True)]}" />
+
+                <field name="is_beyond_estimation"
+                    groups="sh_project_task_base.group_project_officer" invisible="1" />
+            </field>
+            <xpath expr="//sheet/div[@name='button_box']" position="inside">
+                <!-- SMART BUTTON: CR -->
+                <button name="smart_btn_open_cr" type="object" class="oe_stat_button">
+                    <i class="fa fa-fw o_button_icon fa-list-alt text-success" title="CR"/>
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="sh_project_task_base_cr_count" nolabel="1"/>
+                        </span>
+                        <span class="o_stat_text">CR</span>
+                    </div>
+                </button>
+            </xpath>
+            <xpath expr="//sheet/div[@name='button_box']" position="after">
+                <div groups="sh_project_task_base.group_project_officer" class="alert alert-danger"
+                    role="alert" style="margin-bottom:0px;text-align: center;"
+                    attrs="{'invisible': [('is_beyond_estimation','=',False)]}">
+                    <strong>Timesheet hours are
+                        more then Estimated Hours !</strong>
+                </div>
+            </xpath>
+
+            <field name="user_ids" position="after">
+                <field name="product_template_id" readonly="1" />
+                <field name="sh_product_id" readonly="1" />
+            </field>
+
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="sh_task_internal_kanban_view_inherit">
+        <field name="name">project.task Kanban Inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban" />
+        <field name="arch" type="xml">
+
+            <!-- ====== sh_task_estimation views ======== -->
+
+
+            <field name="name" position="after">
+                <field name="is_beyond_estimation" invisible="1" />
+                <field name="is_appstore_project" invisible="1" />
+            </field>
+            <xpath expr="//div[hasclass('oe_kanban_bottom_left')]" positon="inside">
+                <span class="fa fa-exclamation-triangle"
+                    groups="sh_project_task_base.group_project_officer" style="color:#721c24"
+                    attrs="{'invisible': [('is_beyond_estimation','=',False)]}"
+                    title="Title" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_project_task_internal_search_view_inherit" model="ir.ui.view">
+        <field name="name">project.task.lead.oppor.search</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form" />
+        <field name="arch" type="xml">
+
+            <!-- ====== sh_task_estimation views ======== -->
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="filter_domain" >['|', '|','|','|',('name', 'ilike', self), ('id', 'ilike', self),('sh_technical_name', 'ilike', self),('partner_id', 'ilike', self),('project_id', 'ilike', self)]</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='my_tasks']" position="after">
+                <filter groups="sh_project_task_base.group_project_officer"
+                    string="Timesheet more then Estimation" name="is_beyond_estimation"
+                    domain="[('is_beyond_estimation', '=', True)]" />
+                <filter string="Need Testing" name="need_testing" domain="[('sh_need_testing', '=', True)]" />
+                <filter
+                    string="Missing Product Ref"
+                    name="missing_product_ref"
+                    domain="[
+                        ('product_template_id', '=', False),
+                        ('sh_product_id', '=', False),
+                        ('sh_technical_name', '!=', False),
+                        ('is_appstore_project', '=', True),
+                    ]"
+                />
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="project.action_view_all_task" model="ir.actions.act_window">
+        <field name="name">My Tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">kanban,tree,form,calendar,pivot,graph,activity</field>
+        <field name="context">{'search_default_stage':1}</field>
+        <field name="search_view_id" ref="project.view_task_search_form_extended"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No tasks found. Let's create one!
+            </p>
+            <p>
+                Organize your tasks by dispatching them across the pipeline.<br/>
+                Collaborate efficiently by chatting in real-time or via email.
+            </p>
+        </field>
+    </record>
+
+</odoo>

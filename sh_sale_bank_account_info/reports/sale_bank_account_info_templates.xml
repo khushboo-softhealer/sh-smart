@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="sh_sale_bank_account_info_report_saleorder_document" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@name='signature']" position="after">
+            <p t-if="doc.sh_bank_account_id">
+                <strong> Bank Details </strong>
+                <br />
+                <br />
+                <strong> Account holder's Name : </strong>
+                <span t-field="doc.sh_bank_account_id.acc_holder_name" />
+                <br />
+                <strong> Account Number : </strong>
+                <span t-field="doc.sh_bank_account_id.acc_number" />
+                <br />
+                <strong> Bank Name : </strong>
+                <span t-field="doc.sh_bank_account_id.bank_id.name" />
+                <br />
+                <strong> Bank BIC/SWIFT Code : </strong>
+                <span t-field="doc.sh_bank_account_id.bank_id.bic" />
+                <br />
+            </p>
+        </xpath>
+
+        <xpath expr="//div[@id='informations']" position="inside">
+            <div name="odoo_version" t-if="doc.odoo_version" class="col-auto mw-100 mb-2">
+                <strong>Version:</strong>
+                <p class="m-0" t-field="doc.odoo_version" />
+            </div>
+
+            <div name="timeline" t-if="doc.timeline" class="col-auto mw-100 mb-2">
+                <strong>Timeline:</strong>
+                <p class="m-0" t-field="doc.timeline" />
+            </div>
+        </xpath>
+    </template>
+
+    <!-- 	Sale preview terms & conditions -->
+    <template id="sh_sale_bank_account_info_sale_order_portal_content" inherit_id="sale.sale_order_portal_content"
+        name="Sh Sales Order Portal Content">
+        <xpath expr="//section[@id='terms']" position="before">
+            <section id="sh_bank_account_id" class="mt-5" t-if="sale_order.sh_bank_account_id">
+                <h3 class="">Bank Details</h3>
+                <strong> Account holder's Name : </strong>
+                <span t-field="sale_order.sh_bank_account_id.acc_holder_name" />
+                <br />
+                <strong> Account Number : </strong>
+                <span t-field="sale_order.sh_bank_account_id.acc_number" />
+                <br />
+                <strong> Bank Name : </strong>
+                <span t-field="sale_order.sh_bank_account_id.bank_id.name" />
+                <br />
+                <strong> Bank BIC/SWIFT Code : </strong>
+                <span t-field="sale_order.sh_bank_account_id.bank_id.bic" />
+                <br />
+            </section>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Enable Move Timesheet To App Store -->
+        <record id="group_move_timesheet_to_appstore" model="res.groups">
+            <field name="name">Enable Move Timesheet To App Store</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">This user will be able to See Move Timesheet to App Store button in internal Projects.</field>
+        </record>
+    </data>
+</odoo>

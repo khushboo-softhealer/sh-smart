@@ -1,0 +1,738 @@
+// start why softhealer service banner section // 
+#sh_erp_solution_banner {
+    @include sh_other_page_banner;
+}
+
+// end banner section // 
+
+
+// erp page about-section start//
+#sh_about_erp_page_about {
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_erp_img_box {
+        width: 100%;overflow: hidden;
+        .row{
+
+            @include media-breakpoint-down(lg) {
+                justify-content: center;
+            }
+            @include media-breakpoint-up(lg) {
+                justify-content:end;
+            }
+        }
+        .sh_img_1 {
+            height: 200px;width: 100%;border-radius: var(--sh-website-common-border-radius);box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            img {
+                height: 100%;width: 100%;border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+        .sh_img_2 {
+            height: 300px;width: 100%;border-radius: var(--sh-website-common-border-radius);box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            img {
+                height: 100%;width: 100%;border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+        .sh_img_3 {
+            height: 200px;width: 100%;border-radius: var(--sh-website-common-border-radius);margin-top: 30px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            img {
+                height: 100%;width: 100%;border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+        .sh_img_4 {
+            height: 250px;width: 100%;border-radius: var(--sh-website-common-border-radius);margin-top: 30px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            img {
+                height: 100%;width: 100%;border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+    }
+    .sh_erp_content_box {
+        width: 100%;
+        h2.sh_erp_title {
+            font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md) {
+                font-size:var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                font-size:var(--sh-section-heading-font-size-mobile);
+            }
+            
+        }
+        p.sh_text {
+            font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);text-align: left;margin-bottom: 30px;width: calc(100% - 80px);
+            @include media-breakpoint-down(xl) {
+                width: 100%;
+            }
+            @include media-breakpoint-only(md) {
+                font-size: var(--sh-website-normal-text-font-size-tablet);
+                
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-website-normal-text-font-size-mobile);
+                
+            }
+        }
+        .btn {  
+            @include sh_primary_button;margin-top:20px;
+            span {
+                display: flex;align-items: center;
+                svg {
+                    stroke: #fff;display: inline-block;width: 30px; padding-right:5px;height: 30px;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    #sh_about_erp_page_about {
+        .sh_erp_img_box {
+            .sh_img_1 {
+                height: 120px;
+            }
+            .sh_img_2 {
+                height: 170px;
+            }
+            .sh_img_3 {
+                height: 120px;
+            }
+            .sh_img_4 {
+                height: 170px;
+            }
+        }
+    }
+}
+// about-us page about-section end//
+
+
+
+//erp_software_solution_section start
+.erp_software_solution_section {
+    padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    header {
+        text-align: center;
+        @include media-breakpoint-down(lg) {
+            margin-top: 0px;
+        }
+        h6 {
+            color: var(--sh-section-heading-sub-title-font-color);font-size: var(--sh-section-heading-sub-title-font-size);letter-spacing: 0.01em;line-height: 1.5;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet)
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile)
+            }
+        }
+        h2 {
+            color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_main_box {
+        margin-top: 30px;
+        .sh_inner_box {
+            border: 1px solid #e7e7e7;text-align: center;padding-top: 40px;padding-bottom: 40px;padding-left: 30px;padding-right: 30px;transition: all 0.15s ease;border-radius: 5px;
+            @include media-breakpoint-down(md) {
+                padding-top: 30px;padding-bottom: 30px;
+            }
+            .sh_icon {
+                background-color: #f0f1ff;width: 70px;height: 70px;margin: 0px auto 25px;display: flex;justify-content: center;border-radius: 5px;
+                svg {
+                    width: 45px;display: inline-flex;  fill: o-color(o-color-1);
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-2 {
+                        fill: o-color(o-color-1);
+                    }
+                    .cls-1{
+                        fill:none;
+                    }
+                }
+            }
+            .icon_1{
+                svg{
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                    .cls-2{
+                        fill:none;
+                    }  
+                }
+            }
+            .sh-des {
+                h5 {
+                    line-height: 1.3;font-weight: 600;color: var(--sh-website-heading-title-font-color);font-size: var(--sh-website-heading-title-font-size);
+                }
+                p {
+                    color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+                    @include media-breakpoint-only(md){
+                        font-size: var(--sh-website-normal-text-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md){
+                        font-size: var(--sh-website-normal-text-font-size-mobile);
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);border-color: transparent !important;
+            }
+        }
+    }
+}
+//erp_software_solution_section end //
+
+// sh_benifit_of_erp_solution section start //
+.sh_benifit_of_erp_solution{
+    .sh_section_heading{
+        width:70%;margin-bottom: 50px;margin: 0 auto;
+        @include media-breakpoint-down(lg){
+            width: var(--sh-section-heading-width-mobile);
+        }
+        .sh_box_title{
+            font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom); text-align: center;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet); 
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-font-size-mobile);text-align: center;    
+            }
+        }
+        .sh_text{
+            font-size: var(--sh-section-heading-sub-title-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);text-align: center;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile);text-align: center; 
+            }
+        }
+    }
+    .sh_zoho_sales_tab_section_main{
+        .sh_zoho_sales_tab_sub_section{      
+            padding: 40px 0 35px;
+            @include media-breakpoint-down(lg) {
+                padding: 20px 0;
+            }
+            .sh_zoho_sales_img_box{
+                .sh_zoho_sales_img{
+                    img{
+                        object-fit: cover;
+                    }
+                }
+            }
+            
+            .sh_key_feature_main_box{                
+                margin-bottom: 30px;
+                @include media-breakpoint-down(md){
+                    margin-bottom: 20px;
+                }
+                &.sh_mb_1{
+                    @include media-breakpoint-up(lg) { 
+                        margin-bottom: 0;
+                    }
+                }
+                &.sh_mb_3{
+                    @include media-breakpoint-up(md){
+                        margin-bottom: 0px;
+                    }
+                }
+                &.sh_mb_0{
+                    @include media-breakpoint-down(lg) { 
+                        margin-bottom: 0;
+                    }
+                }
+                .sh_key_feature_box {
+                    background-color: #fff;z-index: 1;position: relative;border-radius: var(--sh-card-box-radius);box-shadow: 0 10px 35px rgba(38, 42, 76, .1);border: 1px solid #e7e7e7;padding: 30px 30px;position: relative;height: 100%;transition: .15s ease-in-out; min-height:280px;
+                    @include media-breakpoint-down(lg){
+                        min-height:auto;
+                    }
+                    &:hover{
+                        box-shadow: 0 5px 70px rgba(38,42,76,.1);border-color: transparent!important;
+                    }  
+                    @include media-breakpoint-only(md) { 
+                        margin-bottom: 0;
+                    }      
+                    .sh_key_feature_img {
+                        svg {
+                            width: 45px;display: inline-block;fill: o-color(o-color-1);margin-bottom: 20px;
+                            
+                            .cls-1 {
+                                fill: o-color(o-color-1); stroke:none !important;
+                            }
+                            
+                            @include media-breakpoint-down(lg) {
+                                width: 35px;
+                            }
+                            .cls-2{
+                                fill:none !important; stroke:none !important;
+                            }
+                        }
+                    } 
+                    .icon_1{
+                        svg{
+                        .cls-1 {
+                            fill:none; stroke:none !important;
+                        }
+                        .cls-2 {
+                            fill:o-color(o-color-1) !important; stroke:none !important;
+                        }
+                    }
+                    }       
+                    .sh_key_feature_content {
+                        .sh_key_feature_title {
+                            color: var(--sh-website-heading-title-font-color); font-size: var(--sh-website-heading-title-font-size); font-weight: var(--sh-website-heading-title-font-weight); letter-spacing: 0.8px; margin-bottom: 20px;text-transform: capitalize;
+                        }
+                        .sh_key_feature_text {
+                        font-size: var(--sh-website-normal-text-font-size); color: var(--sh-website-normal-text-font-color); margin-bottom: 20px;
+                            @include media-breakpoint-only(md) {
+                                font-size: var(--sh-website-normal-text-font-size-tablet);
+                            }
+                            @include media-breakpoint-down(md) {
+                                font-size: var(--sh-website-normal-text-font-size-mobile);
+                            }
+                        }
+                    }
+                    .sh_key_feature_link_box{
+                        .sh_key_feature_link{
+                            @include sh_secondary_button;margin: 0 auto;
+                            &:hover{
+                                box-shadow: var(--sh-website-box-shadow)
+                            }
+                            .sh_key_feature_link_right {
+                                svg {
+                                    stroke: o-color(o-color-1);display: inline-block;width: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+}
+// sh_benifit_of_erp_solution section end //
+
+
+//erp_comperhensive_software_solution_section start
+.erp_comperhensive_software_solution_section {
+    padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    header {
+        text-align: center;
+        @include media-breakpoint-down(lg) {
+            margin-top: 0px;
+        }
+        h6 {
+            color: var(--sh-section-heading-sub-title-font-color);font-size: var(--sh-section-heading-sub-title-font-size);letter-spacing: 0.01em;line-height: 1.5;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet)
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile)
+            }
+        }
+        h2 {
+            color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_main_box {
+        margin-top: 30px;
+        .sh_inner_box {
+            border: 1px solid #e7e7e7;text-align: center;padding-top: 40px;padding-bottom: 40px;padding-left: 30px;padding-right: 30px;transition: all 0.15s ease;border-radius: 5px;
+            @include media-breakpoint-down(md) {
+                padding-top: 30px;padding-bottom: 30px;
+            }
+            .sh_icon {
+                background-color: #f0f1ff;width: 70px;height: 70px;margin: 0px auto 25px;display: flex;justify-content: center;border-radius: 5px;
+                svg {
+                    width: 45px;display: inline-flex;  fill: o-color(o-color-1);
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-2 {
+                        fill: o-color(o-color-1);
+                    }
+                    .cls-1{
+                        fill:none;
+                    }
+                }
+            }
+            .icon_1{
+                svg{
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                    .cls-2{
+                        fill:none;
+                    }  
+                }
+            }
+            .sh-des {
+                h5 {
+                    line-height: 1.3;font-weight: 600;color: var(--sh-website-heading-title-font-color);font-size: var(--sh-website-heading-title-font-size);
+                }
+                p {
+                    color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+                    @include media-breakpoint-only(md){
+                        font-size: var(--sh-website-normal-text-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md){
+                        font-size: var(--sh-website-normal-text-font-size-mobile);
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);border-color: transparent !important;
+            }
+        }
+    }
+}
+//erp_software_solution_section end //
+
+
+
+
+//Our Services start
+.sh_erp_solution_section {
+    padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    header {
+        text-align: center;
+        @include media-breakpoint-down(lg) {
+            margin-top: 0px;
+        }
+        h6 {
+            color: var(--sh-section-heading-sub-title-font-color);font-size: var(--sh-section-heading-sub-title-font-size);letter-spacing: 0.01em;line-height: 1.5;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet)
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile)
+            }
+        }
+        h2 {
+            color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);width:var(--sh-section-heading-width-mobile);
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_main_box {
+        margin-top: 30px;
+        .sh_inner_box {
+            display: flex;border: 1px solid #e7e7e7;padding: 30px;align-items: center;transition: all 0.15s ease;   
+            @include media-breakpoint-down(xxl) {
+                padding: 25px;
+            }
+            .sh_icon {
+                display: flex;padding-right: 15px;
+                svg {
+                    width: 45px;display: inline-flex;stroke: o-color(o-color-1);
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                }
+            }
+            .icon_1{
+                .cls-1{
+                    stroke:none;
+                }
+                .cls-2{
+                    fill:o-color(o-color-1);
+                }
+            }
+            .icon_2{
+                .cls-1{
+                    fill:o-color(o-color-1);  
+                }
+                .cls-2{
+                    fill: none !important;
+                    stroke: none;
+                }
+            }
+            .sh-des {
+                h5 {
+                    line-height: 1.3;font-weight: 600;color: var(--sh-website-heading-title-font-color);font-size: var(--sh-website-heading-title-font-size);
+                    a {
+                        text-decoration: none;
+                        color: var(--sh-website-heading-title-font-color);
+                        &:hover{
+                            color: o-color(o-color-1);  
+                        }
+                    }
+                }
+                p {
+                    color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+                    @include media-breakpoint-down(lg) {
+                        font-size: var(--sh-sh-other-page-banner-content-text-mobile);
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);border-color: transparent !important;
+            }
+        }
+    }
+}
+//Our Services end //
+
+
+
+//erp_implementation_prcoess_section start
+.erp_implementation_prcoess_section {
+    padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    header {
+        text-align: center;
+        @include media-breakpoint-down(lg) {
+            margin-top: 0px;
+        }
+        h6 {
+            color: var(--sh-section-heading-sub-title-font-color);font-size: var(--sh-section-heading-sub-title-font-size);letter-spacing: 0.01em;line-height: 1.5;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet)
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile)
+            }
+        }
+        h2 {
+            color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_main_box {
+        margin-top: 30px;
+        .sh_inner_box {
+            border: 1px solid #e7e7e7;text-align: center;padding-top: 40px;padding-bottom: 40px;padding-left: 30px;padding-right: 30px;transition: all 0.15s ease;border-radius: 5px;
+            @include media-breakpoint-down(md) {
+                padding-top: 30px;padding-bottom: 30px;
+            }
+            .sh_icon {
+                background-color: #f0f1ff;width: 70px;height: 70px;margin: 0px auto 25px;display: flex;justify-content: center;border-radius: 5px;
+                svg {
+                    width: 45px;display: inline-flex;  fill: o-color(o-color-1);
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-2 {
+                        fill: o-color(o-color-1);
+                    }
+                    .cls-1{
+                        fill:none;
+                    }
+                }
+            }
+            .icon_1{
+                svg{
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                    .cls-2{
+                        fill:none;
+                    }  
+                }
+            }
+            .sh-des {
+                h5 {
+                    line-height: 1.3;font-weight: 600;color: var(--sh-website-heading-title-font-color);font-size: var(--sh-website-heading-title-font-size);
+                }
+                p {
+                    color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+                    @include media-breakpoint-only(md){
+                        font-size: var(--sh-website-normal-text-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md){
+                        font-size: var(--sh-website-normal-text-font-size-mobile);
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);border-color: transparent !important;
+            }
+        }
+    }
+}
+//erp_implementation_prcoess_section end //
+
+
+// sh_erp_solutin_faq_section start //
+
+#sh_erp_solutin_faq_section{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:var(--sh-section-bottom-padding); 
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_inner_box {
+        .sh_flex_column_reverse{
+            @include media-breakpoint-down(md){
+                flex-direction: column-reverse;
+            }
+        }
+        .sh_mission_vision_about_ing_box {
+            position: relative;padding:50px;background-color: rgba(87, 74, 199, 0.05);border-radius: 10px;
+            @include media-breakpoint-down(lg) {
+                padding: 0px;
+            }
+            .sh_photo_group {
+                display: flex;position: relative;z-index: 10;
+                @include media-breakpoint-down(sm) {
+                    justify-content: center;
+                }
+            }
+            .sh_second_photo {
+                position: relative;width:100%;height: 350px;
+                @include media-breakpoint-only(md) {
+                    height: 300px;
+                }
+                @include media-breakpoint-down(md) {
+                    height: auto;
+                }
+                img {
+                    width: 100%;height: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                }
+                svg {
+                    bottom: -35px;right: -55px;width: 340px;height: auto;position: absolute;z-index: -1;
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                    @include media-breakpoint-down(lg) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .sh_mission_vision_about_content {
+            padding-right: 40px;padding-left: 40px;
+            @include media-breakpoint-down(lg) {
+                padding-right: 0px;padding-left: 0px;
+            }
+            &.sh_mission_accordion_box{
+                @include media-breakpoint-down(lg) {
+                   margin-bottom: 20px
+                }
+            }
+            .sh_sub_title {
+                @include sh_sub_badge;
+                margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);margin-bottom: 15px;
+                }
+            }
+            p.sh_text {
+                font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                @include media-breakpoint-only(md)  {
+                    font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                }
+            }   
+            .sh_goal_box{
+                .sh_goal_box_content {
+                    display: flex;align-items: flex-start;margin-bottom: 20px;
+                    .sh_goal_check_box {
+                        svg {
+                            width: 25px;fill: o-color(o-color-1);margin-right: 20px;margin-top: 5px;
+                            .cls-1 {
+                                fill: o-color(o-color-1); stroke:none !important;
+                            }
+                            
+                            @include media-breakpoint-down(lg) {
+                                width: 20px;
+                            }
+                            .cls-2{
+                                fill:none !important; stroke:none !important;
+                            }
+                        }
+                    }
+                    .sh_goal_text {
+                        font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+                        @include media-breakpoint-only(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                        }
+                    }
+                }
+            }
+            .sh_mission_box_accordion{
+                .accordion-item{
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+                    @include media-breakpoint-down(md){
+                        width:100%;
+                    }
+                    .sh_mission_box_accordion_header{
+                        .sh_mission_box_accordion_btn{
+                            box-shadow: none;outline: none;color: var(--sh-section-heading-font-color);font-weight: var(--sh-website-normal-text-font-weight); font-size: var(--sh-website-heading-title-font-size); padding: 15px 0;background: transparent;
+                        }
+                    }
+                    .sh_mission_box_accordion_body{
+                        padding: 10px 0;
+                        .sh_mission_box_accordion_text{
+                            font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0;
+                            @include media-breakpoint-only(md) {
+                                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                            }
+                            @include media-breakpoint-down(md) {
+                                font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                            }
+                            span{
+                                font-size:18px; color: var(--sh-section-heading-font-color);font-weight: var(--sh-section-heading-font-weight)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// sh_erp_solutin_faq_section end // 
+
+
+
+//Related Services start
+.sh_erp_related_services_section {
+    @include sh_related_services_section;
+}
+// sh_related_services section end //
+
+// sh_web_development_call_to_action start //
+.sh_call_to_action {
+    @include sh_call_to_action_section
+}
+// sh_web_development_call_to_action end //
+

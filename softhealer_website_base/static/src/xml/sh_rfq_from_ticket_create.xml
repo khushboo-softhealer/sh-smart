@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="softhealer_website_base.sh_create_ticket_from_website_pages">
+        <div class="sh_cls_create_ticket_from_solution_page">
+            <div class="row mb-3">
+                <div class="col-md-6  mb-3">
+                    <div t-attf-class="form-group #{error and 'solution_page_custom_website_form_partner_name' in error and 'has-error' or ''}">
+                        <input type="text" class="form-control" placeholder="Your Name.." id="solution_page_custom_website_form_partner_name" name="solution_page_custom_website_form_partner_name" data-fill-with="name" />
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div name="company_from_container" t-attf-class="form-group #{error and 'solution_page_custom_website_form_company' in error and 'has-error' or ''}">
+                        <input type="text" class="form-control" placeholder="Your Company Name.." id="solution_page_custom_website_form_company" name="solution_page_custom_website_form_company" />
+                    </div>
+                </div>
+
+                <div class="col-md-6 sh_email">
+                    <div name="email_from_container" t-attf-class="form-group #{error and 'solution_page_custom_website_form_email' in error and 'has-error' or ''}">
+                        <input type="email" class="form-control" placeholder="Your Email Address.." id="solution_page_custom_website_form_email" name="solution_page_custom_website_form_email" data-fill-with="email_form" t-att-readonly="readonly_email" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                     <!-- <div class="input-group" id="solution_page_contact_error_div"> -->
+                     <input id="solution_page_custom_website_form_contact_no" type="tel" class="form-control rounded-0 w-100" name="sh_custom_contact_us_form_country"/>
+                    <!-- <div name="country_from_container" t-attf-class="input-group-append form-group #{error and 'solution_page_custom_website_form_country' in error and 'has-error' or ''}">
+                        <select class="form-control solution_page_custom_website_form_country" id="solution_page_custom_website_form_country" name="solution_page_custom_website_form_country">
+                        </select>
+                    </div>
+                     <div t-attf-class="form-group #{error and 'solution_page_custom_website_form_contact_no' in error and 'has-error' or ''}">
+                        <input type="text" class="form-control" placeholder="Contact No." id="solution_page_custom_website_form_contact_no" name="solution_page_custom_website_form_contact_no" />
+                    </div> -->
+                <!-- </div> -->
+            </div>
+
+                <!-- Add Country Field -->
+
+            </div>
+            <!-- Query Params -->
+            <div id="sh_recaptcha_legal_terms"></div>
+            <div class="row mb-1">
+                <div class="col-md-12">
+                    <div t-attf-class="form-group #{error and 'solution_page_custom_website_form_description' in error and 'has-error' or ''}">
+                        <textarea class="form-control" id="solution_page_custom_website_form_description" name="solution_page_custom_website_form_description" rows="2" cols="50" placeholder="Requirements"/>
+                        <!-- <input type="text" class="form-control" placeholder="Requirements" id="solution_page_custom_website_form_description" name="solution_page_custom_website_form_description"  /> -->
+                    </div>
+                    <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_message"></p>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="softhealer_website_base.sh_create_ticket_from_website_pages">
+        <div class="sh_cls_create_ticket_from_solution_page">
+            <div class="row mb-3">
+                <div class="col-md-12 mt-1 mb-3">
+                    <div t-attf-class="form-group #{error and 'solution_page_custom_website_form_partner_name' in error and 'has-error' or ''}">
+                        <input type="text" class="form-control" placeholder="Your Name.." id="solution_page_custom_website_form_partner_name" name="solution_page_custom_website_form_partner_name" data-fill-with="name" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div name="company_from_container" t-attf-class="form-group #{error and 'solution_page_custom_website_form_company' in error and 'has-error' or ''}">
+                        <input type="text" class="form-control" placeholder="Your Company Name.." id="solution_page_custom_website_form_company" name="solution_page_custom_website_form_company" />
+                    </div>
+                </div>
+
+               
+                <div class="col-md-6">
+                    <div name="email_from_container" t-attf-class="form-group #{error and 'solution_page_custom_website_form_email' in error and 'has-error' or ''}">
+                        <input type="email" class="form-control" placeholder="Your Email Address.." id="solution_page_custom_website_form_email" name="solution_page_custom_website_form_email" data-fill-with="email_form" t-att-readonly="readonly_email" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="sh_recaptcha_legal_terms"></div>
+            <div class="row mb-1">
+                <div class="col-md-12">
+
+                    <div t-attf-class="form-group #{error and 'solution_page_custom_website_form_description' in error and 'has-error' or ''}">
+                        <input type="text" class="form-control" placeholder="Requirements" id="solution_page_custom_website_form_description" name="solution_page_custom_website_form_description" data-fill-with="name" />
+                    </div>
+                        <p class="alert alert-danger" style="margin-top:10px;display:none;" id="error_message"></p>
+
+                </div>
+            </div>
+        </div>
+    </t>
+</templates> -->

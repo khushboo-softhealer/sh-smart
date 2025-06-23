@@ -1,0 +1,470 @@
+<section id="dead_shot_about_us_section"
+                    class="dead_shot_about_us_section">
+                    <div class="container">
+                        <div class="sh_content">
+                            <div class="sh_heading">
+                                <h2> Dead Shot Tournament 2025—A Thrilling Esports Showdown at Softhealer Technologies</h2>
+                            </div>
+                            <div class="sh_content_box">
+                                <div class="sh_contact_detail">
+
+                                    <div class="sh_text mb-3">
+                                        On 24th April 2025, Softhealer Technologies witnessed an adrenaline-pumping esports event — the Dead Shot Tournament 2025. This electrifying tournament brought together some of the best gaming talent within the organization for a battle of strategy, speed, and sharpshooting.
+
+                                    </div>
+                                    <div class="sh_text">
+                                        The tournament featured intense matches filled with jaw-dropping moments and tactical gameplay, keeping the audience on the edge of their seats throughout the day.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sh_inner_section">
+                            <div class="sh_main_video_section">
+                                <div class="sh_video_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <a class="sh_video_icon"
+                                        href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-player-play"
+                                            width="44" height="44" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M7 4v16l13 -8z" />
+                                        </svg>
+                                    </a>
+
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" class="fa fa-close"></span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                        <iframe width="950" height="500" src="https://www.youtube.com/embed/GsBPZJflAoI?si=OiPOqrpu5NocvVVn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="1"></iframe>
+                                            </div>
+                                            
+                                          </div>
+                                        </div>
+                                      </div>
+                                    <!-- Ripple -->
+                                    <svg class="sh_svg" viewBox="0 0 320 320">
+                                        <defs>
+                                            <circle id="circle-clip" cx="50%" cy="50%" r="25%"></circle>
+                                            <clipPath id="avatar-clip">
+                                                <use href="#circle-clip"></use>
+                                            </clipPath>
+                                        </defs>
+                                        <circle cx="50%" cy="50%" r="25%" fill="#fff"
+                                            fill-opacity="1">
+                                            <animate attributeName="r" values="20%;40%" dur="4s"
+                                                repeatCount="indefinite"></animate>
+                                            <animate attributeName="fill-opacity" values="1;0"
+                                                dur="4s" repeatCount="indefinite"></animate>
+                                        </circle>
+                                        <circle cx="50%" cy="50%" r="25%" fill="#fff"
+                                            fill-opacity="1">
+                                            <animate attributeName="r" values="20%;40%" dur="4s"
+                                                begin="1s" repeatCount="indefinite"></animate>
+                                            <animate attributeName="fill-opacity" values="1;0"
+                                                dur="4s" begin="1s" repeatCount="indefinite"></animate>
+                                        </circle>
+                                        <circle cx="50%" cy="50%" r="25%" fill="#fff"
+                                            fill-opacity="1">
+                                            <animate attributeName="r" values="20%;40%" dur="4s"
+                                                begin="2s" repeatCount="indefinite"></animate>
+                                            <animate attributeName="fill-opacity" values="1;0"
+                                                dur="4s" begin="2s" repeatCount="indefinite"></animate>
+                                        </circle>
+                                        <circle cx="50%" cy="50%" r="25%" fill="#fff"
+                                            fill-opacity="1">
+                                            <animate attributeName="r" values="20%;40%" dur="4s"
+                                                begin="3s" repeatCount="indefinite"></animate>
+                                            <animate attributeName="fill-opacity" values="1;0"
+                                                dur="4s" begin="3s" repeatCount="indefinite"></animate>
+                                        </circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="sh_deadshot_semifinal_section" id="sh_deadshot_semifinal_section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xxl-5 col-xl-5 col-lg-12 col-md-12 align-self-center">
+                                <h2 class="sh_heading_text">
+                                    Semi-Final Showdown
+                                </h2>
+                            </div>
+                            <div class="col-xxl-7 col-xl-7 col-lg-12 col-md-12">
+                                <p class="sh_text">
+                                    The competition was fierce, but two teams rose above the rest to face off in the semifinals:
+                                </p>
+                                <p class="sh_text mt-3">
+                                    The semi-final match was a true spectacle — packed with smart plays, well-timed flanks, and clutch eliminations. Team 2 put up a valiant fight, but Team 1 demonstrated near-perfect synergy and advanced to the final round.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <h3>Team 1 </h3>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="sh_team_box">
+                                    <div class="sh_img">
+                                        <img src="/theme_softhealer_website/static/src/img/blogs_bkp/dead_shot_tournament_2025/mihir.webp"></img>
+                                    </div>
+                                    <div class="sh_player_name">
+                                        Mihir Kalariya
+                                    </div>
+                                    <div class="sh_total_scrore">
+                                        <div class="number">
+                                           21
+                                       </div>
+                                       <div class="status">
+                                        Kill
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="sh_team_box">
+                                    <div class="sh_img">
+                                        <img src="/theme_softhealer_website/static/src/img/blogs_bkp/dead_shot_tournament_2025/monak.webp"></img>
+                                    </div>
+                                    <div class="sh_player_name">
+                                        Monak Joshi
+                                    </div>
+                                    <div class="sh_total_scrore">
+                                        <div class="number">
+                                            19
+                                       </div>
+                                       <div class="status">
+                                        Kill
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="sh_team_box">
+                                    <div class="sh_img">
+                                        <img src="/theme_softhealer_website/static/src/img/blogs_bkp/dead_shot_tournament_2025/archan.webp"></img>
+                                    </div>
+                                    <div class="sh_player_name">
+                                        Archan Gajera
+                                    </div>
+                                    <div class="sh_total_scrore">
+                                        <div class="number">
+                                           12
+                                       </div>
+                                       <div class="status">
+                                        Kill
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="sh_team_box">
+                                    <div class="sh_img">
+                                        <img src="/theme_softhealer_website/static/src/img/blogs_bkp/dead_shot_tournament_2025/meet_g.webp"></img>
+                                    </div>
+                                    <div class="sh_player_name">
+                                        Meet Gadoya
+                                    </div>
+                                    <div class="sh_total_scrore">
+                                        <div class="number">
+                                            27
+                                       </div>
+                                       <div class="status">
+                                        Kill
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row mt-5">
+                        <img src="/theme_softhealer_website/static/src/img/blogs_bkp/dead_shot_tournament_2025/v_s.webp" class="sh_vs_image text-center"/>
+                            <h3>Team 2 </h3>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="sh_team_box">
+                                    <div class="sh_img">
+                                        <img src="/theme_softhealer_website/static/src/img/blogs_bkp/dead_shot_tournament_2025/dhaval.webp"></img>
+                                    </div>
+                                    <div class="sh_player_name">
+                                        Dhaval Chauhan
+                                    </div>
+                                    <div class="sh_total_scrore">
+                                        <div class="number">
+                                            24
+                                       </div>
+                                       <div class="status">
+                                        Kill
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="sh_team_box">
+                                    <div class="sh_img">
+                                        <img src="/theme_softhealer_website/static/src/img/blogs_bkp/dead_shot_tournament_2025/priyen.webp"></img>
+                                    </div>
+                                    <div class="sh_player_name">
+                                        Priyen Doshi
+                                    </div>
+                                    <div class="sh_total_scrore">
+                                        <div class="number">
+                                            4
+                                       </div>
+                                       <div class="status">
+                                        Kill
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="sh_team_box">
+                                    <div class="sh_img">
+                                        <img src="/theme_softhealer_website/static/src/img/blogs_bkp/dead_shot_tournament_2025/krushnaraj.webp"></img>
+                                    </div>
+                                    <div class="sh_player_name">
+                                        Krushnrajsinh Zala
+                                    </div>
+                                    <div class="sh_total_scrore">
+                                        <div class="number">
+                                           7
+                                       </div>
+                                       <div class="status">
+                                        Kill
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="sh_team_box">
+                                    <div class="sh_img">
+                                        <img src="/theme_softhealer_website/static/src/img/blogs_bkp/dead_shot_tournament_2025/jatin.webp"></img>
+                                    </div>
+                                    <div class="sh_player_name">
+                                        Jatin Khanderiya
+                                    </div>
+                                    <div class="sh_total_scrore">
+                                       <div class="number">
+                                           22
+                                       </div>
+                                       <div class="status">
+                                           Kill
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="sh_champions_section" id="sh_champions_section">
+                    <div class="container">
+                        <h2 class="sh_heading_text">
+                            And the Champions Are
+                        </h2>
+                        <div class="row mt-5">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                                <div class="sh_image_box">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/dead_shot_tournament_2025/winner_section_1.webp"/>
+
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 align-self-center">
+                                <p class="sh_text">
+                                    After an electrifying final,<b> Team 1 </b> was crowned the Dead Shot Tournament 2025 Champions!
+                                </p>
+                                <div class="sh_goal_box_content">
+                                    <div class="sh_goal_check_box">
+                                       <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 14 14">
+                                                    <defs>
+                                                        <style>
+                                                            .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                    </defs>
+                                                    <title>About CRM</title>
+                                                    <rect class="cls-1" width="14" height="14"></rect>
+                                                    <path class="cls-2" d="M7,1.37A5.64,5.64,0,1,0,12.64,7,5.62,5.62,0,0,0,7,1.37ZM6.94,12A5,5,0,1,1,12,7.1,5,5,0,0,1,6.94,12ZM6.29,8.75A.43.43,0,0,1,6,8.62L4.7,7.3c-.16-.16-.22-.34,0-.52s.36-.1.52,0c.31.31.64.61.94.93.14.15.22.14.36,0L8.82,5.43a.35.35,0,0,1,.39-.15.32.32,0,0,1,.12.56c-.28.3-.58.59-.87.88-.61.61-1.21,1.22-1.82,1.82C6.54,8.64,6.45,8.75,6.29,8.75Z" transform="translate(0 0)"></path>
+                                                </svg>
+                                    </div>
+                                    <div class="sh_goal_text">
+                                        Exceptional Teamwork
+                                    </div>
+                                </div>
+                                <div class="sh_goal_box_content">
+                                    <div class="sh_goal_check_box">
+                                       <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 14 14">
+                                                    <defs>
+                                                        <style>
+                                                            .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                    </defs>
+                                                    <title>About CRM</title>
+                                                    <rect class="cls-1" width="14" height="14"></rect>
+                                                    <path class="cls-2" d="M7,1.37A5.64,5.64,0,1,0,12.64,7,5.62,5.62,0,0,0,7,1.37ZM6.94,12A5,5,0,1,1,12,7.1,5,5,0,0,1,6.94,12ZM6.29,8.75A.43.43,0,0,1,6,8.62L4.7,7.3c-.16-.16-.22-.34,0-.52s.36-.1.52,0c.31.31.64.61.94.93.14.15.22.14.36,0L8.82,5.43a.35.35,0,0,1,.39-.15.32.32,0,0,1,.12.56c-.28.3-.58.59-.87.88-.61.61-1.21,1.22-1.82,1.82C6.54,8.64,6.45,8.75,6.29,8.75Z" transform="translate(0 0)"></path>
+                                                </svg>
+                                    </div>
+                                    <div class="sh_goal_text">
+                                        Strong communication
+                                    </div>
+                                </div>
+                                <div class="sh_goal_box_content">
+                                    <div class="sh_goal_check_box">
+                                       <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 14 14">
+                                                    <defs>
+                                                        <style>
+                                                            .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                    </defs>
+                                                    <title>About CRM</title>
+                                                    <rect class="cls-1" width="14" height="14"></rect>
+                                                    <path class="cls-2" d="M7,1.37A5.64,5.64,0,1,0,12.64,7,5.62,5.62,0,0,0,7,1.37ZM6.94,12A5,5,0,1,1,12,7.1,5,5,0,0,1,6.94,12ZM6.29,8.75A.43.43,0,0,1,6,8.62L4.7,7.3c-.16-.16-.22-.34,0-.52s.36-.1.52,0c.31.31.64.61.94.93.14.15.22.14.36,0L8.82,5.43a.35.35,0,0,1,.39-.15.32.32,0,0,1,.12.56c-.28.3-.58.59-.87.88-.61.61-1.21,1.22-1.82,1.82C6.54,8.64,6.45,8.75,6.29,8.75Z" transform="translate(0 0)"></path>
+                                                </svg>
+                                    </div>
+                                    <div class="sh_goal_text">
+                                        Tactical dominance
+                                    </div>
+                                </div>
+                                <p class="sh_text mt-3">
+                                    Each member brought a unique strength to the table, and their chemistry was undeniable. Special shout-out to <b> Mihir Kalariya, Monak Joshi, Archan Gajera, and Meet Gadoya </b> for their outstanding performance and well-deserved win.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="sh_deadshot_tournament_2025_last_section"
+                    class="sh_deadshot_tournament_2025_last_section aos-init aos-animate">
+                    <div class="container">
+                        <div class="sh_why_use_crm_section_main">
+                            <div class="sh_inner_box">
+                                <div class="sh_why_use_crm_section_content aos-init aos-animate"
+                                    data-aos="fade-right">
+                                    <h2 class="sh_why_use_crm_section_content_title">More Than Just a Game</h2>
+                                    <div class="sh_why_use_crm_section_content_box">
+                                        <div class="sh_why_use_crm_section_content_check_box">
+                                            <svg id="Layer_1" data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 14 14">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                </defs>
+                                                <title>Why Shold CRM Use</title>
+                                                <rect class="cls-1" width="14" height="14"></rect>
+                                                <path class="cls-2"
+                                                    d="M12.21,1.6a.72.72,0,0,0-.83,0Q6.64,4.35,1.89,7.05a.89.89,0,0,0-.3.28.68.68,0,0,0,.38,1c.91.39,1.82.76,2.73,1.13.19.08.28.17.27.38s0,.59,0,.89v.91a.74.74,0,0,0,.19.51.88.88,0,0,0,1.41,0c.35-.4.66-.82,1-1.24A.31.31,0,0,1,8,10.83c.71.32,1.43.62,2.16.92a.68.68,0,0,0,1-.56c0-.17.06-.33.08-.49.21-1.4.42-2.8.64-4.2s.43-2.75.64-4.12A.72.72,0,0,0,12.21,1.6ZM5,8.88,2.14,7.69,11.06,2.6l0,.06L8.92,5,5.41,8.79A.31.31,0,0,1,5,8.88Zm2,1.73-.86,1.08a.28.28,0,0,1-.33.13c-.16-.05-.17-.18-.17-.31v-.72h0v-.72c0-.15,0-.21.18-.14l1.12.46C7,10.44,7.07,10.5,7,10.61Zm4.34-4.87c-.27,1.73-.54,3.45-.8,5.18,0,.2-.09.23-.26.15L6.1,9.34c-.21-.08-.17-.14,0-.28,1.52-1.62,3-3.25,4.54-4.87l1.05-1.13.06,0Z"
+                                                    transform="translate(0 0)"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="sh_why_use_crm_section_content_text">
+                                            While the tournament was a competitive event, it also served a greater purpose — fostering camaraderie, enhancing collaboration, and promoting mental agility in a fun and engaging way.
+                                        </div>
+                                    </div>
+
+                                    <div class="sh_why_use_crm_section_content_box">
+                                        <div class="sh_why_use_crm_section_content_check_box">
+                                            <svg id="Layer_1" data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 14 14">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                </defs>
+                                                <title>Why Shold CRM Use</title>
+                                                <rect class="cls-1" width="14" height="14"></rect>
+                                                <path class="cls-2"
+                                                    d="M12.21,1.6a.72.72,0,0,0-.83,0Q6.64,4.35,1.89,7.05a.89.89,0,0,0-.3.28.68.68,0,0,0,.38,1c.91.39,1.82.76,2.73,1.13.19.08.28.17.27.38s0,.59,0,.89v.91a.74.74,0,0,0,.19.51.88.88,0,0,0,1.41,0c.35-.4.66-.82,1-1.24A.31.31,0,0,1,8,10.83c.71.32,1.43.62,2.16.92a.68.68,0,0,0,1-.56c0-.17.06-.33.08-.49.21-1.4.42-2.8.64-4.2s.43-2.75.64-4.12A.72.72,0,0,0,12.21,1.6ZM5,8.88,2.14,7.69,11.06,2.6l0,.06L8.92,5,5.41,8.79A.31.31,0,0,1,5,8.88Zm2,1.73-.86,1.08a.28.28,0,0,1-.33.13c-.16-.05-.17-.18-.17-.31v-.72h0v-.72c0-.15,0-.21.18-.14l1.12.46C7,10.44,7.07,10.5,7,10.61Zm4.34-4.87c-.27,1.73-.54,3.45-.8,5.18,0,.2-.09.23-.26.15L6.1,9.34c-.21-.08-.17-.14,0-.28,1.52-1.62,3-3.25,4.54-4.87l1.05-1.13.06,0Z"
+                                                    transform="translate(0 0)"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="sh_why_use_crm_section_content_text">
+                                            The event drew enthusiastic spectators from across the organization, cheering their colleagues and enjoying the vibrant esports culture that’s steadily growing at Softhealer.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="sh_deadshot_tournament_2025_last_section_1"
+                    class="sh_deadshot_tournament_2025_last_section_1 aos-init aos-animate">
+                    <div class="container">
+                        <div class="sh_why_use_crm_section_main">
+                            <div class="sh_inner_box">
+                                <div class="sh_why_use_crm_section_content aos-init aos-animate"
+                                    data-aos="fade-right">
+                                    <h2 class="sh_why_use_crm_section_content_title">A Big Thank You</h2>
+                                    <div class="sh_why_use_crm_section_content_box">
+                                        <div class="sh_why_use_crm_section_content_check_box">
+                                            <svg id="Layer_1" data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 14 14">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                </defs>
+                                                <title>Why Shold CRM Use</title>
+                                                <rect class="cls-1" width="14" height="14"></rect>
+                                                <path class="cls-2"
+                                                    d="M12.21,1.6a.72.72,0,0,0-.83,0Q6.64,4.35,1.89,7.05a.89.89,0,0,0-.3.28.68.68,0,0,0,.38,1c.91.39,1.82.76,2.73,1.13.19.08.28.17.27.38s0,.59,0,.89v.91a.74.74,0,0,0,.19.51.88.88,0,0,0,1.41,0c.35-.4.66-.82,1-1.24A.31.31,0,0,1,8,10.83c.71.32,1.43.62,2.16.92a.68.68,0,0,0,1-.56c0-.17.06-.33.08-.49.21-1.4.42-2.8.64-4.2s.43-2.75.64-4.12A.72.72,0,0,0,12.21,1.6ZM5,8.88,2.14,7.69,11.06,2.6l0,.06L8.92,5,5.41,8.79A.31.31,0,0,1,5,8.88Zm2,1.73-.86,1.08a.28.28,0,0,1-.33.13c-.16-.05-.17-.18-.17-.31v-.72h0v-.72c0-.15,0-.21.18-.14l1.12.46C7,10.44,7.07,10.5,7,10.61Zm4.34-4.87c-.27,1.73-.54,3.45-.8,5.18,0,.2-.09.23-.26.15L6.1,9.34c-.21-.08-.17-.14,0-.28,1.52-1.62,3-3.25,4.54-4.87l1.05-1.13.06,0Z"
+                                                    transform="translate(0 0)"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="sh_why_use_crm_section_content_text">
+                                            We extend our heartfelt thanks to all participants, organizers, and supporters who made this tournament a grand success. Events like these continue to strengthen our community and provide a fun, competitive break from the day-to-day.
+                                            <br/>
+                                            Here’s to more such events that blend skill, excitement, and team spirit!
+                                        </div>
+                                    </div>
+                                    <h3>
+                                        The Game Behind the Glory: Dead Shot
+                                    </h3>
+                                    <div class="sh_why_use_crm_section_content_box">
+                                        <div class="sh_why_use_crm_section_content_check_box">
+                                            <svg id="Layer_1" data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 14 14">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                </defs>
+                                                <title>Why Shold CRM Use</title>
+                                                <rect class="cls-1" width="14" height="14"></rect>
+                                                <path class="cls-2"
+                                                    d="M12.21,1.6a.72.72,0,0,0-.83,0Q6.64,4.35,1.89,7.05a.89.89,0,0,0-.3.28.68.68,0,0,0,.38,1c.91.39,1.82.76,2.73,1.13.19.08.28.17.27.38s0,.59,0,.89v.91a.74.74,0,0,0,.19.51.88.88,0,0,0,1.41,0c.35-.4.66-.82,1-1.24A.31.31,0,0,1,8,10.83c.71.32,1.43.62,2.16.92a.68.68,0,0,0,1-.56c0-.17.06-.33.08-.49.21-1.4.42-2.8.64-4.2s.43-2.75.64-4.12A.72.72,0,0,0,12.21,1.6ZM5,8.88,2.14,7.69,11.06,2.6l0,.06L8.92,5,5.41,8.79A.31.31,0,0,1,5,8.88Zm2,1.73-.86,1.08a.28.28,0,0,1-.33.13c-.16-.05-.17-.18-.17-.31v-.72h0v-.72c0-.15,0-.21.18-.14l1.12.46C7,10.44,7.07,10.5,7,10.61Zm4.34-4.87c-.27,1.73-.54,3.45-.8,5.18,0,.2-.09.23-.26.15L6.1,9.34c-.21-.08-.17-.14,0-.28,1.52-1.62,3-3.25,4.54-4.87l1.05-1.13.06,0Z"
+                                                    transform="translate(0 0)"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="sh_why_use_crm_section_content_text">
+                                            Of course, none of this high-octane action would have been possible without the true star of the tournament — Dead Shot. This insanely fun, totally free-to-play game brought out the best sharpshooters at Softhealer, pushing every team to lock in and prove their dominance on the digital battlefield. But Dead Shot is more than just a game — it’s a full-blown arena for competitive spirits.
+                                        </div>
+                                    </div>
+                                    <div class="sh_why_use_crm_section_content_box">
+                                        <div class="sh_why_use_crm_section_content_check_box">
+                                            <svg id="Layer_1" data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 14 14">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                </defs>
+                                                <title>Why Shold CRM Use</title>
+                                                <rect class="cls-1" width="14" height="14"></rect>
+                                                <path class="cls-2"
+                                                    d="M12.21,1.6a.72.72,0,0,0-.83,0Q6.64,4.35,1.89,7.05a.89.89,0,0,0-.3.28.68.68,0,0,0,.38,1c.91.39,1.82.76,2.73,1.13.19.08.28.17.27.38s0,.59,0,.89v.91a.74.74,0,0,0,.19.51.88.88,0,0,0,1.41,0c.35-.4.66-.82,1-1.24A.31.31,0,0,1,8,10.83c.71.32,1.43.62,2.16.92a.68.68,0,0,0,1-.56c0-.17.06-.33.08-.49.21-1.4.42-2.8.64-4.2s.43-2.75.64-4.12A.72.72,0,0,0,12.21,1.6ZM5,8.88,2.14,7.69,11.06,2.6l0,.06L8.92,5,5.41,8.79A.31.31,0,0,1,5,8.88Zm2,1.73-.86,1.08a.28.28,0,0,1-.33.13c-.16-.05-.17-.18-.17-.31v-.72h0v-.72c0-.15,0-.21.18-.14l1.12.46C7,10.44,7.07,10.5,7,10.61Zm4.34-4.87c-.27,1.73-.54,3.45-.8,5.18,0,.2-.09.23-.26.15L6.1,9.34c-.21-.08-.17-.14,0-.28,1.52-1.62,3-3.25,4.54-4.87l1.05-1.13.06,0Z"
+                                                    transform="translate(0 0)"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="sh_why_use_crm_section_content_text">
+                                             Whether you’re chasing victory or just in it for the thrill, it’s the ultimate playground where there are no rules, no paywalls, and no limits. Just raw adrenaline, strategy, and mayhem — all on your terms. If you're ready to unleash your inner warrior, Dead Shot is where the battle begins.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>

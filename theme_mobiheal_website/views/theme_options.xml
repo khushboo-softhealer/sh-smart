@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="snippet_options_theme_options">
+
+        <!--Offer Snippet-->
+        <div data-selector=".js_cls_mb_app_launch_section">
+            <we-datetimepicker string="Start Date" data-select-data-attribute=""
+                data-attribute-name="startTime" />
+
+            <we-datetimepicker string="End Date" data-select-data-attribute=""
+                data-attribute-name="endTime" />
+        </div>
+
+    </template>
+
+    <template id="snippet_options" inherit_id="website.snippet_options"
+        name="OneMate snippet options">
+        <xpath expr="." position="inside">
+            <t t-call="theme_mobiheal_website.snippet_options_theme_options" />
+
+        </xpath>
+        <xpath expr='//we-select[@data-variable="header-template"]//we-button' position="before">
+            <we-button class='header_image_custom' title="Mobiheal Header"
+                data-customize-website-views="theme_mobiheal_website.sh_template_header_magazine"
+                data-customize-website-variable="'mobiheal_header'"
+                data-img="/theme_mobiheal_website/static/src/img/mobiheal_header.svg"
+                />
+        </xpath>
+
+    </template>
+</odoo>

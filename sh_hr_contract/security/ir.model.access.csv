@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_salary_structure,sh.salary.structure,sh_hr_contract.model_sh_salary_structure,base.group_user,1,1,1,1
+access_hr_contract_goals,access_hr_contract_goals,model_hr_contract_goals,base.group_user,1,1,1,1
+access_hr_contract_improvement,access_hr_contract_improvement,model_hr_contract_improvement,base.group_user,1,1,1,1
+access_hr_employee,access_hr_employee,model_hr_employee,hr.group_hr_manager,1,1,0,0
+sh_hr_contract.access_sh_renew_contract,access_sh_renew_contract,sh_hr_contract.model_sh_renew_contract,base.group_user,1,1,1,1

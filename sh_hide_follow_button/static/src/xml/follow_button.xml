@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="mail.FollowButton" t-inherit="mail.FollowButton" t-inherit-mode="primary" owl="1">
+        <xpath expr="//t[@t-name='mail.FollowButton']" position="attributes">
+            <attribute name="t-if">sh_follow_group_allow</attribute>
+        </xpath>
+    </t>
+    
+</templates>

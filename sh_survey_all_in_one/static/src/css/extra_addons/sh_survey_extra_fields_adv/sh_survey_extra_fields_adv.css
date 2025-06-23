@@ -1,0 +1,25 @@
+#js_id_sh_survey_extra_fields_adv_loading_msg {
+    text-align: center;
+    padding: 40px;
+    background-color: #eee;
+}
+
+#js_id_sh_survey_extra_fields_adv_canvas {
+    width: 100%;
+}
+
+#js_id_sh_survey_extra_fields_adv_output {
+    margin-top: 20px;
+    background: #eee;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+#js_id_sh_survey_extra_fields_adv_output div {
+    padding-bottom: 10px;
+    word-wrap: break-word;
+}
+
+#noQRFound {
+    text-align: center;
+}

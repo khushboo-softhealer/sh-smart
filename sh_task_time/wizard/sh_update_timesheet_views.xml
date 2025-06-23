@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_update_timesheet_task_wizard_view" model="ir.ui.view">
+        <field name="name">sh.update.timesheet.wizard.view</field>
+        <field name="model">sh.update.timesheet</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <group>
+                <field name="name" />
+            </group>
+            <group>
+                <group>
+                    <field name="sh_employee_id" string="Employee" invisible="1"/>
+                    <field name="unit_amount" widget="float_time"/>
+                </group>
+                <group>
+                    <field name="sh_update_date" />
+                </group>               
+            </group>
+            
+            <footer>
+                <button type="object" class="btn btn-primary" name="update_data" string="Add"/>
+                <button string="Cancel" class="btn-default" special="cancel" />
+            </footer>
+        </field>
+    </record>
+
+</odoo>

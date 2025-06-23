@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Project Task Stage Template -->
+    <menuitem
+        id="sh_project_stage_template_menu"
+        name="Project Task Stage Template"
+        action="sh_project_task_base.sh_project_stage_template_action"
+        parent="project.menu_project_config"
+        sequence="1"
+    />
+
+    <!-- Project Project Stage Template -->
+    <menuitem
+        id="sh_project_project_stage_template_menu"
+        name="Project Stage Template"
+        action="sh_project_task_base.sh_project_project_stage_template_action"
+        parent="project.menu_project_config"
+        sequence="2"
+    />
+
+    <!-- CR States -->
+    <menuitem
+        id="sh_cr_state_menu"
+        name="CR States"
+        parent="project.menu_project_config"
+        action="sh_project_task_base.sh_cr_state_action"
+        sequence="10"
+    />
+
+    <!-- Other -->
+    <menuitem
+        id="sh_project_task_other_menu"
+        name="Other"
+        parent="project.menu_main_pm"
+        sequence="3"
+    />
+
+    <!-- CR -->
+    <menuitem
+        id="sh_task_upcoming_feature_menu"
+        name="CR"
+        parent="sh_project_task_other_menu"
+        action="sh_project_task_base.sh_task_upcoming_feature_action"
+        sequence="9"
+    />
+
+</odoo>

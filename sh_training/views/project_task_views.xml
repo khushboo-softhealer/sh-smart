@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="sh_training_project_task_form_view" model="ir.ui.view">
+        <field name="name">project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/header/button[last()]" position="after">
+                <field name="trainee" invisible="1" />
+            </xpath>
+            <field name="user_ids" position="after">
+                <field name="batch_id" options="{'no_quick_create': True, 'no_create_edit': True}"
+                    widget="many2many_tags"
+                    groups="sh_training.group_manager,sh_training.group_trainer" />
+                <field name="course_id" widget="selection"
+                    groups="sh_training.group_manager,sh_training.group_trainer" />
+            </field>
+            <!-- <xpath expr="//notebook" position="inside">
+                <page name="remark" string="Remark"
+                    groups="sh_training.group_manager,sh_training.group_trainer">
+                    <group>
+                        <group>
+                            <field name="sh_training_rating" widget="priority" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="sh_training_comment" />
+                    </group>
+                </page>
+            </xpath> -->
+        </field>
+    </record>
+
+    <record id="sh_training_project_task_search_view" model="ir.ui.view">
+        <field name="name">project.task.inherit.view.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group//filter[@name='group_create_date']" position="after">
+                <filter string="Batch" name="batch_id" context="{'group_by':'batch_id'}" />
+                <filter string="Course" name="course_id" context="{'group_by':'course_id'}" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

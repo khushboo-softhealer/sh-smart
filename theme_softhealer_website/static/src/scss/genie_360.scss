@@ -1,0 +1,295 @@
+.sh_genie_page{
+    background-image: linear-gradient(180deg, #794aff 0%, #9f7dff 100%);background-attachment:fixed; position: relative; z-index: 1;
+    &:after{
+        position: absolute; content:''; top:0; left:0; height:100%; opacity:0.6; width:100%;background-image:linear-gradient(180deg, #FFFFFF00 0%, #ffffff 100%); z-index:-1;
+    }
+}
+#sh_genie_360_banner{height:500px !important; position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index:1;
+.sh_heading{
+    text-align: center; font-size: 56px; color:#fff; font-weight:500;
+    @include media-breakpoint-down(md){
+        font-size:40px;
+    }
+}
+.sh_text{
+    text-align: center;
+    color: #FFF; opacity:0.9; font-size:18px; width:70%; margin:0px auto; margin-top:10px; line-height:1.6;
+    @include media-breakpoint-down(lg){
+        width:100%;
+    }
+}
+.sh_btn_group{
+    display: flex; margin-top: 30px; align-items: center; justify-content: center;
+    .sh_btn_1{
+        background-color: #fff;padding: 15px 25px 15px 25px; border-radius:8px; font-weight: 600; margin-right:15px; transition-duration: .3s;transition-property: transform;transition-timing-function: ease-out;
+        a{
+            color:#794aff; text-decoration:none;transition-duration: .3s;transition-property: transform;transition-timing-function: ease-out;
+        }
+        &:hover{
+            color:#fff; background-color: #794aff;
+            a{
+                color:#fff;
+            }
+        }
+    }
+    .sh_btn_2{
+        background-color: #101828;padding: 15px 25px 15px 25px; border-radius:8px; font-weight: 600; margin-right: 30px;transition-duration: .3s;transition-property: transform;transition-timing-function: ease-out;
+        a{
+            color:#fff; text-decoration:none;
+        }
+        &:hover{
+            color:#fff; background-color: #794aff; 
+        }
+    }
+}
+}
+
+#sh_genie_360_whatsapp{
+    .sh_shape{overflow: hidden;left: 0;width: 100%;line-height: 0;direction: ltr;transform: rotate(180deg); position: relative;
+        svg{
+              width: calc(100% + 1.3px);height: 700px;display: block;width: calc(100% + 1.3px);position: relative;left: 50%;transform: translateX(-50%);
+            .shape-fill{
+                fill: #fff;transform-origin: center;transform: rotateY(0deg);
+            }
+        }
+        .sh_image_content{
+            height:100%; width:100%; position: absolute; top:0; left:0; transform: rotate(180deg);    margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px; height:600px;
+            img{
+                height:100%; width:100%; position: relative; object-fit: contain;
+
+            }
+            .sh_icon_box{
+                position: absolute; top:250px; left:320px;transform: rotateZ(-45deg);background-color: #FFFFFF;border-radius: 100px 100px 100px 100px;box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+               img{
+                height:80px;
+               }
+            }
+            .sh_icon_box-1{
+                position: absolute; top:60px; left:500px;transform: rotateZ(-45deg);background-color: #FFFFFF;border-radius: 100px 100px 100px 100px;box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+               img{
+                height:80px;
+               }
+            }
+            .sh_icon_box-2{
+                position: absolute; top:-20px; left:780px;transform: rotateZ(0deg);background-color: #FFFFFF;border-radius: 100px 100px 100px 100px;box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+               img{
+                height:80px;
+               }
+            }
+            .sh_icon_box-3{
+                position: absolute;top: 40px;right: 520px;transform: rotateZ(10deg);background-color: #FFFFFF;border-radius: 100px 100px 100px 100px;box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+               img{
+                height:80px;
+               }
+            }
+            .sh_icon_box-4{
+                position: absolute;top: 235px;right: 330px;transform: rotateZ(0deg);background-color: #FFFFFF;border-radius: 100px 100px 100px 100px;box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+               img{
+                height:80px;
+               }
+            }
+            .sh_image{
+                height:300px; width:100%; position: absolute; top:250px; left:0;
+                img{
+                    height:100%; width:100%;
+                }
+            }
+        }
+        
+       
+    }
+    
+}
+#sh_why_genie_360{
+    padding:100px 0px; position: relative; overflow: hidden; background:#fff;
+    @include media-breakpoint-down(md){
+        padding:50px 0px;
+    }
+    .sh_heading{
+        color:#101828; font-size:48px; font-weight: 500; text-align: center;
+        @include media-breakpoint-down(md){
+            font-size:35px;
+        }
+    }
+    .sh_content_box{
+        padding: 24px 24px 24px 24px;background-color: #f9fafb;border-radius: 8px 8px 8px 8px;text-align: left; transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,transform var(--e-transform-transition-duration,.4s); margin-top:30px; min-height:255px;
+        .sh_icon_box{
+            margin-bottom:30px;
+            span{
+                background-color: #fff;border-radius: 50px;overflow: hidden;height: 50px;width: 50px;transform: rotate(0deg);font-size: 20px;text-align: center;line-height: 50px;
+            }
+        }
+        .sh_title{
+            color:#101828;margin-bottom: 4px; font-size: 20px; font-weight:500;
+        }
+        .sh_text{
+            margin-bottom: 0px;font-size: 16px;
+        }
+        &:hover{
+            background: #794aff; transform: translateY(-15px);
+            .sh_title{
+                color:#fff;
+            }
+            .sh_text{
+                color:#fff;opacity:0.9;
+            }
+        }
+
+    }
+}
+#sh_genie_helpdesk{
+    padding:0px 0px 100px 0px; position: relative; overflow: hidden; background:#fff;
+    @include media-breakpoint-down(md){
+        padding:0px 0px 50px 0px;
+    }   
+    .sh_heading{
+        color:#101828; font-size:48px; font-weight: 500; text-align: center;
+        @include media-breakpoint-down(md){
+            font-size:35px;
+        }
+    }
+    .sh_text{
+        text-align: center;
+        color:#101828; opacity:0.9; font-size:18px; width:75%; margin:0px auto; margin-top:10px; line-height:1.6; margin-bottom:50px;
+        @include media-breakpoint-down(lg){
+            width:100%;margin-bottom:30px;
+        }
+    }
+    .sh_slider_main{
+        border-radius: 16px 16px 16px 16px;background-color: #ffff;box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);border-style: solid;border-width: 32px 32px 32px 32px;border-color: #f9fafb;
+        .sh_slider_box{
+            display:flex; justify-content: space-between; align-items: center;
+            @include media-breakpoint-down(md){
+                flex-direction: column;
+            }
+            .sh_slider_img{width:40%; height:350px; border-radius:10px;
+                @include media-breakpoint-down(md){
+                    width:100%; height:300px;
+                }
+                img{
+                    height:100%; width:100%; border-radius:10px; object-fit: cover;
+                }
+            }
+            .sh_slider_content{
+                width:60%; padding:0px 30px 0px 50px;
+                @include media-breakpoint-down(md){
+                    width:100%; padding:30px 20px;
+                }
+                .sh_desc{
+                    font-size:35px; color:#101828; font-weight: 600; margin-bottom: 10px;
+                    @include media-breakpoint-down(md){
+                        font-size:30px; line-height:1.2;
+                    }
+                }
+                .sh_sub_desc{
+                    font-size:18px; color:rgba(16,24,40,0.6);
+                }
+            }
+        }
+    }
+    .carousel-indicators [data-bs-target]{
+        box-sizing: content-box;-webkit-box-flex: 0;-webkit-flex: 0 1 auto;flex: 0 1 auto;width: 10px;height: 10px;padding: 0;margin-right: 3px;margin-left: 3px;text-indent: -999px;cursor: pointer;background-color: #222;background-clip: padding-box;border: 0;opacity: 0.5;transition: opacity 0.6s ease;border-radius: 10px;margin-top: 0;
+    }
+    .carousel-indicators {
+        top:110%;
+        @include media-breakpoint-down(lg){
+            display:none;
+        }
+        button.active{
+            opacity: 1;
+        }
+    }
+    .carousel-control-prev{ opacity:0.9;
+        span{
+            background: #222;height: 50px;width: 50px;border-radius: 50px;text-align: center;line-height: 47px;font-size: 20px;
+        }
+    }
+    .carousel-control-next{opacity:0.9;
+        span{
+            background: #222;height: 50px;width: 50px;border-radius: 50px;text-align: center;line-height: 47px;font-size: 20px;
+        }
+    }
+    .carousel-control-prev, .carousel-control-next{
+        width:85%;
+        top:110%;
+        @include media-breakpoint-down(lg){
+            display:none;
+        } 
+    }
+}
+
+#sh_subscribe_form{
+    padding:50px 0px; background-color:#fff; position: relative; overflow: hidden; 
+    .sh_subscribe_box{
+        box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.1);transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;margin: 10px 10px 10px 10px;--e-column-margin-right: 10px;--e-column-margin-left: 10px;padding: 80px 80px 80px 80px; background:linear-gradient(180deg, #794aff 0%, #9f7dff 100%); position: relative;border-radius:16px;
+         @include media-breakpoint-down(md){
+            padding: 50px 20px;
+         }
+        &:after{
+            position: absolute; content:'';background-image: url('/theme_softhealer_website/static/src/img/images/genie_360/form_bg.webp');background-position: bottom center;background-repeat: no-repeat;background-size: contain;opacity: 1; top:0; left:0; height:100%; width:100%; z-index:0;
+        }
+        .sh_heading{
+            color:#fff;font-size:48px; font-weight: 500; text-align: center;margin-bottom: 180px;
+            @include media-breakpoint-down(md){
+                font-size:35px; margin-bottom:110px;
+            }
+        }
+        .sh_form{
+            background:#fff;transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s; z-index: 1; position: relative;padding: 48px 64px 48px 64px; border-radius:16px; width:600px; margin: 0px auto;
+            @include media-breakpoint-down(lg){
+                padding: 50px 30px; width:100%;
+             }
+             @include media-breakpoint-down(md){
+                padding: 30px 20px;
+             }
+            &::after{
+                content: ''; position: absolute; top:-210px; left:50%; transform: translateX(-50%);  height:250px; width:100%; background:url('/theme_softhealer_website/static/src/img/images/genie_360/final_icon.png'); background-size: contain; background-repeat: no-repeat; background-position:center;
+                @include media-breakpoint-down(md){
+                    height:180px; width:100%; top:-150px;
+                 }
+            }
+            .sh_title{
+                color: rgba(16, 24, 40, 0.6); font-size: 20px; font-weight: 500; line-height: 1.4; margin-bottom:15px;
+            }
+            .sh_form_box{
+                margin-bottom:20px;
+                .sh_label{
+                    color: #10182861;font-size: 16px; margin-bottom:3px;
+                    @include media-breakpoint-down(md){
+                        font-size: 14px;
+                    }
+                }
+                .sh_input{
+                    input{width:100%; border-style: solid;border-width: 1px 1px 1px 1px;border-color: #84848447;box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);font-size: 16px;color: #101828;background-color: #FFFFFF00;border-radius: 8px 8px 8px 8px;padding: 10px 16px 10px 16px;height: auto;transition: all .3s ease-in-out;
+                        &:hover{
+                            border-color: #101828;
+                        }
+                        &:focus{
+                            border-color: #101828;
+                        }
+                        &:focus-within{
+                            border-color: #101828;
+                        }
+                        &:focus-visible{
+                            outline: none;
+                        }
+                        @include media-breakpoint-down(md){
+                            font-size: 14px;
+                        }
+                    }
+                }
+               
+            }
+            .sh_form_btn{
+                color: #FFFFFF;
+                background-color: #101828;padding: 18px 34px 18px 34px; border-radius:8px;font-size: 16px;font-weight: 500; text-align: center; margin-top:30px;transition: all .3s ease-in-out;
+                a{
+                    color:#fff; text-decoration:none; 
+                }
+                &:hover{
+                   background-color: #794aff; transform: translateY(-15px);
+                }
+            }
+        }
+    }
+}

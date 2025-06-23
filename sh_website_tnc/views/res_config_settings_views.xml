@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+     <record id="sh_res_config_settings_terms_conditions_form_inherit" model="ir.ui.view">
+         <field name="name">res.config.settings.terms.conditions</field>
+         <field name="model">res.config.settings</field>
+         <field name="inherit_id" ref="website.res_config_settings_view_form" />
+         <field name="arch" type="xml">
+             <!-- <xpath expr="//div[@data-key='website']" position="inside"> -->
+             <xpath expr="//div[@id='website_settings']" position="after">
+                 <h2>Website Terms &amp; Conditions</h2>
+                 <div class="row mt16 o_settings_container" id="website_terms_settings">
+                     <div class="col-xs-12 col-md-12 o_setting_box" id="terms_conditions">
+                         <div class="o_setting_left_pane">
+                             <field name="sh_website_show_terms_conditions_website" />
+                         </div>
+
+                         <div class="o_setting_right_pane">
+                             <label for="sh_website_show_terms_conditions_website" />
+
+                             <div class="content-group" attrs="{'invisible':[('sh_website_show_terms_conditions_website','=',False)]}">
+                                 <div class="row mt16">
+                                     <label class="col-md-2 o_light_label" for="sh_website_tnc_type" />
+                                     <field name="sh_website_tnc_type" style="width: 700px;" attrs="{'required': [('sh_website_show_terms_conditions_website', '=', True)]}" />
+                                 </div>
+                                 <div class="row">
+                                 	<div class="col-md-2"></div>
+                                     <div class="col-md-4">
+	                                     <button name="%(sh_website_tnc.sh_website_tnc_multi_tnc_action)d" type="action" class="pl-0 btn btn-link" attrs="{'invisible': [('sh_website_tnc_type', '=', 'single')]}">
+	                                         <i class="fa fa-fw fa-arrow-right"></i><span>Multi Terms and Conditions</span>
+	                                     </button>
+                                     </div>
+                                 </div>
+                                 <div class="row mt16">
+                                     <label class="col-md-2 o_light_label" for="sh_website_tnc_alert_msg" attrs="{'invisible': [('sh_website_show_terms_conditions_website', '=', False)]}" />
+                                     <field name="sh_website_tnc_alert_msg" widget="html" options="{'style-inline': false, 'codeview': true}" style="width: 700px;" attrs="{'invisible': [('sh_website_show_terms_conditions_website', '=', False)]}" />
+                                 </div>
+                                 <div class="row mt16">
+                                     <label class="col-md-2 o_light_label" for="sh_website_tnc_default_check" attrs="{'invisible': [('sh_website_tnc_type', '!=', 'single')]}" />
+                                     <field
+                                         name="sh_website_tnc_default_check"
+                                         style="width: 700px;"
+                                         attrs="{'invisible': [('sh_website_tnc_type', '!=', 'single')],'required': [('sh_website_show_terms_conditions_website', '=', True)]}"
+                                     />
+                                 </div>
+                                 <div class="row mt16">
+                                     <label class="col-md-2 o_light_label" for="sh_website_tnc_terms_title" attrs="{'invisible': [('sh_website_tnc_type', '!=', 'single')]}" />
+                                     <field name="sh_website_tnc_terms_title" style="width: 700px;" attrs="{'invisible': [('sh_website_tnc_type', '!=', 'single')],'required': [('sh_website_tnc_type', '=', 'single'),('sh_website_show_terms_conditions_website', '=', True)]}" />
+                                 </div>
+                                 <div class="row mt16">
+                                     <label class="col-md-2 o_light_label" for="sh_website_tnc_terms_label" attrs="{'invisible': [('sh_website_tnc_type', '!=', 'single')]}" />
+                                     <field name="sh_website_tnc_terms_label" style="width: 700px;" attrs="{'invisible': [('sh_website_tnc_type', '!=', 'single')],'required': [('sh_website_tnc_type', '=', 'single'),('sh_website_show_terms_conditions_website', '=', True)]}" />
+                                 </div>
+                                 <div class="row mt16">
+                                     <label class="col-md-2 o_light_label" for="sh_website_tnc_terms_text" attrs="{'invisible': [('sh_website_tnc_type', '!=', 'single')]}" />
+                                     <field name="sh_website_tnc_terms_text" style="width: 700px;" attrs="{'invisible': [('sh_website_tnc_type', '!=', 'single')],'required': [('sh_website_tnc_type', '=', 'single'),('sh_website_show_terms_conditions_website', '=', True)]}" />
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </xpath>
+         </field>
+     </record>
+</odoo>

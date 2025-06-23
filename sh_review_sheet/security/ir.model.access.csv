@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+sh_review_sheet.access_sh_review_sheet,access_sh_review_sheet,sh_review_sheet.model_sh_review_sheet,base.group_user,1,1,1,1
+sh_review_sheet.access_sh_review_sheet_line,access_sh_review_sheet_line,sh_review_sheet.model_sh_review_sheet_line,base.group_user,1,1,1,1

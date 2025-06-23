@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <!-- website views -->
+        <record id="sh_testimonial_form_view" model="ir.ui.view">
+            <field name="name">sh.testimonial.form.view</field>
+            <field name="model">sh.testimonial</field>
+            <field name="arch" type="xml">
+                <form string="Testimonial Settings">
+                    <sheet>
+        				<field name="sh_image" widget="image" class="oe_avatar"/>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name='function'/>
+                                <field name="priority" widget="priority"  />
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                        <label for="comment" string="Comment"/>
+                        <field name="comment"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="sh_testimonial_tree_view" model="ir.ui.view">
+            <field name="name">sh.testimonial.tree.view</field>
+            <field name="model">sh.testimonial</field>
+            <field name="arch" type="xml">
+                <tree>
+					<field name="name"/>
+					<field name='function'/>
+					<field name="active" string="Visible in Website"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sh_testimonial_search_view" model="ir.ui.view">
+            <field name="name">sh.testimonial.search.view</field>
+            <field name="model">sh.testimonial</field>
+            <field name="arch" type="xml">
+                <search>
+                    <filter string="Active" name="active" domain="[('active', '=',True)]"/>
+                    <filter string="Inactive" name="inactive" domain="[('active', '=',False)]"/>
+             	</search>
+             </field>
+          </record>
+
+        <record id="action_sh_testimonial" model="ir.actions.act_window">
+            <field name="name">Testimonial</field>
+            <field name="res_model">sh.testimonial</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+
+        <menuitem name="Testimonial"
+            id="menu_sh_testimonial"
+            action="action_sh_testimonial"
+            parent="website.menu_website_global_configuration"
+            sequence="30"/>
+
+        <menuitem id="sh_website_editor_testimonial_menu" name="Testimonial"
+            groups="softhealer_website_base.group_softhealer_website_editor_testimonial"
+            parent="softhealer_website_base.sh_website_editor_contact_menu"
+            action="action_sh_testimonial" sequence="60"/>
+</odoo>

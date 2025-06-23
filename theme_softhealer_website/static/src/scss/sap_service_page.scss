@@ -1,0 +1,508 @@
+//  banner-start //
+.sh_sap_service_banner{
+    @include sh_other_page_banner; 
+    .sh_banner_title{
+        color: #fff;font-size: 40px;font-weight: 600;letter-spacing: -.01em;line-height: 1.1;margin-bottom: 0px;
+        @include media-breakpoint-only(md){
+           font-size: var(--sh-sh-other-page-banner-content-h2-tablet);
+        }
+         @include media-breakpoint-down(md){
+           font-size: var(--sh-sh-other-page-banner-content-h2-mobile);
+        }
+   }
+}
+//  banner-end //
+
+
+// start sh_sap_service_support_page //
+#sh_sap_service_support_page {
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_sap_service_support_main {
+        .sh_support_box_col {
+            position: relative;
+            &.sh_support_first_col {
+                padding-top: 100px;
+                @include media-breakpoint-down(md) {
+                    padding-top: 20px;
+                }
+            }
+            .sh_support_box {
+                padding: 25px;height: 100%;display: flex;flex-direction: column;border-radius: 5px;transition: 0.5s all;margin-bottom: 30px;box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);background: #fff;
+                &.sh_mb_1{
+                    @include media-breakpoint-up(sm) { 
+                        margin-bottom: 0;
+                    }
+                }
+                &.sh_mb_0{
+                    @include media-breakpoint-down(md) { 
+                        margin-bottom: 0;
+                    }
+                }
+                @include media-breakpoint-between(lg, xl) { 
+                    padding: 15px;
+                 }
+                @include media-breakpoint-only(md) {
+                    margin-bottom: 30px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    min-height: auto;max-height: auto;height: auto;padding-bottom: 20px;
+                }
+
+                &:hover {
+                    border-bottom-width: 1px;box-shadow: var(--sh-website-box-shadow);border-color: transparent !important;
+                }
+                .sh_support_content_box {
+                    .sh_support_title {
+                        font-size: var(--sh-website-heading-title-font-size);font-weight: var(--sh-section-heading-font-weight); margin-bottom: var(--sh-website-heading-title-margin-bottom);line-height: var(--sh-website-heading-title-line-height);color: var(--sh-section-heading-font-color);    text-transform: capitalize;
+                    }
+
+                    .sh_support_text {
+                        font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);color: var(--sh-website-normal-text-font-color);margin-bottom: 0px;
+                        @include media-breakpoint-only(md) {
+                            font-size: var(--sh-website-normal-text-font-size-tablet)
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-website-normal-text-font-size-mobile)
+                        }
+                    }
+                }
+               
+                .sh_support_icon {
+                    background-color: #f0e4fb;width: 50px;height: 50px;margin-bottom: 20px;border-radius: 5px;
+                    svg {
+                        width: 100%;height: 100%;object-fit: cover;padding: 10px;fill: o-color(o-color-1);
+                        .cls-1 {
+                            fill: o-color(o-color-1); stroke:none !important;
+                        }
+                        
+                        @include media-breakpoint-down(lg) {
+                           
+                        }
+                        .cls-2{
+                            fill:none !important; stroke:none !important;
+                        }
+                    }
+                }
+            }
+            .sh_box_1{
+                @include media-breakpoint-down(lg){
+                    margin-top:20px;
+                }
+                @include media-breakpoint-down(md){
+                    margin-top:0px;
+                }
+            }
+            .sh_why_softhealer_support_shap_top {
+                position: absolute;left: -50px;top: 40px;width: 40%;z-index: -1;
+                svg{
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                }
+                @include media-breakpoint-only(md) {
+                    left: -15px; top: 30px;
+                }
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+            .sh_why_softhealer_support_shap_bottom {
+                position: absolute;right: 25px;bottom: 0px;width: 80%;z-index: -1;
+                svg {
+                    width: 300px;
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                }
+                @include media-breakpoint-only(md) {
+                    right: 10px;
+                }
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+        }
+        .sh_service_content_box {
+            width: 100%;
+            padding-right: 80px;
+
+            @include media-breakpoint-down(lg) {
+                padding: 0px;
+                margin-bottom: 30px;
+            }
+            .sh_service_content_box_title {
+                font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-section-heading-font-size-tablet)
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile)
+                }
+            }
+            .sh_service_content_box_text {
+                font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-website-normal-text-font-size-tablet)
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-website-normal-text-font-size-mobile)
+                }
+            }
+            .btn {  
+                @include sh_primary_button;margin-top:20px;
+                span {
+                    display: flex;align-items: center;
+                    svg {
+                        stroke: #fff;display: inline-block;width: 30px; padding-right:5px;height: 30px;
+                    }
+                }
+            }
+            .sh_service_content_dic {
+                .sh_service_content_ul {
+                    padding-left: 0;
+                    .sh_service_content_li {
+                        font-size: var(--sh-website-normal-text-font-size); color: var(--sh-website-normal-text-font-color);font-weight: var(--sh-website-normal-text-font-weight);margin-bottom: 10px;list-style-type: none;display: flex;
+                        @include media-breakpoint-only(md) {
+                            font-size: var(--sh-website-normal-text-font-size-tablet)
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-website-normal-text-font-size-mobile)
+                        }
+                        .sh_service_content_li_check_box {
+                            width: 30px;
+                            .sh_service_content_li_check {
+                                background-color: o-color(o-color-1);font-size: 15px;border-radius: 50px;color: #fff;margin-right: 20px;padding: 3px;
+                            }
+                        }
+                        .sh_highlight{
+                            font-size:20px; color: var(--sh-section-heading-font-color);font-weight: var(--sh-section-heading-font-weight)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// end sh_sap_service_support_page //
+// start sh_sap_implementation section //
+#sh_sap_implementation_section {
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    @include media-breakpoint-down(md){
+        padding: 0;
+    }
+    .sh_sap_implementation_main {
+        .sh_support_box_col {
+            position: relative;
+            &.sh_support_first_col {
+                padding-top: 100px;
+                @include media-breakpoint-down(md) {
+                    padding-top: 20px;
+                }
+            }
+            .sh_support_box {
+                padding: 25px;height: 100%;display: flex;flex-direction: column;border-radius: 5px;transition: 0.5s all;margin-bottom: 30px;box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);background: #fff;
+                &.sh_mb_1{
+                    @include media-breakpoint-up(sm) { 
+                        margin-bottom: 0;
+                    }
+                }
+                &.sh_mb_0{
+                    @include media-breakpoint-down(md) { 
+                        margin-bottom: 0;
+                    }
+                }
+                @include media-breakpoint-between(lg, xl) { 
+                    padding: 15px;
+                 }
+                @include media-breakpoint-only(md) {
+                    margin-bottom: 30px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    min-height: auto;max-height: auto;height: auto;padding-bottom: 20px;
+                }
+
+                &:hover {
+                    border-bottom-width: 1px;box-shadow: var(--sh-website-box-shadow);border-color: transparent !important;
+                }
+                .sh_support_content_box {
+                    .sh_support_title {
+                        font-size: var(--sh-website-heading-title-font-size);font-weight: var(--sh-section-heading-font-weight); margin-bottom: var(--sh-website-heading-title-margin-bottom);line-height: var(--sh-website-heading-title-line-height);color: var(--sh-section-heading-font-color);    text-transform: capitalize;
+                    }
+
+                    .sh_support_text {
+                        font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);color: var(--sh-website-normal-text-font-color);margin-bottom: 0px;
+                        @include media-breakpoint-only(md) {
+                            font-size: var(--sh-website-normal-text-font-size-tablet)
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-website-normal-text-font-size-mobile)
+                        }
+                    }
+                }
+                .sh_support_icon {
+                    background-color: #f0e4fb;width: 50px;height: 50px;margin-bottom: 20px;border-radius: 5px;
+                    svg {
+                        width: 100%;height: 100%;object-fit: cover;padding: 10px;fill: o-color(o-color-1);
+                        .cls-1 {
+                            fill: o-color(o-color-1); stroke:none !important;
+                        }
+                        
+                        @include media-breakpoint-down(lg) {
+                           
+                        }
+                        .cls-2{
+                            fill:none !important; stroke:none !important;
+                        }
+                    }
+                }
+            }
+            .sh_box_1{
+                @include media-breakpoint-down(lg){
+                    margin-top:20px;
+                }
+                @include media-breakpoint-down(md){
+                    margin-top:0px;
+                }
+            }
+            .sh_why_softhealer_support_shap_top {
+                position: absolute;left: -50px;top: 40px;width: 40%;z-index: -1;
+                svg{
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                }
+                @include media-breakpoint-only(md) {
+                    left: -15px; top: 30px;
+                }
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+            .sh_why_softhealer_support_shap_bottom {
+                position: absolute;right: 25px;bottom: 0px;width: 80%;z-index: -1;
+                svg {
+                    width: 300px;
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                }
+                @include media-breakpoint-only(md) {
+                    right: 10px;
+                }
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+        }
+        .sh_service_content_box {
+            width: 100%;
+            padding-left: 80px;
+
+            @include media-breakpoint-down(lg) {
+                padding: 0px;
+                margin-top: 30px;
+            }
+            .sh_service_content_box_title {
+                font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);margin-bottom: var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-section-heading-font-size-tablet)
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile)
+                }
+            }
+            .sh_service_content_box_text {
+                font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-website-normal-text-font-size-tablet)
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-website-normal-text-font-size-mobile)
+                }
+            }
+            .sh_service_content_dic {
+                .sh_service_content_ul {
+                    padding-left: 0;
+                    .sh_service_content_li {
+                        font-size: var(--sh-website-normal-text-font-size); color: var(--sh-website-normal-text-font-color);font-weight: var(--sh-website-normal-text-font-weight);margin-bottom: 10px;list-style-type: none;display: flex;
+                        @include media-breakpoint-only(md) {
+                            font-size: var(--sh-website-normal-text-font-size-tablet)
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-website-normal-text-font-size-mobile)
+                        }
+                        .sh_service_content_li_check_box {
+                            width: 30px;
+                            .sh_service_content_li_check {
+                                background-color: o-color(o-color-1);font-size: 15px;border-radius: 50px;color: #fff;margin-right: 20px;padding: 3px;
+                            }
+                        }
+                        .sh_highlight{
+                            font-size:20px; color: var(--sh-section-heading-font-color);font-weight: var(--sh-section-heading-font-weight)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// end sh_sap_implementation_section //
+
+
+
+// sh_sap_variety_services section start //
+
+#sh_sap_variety_services{
+    position: relative;padding-top:var(--sh-section-top-padding); background:#fff; padding-bottom:80px;
+    @include media-breakpoint-between(lg, xl){
+        padding-bottom: var(--sh-section-bottom-padding);
+    }
+    .sh_about_image_box{
+        width:100%;
+        .sh_img{
+            height:400px;width:90%;border-radius: var(--sh-website-common-border-radius);position: relative; margin:0 auto;
+            .sh_number{
+                position: absolute; height:100px; width:100px; border-radius:100%; display:flex; justify-content: center; align-items: center; top:-50px; left:50%; background:rgba(255,255,255,0.9);font-size:22px;color:#1e266d; transform: translateX(-50%);
+            }
+            img{
+                height:100%; width:100%;border-radius:var(--sh-website-common-border-radius);
+            }
+            .sh_shape{
+                svg{
+                    height:350px !important; width:350px !important;
+                    position: absolute; bottom:-150px; right:-50px;z-index:-1;display: block; stroke:o-color(o-color-1); stroke-width:3;
+                }
+            }
+        }
+    }
+    
+    .sh_odoo_services_about_content{
+        padding:0 20px; padding-left:30px;
+        .sh_sub_title {@include sh_sub_badge}
+        h2.sh_heading_title{
+            font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom); text-transform: capitalize;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);margin-bottom:15px;
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-font-size-mobile);margin-bottom:15px;
+            }
+        }
+        p.sh_text{
+            font-size: var(--sh-website-normal-text-font-size);font-weight:var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom:0;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+            }
+        }
+        .btn{@include sh_primary_button;margin-top:20px;
+            span{
+                svg{
+                    stroke: #fff;display: inline-block;width: 20px;
+                }
+            }
+        }
+
+    }
+    .sh_second_row{margin:50px 0px;
+        .sh_odoo_services_about_content{
+            padding:0 20px;padding-right:30px;
+        }
+    
+    }
+}
+@include media-breakpoint-down(xl){
+    #sh_sap_variety_services{
+        .sh_odoo_services_about_content{
+            padding:0px 20px;
+        }
+        .sh_second_row{
+            .sh_odoo_services_about_content{
+                padding:0 20px;
+            }
+            @include media-breakpoint-down(lg){
+                margin-top:30px;
+                margin-bottom:30px;
+            }
+        
+        }
+        .sh_about_image_box{
+            .sh_img{
+                height:300px;
+                .sh_number{
+                    height:80px; width:80px; top:-40px;
+                }
+                .sh_shape{
+                    svg{
+                        height: 300px !important;width: 300px !important;right:-30px;bottom: -120px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+@include media-breakpoint-down(lg){
+    #sh_sap_variety_services{
+        padding-top: var(--sh-section-top-padding-mobile) ;padding-bottom:var(--sh-section-bottom-padding-mobile);
+        .sh_heading_box{
+            width:100%;
+        }
+        .sh_odoo_services_about_content{
+            padding:0;
+        }
+        .sh_second_row{
+            .sh_order{order:2;}
+            .sh_odoo_services_about_content{
+                padding:0;
+            }
+        }
+        .sh_about_image_box{
+            .sh_img{
+                width:100%;margin-bottom:50px;
+                img{object-fit: cover;}
+            }
+
+        }
+
+    }
+}
+@include media-breakpoint-down(md){
+    #sh_sap_variety_services{
+        .sh_heading_box{
+            width:100%;
+        }
+        
+    }
+}
+@include media-breakpoint-down(sm){
+    #sh_sap_variety_services{
+        .sh_about_image_box{
+            .sh_img{
+                height:250px;
+                .sh_shape{
+                    svg{
+                        height: 250px !important;width: 250px !important;right: -10px;bottom: -100px;
+                    }
+                }
+            }
+        }
+    }
+}
+// sh_sap_variety_services section end //
+
+// call to action start //
+.sh_zoho_project_call_to_action {
+    @include sh_call_to_action_section;
+}
+// call to action end //

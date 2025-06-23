@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- Website Popular Searches List view -->
+    <record id="sh_website_popular_searches_view_tree" model="ir.ui.view">
+        <field name="name">sh.website.popular.searches.view.tree</field>
+        <field name="model">sh.website.popular.searches</field>
+        <field name="arch" type="xml">
+            <tree string="Website Popular Searches" multi_edit="1">
+                <field name="name" />
+                <field name="search_type" />
+                <field name="is_published" />
+                <field name="website_id" options="{'no_create': True}" groups="website.group_multi_website"/>
+                <field name="create_uid" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Website Popular Searches Form view -->
+    <record id="sh_website_popular_searches_view_form" model="ir.ui.view">
+        <field name="name">sh.website.popular.searches.view.form</field>
+        <field name="model">sh.website.popular.searches</field>
+        <field name="arch" type="xml">
+            <form string="Website Popular Searches">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button id="popular_searches_count" icon="fa-search" class="oe_stat_button">
+                            <field name="searches_count" string="Searches" widget="statinfo" />
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="website_id" options="{'no_create': True}" groups="website.group_multi_website"/>
+                        <field name="is_published" />
+                        <field name="search_type" />
+                        <field name="create_uid" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Website Popular Searches Search view -->
+    <record id="sh_website_popular_searches_view_search" model="ir.ui.view">
+        <field name="model">sh.website.popular.searches</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter string="Published" name="filter_published"
+                    domain="[('is_published', '=', True)]" />
+                <filter string="Unpublished" name="filter_unpublished"
+                    domain="[('is_published', '=', False)]" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Website Popular Searches Action -->
+    <record id="sh_website_popular_searches_action" model="ir.actions.act_window">
+        <field name="name">Website Popular Searches</field>
+        <field name="res_model">sh.website.popular.searches</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids"
+            eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('sh_website_popular_searches_view_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sh_website_popular_searches_view_form')}),
+        ]" />
+        <field name="search_view_id" ref="sh_website_popular_searches_view_search" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Website Popular Searches Yet
+            </p>
+        </field>
+    </record>
+
+    <!-- Website Popular Searches Menu -->
+    <menuitem id="sh_website_popular_searches_menu" name="Popular Searches"
+        action="sh_website_popular_searches_action"
+        parent="website.menu_website_global_configuration" sequence="10" />
+</odoo>

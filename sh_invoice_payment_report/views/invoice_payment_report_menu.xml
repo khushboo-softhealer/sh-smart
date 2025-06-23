@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="sh_inv_pay_report_menu" name="Invoice Payment Report" parent="account.menu_finance_reports" action="sh_inv_pay_report_wizard_view_action" 
+                groups = "account.group_account_invoice" sequence="999"/>
+</odoo>

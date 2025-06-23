@@ -1,0 +1,599 @@
+// start Parking banner section // 
+#sh_odoo_training_banner {
+    @include sh_other_page_banner;
+}
+// end Parking banner section // 
+// start about odoo training section // 
+#sh_about_odoo_technical_training_section{
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile) !important;padding-bottom: var(--sh-section-bottom-padding-mobile) !important;
+    }
+}
+#sh_about_odoo_functional_training_section {
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile) !important;
+    }
+}
+#sh_about_odoo_technical_training_section,
+#sh_about_odoo_functional_training_section {
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);
+    .sh_about_odoo_training_main {
+        .sh_flex_column_reverse{
+            @include media-breakpoint-down(lg){
+                flex-direction: column-reverse;
+            }
+        }
+        .sh_content_box{
+            width:100%;
+            padding-right: 15px;
+            padding-left: 35px;
+            @include media-breakpoint-between(lg, xl){
+                padding-left: 15px;
+            }
+            @include media-breakpoint-only(md){
+                padding-left:0;padding-right: 0;
+            }
+            @include media-breakpoint-down(md){
+                margin-bottom:0px;padding-left:0;padding-right: 0;
+            }
+            .sh_box_title{
+                font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom);text-transform: capitalize;
+                @include media-breakpoint-between(lg, xl){
+                    font-size: 30px;
+                }
+                @include media-breakpoint-only(md){
+                    font-size:var(--sh-section-heading-font-size-tablet);
+                }
+                @include media-breakpoint-down(md){
+                    font-size:var(--sh-section-heading-font-size-mobile);
+                }
+            }
+            .sh_box_text{
+                font-size: var(--sh-website-normal-text-font-size);font-weight:var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0;
+                @include media-breakpoint-only(md){
+                    font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                }
+                @include media-breakpoint-down(md){
+                    font-size:var(--sh-section-heading-sub-title-font-size-mobile);
+                }
+            }
+
+            .btn {  
+                @include sh_primary_button;margin-top:20px;
+                span {
+                    display: flex;align-items: center;
+                    svg {
+                        stroke: #fff;display: inline-block;width: 30px; padding-right:5px;height: 30px;
+                    }
+                }
+            }
+            .sh_icon_box{
+                display:flex;justify-content: center;align-items:center;margin-top:15px;
+                .sh_icon{margin-right:20px;
+                    svg{
+                        height:40px;width:40px;
+                        @include media-breakpoint-down(md){
+                            height:35px ;width:35px ;
+                        }
+                        .cls-1 {
+                            fill: none !important;
+                        }
+                        .cls-2 {
+                            fill: o-color(o-color-1);
+                        }
+                    }
+                }
+                .sh_desc{width:100%;
+                    h2.sh_title{
+                        font-size:20px;color:var(--sh-website-heading-title-font-color) ;line-height: var(--sh-website-heading-title-line-height);text-transform: capitalize;margin-bottom: 0;
+                        @include media-breakpoint-between(lg, xl){
+                            font-size: 18px;
+                        }
+                        @include media-breakpoint-only(md) {
+                            font-size: 18px;
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .sh_column_inner_box {
+            position: relative;           
+            .sh_photo_group {
+                display: flex; position: relative; z-index: 10;
+                @include media-breakpoint-down(sm) {
+                    justify-content: center;
+                }
+                .sh_second_photo {  
+                    @include media-breakpoint-between(lg, xl){
+                        height: 400px;
+                    }
+                    @include media-breakpoint-only(md) {
+                        width: 100%;height: 350px; 
+                    }
+                    @include media-breakpoint-down(md) {
+                        width: 100%;height: 100%; 
+                    }               
+                    img {
+                        width: 100%;height: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                    }
+                }
+                .sh_shapes_one {
+                    svg {
+                        bottom: -13px;right: -8%;width: 270px;height: 100px;transform: translateY(-14.0692px);position: absolute;display: flex;z-index: -1;
+                        .cls-1 {
+                            fill: o-color(o-color-1);
+                        }
+                        @include media-breakpoint-between(lg, xl){
+                            right: -5%;
+                        }
+                        @include media-breakpoint-only(md) {
+                            right: -5%;bottom: -15px; width: 235px;height: 100px;
+                        }
+                        @include media-breakpoint-down(sm) {
+
+                            right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// end about odoo training section // 
+//sh_odoo_training_program_section start
+.sh_odoo_training_program_section {
+    background-color: #777af212;padding-top: var(--sh-section-top-padding);padding-bottom:var(--sh-section-bottom-padding);margin-top: var(--sh-section-top-padding);margin-bottom:0;
+    @include media-breakpoint-down(lg) {
+        margin-top: var(--sh-section-top-padding-mobile);margin-bottom: 0;padding-top:var(--sh-section-bottom-padding-mobile);padding-bottom:var(--sh-section-bottom-padding-mobile);margin-top: var(--sh-section-top-padding);
+    }
+    .sh_inner_box,
+    .sh_inner_box1 {
+        .sh_img_box {
+            display: flex;justify-content: left;
+            img {
+                width: 550px;object-fit: cover;height: 450px;box-shadow: 0 25px 98px rgba(0, 0, 0, 0.1);border-radius: var(--sh-website-common-border-radius);
+                @include media-breakpoint-only(xl) {
+                    width: 500px;
+                }
+                @include media-breakpoint-only(lg) {
+                    width: 400px;height: 400px;
+                }
+                @include media-breakpoint-down(lg) {
+                    width: 100%;height: 300px;
+                }
+            }
+        }
+        .sh-order {
+            @include media-breakpoint-down(md) {
+                order: 1;
+            }
+        }
+    }
+    .sh_inner_box1 {
+        padding-top: 50px;
+        @include media-breakpoint-only(lg){
+            padding: 80px 0 0;
+        }
+        @include media-breakpoint-only(md) {
+            padding: 50px 0 0;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 30px 0 0;
+        }
+
+        .sh_img_box {
+            justify-content: end;
+        }
+    }
+    .sh_right_dec {
+        height: 100%;display: flex;align-items: baseline;justify-content: center;flex-direction: column;
+        @include media-breakpoint-down(lg) {
+            padding-bottom: 20px;
+        }
+        h2 {
+            font-size: 80px;color: rgba(86, 75, 198, 0.35);
+            @include media-breakpoint-down(lg) {
+                font-size: 60px;
+            }
+        }
+        h5 {
+            font-size: var(--sh-section-heading-font-size);color: var(--sh-website-heading-title-font-color);font-weight: var(--sh-website-heading-title-font-weight);line-height: var(--sh-website-heading-title-line-height);margin-bottom: var(--sh-website-heading-title-margin-bottom);
+            @include media-breakpoint-only(md) {
+                font-size: var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+        p {
+            font-size: var(--sh-website-normal-text-font-size);color: var(--sh-website-normal-text-font-color);font-weight: var(--sh-website-normal-text-font-weight);line-height: var(--sh-website-normal-text-line-height);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-website-normal-text-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-website-normal-text-font-size-mobile);
+            }
+        }
+    }
+}
+//sh_odoo_training_program_section end //
+
+
+//sh_benifits_training_service_section start //
+.sh_benifits_training_service_section {
+    padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    header {
+        text-align: center;
+        @include media-breakpoint-down(lg) {
+            margin-top: 0px;
+        }
+        h6 {
+            color: var(--sh-section-heading-sub-title-font-color);font-size: var(--sh-section-heading-sub-title-font-size);letter-spacing: 0.01em;line-height: 1.5;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet)
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile)
+            }
+        }
+        h2 {
+            color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);width:var(--sh-section-heading-width-mobile);
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_main_box {
+        margin-top: 30px;
+        .sh_inner_box {
+            display: flex;border: 1px solid #e7e7e7;padding: 30px;align-items: center;transition: all 0.15s ease;   
+            @include media-breakpoint-down(xxl) {
+                padding: 25px;
+            }
+            .sh_icon {
+                display: flex;padding-right: 15px;
+                svg {
+                    width: 45px;display: inline-flex;stroke: o-color(o-color-1);
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                }
+            }
+            .sh_icon_1 {
+                display: flex;padding-right: 15px;
+                svg {
+                    width: 45px;display: inline-flex;fill: o-color(o-color-1);
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-1{
+                        fill:o-color(o-color-1);
+                    }
+                    .cls-2{
+                        fill:none;
+                    }
+                }
+            }
+            .sh_icon_2 {
+                display: flex;padding-right: 15px;
+                svg {
+                    width: 45px;display: inline-flex;fill: o-color(o-color-1);
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-1{
+                        fill:none;
+                    }
+                    .cls-2{
+                        fill:none;
+                    }
+                }
+            }
+            .sh_icon_3 {
+                display: flex;padding-right: 15px;
+                svg {
+                    width: 45px;display: inline-flex;fill: o-color(o-color-1);
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-1{
+                        fill:none;stroke:none;
+                    }
+                    .cls-2{
+                        fill:o-color(o-color-1);stroke:none;
+                    }
+                }
+            }
+            .sh_icon_4 {
+                display: flex;padding-right: 15px;
+                svg {
+                    width: 45px;display: inline-flex;fill: o-color(o-color-1);
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-1{
+                        fill:o-color(o-color-1);stroke:none;
+                    }
+                    .cls-2{
+                        fill:o-color(o-color-1);stroke:none;
+                    }
+                    .cls-3{
+                        fill:none;
+                    }
+                }
+            }
+            .sh-des {
+                h5 {
+                    line-height: 1.3;font-weight: 600;color: var(--sh-website-heading-title-font-color);font-size: var(--sh-website-heading-title-font-size);
+                    a {
+                        text-decoration: none;
+                        color: var(--sh-website-heading-title-font-color);
+                        &:hover{
+                            color: o-color(o-color-1);  
+                        }
+                    }
+                }
+                p {
+                    color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+                    @include media-breakpoint-down(lg) {
+                        font-size: var(--sh-sh-other-page-banner-content-text-mobile);
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);border-color: transparent !important;
+            }
+        }
+    }
+}
+//sh_benifits_training_service_section end //
+
+//why odoo training section start
+.sh_why_odoo_training_section {
+    padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    header {
+        text-align: center;
+        @include media-breakpoint-down(lg) {
+            margin-top: 0px;
+        }
+        h6 {
+            color: var(--sh-section-heading-sub-title-font-color);font-size: var(--sh-section-heading-sub-title-font-size);letter-spacing: 0.01em;line-height: 1.5;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet)
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile)
+            }
+        }
+        h2 {
+            color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_main_box {
+        margin-top: 30px;
+        .sh_inner_box {
+            border: 1px solid #e7e7e7;text-align: center;padding-top: 40px;padding-bottom: 40px;padding-left: 30px;padding-right: 30px;transition: all 0.15s ease;border-radius: 5px;
+            @include media-breakpoint-down(md) {
+                padding-top: 30px;padding-bottom: 30px;
+            }
+            .sh_icon {
+                background-color: #f0f1ff;width: 70px;height: 70px;margin: 0px auto 25px;display: flex;justify-content: center;border-radius: 5px;
+                svg {
+                    width: 45px;display: inline-flex;
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-2 {
+                        fill: o-color(o-color-1);
+                    }
+                }
+               
+            }
+            .icon_1{
+                svg {
+                    width: 45px;display: inline-flex;
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-2 {
+                        fill:o-color(o-color-1);
+                    }
+                    .cls-1{
+                        fill:none;
+                    }
+                }
+            }
+            .icon_2{
+                svg {
+                    width: 45px;display: inline-flex;
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-2 {
+                        fill:none; 
+                    }
+                    .cls-1{
+                       fill:o-color(o-color-1);
+                    }
+                }
+            }
+            .sh-des {
+                h5 {
+                    line-height: 1.3;font-weight: 600;color: var(--sh-website-heading-title-font-color);font-size: var(--sh-website-heading-title-font-size);
+                }
+                p {
+                    color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+                    @include media-breakpoint-only(md){
+                        font-size: var(--sh-website-normal-text-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md){
+                        font-size: var(--sh-website-normal-text-font-size-mobile);
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);border-color: transparent !important;
+            }
+        }
+    }
+}
+//sh_why_odoo_training_section end //
+
+// sh_odoo_training_section start //
+
+#sh_odoo_training_section{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:var(--sh-section-bottom-padding); 
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_inner_box {
+        .sh_flex_column_reverse{
+            @include media-breakpoint-down(md){
+                flex-direction: column-reverse;
+            }
+        }
+        .sh_mission_vision_about_ing_box {
+            position: relative;padding:50px;background-color: rgba(87, 74, 199, 0.05);border-radius: 10px;
+            @include media-breakpoint-down(lg) {
+                padding: 0px;
+            }
+            .sh_photo_group {
+                display: flex;position: relative;z-index: 10;
+                @include media-breakpoint-down(sm) {
+                    justify-content: center;
+                }
+            }
+            .sh_second_photo {
+                position: relative;width:100%;height: 350px;
+                @include media-breakpoint-only(md) {
+                    height: 300px;
+                }
+                @include media-breakpoint-down(md) {
+                    height: auto;
+                }
+                img {
+                    width: 100%;height: 100%;box-shadow: var(--sh-website-box-shadow);border-radius: var(--sh-website-common-border-radius);object-fit: cover;
+                }
+                svg {
+                    bottom: -35px;right: -55px;width: 340px;height: auto;position: absolute;z-index: -1;
+                    .cls-1 {
+                        fill: o-color(o-color-1);
+                    }
+                    @include media-breakpoint-down(lg) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .sh_mission_vision_about_content {
+            padding-right: 40px;padding-left: 40px;
+            @include media-breakpoint-down(lg) {
+                padding-right: 0px;padding-left: 0px;
+            }
+            &.sh_mission_accordion_box{
+                @include media-breakpoint-down(lg) {
+                   margin-bottom: 20px
+                }
+            }
+            .sh_sub_title {
+                @include sh_sub_badge;
+                margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);margin-bottom: 15px;
+                }
+            }
+            p.sh_text {
+                font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+                @include media-breakpoint-only(md)  {
+                    font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                }
+            }   
+            .sh_goal_box{
+                .sh_goal_box_content {
+                    display: flex;align-items: flex-start;margin-bottom: 20px;
+                    .sh_goal_check_box {
+                        svg {
+                            width: 25px;fill: o-color(o-color-1);margin-right: 20px;margin-top: 5px;
+                            .cls-1 {
+                                fill: o-color(o-color-1); stroke:none !important;
+                            }
+                            
+                            @include media-breakpoint-down(lg) {
+                                width: 20px;
+                            }
+                            .cls-2{
+                                fill:none !important; stroke:none !important;
+                            }
+                        }
+                    }
+                    .sh_goal_text {
+                        font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);
+                        @include media-breakpoint-only(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                        }
+                        @include media-breakpoint-down(md) {
+                            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                        }
+                    }
+                }
+            }
+            .sh_mission_box_accordion{
+                .accordion-item{
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+                    @include media-breakpoint-down(md){
+                        width:100%;
+                    }
+                    .sh_mission_box_accordion_header{
+                        .sh_mission_box_accordion_btn{
+                            box-shadow: none;outline: none;color: var(--sh-section-heading-font-color);font-weight: var(--sh-website-normal-text-font-weight); font-size: var(--sh-website-heading-title-font-size); padding: 15px 0;background: transparent;
+                        }
+                    }
+                    .sh_mission_box_accordion_body{
+                        padding: 10px 0;
+                        .sh_mission_box_accordion_text{
+                            font-size: var(--sh-website-normal-text-font-size);font-weight: var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0;
+                            @include media-breakpoint-only(md) {
+                                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+                            }
+                            @include media-breakpoint-down(md) {
+                                font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+                            }
+                            span{
+                                font-size:18px; color: var(--sh-section-heading-font-color);font-weight: var(--sh-section-heading-font-weight)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// sh_odoo_training_faq_section end // 
+// call to action start //
+#sh_odoo_training_call_to_action {
+    @include sh_call_to_action_section;
+}
+// call to action end //
+

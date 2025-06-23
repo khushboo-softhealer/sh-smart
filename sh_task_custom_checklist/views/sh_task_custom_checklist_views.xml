@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="sh_task_custom_checklist_form_view" model="ir.ui.view">
+		<field name="name">task.custom.checklist.form</field>
+		<field name="model">task.custom.checklist</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<group>
+							<field name="name" required="1" />
+							<field name="accepted_state_ids" widget="many2many_tags" options="{'no_create': True, 'no_open': True}" />
+						</group>
+						<group>
+							<field name="description" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="sh_project_custom_checklist_tree_view" model="ir.ui.view">
+		<field name="name">task.custom.checklist.tree</field>
+		<field name="model">task.custom.checklist</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name" />
+				<field name="accepted_state_ids" widget="many2many_tags" />
+				<field name="description" />
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_menu_task_custom_checklist">
+		<field name="name">Checklist</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">task.custom.checklist</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+</odoo>

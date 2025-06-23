@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="task_type_edit_inherit_sh_task_state_permission" model="ir.ui.view">
+        <field name="name">sh.project.task.type.form.inherit</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit"/>
+        <field name="arch" type="xml">
+            <field name="project_ids" position="after">
+                <field name="allow_department_ids" widget="many2many_tags" groups="sh_project_task_base.group_project_officer" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

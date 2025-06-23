@@ -1,0 +1,240 @@
+
+                <section class="sh_chess_tournament_banner_section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="sh_main_img_div">
+                                    <div class="sh_first_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/banner/section_1_left.webp"
+                                            alt="chess img" class="sh_first_img" />
+                                    </div>
+                                    <div class="sh_second_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/banner/section_1_right.webp"
+                                            alt="chess img" class="sh_second_img" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex align-items-center">
+                                <div class="sh_content_div">
+                                    <div class="sh_banner_heading_div">
+                                        <h2 class="sh_banner_heading">Checkmate! Highlights from the
+                                            Softhealer</h2>
+                                    </div>
+                                    <div class="sh_banner_text_div">
+                                        <p class="sh_banner_text">At Softhealer Technologies, we
+                                            believe that a sharp mind isn't just reserved for
+                                            coding and innovation — it shines just as brightly on
+                                            the chessboard. Our
+                                            much-anticipated Chess Tournament 2025 was a grand
+                                            success, bringing
+                                            out the strategist in everyone!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sh_chess_tournament_battle_of_section justify-content-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div
+                                class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 d-flex align-items-center">
+                                <div class="sh_content_div">
+                                    <div class="sh_banner_heading_div">
+                                        <h2 class="sh_banner_heading"> A Battle of Minds</h2>
+                                    </div>
+                                    <div class="sh_banner_text_div">
+                                        <p class="sh_banner_text">The tournament kicked off with
+                                            high energy and focused intensity as team members from
+                                            different departments stepped up to showcase their
+                                            tactical brilliance. The event saw multiple rounds of
+                                            knockout matches leading up to the intense semi-finals
+                                            and finals. <br /><br /> From rook sacrifices to queen
+                                            traps, the competition was fierce but friendly, filled
+                                            with moments of surprise, suspense, and sporting spirit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                                <div class="sh_main_img_div">
+                                    <div class="sh_first_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/battle_of_minds.webp"
+                                            alt="chess img" class="sh_first_img" />
+                                    </div>
+                                    <div class="sh_second_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/battle_of_minds_left_side_img.webp"
+                                            alt="chess img" class="sh_second_img" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sh_chess_tournament_img_grid_section">
+                    <div class="container-fluid">
+                        <div class="sh_main_img_div">
+                            <div class="sh_first_column ">
+                                <div class="sh_img_div sh_large_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/1_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/2_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div sh_large_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/3_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                            </div>
+                            <div class="sh_second_column">
+                                <div class="sh_img_div ">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/4_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div  sh_large_middle_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/17_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/6_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                            </div>
+                            <div class="sh_third_column">
+                                <div class="sh_img_div sh_large_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/7_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div ">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/8_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div sh_large_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/9_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                            </div>
+                            <div class="sh_first_column ">
+                                <div class="sh_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/10_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div sh_large_middle_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/11_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div ">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/12_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                            </div>
+                            <div class="sh_third_column">
+                                <div class="sh_img_div  sh_large_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/13_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/14_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div sh_large_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/15_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                            </div>
+                            <div class="sh_fourth_column">
+                                <div class="sh_img_div ">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/16_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div sh_large_middle_img_div">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/5_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                                <div class="sh_img_div ">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/img_grid/18_img.webp" alt="chess img grid view" class="sh_img"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sh_chess_tournament_Champions_of_Strategy">
+                    <div class="container">
+                        <div class="sh_content_div">
+                            <div class="sh_banner_heading_div">
+                                <h2 class="sh_banner_heading">Champions of Strategy</h2>
+                            </div>
+                           <div class="sh_banner_text_div">
+                                <p class="sh_banner_text">After a series of nail-biting matches, <b>Sandip Karia</b>
+                                     emerged as the Chess Champion of 2025, showing
+                                    exceptional composure and creativity in every move. The
+                                    runner-up, <b>Dhaval Parmar</b> , gave a tough fight and earned
+                                    everyone’s admiration. Special shout-outs to all
+                                    semi-finalists and participants who turned this tournament into
+                                    a celebration of intellect, patience, and passion!</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- <div class="sh_line_img_div">
+                                <img
+                                    src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/bg_shape_1.webp"
+                                    alt="Champions of Strategy" class="sh_line_img" />
+                            </div> -->
+                            <div
+                                class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 d-flex align-items-center justify-content-center">
+                                <div class="sh_first_img_div">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/Champions_of_Strategy_left_circle.webp"
+                                        alt="Champions of Strategy" class="sh_first_img" />
+                                </div>
+                            </div>
+                            <div
+                                class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 d-flex align-items-center">
+                                <div class="sh_main_img_div">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/chess_final_img.webp"
+                                        alt="Champions of Strategy" class="sh_main_img" />
+                                </div>
+                            </div>
+                            <div
+                                class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 d-flex align-items-center justify-content-center">
+                                <div class="sh_second_img_div">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/chess_tournament_2025/Champions_of_Strategy_right_circle_1.webp"
+                                        alt="Champions of Strategy" class="sh_second_img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sh_cricket_tournament_2025_last_section"
+                    class="sh_cricket_tournament_2025_last_section aos-init aos-animate">
+                    <div class="container">
+                        <div class="sh_why_use_crm_section_main">
+                            <div class="sh_inner_box">
+                                <div class="sh_why_use_crm_section_content aos-init aos-animate"
+                                    data-aos="fade-right">
+                                    <h2 class="sh_why_use_crm_section_content_title">More Than a
+                                        Game</h2>
+                                    <div class="sh_why_use_crm_section_content_box">
+                                        <div class="sh_why_use_crm_section_content_check_box">
+                                            <svg id="Layer_1" data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 14 14">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                </defs>
+                                                <title>Why Shold CRM Use</title>
+                                                <rect class="cls-1" width="14" height="14"></rect>
+                                                <path class="cls-2"
+                                                    d="M12.21,1.6a.72.72,0,0,0-.83,0Q6.64,4.35,1.89,7.05a.89.89,0,0,0-.3.28.68.68,0,0,0,.38,1c.91.39,1.82.76,2.73,1.13.19.08.28.17.27.38s0,.59,0,.89v.91a.74.74,0,0,0,.19.51.88.88,0,0,0,1.41,0c.35-.4.66-.82,1-1.24A.31.31,0,0,1,8,10.83c.71.32,1.43.62,2.16.92a.68.68,0,0,0,1-.56c0-.17.06-.33.08-.49.21-1.4.42-2.8.64-4.2s.43-2.75.64-4.12A.72.72,0,0,0,12.21,1.6ZM5,8.88,2.14,7.69,11.06,2.6l0,.06L8.92,5,5.41,8.79A.31.31,0,0,1,5,8.88Zm2,1.73-.86,1.08a.28.28,0,0,1-.33.13c-.16-.05-.17-.18-.17-.31v-.72h0v-.72c0-.15,0-.21.18-.14l1.12.46C7,10.44,7.07,10.5,7,10.61Zm4.34-4.87c-.27,1.73-.54,3.45-.8,5.18,0,.2-.09.23-.26.15L6.1,9.34c-.21-.08-.17-.14,0-.28,1.52-1.62,3-3.25,4.54-4.87l1.05-1.13.06,0Z"
+                                                    transform="translate(0 0)"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="sh_why_use_crm_section_content_text">
+                                            Beyond the matches, the tournament brought a wonderful
+                                            atmosphere of
+                                            camaraderie. Cheers, quiet tension, and the occasional
+                                            ‘check!’ echoed
+                                            through the office.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

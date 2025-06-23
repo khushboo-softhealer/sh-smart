@@ -1,0 +1,312 @@
+//  banner-start //
+#sh_project_management_banner {
+    @include sh_other_page_banner;
+}
+//  banner-end //
+
+
+// about-us page about-section start//
+#sh_project_management_page_about{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:var(--sh-section-bottom-padding);background:#ffffff;
+    @include media-breakpoint-down(lg){ 
+        padding-top:var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_about_img_box{width:100%; overflow:hidden;
+        .sh_img_1{
+            height:200px;width:100%;border-radius:var(--sh-website-common-border-radius);
+            @include media-breakpoint-down(sm){
+                height:120px;
+            }
+            img{
+                height:100%;width:100%;border-radius:var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+        .sh_img_2{
+            height:300px;width:100%;border-radius:var(--sh-website-common-border-radius);
+            @include media-breakpoint-down(sm){
+                height:170px;
+            }
+            img{
+                height:100%;width:100%;border-radius:var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+        .sh_img_3{
+            height:200px;width:100%;border-radius:var(--sh-website-common-border-radius);margin-top:30px;
+            @include media-breakpoint-down(sm){
+                height:120px; 
+            }
+            img{
+                height:100%;width:100%;border-radius:var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+        .sh_img_4{
+            height:250px;width:100%;border-radius:var(--sh-website-common-border-radius);margin-top:30px;
+            @include media-breakpoint-down(sm){
+                height:170px;
+            }
+            img{
+                height:100%;width:100%;border-radius:var(--sh-website-common-border-radius);object-fit: cover;
+            }
+        }
+    }
+    .sh_about_content_box{width:100%;
+        .sh_about_title{
+            font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-font-size-mobile);
+            }
+        }
+        .sh_text{
+            font-size: var(--sh-website-normal-text-font-size);font-weight:var(--sh-website-normal-text-font-weight);color: var(--sh-website-normal-text-font-color);line-height: var(--sh-website-normal-text-line-height);text-align: left;
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-section-heading-sub-title-font-size-tablet);text-align: left;
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-sub-title-font-size-mobile);
+            }
+        }
+        .btn {  
+            @include sh_primary_button;margin-top:20px;
+            span {
+                display: flex;align-items: center;
+                svg {
+                    stroke: #fff;display: inline-block;width: 30px; padding-right:5px;height: 30px;
+                }
+            }
+        }
+    }  
+}
+// Project Managment page about-section end//
+
+// Project Managment page hot-features section page //
+#sh_project_management_hot_features{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:var(--sh-section-bottom-padding); background:var(--sh-section-background-color);
+    .sh_section_heading{
+        width: var(--sh-section-heading-width-desktop);margin: 0 auto;
+        @include media-breakpoint-down(lg){
+            width: var(--sh-section-heading-width-mobile);
+        }
+        .sh_title_heading{
+        font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:var(--sh-section-heading-margin-bottom); text-align: center;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-font-size-tablet); 
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-font-size-mobile);    
+        }
+       }
+       .sh_text{
+        font-size: var(--sh-section-heading-sub-title-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);text-align: center;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+        }
+    }
+    }
+    .sh_image_box{
+        width:100%;
+        margin-top:50px;
+        .sh_img_1{
+            height:300px;width:100%;border-radius: var(--sh-website-common-border-radius);position: relative;
+            &:after{
+                content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: black;opacity: 0.4;z-index: 0;border-radius: var(--sh-website-common-border-radius);
+            }
+            img{
+                height:100%;width:100%;border-radius: var(--sh-website-common-border-radius);position: relative;
+            }
+            .sh_icon{
+                position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);height: 70px;width: 70px;background: #fff;text-align: center;line-height: 65px;border-radius: 60px;color:o-color(o-color-1); transition:0.5s;z-index:1;
+                &:after{
+                    z-index: -1;opacity: 0;border-color:#fff;background: inherit;border-radius: inherit;position: absolute;border-width: 2px;border-style: solid;left: 0;top: 0;width: 100%;height: 100%;content: '';-webkit-animation-name: sh_video_icon_animate;-webkit-animation-duration: 1s;-webkit-animation-timing-function: linear;-webkit-animation-delay: 0s;-webkit-animation-iteration-count: infinite;-webkit-animation-play-state: running;-webkit-animation-name: sh_video_icon_animate;animation-name: sh_video_icon_animate;-webkit-animation-duration: 1s;animation-duration: 1.3s;animation-delay: 0s;-webkit-animation-iteration-count: infinite;animation-iteration-count: infinite;-webkit-animation-play-state: running;animation-play-state: running;
+                }
+
+                @keyframes sh_video_icon_animate {
+                    0% {opacity: .5;-ms-transform: scale(1);-webkit-transform: scale(1);transform: scale(1)}
+                    25% {-ms-transform: scale(1.2);-webkit-transform: scale(1.2);transform: scale(1.2);opacity: .3}
+                    60% {-ms-transform: scale(1.35);-webkit-transform: scale(1.35);transform: scale(1.35);opacity: 0}
+                }
+                svg{
+                    height:30px;width:30px; fill:o-color(o-color-1);
+                }
+                &:hover{
+                    background:o-color(o-color-1); color:#fff;
+                    svg{
+                        fill:#fff;
+                    }
+                }
+            }
+        }
+        .sh_desc{
+            margin-top:15px;
+            position: relative;
+            &:after{
+                position: absolute;left: 0;height: 4px;width: 50px;bottom: -8px;content:'';transition: .2s all ease;background: o-color(o-color-1);
+            }
+            a.sh_link , .sh_link{
+                color:var(--sh-section-heading-font-color);font-size:var(--sh-website-heading-title-font-size);text-decoration:none;
+                .sh_icon{margin-left:5px;transition: .3s all ease; opacity:0;}
+            }
+        }
+        
+    }
+    .sh_image_box:hover{
+        .sh_desc:after{width:50%;}
+       }
+     
+}
+@include media-breakpoint-only(lg){
+    #sh_project_management_hot_features{
+        .sh_image_box.box_2{
+            margin-top:30px;
+        } 
+        .sh_image_box{
+            margin-top:30px;
+            .sh_img_1{
+                height:250px;
+            }
+        }
+    }  
+}
+
+@include media-breakpoint-down(lg){
+    #sh_project_management_hot_features{
+        padding-top: var(--sh-section-top-padding-mobile) ;padding-bottom:var(--sh-section-bottom-padding-mobile);
+        .sh_image_box{
+            .sh_img_1{
+                height:250px;
+            }
+          }  
+    } 
+    .sh_image_box.box_2{
+        margin-top:30px;
+    }
+}
+@include media-breakpoint-down(md){
+    #sh_project_management_hot_features{
+      .sh_image_box{
+        margin-top: 30px;
+        .sh_img_1{
+            height:200px;
+            img{
+                object-fit: cover;
+            }
+        }
+        .sh_desc{margin-top:10px;}
+      }  
+    
+    } 
+}
+
+// Project Managment page hot-features section page //
+
+// sh_project_management_features section start //
+#sh_project_management_features{
+    position: relative;padding-top:var(--sh-section-top-padding); padding-bottom:var(--sh-section-bottom-padding);background:#fff;
+    @include media-breakpoint-down(lg){
+        padding-left:0; padding-right:0; padding-top:var(--sh-section-top-padding-mobile); padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_section_heading{
+        width: var(--sh-section-heading-width-desktop);margin: 0 auto;margin-bottom:20px;
+        @include media-breakpoint-down(lg){
+            width: var(--sh-section-heading-width-mobile);
+        }
+
+        .sh_heading_title{
+            font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);text-align: center; text-transform: capitalize;
+            @include media-breakpoint-only(md){
+                font-size:var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size:var(--sh-section-heading-font-size-mobile);
+            }
+        }
+        .sh_text{
+            font-size: var(--sh-section-heading-sub-title-font-size); color: var(--sh-section-heading-sub-title-font-color); font-weight:var(--sh-section-heading-sub-title-font-weight); line-height:var(--sh-section-heading-sub-title-line-height); margin-bottom:var(--sh-section-heading-sub-title-margin-bottom); text-align: center;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+            }
+        }
+    }
+    .sh_space{margin-top:30px;
+    .sh_content_box{
+        padding-top: 25px;padding-bottom: 25px;padding-left: 25px;padding-right: 25px;position: relative;border-radius:var(--sh-card-box-radius);
+        overflow: hidden;box-shadow: 0 5px 70px rgba(38,42,76,.1);background:#fff;display:flex; align-items:center; transition: all .80s ease !important;
+        .sh_icon{
+            margin-right:20px;
+            @include media-breakpoint-down(md){
+                margin-right:10px;
+            }
+            svg{
+                height:45px !important; width:45px !important;    transition: all .80s ease !important; stroke:o-color(o-color-1) !important;
+                @include media-breakpoint-down(md){
+                    height:35px !important; width:35px !important;
+                }
+                .cls-2{
+                    fill:o-color(o-color-1) !important; stroke: none !important; height:40px !important; width:40px !important;
+                    @include media-breakpoint-down(md){
+                        height:30px !important; width:30px !important;
+                    }
+                }
+            }
+            svg.bi{
+                fill:o-color(o-color-1) !important; stroke: none !important; height:40px !important; width:40px !important;
+                @include media-breakpoint-down(md){
+                    height:30px !important; width:30px !important;
+                }
+            }
+        }
+        .sh_desc{
+            font-size:20px; font-weight:500; line-height:var(--sh-section-heading-sub-title-line-height);  color:var(--sh-website-normal-text-font-color);    transition: all .80s ease !important; text-transform: capitalize;
+            @include media-breakpoint-only(md){
+                font-size:18px;
+            }
+            @include media-breakpoint-down(md){
+                font-size:16px;
+            }
+        }
+    }
+
+    .sh_content_box:hover{
+        background:o-color(o-color-1);
+        .sh_icon{
+            svg{
+                stroke:#fff !important;
+            }
+            .cls-2{
+                fill:#fff !important;
+            }
+        }
+        .sh_desc{
+            color:#fff !important;
+        }
+    }
+    .sh_content_box{
+        &:hover{
+        background:o-color(o-color-1);
+        
+        .sh_icon{  
+            svg.bi{
+                fill:#fff !important; stroke:none !important;
+            }
+        }
+    }
+
+    }
+}
+}
+// sh_project_management_features section End //
+
+// sh_project_management_call_to_action start //
+#sh_project_management_call_to_action{
+    @include sh_call_to_action_section;
+}
+
+// sh_project_management_call_to_action end //

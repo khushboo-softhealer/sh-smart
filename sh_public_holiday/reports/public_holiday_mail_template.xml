@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <data noupdate="1">
+        <record id="public_holiday_mail_template" model="mail.template">
+            <field name="name">Public Holiday Email Template</field>
+            <field name="model_id" ref="sh_public_holiday.model_sh_public_holiday" />
+            <field name="subject">Public Holiday List </field>
+            <field name="email_from">{{(object.create_uid.work_email)}}</field>
+            <!-- <field name="email_to">ldfhjkdfg@soft.com</field> -->
+            <field name="description">Public Holiday Leave Template</field>
+            <field name="body_html" type="html">
+
+                <style>
+                    body {
+                    font-family: Arial, sans-serif;
+                    line-height: 1.6;
+                    color: #333;
+                    }
+                    .container {
+                    margin: 20px auto;
+                    padding: 20px;
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    max-width: 600px;
+                    background-color: #f9f9f9;
+                    }
+                    .header {
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    }
+                    .content {
+                    margin-bottom: 20px;
+                    }
+                    .footer {
+                    font-size: 14px;
+                    color: #555;
+                    }
+                </style>
+
+
+                <div class="container">
+
+                    <div class="content">
+                        <p>Dear [Employee's Name]/Team,</p>
+                        <p>We hope this message finds you well.</p>
+                        <p>Please find attached the official list of public holidays for <strong>
+                                <t t-esc="object.sh_from_date" /> to <t t-esc="object.sh_to_date" />
+                            </strong>.
+                            We kindly request you to review the schedule and plan your activities
+                            accordingly.</p>
+                        <p>Should you have any questions or require further clarification, please
+                            feel free to reach out to the HR department.</p>
+                        <p>Thank you for your attention, and we wish you a productive year ahead.</p>
+                    </div>
+                    <div class="footer">
+                        <p>Best regards,</p>
+                        <p>
+                            <t t-esc="object.create_uid.name" />
+                        <br /> HR Department <br />
+                        <t
+                                t-esc="object.company_id.name" />
+                        </p>
+                    </div>
+                </div>
+
+
+            </field>
+
+
+            <field name="report_template" ref="public_holiday_report_action" />
+            <field name="report_name">Holiday_List</field>
+            <field name="lang">{{ object.create_uid.lang }}</field>
+            <field name="auto_delete" eval="True" />
+
+        </record>
+    </data>
+
+
+</odoo>

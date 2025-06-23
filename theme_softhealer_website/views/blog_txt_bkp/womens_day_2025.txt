@@ -1,0 +1,128 @@
+  <section id="sh_womens_day_blog_2025_heading_section"
+                    class="sh_womens_day_blog_2025_heading_section">
+                    <div class="container">
+                        <div class="sh_content">
+                            <div class="sh_heading">
+                                <h2>Honoring Women at Softhealer
+                                </h2>
+                            </div>
+                            <div class="sh_content_box">
+                                <div class="sh_contact_detail">
+
+                                    <div class="sh_text">
+                                        At Softhealer Technologies, we believe in recognizing and
+                                        celebrating the incredible
+                                        contributions of women in our workplace. This past Women's
+                                        Day, we came together to
+                                        honor and appreciate the strength, dedication, and
+                                        achievements of the women who make a
+                                        difference daily.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sh_inner_section">
+                            <img
+                                src="/theme_softhealer_website/static/src/img/blogs_bkp/womens_day_2025/section_1.webp"
+                                alt="Honoring Women at Softhealer"
+                                title="Honoring Women at Softhealer"
+                                class="sh_img" />
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sh_womens_day_2025_sweetness">
+                    <div class="container">
+                        <div class="sh_header_div">
+                            <div class="row">
+                                <!-- header start  -->
+                                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="sh_straight_line"></div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                                    <div class="sh_main_heading">
+                                        <div class="sh_heading">Starting with Sweetness
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-0 col-sm-0 col-xs-0">
+                                    <div class="sh_small_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/womens_day_2025/shape.webp"
+                                            alt="Starting with Sweetness"
+                                            title="Starting with Sweetness"
+                                            class="sh_img" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sh_content_div">
+                            <div class="row">
+                                <!-- header end  -->
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-sm-12 col-xs-12 d-flex">
+                                    <div class="sh_main_img_div">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/womens_day_2025/section2_left.webp"
+                                            alt="Starting with Sweetness"
+                                            title="Starting with Sweetness"
+                                            class="sh_img" />
+    
+                                    </div>
+                                </div>
+                                <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-7 col-sm-12 col-xs-12">
+                                    <div class="sh_main_right_div">
+                                        <div class="sh_text_div">
+                                            <p class="sh_text">We began the day with the sweetness of
+                                                chocolates, spreading joy and appreciation among
+                                                all. Following this, we engaged with all the women,
+                                                listening to their thoughts on Women's
+                                                Day and celebrating their perspectives.
+                                            </p>
+                                            <p class="sh_text mt-3">We presented tokens of appreciation and awards to recognize their dedication, followed by a delightful cake-cutting ceremony. It was a day filled with gratitude, unity, and celebration, reaffirming our commitment to an inclusive and empowering workplace.
+                                            </p>
+                                        </div>
+                                        <div class="sh_right_img_div">
+                                            <div class="row justify-content-around align-items-center">
+                                                <div
+                                                    class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="sh_right_first_img_div">
+                                                        <img
+                                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/womens_day_2025/circle_text.webp"
+                                                        alt="Starting with Sweetness"
+                                                        title="Starting with Sweetness"
+                                                        class="sh_img" />
+                                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+                                                            <defs>
+                                                              <style>
+                                                                .cls-1 {
+                                                                  fill: none;
+                                                                }
+                                                          
+                                                                .cls-2 {
+                                                                  fill: #020202;
+                                                                }
+                                                              </style>
+                                                            </defs>
+                                                            <rect class="cls-1" width="800" height="800"/>
+                                                            <path class="cls-2" d="M502.82,472.64C738.27,367.1,662.53,9.85,405.7,7.89,132.04,5.81,58.13,394.26,339.26,485.66c4.35,1.41,9.52.35,12.42,4.03v99.63h-100.55v102.38h100.55v99.63c0,.19,2.55,2.74,2.74,2.74h96.89c.19,0,2.74-2.55,2.74-2.74v-99.63h100.55v-102.38h-100.55v-99.63c16.11-6.27,32.91-9.94,48.76-17.05ZM314.25,141.47c135.15-111.03,313.8,84.28,188.53,209.56-137.19,137.19-340.8-84.46-188.53-209.56Z"/>
+                                                          </svg>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="sh_right_second_img_div">
+                                                        <img
+                                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/womens_day_2025/section2_right.webp"
+                                                            alt="Starting with Sweetness"
+                                                            title="Starting with Sweetness"
+                                                            class="sh_img" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>

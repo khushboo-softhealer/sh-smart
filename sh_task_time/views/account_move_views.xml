@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_view_move_form_view_inherit" model="ir.ui.view">
+        <field name="name">account.move.form.view.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <button class="btn btn-primary" name="%(sh_task_time.create_task_wizard_invoice_account_action)d" type="action" string="Create Task" groups="project.group_project_manager" />
+            </xpath>
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <!--  <div class="oe_button_box" name="button_box" > -->
+                <button type="object" name="get_tasks" class="oe_stat_button" icon="fa-tasks" attrs="{'invisible': [('sh_task_count', '=', 0)]}" groups="sh_project_task_base.group_project_officer">
+                    <field name="sh_task_count" widget="statinfo" string="Tasks"/>
+                </button> 
+                <!--  </div> -->
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field name="version_ids" widget="many2many_tags" />
+            </xpath>
+            <xpath expr="//field[@name='version_ids']" position="after">
+                <field name="responsible_user_id" widget="selection" />
+                <field name="responsible_user_ids" widget="many2many_tags" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

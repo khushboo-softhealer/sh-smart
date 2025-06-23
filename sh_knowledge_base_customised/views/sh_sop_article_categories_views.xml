@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_sop_article_categories_view_form" model="ir.ui.view">
+        <field name="name">sh.sop.article.categories.view.form</field>
+        <field name="model">sh.sop.article.categories</field>
+        <field name="type">form</field>          
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="active" invisible="1" />
+                        <field name="sh_complete_name" readonly="1"/>
+                        <field name="name"/>
+                        <field name="parent_id"></field>
+                        <field name="sh_responsible_user_id"></field>
+                        <field name="department_ids" widget="many2many_tags" />
+                        <field name="user_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>           
+        </field>
+    </record>
+    
+    <record id="sh_sop_article_categories_view_tree" model="ir.ui.view">
+        <field name="name">sh.sop.article.categories.view.tree</field>
+        <field name="model">sh.sop.article.categories</field>
+        <field name="type">tree</field>          
+        <field name="arch" type="xml">
+            <tree >
+                <field name="sh_complete_name" readonly="1"/>
+                <field name="name"/>
+                <field name="parent_id"></field>
+                <field name="sh_responsible_user_id"></field>
+            </tree>           
+        </field>
+    </record>
+
+    <record id="sh_sop_article_categories_view_search" model="ir.ui.view">
+        <field name="name">sh.sop.article.categories.search</field>
+        <field name="model">sh.sop.article.categories</field>
+        <field name="arch" type="xml">
+            <search string="SOP Article Categories">
+                <filter string="Archive" name="un_active" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+
+
+    <record id="sh_sop_article_categories_action" model="ir.actions.act_window">
+        <field name="name">SOP Article Categories</field>
+        <field name="type">ir.actions.act_window</field>           
+        <field name="res_model">sh.sop.article.categories</field>
+        <field name="view_mode">tree,form,search</field>
+    </record>    
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_hr_payroll_report_wizard_view_form" model="ir.ui.view">
+        <field name="name">sh_hr_payroll_report_wizard.view.form</field>
+        <field name="model">sh.hr.payroll.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Hr Payroll Report">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="start_date" required="1" />
+                            <field name="employee_ids" required="1" widget="many2many_tags" options="{'no_create': True}" />
+                        </group>
+                        <group>
+                            <field name="end_date" required="1" />
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="generate_hr_payroll_report" string="Print Report" type="object" class="oe_highlight" />
+                        <button special="cancel" string="Cancel" class="oe_link" />
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_hr_payroll_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">Generate Payslip Report</field>
+        <field name="res_model">sh.hr.payroll.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="sh_hr_payroll_report_wizard_menu"
+        name="Generate Payslip Report"
+        action="sh_hr_payroll_report_wizard_action"
+        parent="sh_hr_payroll.menu_hr_payroll_root" groups="sh_hr_payroll.group_hr_payroll_user"
+        sequence="10"/>
+
+</odoo>

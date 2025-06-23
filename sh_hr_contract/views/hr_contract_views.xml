@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="hr_contract_form_view" model="ir.ui.view">
+        <field name="name">hr.contract.form.view</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+        <field name="arch" type="xml">
+            <!-- <xpath expr="//header" position="inside">
+                <button name="%(sh_hr_contract.sh_renew_contract_action)d" 
+                string="Renew Contract" class="btn-primary"
+                    type="action"/>
+            </xpath> -->
+            <xpath expr="//field[@name='date_start']" position="before">
+                <field name="date" />
+            </xpath>
+            <xpath expr="//field[@name='date']" position="after">
+                <field name="signature_date" />
+            </xpath>
+            <xpath expr="//page[@name='other']//group[1]" position="after">
+                <group name="bond_group" string="BOND">
+                    <field name="bond" />
+                    <field name="cheque_amount"
+                        attrs="{'invisible':[('bond','in',['none','certificate'])]}" />
+                    <field name="cheque_number"
+                        attrs="{'invisible':[('bond','in',['none','certificate'])]}" />
+                    <field name="period" attrs="{'invisible':[('bond','in',['none'])]}" />
+                    <field name="bond_duration" attrs="{'invisible':[('bond','in',['none'])]}" />
+                    <field name="degree_ids" widget="many2many_tags"
+                        attrs="{'invisible':[('bond','in',['none','cheque'])]}" />
+                    <field name="sh_contract_bond_detail_report" options="{'codeview':true}"/>
+                </group>
+            </xpath>
+            <field name="hr_responsible_id" position="after">
+                <field name="renew_contract"/>
+                <label for="renew_contract_period" attrs="{'invisible':[('renew_contract','=',False)]}"/>
+                <div class="o_row"  attrs="{'invisible':[('renew_contract','=',False)]}">
+                    <field name="renew_contract_period" />
+                    <field name="renew_contract_type" />
+                </div>
+                <field name="renew_start_date"  attrs="{'invisible':[('renew_contract','=',False)]}"></field>
+                <field name="renew_end_date"  attrs="{'invisible':[('renew_contract','=',False)]}"></field>
+            </field>
+            <xpath expr="//notebook" position="inside">
+                <page string="Signature" name="Signature">
+                    <group>
+                        <field name="digital_signature" widget="signature" />
+                        <field
+                            name="print_in_report" string="print in report" />
+                    </group>
+                </page>
+
+                <page string="Salary structure" name="Salary structure">
+                    <field name="salary_structure_line">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle" />
+                            <field name="name" />
+                            <field name="amount" />
+                        </tree>
+                    </field>
+                </page>
+
+                <page string="Annexure - B" name="sh_annexure_b_notes">
+                    <label for="sh_annexure_b_notes">Annexure
+                        - B</label>
+                    <field name="sh_annexure_b_notes" options="{'codeview':true}"/>
+                </page>
+
+                <page string="Improvements" name="Improvements">
+                    <field name="sh_contract_improvement_ids">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle" />
+                            <field name="name" />
+                        </tree>
+                    </field>
+                </page>
+
+                <page string="Goals" name="Goals">
+                    <field name="sh_contract_goal_ids">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle" />
+                            <field name="name" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+
+            <xpath expr="//header" position="inside">
+                <button class="btn btn-primary" name="action_send_contract" type="object"
+                    string="Send Contract by Email" groups="hr_contract.group_hr_contract_manager" />
+                <button class="btn btn-primary" name="action_send_confirmation" type="object"
+                    string="Send Confirmation by Email" groups="hr_contract.group_hr_contract_manager" />
+            </xpath>
+        </field>
+
+    </record>
+
+    <record id="hr_contract_inherit_view_search" model="ir.ui.view">
+        <field name="name">hr.contract.inherit.view.search</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='running']" position="before">
+                <filter string="Date Start" name="date_start" date="date_start" />
+                <filter string="Date End" name="date_end" date="date_start" />
+            </xpath>
+            <filter name="group_by_employee" position="after">
+                <filter string="Date Start" name="date_start" domain="[]"
+                    context="{'group_by':'date_start'}" />
+                <filter string="Date End" name="date_end" domain="[]"
+                    context="{'group_by':'date_end'}" />
+            </filter>
+        </field>
+    </record>
+
+    <menuitem
+    id="hr_contract_menu"
+    action="hr_contract.action_hr_contract"
+    parent="hr.menu_hr_employee_payroll"
+    name="Employee Contracts"
+    sequence="3"
+    groups="hr_contract.group_hr_contract_manager"/>
+
+    <menuitem
+    id="hr_contract.hr_menu_contract_history"
+    action="hr_contract.hr_contract_history_view_list_action"
+    parent="hr.menu_hr_employee_payroll"
+    name="Contract History"
+    sequence="4"
+    groups="hr_contract.group_hr_contract_manager"/>
+
+</odoo>

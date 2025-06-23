@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="s_sh_dynamic_content" name="Dynamic Content Snippet">
+        <section class="s_sh_dynamic_content parallax"
+            data-scroll-background-ratio="1">
+        </section>
+    </template>
+
+
+    <template id="s_sh_dynamic_content_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="ShDynamicContentSelectTemplateOptions" data-selector=".s_sh_dynamic_content">
+                <we-select string="Content"
+                    data-no-preview="true" data-name="sh_content_opt"
+                    data-attribute-name="shContentId" data-attribute-default-value="-1">
+                    <we-button data-select-data-attribute="-1">None</we-button>
+                    <!-- the contents list will be generated in js -->
+                </we-select>
+            </div>
+        </xpath>
+    </template>
+</odoo>

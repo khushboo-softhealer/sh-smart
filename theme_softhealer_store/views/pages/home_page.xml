@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+   <!-- Home Page -->
+   <template id="theme_softhealer_store_website_home_tmpl" name="Find the Perfect Odoo App - Solutions for All Industries">
+      <t t-call="website.layout">
+         <div class="oe_structure oe_empty" id="wrap">
+            <section id="sh_store_banner" class="sh_store_banner_section o_colored_level"
+               style="background-image: none;">
+               <div class="row ms-0 me-0">
+                  <div class="col-xxl-12 col-xl-12 col-lg-12 ps-0 pe-0">
+                     <div id="carouselExampleInterval" class="carousel slide"
+                        data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                           <div class="carousel-item active  h-100 mh-100" data-bs-interval="5000">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col-xxl-5 col-xl-5 col-lg-12 col-md-12 col-12 align-self-center">
+                                       <h5 class="sh_sub_title o_default_snippet_text">Match, Verify, and Reconcile - All in One Click</h5>
+                                       <div class="sh_heading_title"> Simplify Your Finances with Bank Statement Reconciliation
+                                       </div>
+                                       <p class="sh_text">
+                                          Save time, avoid errors, and keep your accounts clear—automatically match bank transactions with just a click.
+                                       </p>
+                                      <div class="btn-group">
+                                       <div
+                                       class="sh_home_primary_button">
+                                       <a
+                                          href="https://store.softhealer.com/shop/bank-statement-reconciliation-1670?search=+Bank+Statement+Reconciliation#attr=16420"
+                                          role="button" target="_blank"
+                                          class="btn btn-primary sh_pos_solution_primary_link rippler rippler-default">
+                                          Buy Now
+                                       </a>
+                                    </div>
+                                    <div
+                                    class="sh_home_primary_button">
+                                    <a
+                                       href="https://store.softhealer.com/support"
+                                       role="button" target="_blank"
+                                       class="btn btn-primary sh_pos_solution_primary_link rippler rippler-default">
+                                       Get A Demo
+                                    </a>
+                                 </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xxl-7 col-xl-7 col-lg-12 col-md-12 col-12 align-self-center">
+                                       <div class="sh_image">
+                                          <img
+                                             src="/theme_softhealer_store/static/src/img/home/banner/demo_1.gif" />
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="carousel-item h-100 mh-100" data-bs-interval="5000">
+                                 <div class="container">
+                                    <div class="row">
+                                       <div class="col-xxl-5 col-xl-5 col-lg-12 col-md-12 col-12 align-self-center">
+                                          <h5 class="sh_sub_title o_default_snippet_text">Support That Works for You - Fast, Smart &amp; Effortless                                          </h5>
+                                          <div class="sh_heading_title">Manage All Support in One Place with All In One Helpdesk Advance
+
+                                          </div>
+                                          <p class="sh_text">
+                                             Deliver lightning-fast support with a system that does it all. From WhatsApp tickets to AI-powered replies, give your customers the help they need.
+                                          </p>
+                                          <div class="btn-group">
+                                             <div
+                                             class="sh_home_primary_button">
+                                             <a
+                                                href="https://store.softhealer.com/shop/all-in-one-helpdesk-advance-crm-helpdesk-sale-order-helpdesk-purchase-helpdesk-invoice-helpdesk-helpdesk-timesheet-helpdesk-support-ticket-to-task-1671?search=helpdesk+adv#attr=16404"
+                                                role="button" target="_blank"
+                                                class="btn btn-primary sh_pos_solution_primary_link rippler rippler-default">
+                                                Buy Now
+                                             </a>
+                                          </div>
+                                          <div
+                                          class="sh_home_primary_button">
+                                          <a
+                                             href="https://store.softhealer.com/support"
+                                             role="button" target="_blank"
+                                             class="btn btn-primary sh_pos_solution_primary_link rippler rippler-default">
+                                            Get A Demo
+                                          </a>
+                                       </div>
+                                            </div>
+                                       </div>
+                                       <div class="col-xxl-7 col-xl-7 col-lg-12 col-md-12 col-12 align-self-center">
+                                          <div class="sh_image">
+                                             <img
+                                                src="/theme_softhealer_store/static/src/img/home/banner/demo_2.gif" />
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                           </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button"
+                           data-bs-target="#carouselExampleInterval"
+                           data-bs-slide="prev">
+                           <span class="carousel-control-prev-icon" aria-hidden="true" />
+                           <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                           data-bs-target="#carouselExampleInterval"
+                           data-bs-slide="next">
+                           <span class="carousel-control-next-icon" aria-hidden="true" />
+                           <span class="visually-hidden">Next</span>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- End OFFER banner -->
+
+            <section id="sh_shop_services" class="sh_shop_services_box o_colored_level"
+               data-snippet="theme_softhealer_store_services_snippet_template" data-name="Services"
+               style="background-image: none;">
+               <div class="container">
+                  <div class="row justify-content-center">
+                     <div
+                        class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-10 mb-lg-0 mb-md-4 mb-sm-4 mb-4 text-center o_colored_level">
+                        <div class="sh_store_service_box">
+                           <div class="sh_store_icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                 data-name="Layer 1" viewbox="0 0 14 14">
+                                 <defs>
+                                    <style class="o_default_snippet_text">
+                                       .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                 </defs>
+                                 <title class="o_default_snippet_text">Awesome Delivery</title>
+                                 <rect class="cls-1" width="14" height="14" />
+                                 <path class="cls-2"
+                                    d="M3.48,5.07H1.74a.4.4,0,0,1-.31-.4.38.38,0,0,1,.32-.36H5.08c.35,0,.55.24.44.52a.41.41,0,0,1-.45.27Zm-2.24.75c-.28,0-.45.16-.45.4a.41.41,0,0,0,.44.39H4.46c.29,0,.45-.15.45-.4s-.17-.38-.46-.39H1.24Zm.63,1.54c-.27,0-.44.16-.44.39a.41.41,0,0,0,.45.4H3.56c.28,0,.45-.17.45-.4s-.16-.38-.44-.39H1.87ZM13.2,9.65c0,.33-.14.47-.47.47s-.62,0-.93,0a.14.14,0,0,0-.16.1,1.53,1.53,0,0,1-1.25,1l-.06,0a.47.47,0,0,1-.31,0,1.68,1.68,0,0,1-1-.56,1.1,1.1,0,0,1-.24-.4c-.05-.18-.15-.21-.33-.21-.63,0-1.26,0-1.9,0a.2.2,0,0,0-.22.15,1.56,1.56,0,0,1-2.93,0,.16.16,0,0,0-.18-.12c-.27,0-.55,0-.83,0a.38.38,0,0,1-.43-.39c0-.24.15-.38.43-.39h.81a.16.16,0,0,0,.2-.12A1.54,1.54,0,0,1,4.81,8.15a1.57,1.57,0,0,1,1.48,1c0,.13.1.16.22.16h2A.18.18,0,0,0,8.7,9.2a1.55,1.55,0,0,1,1.47-1,1.57,1.57,0,0,1,1.47,1.06c0,.1.08.15.19.13s.44.08.56,0,0-.35,0-.54c0-.42,0-.84,0-1.26a.45.45,0,0,0-.1-.3c-.16-.19-.28-.47-.48-.57a1.76,1.76,0,0,0-.73,0H9c-.41,0-.53-.12-.53-.54,0-.8,0-1.61,0-2.42,0-.14,0-.18-.19-.18H2.35a.39.39,0,0,1-.44-.42.38.38,0,0,1,.34-.36H8.67c.41,0,.55.12.53.54,0,.18,0,.25.24.24.44,0,.88,0,1.32,0a.51.51,0,0,1,.52.32c.31.64.64,1.27,1,1.92A7.51,7.51,0,0,0,13,6.83a.8.8,0,0,1,.17.5C13.2,8.1,13.21,8.88,13.2,9.65Zm-1.85-4c-.23-.44-.45-.88-.67-1.33a.16.16,0,0,0-.16-.1H9.34c-.11,0-.13,0-.13.13v1.3c0,.11,0,.15.14.14h1.89C11.37,5.82,11.41,5.8,11.35,5.67Zm-5.75,4a.79.79,0,0,0-.78-.77.78.78,0,0,0,0,1.56A.8.8,0,0,0,5.6,9.71Zm5.35,0a.79.79,0,0,0-.79-.77.78.78,0,0,0,0,1.56A.8.8,0,0,0,11,9.71Z"
+                                    transform="translate(0 0)" />
+                              </svg>
+                           </div>
+                           <div class="sh_store_name">
+                              <h2 class="o_default_snippet_text">Awesome Delivery</h2>
+                           </div>
+                           <div class="sh_store_contant">
+                              <p class="o_default_snippet_text">We ensure timely delivery of
+                                 top-quality systems.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div
+                        class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-10 mb-lg-0 mb-md-4 mb-sm-4 mb-4 text-center o_colored_level">
+                        <div class="sh_store_service_box">
+                           <div class="sh_store_icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                 data-name="Layer 1" viewbox="0 0 14 14">
+                                 <defs>
+                                    <style class="o_default_snippet_text">
+                                       .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                 </defs>
+                                 <title class="o_default_snippet_text">Exellent Quality</title>
+                                 <rect class="cls-1" width="14" height="14" />
+                                 <path class="cls-2"
+                                    d="M12.42,7.14a.34.34,0,0,1,0-.28c.14-.33.28-.67.41-1a1,1,0,0,0-.45-1.3l-1-.62a.34.34,0,0,1-.17-.25c-.08-.33-.15-.65-.25-1a1,1,0,0,0-1.05-.77C9.45,2,9,2,8.62,2A.29.29,0,0,1,8.37,2l-.65-.57a1,1,0,0,0-1.46,0L5.62,2A.27.27,0,0,1,5.39,2l-1.17-.1a1.06,1.06,0,0,0-1.15.77c-.12.37-.23.73-.34,1.09A.31.31,0,0,1,2.57,4l-1,.59a1,1,0,0,0-.47,1.1,8.48,8.48,0,0,0,.46,1.18.39.39,0,0,1,0,.3c-.14.32-.27.64-.4,1a1,1,0,0,0,.45,1.33l1,.61a.31.31,0,0,1,.17.23c.07.32.15.65.24,1a1,1,0,0,0,1.18.79L5.37,12a.32.32,0,0,1,.25.08c.22.2.44.4.67.59a1,1,0,0,0,1.42,0l.68-.6A.22.22,0,0,1,8.58,12c.37,0,.74,0,1.11.09a1.05,1.05,0,0,0,1.25-.81c.09-.31.16-.62.23-.93a.31.31,0,0,1,.17-.24l1.05-.64a1,1,0,0,0,.44-1.29C12.7,7.8,12.56,7.47,12.42,7.14ZM12,8.89l-1.15.69a.48.48,0,0,0-.26.37c-.08.37-.17.73-.26,1.1a.35.35,0,0,1-.42.31c-.43,0-.86,0-1.29-.1a.63.63,0,0,0-.54.16c-.23.23-.48.43-.72.64s-.38.22-.62,0-.49-.42-.72-.64a.62.62,0,0,0-.52-.16l-1.29.1A.37.37,0,0,1,3.71,11c-.08-.37-.17-.74-.26-1.11a.48.48,0,0,0-.25-.35L2,8.88c-.25-.15-.3-.29-.19-.55s.28-.71.44-1.06a.65.65,0,0,0,0-.56c-.16-.35-.3-.7-.44-1A.36.36,0,0,1,2,5.12l1-.61a.58.58,0,0,0,.3-.38c.11-.4.24-.79.37-1.19s.17-.32.66-.3l1.18.1A.5.5,0,0,0,6,2.6l.77-.69a.36.36,0,0,1,.57,0l.76.67a.49.49,0,0,0,.43.14l1.42-.1c.2,0,.32.09.38.31s.18.73.26,1.11a.52.52,0,0,0,.25.36c.39.22.77.46,1.16.69s.32.29.2.59-.3.74-.46,1.11a.51.51,0,0,0,0,.4c.16.37.31.74.46,1.11S12.23,8.72,12,8.89ZM7,3.19A3.81,3.81,0,1,0,10.8,7,3.81,3.81,0,0,0,7,3.19Zm0,6.93A3.12,3.12,0,1,1,7,3.89,3.11,3.11,0,0,1,10.11,7,3.14,3.14,0,0,1,7,10.12ZM4.92,6.69a.37.37,0,0,1,.22-.36.34.34,0,0,1,.39.09c.32.32.65.64,1,1,.12.13.19.14.33,0L8.43,5.77a.37.37,0,0,1,.55,0,.38.38,0,0,1-.05.54l-2,2a.35.35,0,0,1-.57,0L5.06,6.94C5,6.86,4.91,6.77,4.92,6.69Z"
+                                    transform="translate(0 0)" />
+                              </svg>
+
+                           </div>
+                           <div class="sh_store_name">
+                              <h2 class="o_default_snippet_text">Excellent Quality</h2>
+                           </div>
+                           <div class="sh_store_contant">
+                              <p class="o_default_snippet_text">Software that makes you say wow.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div
+                        class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-10 mb-lg-0 mb-md-0 mb-sm-0 mb-4 text-center o_colored_level">
+                        <div class="sh_store_service_box">
+                           <div class="sh_store_icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                 data-name="Layer 1" viewbox="0 0 14 14">
+                                 <defs>
+                                    <style class="o_default_snippet_text">
+                                       .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                 </defs>
+                                 <title class="o_default_snippet_text">Quick Support</title>
+                                 <rect class="cls-1" width="14" height="14" />
+                                 <path class="cls-2"
+                                    d="M12.89,7.25a1.17,1.17,0,0,0-.63-1,.17.17,0,0,1-.1-.18,4.52,4.52,0,0,0-.17-1,5.16,5.16,0,0,0-6.8-3.5A5,5,0,0,0,1.83,6a.36.36,0,0,1-.19.31,1.16,1.16,0,0,0-.53.79,8.22,8.22,0,0,0,0,.84c0,.29,0,.52,0,.75A1.24,1.24,0,0,0,2,9.9a.81.81,0,0,0,1.08-.73c0-.76,0-1.53,0-2.29a.75.75,0,0,0-.46-.68c-.26-.12-.26-.12-.21-.4l0-.22A4.62,4.62,0,0,1,6.37,1.85a4.52,4.52,0,0,1,4.3,1.79A4.54,4.54,0,0,1,11.59,6c0,.12,0,.18-.15.22a.7.7,0,0,0-.54.65q0,1.21,0,2.43a.6.6,0,0,0,.41.57c.32.09.31.28.29.52v.22a1.13,1.13,0,0,1-1,1,8.63,8.63,0,0,1-.88,0,.21.21,0,0,1-.21-.12.81.81,0,0,0-.74-.46h-.9a.84.84,0,0,0-.84.86.85.85,0,0,0,.84.84h.87a.83.83,0,0,0,.78-.46.16.16,0,0,1,.18-.11h.76a1.73,1.73,0,0,0,1.62-1.28,3.89,3.89,0,0,0,.05-.9.28.28,0,0,1,.15-.28,1.1,1.1,0,0,0,.55-.84A11.36,11.36,0,0,0,12.89,7.25ZM2.52,7c0,.35,0,.71,0,1.07v1c0,.25-.09.33-.34.29a.63.63,0,0,1-.52-.62c0-.47,0-.93,0-1.4a.61.61,0,0,1,.6-.62C2.45,6.7,2.52,6.76,2.52,7ZM8.8,12.2c-.15,0-.29,0-.43,0s-.29,0-.44,0a.29.29,0,0,1,0-.57h.89a.28.28,0,0,1,.28.29A.29.29,0,0,1,8.8,12.2Zm3.53-3.49a.65.65,0,0,1-.55.64c-.23,0-.32,0-.33-.27V7c0-.24.09-.31.33-.28a.65.65,0,0,1,.55.64C12.34,7.81,12.34,8.26,12.33,8.71ZM10,5.27A1.2,1.2,0,0,0,8.72,4H5.28A1.21,1.21,0,0,0,4,5.3V7.48A1.2,1.2,0,0,0,5.08,8.81c.08,0,.11,0,.11.11s0,.31,0,.47a.58.58,0,0,0,.35.59.57.57,0,0,0,.68-.16l.92-.92a.3.3,0,0,1,.23-.09H8.72A1.2,1.2,0,0,0,10,7.52Q10,6.4,10,5.27ZM9.45,7.56a.63.63,0,0,1-.68.68H7.22a.51.51,0,0,0-.38.16c-.34.36-.68.71-1,1.06l-.06,0c0-.27,0-.55,0-.82s-.1-.35-.35-.35H5.21a.63.63,0,0,1-.68-.66V5.23a.63.63,0,0,1,.68-.68H8.77a.63.63,0,0,1,.68.68Zm-2-1.11A.42.42,0,0,1,7,6.86a.41.41,0,0,1-.4-.43A.4.4,0,0,1,7,6,.41.41,0,0,1,7.41,6.45Zm1.37,0a.42.42,0,1,1-.84,0,.42.42,0,0,1,.84,0ZM5.62,6A.4.4,0,0,1,6,6.45a.41.41,0,0,1-.42.41.44.44,0,0,1-.41-.43A.41.41,0,0,1,5.62,6Z"
+                                    transform="translate(0 0)" />
+                              </svg>
+                           </div>
+                           <div class="sh_store_name">
+                              <h2 class="o_default_snippet_text">Quick Support</h2>
+                           </div>
+                           <div class="sh_store_contant">
+                              <p class="o_default_snippet_text">Swift and responsive customer
+                                 support for immediate assistance and resolutions.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div
+                        class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-10 mb-lg-0 mb-md-0 mb-sm-0 mb-0 text-center o_colored_level">
+                        <div class="sh_store_service_box">
+                           <div class="sh_store_icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                 data-name="Layer 1" viewbox="0 0 14 14">
+                                 <defs>
+                                    <style class="o_default_snippet_text">
+                                       .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                 </defs>
+                                 <title class="o_default_snippet_text">Expertise to Deliver Quality</title>
+                                 <rect class="cls-1" width="14" height="14" />
+                                 <path class="cls-2"
+                                    d="M13.5,12.24A2.35,2.35,0,0,0,12,10.05c-.19-.07-.39-.09-.59-.16a1.53,1.53,0,0,0-.47-3A1.52,1.52,0,0,0,9.61,8.36a1.53,1.53,0,0,0,1.25,1.51s.06,0,0,.05-.09,0-.13,0a2.33,2.33,0,0,0-1.2.55c-.06,0-.1.12-.19,0a3,3,0,0,0-2-1.1l-.06,0,.1-.05a2,2,0,1,0-.86,0s.1.05,0,.08l-.06,0a2.91,2.91,0,0,0-1.84,1.05c-.08.1-.12.07-.2,0a2.31,2.31,0,0,0-1.22-.55l-.2,0,.08,0A1.52,1.52,0,0,0,4.37,8.12,1.54,1.54,0,0,0,2.51,6.89,1.52,1.52,0,0,0,1.4,8.77,1.55,1.55,0,0,0,2.6,9.89l0,0-.08,0a2.36,2.36,0,0,0-1.32.69A2.4,2.4,0,0,0,.5,12.51c0,.38.06.44.44.44H13.22a.28.28,0,0,0,.28-.29C13.51,12.52,13.5,12.38,13.5,12.24ZM1.85,8.37a1,1,0,0,1,1-1,1,1,0,0,1,1,1,1,1,0,0,1-2,0Zm2.39,2.79A2.94,2.94,0,0,0,4,12.29c0,.12,0,.14-.15.14H1.19c-.14,0-.18,0-.18-.18a1.84,1.84,0,0,1,1.13-1.7,2,2,0,0,1,2.05.38A.16.16,0,0,1,4.24,11.16ZM5.48,7.37A1.52,1.52,0,1,1,7,8.88,1.53,1.53,0,0,1,5.48,7.37Zm3.6,5.06H4.65c-.15,0-.19,0-.18-.19a2.53,2.53,0,0,1,5-.3C9.58,12.43,9.58,12.43,9.08,12.43Zm1.05-4.06a1,1,0,0,1,1-1,1.05,1.05,0,0,1,1,1,1,1,0,0,1-1,1A1,1,0,0,1,10.13,8.37ZM13,12.28c0,.13-.05.16-.17.15H10.23c-.13,0-.19,0-.2-.17a2.62,2.62,0,0,0-.27-1.1.17.17,0,0,1,.05-.23,1.94,1.94,0,0,1,2.07-.37A1.83,1.83,0,0,1,13,12.28ZM8.92,2.52a.26.26,0,0,0-.15-.46C8.48,2,8.2,2,7.91,1.94a.3.3,0,0,1-.28-.19c-.12-.27-.26-.53-.39-.8A.26.26,0,0,0,7,.77.27.27,0,0,0,6.74,1c-.13.26-.27.52-.38.78a.33.33,0,0,1-.31.21c-.27,0-.53.09-.8.12A.27.27,0,0,0,5,2.23a.31.31,0,0,0,.11.32l.63.61a.27.27,0,0,1,.09.27c-.07.3-.11.61-.16.91a.26.26,0,0,0,.28.32l.18-.08c.24-.13.49-.25.73-.39a.27.27,0,0,1,.3,0l.77.41a.27.27,0,0,0,.32,0,.29.29,0,0,0,.1-.33l-.15-.87a.23.23,0,0,1,.08-.25C8.49,3,8.7,2.74,8.92,2.52Zm-1,.29a.58.58,0,0,0-.2.7,3.8,3.8,0,0,1,.06.4,2.81,2.81,0,0,1-.55-.27.36.36,0,0,0-.4,0c-.17.1-.35.19-.56.29,0-.22.07-.41.11-.6A.35.35,0,0,0,6.23,3L5.8,2.49l.63-.09a.3.3,0,0,0,.26-.2c.09-.19.19-.37.29-.58a3.65,3.65,0,0,1,.29.55.35.35,0,0,0,.31.23l.59.09A.75.75,0,0,1,7.88,2.81ZM12.58,4a4.29,4.29,0,0,0-.5-.07.35.35,0,0,1-.32-.23,3.74,3.74,0,0,0-.22-.45.25.25,0,0,0-.25-.17.26.26,0,0,0-.24.16c-.05.11-.12.22-.16.33a.46.46,0,0,1-.5.37A1.51,1.51,0,0,0,10,4a.24.24,0,0,0-.24.18.29.29,0,0,0,.1.29,3.68,3.68,0,0,0,.35.33.32.32,0,0,1,.12.35c0,.19-.07.38-.1.56s.21.37.39.23a1,1,0,0,1,1.29,0c.19.14.4,0,.38-.25a3,3,0,0,0-.09-.6.21.21,0,0,1,.08-.24c.14-.14.29-.27.42-.42A.25.25,0,0,0,12.58,4Zm-.84,1.24c-.19,0-.3-.17-.45-.17s-.26.13-.42.17a1.81,1.81,0,0,0,0-.46c0-.14-.21-.2-.3-.38a.6.6,0,0,0,.7-.48.6.6,0,0,0,.68.5A.65.65,0,0,0,11.74,5.21ZM3.94,4l-.13,0C3.33,4,3.09,3.72,3,3.3A.32.32,0,0,0,2.67,3a.3.3,0,0,0-.28.25.79.79,0,0,1-.87.65S1.44,4,1.4,4a.22.22,0,0,0-.23.16.24.24,0,0,0,.08.29c.13.13.25.26.39.38a.27.27,0,0,1,.1.29,5.48,5.48,0,0,0-.1.56c0,.24.16.37.37.27a1.24,1.24,0,0,0,.3-.16.53.53,0,0,1,.7,0,1.73,1.73,0,0,0,.3.16.26.26,0,0,0,.29,0,.31.31,0,0,0,.1-.29c0-.18-.07-.36-.1-.54a.25.25,0,0,1,.08-.27,5.08,5.08,0,0,0,.41-.39C4.27,4.23,4.2,4,3.94,4ZM3.11,5.23a.63.63,0,0,0-.85,0c0-.18.08-.32,0-.46s-.2-.22-.32-.37a.63.63,0,0,0,.71-.5.63.63,0,0,0,.69.51A.63.63,0,0,0,3.11,5.23Z"
+                                    transform="translate(0 0)" />
+                              </svg>
+                           </div>
+                           <div class="sh_store_name">
+                              <h2 class="o_default_snippet_text">Industry Experience</h2>
+                           </div>
+                           <div class="sh_store_contant">
+                              <p class="o_default_snippet_text">Expert solutions for every
+                                 industrial revolution.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+
+            <!--Best
+            Selling -->
+            <section id="sh_store_product_box"
+               class="sh_store_product_box_section js_cls_get_sh_ecom_s_product o_colored_level"
+               data-column_class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 pr-0 pl-0 pb-3"
+               data-owl_item_mobile="1" data-owl_item_tablet="2"
+               data-item_template="sh_ecommerce_snippet.sh_ecom_snippet_tmpl_11_item"
+               data-single_tab_item_template="sh_ecommerce_snippet.sh_ecom_snippet_tmpl_11_item_single_tab"
+               data-snippet="sh_store_product_boxes" data-name="Product Ecommerce Snippet"
+               style="background-image: none;" data-display-rating="true"
+               data-display-saleprice="true" data-display-wishlist="true"
+               data-display-description="" data-display-addtocart="true"
+               data-display-category="true" data-tilt-feature="" data-filter-id="1">
+               <div class="container">
+                  <header>
+                     <div class="sh_store_hading">
+                        <h5 class="sh_sub_title o_default_snippet_text">Suggested Apps</h5>
+                        <h2 class="o_default_snippet_text">Best Selling Apps</h2>
+                     </div>
+
+                  </header>
+                  <div class="js_cls_render_dynamic_product_area oe_website_sale o_not_editable" />
+               </div>
+            </section>
+
+            <!--Newest
+            arrival Selling -->
+            <section id="sh_store_product_box"
+               class="sh_store_product_box_section js_cls_get_sh_ecom_s_product o_colored_level"
+               data-column_class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 pr-0 pl-0 pb-3"
+               data-owl_item_mobile="1" data-owl_item_tablet="2"
+               data-item_template="sh_ecommerce_snippet.sh_ecom_snippet_tmpl_11_item"
+               data-single_tab_item_template="sh_ecommerce_snippet.sh_ecom_snippet_tmpl_11_item_single_tab"
+               data-snippet="sh_store_product_boxes" data-name="Product Ecommerce Snippet"
+               style="background-image: none;" data-display-rating="true"
+               data-display-saleprice="true" data-display-wishlist="true"
+               data-display-description="" data-display-addtocart="true"
+               data-display-category="true" data-tilt-feature="" data-filter-id="2">
+               <div class="container">
+                  <header>
+                     <div class="sh_store_hading">
+                        <h5 class="sh_sub_title o_default_snippet_text">Suggested Apps</h5>
+                        <h2 class="o_default_snippet_text">New Arrivals Apps</h2>
+                     </div>
+
+                  </header>
+                  <div class="js_cls_render_dynamic_product_area oe_website_sale o_not_editable" />
+               </div>
+            </section>
+
+
+            <!-- highest rated  Selling -->
+            <section id="sh_store_product_box"
+               class="sh_store_product_box_section js_cls_get_sh_ecom_s_product o_colored_level"
+               data-column_class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 pr-0 pl-0 pb-3"
+               data-owl_item_mobile="1" data-owl_item_tablet="2"
+               data-item_template="sh_ecommerce_snippet.sh_ecom_snippet_tmpl_11_item"
+               data-single_tab_item_template="sh_ecommerce_snippet.sh_ecom_snippet_tmpl_11_item_single_tab"
+               data-snippet="sh_store_product_boxes" data-name="Product Ecommerce Snippet"
+               style="background-image: none;" data-display-rating="true"
+               data-display-saleprice="true" data-display-wishlist="true"
+               data-display-description="" data-display-addtocart="true"
+               data-display-category="true" data-tilt-feature="" data-filter-id="3">
+               <div class="container">
+                  <header>
+                     <div class="sh_store_hading">
+                        <h5 class="sh_sub_title o_default_snippet_text">Suggested Apps</h5>
+                        <h2 class="o_default_snippet_text">Highest Rated Apps</h2>
+                     </div>
+
+                  </header>
+                  <div class="js_cls_render_dynamic_product_area oe_website_sale o_not_editable" />
+               </div>
+            </section>
+
+
+            <!--Management
+            Suites-->
+            <section id="sh_store_product_box"
+               class="sh_store_product_box_section js_cls_get_sh_ecom_s_product o_colored_level"
+               data-column_class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 pr-0 pl-0 pb-3"
+               data-owl_item_mobile="1" data-owl_item_tablet="2"
+               data-item_template="sh_ecommerce_snippet.sh_ecom_snippet_tmpl_11_item"
+               data-single_tab_item_template="sh_ecommerce_snippet.sh_ecom_snippet_tmpl_11_item_single_tab"
+               data-snippet="sh_store_product_boxes" data-name="Product Ecommerce Snippet"
+               style="background-image: none;" data-display-rating="true"
+               data-display-saleprice="true" data-display-wishlist="true"
+               data-display-description="" data-display-addtocart="true"
+               data-display-category="true" data-tilt-feature="" data-filter-id="4">
+               <div class="container">
+                  <header>
+                     <div class="sh_store_hading">
+                        <h5 class="sh_sub_title o_default_snippet_text">Suggested Apps</h5>
+                        <h2 class="o_default_snippet_text">Management Suites</h2>
+                     </div>
+
+                  </header>
+                  <div class="js_cls_render_dynamic_product_area oe_website_sale o_not_editable" />
+               </div>
+            </section>
+            <!--chatgpt coming_soon section start-->            
+            <section id="sh_store_chatgpt"
+               class="js_cls_sh_offer_snippet_store sh_store_chatgpt_section o_colored_level"
+               data-snippet="theme_softhealer_store_chatgpt_snippet_template"
+               data-name="Coming Soon" style="background-image: none;" data-end-date="2023-09-03">
+               <div class="container">
+                  <div class="row row align-items-center">
+                     <div
+                        class="col-xxl-5 col-xl-5 col-lg-5 col-md-8 sh_store_img_soon o_colored_level">
+                        <div class="sh_store_img_box">
+                                    <img src="theme_softhealer_store\static\src\img\home\chatgpt_coming_soon.png"
+                                       loading="lazy" title="Find the Perfect Odoo App - Solutions for All Industries" style="" />
+                        </div>
+                     </div>
+                     <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 o_colored_level">
+                        <div class="sh_store_img_contant">
+                                    <h2 class="o_default_snippet_text">ChatGPT  Integration With Odoo</h2>
+                                    <p class="mb-2 o_default_snippet_text">Easily integrate ChatGPT into Odoo with this powerful tool, enabling intelligent responses and content generation by configuring preferences and using the response button. Elevate communication and productivity through ChatGPT's summary viewing feature for enhanced efficiency.</p>
+                           <div class="sh_store_counter">
+                              <div class="sh_book_button">
+                                 <a href="/support" role="button" target="_blank"
+                                    class="btn btn-primary btn-lg s_website_form_send sh_contact_primary_button rippler rippler-default">
+                                    Book Demo <span
+                                       class=" sh_link_right">
+                                       <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          class="icon icon-tabler icon-tabler-chevrons-right"
+                                          viewBox="0 0 24 24"
+                                          stroke-width="1"
+                                          fill="none"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round">
+                                          <path stroke="none"
+                                             d="M0 0h24v24H0z"
+                                             fill="none"></path>
+                                          <polyline
+                                             points="7 7 12 12 7 17"></polyline>
+                                          <polyline
+                                             points="13 7 18 12 13 17"></polyline>
+                                       </svg>
+                                    </span>
+                                 </a>
+                              </div>
+                                       <div  class="sh_book_button">
+                                             <a href="https://store.softhealer.com/shop/chatgpt-integration-with-odoo-1505#attr=14297" role="button"
+                                                target="_blank"  class="btn btn-primary btn-lg s_website_form_send sh_contact_primary_button rippler rippler-default">
+                                    Buy Now <span
+                                       class=" sh_link_right">
+                                       <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          class="icon icon-tabler icon-tabler-chevrons-right"
+                                          viewBox="0 0 24 24"
+                                          stroke-width="1"
+                                          fill="none"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round">
+                                          <path stroke="none"
+                                             d="M0 0h24v24H0z"
+                                             fill="none"></path>
+                                          <polyline
+                                             points="7 7 12 12 7 17"></polyline>
+                                          <polyline
+                                             points="13 7 18 12 13 17"></polyline>
+                                       </svg>
+                                    </span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- chatgpt coming_soon section end-->
+            <!-- <section id="sh_store_coming_soon"
+               class="js_cls_sh_offer_snippet_store sh_store_coming_soon_section o_colored_level"
+               data-snippet="theme_softhealer_store_coming_soon_snippet_template"
+               data-name="Coming Soon" style="background-image: none;" data-end-date="2023-09-03">
+               <div class="container">
+                  <div class="row">
+                     <div
+                        class="col-xxl-5 col-xl-5 col-lg-5 col-md-8 sh_store_img_soon o_colored_level">
+                        <div class="sh_store_img_box">
+                           <img src="theme_softhealer_store/static/src/img/home/coming_soon.webp"
+                              loading="lazy" style="" />
+                        </div>
+                        <div class="sh_store_main_box_icon">
+                           <div class="sh_store_icon">
+                              <div class="sh_store_icon_box">
+                                 <img class=" lazyloaded"
+                                    src="theme_softhealer_store/static/src/img/home/icon_property.webp"
+                                    alt="10 Million" loading="lazy" style="" />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 o_colored_level">
+                        <div class="sh_store_img_contant">
+                           <h5 class="sh_sub_title o_default_snippet_text">Coming Soon App</h5>
+                           <h2 class="o_default_snippet_text">Property Management</h2>
+                           <p class="mb-2 o_default_snippet_text">A property management system is a
+                              comprehensive software solution that streamlines and automates various
+                              tasks related to managing properties, such as rental properties,
+                              hotels, or real estate portfolios. It provides tools and features for
+                              managing reservations, bookings, tenant information, maintenance
+                              requests, financial transactions, and reporting. With a property
+                              management system, property owners and managers can efficiently handle
+                              operations, improve tenant experiences, optimize occupancy rates, and
+                              gain valuable insights into their property performance.</p>
+
+                           <div class="sh_store_counter js_cls_countdown_wrapper">
+                              <div class="row">
+                                 <div
+                                    class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 o_colored_level">
+                                    <div class="sh_store_counter_one">
+                                       <div class="sh_store_day">
+                                          <h2 class="js_cls_days_count o_default_snippet_text">99</h2>
+                                          <span />
+                                          <h4 class="o_default_snippet_text">Day</h4>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div
+                                    class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 o_colored_level">
+                                    <div class="sh_store_counter_two">
+                                       <div class="sh_store_day">
+                                          <h2 class="js_cls_hours_count o_default_snippet_text">13</h2>
+                                          <span />
+                                          <h4 class="o_default_snippet_text">Hours</h4>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div
+                                    class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 o_colored_level">
+                                    <div class="sh_store_counter_three">
+                                       <div class="sh_store_day">
+                                          <h2 class="js_cls_minutes_count o_default_snippet_text">57</h2>
+                                          <span />
+                                          <h4 class="o_default_snippet_text">minute</h4>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div
+                                    class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 o_colored_level">
+                                    <div class="sh_store_counter_three">
+                                       <div class="sh_store_day">
+                                          <h2 class="js_cls_seconds_count o_default_snippet_text">57</h2>
+                                          <span />
+                                          <h4 class="o_default_snippet_text">Seconds</h4>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section> -->
+
+            <section class="s_sh_website_popular_searches pt40 pb40 o_colored_level"
+               data-snippet="s_sh_website_popular_searches" data-name="Badges"
+               style="background-image: none;" data-min-search-count="1">
+               <div class="container o_not_editable">
+                  <h4>Popular searches</h4>
+                  <div class="popular_search_snippet_template" />
+               </div>
+            </section>
+
+            <section id="sh_store_call_to_action"
+               class="sh_store_call_to_action_section oe_img_bg o_bg_img_center o_colored_level"
+               data-snippet="theme_softhealer_store_call_to_action_snippet_template"
+               data-name="Call to Action"
+               style="background-image: url(theme_softhealer_store/static/src/img/home/call_to_action.webp);">
+               <div class="container">
+                  <div class="row">
+                     <div class="sh_store_contant_box o_colored_level">
+                        <h5 class="sh_sub_title o_default_snippet_text">Why us?</h5>
+                        <h2 class="o_default_snippet_text">Choose Best ERP Solution For<br
+                              class="d-md-block d-none" /> Your Enterprise</h2>
+                        <div class="sh_home_primary_button">
+                           <a href="/contact-us" role="button" target="_blank"
+                              class="btn btn-primary sh_pos_solution_primary_link o_default_snippet_text">
+                              Contact Us <span class=" sh_pos_solution_primary_link_right">
+                                 <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-chevrons-right"
+                                    viewbox="0 0 24 24" stroke-width="1" stroke="#2c3e50"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <polyline points="7 7 12 12 7 17" />
+                                    <polyline points="13 7 18 12 13 17" />
+                                 </svg>
+                              </span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            <section id="sh_store_testimonial_section_dyn"
+               class="sh_store_testimonial_section js_cls_get_testimonial_s_post sh_testimonial_snippet o_colored_level"
+               data-item_template="theme_softhealer_store.sh_testimonial_s_test_1_item"
+               data-snippet="sh_testimonial_snippet_s_1" data-name="Testimonial Snippet"
+               style="background-image: none;">
+               <div class="oe_structure" />
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xxl-4 col-xl-4 col-lg-4 o_colored_level">
+                        <div class="sh_store_testimonial">
+                           <div class="testimonial-title">
+                              <i class="bi bi-quote display-1" />
+                              <h5 class="sh_sub_title o_default_snippet_text">What our clients say</h5>
+                              <h2 class="o_default_snippet_text">Testimonials</h2>
+                              <p class="o_default_snippet_text">Words of Delight: Experiences Shared
+                                 by Those who Love Our Services.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xxl-8 col-xl-8 col-lg-8 o_colored_level">
+                        <div class="sh_testi-wrap o_not_editable">
+                           <section class="custom_owl">
+                              <div class="owl-carousel">
+                                 <div class="js_cls_render_dynamic_testimonial_area" />
+                              </div>
+                           </section>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="oe_structure" />
+            </section>
+
+            <section id="sh_store_news"
+               class="sh_store_news_section oe_img_bg o_bg_img_center o_colored_level"
+               data-snippet="theme_softhealer_store_newslatter_snippet_template"
+               data-name="Newslatter"
+               style="background-image: url(theme_softhealer_store/static/src/img/home/newsletter_background.svg);">
+               <div class="container">
+                  <div class="row">
+                     <div class="sh_store_contant_box o_colored_level">
+                        <h2 class="o_default_snippet_text">Sign up to receive the latest<br
+                              class="d-md-block d-none" />updates and news</h2>
+                        <div class="sh_store_form">
+                           <div class="sh_store_fields">
+                              <label
+                                 class="s_newsletter_subscribe_form s_newsletter_list js_subscribe"
+                                 data-vxml="001" data-list-id="1" data-name="Newsletter"
+                                 data-snippet="s_newsletter_subscribe_form">
+                                 <div class="sh_store_input">
+                                    <div class="sh_store_icon">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="15"
+                                          height="15" viewbox="0 0 15 15" fill="none">
+                                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                             d="M0 7.5C0 3.36453 3.36452 0 7.5 0C11.6355 0 15 3.36453 15 7.5C15 11.6355 11.6355 15 7.5 15C3.36452 15 0 11.6355 0 7.5ZM13.875 7.5C13.875 3.97252 11.0275 1.125 7.5 1.125C3.97252 1.125 1.125 3.97252 1.125 7.5C1.125 11.0275 3.97252 13.875 7.5 13.875C11.0275 13.875 13.875 11.0275 13.875 7.5ZM7.5 2.25C4.60705 2.25 2.25 4.60705 2.25 7.5C2.25 10.393 4.60705 12.75 7.5 12.75C8.14767 12.75 8.7706 12.6325 9.34497 12.4167C9.53541 12.3478 9.67407 12.1817 9.70799 11.982C9.74191 11.7823 9.66587 11.5798 9.50889 11.4518C9.35191 11.3238 9.13824 11.2901 8.94946 11.3635C8.49934 11.5326 8.01183 11.625 7.5 11.625C5.21495 11.625 3.375 9.78505 3.375 7.5C3.375 5.21495 5.21495 3.375 7.5 3.375C9.78505 3.375 11.625 5.21495 11.625 7.5V8.0625C11.625 8.58683 11.2118 9 10.6875 9C10.1632 9 9.75 8.58683 9.75 8.0625V5.4375C9.75226 5.15149 9.53956 4.90931 9.25565 4.87464C8.97174 4.83997 8.70701 5.02385 8.64038 5.302C8.26074 5.0341 7.80663 4.875 7.3125 4.875C5.94307 4.875 4.875 6.0853 4.875 7.5C4.875 8.9147 5.94307 10.125 7.3125 10.125C8.00653 10.125 8.62211 9.81305 9.06152 9.32227C9.44007 9.80853 10.0287 10.125 10.6875 10.125C11.8199 10.125 12.75 9.19492 12.75 8.0625V7.5C12.75 4.60705 10.393 2.25 7.5 2.25ZM8.625 7.5C8.625 6.63995 8.01082 6 7.3125 6C6.61418 6 6 6.63995 6 7.5C6 8.36005 6.61418 9 7.3125 9C8.01082 9 8.625 8.36005 8.625 7.5Z"
+                                             fill="#FDFDFE" />
+                                       </svg>
+                                    </div>
+                                    <input type="email" name="email"
+                                       class="js_subscribe_value form-control"
+                                       placeholder="your email..." />
+                                    <button class="sh_store_button">
+                                       <a role="button" href="#"
+                                          class="btn btn-primary js_subscribe_btn o_submit o_default_snippet_text">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                             height="16" viewbox="0 0 18 16" fill="none">
+                                             <path
+                                                d="M10.7071 15.707C10.5116 15.9025 10.2561 16 10.0001 16C9.74407 16 9.48857 15.9025 9.29306 15.707C8.90256 15.3165 8.90256 14.6835 9.29306 14.293L14.5861 8.99994H1.00001C0.448004 8.99994 0 8.55193 0 7.99993C0 7.44793 0.448004 6.99992 1.00001 6.99992H14.5861L9.29306 1.70689C8.90256 1.31638 8.90256 0.68338 9.29306 0.292877C9.68357 -0.0976257 10.3166 -0.0976257 10.7071 0.292877L17.7071 7.29293C18.0976 7.68343 18.0976 8.31643 17.7071 8.70694L10.7071 15.707Z"
+                                                fill="#FDFDFE" />
+                                          </svg>
+                                       </a>
+                                       <a role="button" href="#"
+                                          class="btn btn-success js_subscribed_btn d-none o_submit o_default_snippet_text"
+                                          disabled="disabled">
+                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                             stroke="currentColor" stroke-width="1"
+                                             viewbox="0 0 24 24" aria-hidden="true" width="30px">
+                                             <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                                          </svg>
+                                       </a>
+                                    </button>
+                                 </div>
+                              </label>
+                           </div>
+
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </t>
+   </template>
+
+   <data noupdate="1">
+
+      <!-- Default pagese  below 2 record must put in no update 1-->
+      <record id="theme_softhealer_store_website_home_page" model="website.page">
+         <field name="is_published">True</field>
+         <field name="url">/home-store</field>
+         <field name="view_id" ref="theme_softhealer_store.theme_softhealer_store_website_home_tmpl" />
+         <field name="track">True</field>
+         <field name="website_id" model="website"
+            eval="obj().env['website'].sudo().get_current_website()" />
+      </record>
+
+      <record id="theme_softhealer_store_website_home_menu" model="website.menu">
+         <field name="name">Home Store</field>
+         <field name="url">/home-store</field>
+         <field name="page_id" ref="theme_softhealer_store.theme_softhealer_store_website_home_page" />
+         <field name="sequence" type="int">10</field>
+         <field name="website_id" model="website"
+            eval="obj().env['website'].sudo().get_current_website()" />
+      </record>
+
+   </data>
+
+</odoo>

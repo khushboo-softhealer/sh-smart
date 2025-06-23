@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View sale.order.template form -->
+    <record id="sh_sale_quotation_template_view_sale_order_template_form" model="ir.ui.view">
+        <field name="name">view.sale.order.template.form</field>
+        <field name="model">sale.order.template</field>
+        <field name="inherit_id" ref="sale_management.sale_order_template_view_form"/>
+        <field name="arch" type="xml">
+            <page name="terms_and_conditions" position="after">
+                <page name="project_details" string="Project Details">
+                    <group>
+                        <group>
+                            <field name="project_manager" />
+                            <field name="responsible_user_id" />
+                            <field name="sh_total_work_duration" />
+                        </group>
+                        <group>
+                            <field name="sh_project_stage_tmpl_id" />
+                            <!-- Pricing Mode -->
+                            <field name="sh_pricing_mode"/>
+                            <field name="sh_fp_based_on" attrs="{'invisible': [('sh_pricing_mode', '!=', 'fp')], 'required': [('sh_pricing_mode', '=', 'fp')]}" />
+                            <field name="sh_tm_based_on" attrs="{'invisible': [('sh_pricing_mode', '!=', 'tm')], 'required': [('sh_pricing_mode', '=', 'tm')]}" />
+                        </group>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+
+</odoo>

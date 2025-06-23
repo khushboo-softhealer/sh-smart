@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_survmate_theme_survey_form_inherit" model="ir.ui.view">
+        <field name="name">sh.survmate.theme.survey.form.inherit</field>
+        <field name="model">survey.survey</field>
+        <field name="inherit_id" ref="survey.survey_survey_view_form"/>
+        <field name="arch" type="xml">
+    
+    
+    		<xpath expr="//group[@name='options']" position="inside">
+
+                 <group string="Survmate Theme" name="sh_survmate_theme_group">
+                     <field name="sh_survmate_settings_id"/>
+                 </group>
+    		
+    		</xpath>
+    		
+    		<!-- Timer Fixed -->
+            <xpath expr="//group[@name='scoring']//field[@name='is_time_limited']" position="after">
+                <field name="sh_is_time_fixed" attrs="{'invisible': [('is_time_limited','=',False)]}"/>
+            </xpath>
+    		
+    
+        </field>
+	</record>
+
+</odoo>  

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_predefined_reason,access_sh_predefined_reason,model_sh_predefined_reason,base.group_user,1,0,0,0
+access_sh_predefined_reason_manager,access_sh_predefined_reason_manager,model_sh_predefined_reason,hr.group_hr_manager,1,1,1,1
+sh_hr_attendance_geolocation.access_resource_calendar_entry_wizard,access_resource_calendar_entry_wizard,sh_hr_attendance_geolocation.model_resource_calendar_entry_wizard,base.group_user,1,1,1,1

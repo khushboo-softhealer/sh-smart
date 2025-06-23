@@ -1,0 +1,156 @@
+.sh_about_one.bg {
+    color: white;
+    width: 100%;
+    object-fit: cover;
+    background: url("/web/image/15655/support.png") center center/cover no-repeat;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 320px;
+}
+
+#loading.sh_loading {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("/sh_website_helpdesk/static/src/img/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px; //height of loading bar fix
+}
+
+form#frm_id #products_div .select2.select2-container.select2-container--default {
+    display: block;
+    width:100%;
+    height: calc(2.0625rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size:0.875rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color:#FFFFFF;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius:0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+form#frm_id #products_div .select2.select2-container.select2-container--default:focus {
+    color:#495057;
+    background-color: #FFFFFF;
+    border-color: #21fffb;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0,160,157/25%);
+}
+
+form#frm_id #products_div .select2.select2-container.select2-container--default span.selection .select2-selection .select2-selection__rendered .select2-selection__clear {
+    color: #5e5e5e;
+    font-size: 15px;
+    float: right;
+}
+
+.select2-container.select2-container--default.select2-container--open {
+    width:42.2%;
+    padding: 10px;
+    background-color: #FFFFFF;
+    background-clip:padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    max-height:160px;
+    overflow: auto;
+}
+
+.select2-container.select2-container--default .select2-dropdown span.select2-search.select2-search--dropdown .select2-search__field {
+    padding:0.375rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color:#495057;
+    background-color: #FFFFFF;
+    border: 1px solid #0e0e0e;
+    border-radius:0.25rem;
+    position: relative;
+    background: none;
+}
+
+.select2-container.select2-container--default .select2-dropdown span.select2-search.select2-search--dropdown {
+    position: relative;
+    padding-left:0px;
+    padding-right: 0px;
+}
+
+.select2-container.select2-container--default .select2-dropdown span.select2-search.select2-search--dropdown:after {
+    position: absolute;
+    content:'\f002';
+    font-family: 'FontAwesome';
+    font-size: 15px;
+    top: 7px;
+    right: 10px;
+    color:#9d9d9d;
+}
+
+.select2-container.select2-container--default .select2-dropdown .select2-results ul.select2-results__options {
+    padding-left: 2px;
+    padding-top: 5px;
+}
+
+.select2-container.select2-container--default .select2-dropdown .select2-results ul.select2-results__options .select2-results__option {
+    padding: 2px;
+}
+
+form#frm_id #products_div {
+    margin-bottom: 1rem;
+}
+
+.sh_support_time {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 30px 20px;
+    background: #5468ff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.sh_support_time .support_icon {
+    margin: 20px 0px;
+    margin-right: 30px;
+}
+
+.sh_support_time .support_icon img {
+    height: 60px;
+    width: 60px;
+    color: #fff;
+}
+
+.sh_support_time .support_content h2 {
+    color: #fff;
+    margin-bottom: 0px;
+    font-size: 25px;
+}
+
+.sh_support_time .support_content p {
+    font-size: 16px;
+    margin-bottom: 0px;
+    color: #fff;
+}
+
+.sh_support_time .sub-div {
+    position: absolute;
+    top: 65%;
+    left: 90%;
+    height: 100px;
+    width: 100px;
+    opacity: 0.4;
+}
+
+.sh_support_time .sub-div img {
+    height: 60px;
+    width: 60px;
+    color: #fff;
+}

@@ -1,0 +1,94 @@
+<section class="sh_cricket_tournament_about_section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 mx-auto d-block">
+                                <div class="sh_image_box">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/cricket_tournament/frame.webp"
+                                    alt="Corporate Cricket Match Day" loading="lazy" title="Corporate Cricket Match Day">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 mx-auto d-block">
+                                <div class="sh_description_box">
+                                    <h2 class="sh_title_box">Setting the Stage</h2>
+                                    <p class="sh_text">
+                                        At Softhealer Technologies, we believe in the power of teamwork, not just in the office but also on the field. This spirit was epitomized in our recent cricket tournament, a thrilling event that brought together employees from all departments for a day of sport, camaraderie, and fun.
+                                    </p>
+                                    <p class="sh_text">
+                                        The tournament was held at a picturesque cricket ground near our office, chosen for its lush outfield and excellent facilities. The preparations began weeks in advance, with teams forming and practicing during lunch breaks and after work. The buzz around the office was palpable as everyone anticipated the big day.
+                                    </p>
+                                    <h2 class="sh_title_box">Teams and Participants</h2>
+                                    <p class="sh_text" style="margin-bottom:5px;">
+                                        We had four teams, each representing different departments:
+                                    </p>
+                                    <ul>
+                                        <li class="o_default_snippet_text">Navratan 11</li>
+                                        <li class="o_default_snippet_text">Brand Basher</li>
+                                        <li class="o_default_snippet_text">Creative Crusaders</li>
+                                        <li class="o_default_snippet_text">Operation Ospreys</li>
+                                        
+                                      </ul>
+                                      <p class="sh_text">Each team was a blend of cricket enthusiasts and those trying their hand at the game for the first time, ensuring a mix of skill levels and loads of excitement.</p>
+                                      <h2 class="sh_title_box">The Match Day</h2>
+                                      <p class="sh_text">
+                                        The tournament kicked off with much fanfare. The weather was perfect – bright and sunny, setting the tone for a fantastic day of cricket.
+                                      </p>
+                                      <ul class="sh_service_content_ul">
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+                                                <span class="sh_highlight"> Employee
+                                                    Opening Match : </span>
+                                                
+                                                    The Creative Crusaders faced the Operation Ospreys in the opening match. It was a nail-biting game with the Creative Crusaders clinching victory in the last over, thanks to a stellar performance by their captain.
+                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    
+                                    <h2 class="sh_title_box">Star Performers</h2>
+                                    <ul class="sh_service_content_ul">
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+                                                <span class="sh_highlight">
+                                                    Man Of The Match: </span>
+                                                
+                                                    Mayur from the Navratan 11, with his accurate and deadly bowling, earned the Man of the Match award.
+                                                
+                                            </div>
+                                        </li>
+                                        <li class="sh_service_content_li">
+                                            <div class="sh_service_content_li_check_box">
+                                                <span class="sh_service_content_li_check fa fa-check"></span>
+                                            </div>
+                                            <div>
+                                                <span class="sh_highlight">
+                                                    Man of the Series : </span>
+                                                
+                                                    Nikunj from the Navratan 11, with his powerful hitting and consistent run-scoring, took home the Man of the Series trophy.
+                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h2 class="sh_title_box mt-4">The Grand Finale</h2>
+                                    <p class="sh_text">
+                                      The grand finale saw the top two teams, the Creative Crusaders and the Navratan 11, face off in a thrilling contest. The match was a roller-coaster of emotions with momentum swinging back and forth. Ultimately, the Navratan 11 emerged victorious, thanks to their solid teamwork and strategic acumen.
+                                    </p>
+                                    <h2 class="sh_title_box mt-4">Team Spirit and Camaraderie</h2>
+                                    <p class="sh_text">
+                                        The cricket tournament at Softhealer Technologies was more than just a sports event. It was a celebration of our company's culture of teamwork, determination, and fun. It brought colleagues closer, fostering a spirit of camaraderie that transcended work-related interactions.
+                                    </p>
+                                    <p class="sh_text">
+                                       We look forward to making this an annual event, encouraging more participation and building on the wonderful experience we had this year. Here’s to many more such exhilarating tournaments and unforgettable memories at Softhealer Technologies!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </section>

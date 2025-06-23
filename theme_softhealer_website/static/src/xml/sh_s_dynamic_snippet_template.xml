@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve"> 
+
+    <t t-name="theme_softhealer_website.sh_s_dynamic_snippet">
+        <t t-foreach="data" t-as="records">
+            <div class="row d-flex o_grid_mode sh_main_blog">
+                <t t-foreach="records" t-as="rec">
+                    <t t-out="rec"/>
+                </t>
+            </div>
+        </t>
+    </t>
+
+</templates>

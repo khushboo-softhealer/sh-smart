@@ -1,0 +1,6 @@
+.o_survey_form .o_survey_question_matrix td,
+.o_survey_print .o_survey_question_matrix td,
+.o_survey_session_manage .o_survey_question_matrix td,
+.o_survey_quick_access .o_survey_question_matrix td {
+    min-width: 0px !important;
+}

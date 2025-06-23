@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Employee View -->
+    <record id="tds_hr_contract_view_form_inherit" model="ir.ui.view">
+        <field name="name">tds.hr.contract.view.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+        <field name="arch" type="xml">
+            <field name="department_id" position="after">
+                <field name="is_applicable_for_tds" />
+                <field name="employee_contract_type" label="Employee Contract Type" attrs="{'invisible':[('is_applicable_for_tds','!=',True)]}"/>
+                <field name="tds_scheme_type" attrs="{'invisible':['|',('employee_contract_type','=','contractual'),('is_applicable_for_tds','!=',True)]}"/>
+                <field name="tds_percentage" attrs="{'invisible':['|',('employee_contract_type','!=','contractual'),('is_applicable_for_tds','!=',True)]}" />
+            </field>
+            <xpath expr="//group[@name='salary_info']" position="after">
+                <group name="Other_info" string="Salary Info" attrs="{'invisible':[('is_applicable_for_tds','!=',True)]}">
+                    <label for="basic_salary"/>
+                    <div class="o_row mw-50" name="wage">
+                        <field name="basic_salary_perc" class="oe_inline o_hr_narrow_field" nolabel="1"/>
+                        <div class="mb-3"><field name="basic_salary" nolable="1" /></div>
+                    </div>
+
+                    <label for="dearness_allowance"/>
+                    <div class="o_row mw-50" name="wage">
+                        <field name="dearness_allowance_perc" class="oe_inline o_hr_narrow_field" nolabel="1"/>
+                        <div class="mb-3"><field name="dearness_allowance" nolable="1" /></div>
+                    </div>
+
+                    <label for="special_allowance"/>
+                    <div class="o_row mw-50" name="wage">
+                        <field name="special_allowance_perc" class="oe_inline o_hr_narrow_field" nolabel="1"/>
+                        <div class="mb-3"><field name="special_allowance" nolable="1" /></div>
+                    </div>
+
+                    <label for="travelling_allowance"/>
+                    <div class="o_row mw-50" name="wage">
+                        <field name="travelling_allowance_perc" class="oe_inline o_hr_narrow_field" nolabel="1"/>
+                        <div class="mb-3"><field name="travelling_allowance" nolable="1" /></div>
+                    </div>
+
+                    <label for="house_rent_allowance"/>
+                    <div class="o_row mw-50" name="wage">
+                        <field name="house_rent_allowance_perc" class="oe_inline o_hr_narrow_field" nolabel="1"/>
+                        <div class="mb-3"><field name="house_rent_allowance" nolable="1" /></div>
+                    </div>
+                  
+                    <label for="convenyance_allowance"/>
+                    <div class="o_row mw-50" name="wage">
+                        <field name="convenyance_allowance_perc" class="oe_inline o_hr_narrow_field" nolabel="1"/>
+                        <div class="mb-3"><field name="convenyance_allowance" nolable="1" /></div>
+                    </div>
+
+                    <label for="other_allowance"/>
+                    <div class="o_row mw-50" name="wage">
+                        <field name="other_allowance_perc" class="oe_inline o_hr_narrow_field" nolabel="1"/>
+                        <div class="mb-3"><field name="other_allowance" nolable="1" /></div>
+                    </div>
+                  
+                </group>
+
+                <group name="Other_income_info" string="Other Income Info" attrs="{'invisible':['|',('employee_contract_type','=','contractual'),('is_applicable_for_tds','!=',True)]}">
+                    <field name="net_pay_monthly" />
+                    <field name="net_pay_yearly" />
+                    <field name="other_income" />
+                    <field name="perquisites" />
+                    <field name="standard_deduction" />
+
+                    <label for="other_deductions"/>
+                    <div class="o_row mw-50" name="wage">
+                        <field name="other_deductions" class="oe_inline o_hr_narrow_field" nolabel="1"/>
+                        <div class="mb-3"><button name="check_deduction_details" string="Deduction Details" 
+                            type="object" class="btn-primary"/></div>
+                    </div>
+
+
+                    <field name="net_yearaly_income" />
+                    <field name="slab_template_id"/>
+                    <field name="contract_tds_slab_ids">
+                        <tree editable="bottom">
+                            <field name="from_amount"/>
+                            <field name="to_amount"/>
+                            <field name="tax_rate"/>
+                            <field name="actual_amount" sum="total"/>
+                        </tree>
+
+                    </field>
+                    <field name="total_tax_before_cess"/>
+                    
+    
+                </group>
+                <group name="rebate" string="Rebate u/s 87A" attrs="{'invisible':['|',('employee_contract_type','=','contractual'),('is_applicable_for_tds','!=',True)]}">
+                    <field name="rebate_taxable_limit"/>
+                    <field name="rebate_tax_relief_limit"/>
+                    <field name="education_cess"/>
+                    <field name="net_tax_payable_yearly"/>
+                    <field name="net_tax_payable_monthly"/>
+                </group>
+                
+            </xpath>
+        
+        </field>
+    </record>
+</odoo>

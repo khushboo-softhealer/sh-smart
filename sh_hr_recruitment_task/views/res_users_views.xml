@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+    
+    <record id="view_users_form_job_applicant_inherit_modif" model="ir.ui.view">
+        <field name="name">res.users.applicant.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="sh_notifications.sh_notification_res_users_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='notifications']" position="inside">
+                <field name="display_hr_notification_boolean" invisible="1"/>
+                <group name="job_notification" string="HR Notifications" attrs="{'invisible':[('display_hr_notification_boolean','!=',True)]}"  >
+                    <field name="sh_job_applicant_notification_on_off"  attrs="{'invisible':[('display_hr_notification_boolean','!=',True)]}"           />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- For Preferences -->
+    <record id="sh_res_users_inhereted_for_preferences_job_application_notification"
+        model="ir.ui.view">
+        <field name="name">sh.res.users.inherit.view.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr.res_users_view_form_profile" />
+        <field name="arch" type="xml">
+            <field name="tz" position="after">
+                <field name="sh_job_applicant_notification_on_off"
+                    groups="hr.group_hr_manager" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

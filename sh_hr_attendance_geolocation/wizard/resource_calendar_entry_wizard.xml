@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_calender_entry_wizard_view" model="ir.ui.view">
+        <field name="name">Resource Calendar Entry Wizard</field>
+        <field name="model">resource.calendar.entry.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Workin Hours Entry Wizard">
+                <group>
+                    <group>
+                        <field name="start_date" />
+                        <field name="end_date" />
+                        <field name="mon" />
+                        <field name="tue" />
+                        <field name="wed" />
+                        <field name="thu" />
+                        <field name="fri" />
+                        <field name="sat" />
+                        <field name="sun" />
+                    </group>
+                    <group>
+                        <field name="work_from" widget="float_time" />
+                        <field name="work_to" widget="float_time" />
+                        <field name="sh_break" />
+                        <field name="day_period" />
+                        <field name="resource_calendar_ids" widget="many2many_tags" invisible="1"/>
+                    </group>
+                </group>
+
+                <footer>
+                    <button name="sh_add_entry" string="Add" type="object" class="oe_highlight" />
+                    <button string="Cancel" class="oe_highlight" special="cancel" />
+                    <button name="sh_remove_entry" string="Remove" type="object" class="oe_highlight" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_calender_entry_wizard_action" model="ir.actions.act_window">
+        <field name="name">Resource Calendar Entry Wizard</field>
+        <field name="view_id" ref="sh_calender_entry_wizard_view" />
+        <field name="view_mode">form</field>
+        <field name="res_model">resource.calendar.entry.wizard</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

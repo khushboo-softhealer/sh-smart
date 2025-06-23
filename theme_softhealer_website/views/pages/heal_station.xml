@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Auto Parts Management System Page -->
+    <template id="theme_softhealer_website_heal_station"
+        name="heal statio blog">
+        <t t-call="website.layout">
+            <div class="oe_structure oe_empty" id="wrap">
+                <section id="sh_bus_booking_management_banner"
+                    class="sh_heal_station_blog_main_heading sh_other_page_banner">
+                    <div class="sh_banner_content">
+                        <h1 class="sh_banner_title text-capitalize mb-3">reflecting healstation 2024</h1>
+                        <ul class="sh_banner_breadcrumb">
+                            <li>
+                                <a class="sh_banner_breadcrumb_link" href="/">Home<span
+                                        class="sh_banner_breadcrumb_icon fa fa-angle-right"></span></a>
+                            </li>
+                            <li>
+                                <span class="sh_banner_normal_text">Heal Station</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="sh_heal_station_banner_secttion">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 d-flex">
+                                <div class="sh_main_div">
+                                    <div class="sh_heading_div">
+                                        <h1 class="sh_heading">A Day of Achievements and Aspirations</h1>
+                                    </div>
+                                    <div class="sh_text_div">
+                                        <p class="sh_text">At Softhealer Technologies, we believe in
+                                            the
+                                            power
+                                            of coming together to celebrate accomplishments and set
+                                            the
+                                            stage
+                                            for future triumphs. Heal Station 2024 was an event
+                                            dedicated to
+                                            doing just that. It kicked off at 9:00 AM with a
+                                            heartfelt
+                                            welcome.
+                                            This gathering provided an opportunity to reflect on the
+                                            year’s
+                                            accomplishments while setting ambitious targets for the
+                                            year
+                                            ahead.
+                                            The event brought together every department, creating a
+                                            harmonious
+                                            environment of collaboration and inspiration.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 d-flex align-items-center">
+                                <div class="sh_img_div">
+                                    <img
+                                        src="/theme_softhealer_website/static/src/img/blogs_bkp/heal_station/section_1_final.webp"
+                                        alt="reflecting healstation 2024"
+                                        title="reflecting healstation 2024" class="sh_img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sh_heal_station_highlights"
+                    class="sh_heal_station_highlights aos-init aos-animate">
+                    <div class="container">
+                        <header>
+                            <h2 class="text-capitalize">Highlights of Achievements by Department</h2>
+                        </header>
+                        <div class="sh_inner_box">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 sh-order">
+                                    <div class="sh_img_box " data-aos="fade-right"
+                                        data-aos-delay="300">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/heal_station/achievements/11.webp"
+                                            alt="Highlights of Achievements by Department"
+                                            title="Highlights of Achievements by Department"
+                                            loading="lazy"></img>
+                                        <!-- <a href="https://youtu.be/YCU73cu-TZ0" class="sh_link"
+                                            target="blank">
+                                            <span class="sh_play_icon fa fa-play"></span>
+                                        </a> -->
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="sh_right_dec" data-aos="fade-left"
+                                        data-aos-delay="600">
+                                        <div class="sh_heal_station_Highlights">
+                                            <div>
+                                                <h5 class="text-capitalize">
+                                                    <span class="sh_num">01.</span> Technical Team</h5>
+                                                <p> This year, the Technical Department made
+                                                    significant
+                                                    strides, utilizing Odoo Studio to streamline
+                                                    customizations and enhance efficiency. Key
+                                                    achievements
+                                                    include:</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="sh_list_div">
+                                            <div class="row justify-content-center">
+                                                <div
+                                                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span class="sh_highlight">Custom Modules
+                                                            &amp; Workflow Automation </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span class="sh_highlight">Matrix View
+                                                            Enhancements: </span>
+                                                        <span> Grouped List-Form and Project
+                                                            Monitors.
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span class="sh_highlight">Innovative
+                                                            Solutions: </span>
+                                                        <span> Gamification, Live Chat, and Document
+                                                            Scanner
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span class="sh_highlight">Advanced Tools: </span>
+                                                        <span> One-Click Docker Setup and DB Sync
+                                                            Flow
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span class="sh_highlight">Cutting-Edge
+                                                            Features: </span>
+                                                        <span> 3D Viewer, AI Filter, and Contact
+                                                            Relationship Graph
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sh_inner_box1">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 ">
+                                    <div class="sh_right_dec" data-aos="fade-left"
+                                        data-aos-delay="600">
+                                        <div class="sh_heal_station_Highlights">
+                                            <div>
+                                                <h5 class="text-capitalize">
+                                                    <span class="sh_num">02.</span> Functional Team</h5>
+                                                <p> This year, the Functional Team excelled in
+                                                    delivering successful Odoo projects and ensuring
+                                                    client satisfaction:</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="sh_list_div">
+                                            <div class="row justify-content-center">
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span class="">Launched B2C segments and
+                                                            managed 21 project go-lives </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Prepared professional BRDs with
+                                                            minimal revisions</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Met tight deadlines with full client
+                                                            satisfaction</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span> Implemented advanced accounting</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Streamlined data imports and guided
+                                                            developers in root cause analysis</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Launched projects as scalable products
+                                                            for clients</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 sh-order">
+                                    <div class="sh_img_box" data-aos="fade-left"
+                                        data-aos-delay="1200">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/heal_station/achievements/22.webp"
+                                            alt="Highlights of Achievements by Department"
+                                            title="Highlights of Achievements by Department"
+                                            loading="lazy"></img>
+                                        <!-- <a href="https://youtu.be/UlXzLUTYZy0" class="sh_link"
+                                            target="blank">
+                                            <span class="sh_play_icon fa fa-play"></span>
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sh_inner_box mt-4">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 sh-order">
+                                    <div class="sh_img_box " data-aos="fade-right"
+                                        data-aos-delay="300">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/heal_station/achievements/33.webp"
+                                            alt="Highlights of Achievements by Department"
+                                            title="Highlights of Achievements by Department"
+                                            loading="lazy"></img>
+                                        <!-- <a href="https://youtu.be/oBqVtGqyIIo" class="sh_link"
+                                            target="blank">
+                                            <span class="sh_play_icon fa fa-play"></span>
+
+                                        </a> -->
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="sh_right_dec" data-aos="fade-left"
+                                        data-aos-delay="600">
+                                        <div class="sh_heal_station_Highlights">
+                                            <div>
+                                                <h5 class="text-capitalize">
+                                                    <span class="sh_num">03.</span> Web Designing
+                                                    Team</h5>
+                                                <p> This year, the Web Designing Team made
+                                                    significant strides in enhancing Odoo designs
+                                                    and features:</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="sh_list_div">
+                                            <div class="row justify-content-center">
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span class="sh_highlight">Apps:</span>
+                                                        <span> Expanded snippet features</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span class="sh_highlight">Projects: </span>
+                                                        <span> Delivered key projects</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span class="sh_highlight">Themes: </span>
+                                                        <span> Launched the POS Theme and Rich
+                                                            Frontend Theme with advanced features</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sh_inner_box1">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="sh_right_dec" data-aos="fade-left"
+                                        data-aos-delay="600">
+                                        <div class="sh_heal_station_Highlights">
+                                            <div>
+                                                <h5 class="text-capitalize">
+                                                    <span class="sh_num">04.</span> Marketing Team</h5>
+                                                <p> This year, the Marketing Team excelled in
+                                                    boosting visibility and engagement:</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="sh_list_div">
+                                            <div class="row justify-content-center">
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span> Indexed 7,000+ pages </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span> Increased clicks
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Achieved Top 10 global rankings for
+                                                            the <b>Odoo Service Page</b></span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span> Raised site authority score
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span> Enhanced the <b> Solution Page </b>
+                                                            and started blog posting on the
+                                                            Softhealer site. </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 sh-order">
+                                    <div class="sh_img_box" data-aos="fade-left"
+                                        data-aos-delay="1200">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/heal_station/achievements/55.webp"
+                                            alt="Highlights of Achievements by Department"
+                                            title="Highlights of Achievements by Department"
+                                            loading="lazy"></img>
+                                        <!-- <a href="https://youtu.be/HN0alIWB_IY" class="sh_link"
+                                            target="blank">
+                                            <span class="sh_play_icon fa fa-play"></span>
+
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sh_inner_box1 mt-4">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 sh-order">
+                                    <div class="sh_img_box " data-aos="fade-right"
+                                        data-aos-delay="300">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/heal_station/achievements/66.webp"
+                                            alt="Highlights of Achievements by Department"
+                                            title="Highlights of Achievements by Department"
+                                            loading="lazy"></img>
+                                        <!-- <a href="https://youtu.be/i4KK7Qk1SLI" class="sh_link"
+                                            target="blank">
+                                            <span class="sh_play_icon fa fa-play"></span>
+
+                                        </a> -->
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="sh_right_dec" data-aos="fade-left"
+                                        data-aos-delay="600">
+                                        <div class="sh_heal_station_Highlights">
+                                            <div>
+                                                <h5 class="text-capitalize">
+                                                    <span class="sh_num">05.</span> Sales Department</h5>
+                                                <p>This year, the Sales Department excelled in
+                                                    client acquisition and retention, breaking
+                                                    records and expanding Softhealer's reach to new
+                                                    markets</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="sh_list_div">
+                                            <div class="row justify-content-center">
+                                                <div
+                                                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Achieved Odoo “Silver Partner” status
+                                                            and was nominated for the Odoo “Best
+                                                            Starter” Award in Pan-Asia </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Added 143 new users and 35 new
+                                                            enterprise references</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Onboarded major clients</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Successfully integrated CRM with
+                                                            social media platforms</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Generated upsell opportunities with
+                                                            almost all new clients</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sh_inner_box mt-4">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="sh_right_dec" data-aos="fade-left"
+                                        data-aos-delay="600">
+                                        <div class="sh_heal_station_Highlights">
+                                            <div>
+                                                <h5 class="text-capitalize">
+                                                    <span class="sh_num">06.</span> Marketplace Team
+                                                    &amp; Zoho Department</h5>
+                                                <p>This year, the Marketplace and Zoho Team excelled
+                                                    in expanding their app offerings and enhancing
+                                                    customer support, driving growth across both
+                                                    platforms:</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="sh_service_content_box" data-aos="fade-right">
+                                            <h2 class="sh_service_content_box_title">Odoo</h2>
+                                            <div class="sh_service_content_dic">
+
+                                                <ul class="sh_service_content_ul">
+                                                    <li class="sh_service_content_li">
+                                                        <div class="sh_service_content_li_check_box">
+                                                            <span
+                                                                class="sh_service_content_li_check fa fa-check"></span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="">Published 130
+                                                                apps, including key systems.</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="sh_service_content_li">
+                                                        <div class="sh_service_content_li_check_box">
+                                                            <span
+                                                                class="sh_service_content_li_check fa fa-check"></span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="">Improved
+                                                                helpdesk support with a dedicated
+                                                                team and faster migration progress.</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="sh_service_content_li">
+                                                        <div class="sh_service_content_li_check_box">
+                                                            <span
+                                                                class="sh_service_content_li_check fa fa-check"></span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="">Enabled
+                                                                module downloads and support tickets
+                                                                via the customer portal.</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="sh_service_content_li">
+                                                        <div class="sh_service_content_li_check_box">
+                                                            <span
+                                                                class="sh_service_content_li_check fa fa-check"></span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="">Won the <b>Best
+                                                                    Team of the Year</b> award.</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="sh_service_content_box" data-aos="fade-right">
+                                            <h2 class="sh_service_content_box_title">Zoho</h2>
+                                            <div class="sh_service_content_dic">
+
+                                                <ul class="sh_service_content_ul">
+                                                    <li class="sh_service_content_li">
+                                                        <div class="sh_service_content_li_check_box">
+                                                            <span
+                                                                class="sh_service_content_li_check fa fa-check"></span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="">6 apps were published on
+                                                                the Zoho Store, with 17 more in
+                                                                progress.</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 sh-order">
+                                    <div class="sh_img_box " data-aos="fade-right"
+                                        data-aos-delay="300">
+                                        <img
+                                            alt="Highlights of Achievements by Department"
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/heal_station/achievements/44.webp"
+                                            title="Highlights of Achievements by Department"
+                                            loading="lazy"></img>
+                                        <!-- <a href="https://youtu.be/8oIrXA3Mjg4 " class="sh_link"
+                                            target="blank">
+                                            <span class="sh_play_icon fa fa-play"></span>
+
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sh_inner_box1">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 sh-order">
+                                    <div class="sh_img_box" data-aos="fade-left"
+                                        data-aos-delay="1200">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/heal_station/achievements/77.webp"
+                                            alt="Highlights of Achievements by Department"
+                                            title="Highlights of Achievements by Department"
+                                            loading="lazy"></img>
+                                        <!-- <a href="https://youtu.be/8SFfcwGDYPk" class="sh_link"
+                                            target="blank">
+                                            <span class="sh_play_icon fa fa-play"></span>
+
+                                        </a> -->
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="sh_right_dec" data-aos="fade-left"
+                                        data-aos-delay="600">
+                                        <div class="sh_heal_station_Highlights">
+                                            <div>
+                                                <h5 class="text-capitalize">
+                                                    <span class="sh_num">07.</span>HR Department</h5>
+                                                <p>This year, the HR Department excelled in talent
+                                                    acquisition and employee engagement, fostering a
+                                                    stronger, more collaborative workplace culture</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="sh_list_div">
+                                            <div class="row justify-content-center">
+                                                <div
+                                                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Held feedback sessions with new
+                                                            joiners and ensured timely salary
+                                                            clearance</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Conducted campus placement drives and
+                                                            HR Meet </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Organized communication workshops for
+                                                            Team Leads and Senior Leads </span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span classs="sh_highlight">Statistics:</span>
+
+                                                        <span> 5 new departments, 30+ new healers,
+                                                            and 15+ activities (movies, sports, CSR,
+                                                            celebrations)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sh_inner_box mt-4">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="sh_right_dec" data-aos="fade-left"
+                                        data-aos-delay="600">
+                                        <div class="sh_heal_station_Highlights">
+                                            <div>
+                                                <h5 class="text-capitalize">
+                                                    <span class="sh_num">08.</span> Management Team</h5>
+                                                <p>The management team at Softhealer Technologies
+                                                    plays a pivotal role in driving the company’s
+                                                    strategic direction and operational excellence</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="sh_list_div">
+                                            <div class="row justify-content-center">
+                                                <div
+                                                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>Focused on innovation and growth, the
+                                                            team ensures seamless integration of new
+                                                            initiatives, maintains high-quality
+                                                            standards across all services, and
+                                                            fosters a culture of continuous
+                                                            improvement</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 sh_content_main_div">
+                                                    <div class="sh_main_content">
+                                                        <span>By prioritizing infrastructure
+                                                            upgrades and global expansion, the
+                                                            management team is committed to
+                                                            delivering exceptional value to clients
+                                                            and achieving long-term success </span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 sh-order">
+                                    <div class="sh_img_box " data-aos="fade-right"
+                                        data-aos-delay="300">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/blogs_bkp/heal_station/achievements/88.webp"
+                                            alt="Highlights of Achievements by Department"
+                                            title="Highlights of Achievements by Department"
+                                            loading="lazy"></img>
+                                        <!-- <a href="https://youtu.be/f7YkqcY5JEc" class="sh_link"
+                                            target="blank">
+                                            <span class="sh_play_icon fa fa-play"></span>
+
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sh_heal_station_Building_Activities">
+                    <div class="container">
+                        <div class="sh_main_section_div">
+                            <div class="sh_img_div">
+                                <img
+                                    src="/theme_softhealer_website/static/src/img/blogs_bkp/heal_station/team_building.webp"
+                                    alt="Team-Building Activities and Fun"
+                                    title="Team-Building Activities and Fun" class="sh_img" />
+                            </div>
+                            <div class="sh_heading_div">
+                                <h1 class="sh_heading">Team-Building Activities and Fun</h1>
+                            </div>
+                            <div class="sh_text_div">
+                                <p class="sh_text">Heal Station 2024 was not just about work and
+                                    discussions. The event was infused with light-hearted moments
+                                    and engaging activities that brought the team closer together.
+                                    Among the highlights were:
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="sh_content_div">
+                                        <div class="sh_main_heading_div">
+                                            <div class="sh_icon_div">
+                                                <span class="fa fa-check"></span>
+                                            </div>
+                                            <div class="sh_small_heading_div">
+                                                <h4 class="sh_heading">
+                                                    Caricature Game
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="sh_text_div">
+                                            <p class="sh_text">
+                                                A hilarious session where team members guessed the
+                                                identities of their colleagues based on exaggerated
+                                                and humorous sketches. Laughter filled the room as
+                                                everyone tried to identify the faces behind the
+                                                caricatures.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="sh_content_div">
+                                        <div class="sh_main_heading_div">
+                                            <div class="sh_icon_div">
+                                                <span class="fa fa-check"></span>
+                                            </div>
+                                            <div class="sh_small_heading_div">
+                                                <h4 class="sh_heading">
+                                                    Fish Pond
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="sh_text_div">
+                                            <p class="sh_text">
+                                                This classic activity saw team members share
+                                                lighthearted, anonymous messages or humorous
+                                                observations about their peers. It was a perfect mix
+                                                of humor and camaraderie, adding a special touch to
+                                                the day.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sh_heal_station_chosing_notes">
+                    <div class="container">
+                        <div class="sh_main_div">
+                            <div class="sh_heading_div">
+                                <div class="sh_icon_div">
+                                    <svg id="Layer_1" data-name="Layer 1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 803.37 803.38">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                fill: none;
+                                                }
+
+                                                .cls-2 {
+                                                fill: #010101;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <rect class="cls-1" width="803.37" height="803.38" />
+                                        <path class="cls-2"
+                                            d="M649.12,409.5c5.58,7.26,5.35,18.03-2.64,23.41-5.82,3.91-30.4,8.86-38.88,11.32l-5.28,1.51c-14.19,3.75-28.28,7.28-42.27,10.57-3.11,1.42-6.38,2.42-9.81,3.02-8.97,2.87-18.03,5.39-27.18,7.55-7.61,2.64-15.49,4.58-23.4,6.04-1.37.62-2.88,1.13-4.53,1.51-6.64,1.93-13.18,3.43-19.63,4.53-3.11,1.42-6.38,2.42-9.81,3.02-14.79,4.22-29.64,8.25-44.54,12.08-23.26,6.74-46.66,13.27-70.19,19.05-9.56,2.35-18.04-2.66-19.76-12.14-2.03-11.22,6.41-16.35,16.01-19.27,9.86-3,20.13-5.25,30.16-7.27,86.87-24.26,174.15-47.14,261.45-69.83,3.95.44,7.37,2.39,10.32,4.91ZM596.27,275.13c-19.16,3.87-38.03,8.91-56.62,15.1-51.21,13.1-102.29,26.69-153.25,40.76-26.67,6.83-53.51,14.07-80.51,21.73-21.16,10.68-6.69,36.87,14.49,28.26l16.2-4.7c32.6-8.4,65.82-17.46,99.65-27.18,1.61-.29,3.12-.8,4.53-1.51,12.23-2.74,24.56-5.76,36.99-9.06,14.65-3.58,28.99-7.61,43.03-12.08l6.04-1.51c16.44-3.12,34.29-9.12,50.58-13.59,3.48-.46,6.75-1.47,9.81-3.02,5.51-.57,11.04-1.83,16.61-3.77,4.84-.97,9.36-3.32,12.08-7.55,3.32-7.15,2.39-13.88-3.02-19.63-4.63-4.26-11.09-4.56-16.61-2.26ZM503.42,510.66c-14.94,3.62-29.93,7.42-44.54,12.08-4.11.39-8.15,1.68-12.08,3.02l-16.61,4.53c-10.65,2.75-21.47,5.77-32.46,9.06-11.24,2.02-22.36,5.19-33.38,8.33-8.93,2.55-16.09,6.51-16.12,16.82-.02,5.91,5.78,13.85,11.76,14.11,1.8.83,3.88,1.03,6.24.58,28.61-6.15,58.34-14.78,85.85-23.23l11.32-3.02c16.3-4.61,34.85-7.85,50.58-13.59l3.02-1.51c.47-.27,1.14-.46,1.51-.75,15.37-10.49,2.25-33.17-15.1-26.42ZM785,558.22v16.61c-1.28,2.67-4.06,5.57-6.79,6.79-38.53,12.07-77.81,21.97-117.01,31.71-1.37.62-2.88,1.13-4.53,1.51-14.2,3.71-28.29,7.24-42.27,10.57-3.11,1.42-6.38,2.42-9.81,3.02-9.19,2.87-18.5,5.39-27.93,7.55-1.34.69-2.85,1.19-4.53,1.51-6.04,1.83-12.08,3.34-18.12,4.53-1.42.52-2.93,1.02-4.53,1.51-2.6.62-18.57,4.35-19.26,5.27l-21.5,79.28c-2.45,3.67-6.22,6.58-10.57,7.55-4.02.47-8.05-.03-12.08-1.51-44.78-12.27-90.26-24.3-136.46-36.08-12.7,2.77-25.34,5.73-37.92,8.91-8.99,4.61-18.73-.45-21.89-9.81-.62-2.15-1.1-5.28-1.51-7.55l-1.51-6.04c-.65-.25-.65-.5,0-.75-.17-1.25-.67-2.26-1.51-3.02-9.67-1.65-19.35-4.46-28.69-7.55-31.13-8.31-61.58-16.36-91.34-24.16-5.33-1.24-10.77-2.9-15.85-4.53-43.1-10.44-85.88-22.01-128.33-34.73-1.34-.82-2.35-1.83-3.02-3.02-1.74-1.14-2.6-3.25-3.02-5.28v-10.57c.25-1.89.75-3.65,1.51-5.28l-.6-1.88c1.08-3.96,2.28-7.87,3.62-11.71,6.55-25.02,13.1-49.93,19.63-74.74,7.29-26.8,14.84-54.48,22.65-83.04,1.98-9.68,4.51-19.29,7.55-28.69.37-2.15.87-4.42,1.51-6.79,9.35-34.08,18.92-69.31,28.69-105.69,9.48-37.63,19.84-75.08,30.2-112.48.4-4.36,1.46-8.72,3.02-12.83,2.01-9.68,5.03-18.99,9.06-27.93.3-.33,2.04-2.09,2.26-2.26,6.76-4.7,13.11-3.84,20.85-1.11,10.31,3.3,20.72,6.19,31.24,8.66,43.8,11.82,88.33,23.9,133.62,36.24,6.69,1.74,13.47,3.17,20.34,4.3l76.45-20.27c-.72-16.29-.04-31.7,9.65-45.93,18.97-25.91,48.04-34.02,77.75-21.14,1.55,1.33,3.41,2.24,5.28,3.02,1.48.89,3.16,1.98,4.53,3.02,3.12,2.43,5.89,5.2,8.3,8.3l2.26,2.26c1.69,2.19,3.77,5.22,5.28,7.55,1.79,3.61,3.62,7.12,5.5,10.54l1.2.15,96.66-25.93c4.37-.7,9.63-.01,12.9,3.15,2.5,2.09,4.56,4.84,5.5,8.01l39.8,149.76c8.06,27.21,15.1,54.73,21.89,82.28,1.52,3.62,2.53,7.42,3.02,11.32,3.04,9.16,5.59,18.48,7.55,27.93,3.09,10.89,6.11,21.71,9.06,32.46l1.51,6.04c8.47,32.09,17.03,64.3,25.67,96.63,5.32,18.58,10.35,36.7,15.1,54.35ZM466.75,154.01c31.93,27.47,70.18-20.93,39.3-45.69-31.21-25.03-67.4,21.51-39.3,45.69ZM272.42,632.95c-.05-1.47-.31-2.98-.75-4.53-10.18-37.44-20.3-74.96-30.2-112.48-.11-1.6-.61-2.86-1.51-3.77-1.51-6.4-3.27-12.69-5.28-18.87-.6-4.89-1.69-9.87-3.77-14.34-5.94-23.49-12.05-46.96-18.87-70.21-.17-3.13-.76-6.28-2.26-9.06-6.11-24.54-12.66-48.95-19.63-73.23l-25.78-97.11c-1.24-4.93,1.26-9.16,3.89-13.11.22-.26.5-.52.75-.75l2.55-2c30.67-9.29,61.53-17.94,92.56-25.93l21.07-5.05c1.31-.38,2.34-1.1,1.21-2.14-24.47-6.7-49.01-13.11-73.61-19.24-15.68-5.31-31.57-9.52-47.69-12.62-4.33,11.34-7.56,23.1-9.68,35.27-5.59,18.44-10.62,37.06-15.1,55.86-5.17,15.82-9.23,32.07-12.83,48.31-1.51,4.4-2.77,8.93-3.77,13.59-1.42,2.51-2.15,5.46-2.26,8.3-8.14,29.09-15.94,58.28-23.4,87.57-.71.42-1.24,1.62-.75,2.26-7.73,28.39-15.27,56.83-22.65,85.3-6.09,20.48-11.69,41.11-16.61,61.9-4.44,12.27-7.7,24.69-9.8,37.26,31.61,9.51,65.19,18.09,97.37,26.15.32.92,1.48,1.25,2.26.75,27.1,7.57,54.27,14.86,81.53,21.89.78.94,1.84,1.08,3.02.75,13.97,4.28,28.21,8.18,42.43,11.24,1.41-.54-1.49-10.22-2.42-12ZM495.12,659.38c-9.58,1.74-19.13,4.52-28.69,6.79-7.25,4.14-29.85,8-39.25,10.57-4.76,1.3-9.03,2.67-13.97,3.79-1.17.26-1.32-.52-1.14,1.49l25.67,6.8c1.01.24,2.01.51,3.02.75,14.4,3.54,28.71,7.36,42.99,11.31l11.36-41.5ZM749.52,547.65c-14.75-56.7-29.85-113.32-45.29-169.85.3-.79,0-2.05-.75-2.26-2.42-10.19-5.19-20.25-8.3-30.2-1.98-9.69-4.45-19.3-7.55-28.69-3.94-17-8.54-33.88-13.59-50.58-3.2-14.48-6.79-28.91-11.32-43.03l-26.6-100.36c-1.34-3.1-5.64-1.32-8.12-.05-15.78,3.56-31.44,7.84-46.8,12.83-8.43,1.66-16.84,3.85-24.91,6.79-6.11.27-11.16,1.05-11.32,8.3-1.17.52-1.43,1.86-1.51,3.02-2.89,5.85-5.17,10.49-9.06,15.85l-4.53,5.28c-2.8,2.15-5.57,4.41-8.3,6.79-12.09,7.59-23.36,10.93-37.75,10.57l-9.81-1.51c-1.21,0-2.46-.2-3.65.12l-26.53,45.57c-11.62,11.95-30.78.26-25.46-15.64,7.16-14.12,16.88-27.63,24.07-41.62.65-1.26,1.05-2.13,1.37-3.53-.93-3.03-3.97-3.53-9.13-1.48l-6.72,2.23c-9.18,2.2-18.24,4.71-27.18,7.55-10.77,1.97-21.25,5.11-31.71,8.3-3.98.43-7.75,1.43-11.32,3.02-2.65.16-5.42.66-8.3,1.51-9.05,2.52-18.12,5.08-27.18,7.55-1.82.24-3.67.57-5.28,1.51-5.76,1.56-11.6,2.97-17.36,4.53-1.82.23-3.67.58-5.28,1.51-25.07,6.73-50.36,13.54-75.49,19.63l-15.99,4.24c-1.48.2-2.44.8-2.89,1.8l-.74.56c8.16,34.85,17.47,69.64,27.91,104.37-.33,1.09-.21,2.34.75,3.02,1.34,8.52,3.85,16.82,6.79,24.91,5.74,23.8,11.84,47.51,18.87,70.96,4.7,20.02,9.99,39.9,15.85,59.64,6.66,25.12,13.7,51.03,21.14,77.75,1.48,7.9,3.41,15.79,6.04,23.4,1.71,8.68,3.89,17.3,6.79,25.67,2.73,13.1,6.26,25.94,10.57,38.5-.02,2.28.49,4.29,1.51,6.04l.66,1.04c1.96,1.8,29.75-6.94,34.07-8.59,34.82-8.95,69.64-17.99,104.18-27.93,53.74-13.78,107.4-27.97,160.79-43.03,30.8-7.96,61.5-16.26,92.1-24.91,9.67-1.98,19.31-4.4,28.69-7.55,5.38-.69,10.85-2.05,15.87-4.17.74-.45-1.23-8.36-2.28-9.42ZM627.01,368.15c12.31-6.07,10.04-25.22-1.88-27.89-6.96-1.56-19.19,2.69-26.59,4.33-2.46,1.33-5.47,2.07-8.14,2.8-26.92,7.31-54,14.13-80.93,21.36-45.52,12.21-90.97,24.64-136.64,36.24-3.98,1.96-9.1,3.16-13.43,4.31-10.31,2.74-21.11,4.87-31.29,7.97-9.5,2.89-16.89,8.97-13.73,20.13,2.31,8.16,10.39,10.69,18.07,9.87,13.74-1.45,35.59-9.81,50.03-13.42,1.13-.28,2.41.02,3.19-.18,4.91-2.54,11.15-3.72,16.61-4.53,3.98-1.96,9.1-3.16,13.43-4.31,4.53-1.2,9.23-2.05,13.75-3.24,5.6-1.46,12.41-4.49,18.12-4.53.75-1.38,2.14-1.19,3.38-1.52,6.13-1.64,19.05-6.02,24.55-6.03.75-1.38,2.14-1.19,3.38-1.52,8.59-2.31,19.92-6.2,28.32-7.54,1.37-1.67,3.59-1.16,5.28-1.51,16.04-3.29,36.11-11.74,51.33-13.59,2.83-1.76,6.61-2.26,9.81-3.02,6.3-1.48,12.61-2.9,18.87-4.53,8.86-2.3,27.15-6.02,34.51-9.65Z" />
+                                    </svg>
+                                </div>
+                                <div class="sh_main_heading_div">
+                                    <h1 class="sh_heading">Closing Notes</h1>
+                                </div>
+                            </div>
+                            <div class="sh_text_div">
+                                <p class="sh_text">Heal Station 2024 was not just an event but a
+                                    celebration of our collective spirit and a testament to our
+                                    achievements. Each department’s reflections and aspirations
+                                    showcased the shared commitment to innovation and excellence.
+                                    The fun activities further solidified our bonds as a team. With
+                                    a clear vision for the future, Softhealer Technologies is poised
+                                    to embrace new opportunities and continue shining as an industry
+                                    leader in Odoo solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </t>
+    </template>
+
+    <data noupdate="1">
+
+        <!-- Default pagese  below 2 record must put in no update 1-->
+        <record id="theme_softhealer_website_heal_station_event" model="website.page">
+            <field name="is_published">True</field>
+            <field name="url">/heal-station-blog</field>
+            <field name="view_id"
+                ref="theme_softhealer_website.theme_softhealer_website_heal_station" />
+            <field name="track">True</field>
+            <field name="website_id" model="website"
+                eval="obj().env['website'].sudo().get_current_website()" />
+        </record>
+
+        <record id="theme_softhealer_website_life_at_softhealer_page_demo" model="website.menu">
+            <field name="name">heal station blog</field>
+            <field name="url">/heal-station-blog</field>
+            <field name="page_id"
+                ref="theme_softhealer_website.theme_softhealer_website_heal_station_event" />
+            <field name="sequence" type="int">10</field>
+            <field name="website_id" model="website"
+                eval="obj().env['website'].sudo().get_current_website()" />
+        </record>
+
+    </data>
+
+</odoo>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_placement_view_form" model="ir.ui.view">
+        <field name="name">sh.placement.view.form</field>
+        <field name="model">sh.placement</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <field name="date" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="placement_line" string="Placement Line">
+                            <field name="placement_line" widget="section_and_note_one2many" mode="tree,kanban">
+                                <tree editable="bottom">
+                                    <field name="college_id" />
+                                    <field name="total_candidate_applied" />
+                                    <field name="selected_candidate" />
+                                    <field name="present_candidate" />
+                                    <field name="absent_candidate" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <field name="note" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_placement_view_tree" model="ir.ui.view">
+        <field name="name">sh.placement.view.tree</field>
+        <field name="model">sh.placement</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="date" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_placement_view_search" model="ir.ui.view">
+        <field name="name">sh.placement.view.search</field>
+        <field name="model">sh.placement</field>
+        <field name="arch" type="xml">
+            <search string="Placement">
+                <field name="name" />
+                <filter string="Today" name="todayData" domain="[('date', '=', context_today().strftime('%Y/%m/%d'))]" />
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_placement_action" model="ir.actions.act_window">
+        <field name="name">Placement</field>
+        <field name="res_model">sh.placement</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="placement_main_menu" name="Placement" parent="hr_recruitment.menu_hr_recruitment_root" sequence="4" />
+
+    <menuitem id="placements_sub_main_menu" name="Placements" action="sh_placement_action" parent="placement_main_menu" sequence="1" />
+    
+</odoo>

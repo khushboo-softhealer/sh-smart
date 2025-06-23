@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="TaskTimerTemplate">
+        <div class="sh_timer_div">
+            <ul class="main_ul_task" >
+				
+				<span id="user_task"></span>
+
+				<!-- =============
+                <li class="sh_timer_task"><a id="user_task"></a></li>
+				============ -->
+
+                <!-- <li class="sh_timer"> -->
+				<span id="task_timer" class="fw-bolder"></span>
+				<!-- </li> -->
+                <li class="sh_timer_li">
+					<a href="#" id="timer_start" style="display: none;" title="Start Timer">
+						<i class="fa fa-play" />
+					</a>
+				</li>
+
+				<!-- =====================
+				<li class="sh_timer_li">
+					<a href="#" id="timer_resume" style="display:none;" title="Resume Timer" >
+						<i class="fa fa-play"/>
+					</a>
+				</li>
+				===================== -->
+
+				<li class="sh_timer_li">
+					<a href="#" id="timer_pause" style="display:none;" title="Pause Timer" >
+						<i class="fa fa-pause"/>
+					</a>
+				</li>
+				<li class="sh_timer_li">
+					<a href="#" id="timer_stop" style="display: none;" title="Stop Timer">
+						<i class="fa fa-stop" />
+					</a>
+				</li>
+            </ul>
+        </div>
+    </t>
+</templates>

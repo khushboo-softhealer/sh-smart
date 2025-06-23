@@ -1,0 +1,76 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_so_invoice_percent
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-19 12:29+0000\n"
+"PO-Revision-Date: 2020-10-19 12:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_so_invoice_percent
+#: model_terms:ir.ui.view,arch_db:sh_so_invoice_percent.sh_inherit_view_order_form
+msgid "<span class=\"o_stat_text\">Amount Paid</span>"
+msgstr "<span class=\"o_stat_text\">المبلغ المدفوع</span>"
+
+#. module: sh_so_invoice_percent
+#: model:ir.model.fields,field_description:sh_so_invoice_percent.field_sale_order__sh_invoiced_paid_amount_in_percent
+msgid "Amount Paid(%)"
+msgstr "المبلغ المدفوع(٪)"
+
+#. module: sh_so_invoice_percent
+#: model:ir.model.fields,field_description:sh_so_invoice_percent.field_sale_order__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: sh_so_invoice_percent
+#: model:ir.model.fields,field_description:sh_so_invoice_percent.field_sale_order__invoiced_due_amount
+msgid "Due Amount"
+msgstr "مبلغ مستحق"
+
+#. module: sh_so_invoice_percent
+#: model:ir.model.fields,field_description:sh_so_invoice_percent.field_sale_order__id
+msgid "ID"
+msgstr "هوية شخصية"
+
+#. module: sh_so_invoice_percent
+#: model:ir.model.fields,field_description:sh_so_invoice_percent.field_sale_order__invoiced_total_amount
+msgid "Invoiced Amount"
+msgstr "المبلغ المفوتر"
+
+#. module: sh_so_invoice_percent
+#: model_terms:ir.ui.view,arch_db:sh_so_invoice_percent.sh_inherit_view_quotation_tree
+msgid "Invoiced Due Amount"
+msgstr "المبلغ المستحق المفوتر"
+
+#. module: sh_so_invoice_percent
+#: model_terms:ir.ui.view,arch_db:sh_so_invoice_percent.sh_inherit_view_quotation_tree
+msgid "Invoiced Paid Amount"
+msgstr "المبلغ المدفوع في الفاتورة"
+
+#. module: sh_so_invoice_percent
+#: model_terms:ir.ui.view,arch_db:sh_so_invoice_percent.sh_inherit_view_quotation_tree
+msgid "Invoiced Total Amount"
+msgstr "المبلغ الإجمالي المفوتر"
+
+#. module: sh_so_invoice_percent
+#: model:ir.model.fields,field_description:sh_so_invoice_percent.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: sh_so_invoice_percent
+#: model:ir.model.fields,field_description:sh_so_invoice_percent.field_sale_order__invoiced_paid_amount
+msgid "Paid Amount"
+msgstr "المبلغ المدفوع"
+
+#. module: sh_so_invoice_percent
+#: model:ir.model,name:sh_so_invoice_percent.model_sale_order
+msgid "Sales Order"
+msgstr "طلب المبيعات"

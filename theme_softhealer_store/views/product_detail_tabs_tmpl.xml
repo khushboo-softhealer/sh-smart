@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Module Information -->
+    <template id='sh_ecommerce_module_information_common_tmpl' name='Module Information Common tmpl'>
+        <div class="">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td class='w-200px'>Technical Name</td>
+                        <td><span t-if='sh_technical_name' t-esc='sh_technical_name'></span></td>
+                    </tr>
+                    <tr>
+                        <td class='w-200px'>Versions</td>
+                        <td><span t-if='sh_versions' t-esc='sh_versions'></span></td>
+                    </tr>
+                    <tr>
+                        <td class='w-200px'>Last Update Date</td>
+                        <td><span t-if='last_updated_date' t-esc='last_updated_date'></span></td>
+                    </tr>
+                    <tr>
+                        <td class='w-200px'>Editions</td>
+                        <td>
+                            <t t-if='editions' t-foreach='editions' t-as='edition'>
+                                <span class='badge bg-dark' t-esc='edition'></span>
+                            </t>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='vertical-align-middle w-200px'>Depends</td>
+                        <td>
+                            <t t-if='depends_product_list' t-foreach='depends_product_list' t-as='depends_product'>
+                                <span class='' style='background:#e4e4e4;padding: 0.35em 0.5em;display: inline-block;margin-bottom: 0.3em;' t-field='depends_product.display_name'></span>
+                            </t>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='vertical-align-middle w-200px'>Apps</td>
+                        <td>
+                            <t t-if='required_apps' t-foreach='required_apps' t-as='required_app'>
+                                <span class='' style='background:#e4e4e4;padding: 0.35em 0.5em;display: inline-block;margin-bottom: 0.3em;' t-esc='required_app'></span>
+                            </t>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='w-200px'>Licence</td>
+                        <td><span t-if='license' t-esc='license'></span></td>
+                    </tr>
+                    <tr>
+                        <td class='vertical-align-middle w-200px'>Category</td>
+                        <td>
+                            <t t-if='public_categ_ids' t-foreach='public_categ_ids' t-as='public_categ_id'>
+                                <a class='badge bg-primary' t-attf-href='/shop/category/ {{ slug (public_categ_id) }}' t-field='public_categ_id.name' t-att-title='public_categ_id.name'></a>
+                            </t>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </template>
+
+    <!-- Change Log Common Tmpl-->
+    <template id='sh_ecommerce_change_log_common_tmpl' name='Change Log Common tmpl'>
+        <div class="">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Version</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="change_logs" t-as="change_log">
+                        <tr>
+                            <td>
+                                <span t-field="change_log.version" />
+                            </td>
+                            <td>
+                                <span t-field="change_log.details" />
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </div>
+    </template>
+
+
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Main survey template -->
+    <template id="survey_page_fill" inherit_id="survey.survey_page_fill" name="QR Barcode Survey: main page (take survey)">
+        
+        <xpath expr="//div[hasclass('o_survey_wrap')]" position="before">
+        
+                        <div class="modal" id="js_id_sh_survey_extra_fields_adv_barcode_scan_modal" data-backdrop="static">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Barcode Scanner</h4>
+                                        <button type="button" class="btn close js_cls_sh_event_barcode_close_modal_btn" special="close" data-bs-dismiss="modal">X</button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div id="js_id_sh_survey_barcode_mobile_vid_div" style="">
+                                            <group style="margin-bottom: 10px;">
+                                                <div class="form-group row" style="margin-bottom: 15px;">
+                                                    <strong style="align-self: center;" class="col-3">Camera</strong>
+                                                    <select class="col-8 form-control" id="js_id_sh_survey_barcode_mobile_cam_select"> </select>
+                                                </div>
+                                            </group>
+
+                                            <video id="video" class="cls_sh_all_in_one_mbs_video_tag" width="600" height="400" style="border: 1px solid gray;"></video>
+
+                                            <span style="display: block;">Result:</span>
+                                            <code id="js_id_sh_survey_barcode_mobile_result"></code>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger js_cls_sh_event_barcode_close_modal_btn" special="close" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+        
+        </xpath>
+    </template>
+    
+    
+
+</odoo>

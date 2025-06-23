@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record  id="sh_meeting_room_kanban" model="ir.ui.view">
+        <field name="name">meeting.rooms.kanban</field>
+        <field name="model">meeting.rooms</field>
+        <field name="arch" type="xml">                         
+            <kanban default_group_by="name" class="sh_meeting_room_kanban" js_class="sh_meeting_room_kanban_header" group_create="false">               
+                <field name="name"/> 
+                <field name="sh_booked_meeting" invisible="1"/>                                                    
+                <templates>                                                                          
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_details w-100 d-flex sh_meeting_room_details">
+                            <div class="sh_meeting_image">
+                                <!-- <img src="https://i.ibb.co/ck56WTr/Addison-Olson.jpg" alt="" class=""/> -->
+                                <field name="sh_image" widget='image' class="sh_meeting_oe_avatar" />
+                            </div>
+                            <div class="flex-items sh_buttons_group">
+                                <button type="object" name="sh_book_room_action" class="sh_btn sh_name_room flex-items text-end" title="Meeting Room Name"><field name="name" class="sh_room_name"></field></button>                                
+                                <button type="object" name="sh_book_calender_action" class="sh_btn sh_count_room flex-items ml-5" title="Meeting Count"><field name="meeting_count" class="sh_btn_count"></field></button>                                            
+                            </div>                                                        
+                        </div>                                           
+                    </t>
+                </templates>
+            </kanban>            
+            <div class="o_kanban_record o_kanban_ghost flex-grow-1 flex-md-shrink-1 flex-shrink-0 my-0  sh_meeting_room_kanban"></div>
+        </field>
+    </record>         
+    <record id="sh_meeting_rooms_tree" model='ir.ui.view'>
+        <field name="name">sh.meeting.rooms.tree</field>
+        <field name="model">meeting.rooms</field>
+        <field name="arch" type="xml">
+            <tree string="Meeting Rooms" editable="bottom">
+                <field name="name"></field>
+                <field name="sh_image"></field>  
+                <field name="sh_member"/>
+                <field name="is_conference_room"/>                              
+            </tree>
+        </field>
+    </record>
+    <record id="sh_meeting_room_action" model="ir.actions.act_window">
+        <field name="name">Meeting Rooms</field>
+        <field name="res_model">meeting.rooms</field>        
+        <field name="view_mode">tree</field>        
+    </record>       
+    <record id="sh_dashboard_room_action" model="ir.actions.act_window">
+        <field name="name">Meeting Booking</field>
+        <field name="res_model">meeting.rooms</field>        
+        <field name="view_mode">kanban</field>        
+    </record>
+    <record id="view_sh_dashboard_meeting_room_kanban_header" model="ir.ui.view">
+        <field name="name">meeting.rooms.kanban</field>
+        <field name="model">meeting.rooms</field>
+        <field name="inherit_id" ref="sh_meeting_room_kanban"/>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="js_class">sh_meeting_room_kanban_header</attribute>
+            </xpath>
+        </field>
+    </record>           
+</odoo>

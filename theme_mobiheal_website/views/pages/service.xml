@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- HOME PAGE 2 -->
+  <template id="theme_mobiheal_website_service_tmpl" name="Professional App Design Services - Cross-Platform Development">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure">
+
+        <section class="mb_our_service o_colored_level" data-snippet="mb_our_services_templ"
+          data-name="Our Service" style="background-image: none;">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 o_colored_level">
+                <div class="mb_our_service_heading">
+                  <h1 class="o_default_snippet_text">The Digital World in Your Hands</h1>
+                </div>
+              </div>
+              <span class="line" />
+              <div class="mb_left_right_section o_colored_level">
+                <div class="row">
+                  <div class="col-lg-6 mb_class o_colored_level">
+                    <div class="mb_our_left">
+                      <img src="/theme_mobiheal_website/static/src/img/service/mb_mobile_erp_solutions.webp" title="Professional App Design Services - Cross-Platform Development" alt="Mobile App Development" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="col-lg-6 o_colored_level">
+                    <div class="mb_our_right">
+                      <div class="mb_our_text">
+                        <span class="mb_our_year o_default_snippet_text">01</span>
+                        <h4 class="mb_our_title o_default_snippet_text">Mobile App Development</h4>
+                        <p class="mb_text o_default_snippet_text">Digital technology and mobility
+                          are the defining characteristics of this era. We strive to make your
+                          enterprise system mobile, enabling you to manage your business anywhere.
+                          Our team can develop a mobile application for your business from scratch
+                          since every business has its own unique workflows and functions.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb_left_right_section o_colored_level js_cls_mb_service_section_1" id="ERP">
+                <div class="row">
+                  <div class="col-lg-6 o_colored_level">
+                    <div class="mb_our_right1">
+                      <div class="mb_our_text">
+                        <span class="mb_our_year o_default_snippet_text">02</span>
+                        <h4 class="mb_our_title o_default_snippet_text">Mobile ERP Solutions</h4>
+                        <p class="mb_text o_default_snippet_text">These days, an increasing number
+                          of enterprises are embracing the mobile platform. Mobile ERP apps are
+                          driving innovation and have become a must-have for every firm with a
+                          mobile workforce. Mobile Erp applications increase the speed of
+                          productivity and stability of your business and avoid human error. We
+                          deliver the best mobile solutions for your erp.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 o_colored_level">
+                    <div class="mb_our_left1">
+                      <img src="/theme_mobiheal_website/static/src/img/service/mb_ui_ux_design.webp" title="Professional App Design Services - Cross-Platform Development" alt="Android Apps With ERP" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb_left_right_section o_colored_level js_cls_mb_service_section_2">
+                <div class="row">
+                  <div class="col-lg-6 mb_class o_colored_level">
+                    <div class="mb_our_left">
+                      <img src="/theme_mobiheal_website/static/src/img/service/mb_mobile_app.webp" title="Professional App Design Services - Cross-Platform Development" alt="UI/UX Design" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="col-lg-6 o_colored_level">
+                    <div class="mb_our_right">
+                      <div class="mb_our_text">
+                        <span class="mb_our_year o_default_snippet_text">03</span>
+                        <h4 class="mb_our_title o_default_snippet_text">UI/UX Design </h4>
+                        <p class="mb_text o_default_snippet_text">Visual appeal is one of the most
+                          important things in any mobile application. We analyse the latest trends
+                          and provide you with the best user experience and responsive design. Good
+                          features and tools are not the only things that contribute to
+                          productivity; comfort and best user experience are also essential. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+
+  <data noupdate="1">
+
+    <!-- Default pagese  below 2 record must put in no update 1-->
+    <record id="theme_mobiheal_website_service_page" model="website.page">
+        <field name="is_published">True</field>
+        <field name="url">/service</field>
+        <field name="view_id" ref="theme_mobiheal_website.theme_mobiheal_website_service_tmpl"/>
+        <field name="track">True</field>
+        <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+    </record>
+
+    <record id="theme_mobiheal_website_service_menu" model="website.menu">
+        <field name="name">Service</field>
+        <field name="url">/service</field>
+        <field name="page_id" ref="theme_mobiheal_website.theme_mobiheal_website_service_page"/>
+        <field name="sequence" type="int">6</field>
+        <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+    </record>
+
+</data>
+</odoo>

@@ -1,0 +1,841 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_survey_all_in_one
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-28 07:30+0000\n"
+"PO-Revision-Date: 2022-06-28 07:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_textbox_for_pattern
+msgid "#{question.validation_sh_textbox_placeholder}"
+msgstr "#{question.validation_sh_textbox_placeholder}"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__sh_survmate_theme_grid_type__10
+msgid "10"
+msgstr "10"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__sh_survmate_theme_grid_type__11
+msgid "11"
+msgstr "11"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__sh_survmate_theme_grid_type__12
+msgid "12"
+msgstr "12"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "18:00"
+msgstr "18:00"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "20"
+msgstr "20"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "2018-03"
+msgstr "2018-03"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "2018-05"
+msgstr "2018-05"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "2018-W18"
+msgstr "2018-W18"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "2018-W26"
+msgstr "2018-W26"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "60 (In seconds)"
+msgstr "60 (In seconds)"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "9:00"
+msgstr "9:00"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.survey_page_fill
+msgid ""
+"<span style=\"display: block;\">Result:</span>\n"
+"                                            <code id=\"js_id_sh_survey_barcode_mobile_result\"/>"
+msgstr ""
+"<span style=\"display: block;\">結果:</span>\n"
+"                                            <code id=\"js_id_sh_survey_barcode_mobile_result\"/>"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.survey_page_fill
+msgid "<strong style=\"align-self: center;\" class=\"col-3\">Camera</strong>"
+msgstr "<strong style=\"align-self: center;\" class=\"col-3\">相機</strong>"
+
+#. module: sh_survey_all_in_one
+#: code:addons/sh_survey_all_in_one/sh_survey_matrix_adv/models/survey.py:0
+#, python-format
+msgid "A question is either skipped, either answered. Not both."
+msgstr "一個問題要么被跳過，要么回答。不是都。"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_address
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_address
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_address
+msgid "Address"
+msgstr "地址"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_answer_color
+msgid "Answer Color"
+msgstr "回答顏色"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_section_answer_text_color
+msgid "Answer Text Color"
+msgstr "回答文字顏色"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__answer_type
+msgid "Answer Type"
+msgstr "答案類型"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_bg_color
+msgid "Background Color"
+msgstr "背景顏色"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_barcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_barcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_barcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_barcode
+msgid "Barcode"
+msgstr "條碼"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.survey_page_fill
+msgid "Barcode Scanner"
+msgstr "條形碼掃描器"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_button_style
+msgid "Button Style"
+msgstr "按鈕樣式"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_button_style_wizard_view
+msgid "Cancel"
+msgstr "取消"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_checkbox_style
+msgid "Checkbox Style"
+msgstr "複選框樣式"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question_answer__sh_value_type
+msgid "Choices Type"
+msgstr "選擇類型"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "City"
+msgstr "城市"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_signature
+msgid "Clear"
+msgstr "清除"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.matrix
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_file_print
+msgid "Click here to download file"
+msgstr "單擊此處下載文件"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.survey_page_fill
+msgid "Close"
+msgstr "關"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_color
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_color
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_color
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_color
+msgid "Color"
+msgstr "顏色"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_settings_form
+msgid "Colors"
+msgstr "顏色"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_country_id
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "Country"
+msgstr "國家"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "Country..."
+msgstr "國家..."
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__create_uid
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__create_uid
+msgid "Created by"
+msgstr "由...製作"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__create_date
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__create_date
+msgid "Created on"
+msgstr "創建於"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__matrix_subtype__sh_custom_matrix
+msgid "Custom Matrix"
+msgstr "自定義矩陣"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__date
+msgid "Date"
+msgstr "日期"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__datetime
+msgid "Datetime"
+msgstr "約會時間"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__display_name
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_email
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_email
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_email
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_email
+msgid "E-mail"
+msgstr "電子郵件"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_file
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_file
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_file
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_file
+msgid "File"
+msgstr "文件"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_file_fname
+msgid "File Name"
+msgstr "文件名"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_survmate_theme_grid_type
+msgid "Grid"
+msgstr "網格"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP路由"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__id
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__access_token
+msgid "Identification token"
+msgstr "識別令牌"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__img_src
+msgid "Image Src"
+msgstr "圖像SRC"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_survey_question
+msgid "Inherit Survey Question for extra fields"
+msgstr "繼承額外領域的調查問題"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_input_style
+msgid "Input Style"
+msgstr "輸入樣式"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_is_sh_textbox_pattern
+msgid "Input must be in specified pattern"
+msgstr "輸入必須採用指定模式"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_survey__sh_is_time_fixed
+msgid "Is Fixed Timer Position?"
+msgstr "固定計時器位置嗎？"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings____last_update
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard____last_update
+msgid "Last Modified on"
+msgstr "最後修改"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__write_uid
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__write_uid
+msgid "Last Updated by"
+msgstr "最後更新"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__write_date
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_theme_button_design_wizard__write_date
+msgid "Last Updated on"
+msgstr "最後更新"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_sh_location_latitude
+msgid "Latitude"
+msgstr "緯度"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_question_form_inherit
+msgid "Layout"
+msgstr "佈局"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_location
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_location
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_location
+msgid "Location"
+msgstr "地點"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_sh_location_longitude
+msgid "Longitude"
+msgstr "經度"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_many2many
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_many2many
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_many2many
+msgid "Many2many"
+msgstr "許多人"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_many2one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_many2one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_many2one
+msgid "Many2one"
+msgstr "許多2one"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__matrix_subtype
+msgid "Matrix Type"
+msgstr "矩陣類型"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question_answer__sh_matrix_range_max
+msgid "Maximum"
+msgstr "最大"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_month_max
+msgid "Maximum Month"
+msgstr "最大月份"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_range_max
+msgid "Maximum Range"
+msgstr "最大範圍"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_time_max
+msgid "Maximum Time"
+msgstr "最大時間"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_week_max
+msgid "Maximum Week"
+msgstr "最高週"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question_answer__sh_matrix_range_min
+msgid "Minimum"
+msgstr "最低限度"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_month_min
+msgid "Minimum Month"
+msgstr "最低月"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_range_min
+msgid "Minimum Range"
+msgstr "最小範圍"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_time_min
+msgid "Minimum Time"
+msgstr "最短時間"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_week_min
+msgid "Minimum Week"
+msgstr "至少一周"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__que_sh_many2many_model_id
+msgid "Model"
+msgstr "模型"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__que_sh_many2one_model_id
+msgid "Model "
+msgstr "模型"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_month
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_month
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_month
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_month
+msgid "Month"
+msgstr "月"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_month_step
+msgid "Month Step"
+msgstr "月步"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__free_text
+msgid "Multiple Lines Text Box"
+msgstr "多行文本框"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__name
+msgid "Name"
+msgstr "姓名"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__numerical_box
+msgid "Numerical Value"
+msgstr "數值"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_password
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_password
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_password
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_password
+msgid "Password"
+msgstr "密碼"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_password_maxlen
+msgid "Password Maximum Length"
+msgstr "密碼最大長度"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_password_minlen
+msgid "Password Minimum Length"
+msgstr "密碼最小長度"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_settings_form
+msgid "Preview"
+msgstr "預習"
+
+#. module: sh_survey_all_in_one
+#: code:addons/sh_survey_all_in_one/sh_survmate_theme/models/survey.py:0
+#, python-format
+msgid "Preview Style"
+msgstr "預覽樣式"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_theme_primary_color
+msgid "Primary Color"
+msgstr "原色"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_qrcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_qrcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_qrcode
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_qrcode
+msgid "QR Code"
+msgstr "二維碼"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_question_color
+msgid "Question Color"
+msgstr "問題顏色"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__question_type
+msgid "Question Type"
+msgstr "問題類型"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_radio_button_style
+msgid "Radio Button Style"
+msgstr "廣播按鈕樣式"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_range
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_range
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_range
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_range
+msgid "Range"
+msgstr "範圍"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_range_step
+msgid "Range Step"
+msgstr "範圍步驟"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_theme_secondary_color
+msgid "Secondary Color"
+msgstr "次要顏色"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_section_title_color
+msgid "Section Background Color"
+msgstr "部分背景顏色"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_section_title_font_color
+msgid "Section Font Color"
+msgstr "部分字體顏色"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_section_style
+msgid "Section Style"
+msgstr "部分樣式"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_many2one
+msgid "Select..."
+msgstr "選擇..."
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_sh_survmate_settings__sh_survmate_show_bg_color
+msgid "Show Background Color"
+msgstr "顯示背景顏色"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_city
+msgid "Show City Field?"
+msgstr "展示城市場？"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_country_id
+msgid "Show Country Field?"
+msgstr "展示國家領域？"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_state_id
+msgid "Show State Field?"
+msgstr "展示狀態領域？"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_street
+msgid "Show Street Field?"
+msgstr "表演街場？"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_street2
+msgid "Show Street2 Field?"
+msgstr "Show Street2 Field？"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__sh_is_show_zip
+msgid "Show Zip Field?"
+msgstr "顯示Zip字段？"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_signature
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_signature
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_signature
+msgid "Signature"
+msgstr "簽名"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_signature_src
+msgid "Signature src"
+msgstr "簽名SRC"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__textbox
+msgid "Single Line Text Box"
+msgstr "單行文本框"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_state_id
+msgid "State"
+msgstr "狀態"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "State / Province"
+msgstr "州 /省"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "State / Province..."
+msgstr "州 /省..."
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question_answer__sh_matrix_range_step
+msgid "Step"
+msgstr "步"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "Street 2"
+msgstr "街2"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "Street <span class=\"d-none d-md-inline\"> and Number</span>"
+msgstr "街<span class = \“ d-none d-md-inline \”>和數字</span>"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_button_style__style_1
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_checkbox_style__style_1
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_input_style__style_1
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_radio_button_style__style_1
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_section_style__style_1
+msgid "Style 1"
+msgstr "樣式1"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_button_style__style_2
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_checkbox_style__style_2
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_input_style__style_2
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_radio_button_style__style_2
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_section_style__style_2
+msgid "Style 2"
+msgstr "樣式2"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_button_style__style_3
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_checkbox_style__style_3
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_input_style__style_3
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_radio_button_style__style_3
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_section_style__style_3
+msgid "Style 3"
+msgstr "樣式3"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_button_style__style_4
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_checkbox_style__style_4
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_input_style__style_4
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_radio_button_style__style_4
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_section_style__style_4
+msgid "Style 4"
+msgstr "樣式4"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_button_style__style_5
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_checkbox_style__style_5
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_input_style__style_5
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_radio_button_style__style_5
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__sh_survmate_settings__sh_survmate_section_style__style_5
+msgid "Style 5"
+msgstr "樣式5"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_settings_form
+msgid "Styles"
+msgstr "樣式"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_survey_survey
+msgid "Survey"
+msgstr "民意調查"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_survey_question_answer
+msgid "Survey Label"
+msgstr "調查標籤"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_survey_user_input_line
+msgid "Survey User Input Line for extra fields"
+msgstr "調查用戶輸入線的額外字段"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_survey_user_input
+msgid "Survey User Input for custom matrix"
+msgstr "定制矩陣的調查用戶輸入"
+
+#. module: sh_survey_all_in_one
+#: model:ir.actions.act_window,name:sh_survey_all_in_one.sh_survmate_theme_survey_settings_action
+#: model:ir.model,name:sh_survey_all_in_one.model_sh_survmate_settings
+#: model:ir.ui.menu,name:sh_survey_all_in_one.sh_survmate_theme_survey_settings_menu
+msgid "Survmate Settings"
+msgstr "倖存的設置"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_survey__sh_survmate_settings_id
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_form_inherit
+msgid "Survmate Theme"
+msgstr "倖存的主題"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model,name:sh_survey_all_in_one.model_sh_survmate_theme_button_design_wizard
+msgid "Survmate Theme Button Design"
+msgstr "倖存的主題按鈕設計"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_textbox_pattern
+msgid "Textbox Pattern"
+msgstr "文本框圖案"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_textbox_placeholder
+msgid "Textbox Placeholder"
+msgstr "TextBox佔位符"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_button_style_wizard_view
+msgid "Theme Preview"
+msgstr "主題預覽"
+
+#. module: sh_survey_all_in_one
+#. openerp-web
+#: code:addons/sh_survey_all_in_one/static/src/js/extra_addons/sh_survey_extra_fields/survey_form.js:0
+#, python-format
+msgid "This answer must be an URL."
+msgstr "這個答案必須是一個URL。"
+
+#. module: sh_survey_all_in_one
+#. openerp-web
+#: code:addons/sh_survey_all_in_one/static/src/js/extra_addons/sh_survey_extra_fields/survey_form.js:0
+#, python-format
+msgid "This answer must be an email address."
+msgstr "此答案必須是電子郵件地址。"
+
+#. module: sh_survey_all_in_one
+#. openerp-web
+#: code:addons/sh_survey_all_in_one/static/src/js/extra_addons/sh_survey_extra_fields/survey_form.js:0
+#, python-format
+msgid "This is not a date"
+msgstr "這不是約會"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_time
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_time
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_time
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_time
+msgid "Time"
+msgstr "時間"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_time_step
+msgid "Time Step"
+msgstr "時間步驟"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_url
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_url
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_url
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_url
+msgid "URL"
+msgstr "URL"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_city
+msgid "Value Ans Sh City"
+msgstr "價值Ans Sh City"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_street
+msgid "Value Ans Sh Street"
+msgstr "價值ANS SH街"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_street2
+msgid "Value Ans Sh Street2"
+msgstr "價值ANS SH Street2"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_zip
+msgid "Value Ans Sh Zip"
+msgstr "價值Ans SH Zip"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_user_input_line__value_ans_sh_week
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question__question_type__que_sh_week
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_question_answer__sh_value_type__que_sh_week
+#: model:ir.model.fields.selection,name:sh_survey_all_in_one.selection__survey_user_input_line__answer_type__ans_sh_week
+msgid "Week"
+msgstr "星期"
+
+#. module: sh_survey_all_in_one
+#: model:ir.model.fields,field_description:sh_survey_all_in_one.field_survey_question__validation_sh_week_step
+msgid "Week Step"
+msgstr "週步"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_address
+msgid "Zip Code"
+msgstr "郵政編碼"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "[0-9]{4}"
+msgstr "[0-9] {4}"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_survey_settings_form
+msgid "e.g. Theme Settings for Survey A"
+msgstr "例如調查主題設置"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.matrix
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_email
+msgid "example@domain.com"
+msgstr "示例@domain.com"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.matrix
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_time
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.tmpl_sh_url
+msgid "https://example.com"
+msgstr "https://example.com"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survey_extra_fields_survey_que_form_view
+msgid "nnnn"
+msgstr "nnnn"
+
+#. module: sh_survey_all_in_one
+#: model_terms:ir.ui.view,arch_db:sh_survey_all_in_one.sh_survmate_theme_button_style_wizard_view
+msgid "preview image"
+msgstr "預覽圖像"

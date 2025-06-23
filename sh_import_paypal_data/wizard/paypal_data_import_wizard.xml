@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+    <record id="sh_import_data_wizard_view_form" model="ir.ui.view">
+        <field name="name">sh.import.data.wizard.view.form</field>
+        <field name="model">sh.import.data.wizard</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name = "file"/>
+                        </group>
+                    </group>
+                </sheet>
+
+                <footer>
+                    <button  string="Import"  class="oe_highlight" type="object" name="import_data"  />
+                    <button string="Cancel" class="btn btn-secondary" special="cancel" icon="fa-remove" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_import_data_wizard_view_action" model="ir.actions.act_window">
+        <field name="name">Import Data</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.import.data.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem   id="sh_import_data_wizard_view_menu" 
+                name="Paypal data import" 
+                parent="account.menu_finance_configuration" 
+                action="sh_import_data_wizard_view_action" 
+                sequence="999"/>
+</odoo>

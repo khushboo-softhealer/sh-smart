@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="note_report_receipt">
+    <t t-call="web.html_container">
+    <t t-call="web.external_layout">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row">
+		        	<div class="col-xs-12">
+		        		<span t-field="o.memo"/>		  			
+		  			</div>
+               </div>    
+            </div>				
+        </t>
+    </t>
+    </t>
+</template>
+
+    <record id="action_report_note" model="ir.actions.report">
+		<field name="name">Note Report</field>
+		<field name="model">note.note</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">sh_note_print.note_report_receipt</field>
+		<field name="report_file">sh_note_print.note_report_receipt</field>
+		<field name="print_report_name">'Note Report'</field>
+		<field name="binding_model_id" ref="note.model_note_note" />
+		<field name="binding_type">report</field>
+	</record> 
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <record id="sh_hr_recruitment_task_create_task_wizard_form_view" model="ir.ui.view">
+        <field name="name">sh.hr.recruitment.task.create.task.form.view</field>
+        <field name="model">sh.create.task.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create Task">
+                <group>
+                    <group>
+                        <field name="name" required="1" />
+                        <field name="project_id" />
+                        <field name="responsible_user" widget="many2many_tags" />
+                        <field name="schedule" required="1"/>
+                    </group>
+                    <footer>
+                        <button name="create_task" class="btn btn-primary" type="object" string="Done" />
+                        <button string="Cancel" special="cancel" />
+                    </footer>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="sh_hr_recruitment_task_create_task_wizard_action" model="ir.actions.act_window">
+        <field name="name">Create Task</field>
+        <field name="res_model">sh.create.task.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,209 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_sol_views
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-30 14:06+0000\n"
+"PO-Revision-Date: 2020-09-30 14:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_kanban_view_inherit
+msgid ""
+"<br/>\n"
+"\t\t\t   \t        \t\t\tProduct :"
+msgstr ""
+"<br/>\n"
+"\t\t\t   \t        \t\t\tProducto:"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_kanban_view_inherit
+msgid ""
+"<br/>\n"
+"\t\t\t   \t        \t\t\tQty :"
+msgstr ""
+"<br/>\n"
+"\t\t\t   \t        \t\t\tCant .:"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_kanban_view_inherit
+msgid ""
+"<br/>\n"
+"\t\t   \t        \t\t\tCustomer :"
+msgstr ""
+"<br/>\n"
+"\t\t   \t        \t\t\tCliente :"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_kanban_view_inherit
+msgid ""
+"<br/>\n"
+"\t\t   \t        \t\t\tProduct :"
+msgstr ""
+"<br/>\n"
+"\t\t   \t        \t\t\tProducto:"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_kanban_view_inherit
+msgid ""
+"<br/>\n"
+"\t\t   \t        \t\t\tQty :"
+msgstr ""
+"<br/>\n"
+"\t\t   \t        \t\t\tCant .:"
+
+#. module: sh_sol_views
+#: model:ir.model.fields,help:sh_sol_views.field_sale_order_line__so_order_date
+msgid ""
+"Creation date of draft/sent orders,\n"
+"Confirmation date of confirmed orders."
+msgstr ""
+"Fecha de creación de pedidos en borrador / enviados, \ n"
+"Fecha de confirmación de pedidos confirmados."
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_search_view_inherit
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: sh_sol_views
+#: model:ir.model.fields,field_description:sh_sol_views.field_sale_order_line__so_order_date
+msgid "Date Order"
+msgstr "Fecha de pedido"
+
+#. module: sh_sol_views
+#: model:ir.model.fields,field_description:sh_sol_views.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_search_view_inherit
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: sh_sol_views
+#: model:ir.model.fields,field_description:sh_sol_views.field_sale_order_line__id
+msgid "ID"
+msgstr "CARNÉ DE IDENTIDAD"
+
+#. module: sh_sol_views
+#: model:ir.model.fields,field_description:sh_sol_views.field_sale_order_line____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_tree_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_tree_view_inherit
+msgid "Order"
+msgstr "Orden"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_kanban_view_inherit
+msgid "Order :"
+msgstr "Orden :"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_search_view_inherit
+msgid "Order Date"
+msgstr "Fecha de orden"
+
+#. module: sh_sol_views
+#: model:ir.ui.menu,name:sh_sol_views.sh_sol_order_line
+msgid "Order Lines"
+msgstr "Líneas de pedido"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_tree_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_tree_view_inherit
+msgid "Ordered Qty"
+msgstr "Cantidad ordenada"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_search_view_inherit
+msgid "Product"
+msgstr "Producto"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_kanban_view_inherit
+msgid "Qty"
+msgstr "Cant."
+
+#. module: sh_sol_views
+#: model:ir.actions.act_window,name:sh_sol_views.sh_action_sale_quotation_lines
+msgid "Quotation Line"
+msgstr "Línea de cotización"
+
+#. module: sh_sol_views
+#: model:ir.ui.menu,name:sh_sol_views.sh_sol_quotation_line
+msgid "Quotation Lines"
+msgstr "Líneas de cotización"
+
+#. module: sh_sol_views
+#: model:ir.actions.act_window,name:sh_sol_views.sh_action_sale_order_lines
+msgid "Sale Order Line"
+msgstr "Línea de orden de venta"
+
+#. module: sh_sol_views
+#: model:ir.model,name:sh_sol_views.model_sale_order_line
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.view_sale_order_line_calendar
+msgid "Sales Order Line"
+msgstr "Línea de orden de venta"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.view_sale_order_line_pivot
+msgid "Sales Orders Line"
+msgstr "Línea de orden de venta"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.view_sale_order_line_graph
+msgid "Sales Orders Lines"
+msgstr "Líneas de órdenes de venta"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.view_quotation_pivot
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.view_sale_line_quotation_graph
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.view_sale_quotation_calendar
+msgid "Sales Quotation"
+msgstr "Cotización"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_quotation_line_search_view_inherit
+msgid "Search Quotation Order Line"
+msgstr "Buscar línea de orden de cotización"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_search_view_inherit
+msgid "Search Sales Order Line"
+msgstr "Buscar línea de orden de venta"
+
+#. module: sh_sol_views
+#: model:ir.model.fields,field_description:sh_sol_views.field_sale_order_line__so_state
+msgid "State"
+msgstr "Estado"
+
+#. module: sh_sol_views
+#: model_terms:ir.ui.view,arch_db:sh_sol_views.sh_sol_sale_order_line_kanban_view_inherit
+msgid "product_id :"
+msgstr "identificación de producto :"

@@ -1,0 +1,207 @@
+<div class="sh_content_detail">
+                                    <h2 class="sh_heading_text">
+                                        Mastering Odoo: A Beginner’s Guide to Odoo Training
+                                    </h2>
+                                    <p class="sh_text">
+                                        Odoo is a complete business management software that helps companies run smoothly by managing everything in one place—from accounting and sales to HR, inventory, and more. It’s easy to use, flexible, and designed to grow with your business. But to get the best out of it, you need proper guidance and hands-on experience. That’s where Odoo training becomes essential.
+                                    </p>
+                                    <p class="sh_text">
+                                        At Softhealer, we offer the best Odoo training services designed for all skill levels. Whether you’re new to Odoo or already using it and want to explore more advanced features, our training programs can help. We provide a structured path to learn Odoo the right way—starting from basic navigation to advanced development and functional knowledge.
+                                    </p>
+                                    <p class="sh_text">
+                                        Our expert-led Odoo training courses are practical, easy to follow, and made to suit your specific business needs. You can choose from Odoo basic training, advanced training, functional training, or technical training based on your role and goals. With flexible options like Odoo online training and on-site sessions, you can learn at your pace.
+                                    </p>
+                                    <p class="sh_text">
+                                        In this guide, we’ll walk you through the types of training available, the key benefits of learning Odoo, and how Softhealer’s customized training solutions can help you master the platform confidently.
+                                    </p>
+                                   
+                                    <br />
+                                    <h2 class="sh_heading_text">
+                                        What is Odoo and Why It Matters
+                                    </h2>
+                                    <p class="sh_text">
+                                        Odoo is an all-in-one ERP software that helps businesses manage day-to-day operations with ease. From sales and finance to inventory, HR, and customer service, Odoo offers a wide range of apps that work together in one platform. This makes it a powerful tool for companies that want to improve productivity and reduce manual work.
+                                    </p>
+                                    <p class="sh_text">
+                                        What makes Odoo special is its flexibility. Whether you're a small business or a growing enterprise, Odoo can be customized to match your needs. But to unlock its full power, you need to understand how each part of the system works. That’s why Odoo training is so important—it helps you and your team use the software effectively from the start.
+                                    </p>
+                                    <p class="sh_text">
+                                        With the right Odoo learning approach, you can make smarter decisions, improve workflow, and save time. At Softhealer, our Odoo training services are designed to give you this clear understanding. Our training doesn’t just explain the system—it shows you how to apply it in real situations.
+                                    </p>
+                                    <p class="sh_text">
+                                        If you're looking to start your journey with Odoo software training, knowing what the platform offers is the first step. From there, proper training ensures you don’t miss out on any of its powerful features.
+                                    </p>
+                                    <br/>
+                                    <h2 class="sh_heading_text">
+                                        Types of Odoo Training We Offer
+                                    </h2>
+                                    <p class="sh_text">
+                                        At Softhealer, we recognize that every learner comes with different needs, goals, and levels of experience. That's why we’ve developed a wide range of Odoo training courses to cater to various skill sets, industries, and roles.
+                                    </p>
+                                    <p class="sh_text">
+                                        Whether you’re just starting with Odoo or looking to level up your existing knowledge, we have something for everyone. Our training is designed to be both comprehensive and adaptable, ensuring that you can build your skills at your own pace, with the support of expert instructors.
+                                    </p>
+                                    <h3>
+                                        Odoo Basic Training
+                                    </h3>
+                                    <p class="sh_text">
+                                        If you're new to Odoo, our Odoo Basic Training is the ideal starting point. This course is designed to familiarize you with the platform’s core functionalities. Through an introduction to Odoo’s user-friendly interface, you will learn how to manage key operations and navigate essential modules.
+                                    </p>
+                                    <p class="sh_text">
+                                        This training will guide you through the basics, such as creating new records, managing sales, handling inventory, and running reports.
+                                    </p>
+                                    <p class="sh_text">
+                                        By the end of the course, you will have a solid foundation that allows you to confidently use Odoo for your day-to-day business needs.
+                                    </p>
+                                    <p class="sh_text">
+                                        Whether you are a business owner, a manager, or an employee, this course will set you up for success with Odoo.
+                                    </p>
+                                    <h3>
+                                        Odoo Advanced Training
+                                    </h3>
+                                    <p class="sh_text">
+                                        For those who are already comfortable with Odoo’s basics, our Odoo Advanced Training course is the perfect next step. This program dives deeper into Odoo’s more complex features, enabling you to take full advantage of the platform’s capabilities.
+                                    </p>
+                                    <p class="sh_text">
+                                        You will learn about advanced configurations, how to set up automation tools, and create custom workflows.
+                                    </p>
+                                    <p class="sh_text">
+                                        Moreover, this training covers how to implement more sophisticated business processes and reporting techniques to ensure your team operates with maximum efficiency.
+                                    </p>
+                                    <p class="sh_text">
+                                        This course is ideal for individuals looking to customize Odoo to better fit their business's unique needs, making it a valuable resource for advanced users and those seeking to improve their operational performance.
+                                    </p>
+                                    <h3>
+                                        Odoo Technical Training
+                                    </h3>
+                                    <p class="sh_text">
+                                        Odoo Technical Training is specifically tailored for developers, IT professionals, and technical users who want to explore Odoo at a deeper, more technical level. 
+                                    </p>
+                                    <p class="sh_text">
+                                        This specialized training focuses on Odoo's underlying architecture, how to develop custom modules, and integrate Odoo with third-party systems. You will gain a deep understanding of how Odoo works behind the scenes, enabling you to build and customize modules that enhance the functionality of your system. 
+                                    </p>
+                                    <p class="sh_text">
+                                        This course is perfect for businesses that require a high level of customization and integration to meet specific business needs. If you’re aiming to become an Odoo developer or manage a technical team, this course will provide the advanced skills and tools you need.
+                                    </p>
+                                    <h3>
+                                        Odoo Functional Training
+                                    </h3>
+                                    <p class="sh_text">
+                                        Our Odoo Functional Training is ideal for business managers, team leaders, and decision-makers who need to understand how to leverage Odoo's full suite of functional modules.
+                                    </p>
+                                    <p class="sh_text">
+                                        This training focuses on modules like Sales, CRM, Accounting, Inventory, HR, and more. You will learn how to optimize each of these functions to improve productivity, reduce errors, and streamline business processes.
+                                    </p>
+                                    <p class="sh_text">
+                                        The functional training equips you with the knowledge to not only use Odoo efficiently but also to drive the platform’s adoption across your team or organization.
+                                    </p>
+                                    <p class="sh_text">
+                                        This course is great for anyone looking to enhance business operations by making full use of Odoo’s core functional capabilities.
+                                    </p>
+                                    <h3>
+                                        Our Approach to Odoo Training
+                                    </h3>
+                                    <p class="sh_text">
+                                        At Softhealer, our aim is to provide the best Odoo training services through a hands-on, practical approach. All our training programs, whether online or on-site, are delivered by certified Odoo experts with years of experience. Our flexible training options ensure that you can learn at your own pace, from anywhere, and apply what you’ve learned directly to your business. Each course includes easy-to-follow resources, detailed guides, and post-training support to help you continue your journey toward becoming an Odoo expert.
+                                    </p>
+                                    <br/>
+                                    <h2 class="sh_heading_text">
+                                        Why Choose Softhealer for Odoo Training?
+                                    </h2>
+                                    <p class="sh_text">
+                                        When it comes to Odoo training services, Softhealer stands out with a strong track record and trusted expertise. We go beyond standard lessons to offer learning experiences that match your business goals and individual learning needs.
+                                    </p>
+                                    <h3>
+                                        Certified Odoo Experts
+                                    </h3>
+                                    <p class="sh_text">
+                                        Our trainers are certified professionals with hands-on experience in real-world Odoo projects. They understand how the platform works in various industries and are skilled at simplifying even the most technical topics.
+                                    </p>
+                                    <h3>
+                                        Customized Training Programs
+                                    </h3>
+                                    <p class="sh_text">
+                                        Every business is different. That’s why we tailor our Odoo training courses based on your industry, goals, and team roles. Whether you need individual sessions or group learning, we design the training around your needs.
+                                    </p>
+                                    <h3>
+                                        Hands-on Learning
+                                    </h3>
+                                    <p class="sh_text">
+                                        We focus on learning by doing. With practical tasks and real examples, you get to apply what you’ve learned right away. This method helps you remember better and use Odoo confidently in your day-to-day operations.
+                                    </p>
+                                    <h3>
+                                        Flexible Learning Options
+                                    </h3>
+                                    <p class="sh_text">
+                                        We provide both Odoo online training and on-site training sessions. Choose what suits your schedule. Our goal is to make your ERP training easy, accessible, and effective.
+                                    </p>
+                                    <h3>
+                                        Full Post-Training Support
+                                    </h3>
+                                    <p class="sh_text">
+                                        Learning doesn’t stop after the course ends. Our team stays available for any follow-up questions or guidance. From materials to support, we ensure you continue growing your skills.
+                                    </p>
+                                    <p class="sh_text">
+                                        With Softhealer, you're not just getting trained—you're gaining a partner in your Odoo journey. That’s why so many clients trust us for the best Odoo training services.
+                                    </p>
+                                   
+                                    <br/>
+                                    <h2 class="sh_heading_text">
+                                        Benefits of Learning Odoo with Softhealer
+                                    </h2>
+                                    <p class="sh_text">
+                                        Choosing the right training provider can make a big impact on how well you understand and use a platform like Odoo. At Softhealer, we offer not just training, but the tools and support to help you succeed in your business with confidence. 
+                                    </p>
+                                    <p class="sh_text">
+                                        Our Odoo training services are built around real business needs, practical use cases, and expert support.
+                                    </p>
+                                    <p class="sh_text">
+                                        Here’s why learning Odoo with Softhealer is a smart choice:
+                                    </p>
+                                    <h3>
+                                        Practical Knowledge You Can Use
+                                    </h3>
+                                    <p class="sh_text">
+                                        Our training is not just theory—it’s focused on real work scenarios. Each session includes examples, activities, and tips that help you apply what you learn directly in your job. Whether you’re using Odoo to manage sales, accounts, or inventory, you’ll know exactly what to do.
+                                    </p>
+                                    <h3>
+                                        Everything in One Place
+                                    </h3>
+                                    <p class="sh_text">
+                                        We provide Odoo courses for all levels—beginners, professionals, and developers. From learning how to navigate the system to customizing workflows, we cover all areas. You don’t need to look anywhere else—Odoo basic training, advanced courses, Odoo ERP training, and even technical and functional modules are all part of our training system.
+                                    </p>
+                                    <h3>
+                                        Role-Based Learning Paths
+                                    </h3>
+                                    <p class="sh_text">
+                                        We understand that every person has a different role in the business. That’s why our Odoo functional training is great for business users like managers or team leads, while our Odoo technical training is perfect for IT professionals and developers. You’ll only learn what matters for your role, which saves time and helps you stay focused.
+                                    </p>
+                                    <h3>
+                                        Clear Understanding of Business Processes
+                                    </h3>
+                                    <p class="sh_text">
+                                        Odoo is not just one software—it’s a full ERP system that connects your entire business. Our training helps you understand how different modules like sales, HR, accounting, and inventory work together. This gives you a full picture of your business operations and how Odoo can improve them.
+                                    </p>
+                                    <h3>
+                                        Boost Your Efficiency
+                                    </h3>
+                                    <p class="sh_text">
+                                        The more confident you are with Odoo, the faster you’ll work. By joining our training programs, you’ll be able to complete daily tasks more quickly, avoid errors, and use the software more efficiently. This means better performance for you and better results for your business.
+                                    </p>
+                                    <br/>
+                                    <h2 class="sh_heading_text">
+                                        Conclusion
+                                    </h2>
+                                    <p class="sh_text">
+                                        Mastering Odoo is a game-changer for any business looking to enhance its operations. With Softhealer’s Odoo training services, you’re equipped with the knowledge and skills to fully leverage Odoo’s capabilities, whether you're starting from scratch or diving into advanced configurations.
+                                    </p>
+                                    <p class="sh_text">
+                                        Our training programs are designed to meet your specific business needs, offering both functional and technical training. By combining expert guidance with hands-on practice, we ensure that you not only understand Odoo but can also apply it effectively to optimize your business processes.
+                                    </p>
+                                    <p class="sh_text">
+                                        Don’t let your team fall behind in the competitive market. Invest in comprehensive Odoo training with Softhealer and empower your business to work smarter, faster, and more efficiently.
+                                    </p>
+                                    <p class="sh_text">
+                                        Take the next step and explore our tailored training solutions to get the most out of your Odoo system!
+                                    </p>
+                                </div>

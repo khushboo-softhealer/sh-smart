@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- HOME PAGE 2 -->
+
+    <template id="theme_mobiheal_website_home_tmpl" name="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies">
+      <t t-call="website.layout">
+        <div id="wrap" class="oe_structure">
+
+          <!--MB-Banner-Section-Start-->
+            <section class="mb_mobiheal_home_banner o_colored_level" data-bg-color="#E9EDF4" data-bg-image="assets/images/slider/01_home_01.png" data-snippet="sh_banner_templ" data-name="Banner" >
+              <div class="shape shape-one">
+                <img src="/theme_mobiheal_website/static/src/img/home/banner/mb_shpae1.webp" alt="Shape" loading="lazy" style="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" />
+              </div>
+              <div class="shape shape-two layer" data-speed="1" style="transform: translateX(11.9px) translateY(4.10833px);">
+                <img src="/theme_mobiheal_website/static/src/img/home/banner/mb_shpae2.webp" alt="Shape" loading="lazy" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" style=""/>
+              </div>
+              <div class="shape shape-three">
+                <img src="/theme_mobiheal_website/static/src/img/home/banner/mb_shpae3.webp" alt="Shape" loading="lazy" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" style=""/>
+              </div>
+              <div class="shape shape-four">
+                <img src="/theme_mobiheal_website/static/src/img/home/banner/mb_shpae4.webp" alt="Shape" loading="lazy" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" style=""/>
+              </div>
+              <div class="shape shape-five layer" data-speed="2" style="transform: translateX(10.3833px) translateY(1.70833px);">
+                <img src="/theme_mobiheal_website/static/src/img/home/banner/mb_shpae5.webp" alt="Shape" loading="lazy" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" style=""/>
+              </div>
+              <div class="mb_slider_content_wrapper">
+                <div class="wrapper">
+                    <div class="content">
+                      <div class="container">
+                          <div class="row">
+                            <div class="col-lg-7 col-md-12 col-sm-12 col-12 o_colored_level">
+                                <div class="mb_product_slider swiper-container-fade swiper-container-horizontal">
+                                  <div class="mb_product_slider_wrp swiper-wrapper" style="transition-duration: 0ms;">
+                                      <div class="mb_product_slider_item swiper-slide swiper-slide-prev" data-target="img4" data-swiper-slide-index="0" style="width: 730px; transition-duration: 0ms; opacity: 1; transform: translate3d(-730px, 0px, 0px);">
+                                        <div class="mb_product_slider_card">
+                                            <div class="mb_product_slider_content">
+                                              <span class="mb_product_slider_title o_default_snippet_text">D-Man</span>
+                                              <h1 class="mb_product_slider_price o_default_snippet_text"> Deliveries made simple <br/> Be the
+                                                  Fastest in the delivering the orders 
+                                              </h1>
+                                              <p class="mb_product_text o_default_snippet_text">Dman app solves your delivery
+                                                  assignment problems. Just assign a delivery boy in out delivery order,
+                                                  that's it. 
+                                              </p>
+                                              <a href="/dman" class="btn mb_primary_button mb_product_slider_bottom">
+                                              <span class="o_default_snippet_text">Read More</span>
+                                              </a>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="mb_product_slider_item swiper-slide swiper-slide-active" data-target="img1" data-swiper-slide-index="1" style="width: 730px; transition-duration: 0ms; opacity: 1; transform: translate3d(-1460px, 0px, 0px);">
+                                        <div class="mb_product_slider_card">
+                                            <div class="mb_product_slider_content">
+                                              <span class="mb_product_slider_title o_default_snippet_text">EventHeal</span>
+                                              <h1 class="mb_product_slider_price o_default_snippet_text"> User-friendly and powerful <br/>
+                                                  online ticket scanner 
+                                              </h1>
+                                              <p class="mb_product_text o_default_snippet_text">Eventheal's tools will allow you to
+                                                  verify whether tickets are valid or not. You can simply assign someone
+                                                  to scan tickets at events and enjoy the show.
+                                              </p>
+                                              <a href="/eventheal" class="btn mb_primary_button mb_product_slider_bottom">
+                                              <span class="o_default_snippet_text">Read More</span>
+                                              </a>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="mb_product_slider_item swiper-slide swiper-slide-next" data-target="img2" data-swiper-slide-index="2" style="width: 730px; transition-duration: 0ms; opacity: 0; transform: translate3d(-2190px, 0px, 0px);">
+                                        <div class="mb_product_slider_card">
+                                            <div class="mb_product_slider_content">
+                                              <span class="mb_product_slider_title o_default_snippet_text">Order Booker</span>
+                                              <h1 class="mb_product_slider_price o_default_snippet_text"> Make your salesperson more <br/>
+                                                  digital-mobility 
+                                              </h1>
+                                              <p class="mb_product_text o_default_snippet_text">Order-booker apps allows your
+                                                  sales-person to create customer and make sale orders for the
+                                                  customers.
+                                              </p>
+                                              <a href="/order" class="btn mb_primary_button mb_product_slider_bottom">
+                                              <span class="o_default_snippet_text">Read More</span>
+                                              </a>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-12 col-sm-12 col-12 o_colored_level">
+                                <div class="mb_banner_img">
+                                  <div class="mb_banner_img_item" id="img1">
+                                      <img src="/theme_mobiheal_website/static/src/img/home/banner/mb_event1.gif" alt="Event Management System" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" class="mb_banner_img_img" loading="lazy" data-lazy-loading-initial-min-height="" style="min-height: 1px;"/>
+                                  </div>
+                                  <div class="mb_banner_img_item" id="img2">
+                                      <img src="/theme_mobiheal_website/static/src/img/home/banner/mb_booker2.gif" alt="Order Booking System" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" class="mb_banner_img_img" loading="lazy" data-lazy-loading-initial-min-height="" style="min-height: 1px;"/>
+                                  </div>
+                                  <div class="mb_banner_img_item" id="img4">
+                                      <img src="/theme_mobiheal_website/static/src/img/home/banner/mb_d-man3.webp" alt="Delivery Management System" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" class="mb_banner_img_img" loading="lazy" data-lazy-loading-initial-min-height="" style="min-height: 1px;"/>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </section>
+          <!--MB-Banner-Section-End-->
+
+          <!--MB-Apps-Section-Start-->
+            <section class="mb_app_technologies_section o_colored_level" data-snippet="mb_technologies_templ" data-name="Our Apps" style="background-image: none;">
+              <div class="mb_main">
+                <div class="container">
+                  <div class="mb_app_section">
+                    <div>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_1.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_2.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_3.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_4.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_5.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_6.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                    </div>
+                    <div>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_1.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_2.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_3.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_4.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_5.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_6.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                    </div>
+                    <div>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_1.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_2.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_3.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_4.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_5.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                      <img src="/theme_mobiheal_website/static/src/img/home/our_app/mb_app_6.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          <!--MB-Apps-Section-End-->
+
+          <!--MB-Service-Section-Start-->
+            <section class="mb_service_section o_colored_level" data-snippet="mb_service_section_tmpl" data-name="Services" style="background-image: none;">
+              <div class="mb_bg_shape-2">
+                <img src="/theme_mobiheal_website/static/src/img/home/service/bg_shapes/mb_shapes_1.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+              </div>
+              <div class="mb_bg_shape-3">
+                <img src="/theme_mobiheal_website/static/src/img/home/service/bg_shapes/mb_shapes_2.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+              </div>
+              <div class="mb_bg_shape-4">
+                <img src="/theme_mobiheal_website/static/src/img/home/service/bg_shapes/mb_shapes_3.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+              </div>
+              <div class="mb_bg_shape-5">
+                <img src="/theme_mobiheal_website/static/src/img/home/service/bg_shapes/mb_shapes_4.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+              </div>
+              <section class="mb_service_slider_section o_colored_level" style="background-image: none;">
+                <div class="container">
+                  <span class="text-center o_default_snippet_text">SERVICE</span>
+                  <h2 class="text-center o_default_snippet_text">We’ve Built a Solution For …</h2>
+                  <p class="text-center o_default_snippet_text">
+                    In the process of making a app, the satisfaction of users is the most important and the focus is on usability and completeness.
+                  </p>
+                  <div id="mb_service_slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+                    <div class="mb_main_row">
+                      <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12 text-center o_colored_level">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active o_colored_level" style="background-image: none;">
+                              <div class="carousel-item-content">
+                                <div class="mb_main_thumb">
+                                  <img src="/theme_mobiheal_website/static/src/img/home/service/mobile_erp.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" alt="Mobile Erp System" loading="lazy" style=""/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item o_colored_level" style="background-image: none;">
+                              <div class="carousel-item-content">
+                                <div class="mb_main_thumb">
+                                  <img src="/theme_mobiheal_website/static/src/img/home/service/web_development.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" alt="Web Development" loading="lazy" style=""/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item o_colored_level" style="background-image: none;">
+                              <div class="carousel-item-content">
+                                <div class="mb_main_thumb">
+                                  <img src="/theme_mobiheal_website/static/src/img/home/service/erp_solutions.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" alt="ERP Solutions" loading="lazy" style=""/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item o_colored_level" style="background-image: none;">
+                              <div class="carousel-item-content">
+                                <div class="mb_main_thumb">
+                                  <img src="/theme_mobiheal_website/static/src/img/home/service/ux_design.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" alt="UI/UX Design" loading="lazy" style=""/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 o_colored_level">
+                          <ol class="carousel-indicators position-static m-0 d-block">
+                            <li data-bs-target="#mb_service_slider" data-bs-slide-to="0" class="active one">
+                              <div class="data-bs-slide-content">
+                                <div class="mb_service_item">
+                                  <div class="mb_service_thumb_1">
+                                    <div class="mb_icon_box mb_box_1 mobile">
+                                      <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewbox="0 0 29 47.41">
+                                        <title class="o_default_snippet_text">mobile development new</title>
+                                        <path d="M.53,25c0-6.21.07-12.42,0-18.62A4.83,4.83,0,0,1,5.62,1.3c6.26.06,12.52,0,18.78,0,3.24,0,5.09,1.85,5.09,5.06q0,18.66,0,37.31c0,3.17-1.8,5-5,5-6.34,0-12.68,0-19,0a4.78,4.78,0,0,1-5-5C.59,37.46.53,31.23.53,25Zm2-15.92V41h.94c7.72,0,15.45,0,23.17,0,.76,0,1-.16,1-1q0-15,0-30V9.08ZM2.41,7.13H27.53a11.44,11.44,0,0,0,0-1.66A2.47,2.47,0,0,0,25,3.32H5A2.41,2.41,0,0,0,2.56,5.27,15.57,15.57,0,0,0,2.41,7.13ZM27.5,43h-25c-.35,2.44.84,3.88,3.44,3.84,6.15-.11,12.3,0,18.45,0C26.82,46.75,27.89,45.46,27.5,43Zm-4-10.72c.67,0,1.11-.23,1.19-.91s-.42-1-1.21-1c-5.64,0-11.28,0-16.92,0-.65,0-1.13.17-1.17.91s.36.95,1.19.95H15C17.82,32.23,20.66,32.21,23.49,32.23Zm-16.89,2c-.85,0-1.22.29-1.22.93s.37.93,1.22.93H23.44c.8,0,1.25-.34,1.25-.93s-.44-.93-1.25-.93H6.6ZM17.72,24.5c.78,0,1.12-.3,1.11-.94s-.34-.92-1.14-.92q-5.58,0-11.18,0c-.77,0-1.14.32-1.13.94s.37.91,1.15.92H17.72Zm0,3.86c.78,0,1.12-.3,1.11-.94s-.34-.92-1.14-.92H6.51c-.77,0-1.14.33-1.13.94s.37.92,1.15.92h5.63C14,28.36,15.87,28.37,17.72,28.36ZM12.16,11.7c-.38.62-.67,1.28-1,1.92-.61,1.22-1.23,2.43-1.82,3.66a.94.94,0,0,0,.39,1.33A.84.84,0,0,0,11,18.26c1-2,2-3.94,3-5.94.31-.65-.17-1.27-1.12-1.28A3.13,3.13,0,0,0,12.16,11.7Zm-4.24,2a.9.9,0,0,0,0-1.37.89.89,0,0,0-1.37,0c-.65.61-1.29,1.25-1.91,1.9a1,1,0,0,0,0,1.44c.59.6,1.19,1.2,1.8,1.79a.92.92,0,0,0,1.43,0,.9.9,0,0,0,0-1.37c-.38-.38-.8-.72-1.33-1.18C7.13,14.4,7.54,14.05,7.92,13.66Zm7.43,2.42a.89.89,0,0,0,0,1.42.93.93,0,0,0,1.38-.08c.59-.57,1.18-1.15,1.75-1.74a1,1,0,0,0,0-1.62c-.55-.58-1.11-1.14-1.69-1.69s-1.09-.52-1.49-.08a.91.91,0,0,0,.11,1.42c.37.36.76.69,1.3,1.17C16.15,15.36,15.73,15.7,15.35,16.08Z" transform="translate(-0.5 -1.3)"/>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="mb_service_content">
+                                    <h4 class="mb_service_title o_default_snippet_text">Mobile ERP Solution </h4>
+                                    <p class="o_default_snippet_text">We develop mobile solutions that help you to manage your business
+                                                        from anywhere in the world.
+                                                      </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li data-bs-target="#mb_service_slider" data-bs-slide-to="1" class="two">
+                              <div class="data-bs-slide-content">
+                                <div class="mb_service_item">
+                                  <div class="mb_service_thumb_1">
+                                    <div class="mb_icon_box mb_box_1 svg_1">
+                                      <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewbox="0 0 463.86 333.8">
+                                        <title class="o_default_snippet_text">web development</title>
+                                        <path d="M250.41,115.61q73.91,0,147.82,0c11.1,0,12.34,1.27,12.34,12.59q0,96,0,192c0,10.28-1.51,11.93-11.49,11.93q-149.26,0-298.53,0c-10.1,0-11.61-1.61-11.61-11.81q0-96.37,0-192.74c0-10.55,1.46-12,12.21-12Q175.78,115.6,250.41,115.61Zm146.1,202.6V129.93H256.68v8.31q0,32.23,0,64.48c0,2.17.62,4.86-.42,6.38-1.68,2.47-4.35,5.47-6.88,5.76-1.85.22-4.64-3.29-6.08-5.69-1-1.63-.44-4.23-.44-6.4q0-32.6,0-65.2v-7.51H103V318H242.84c0-24.6,0-48.7,0-72.81,0-2.63-.26-5.6.84-7.79,1-2,3.76-4.45,5.62-4.35,2.27.11,5.07,2.24,6.44,4.29,1.18,1.76.87,4.64.88,7q.08,33,0,65.93v7.91ZM56.9,350.75c0-9.28.11-17.67,0-26.05-.08-4.65,1.06-8.65,6.25-8.78,5.49-.14,7.11,3.72,7,8.82-.2,8.39-.06,16.78-.06,26H79.3c38.4,0,76.8.08,115.21-.07,6.94,0,11.44,1.37,12.42,9.5.77,6.4,5.59,10.14,12.2,10.2q30.44.24,60.86,0c6.94,0,11.85-3.83,12.69-10.56,1-7.78,5.31-9.17,11.94-9.15,39.36.12,78.73.06,118.1,0,1.91,0,3.82-.18,6.73-.34V173.67c0-1.93.08-3.86,0-5.79-.19-4.54,1.57-7.78,6.37-7.89,5.29-.12,6.95,3.42,6.78,8.2-.07,1.93,0,3.86,0,5.79V350.74c9.88,0,19-.05,28.1,0s10.89,1.95,10.92,11.14c0,6.27.07,12.56,0,18.83-.25,20.64-15.51,36.1-36.24,36.16-58,.14-115.94.06-173.9.06h-213c-26.55,0-40.58-14.06-40.59-40.56,0-5.32.2-10.64-.05-15.94-.31-6.83,3-9.75,9.53-9.71C36.93,350.79,46.52,350.75,56.9,350.75ZM31.13,364.69V375.3c0,19.74,8.52,28.36,28,28.37H170q136.18,0,272.35,0c14.5,0,23.79-7.08,25.6-20.23.8-5.86.13-11.92.13-18.11a19.19,19.19,0,0,0-3.11-.57c-51.67,0-103.34-.1-155,.14-2,0-4.75,2.48-5.95,4.51-5.14,8.77-12.28,14.31-22.63,14.41q-31.86.3-63.73,0c-9.76-.11-17.18-5.18-21.39-13.71-2.24-4.53-4.82-5.47-9.37-5.46q-73.87.21-147.76.09ZM100,83.18c-24.52-.45-43.89,17.46-43.43,43.13,1,53.6.29,107.22.3,160.84,0,1.93-.24,4.13.3,5.69,1.2,3.47,3.89,5.06,5.76,5,2.4-.14,6.05-.61,6.75-4.76a42.45,42.45,0,0,0,.32-6.38q0-79.7,0-159.4c0-20.55,10-30.52,30.75-30.52H326.85c25.11,0,50.23-.08,75.35,0,13.86.07,24.27,8.41,26.81,21.71.85,4.44.55,9.14.39,13.71-.19,5.05.53,10.05,6.43,10.17,6.55.13,7-5.28,6.78-10.46a44.75,44.75,0,0,1,0-5.79C444.67,101,424.33,82.79,400,83.2c-50,.83-100,.25-150,.25S150,84.09,100,83.18Zm227,120.6c15.69,0,31.37,0,47.06,0,7.83,0,10.09,2.1,10.19,9.61.12,9.66,0,19.31,0,29,0,6.17-2.67,9.3-9.18,9.28q-48.51-.17-97,0c-5.78,0-8.5-2.57-8.51-8.22,0-10.38,0-20.75,0-31.13,0-6,2.86-8.64,8.95-8.57C294.65,203.89,310.82,203.78,327,203.78Zm42.87,33.88v-19.9H283.42v19.9Zm-75.57-48c-5.54,0-11.08-.07-16.62,0-5.31.07-8.11-2.32-8.11-7.77,0-10.59,0-21.19,0-31.78,0-5.43,2.73-8,8-8q16.62,0,33.24,0c5.59,0,8.36,2.92,8.33,8.57,0,10.11-.06,20.23,0,30.34,0,6.08-2.94,8.76-8.92,8.62C304.89,189.56,299.59,189.66,294.29,189.66ZM304.6,176V156.35H283.53V176Zm54.72,13.59H342c-4.73,0-7.21-2.53-7.25-7.12-.11-11.07-.07-22.15,0-33.23,0-4.72,2.81-7,7.35-7,11.56-.08,23.12-.13,34.67,0,5,.06,7.43,3,7.45,7.91.06,10.59.08,21.19,0,31.79,0,5.35-3,7.79-8.28,7.73-5.54,0-11.08,0-16.62,0Zm-10.79-13.89H370V156.42H348.53ZM278,265.8c-4.67,0-8.35,1.12-8.24,6.66.11,5.36,3.72,6.71,8.38,6.71q48.54,0,97.07,0c4.75,0,8.49-1.66,8.72-6.58.26-5.7-3.92-6.86-8.86-6.83-16.18.11-32.36,0-48.54,0S294.2,265.86,278,265.8Zm96.3,41c5.23.05,9.56-1.22,9.62-7.07s-4.53-6.64-9.23-6.64q-48.08,0-96.15,0c-4.73,0-9,1-8.77,7,.2,5.8,4.25,6.7,9.1,6.67,16.14-.1,32.29,0,48.44,0C343,306.75,358.67,306.65,374.33,306.8ZM187.75,183.92c-5-1.65-7.33,2.23-8.93,6.25-8.24,20.74-16.4,41.52-24.71,62.23-1.91,4.74-2.72,9.2,3,11.38,6,2.25,8-2.32,9.76-6.77q12.24-30.76,24.49-61.52c.62-1.56,1.14-3.15,2.2-6.09C193.58,186.76,190.19,184.73,187.75,183.92ZM141.45,241c-2.44-4.41-5.45-8.58-7.36-13.2a11.69,11.69,0,0,1,0-8.34c2.33-5.23,6-9.87,8.35-15.1.85-1.9.27-5.36-1-7.05-1.13-1.47-4.3-2.17-6.4-1.9-4.38.56-19.69,25.87-17.71,29.73a285.18,285.18,0,0,0,14.81,25.5c1,1.51,4.92,2.27,6.91,1.62s4.15-1.51,5.05-5.26C143,244.49,142.37,242.66,141.45,241Zm73.37,8.1c4.44-7.14,8.75-14.4,12.58-21.88a9.27,9.27,0,0,0,0-7.41c-3.82-7.21-8.21-14.14-12.53-21.08-2.42-3.9-6.53-5.33-9.71-2.27-1.86,1.8-2.47,6.58-1.52,9.27,1.66,4.66,4.73,8.9,7.65,13,2.46,3.45,2.32,6.3,0,9.76a135.66,135.66,0,0,0-8.25,14.38c-2.5,5,.91,10.45,7.27,10.09C212.62,252.49,213.66,251,214.82,249.1Z" transform="translate(-17.79 -83.17)"/>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="mb_service_content">
+                                    <h4 class="mb_service_title o_default_snippet_text">Web Development </h4>
+                                    <p class="o_default_snippet_text">Take your business to the next level in this digital era. </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li data-bs-target="#mb_service_slider" data-bs-slide-to="2" class="three">
+                              <div class="data-bs-slide-content">
+                                <div class="mb_service_item">
+                                  <div class="mb_service_thumb_1">
+                                    <div class="mb_icon_box mb_box_1 svg_2">
+                                      <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewbox="0 0 411.78 412.38">
+                                        <title class="o_default_snippet_text">it consultancy</title>
+                                        <path d="M68.46,416.05c0-2.82,0-5.35,0-7.88q-.13-61.21-.25-122.43c0-13.33,5.38-21.58,16.22-24.87a24.51,24.51,0,0,1,6.95-.9c12.88-.1,25.76-.17,38.65,0,13.57.13,22.45,8.89,22.94,22.53.19,5.34,0,10.68,0,16.15h58.25c0-1.8,0-4.08,0-6.37,0-18.68-.1-37.37,0-56.06.07-15.71,8.43-24.33,24.17-24.7,12.23-.29,24.48-.35,36.71,0,14.88.38,23.34,9.22,23.6,24,.08,4.45,0,8.91,0,13.31h58.2v-6.51q0-39.61,0-79.25c0-15.39,8.42-24,23.7-24.24,12.45-.17,24.91-.23,37.36,0,14.45.2,22.61,7.67,23.12,22,.55,15.66.31,31.35.26,47,0,4.3-1,8.64-6.53,8.51-5.32-.12-6.49-4.38-6.54-8.69-.17-14.39-.09-28.78-.17-43.17-.06-10.76-2-12.63-12.94-12.64-11.38,0-22.76,0-34.14.06-7.85.07-11.12,3.17-11.12,10.83q0,124.68.08,249.37c0,1,.18,2.09.33,3.71h58.4c0-3,0-5.68,0-8.41q-.21-84.09-.4-168.17c0-2.77-.29-5.94.92-8.18a8.74,8.74,0,0,1,6.2-4.07c1.76-.06,4.39,2.41,5.23,4.36,1,2.42.81,5.46.82,8.23q.21,84.09.34,168.18v7.89c3,.56,5.47.87,7.89,1.54A17.42,17.42,0,0,1,459.53,435c-.55,8.57-6.84,15.87-15.45,16.15-18.45.59-36.92.46-55.38.59-8.37.06-16.75.12-25.12,0-4.45-.06-8.37-1.39-8.19-6.86.16-5.14,4.05-6.15,8.17-6.17,24.27-.13,48.53-.09,72.79-.32,3.68,0,9.54,1.93,9.75-4.14.24-6.66-5.87-4.87-9.77-4.87q-182.62.12-365.23.47c-3.72,0-9.53-1.75-9.74,4.26-.22,6.54,5.78,5,9.75,5q130.11-.09,260.24-.34a56.7,56.7,0,0,1,7.62.44c4.74.67,5.68,3.89,5.5,5.62-.25,2.4-.42,6.63-5.39,6.56-1.31,1-3.73.48-5.66.48Q201,452,68.67,452.09c-14.56,0-23.41-9.76-20.24-22.16C50.2,423,54.85,419,61.61,417.25,63.64,416.73,65.74,416.52,68.46,416.05Zm214,.37c.19-2.48.41-3.95.41-5.41q0-87.3-.17-174.61c0-8.6-3.05-11.73-11.6-11.87-10.73-.18-21.47,0-32.2,0-12.34.06-14.69,2.41-14.67,14.7q.09,75.7.23,151.42c0,7.08-.19,14.18.23,21.25.1,1.57,2.39,4.3,3.71,4.32C246.17,416.52,264,416.42,282.44,416.42Zm13.84-.59h57.1a8.19,8.19,0,0,0,.52-1.73q0-71.76,0-143.5c0-6.27-3.31-9.12-9.92-9.18q-19-.18-38,0c-7.05.07-10.16,3.18-10.17,10.31q0,70.47.09,140.94C295.9,413.52,296.1,414.36,296.28,415.83Zm-156.17.74c0-8.84,0-16.54,0-24.24q0-53.16-.11-106.31c0-10.22-2.91-13.12-12.88-13.14q-15.8,0-31.57,0c-11.56,0-14.23,2.69-14.2,14.51q.09,45.09.27,90.2c0,11.17-.1,22.34.25,33.5,0,1.86,2.16,5.22,3.38,5.25C103.22,416.68,121.21,416.57,140.11,416.57Zm70.58-.42a15,15,0,0,0,.6-2.57c0-30.9.06-61.81-.1-92.72,0-6.64-3.27-9.49-10.26-9.58-11.8-.14-23.6-.06-35.4,0-10,.05-12.47,2.57-12.47,12.66q0,42.82,0,85.64c0,2.08.21,4.16.34,6.57ZM254.2,113c10.73.33,19.09,8.07,19.73,19,.22,3.87,1.73,5.66,4.93,7.23q13.29,6.48,26.33,13.5c3.15,1.7,5.59,4.08,7.78.89,2-2.87,7.86-4.24,11.24-4,4.84.29,7.25-1.52,9.7-5.35Q355,111.14,376.68,78.37c2.06-3.14,2.66-5.49.76-9.22-4.42-8.66-2-18.29,5.2-24.46a20.76,20.76,0,0,1,25.09-1.45c7.58,5.07,10.79,14.73,7.95,23.89A20.23,20.23,0,0,1,395.43,81c-3.72-.13-5.79,1-7.76,4.1-14.62,22.74-29.48,45.32-44,68.12-1.15,1.79-1.09,5.1-.32,7.25,3,8.26,3,16-2.82,23A20.25,20.25,0,0,1,319,190c-8.82-2.93-14.12-9.11-14.81-18.32-.31-4.12-1.91-6-5.32-7.63-8.87-4.31-17.48-9.18-26.44-13.29-2.17-1-5.42-3.93-7-1.76-3.14,4.41-10.19,5.56-14.41,4.93-4.76-.7-6.93.82-9.53,4Q222.45,181.4,203,204.6c-2.28,2.74-2.82,4.93-1.53,8.56a20.62,20.62,0,0,1-14.67,27,20.19,20.19,0,0,1-25-17.68c-.57-5.33-2.8-7.81-7.14-10-8.64-4.29-17-9.19-25.67-13.37a9.26,9.26,0,0,0-7.28.21c-9,4.65-18.81,3.75-25.6-2.91a20.35,20.35,0,0,1-3.67-24.81c4.36-7.89,13.92-12.32,22.39-10.37,9.41,2.16,15.42,9.7,16.51,19.74a9.38,9.38,0,0,0,3.9,6.26c9.45,5.5,19.12,10.64,28.88,15.56,1.67.84,4.72,3.24,6.3,1.87a19.47,19.47,0,0,1,13.47-5c4.58.1,7.4-1,10.25-4.57,12.36-15.39,25-30.59,37.62-45.75,2.49-3,3.47-5.38,2-9.61C229,125.85,239.45,112.51,254.2,113ZM118.27,181.46c-.63-4.5-3.34-8.1-7.83-7.11-2.91.64-6.65,4.26-7.24,7.12-.9,4.31,2.4,7.55,7.27,7.68S117.64,186.22,118.27,181.46ZM388.44,61.05c.81,4,3.08,7.16,7.91,7s7.28-3.44,7.11-8c-.16-4.41-2.89-7.19-7.39-7.09C391.37,53,388.78,55.8,388.44,61.05ZM183.79,214.37l-3.08-.07c-3.64.84-5.21,2.22-5.83,5.24-1,4.66,2.26,7.86,7,8s8.07-3.19,7.46-7.69C189,216.83,187.79,215.31,183.79,214.37Zm62-81.37c.21,5.14,3.12,8.06,7.56,8.1s7.63-3.06,7.6-7.76c0-4.34-2.58-7.14-7.21-7.27C248.86,125.93,246.32,128.51,245.78,133Zm86.38,38.2c.17-5.56-2.36-8.49-7.08-8.66s-8.39,2.83-7.67,7.3c.46,2.89,2,7.78,6.81,7.5C328.86,177.07,331.53,175.23,332.16,171.2Z" transform="translate(-47.79 -39.7)"/>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="mb_service_content">
+                                    <h4 class="mb_service_title o_default_snippet_text">ERP Solutions</h4>
+                                    <p class="o_default_snippet_text">We are the leading ERP customization solution providers. </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li data-bs-target="#mb_service_slider" data-bs-slide-to="3" class="four">
+                              <div class="data-bs-slide-content">
+                                <div class="mb_service_item">
+                                  <div class="mb_service_thumb_1">
+                                    <div class="mb_icon_box mb_box_1 svg_3">
+                                      <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewbox="0 0 377.14 376.96">
+                                        <title class="o_default_snippet_text">ui-ux design</title>
+                                        <path d="M119.42,90.61H220c0-4.17-.11-8.22,0-12.25.22-6.7,2.7-9.32,9.38-9.38q20-.2,40.06,0c6.59.07,9.05,2.75,9.26,9.5.12,3.88,0,7.76,0,12H379.28c0-4.1-.12-8,0-11.82.26-7.21,2.6-9.66,9.64-9.72q19.72-.16,39.47,0c7,.06,9.41,2.63,9.45,9.79q.09,19.44,0,38.88c0,7.18-2.4,9.72-9.41,9.78q-19.74.16-39.48,0c-7-.05-9.41-2.48-9.67-9.65-.14-3.87,0-7.75,0-12H319.82c58.87,31.05,90.58,78.58,96.36,144.45,3.9,0,8.11-.07,12.32,0,6.89.14,9.31,2.45,9.35,9.18q.12,20,0,40.07c-.05,6.32-2.6,9-9,9.14q-20.32.26-40.65,0c-6.06-.07-8.75-2.58-8.86-8.66q-.37-20.61,0-41.24c.12-6.16,2.73-8.3,8.91-8.47,4.08-.12,8.16,0,12.25,0-1.25-66-54.06-130-121.83-141.31,0,3.21.11,6.32,0,9.41-.29,6.5-2.89,9-9.67,9.06q-19.44.15-38.88,0c-7.64,0-10-2.58-10.17-10.36,0-2.54,0-5.07,0-7.64-50.89,6.07-117.75,58.05-122.23,140.83,4.08,0,8.14-.07,12.18,0,6.66.13,9.27,2.19,9.39,8.6q.38,20.61,0,41.24c-.11,6-2.86,8.48-9,8.55-13.55.16-27.1.18-40.65,0-6.28-.09-8.79-2.87-8.83-9.25q-.12-20,0-40.07c0-6.46,2.47-8.84,8.88-9.06,3.92-.14,7.85-.15,11.77-.25.34,0,.67-.32,1.37-.66,1.83-30.32,10.78-58.53,27.75-84.09s39.41-44.86,66.55-59.37H119.41c0,3.93.13,8,0,12-.27,7.1-2.67,9.49-9.78,9.54q-19.74.14-39.48,0c-6.74-.06-9.24-2.61-9.28-9.31q-.12-20,0-40.07c0-6.37,2.55-9,9-9.06q20.32-.22,40.65,0c6.1.07,8.41,2.5,8.9,8.63.17,2.15,0,4.32.06,6.48C119.43,86.05,119.42,88,119.42,90.61ZM104,112.46V83.7c-8.54,0-16.57-.15-24.6.14-1.31,0-3.63,1.94-3.67,3-.31,8.39-.17,16.79-.17,25.57ZM263.43,84.05H235.32V112.5h28.11Zm131.14-.35v29.14c8.61,0,16.82.14,25-.16,1.22,0,3.33-2.13,3.38-3.34.33-7.26.36-14.54,0-21.79-.07-1.34-2.31-3.62-3.62-3.68C411.32,83.52,403.28,83.7,394.57,83.7Zm-290.29,181c-8.79,0-17-.17-25.16.18-1.24,0-3.34,2.43-3.41,3.81-.35,7-.32,14.08,0,21.1.06,1.37,1.8,3.79,2.84,3.83,8.5.31,17,.17,25.76.17ZM394.5,265v28.8c8.67,0,17,.09,25.36-.11,1.09,0,3.05-1.55,3.07-2.42.23-8.7.14-17.41.14-26.27Zm-104,69.75c4.18.59,8.07.83,11.81,1.71,9,2.11,14.21,8.31,16.14,16.91,1.87,8.32-1,15.69-7.57,21a9.32,9.32,0,0,0-3.92,8.34c.17,16.89.08,33.78.07,50.67a40.42,40.42,0,0,1,0,4.12c-.47,4.53-2.32,8.14-7.44,8.23s-7.17-3.43-7.67-8a64.06,64.06,0,0,1-.08-7.07V380.31H206.88v33.08c0,7.07,0,14.14,0,21.21,0,7.43-2.52,11.16-7.49,11.23s-7.71-3.65-7.73-11c0-17.67.09-35.34-.13-53a9.53,9.53,0,0,0-2.78-6.31c-7.62-6.73-10.62-15.05-8.06-23.53,3-10,9.92-15.16,20-16.39,2.31-.27,4.64-.34,7.54-.54a78.52,78.52,0,0,0-11.73-30,187.11,187.11,0,0,0-17.41-22.12c-4-4.47-5.14-8.34-1.91-13.61s6-11,9.13-16.45c2.67-4.59,7.23-6.21,10.81-3.8,4.13,2.77,4.5,6.5,2.12,10.74-2.59,4.61-5.05,9.28-7.11,13.08,6.94,10.25,14.39,19.5,19.83,29.81,5.33,10.1,8.61,21.28,13,32.51h50A121.56,121.56,0,0,1,307.21,274l-50.28-91.3c-.24,3.06-.46,4.64-.47,6.23,0,13.74.17,27.49-.12,41.23-.09,4.23,1,6.56,4.93,8.62a24.36,24.36,0,0,1,12.27,28,25.39,25.39,0,0,1-23.63,18.87c-11.15.33-21.25-7.22-24.57-18.36s1.68-23,12.62-28.81c3.2-1.69,4.43-3.45,4.38-7.13-.23-15.65-.1-31.3-1.23-47.36q-6.17,11.16-12.33,22.3a73.4,73.4,0,0,1-3.84,6.61c-2.47,3.51-5.91,4.77-9.72,2.49s-4.88-5.71-2.75-9.62c10.13-18.6,20.2-37.24,30.68-55.64,3.25-5.73,9.59-5.1,13.1,1,6.43,11.23,12.6,22.61,18.84,33.95q22.43,40.71,44.83,81.44c5.43,9.87,5.34,10.34-2.38,18.2a102.57,102.57,0,0,0-26.42,46.5C290.83,332.28,290.74,333.42,290.51,334.79Zm-41.22,15.66H204c-4.17,0-8,.64-8.93,5.65-1,5.47,2.07,8.69,8.74,8.72,16.66.09,33.32,0,50,0,13.72,0,27.44.06,41.16,0,6.26,0,9.06-2.61,8.74-7.66-.34-5.39-4-6.7-8.56-6.7Zm.25-100c-5.68-.09-10.73,4.74-10.66,10.2.07,5.28,4.82,9.91,10.27,10,5.71.09,10.74-4.7,10.66-10.19C259.74,255.15,255,250.5,249.54,250.41ZM205.77,225.3c-4.19-.29-7.35,3.14-7.14,7.52.22,4.53,2.89,6.88,7.21,6.78s6.66-2.79,7.08-7.21C212.4,228.19,210.08,225.61,205.77,225.3Z" transform="translate(-60.78 -68.88)"/>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="mb_service_content">
+                                    <h4 class="mb_service_title o_default_snippet_text">UI/UX Design</h4>
+                                    <p class="o_default_snippet_text">We craft your idea and vision on the digital platform.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <div class="indicator"/>
+                          </ol>
+                          <div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+          <!--MB-Service-Section-End-->
+
+          <!--MB-Counter-Section-Start-->
+            <section class="mb_counter_snippet js_cls_sh_odometer_snippet_s_odometer oe_img_bg o_bg_img_center o_colored_level" data-snippet="sh_odometer_snippet_tmpl_1" data-name="Counter_snippet" style="background-image: url(&quot;/theme_mobiheal_website/static/src/img/home/counter/bg1.webp&quot;);">
+              <div class="container">
+                <div class="mb_main_row">
+                  <div class="row">
+                    <div class="mb_flex_box mb_animation_part o_colored_level">
+                      <div class="mb_counter_box">
+                        <span class="mb_first js_cls_counter_number o_default_snippet_text">15</span>
+                        <span class="mb_second">
+                          <sup class="o_default_snippet_text">+</sup>
+                        </span>
+                        <h6 class="mb_third o_default_snippet_text">Mobile Business Solutions
+                            </h6>
+                      </div>
+                    </div>
+                    <div class="mb_flex_box mb_animation_part o_colored_level">
+                      <div class="mb_counter_box">
+                        <span class="mb_first js_cls_counter_number o_default_snippet_text">50</span>
+                        <span class="mb_second">
+                          <sup class="o_default_snippet_text">+</sup>
+                        </span>
+                        <h6 class="mb_third o_default_snippet_text">Happy Customers</h6>
+                      </div>
+                    </div>
+                    <div class="mb_flex_box mb_animation_part o_colored_level">
+                      <div class="mb_counter_box">
+                        <span class="mb_first js_cls_counter_number o_default_snippet_text">20</span>
+                        <span class="mb_second">
+                          <sup class="o_default_snippet_text">+</sup>
+                        </span>
+                        <h6 class="mb_third o_default_snippet_text">Android Apps
+                            </h6>
+                      </div>
+                    </div>
+                    <div class="mb_flex_box mb_animation_part o_colored_level">
+                      <div class="mb_counter_box">
+                        <span class="mb_first js_cls_counter_number o_default_snippet_text">20</span>
+                        <span class="mb_second">
+                          <sup class="o_default_snippet_text">+</sup>
+                        </span>
+                        <h6 class="mb_third o_default_snippet_text">IOS Apps
+                            </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          <!--MB-Counter-Section-End-->
+
+          <!--MB-app-launch-Section-Start-->
+          <section class="mb_app_launch_section js_cls_mb_app_launch_section o_colored_level" data-snippet="mb_app_launch_tmpl" data-name="Offer" style="background-image: none;" data-start-time="1672900032" data-end-time="1675146439">
+            <div class="container">
+              <div class="mb_main_row">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-12 align-self-center o_colored_level">
+                    <div class="mb_content">
+                      <span class="m-0 o_default_snippet_text">Stock</span>
+                      <h2 class="o_default_snippet_text">Inventory Management</h2>
+                      <p class="o_default_snippet_text">
+                        Inventory management is the core part of any business, that includes delivery
+                        order, stock moves, locations and much more. In this app you can manage your all
+                        orders like delivery picking orders. Here you have amazing dashboard where you can
+                        track your all inventory moves.
+                      </p>
+                      <span class="m-0 o_default_snippet_text">Launching Soon</span>
+                      <div class="mb_app_launch_box js_cls_countdown_wrapper">
+                        <div class="mb_days">
+                          <div class="mb_number js_cls_days_count o_default_snippet_text">25</div>
+                          <div class="text-center mb_text o_default_snippet_text">Days</div>
+                        </div>
+                        <div class="mb_days">
+                          <div class="mb_number js_cls_hours_count o_default_snippet_text">01</div>
+                          <div class="text-center mb_text o_default_snippet_text">Hours</div>
+                        </div>
+                        <div class="mb_days">
+                          <div class="mb_number js_cls_minutes_count o_default_snippet_text">35</div>
+                          <div class="text-center mb_text o_default_snippet_text">Mins</div>
+                        </div>
+                        <div class="mb_days days_1">
+                          <div class="mb_number js_cls_seconds_count o_default_snippet_text">16</div>
+                          <div class="text-center mb_text o_default_snippet_text">Secs</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12 o_colored_level">
+                    <div class="mb_img">
+                      <img src="/theme_mobiheal_website/static/src/img/home/app_launch/inventory.webp" alt="Inventory Management System" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--MB-app-launch-Section-End-->
+
+          
+
+          <!--MB-testimonial-Section-Start-->
+          <section class="mb_testimonials o_colored_level" data-snippet="mb_testimonials_templ" data-name="Testimonials" style="background-image: none;">
+            <div class="container">
+              <div class="mb_testimonials_main">
+                <div id="mb_carousel_id" class="carousel slide mb_testimonials_carousel">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 o_colored_level">
+                      <div class="mb_testimonials_bg" style="background-image: url(/theme_mobiheal_website/static/src/img/home/testimonial/mb_testimonials_bg.webp)"/>
+                      <ol class="carousel-indicators mb_testimonials_indicators">
+                        <li data-bs-target="#mb_carousel_id" data-bs-slide-to="0">
+                          <div class="mb_indicators_image">
+                            <img src="/theme_mobiheal_website/static/src/img/home/testimonial/mb_testimonials_slider_1.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                          </div>
+                        </li>
+                        <li data-bs-target="#mb_carousel_id" data-bs-slide-to="1">
+                          <div class="mb_indicators_image">
+                            <img src="/theme_mobiheal_website/static/src/img/home/testimonial/mb_testimonials_slider_2.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                          </div>
+                        </li>
+                        <li data-bs-target="#mb_carousel_id" data-bs-slide-to="2">
+                          <div class="mb_indicators_image">
+                            <img src="/theme_mobiheal_website/static/src/img/home/testimonial/mb_testimonials_slider_3.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                          </div>
+                        </li>
+                        <li data-bs-target="#mb_carousel_id" data-bs-slide-to="3">
+                          <div class="mb_indicators_image">
+                            <img src="/theme_mobiheal_website/static/src/img/home/testimonial/mb_testimonials_slider_4.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                          </div>
+                        </li>
+                        <li data-bs-target="#mb_carousel_id" data-bs-slide-to="4">
+                          <div class="mb_indicators_image">
+                            <img src="/theme_mobiheal_website/static/src/img/home/testimonial/mb_testimonials_slider_5.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                          </div>
+                        </li>
+                        <li data-bs-target="#mb_carousel_id" data-bs-slide-to="5" class="active">
+                          <div class="mb_indicators_image">
+                            <img src="/theme_mobiheal_website/static/src/img/home/testimonial/mb_testimonials_slider_6.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                          </div>
+                        </li>
+                        <li data-bs-target="#mb_carousel_id" data-bs-slide-to="6">
+                          <div class="mb_indicators_image">
+                            <img src="/theme_mobiheal_website/static/src/img/home/testimonial/mb_testimonials_slider_7.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 o_colored_level">
+                      <div class="mb_testimonial_title">
+                        <span class="mb_title o_default_snippet_text">
+                                        Testimonials
+                                    </span>
+                        <h2 class="mb_testimonial_text o_default_snippet_text"> Clients choice us because our app <span class="o_default_snippet_text">lication
+                                        is the best!</span>
+                                    </h2>
+                      </div>
+                      <div class="carousel-inner mb_carousel_inner">
+                        <div class="carousel-item mb_carousel_item o_colored_level" style="background-image: none;">
+                          <div class="mb_testimonial_box">
+                            <div class="mb_inner_box">
+                              <div class="mb_image_box">
+                                <span class="fa fa-facebook-square mb_testimonial_icon"/>
+                                <img src="/theme_mobiheal_website/static/src/img/home/testimonial/sh_testimonials_slider_1.webp" alt="" loading="lazy" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" style=""/>
+                              </div>
+                              <div class="mb_quote_icon">
+                                <span class="fa fa-quote-right"/>
+                              </div>
+                              <div class="mb_testimonial_slider_text">
+                                <p class="o_default_snippet_text">
+                                  “ Dman app is easy to use and convenient. Its integrations are well planned, and it took me barely some time to learn. What I really appreciate about this app that it's very affordable. They've made a great product that's sure to meet your needs! ”
+                                                </p>
+                              </div>
+                              <div class="mb_testimonial_info">
+                                <h4 class="mb_name_title o_default_snippet_text">Michale Kitten</h4>
+                                <div class="mb_posotion o_default_snippet_text">Co-Founder</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item mb_carousel_item o_colored_level" style="background-image: none;">
+                          <div class="mb_testimonial_box">
+                            <div class="mb_inner_box">
+                              <div class="mb_image_box">
+                                <span class="fa fa-facebook-square mb_testimonial_icon"/>
+                                <img src="/theme_mobiheal_website/static/src/img/home/testimonial/sh_testimonials_slider_2.webp" alt="" loading="lazy" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" style=""/>
+                              </div>
+                              <div class="mb_quote_icon">
+                                <span class="fa fa-quote-right"/>
+                              </div>
+                              <div class="mb_testimonial_slider_text">
+                                <p class="o_default_snippet_text">
+                                  “Amazing service! I was initially worried about using a android app, but the mobiheal support team quickly made it easy for me and my staff. They provided us with helpful training on how to use the software and it's been working smoothly ever since installation.”
+                                                </p>
+                              </div>
+                              <div class="mb_testimonial_info">
+                                <h4 class="mb_name_title o_default_snippet_text">James Andy</h4>
+                                <div class="mb_posotion o_default_snippet_text">Senior Developer</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item mb_carousel_item o_colored_level" style="background-image: none;">
+                          <div class="mb_testimonial_box">
+                            <div class="mb_inner_box">
+                              <div class="mb_image_box">
+                                <span class="fa fa-facebook-square mb_testimonial_icon"/>
+                                <img src="/theme_mobiheal_website/static/src/img/home/testimonial/sh_testimonials_slider_3.webp" alt="" loading="lazy" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" style=""/>
+                              </div>
+                              <div class="mb_quote_icon">
+                                <span class="fa fa-quote-right"/>
+                              </div>
+                              <div class="mb_testimonial_slider_text">
+                                <p class="o_default_snippet_text">
+                                  “We developed our iOS and Android apps with the assistance of Mobiheal. We are satisfied with their deliverables and are satisfied with their work. We talk nearly every day following an Agile methodology and release on average a version weekly.”
+                                                </p>
+                              </div>
+                              <div class="mb_testimonial_info">
+                                <h4 class="mb_name_title o_default_snippet_text">Kane Rechard</h4>
+                                <div class="mb_posotion o_default_snippet_text">Director</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item mb_carousel_item o_colored_level" style="background-image: none;">
+                          <div class="mb_testimonial_box">
+                            <div class="mb_inner_box">
+                              <div class="mb_image_box">
+                                <span class="fa fa-facebook-square mb_testimonial_icon"/>
+                                <img src="/theme_mobiheal_website/static/src/img/home/testimonial/sh_testimonials_slider_4.webp" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" alt="" loading="lazy" style=""/>
+                              </div>
+                              <div class="mb_quote_icon">
+                                <span class="fa fa-quote-right"/>
+                              </div>
+                              <div class="mb_testimonial_slider_text">
+                                <p class="o_default_snippet_text">
+                                  “The Mobiheal team is very passionate about their work. I had the feeling that they made our mission their mission, clearly identifying with what we are trying to deliver.”
+                                                </p>
+                              </div>
+                              <div class="mb_testimonial_info">
+                                <h4 class="mb_name_title o_default_snippet_text">Steven John</h4>
+                                <div class="mb_posotion o_default_snippet_text">Senior Developer</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item mb_carousel_item o_colored_level" style="background-image: none;">
+                          <div class="mb_testimonial_box">
+                            <div class="mb_inner_box">
+                              <div class="mb_image_box">
+                                <span class="fa fa-facebook-square mb_testimonial_icon"/>
+                                <img src="/theme_mobiheal_website/static/src/img/home/testimonial/sh_testimonials_slider_5.webp" alt="" loading="lazy" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" style=""/>
+                              </div>
+                              <div class="mb_quote_icon">
+                                <span class="fa fa-quote-right"/>
+                              </div>
+                              <div class="mb_testimonial_slider_text">
+                                <p class="o_default_snippet_text">
+                                  “ Mobiheal was able to quickly produce a bug free app. In addition to receiving incredibly positive feedback from clients. The mobiheal support is enamurously quick and accurate.”
+                                                </p>
+                              </div>
+                              <div class="mb_testimonial_info">
+                                <h4 class="mb_name_title o_default_snippet_text">Henry Jonathan</h4>
+                                <div class="mb_posotion o_default_snippet_text">Senior Director</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item mb_carousel_item o_colored_level active" style="background-image: none;">
+                          <div class="mb_testimonial_box">
+                            <div class="mb_inner_box">
+                              <div class="mb_image_box">
+                                <span class="fa fa-facebook-square mb_testimonial_icon"/>
+                                <img src="/theme_mobiheal_website/static/src/img/home/testimonial/sh_testimonials_slider_6.webp" alt="" loading="lazy" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" style=""/>
+                              </div>
+                              <div class="mb_quote_icon">
+                                <span class="fa fa-quote-right"/>
+                              </div>
+                              <div class="mb_testimonial_slider_text">
+                                <p class="o_default_snippet_text">
+                                  “ Mobiheal developed an android apps for our custom erp. We need an application for our sales person to book order. They made order booker app exact what we need. They are understand not only customers also our business and provide best solution. ”
+                                                </p>
+                              </div>
+                              <div class="mb_testimonial_info">
+                                <h4 class="mb_name_title o_default_snippet_text">David Peterson</h4>
+                                <div class="mb_posotion o_default_snippet_text">Senior Manager</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item mb_carousel_item o_colored_level" style="background-image: none;">
+                          <div class="mb_testimonial_box">
+                            <div class="mb_inner_box">
+                              <div class="mb_image_box">
+                                <span class="fa fa-facebook-square mb_testimonial_icon"/>
+                                <img src="/theme_mobiheal_website/static/src/img/home/testimonial/sh_testimonials_slider_7.webp" alt="" title="Custom Mobile App Development - iOS &amp; Android Solutions | Mobiheal Technologies" loading="lazy" style=""/>
+                              </div>
+                              <div class="mb_quote_icon">
+                                <span class="fa fa-quote-right"/>
+                              </div>
+                              <div class="mb_testimonial_slider_text">
+                                <p class="o_default_snippet_text">
+                                  As a busy entrepreneur, every second counts. Dman's smooth, user-friendly design got me managing deliveries like a pro, instantly. Affordable doesn't even begin to describe it - it's a steal! Thanks, Dman team!
+                                                </p>
+                              </div>
+                              <div class="mb_testimonial_info">
+                                <h4 class="mb_name_title o_default_snippet_text">Mathew Robisons</h4>
+                                <div class="mb_posotion o_default_snippet_text">Senior Manager</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#mb_carousel_id" role="button" data-bs-slide="prev">
+                        <span class="fa fa-angle-left"/>
+                        <span class="sr-only o_default_snippet_text">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#mb_carousel_id" role="button" data-bs-slide="next">
+                        <span class="fa fa-angle-right"/>
+                        <span class="sr-only o_default_snippet_text">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--MB-testimonial-Section-end-->
+        </div>
+    </t>
+    </template>
+
+    <!-- <data noupdate="1">
+
+      <record id="theme_mobiheal_website_home_page" model="website.page">
+          <field name="is_published">True</field>
+          <field name="url">/home</field>
+          <field name="view_id" ref="theme_mobiheal_website.theme_mobiheal_website_home_tmpl"/>
+          <field name="track">True</field>
+          <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+      </record>
+  
+      <record id="theme_mobiheal_website_home_menu" model="website.menu">
+          <field name="name">Home</field>
+          <field name="url">/home</field>
+          <field name="page_id" ref="theme_mobiheal_website.theme_mobiheal_website_home_page"/>
+          <field name="sequence" type="int">10</field>
+          <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+      </record>
+  
+  </data> -->
+</odoo>

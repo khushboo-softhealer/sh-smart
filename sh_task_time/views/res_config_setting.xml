@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- <record id="sh_appstore_project_res_config_settings" model="ir.ui.view">
+        <field name="name">Appstore Project</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="project.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='project']" position="inside">
+                <h2>Appstore Project</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Appstore Project</span><br/>
+                            <div class="text-muted">
+
+                            </div>
+                            <div class="text-muted">
+                                <field name="appstore_project_id"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Pre Appstore Project</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Pre- Appstore Project</span><br/>
+                            <div class="text-muted">
+
+                            </div>
+                            <div class="text-muted">
+                                <field name="preappstore_project_id"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record> -->
+
+    <record id="sh_feature_project_res_config_settings" model="ir.ui.view">
+        <field name="name">Appstore Project</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sh_project_task_base.sh_to_be_project_res_config_settings" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('project_stages')]/div[2]" position="after">
+                <div class="col-12 col-lg-4 o_setting_box">
+                        <div class="o_setting_left_pane" />
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Feature Project Stage</span><br />
+                            <div class="text-muted"></div>
+                            <div class="text-muted">
+                                <field name="feature_project_stage_id" />
+                            </div>
+                        </div>
+                    </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

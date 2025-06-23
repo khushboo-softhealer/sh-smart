@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data noupdate='1'>	
+
+		<!-- ABOUT-US MENU -->
+    <!-- <record id="theme_softhealer_store_website_about_us_template_menu" model="website.menu">
+		<field name="name">About Us</field>
+		<field name="parent_id" ref="website.main_menu" />
+		<field name="page_id" ref="theme_softhealer_store.theme_softhealer_store_website_about_us_page"/>
+		<field name="sequence" type="int">30</field>
+		<field name="url">/about</field>
+	</record> -->
+
+	<!-- CONTACT-US MENU -->
+    <!-- <record id="theme_softhealer_store_website_contact_us_template_menu" model="website.menu">
+		<field name="name">Contact Us</field>
+		<field name="parent_id" ref="website.main_menu" />
+		<field name="page_id" ref="theme_softhealer_store.theme_softhealer_store_website_contact_us_page"/>
+		<field name="sequence" type="int">30</field>
+		<field name="url">/contact</field>
+	</record> -->
+
+	<!-- Support MENU -->
+    <record id="theme_softhealer_store_website_support_template_menu" model="website.menu">
+		<field name="name">Support</field>
+		<field name="parent_id" ref="website.main_menu" />
+		<field name="sequence" type="int">30</field>
+		<field name="url">/support</field>
+	</record>
+	<record id='website_sale.product_custom_text' model='ir.ui.view'>
+		<field name='active'>False</field>
+	</record>
+
+	<record id='website_sale.product_share_buttons' model='ir.ui.view'>
+		<field name='active'>False</field>
+	</record>
+
+	<record id='website_sale.product_comment' model='ir.ui.view'>
+		<field name='active'>True</field>
+	</record>
+
+	<record id='website_sale.product_picture_magnify_hover' model='ir.ui.view'>
+		<field name='active'>False</field>
+	</record>
+	
+	
+
+	</data>
+</odoo>

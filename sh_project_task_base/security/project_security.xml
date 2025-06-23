@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="group_project_officer" model="res.groups">
+            <field name="name">Officer</field>
+            <field name="category_id" ref="base.module_category_services_project" />
+            <field name="implied_ids" eval="[(4, ref('project.group_project_user'))]" />
+        </record>
+
+        <record id="project.group_project_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="base.module_category_services_project"/>
+            <field name="implied_ids" eval="[(4, ref('sh_project_task_base.group_project_officer'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+
+        <!-- Task User Record Rule -->
+        <record model="ir.rule" id="project.task_visibility_rule">
+            <field name="name">Project/Task: employees: follow required for follower-only projects</field>
+            <field name="model_id" ref="project.model_project_task"/>
+            <field name="domain_force">
+            ['|','|',('create_uid','=',user.id),('project_id.privacy_visibility', '=', 'employees'),
+            ('user_ids', 'in', [user.id])]
+            </field>
+            <field name="groups" eval="[(4,ref('project.group_project_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+
+        <!-- Task Office Record Rule -->
+
+        <record model="ir.rule" id="custom_group_project_officer">
+            <field name="name">Project/Task: project office: see required tasks</field>
+            <field name="model_id" ref="project.model_project_task"/>
+            <field name="domain_force">['|','|','|','|','|','|',
+            ('create_uid','=',user.id),
+            ('project_id.privacy_visibility', '=', 'employees'),
+            ('user_ids', 'in', [user.id]),
+            ('project_id.user_id','=',user.id),
+            ('project_id.sh_technical_head','=',user.id),
+            ('project_id.sh_designing_head','=',user.id),
+            ('coach_ids', 'in', [user.id]),
+            ]
+            </field>
+            <field name="groups" eval="[(4,ref('sh_project_task_base.group_project_officer'))]"/>
+        </record>
+
+
+        <record id="project.project_task_rule_portal" model="ir.rule">
+            <field name="active" eval="False"/>
+        </record>
+
+        <!-- Task Manager REcord Rule -->
+
+        <record model="ir.rule" id="project.project_manager_all_project_tasks_rule">
+            <field name="name">Project/Task: project manager: see all tasks</field>
+            <field name="model_id" ref="project.model_project_task"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4,ref('project.group_project_manager'))]"/>
+        </record>
+        <!-- =============================================================== -->
+
+
+        <!-- Project User Record Rule -->
+
+        <record model="ir.rule" id="project.project_public_members_rule">
+            <field name="name">Project: employees: following required for follower-only projects</field>
+            <field name="model_id" ref="project.model_project_project" />
+            <field name="domain_force">['|',('responsible_user_ids.id', 'in', [user.id]),('privacy_visibility','=','employees')]</field>
+            <field name="groups"
+                eval="[(4, ref('base.group_user'))]" />
+        </record>
+
+        <!-- Project Office Record Rule -->
+
+        <record model="ir.rule" id="project_office_all_project">
+            <field name="name">Project: Office: All Project</field>
+            <field name="model_id" ref="project.model_project_project" />
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups"
+                eval="[(4, ref('sh_project_task_base.group_project_officer'))]" />
+        </record>
+
+
+
+        <!-- Timesheet User Rule  -->
+
+        <record id="hr_timesheet.timesheet_line_rule_user" model="ir.rule">
+            <field name="name">account.analytic.line.timesheet.user</field>
+            <field name="model_id" ref="analytic.model_account_analytic_line"/>
+            <field name="domain_force">[
+                ('user_id', '=', user.id)
+            ]</field>
+            <field name="groups" eval="[(4, ref('hr_timesheet.group_hr_timesheet_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="hr_timesheet_timesheet_line_rule_officer" model="ir.rule">
+            <field name="name">officer own task timesheet</field>
+            <field name="model_id" ref="analytic.model_account_analytic_line"/>
+            <field name="domain_force">
+                ['|','|','|','|','|','|','|',
+                ('project_id.user_id','=',user.id),
+                ('project_id.sh_technical_head','=',user.id),
+                ('project_id.sh_designing_head','=',user.id),
+                ('task_id.user_ids.id', 'in', [user.id]),
+                ('project_id.privacy_visibility','=','employees'),
+                 ('employee_id.coach_id.user_id', '=', user.id),
+                 ('user_id','=',user.id),
+                ('task_id.coach_ids', 'in', [user.id]),
+
+                 ]
+                 
+ 
+            </field>
+            <field name="groups" eval="[(4, ref('sh_project_task_base.group_project_officer'))]"/>
+        </record>
+
+
+
+
+        <!-- Timesheet Office Rule -->
+
+        <record id="hr_timesheet.timesheet_line_rule_approver" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+
+        <record id="hr_timesheet.timesheet_line_rule_manager" model="ir.rule">
+            <field name="name">account.analytic.line.timesheet.manager</field>
+            <field name="model_id" ref="analytic.model_account_analytic_line"/>
+            <field name="domain_force">[('project_id', '!=', False)]</field>
+            <field name="groups" eval="[(6,0,[ref('sh_project_task_base.group_project_officer'),ref('project.group_project_manager')])]"/>
+        </record>
+
+        <!-- ======= product mass action related project task -->
+        <record id="group_create_task" model="res.groups">
+            <field name="name">Create Tasks</field>
+            <field name="category_id" ref="base.module_category_hidden" />
+        </record>
+
+
+        <!-- Project Task Type -->
+
+        <record id="project.task_type_own_write_rule" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+
+        <record id="project.task_type_manager_rule" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+
+        <record id="project.task_type_visibility_rule" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+
+        <record id="project.ir_rule_private_task" model="ir.rule">
+            <field name="active">False</field>
+        </record>
+
+    </data>
+
+    
+</odoo>

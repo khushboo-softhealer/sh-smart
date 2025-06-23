@@ -1,0 +1,22 @@
+.oe_timeline_view .vis-timeline .vis-grid.vis-saturday, .oe_timeline_view .vis-timeline .vis-grid.vis-sunday {
+  background: #dcdcdc;
+}
+.oe_timeline_view .vis-timeline .vis-item.vis-box:hover {
+  cursor: pointer !important;
+}
+.oe_timeline_view .vis-timeline .vis-item.vis-item-overflow {
+  overflow: visible;
+}
+.oe_timeline_view .vis-timeline .vis-item .vis-item-content {
+  width: 100%;
+  padding: 0 3px !important;
+}
+
+.oe_timeline_view_canvas {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=web_timeline.css.map */

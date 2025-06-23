@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+<record id="sh_survey_form_inherit_xls" model="ir.ui.view">
+		<field name="name">survey.survey.view.form</field>
+        <field name="model">survey.survey</field>
+        <field name="inherit_id" ref="survey.survey_survey_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header"  position="inside">
+				<button name="%(sh_survey_export_xls.sh_survey_export_wizard_action)d" string="Export Answer" type="action" class="oe_highlight"
+				/>
+        </xpath>
+        </field>
+    </record>
+</odoo>

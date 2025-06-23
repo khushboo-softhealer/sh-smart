@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+    <template id="sh_survey_extra_fields_survey_page_statistics_question" inherit_id="survey.survey_page_statistics_question" name="Survey Extra Fields Question: result statistics">
+        
+        
+    <xpath expr='//t[@t-elif=&quot;question.question_type in [&apos;matrix&apos;]&quot;]' position="after">        
+            <t t-elif="question.question_type in ['que_sh_many2one','que_sh_many2many']">
+                <t t-call="survey.question_result_choice"></t>
+            </t> 
+          </xpath>
+            
+
+    </template>
+    
+</odoo>
+
+    

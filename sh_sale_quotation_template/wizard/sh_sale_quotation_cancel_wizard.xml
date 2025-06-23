@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="sh_sale_quotation_cancel_view_form" model="ir.ui.view">
+        <field name="name">sh.sale.quotation.cancel.view.form</field>
+        <field name="model">sh.sale.quotation.cancel</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="cancel_reason" />
+                        <field name="order_id" invisible="1" />
+                    </group>
+
+                    <footer>
+                        <button string="Confirm" name="sale_quotation_cancel_reason" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="btn btn-default" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

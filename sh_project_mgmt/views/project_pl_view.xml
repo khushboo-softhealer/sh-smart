@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="project_pl_tree_view">
+        <field name="name">Project P/L</field>
+        <field name="model">project.project</field>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <tree string="Project P/L">
+                <field name="name"/>
+                <field name="user_id" optional="hide"/>
+                <field name="project_type_selection" optional="hide"/>
+                <field name="sh_pricing_mode" optional="hide"/>
+                <field name="sh_fp_based_on" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="sh_tm_based_on" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="allocated_hours" string="Estimated Hours"/>
+                <field name="date_start" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="date" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="billable_hours" />
+                <field name="remaining_inv_hours"/>
+                <field name="total_income"/>
+                <field name="total_expense"/>
+                <field name="total_profit"/>
+                <field name="total_profit_percentage"/>
+                
+            </tree>
+        </field>
+    </record>
+
+
+      <!-- ACTION -->
+      <record id="sh_project_pl_action" model="ir.actions.act_window">
+        <field name="name">Project P/L</field>
+        <field name="res_model">project.project</field>
+        <field name="view_mode">kanban,form,tree</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'kanban', 'view_id': ref('project.view_project_kanban')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('project.edit_project')}),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('project_pl_tree_view')})]"/>
+           
+        <field name="context">{'default_allow_billable': True, 'search_default_groupby_stage': 1, 'search_default_groupby_child_project': 1}</field>
+    </record>
+
+    <!-- MENU -->
+    <menuitem id="sh_project_pl_menu"
+     name="Project P/L" 
+     parent="project.menu_main_pm" 
+     action="sh_project_pl_action"
+     groups="sh_project_mgmt.group_project_pl"/>
+
+
+
+</odoo>

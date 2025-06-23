@@ -1,0 +1,60 @@
+.sh_store_diwali_offer_banner_section {
+    position: relative;  background: transparent linear-gradient(295deg, #564bc6 0%, #190e34 70%) 0% 0% no-repeat padding-box !important;
+    .carousel-control-prev{
+             background:#564bc6;height: 50px;width: 50px;border-radius: 50%;bottom: 35px;left: 35px;opacity: 1; top: auto;
+             @include media-breakpoint-down(md){
+                 display: none;
+             }
+             .carousel-control-prev-icon {
+                 width: 25px;height:25px;        
+             }
+         }
+         .carousel-control-next {
+             background:#564bc6;height: 50px;width: 50px;border-radius: 50%;bottom: 35px;left: 100px;opacity: 1; top: auto;
+             @include media-breakpoint-down(md){
+                 display: none;
+             }
+             .carousel-control-next-icon {
+                 width: 25px;height:25px;        
+             }
+         }
+         .carousel-item{
+             padding:0px 0px; min-height:720px !important;
+             @include media-breakpoint-down(lg){
+                min-height:auto !important;
+             }
+             &:first-child{
+                 padding: 0;
+             }
+                 .sh_image{
+                     height:400px;width:100%; animation: moveUpDown 5s linear infinite; border-radius:20px;
+                     @include media-breakpoint-only(md){
+                        height:400px; margin-top:70px;
+                     }
+                     @include media-breakpoint-down(md) {
+                         height:300px; margin-top:50px;
+                     }
+                     img{
+                         height:100%;width:100%;object-fit: cover;border-radius:20px;
+                     }
+                 }
+                 @keyframes moveUpDown{
+                     0% {
+                         transform: translateY(0);
+                     }
+                     50% {
+                         transform: translateY(-20px);
+                     }
+                     100% {
+                         transform: translateY(0);
+                     }
+                 }
+                 .sh_store_offer_banner{
+                     max-height:720px !important; width:100%;
+                     img{
+                         height:100%; width:100%;object-fit: cover;
+                     }
+                 }
+         }
+ }    
+ //banner//

@@ -1,0 +1,23 @@
+.o_kanban_ribbon {
+    position: absolute;
+    top: 30px;
+    left: 120px;
+    right: -20px;
+    background: #dc3545;
+    color: white;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 12px;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 10;
+    width: 150px;
+    text-align: center;
+}
+
+/* Ensure it stays inside the card */
+.oe_kanban_global_click {
+    position: relative;
+    overflow: hidden;
+}

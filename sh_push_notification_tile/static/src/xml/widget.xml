@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+   
+    
+	 <t t-name="mail.systray.FirebaseMenu.Previews">
+        <div class="tile_header">
+            <div class="rd_all_btn_left">
+                <a class="sh_view_read_all_btn">
+                    <span class="sh_view_read_all_notification">Read All</span>
+                </a>
+            </div>
+            <div class="view_all_btn_right">
+                <a class="sh_view_all_btn">
+                    <span class="sh_view_all_notification">View All</span>
+                </a>
+            </div>
+        </div>
+        <div class="tile_header_2" style="border-bottom:1px solid black">
+            <t t-if="has_group_sale_own_document">
+                <div class="rd_all_btn_left">
+                    <a class="sh_view_sales_btn" style='padding: 5px 8px;'>
+                        <span class="sh_view_read_all_notification">Sales</span>
+                        (<span t-esc = "sale_type_noti_count or 0"></span>)
+                    </a>
+                </div>
+            </t>            
+            <t t-if="has_group_helpdesk_user">
+                <div class="view_all_btn_right_custom_btn">
+                    <a class="sh_view_support_btn">
+                        <span class="sh_view_all_notification">Support</span>
+                        (<span t-esc = "support_type_noti_count or 0"></span>)
+                    </a>
+                </div>
+            </t>
+            <t t-if="has_group_project_user">
+                <div class="rd_all_btn_left">
+                    <a class="sh_view_project_btn" style='padding: 5px 8px;'>
+                        <span class="sh_view_read_all_notification">Project</span>
+                        (<span t-esc = "project_type_noti_count or 0"></span>)
+                    </a>
+                </div>
+            </t>
+            <div class="view_all_btn_right_custom_btn">
+                <a class="sh_view_hr_btn" style='margin-right: 10px;'>
+                    <span class="sh_view_all_notification">HR</span>
+                    (<span t-esc = "hr_type_noti_count or 0"></span>)
+                </a>
+            </div>
+            <t t-if="has_allow_assignment_request_access_group">
+                <div class="rd_all_btn_left">
+                    <a class="sh_view_assignment_btn" style='padding: 5px 8px;'>
+                        <span class="sh_view_all_notification">Assignment</span>
+                        (<span t-esc = "assingment_noti_count or 0"></span>)
+                    </a>
+                </div>
+            </t>
+        </div>
+	 	
+        <t t-if="_.isEmpty(notifications)">
+            <div class="dropdown-item-text text-center o_no_activity">
+                <span>You have No Notification !</span>
+            </div>
+        </t>
+        <t t-foreach="notifications" t-as="notification">
+
+        	<div class="o_mail_preview" t-att-data-id="notification.id" t-att-data-res_model="notification.res_model" t-att-data-model_name="notification.model_name" t-att-data-res_id="notification.res_id" >
+               <!--  <div class="o_mail_preview_image o_mail_preview_app">
+                    <img t-att-src="notification.icon" alt="Activity"/>
+                    <img class="o_mail_preview_image" t-attf-src="/web/image/res.users/#{notification.uid}/image_small" alt="Preview"/>
+                </div> -->
+                <div t-attf-class="o_preview_info #{notification.msg_read ? 'sh_read' : 'sh_unread'}">
+                    <div class="o_preview_title">
+                        <span class="o_preview_name">
+                        	<div class="d-flex">
+                        		<b><t t-esc="notification.name"/></b>
+                        	 	<h6><t t-esc="notification.datetime"/></h6>
+                        	 </div>
+                            <p class="para_text"><t t-esc="notification.desc"/></p>
+                        </span>
+
+                    </div>
+             
+                </div>
+            </div>
+            
+        </t>
+    </t>
+    
+
+    <t t-name="mail.systray.FirebaseMenu">
+        <div class="o_notification_systray_item">
+            <a class="bell_notification openDropdown" href="#" title="Open Quick Menu" aria-label="Open Quick Menu" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-bell" role="img" aria-label="Activities"/> <span class="o_notification_counter badge badge-pill"/>
+            </a>
+            <div class="o_notification_systray_dropdown dropdown-menu sh_custom_popup_design dropdown-menu-right" role="menu">
+            	
+                <div class="o_notification_systray_dropdown_items"/>
+            </div>
+        </div>
+    </t>
+</templates>

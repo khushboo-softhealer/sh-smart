@@ -1,0 +1,55 @@
+.wishlist-section{
+    padding-top: 65px;
+    @include media-breakpoint-only(md) {
+        padding: 50px 0px;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 40px 0px;
+    }
+    h3{
+        color: var(--sh-store-other-page-banner-content-h2-color);font-size: var(--sh-store-other-page-banner-content-h2);font-weight: 600;letter-spacing: -.01em;line-height: 1.1;margin-bottom: 15px; 
+        @include media-breakpoint-only(md){
+            font-size: var( --sh-store-other-page-banner-content-h2-tablet);
+         }
+          @include media-breakpoint-down(md){
+            font-size: var(--sh-store-other-page-banner-content-h2-mobile);
+         }
+    }
+    .checkbox{
+        .text-muted{
+            margin-right: 10px;font-size: var(--sh-store-other-page-banner-content-breadcrumb-font-size-tablet);color: var(--sh-store-other-page-banner-content-p-color)!important;
+        }
+    }
+    .table.table-bordered.table-striped.table-hover.text-center.mt16.table-comparator {
+        margin-top: 45px!important;background: #fff;border: 1px solid #e6f0fa;box-shadow:var(--sh-store-common-box-shadow);border-radius: 5px;
+        .td-img.align-middle{
+            min-width: 100px!important;
+            img{
+                border-radius: 5px;
+            }
+        }
+        .text-start.align-middle{
+            --table-accent-bg: rgb(255 255 255);
+            p{
+                font-size: var(--sh-store-other-page-banner-content-breadcrumb-font-size-tablet);color: var(--sh-store-other-page-banner-content-p-color)!important;
+            }
+        }
+        .align-middle.o_wish_price{
+            font-size: 18px;color: var(--sh-store-section-heading-font-color);font-weight: 500;
+        }
+        .text-center.td-wish-btn.align-middle{
+            --table-accent-bg: rgb(255 255 255);
+        }
+        .td-wish-btn{
+            button{
+                border: 1px solid o-color(o-color-1)!important;background: white;color: o-color(o-color-1)!important;margin-bottom: 0px!important;font-weight:600;
+            &:focus{
+                box-shadow: none;
+            }
+            &:hover{
+                background:o-color(o-color-1)!important;color: #fff!important;
+            }
+            }
+        }   
+    }
+}

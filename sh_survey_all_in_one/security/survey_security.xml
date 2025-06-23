@@ -1,0 +1,76 @@
+<?xml version='1.0'?>
+<odoo>
+    <data>
+
+
+   
+    <record id="survey.survey_survey_rule_survey_user_read" model="ir.rule">
+        <field name="name">Survey: officer: read all</field>
+        <field name="model_id" ref="survey.model_survey_survey"/>
+        <field name="domain_force">
+            [('create_uid', '=', user.id)]
+        </field>
+        <field name="groups" eval="[(4, ref('survey.group_survey_user'))]"/>
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+
+
+    <record id="survey.survey_user_input_rule_survey_user_read" model="ir.rule">
+        <field name="name">Survey user input: officer: read all</field>
+        <field name="model_id" ref="survey.model_survey_user_input"/>
+        <field name="domain_force">
+            [('survey_id.create_uid', '=', user.id)]
+        </field>
+        <field name="groups" eval="[(4, ref('survey.group_survey_user'))]"/>
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+
+
+    <record id="survey.survey_question_answer_rule_survey_user_read" model="ir.rule">
+        <field name="name">Survey question answer: officer: read all</field>
+        <field name="model_id" ref="survey.model_survey_question_answer"/>
+        <field name="domain_force">
+            ['|', ('question_id.survey_id.create_uid', '=', user.id), ('matrix_question_id.survey_id.create_uid', '=', user.id)]
+        </field>
+        <field name="groups" eval="[(4, ref('survey.group_survey_user'))]"/>
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+
+
+    <record id="survey.survey_question_rule_survey_user_read" model="ir.rule">
+        <field name="name">Survey question: officer: read all</field>
+        <field name="model_id" ref="survey.model_survey_question"/>
+        <field name="domain_force">
+            [('survey_id.create_uid', '=', user.id)]
+        </field>
+        <field name="groups" eval="[(4, ref('survey.group_survey_user'))]"/>
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+
+    <record id="survey.survey_user_input_line_rule_survey_user_read" model="ir.rule">
+        <field name="name">Survey user input line: officer: read all</field>
+        <field name="model_id" ref="survey.model_survey_user_input_line"/>
+        <field name="domain_force">
+            [('user_input_id.survey_id.create_uid', '=', user.id)]
+        </field>
+        <field name="groups" eval="[(4, ref('survey.group_survey_user'))]"/>
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+
+</data>
+</odoo>

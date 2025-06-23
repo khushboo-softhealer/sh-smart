@@ -1,0 +1,1386 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_sale_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-25 10:49+0000\n"
+"PO-Revision-Date: 2021-06-25 10:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,print_report_name:sh_sale_reports.sh_cus_sales_analysis_action
+msgid "'Customer Sales Analysis'"
+msgstr "客户销售分析'"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,print_report_name:sh_sale_reports.sh_payment_report_action
+msgid "'Invoice Payment Report'"
+msgstr "发票付款报告'"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,print_report_name:sh_sale_reports.sh_sale_by_category_action
+msgid "'Sale By Product Category'"
+msgstr "由产品类别出售'"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,print_report_name:sh_sale_reports.sh_sale_invoice_summary_action
+msgid "'Sale/Invoice Summary'"
+msgstr "销售/发票摘要'"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,print_report_name:sh_sale_reports.sh_sale_details_report_action
+msgid "'Sales Details Report'"
+msgstr "销售详情报告'"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,print_report_name:sh_sale_reports.sh_sale_product_indent_action
+msgid "'Sales Product Indent'"
+msgstr "销售产品缩进'"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,print_report_name:sh_sale_reports.sh_sales_product_profit_action
+msgid "'Sales Product Profit'"
+msgstr "销售产品利润'"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,print_report_name:sh_sale_reports.sh_sale_report_salesperson_report
+msgid "'Sales Report By Saleperson'"
+msgstr "Saleperson的销售报告'"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,print_report_name:sh_sale_reports.sh_tc_top_customers_report_action
+msgid "'Top Customers'"
+msgstr "顶级客户"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,print_report_name:sh_sale_reports.sh_top_selling_product_report_action
+msgid "'Top Selling Products'"
+msgstr "销售产品'"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+msgid "<b>End Date : </b>"
+msgstr "<b>结束日期：</ b>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+msgid "<b>Friday</b>"
+msgstr "<b>星期五</ b>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+msgid "<b>Monday</b>"
+msgstr "<b>星期一</ b>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+msgid "<b>Product Name</b>"
+msgstr "<b>产品名称</ b>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+msgid "<b>Saturday</b>"
+msgstr "<b>星期六</ b>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+msgid "<b>Start Date : </b>"
+msgstr "<b>开始日期：</ b>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+msgid "<b>Sunday</b>"
+msgstr "<b>星期日</ b>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+msgid "<b>Thursday</b>"
+msgstr "<b>星期四</ b>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_salesperson_report_doc
+msgid "<b>Total</b>"
+msgstr "<b>总计</ b>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+msgid "<b>Tuesday</b>"
+msgstr "<b>星期二</ b>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+msgid "<b>Wednesday</b>"
+msgstr "<b>星期三</ b>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customers_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_top_selling_product_doc
+msgid ""
+"<br/>\n"
+"                                <strong>Compare To Date :</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>与日期进行比较：</strong>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customers_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_top_selling_product_doc
+msgid ""
+"<br/>\n"
+"                                <strong>To Date :</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>迄今为止 ：</strong>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customers_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_top_selling_product_doc
+msgid ""
+"<br/>\n"
+"                        <strong>To Date :</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>迄今为止 ：</strong>"
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_payment_report_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_salesperson_report_doc
+msgid "<span>Sale Person :</span>"
+msgstr "<span>销售人员：</ span>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+msgid "<span>Sales Order - Product Sold Day Wise </span>"
+msgstr "<SPAN>销售订单 - 产品已售日期</ SPAN>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customers_doc
+msgid "<strong>Compare Customer</strong>"
+msgstr "<strong>比较客户</ strong>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customers_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_top_selling_product_doc
+msgid "<strong>Compare From Date :</strong>"
+msgstr "<strong>比较日期：</ strong>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_top_selling_product_doc
+msgid "<strong>Compare Product</strong>"
+msgstr "<strong>比较产品</ strong>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customers_doc
+msgid "<strong>Customer</strong>"
+msgstr "<strong>客户</ strong>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customers_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_top_selling_product_doc
+msgid "<strong>From Date :</strong>"
+msgstr "<strong>来自日期：</ strong>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_top_selling_product_doc
+msgid "<strong>Product</strong>"
+msgstr "<strong>产品</ strong>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_top_selling_product_doc
+msgid "<strong>Qty Sold</strong>"
+msgstr "<strong> qty出售</ strong>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customers_doc
+msgid "<strong>Sales Amount</strong>"
+msgstr "<strong>销售额</ strong>"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_doc
+msgid "<strong>Total</strong>"
+msgstr "<strong>总</ strong>"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_payment_report_wizard__state__all
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_analysis_wizard__sh_status__all
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_details_report_wizard__state__all
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_product_indent_wizard__sh_status__all
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_report_salesperson_wizard__state__all
+msgid "All"
+msgstr "全部"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_salesperson_report_doc
+msgid "Amount Due"
+msgstr "金额到期"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_salesperson_report_doc
+msgid "Amount Invoiced"
+msgstr "发票金额"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_doc
+msgid "Amount Paid"
+msgstr "支付的金额"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+msgid "Balance"
+msgstr "平衡"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_tc_top_customer_wizard__type__basic
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_tsp_top_selling_product_wizard__type__basic
+msgid "Basic"
+msgstr "基本的"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_invoice_summary_wizard__sh_status__both
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_product_profit_wizard__report_by__both
+msgid "Both"
+msgstr "两个都"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_customer_sales_analysis_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_payment_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_report_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_order_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_report_salesperson_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customer_wizard_form
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tsp_top_selling_product_wizard_form_view
+msgid "Cancel"
+msgstr "取消"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_wizard__sh_category_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__sh_category_ids
+msgid "Categories"
+msgstr "类别"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.invoice_payment_report_xls_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_customer_sales_analysis_xls_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_xls_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_xls_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_xls_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_xls_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_day_wise_sales_xls
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_sales_detail_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_sales_report_by_sale_person_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_sh_top_customers
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_top_selling_products
+msgid "Close"
+msgstr "关闭"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_order_report__company_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard__company_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__company_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_wizard__company_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard__company_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard__company_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__company_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__company_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard__company_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__company_ids
+msgid "Companies"
+msgstr "公司"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__company_ids
+msgid "Company"
+msgstr "公司"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_tc_top_customer_wizard__type__compare
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_tsp_top_selling_product_wizard__type__compare
+msgid "Compare"
+msgstr "相比"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__date_compare_from
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__date_compare_from
+msgid "Compare From Date"
+msgstr "与日期相比"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__date_compare_to
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__date_compare_to
+msgid "Compare To Date"
+msgstr "与约会进行比较"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+msgid "Cost"
+msgstr "成本"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_invoice_payment_report_xls__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_order_report__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_report_salesperson_xls__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_day_wise_sales_xls__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_xls__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_xls__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_xls__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_xls__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_xls__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sales_detail_xls__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_customers_xls__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_selling_products__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product__create_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__create_uid
+msgid "Created by"
+msgstr "由...制作"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_invoice_payment_report_xls__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_order_report__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_report_salesperson_xls__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_day_wise_sales_xls__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_xls__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_wizard__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_xls__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_xls__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_xls__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_xls__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sales_detail_xls__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_customers_xls__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_selling_products__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product__create_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__currency_id
+msgid "Currency"
+msgstr "货币"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_salesperson_report_doc
+msgid "Customer"
+msgstr "顾客"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.action_cust_sales_analysis_xls
+#: model:ir.actions.act_window,name:sh_sale_reports.action_customer_sales_analysis
+#: model:ir.actions.report,name:sh_sale_reports.sh_cus_sales_analysis_action
+#: model:ir.ui.menu,name:sh_sale_reports.sh_customer_sales_analysis_report_menuitem
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_customer_sales_analysis_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_customer_sales_analysis_xls_view
+msgid "Customer Sales Analysis"
+msgstr "客户销售分析"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_report_sh_sale_reports_sh_cus_sale_analysis_doc
+msgid "Customer Sales Analysis report abstract model"
+msgstr "客户销售分析报告摘要模型"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__sh_partner_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard__sh_partner_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__sh_partner_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__sh_partner_ids
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_product_profit_wizard__report_by__customer
+msgid "Customers"
+msgstr "顾客"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+msgid "Date"
+msgstr "日期"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,name:sh_sale_reports.action_report_sale_order_day_wise_report
+msgid "Day Wise Sales Order"
+msgstr "天智销售订单"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.action_sale_order_day_wise
+#: model:ir.ui.menu,name:sh_sale_reports.sale_order_day_wise_report
+msgid "Day Wise Sales Report"
+msgstr "天智销售报告"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_day_wise_sales_xls
+msgid "Day wise Sales XLS"
+msgstr "日智销售XLS"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+msgid "Disc.(%)"
+msgstr "光盘。（％）"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_doc
+msgid "Disc:"
+msgstr "光盘："
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_invoice_payment_report_xls__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_cus_sale_analysis_doc__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_payment_report_doc__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_by_category_doc__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_details_report_doc__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_invoice_summary_doc__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_product_indent_doc__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sales_product_profit_doc__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_salesperson_report_doc__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_tc_top_customers_doc__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_top_selling_product_doc__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_order_report__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_report_salesperson_xls__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_day_wise_sales_xls__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_xls__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_wizard__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_xls__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_xls__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_xls__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_xls__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sales_detail_xls__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_customers_xls__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_selling_products__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product__display_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_details_report_wizard__state__done
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_report_salesperson_wizard__state__done
+msgid "Done"
+msgstr "完毕"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_invoice_payment_report_xls__excel_file
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_report_salesperson_xls__excel_file
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_day_wise_sales_xls__excel_file
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_xls__excel_file
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_xls__excel_file
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_xls__excel_file
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_xls__excel_file
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_xls__excel_file
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sales_detail_xls__excel_file
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_customers_xls__excel_file
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_selling_products__excel_file
+msgid "Download report Excel"
+msgstr "下载excel."
+
+#. module: sh_sale_reports
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_analysis_wizard__sh_status__draft
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_product_indent_wizard__sh_status__draft
+msgid "Draft"
+msgstr "草案"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_order_report__end_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard__date_end
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__sh_end_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_wizard__sh_end_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard__end_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard__sh_end_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__sh_end_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__sh_end_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard__date_end
+msgid "End Date"
+msgstr "结束日期"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_invoice_payment_report_xls__file_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_report_salesperson_xls__file_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_day_wise_sales_xls__file_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_xls__file_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_xls__file_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_xls__file_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_xls__file_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_xls__file_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sales_detail_xls__file_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_customers_xls__file_name
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_selling_products__file_name
+msgid "Excel File"
+msgstr "Excel文件"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tsp_top_selling_product_wizard_form_view
+msgid "Filter"
+msgstr "筛选"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__date_from
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__date_from
+msgid "From Date"
+msgstr "从日期"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_invoice_payment_report_xls__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_cus_sale_analysis_doc__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_payment_report_doc__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_by_category_doc__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_details_report_doc__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_invoice_summary_doc__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_product_indent_doc__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sales_product_profit_doc__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_salesperson_report_doc__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_tc_top_customers_doc__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_top_selling_product_doc__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_order_report__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_report_salesperson_xls__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_day_wise_sales_xls__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_xls__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_wizard__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_xls__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_xls__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_xls__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_xls__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sales_detail_xls__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_customers_xls__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_selling_products__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product__id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_doc
+msgid "Invoice Date"
+msgstr "发票日期"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_doc
+msgid "Invoice Number"
+msgstr "发票编号"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_invoice_payment_report_xls
+msgid "Invoice Payment"
+msgstr "发票支付"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.sh_payment_report_wizard_action
+#: model:ir.actions.report,name:sh_sale_reports.sh_payment_report_action
+#: model:ir.ui.menu,name:sh_sale_reports.sh_payment_report_wizard_menuitem
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.invoice_payment_report_xls_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_payment_report_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_payment_report_wizard_form
+msgid "Invoice Payment Report"
+msgstr "发票付款报告"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.action_invoice_payment_report
+msgid "Invoice Payment Report Excel"
+msgstr "发票付款报告Excel"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_invoice_payment_report_xls____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_cus_sale_analysis_doc____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_payment_report_doc____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_by_category_doc____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_details_report_doc____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_invoice_summary_doc____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sale_product_indent_doc____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_sales_product_profit_doc____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_salesperson_report_doc____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_tc_top_customers_doc____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_report_sh_sale_reports_sh_top_selling_product_doc____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_order_report____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_report_salesperson_xls____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_day_wise_sales_xls____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_xls____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_wizard____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_xls____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_xls____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_xls____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_xls____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sales_detail_xls____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_customers_xls____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_selling_products____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product____last_update
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard____last_update
+msgid "Last Modified on"
+msgstr "最后修改了"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_invoice_payment_report_xls__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_order_report__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_report_salesperson_xls__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_day_wise_sales_xls__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_xls__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_xls__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_xls__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_xls__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_xls__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sales_detail_xls__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_customers_xls__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_selling_products__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product__write_uid
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__write_uid
+msgid "Last Updated by"
+msgstr "最后更新"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_invoice_payment_report_xls__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_order_report__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_report_salesperson_xls__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_day_wise_sales_xls__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_xls__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_wizard__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_xls__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_xls__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_xls__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_xls__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sales_detail_xls__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_customers_xls__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_top_selling_products__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product__write_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__write_date
+msgid "Last Updated on"
+msgstr "上次更新了"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_analysis_wizard__sh_status__done
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_product_indent_wizard__sh_status__done
+msgid "Locked"
+msgstr "锁定"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customers_doc
+msgid "Lost Customers"
+msgstr "失去了客户"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_top_selling_product_doc
+msgid "Lost Products"
+msgstr "丢失的产品"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+msgid "Margin(%)"
+msgstr "利润（％）"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_payment_report_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_doc
+msgid "Name"
+msgstr "姓名"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customers_doc
+msgid "New Customers"
+msgstr "新客户"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_top_selling_product_doc
+msgid "New Products"
+msgstr "新产品"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__no_of_top_item
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__no_of_top_item
+msgid "No of Items"
+msgstr "没有项目"
+
+#. module: sh_sale_reports
+#: code:addons/sh_sale_reports/sh_top_selling_product/wizard/top_selling_wizard.py:0
+#, python-format
+msgid "No of items must be positive. or not zero"
+msgstr "没有物品必须是积极的。或不零"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+msgid "Number"
+msgstr "数字"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_payment_report_wizard__state__open
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_invoice_summary_wizard__sh_status__open
+msgid "Open"
+msgstr "打开"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_salesperson_report_doc
+msgid "Order Date"
+msgstr "订购日期"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_salesperson_report_doc
+msgid "Order Number"
+msgstr "订单号"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_payment_report_wizard__state__paid
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_invoice_summary_wizard__sh_status__paid
+msgid "Paid"
+msgstr "有薪酬的"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_payment_report_doc
+msgid "Payment Method"
+msgstr "付款方法"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_doc
+msgid "Payments"
+msgstr "款项"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+msgid "Price"
+msgstr "价钱"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_doc
+msgid "Price Unit"
+msgstr "价格单位"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_customer_sales_analysis_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_payment_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_report_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_report_salesperson_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customer_wizard_form
+msgid "Print"
+msgstr "打印"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_customer_sales_analysis_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_payment_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_report_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_report_salesperson_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_wizard
+msgid "Print In XLS"
+msgstr "在XL中打印"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tsp_top_selling_product_wizard_form_view
+msgid "Print Report"
+msgstr "打印报告"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_order_wizard_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customer_wizard_form
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tsp_top_selling_product_wizard_form_view
+msgid "Print Xls"
+msgstr "打印XL"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product__product_id
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+msgid "Product"
+msgstr "产品"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__sh_product_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__sh_product_ids
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_analysis_wizard__report_by__product
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_product_profit_wizard__report_by__product
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_doc
+msgid "Products"
+msgstr "产品"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+msgid "Profit"
+msgstr "利润"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+msgid "Qty"
+msgstr "QTY."
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product__qty
+msgid "Qty Sold"
+msgstr "QTY售出"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+msgid "Quantity"
+msgstr "数量"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_analysis_wizard__sh_status__sent
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_product_indent_wizard__sh_status__sent
+msgid "Quotation Sent"
+msgstr "报价已发送"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_payment_report_doc
+msgid "Refund"
+msgstr "退款"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_order_wizard_view
+msgid "Report"
+msgstr "报告"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__report_by
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__report_by
+msgid "Report Print By"
+msgstr "报告打印"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__type
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__type
+msgid "Report Type"
+msgstr "报告类型"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.action_day_wise_sales_xls
+#: model:ir.actions.act_window,name:sh_sale_reports.action_sale_detail_xls
+#: model:ir.actions.act_window,name:sh_sale_reports.action_xls_top_customers
+msgid "Reports Excel"
+msgstr "报告Excel."
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_category_wizard
+msgid "Sale By Category Wizard"
+msgstr "按类别向导出售"
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,name:sh_sale_reports.sh_sale_by_category_action
+msgid "Sale By Product Category"
+msgstr "产品类别销售"
+
+#. module: sh_sale_reports
+#: model:ir.ui.menu,name:sh_sale_reports.sh_custom_sale_details_report_menu
+msgid "Sale Custom Report"
+msgstr "销售定制报告"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_wizard_form
+msgid "Sale Details"
+msgstr "销售细节"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_sales_detail_view
+msgid "Sale Details Xlsx"
+msgstr "销售细节XLSX."
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_invoice_summary_wizard
+msgid "Sale Invoice Summary Wizard"
+msgstr "销售发票摘要向导"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_invoice_summary_xls
+msgid "Sale Invoice Summary Xls Report"
+msgstr "销售发票摘要XLS报告"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_report_sh_sale_reports_sh_sale_invoice_summary_doc
+msgid "Sale Invoice Summary report abstract model"
+msgstr "销售发票摘要报告抽象模型"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_day_wise_sales_xls
+msgid "Sale Order Day Wise Xlsx"
+msgstr "销售订单日明智XLSX"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sale_order_report
+msgid "Sale Order Report"
+msgstr "销售订单报告"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+msgid "Sale Price"
+msgstr "销售价格"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_product_indent_wizard
+msgid "Sale Product Indent Wizard"
+msgstr "销售产品缩进向导"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_product_indent_xls
+msgid "Sale Product Indent Xls Report"
+msgstr "销售产品缩进XLS报告"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_category_xls
+msgid "Sale by Category Xls Report"
+msgstr "销售XLS报告"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_report_sh_sale_reports_sh_sale_by_category_doc
+msgid "Sale by category report abstract model"
+msgstr "按类别出售报告摘要模型"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_report_sh_sale_reports_sh_sale_product_indent_doc
+msgid "Sale product indent report abstract model"
+msgstr "销售产品缩进报告抽象模型"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.action_sale_invoice_summary
+#: model:ir.actions.act_window,name:sh_sale_reports.action_sale_invoice_summary_xls
+#: model:ir.actions.report,name:sh_sale_reports.sh_sale_invoice_summary_action
+#: model:ir.ui.menu,name:sh_sale_reports.sh_sale_invoice_summary_report_menuitem
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_xls_view
+msgid "Sale/Invoice Summary"
+msgstr "销售/发票摘要"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+msgid "Sales Amount"
+msgstr "销售额"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_analysis_wizard
+msgid "Sales Analysis Wizard"
+msgstr "销售分析向导"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_analysis_xls
+msgid "Sales Analysis Xls Report"
+msgstr "销售分析XLS报告"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.action_sale_by_category
+#: model:ir.actions.act_window,name:sh_sale_reports.action_sale_by_category_xls
+#: model:ir.ui.menu,name:sh_sale_reports.sh_sale_by_category_report_menuitem
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_xls_view
+msgid "Sales By Product Category"
+msgstr "产品类别的销售"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard__team_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__team_id
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__team_id
+msgid "Sales Channel"
+msgstr "销售渠道"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sales_detail_xls
+msgid "Sales Detail XLS"
+msgstr "销售细节xls."
+
+#. module: sh_sale_reports
+#: model:ir.actions.report,name:sh_sale_reports.sh_sale_details_report_action
+#: model:ir.ui.menu,name:sh_sale_reports.sh_sale_details_report_menuitem
+msgid "Sales Details Report"
+msgstr "销售细节报告"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_analysis_wizard__report_by__order
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_analysis_wizard__sh_status__sale
+#: model:ir.model.fields.selection,name:sh_sale_reports.selection__sh_sale_product_indent_wizard__sh_status__sale
+msgid "Sales Order"
+msgstr "销售订单"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.action_sale_product_indent
+#: model:ir.actions.act_window,name:sh_sale_reports.action_sale_product_indent_xls
+#: model:ir.actions.report,name:sh_sale_reports.sh_sale_product_indent_action
+#: model:ir.ui.menu,name:sh_sale_reports.sh_sale_product_indent_report_menuitem
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_xls_view
+msgid "Sales Product Indent"
+msgstr "销售产品缩进"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.action_sales_product_profit
+#: model:ir.actions.act_window,name:sh_sale_reports.action_sales_product_profit_xls
+#: model:ir.actions.report,name:sh_sale_reports.sh_sales_product_profit_action
+#: model:ir.ui.menu,name:sh_sale_reports.sh_sales_product_profit_report_menuitem
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_xls_view
+msgid "Sales Product Profit"
+msgstr "销售产品利润"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_product_profit_wizard
+msgid "Sales Product Profit Wizard"
+msgstr "销售产品利润向导"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_product_profit_xls
+msgid "Sales Product Profit Xls Report"
+msgstr "销售产品利润XLS报告"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_report_sh_sale_reports_sh_sales_product_profit_doc
+msgid "Sales Product Profit report abstract model"
+msgstr "销售产品利润报告抽象模型"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_salesperson_report_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_sales_report_by_sale_person_view
+msgid "Sales Report By Sale Person"
+msgstr "销售报告销售人员"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.action_sales_report_by_sale_person_excel_form
+msgid "Sales Report By Sale Person Excel"
+msgstr "销售报告销售人员Excel"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.sh_sale_report_salesperson_action
+#: model:ir.actions.report,name:sh_sale_reports.sh_sale_report_salesperson_report
+#: model:ir.ui.menu,name:sh_sale_reports.sh_sale_report_salesperson_menuitem
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_report_salesperson_wizard_form_view
+msgid "Sales Report By Saleperson"
+msgstr "Saleperson的销售报告"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_report_wizard
+msgid "Sales/Invoice Summary"
+msgstr "销售/发票摘要"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard__user_ids
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard__user_ids
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+msgid "Salesperson"
+msgstr "销售人员"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sale_report_salesperson_xls
+msgid "Salesperson XLS"
+msgstr "销售人员XLS."
+
+#. module: sh_sale_reports
+#: model:res.groups,name:sh_sale_reports.sh_payment_report_group
+msgid "Show Salesperson Field In Invoice Payment Report"
+msgstr "在发票付款报告中显示Salesperson字段"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sale_order_report__start_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard__date_start
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__sh_start_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_category_wizard__sh_start_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard__start_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard__sh_start_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__sh_start_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_profit_wizard__sh_start_date
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard__date_start
+msgid "Start Date"
+msgstr "开始日期"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_payment_report_wizard__state
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_analysis_wizard__sh_status
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_details_report_wizard__state
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_invoice_summary_wizard__sh_status
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_product_indent_wizard__sh_status
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_sale_report_salesperson_wizard__state
+msgid "Status"
+msgstr "地位"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+msgid "Subtotal"
+msgstr "小计"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+msgid "Tax"
+msgstr "税"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_doc
+msgid "Taxes"
+msgstr "税收"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_cus_sale_analysis_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_payment_report_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_salesperson_report_doc
+msgid "To"
+msgstr "到"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__date_to
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__date_to
+msgid "To Date"
+msgstr "迄今为止"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_top_customers_xls
+msgid "Top Customer XLS"
+msgstr "顶级客户XL"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_sh_top_customers
+msgid "Top Customer Xlsx"
+msgstr "顶级客户XLSX."
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.sh_tc_top_customer_wizard_action
+#: model:ir.actions.report,name:sh_sale_reports.sh_tc_top_customers_report_action
+#: model:ir.model,name:sh_sale_reports.model_sh_tc_top_customer_wizard
+#: model:ir.ui.menu,name:sh_sale_reports.sh_tc_top_customer_wizard_menuitem
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customer_wizard_form
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tc_top_customers_doc
+msgid "Top Customers"
+msgstr "顶级客户"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.sh_tsp_top_selling_product_model_tree_action
+#: model:ir.actions.act_window,name:sh_sale_reports.sh_tsp_top_selling_product_wizard_action
+#: model:ir.actions.report,name:sh_sale_reports.sh_top_selling_product_report_action
+#: model:ir.ui.menu,name:sh_sale_reports.sh_tsp_top_selling_products_main
+#: model:ir.ui.menu,name:sh_sale_reports.sh_tsp_view_top_selling_products
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_top_selling_product_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_tsp_top_selling_product_wizard_form_view
+msgid "Top Selling Products"
+msgstr "最畅销产品"
+
+#. module: sh_sale_reports
+#: model:ir.actions.act_window,name:sh_sale_reports.action_top_selling_products
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_top_selling_products
+msgid "Top Selling Products Xlsx"
+msgstr "顶级销售产品XLSX"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_top_selling_products
+msgid "Top Selling XLS"
+msgstr "最畅销XL"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_tsp_top_selling_product_wizard
+msgid "Top selling product Transient model to just filter products"
+msgstr "顶级销售产品暂时模型只是过滤产品"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_tsp_top_selling_product
+msgid ""
+"Top selling product persistence model to  used in snippet or any other "
+"places"
+msgstr ""
+"顶级销售产品持久模型以用于片段或其他"
+"地点"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.rpt_sale_order_day_wise
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_payment_report_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_doc
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_salesperson_report_doc
+msgid "Total"
+msgstr "全部的"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tsp_top_selling_product_wizard__product_uom_qty
+msgid "Total Qty. Sold"
+msgstr "总计。卖"
+
+#. module: sh_sale_reports
+#: model:ir.model.fields,field_description:sh_sale_reports.field_sh_tc_top_customer_wizard__amount_total
+msgid "Total Sales Amount"
+msgstr "总销售额"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_details_report_doc
+msgid "Total:"
+msgstr "全部的："
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_doc
+msgid "UOM"
+msgstr "uom."
+
+#. module: sh_sale_reports
+#: model:ir.ui.menu,name:sh_sale_reports.sh_tsp_update_top_selling_products
+msgid "Update Top Selling Products"
+msgstr "更新顶级销售产品"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_day_wise_sales_xls
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_sales_detail_view
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_sh_top_customers
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.xls_top_selling_products
+msgid "Xls Report"
+msgstr "XLS报告"
+
+#. module: sh_sale_reports
+#: code:addons/sh_sale_reports/sh_top_customers/wizard/top_customer_wizard.py:0
+#: code:addons/sh_sale_reports/sh_top_selling_product/wizard/top_selling_wizard.py:0
+#, python-format
+msgid "compare from date must be less than compare to date."
+msgstr "与日期相比必须少于与日期比较。"
+
+#. module: sh_sale_reports
+#: code:addons/sh_sale_reports/sh_top_customers/wizard/top_customer_wizard.py:0
+#: code:addons/sh_sale_reports/sh_top_selling_product/wizard/top_selling_wizard.py:0
+#, python-format
+msgid "from date must be less than to date."
+msgstr "从日期必须少于约会。"
+
+#. module: sh_sale_reports
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_customer_sales_analysis_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_by_category_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_invoice_summary_report_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sale_product_indent_wizard
+#: model_terms:ir.ui.view,arch_db:sh_sale_reports.sh_sales_product_profit_wizard
+msgid "or"
+msgstr "或者"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_report_sh_sale_reports_sh_payment_report_doc
+msgid "payment report abstract model"
+msgstr "付款报告抽象模型"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_payment_report_wizard
+msgid "payment report wizard model"
+msgstr "付款报告向导模型"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_report_sh_sale_reports_sh_sale_details_report_doc
+msgid "sale details abstract model"
+msgstr "销售详情抽象模型"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_report_sh_sale_reports_sh_salesperson_report_doc
+msgid "sale person report abstract model"
+msgstr "销售人员报告抽象模型"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_details_report_wizard
+msgid "sh sale details report wizard model"
+msgstr "SH销售详情报告向导模型"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_sh_sale_report_salesperson_wizard
+msgid "sh sale report salesperson wizard model"
+msgstr "SH销售报告销售人员向导模型"
+
+#. module: sh_sale_reports
+#: code:addons/sh_sale_reports/sh_customer_sales_analysis/wizard/customer_sales_analysis_wizard.py:0
+#: code:addons/sh_sale_reports/sh_payment_report/wizard/payment_report_wizard.py:0
+#: code:addons/sh_sale_reports/sh_product_sales_indent/wizard/sale_product_indent_wizard.py:0
+#: code:addons/sh_sale_reports/sh_sale_by_category/wizard/sale_by_category_wizard.py:0
+#: code:addons/sh_sale_reports/sh_sale_details_report/wizard/sale_details_report_wizard.py:0
+#: code:addons/sh_sale_reports/sh_sale_invoice_summary/wizard/sale_invoice_summary_wizard.py:0
+#: code:addons/sh_sale_reports/sh_sale_product_profit/wizard/sales_product_profit_wizard.py:0
+#: code:addons/sh_sale_reports/sh_sale_report_salesperson/wizard/report_salesperson_wizard.py:0
+#, python-format
+msgid "start date must be less than end date."
+msgstr "开始日期必须少于结束日期。"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_report_sh_sale_reports_sh_tc_top_customers_doc
+msgid "top customer  abstract model"
+msgstr "顶级客户抽象模型"
+
+#. module: sh_sale_reports
+#: model:ir.model,name:sh_sale_reports.model_report_sh_sale_reports_sh_top_selling_product_doc
+msgid "top selling product report abstract model"
+msgstr "顶级销售产品报告抽象模型"

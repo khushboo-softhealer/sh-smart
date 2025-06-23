@@ -1,0 +1,51 @@
+<odoo>
+	<record id="sh_resource_calendar_attendance_search_view" model="ir.ui.view">
+        <field name="name">resource.calendar.attendance.search</field>
+        <field name="model">resource.calendar.attendance</field>
+        <field name="arch" type="xml">
+            <search string="Resource Attendance">
+                <field name="name" />
+                <field name="dayofweek" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="hour_from" />
+                <field name="hour_to" />
+                <field name="sh_break" />
+                <field name="day_period" />
+                <separator />
+
+                <group expand="0" string="Group by...">
+                    <filter string="Name" name="dayofweek" context="{'group_by': 'name'}" />
+                    <filter string="Day of Week" name="dayofweek" context="{'group_by': 'dayofweek'}" />
+                    <filter string="Starting Date" name="date_from" context="{'group_by': 'date_from'}" />
+                    <filter string="End Date" name="date_to" context="{'group_by': 'date_to'}" />
+                    <filter string="Work From" name="hour_from" context="{'group_by': 'hour_from'}" />
+                    <filter string="Work To" name="hour_to" context="{'group_by': 'hour_to'}" />
+                    <filter string="Break" name="sh_break" context="{'group_by': 'sh_break'}" />
+                    <filter string="Day Period" name="day_period" context="{'group_by': 'day_period'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+	
+    <record id="sh_view_resource_calendar_attendance_tree" model="ir.ui.view">
+	    	<field name="name">resource.calendar.attendance</field>
+	    	<field name="model">resource.calendar.attendance</field>
+	    	<field name="inherit_id" ref="resource.view_resource_calendar_attendance_tree"/>
+	    	<field name="arch" type="xml">
+	    		<field name="hour_to" position="after">
+	    			<field name="sh_break" widget="float_time"/>
+	    			<field name="sh_wroked_hours"/>
+	    		</field>
+	    	</field>
+	</record>
+
+	<record id="resource_calendar_form_action_from_calendar" model="ir.actions.act_window">
+        <field name="name">Resource Attendance</field>
+        <field name="res_model">resource.calendar.attendance</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('calendar_id', '=', active_id)]</field>
+        <field name="context">{ 'default_calendar_id': active_id, 'search_default_calendar_id': active_id}</field>
+        <field name="search_view_id" ref="sh_resource_calendar_attendance_search_view" />
+    </record>
+</odoo>

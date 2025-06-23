@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_update_mass_blog_tags" model="ir.actions.server">
+        <field name="name">Mass Update Blog Tags</field>
+        <field name="model_id" ref="website_blog.model_blog_post" />
+        <field name="binding_model_id" ref="website_blog.model_blog_post" />
+        <field name="state">code</field>
+        <field name="binding_view_types">list</field>
+        <field name="code"> action = model.action_update_tags_wizard() </field>
+    </record>
+
+</odoo>

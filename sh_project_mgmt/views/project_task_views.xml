@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_project_task_project_mgmt_tree_view" model="ir.ui.view">
+        <field name="name">project.task.project.mgmt.tree</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_tree2" />
+        <field name="arch" type="xml">
+            <field name="stage_id" position="after">
+                <field name="sh_pricing_mode" optional="hide"/>
+                <field name="sh_fp_based_on" optional="hide"/>
+                <field name="sh_tm_based_on" optional="hide"/>
+                <field name="project_type_selection" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="project_stage_id" optional="hide" groups="sh_project_task_base.group_project_officer"/>
+                <field name="project_start_date" optional="hide" groups="sh_project_task_base.group_project_officer"/>
+                <field name="project_end_date" optional="hide" groups="sh_project_task_base.group_project_officer"/>
+                <field name="project_allocated_hours" optional="hide" groups="sh_project_task_base.group_project_officer"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="sh_view_task_search_form" model="ir.ui.view">
+        <field name="name">sh.project.task.search.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//search//filter[@name='inactive']" position="after">
+                <separator/>
+                <filter name="filter_profitable_project" string="Profitable Project" domain="[('project_total_profit', '>', 0)]" groups="sh_project_mgmt.group_project_pl"/>
+                <filter name="filter_loss_making_project" string="Loss Making Project" domain="[('project_total_profit', '&lt;=', 0)]" groups="sh_project_mgmt.group_project_pl" />
+                <filter name="filter_success_pack" string="Success Pack" domain="[('sh_tm_based_on', '=', 'success_pack')]" groups="sh_project_task_base.group_project_officer"/>
+                <filter name="filter_billable" string="Billable" domain="[('sh_tm_based_on', '=', 'billable')]"  groups="sh_project_task_base.group_project_officer"/>
+                <filter name="filter_fix_price" string="Fixed Price" domain="[('sh_pricing_mode', '=', 'fp')]" groups="sh_project_task_base.group_project_officer" />
+            </xpath>
+
+            <xpath expr="//search//group//filter[@name='group_create_date']" position="after">
+                <separator/>
+                <filter string="Project Type" name="group_project_type" context="{'group_by': 'project_type_selection'}" groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project Stage" name="group_project_stage" context="{'group_by': 'project_stage_id'}" groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project Start Date" name="group_project_start_date" context="{'group_by': 'project_start_date'}" groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project End Date" name="group_project_end_date" context="{'group_by': 'project_end_date'}" groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project Pricing Model" name="group_sh_pricing_mode" context="{'group_by': 'sh_pricing_mode'}" groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project FP Based On" name="group_sh_fp_based_on" context="{'group_by': 'sh_fp_based_on'}" groups="sh_project_task_base.group_project_officer"/>
+                <filter string="Project TM Based On" name="group_sh_tm_based_on" context="{'group_by': 'sh_tm_based_on'}" groups="sh_project_task_base.group_project_officer"/>
+
+            </xpath>
+        </field>
+    </record>
+
+
+    <!-- <search string="Tasks">
+        <field name="name" string="Task" filter_domain="['|', ('name', 'ilike', self), ('id', 'ilike', self)]"/>
+        <field name="tag_ids"/>
+        <field name="user_ids" filter_domain="[('user_ids.name', 'ilike', self), ('user_ids.active', 'in', [True, False])]"/>
+        <field name="milestone_id" groups="project.group_project_milestone"/>
+        <field name="ancestor_id" groups="project.group_subtask_project"/>
+        <field name="stage_id"/>
+        <field name="partner_id" operator="child_of"/>
+        <field name="description"/>
+        <field name="rating_last_text"/>
+        <filter string="My Tasks" name="my_tasks" domain="[('user_ids', 'in', uid)]"/>
+        <filter string="Followed Tasks" name="followed_by_me" domain="[('message_is_follower', '=', True)]"/>
+        <filter string="Unassigned" name="unassigned" domain="[('user_ids', '=', False)]"/>
+        <separator/>
+        <filter string="High Priority" name="high_priority" domain="[('priority', '=', 1)]"/>
+        <filter string="Low Priority" name="low_priority" domain="[('priority', '=', 0)]"/>
+        <separator/>
+        <filter string="Blocked" name="blocked" domain="[('is_blocked', '=', True)]" groups="project.group_project_task_dependencies"/>
+        <filter string="Not Blocked" name="not_blocked" domain="[('is_blocked', '=', False), ('is_private', '=', False)]" groups="project.group_project_task_dependencies"/>
+        <separator groups="project.group_project_task_dependencies"/>
+        <filter string="Blocking" name="blocking" domain="[('is_closed', '=', False), ('dependent_ids', '!=', False)]" groups="project.group_project_task_dependencies"/>
+        <filter string="Not Blocking" name="not_blocking" domain="['|', ('is_closed', '=', True), ('dependent_ids', '=', False), ('is_private', '=', False)]" groups="project.group_project_task_dependencies"/>
+        <separator groups="project.group_project_task_dependencies"/>
+        <filter string="Late Milestones" name="late_milestone" domain="[('is_closed', '=', False), ('has_late_and_unreached_milestone', '=', True)]" groups="project.group_project_milestone"/>
+        <filter string="Late Tasks" name="late" domain="[('date_deadline', '&lt;', context_today().strftime('%Y-%m-%d')), ('is_closed', '=', False)]"/>
+        <filter string="Tasks Due Today" name="tasks_due_today" domain="[('date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"/>
+        <filter string="Stalling for 30 Days+" name="stall_last_30_days" domain="[('is_closed', '=', False), ('date_last_stage_update', '&lt;=', datetime.datetime.now() - relativedelta(days=30))]"/>
+        <separator/>
+        <filter string="Open Tasks" name="open_tasks" domain="[('is_closed', '=', False)]"/>
+        <filter string="Closed Tasks" name="closed_tasks" domain="[('is_closed', '=', True)]"/>
+        <filter string="Closed Last 7 Days" name="closed_last_7_days" domain="[('is_closed', '=', True), ('date_last_stage_update', '&gt;', datetime.datetime.now() - relativedelta(days=7))]"/>
+        <filter string="Closed Last 30 Days" name="closed_last_30_days" domain="[('is_closed', '=', True), ('date_last_stage_update', '&gt;', datetime.datetime.now() - relativedelta(days=30))]"/>
+        <separator/>
+        <filter name="rating_satisfied" string="Satisfied" domain="[('rating_avg', '&gt;=', 3.66)]" groups="project.group_project_rating"/>
+        <filter name="rating_okay" string="Okay" domain="[('rating_avg', '&lt;', 3.66), ('rating_avg', '&gt;=', 2.33)]" groups="project.group_project_rating"/>
+        <filter name="dissatisfied" string="Dissatisfied" domain="[('rating_avg', '&lt;', 2.33), ('rating_last_value', '!=', 0)]" groups="project.group_project_rating"/>
+        <filter name="no_rating" string="No Rating" domain="[('rating_last_value', '=', 0)]" groups="project.group_project_rating"/>
+        <separator/>
+        <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction', '=', True)]"/>
+        <separator/>
+        <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+        <separator/>
+        <filter invisible="1" string="Late Activities" name="activities_overdue" domain="[('my_activity_date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]" help="Show all records which has next action date is before today"/>
+        <filter invisible="1" string="Today Activities" name="activities_today" domain="[('my_activity_date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"/>
+        <filter invisible="1" string="Future Activities" name="activities_upcoming_all" domain="[('my_activity_date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))]"/>
+        <group expand="0" string="Group By">
+            <filter string="Stage" name="stage" context="{'group_by': 'stage_id'}"/>
+            <filter string="Personal Stage" name="personal_stage" context="{'group_by': 'personal_stage_type_ids'}"/>
+            <filter string="Assignees" name="user" context="{'group_by': 'user_ids'}"/>
+            <filter string="Ancestor Task" name="groupby_ancestor_task" context="{'group_by': 'ancestor_id'}" groups="project.group_subtask_project"/>
+            <filter string="Milestone" name="milestone" context="{'group_by': 'milestone_id'}" groups="project.group_project_milestone"/>
+            <filter string="Customer" name="customer" context="{'group_by': 'partner_id'}"/>
+            <filter string="Kanban State" name="kanban_state" context="{'group_by': 'kanban_state'}"/>
+            <filter string="Deadline" name="date_deadline" context="{'group_by': 'date_deadline'}"/>
+            <filter string="Creation Date" name="group_create_date" context="{'group_by': 'create_date'}"/>
+        </group>
+    </search> -->
+</odoo>

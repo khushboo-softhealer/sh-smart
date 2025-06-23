@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+	<!-- terms and conditions Page -->
+	<template id="theme_softhealer_store_website_terms_and_conditions_tmpl" name="Terms and Conditions for Store">
+		<t t-call="website.layout">
+			<div class="oe_structure oe_empty" id="wrap">
+				<section id="sh_terms_condition_banner" class="sh_softhealer_store_terms_condition_banner sh_other_page_banner o_colored_level" data-snippet="theme_softhealer_store_terms_and_conditions_banner_snippet_template" data-name="Banner" style="background-image: none;">
+					<div class="container">
+						<div class="sh_banner_content">
+							<h1 class="sh_banner_title o_default_snippet_text">Terms and Conditions</h1>
+							<ul class="sh_banner_breadcrumb">
+								<li>
+									<a class="sh_banner_breadcrumb_link o_default_snippet_text" href="/">Home <span class="sh_banner_breadcrumb_icon fa fa-angle-right">​</span>
+									</a>
+								</li>
+								<li>
+									<span class="sh_banner_normal_text o_default_snippet_text">Terms and Conditions</span>
+								</li>
+							</ul>
+							<p class="sh_banner_date o_default_snippet_text">
+								Please read these Terms and Conditions ("Agreement") carefully before using
+								or purchasing
+								any software from our store. This Agreement sets forth the legally binding
+								terms and
+								conditions for the sale of software by our company to you, the customer.</p>
+						</div>
+					</div>
+				</section>
+				<section class="sh_softhealer_store_terms_condition o_colored_level" id="sh_softhealer_store_terms_condition" data-snippet="theme_softhealer_store_terms_and_conditions_rules_snippet_template" data-name="Terms and Conditions" style="background-image: none;">
+					<div class="container">
+						<div class="sh_terms_condition">
+							<div class="row sh_content_box">
+							<div class="col-xxl-10 col-xl-10 col-lg-10 col-md-12 mx-auto d-block o_colored_level">
+								<h2 class="sh_sub_heading o_default_snippet_text">1. Acceptance of Terms and Conditions</h2>		
+								<p class="sh_text o_default_snippet_text">
+									By accessing our website or purchasing software from our company, you acknowledge and
+									agree to be bound by the terms and conditions outlined in this Agreement. If you do not
+									agree with these terms, you should not use our website or purchase any software from us.
+								</p>
+
+								<h2 class="sh_sub_heading o_default_snippet_text">2. Software License</h2>		
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text"><span class="sub_title o_default_snippet_text">Ownership : </span> All software purchased from softhealer is licensed, not sold. We retain full
+									ownership and intellectual property rights to the software.</div>
+								</div>
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text"><span class="sub_title o_default_snippet_text"> License Grant : </span> We grant you a non-exclusive, non-transferable license to use the
+										software for your personal or business use, as specified in the software's documentation or
+										license agreement.</div>
+								</div>
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text"><span class="sub_title o_default_snippet_text"> Restrictions : </span>  We grant you a non-exclusive, non-transferable license to use the
+										software for your personal or business use, as specified in the software's documentation or
+										license agreement.</div>
+								</div>
+								<h2 class="sh_sub_heading o_default_snippet_text">3. Ordering and Payment</h2>		
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text"><span class="sub_title o_default_snippet_text">Orders : </span> All orders for software are subject to acceptance by softhealer. We reserve the
+									right to refuse or cancel any order at our discretion.</div>
+								</div>
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text"><span class="sub_title o_default_snippet_text"> Pricing : </span> The prices for software are as stated on our website at the time of purchase.
+										We reserve the right to change the prices without prior notice.</div>
+								</div>
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text"><span class="sub_title o_default_snippet_text"> Payment : </span>  You agree to pay the full amount for the software at the time of purchase.
+										Payment can be made through the available payment methods specified on our website.</div>
+								</div>
+								<h2 class="sh_sub_heading o_default_snippet_text">4. Delivery and Support</h2>		
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text"><span class="sub_title o_default_snippet_text"> Delivery : </span> Upon successful payment, we will provide you with the necessary instructions
+										and access credentials to download and install the software.</div>
+								</div>
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text"><span class="sub_title o_default_snippet_text"> Support : </span> We will provide technical support and assistance in accordance with the terms
+									specified in the software's documentation or support agreement. Any additional support
+									services may be subject to additional charges.</div>
+								</div>
+								<h2 class="sh_sub_heading o_default_snippet_text">5. Refunds</h2>		
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text"><span class="sub_title o_default_snippet_text"> Refunds : </span> We offer refunds in accordance with the softhealer refund policy, which is
+									available on our website. Please review the policy carefully before making a purchase.
+									To know more <a href="#return" class="o_default_snippet_text">Follow this link</a></div>
+								</div>
+								<h2 class="sh_sub_heading o_default_snippet_text">6. Limitation of Liability</h2>		
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text">To the maximum extent permitted by law, softhealer shall not be liable for any direct, indirect,
+									incidental, consequential, or special damages arising out of or in connection with the use or
+									inability to use the software, even if advised of the possibility of such damages.</div>
+								</div>
+								<h2 class="sh_sub_heading o_default_snippet_text">7. Governing Law and Jurisdiction</h2>		
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text">By accessing and using <a href=" https://store.softhealer.com" target="_blank"> https://store.softhealer.com</a>, you acknowledge and agree that any disputes arising between you and Softhealer Technologies Pvt Ltd shall be governed by the laws of India.</div>
+								</div>
+								<h2 class="sh_sub_heading o_default_snippet_text">8. Modifications to the Agreement</h2>		
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text">We reserve the right to modify or update this Agreement at any time without prior notice. Any
+									changes will be effective immediately upon posting on our website. Your continued use of
+									our website or purchase of a software after any modifications constitutes your acceptance of
+									the revised terms.</div>
+								</div>
+								<h2 class="sh_sub_heading o_default_snippet_text">9. Entire Agreement</h2>		
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text">This Agreement constitutes the entire agreement between you and softhealer regarding the
+										sale of software and supersedes any prior agreements or understandings, whether written or
+										oral.</div>
+								</div>
+								<div class="sh_text">
+									<div class="sh_icon"><span class="fa fa-circle"/></div><div class="sh_desc o_default_snippet_text">By using our website or purchasing software from softhealer, you acknowledge that you
+									have read, understood, and agreed to these Terms and Conditions. Please contact our
+									customer support for clarification if you have any questions or concerns.</div>
+								</div>
+							</div>
+							</div>
+							<div class="row sh_content_box" id="return">
+								
+								<div class="col-xxl-10 col-xl-10 col-lg-10 col-md-12 mx-auto d-block mt-5 o_colored_level">
+								<h2 class="sh_title_heading o_default_snippet_text">Return and Refund Policies</h2>
+								<p class="sh_text o_default_snippet_text">
+									We understand the importance of transparency and clear communication when it comes to
+									our return and refund policies for software services. As a provider of software services, we
+									would like to emphasize that software purchases are considered final and non-refundable.
+								</p>
+								<h2 class="sh_sub_heading o_default_snippet_text">1. Pre-Purchase Evaluation and Demos</h2>		
+								<p class="sh_text o_default_snippet_text">
+									We understand that selecting the right software service is crucial for your business. To make it easier in the decision-making process, we provide detailed product information and demonstration URLs when available. We encourage potential customers to take advantage of these resources to evaluate the software service and determine if it aligns with their requirements before making a purchase.
+								</p>
+								<h2 class="sh_sub_heading o_default_snippet_text">2. Technical Errors and Unresolved Bugs</h2>		
+								<p class="sh_text o_default_snippet_text">
+									If you encounter critical technical errors or persistent bugs within the software service that
+									our support team is unable to resolve, we will consider providing a refund. It is important to
+									note that this applies solely to issues stemming from the core functionality of the software
+									service itself. Refunds will not be granted for errors or conflicts arising from third-party
+									applications or custom modifications made by the customer.
+								</p>
+								<h2 class="sh_sub_heading o_default_snippet_text">3. Collaboration for Issue Resolution</h2>		
+								<p class="sh_text mb-4 o_default_snippet_text">
+									In order to effectively address issues, bugs, and errors, we require the cooperation and
+									assistance of our customers. When reporting any technical problems, customers are
+									requested to provide access to their server details, GitHub repository, or any other relevant
+									sources where our software has been installed. This access is crucial for our technical teams
+									to investigate, reproduce, and troubleshoot the reported issues effectively.
+								</p>
+								<p class="sh_text mb-4 o_default_snippet_text">
+									By granting access to the necessary resources, customers enable our teams to delve into
+									the specific environment where the software is deployed. This collaborative approach
+									ensures a more accurate assessment of the reported issues and facilitates efficient
+									resolution.
+								</p>
+								<p class="sh_text mb-4 o_default_snippet_text">
+									We understand the importance of safeguarding customer data and sensitive information.
+									Rest assured, any access provided will be treated with the utmost confidentiality and used
+									solely for the purpose of resolving the reported issues. Our teams strictly adhere to data
+									privacy and security protocols to ensure the protection of customer information.
+								</p>
+								<p class="sh_text mb-4 o_default_snippet_text">
+									We appreciate your understanding and willingness to collaborate during the issue-resolution
+									process. Your cooperation enables us to deliver effective solutions and enhance the overall
+									performance and reliability of our software services.
+								</p>
+								<p class="sh_text mb-4 o_default_snippet_text">
+									If you have any concerns or require further clarification regarding the collaboration process,
+									please do not hesitate to contact our support team. We are here to assist you throughout the
+									troubleshooting and resolution process.
+								</p>
+								<h2 class="sh_sub_heading o_default_snippet_text">4. Failure to Deliver Advertised Features</h2>		
+								<p class="sh_text">
+									We strive to ensure that our software services deliver all the advertised features and
+									functionalities. In the rare event that we are unable to provide a significant feature or
+									functionality as described in our product documentation and marketing materials, a refund
+									may be considered. Please note that minor variances, improvements, or changes in the
+									software service that do not significantly impact its core functionality may not be eligible for a
+									refund.
+								</p>
+								<h2 class="sh_sub_heading o_default_snippet_text">5. Refund Eligibility Timeframe</h2>		
+								<p class="sh_text o_default_snippet_text">
+									To be eligible for a refund, a request must be made within 60 days from the date of
+									purchase. After this period, refund requests may not be considered. We encourage
+									customers to thoroughly evaluate the software service and report any issues or concerns
+									promptly to our support team.
+								</p>
+								<h2 class="sh_sub_heading o_default_snippet_text">6. Support and Resolution</h2>		
+								<p class="sh_text mb-4 o_default_snippet_text">
+									While refunds are not our primary approach, we prioritize customer satisfaction and aim to provide exceptional support. Our support team is readily available to assist you with any challenges you may face while using our software service. We encourage you to reach out to our support team for prompt assistance and guidance in resolving any issues you encounter.
+								</p>
+								<p class="sh_text o_default_snippet_text">
+									We appreciate your understanding of our refund policy, which is designed to ensure fairness
+									and maintain the highest level of quality in our software services. We continuously strive to
+									deliver reliable and feature-rich solutions to meet your business needs. Should you have any
+									further questions or concerns regarding our refund policy, please do not hesitate to contact
+									our customer support team for clarification and assistance.											
+								</p>
+								<h2 class="sh_sub_heading o_default_snippet_text">7. Exceptional Customer Support</h2>		
+								<p class="sh_text o_default_snippet_text">
+									While we do not offer refunds or returns for purchased software services, we are committed
+									to providing exceptional customer support. Our dedicated support team is available to
+									address any issues, provide guidance, and assist with troubleshooting. If you encounter any
+									difficulties or have questions regarding the software service, please reach out to our support
+									team, and we will be glad to assist you.
+								</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				
+			</div>
+		</t>
+	</template>
+
+	<data noupdate="1">
+
+		<!-- Default pagese  below 2 record must put in no update 1-->
+		<record id="theme_softhealer_store_website_terms_and_conditions_page" model="website.page">
+			<field name="is_published">True</field>
+			<field name="url">/terms-and-conditions</field>
+			<field name="view_id" ref="theme_softhealer_store.theme_softhealer_store_website_terms_and_conditions_tmpl"/>
+			<field name="track">True</field>
+			<field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+		</record>
+  
+		<record id="theme_softhealer_store_website_terms_and_conditions_menu" model="website.menu">
+			<field name="name">Terms and Conditions</field>
+			<field name="url">/terms-and-conditions</field>
+			<field name="page_id" ref="theme_softhealer_store.theme_softhealer_store_website_terms_and_conditions_page"/>
+			<field name="sequence" type="int">10</field>
+			<field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+		</record>
+  
+	</data>
+
+</odoo>

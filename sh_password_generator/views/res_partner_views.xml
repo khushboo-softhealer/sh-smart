@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+  		<record id="view_partner_form_inherit" model="ir.ui.view">
+			<field name="name">view partner form  inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//form/sheet" position="before">
+					<header>
+						<button name="action_password" groups="sh_password_generator.group_password_user" type="object" string="Password"/>
+					</header>
+				</xpath>
+				<xpath expr="//notebook/page[@name='sales_purchases']" position="after">
+					<page string="Passwords">
+						<field name="password_o2m" groups="sh_password_generator.group_password_user">
+							<tree>
+								<field name="title"/>
+								<field name="username"/>
+								<field name="ip"/>
+								<field name="url"/>
+								<field name="decrypt_password"/>
+								<field name="note"/>
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

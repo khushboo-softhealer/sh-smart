@@ -1,0 +1,7 @@
+#o_wblog_index_content #o_wblog_posts_loop .o_wblog_post_list_author div {
+  display: none !important;
+}
+
+.o_kanban_view .o_theme_preview .o_button_area [name=button_remove_theme] {
+  display: none !important;
+}/*# sourceMappingURL=common.css.map */

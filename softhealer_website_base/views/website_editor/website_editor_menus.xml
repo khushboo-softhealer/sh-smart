@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Website Editor Parent Menus -->
+    <menuitem id="sh_website_editor_menu" name="Website Editor"
+        sequence="94" />
+
+    <menuitem id="sh_website_editor_site_menu" name="Site"
+        parent="softhealer_website_base.sh_website_editor_menu" sequence="10" />
+
+    <menuitem id="sh_website_editor_ecommerce_menu" name="eCommerce"
+        parent="softhealer_website_base.sh_website_editor_menu" sequence="20" />
+
+    <menuitem id="sh_website_editor_website_menu_menu" name="Website Menu"
+        action="website.action_website_menu"
+        groups="softhealer_website_base.group_softhealer_website_editor_website_menu"
+        parent="softhealer_website_base.sh_website_editor_site_menu" sequence="10" />
+
+    <menuitem id="sh_website_editor_contact_menu" name="Content"
+        parent="softhealer_website_base.sh_website_editor_site_menu" sequence="20" />
+
+    <!-- Hr Job Menu -->
+    <menuitem id="sh_website_editor_hr_job_menu"
+        groups="softhealer_website_base.group_softhealer_website_editor_job_position"
+        parent="softhealer_website_base.sh_website_editor_contact_menu"
+        action="softhealer_website_base.sh_website_editor_hr_job_action" sequence="10" />
+
+    <!-- Pages Menu -->
+    <menuitem id="sh_website_editor_pages_menu"
+        groups="softhealer_website_base.group_softhealer_website_editor_page"
+        parent="softhealer_website_base.sh_website_editor_contact_menu"
+        action="softhealer_website_base.sh_website_editor_pages_action" sequence="20" />
+
+    <!-- Blog Post Menu -->
+    <menuitem id="sh_website_editor_blog_post_page_menu" name="Blog Post"
+        groups="softhealer_website_base.group_softhealer_website_editor_blog_post"
+        parent="softhealer_website_base.sh_website_editor_contact_menu"
+        action="softhealer_website_base.sh_website_editor_blog_post_action" sequence="30" />
+
+    <!-- Blog Menu -->
+    <menuitem id="sh_website_editor_blog_blog_page_menu" name="Blog"
+        groups="softhealer_website_base.group_softhealer_website_editor_blog"
+        parent="softhealer_website_base.sh_website_editor_contact_menu"
+        action="softhealer_website_base.sh_website_editor_blog_blog_action" sequence="40" />
+
+    <!-- Website Popular Searches Menu -->
+    <menuitem id="sh_website_popular_searches_menu" name="Popular Searches"
+        groups="softhealer_website_base.group_softhealer_website_editor_popular_search"
+        parent="softhealer_website_base.sh_website_editor_contact_menu"
+        action="softhealer_website_base.sh_website_popular_searches_action" sequence="50" />
+
+    <!-- eCommerce Categories Menu -->
+    <menuitem id="sh_website_ecommerce_categories_menu" name="eCommerce Categories"
+        groups="softhealer_website_base.group_softhealer_website_editor_ecommerce_categories"
+        parent="softhealer_website_base.sh_website_editor_ecommerce_menu"
+        action="website_sale.product_public_category_action" sequence="10" />
+
+    <!-- Module Download Log Menu -->
+    <menuitem id="sh_website_ecommerce_categories_menu" name="Module Download Logs"
+        groups="softhealer_website_base.group_softhealer_website_editor_module_download_logs"
+        parent="softhealer_website_base.sh_website_editor_contact_menu"
+        action="softhealer_website_base.sh_module_download_log_action" sequence="10" />
+
+    <!-- HELPDESK -->
+    <menuitem id="sh_helpdesk_lead_qualification" name="Lead Qualification"
+        parent="sh_helpdesk.helpdesk_config_menu" sequence="20" />
+    
+    <menuitem id="sh_website_helpdesk_utm_campaign" name="Campaign"
+        groups="softhealer_website_base.group_softhealer_website_editor_dynamic_lead_qualification"
+        parent="softhealer_website_base.sh_helpdesk_lead_qualification"
+        action="softhealer_website_base.sh_module_utm_campaign_action" sequence="10" />
+    
+    <menuitem id="sh_website_helpdesk_utm_medium" name="Medium"
+        groups="softhealer_website_base.group_softhealer_website_editor_dynamic_lead_qualification"
+        parent="softhealer_website_base.sh_helpdesk_lead_qualification"
+        action="softhealer_website_base.sh_module_utm_medium_action" sequence="10" />
+
+    <menuitem id="sh_website_helpdesk_utm_source" name="Source"
+        groups="softhealer_website_base.group_softhealer_website_editor_dynamic_lead_qualification"
+        parent="softhealer_website_base.sh_helpdesk_lead_qualification"
+        action="softhealer_website_base.sh_module_utm_source_action" sequence="10" />
+
+    <!-- Product Menu -->
+    <menuitem id="sh_website_editor_product_menu" name="Product"
+        parent="softhealer_website_base.sh_website_editor_site_menu" sequence="21" />
+
+    <menuitem id="product_meta_editor_menu" name="Product (for Meta)"
+        groups="softhealer_website_base.group_softhealer_website_editor_product"
+        parent="softhealer_website_base.sh_website_editor_product_menu"
+        action="softhealer_website_base.product_template_editor_action" sequence="10" />
+
+</odoo>

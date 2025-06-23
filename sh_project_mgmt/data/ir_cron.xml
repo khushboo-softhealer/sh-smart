@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--  Cron to Auto Close Project -->
+    <data noupdate="1"> 
+        <record model="ir.cron" id="sh_auto_close_project_cron">
+            <field name="name">Project : Auto Close</field>
+            <field name="active" eval="True" />
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False" />
+            <field name="model_id" ref="sh_project_mgmt.model_project_project" />
+            <field name="state">code</field>
+            <field name="code">model.action_auto_close_project()</field>
+        </record>
+    </data>
+
+    <record id="sales_estimated_hrs_price_in_usd" model="ir.config_parameter">
+    	  <field name="key">sh_project_mgmt.sales_estimated_hrs_price_in_usd</field>
+		  <field name="value">15</field>
+    </record>
+    
+</odoo>

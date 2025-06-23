@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="resource_calendar_attendance_inherit_view_form" model="ir.ui.view">
+        <field name="name">resource.calendar.attendance.inherit.view.form</field>
+        <field name="model">resource.calendar.attendance</field>
+        <field name="inherit_id" ref="resource.view_resource_calendar_attendance_tree"/>
+        <field name="arch" type="xml">
+            <field name="day_period" position="after">
+                <field name="high_priority"/>
+                <button  class="fa fa-copy" title="Quick Copy" name="copy_line" type="object"></button>
+            </field>            
+        </field>
+    </record>
+</odoo>

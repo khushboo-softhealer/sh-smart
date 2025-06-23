@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate='1'>  
+
+        <!-- =============== All Pages and Menu ================ -->        
+    
+        <!-- Company Page  -->
+    
+        <record id="theme_softhealer_website_company_page_menu" model="website.menu">
+            <field name="name">Company</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">1</field>
+            <field name="url">/company</field>     
+        </record>   
+
+        <!-- Company Page  -->
+
+        <!-- our services Page  -->
+    
+        <record id="theme_softhealer_website_our_service_page_menu" model="website.menu">
+            <field name="name">Our Service</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">1</field>
+            <field name="url">/our-services</field>     
+        </record>   
+
+        <!-- our services Page  -->
+
+
+        <!-- Solutions Page  -->
+    
+        <record id="theme_softhealer_website_solutions_page_menu" model="website.menu">
+            <field name="name">Solutions</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">1</field>
+            <field name="url">/solutions</field>     
+        </record>   
+
+        <!-- our services Page  -->
+
+        <!-- Contact Us Page  -->
+
+        <!-- <record id="theme_softhealer_website_contact_us_page_menu" model="website.menu">
+            <field name="name">Contact Us</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="page_id" ref="theme_softhealer_website.theme_softhealer_website_contact_us_page" />
+            <field name="sequence" type="int">1</field>
+            <field name="url">/contact-us</field>     
+        </record>  -->
+    
+        <!-- Contact Us Page  -->
+
+        <!--Career-->
+        <record id="sh_softhealer_website_career_page_menu" model="website.menu">
+            <field name="name">Career</field>
+            <field name="url">/jobs</field>
+            <field name="parent_id" ref="website.main_menu"/>
+        </record>
+        <!--Career-->
+
+        <!-- Support Page  -->
+        <record id="theme_softhealer_website_website_support_template_menu" model="website.menu">
+            <field name="name">Support</field>
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="sequence" type="int">30</field>
+            <field name="url">/support</field>
+        </record>
+    
+        <!-- Support Page  -->
+
+    </data>
+</odoo>

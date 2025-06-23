@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_password_manager_edit_project" model="ir.ui.view">
+        <field name="name">sh.project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            
+            <!-- Password Line In Project -->
+            <xpath expr="//notebook" position="inside">
+                <page name="password_line" string="Password" groups="sh_password_generator.group_password_user">
+                    <field name="sh_password_generator_line" />
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

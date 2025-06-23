@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_knowledge_article_inherit" inherit_id="sh_knowledge_base_customised.report_knowledge_article">
+        <xpath expr="//div[hasclass('page')]" position="inside">
+            <div               
+                style="position: absolute; opacity: 0.10; z-index: 1000; transform: rotate(300deg); -webkit-transform: rotate(300deg); width: 130%; left: 0; top: 75%; transform: translateY(-50%) rotate(300deg); font-size: 100px;"
+            >
+                <strong style="color:grey;opacity: 0.10">DUPLICATED</strong>
+            </div>
+        </xpath>
+    </template>
+</odoo>

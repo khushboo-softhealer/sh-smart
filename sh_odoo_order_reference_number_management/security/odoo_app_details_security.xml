@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="sh_odoo_order_reference_odoo_app_details" model="res.groups">
+        <field name="name">Show Odoo Apps details tab in ticket</field>
+    </record>
+</odoo>

@@ -1,0 +1,76 @@
+#sh_garba_night_2024_banner {
+    @include sh_other_page_banner;
+}
+//  banner-end //
+
+
+#sh_diwali_celebration_banner_section{
+    padding:50px 0px; position: relative;
+
+    h1.sh_heading_title{
+        font-size:var(--sh-section-heading-font-size);font-weight:var(--sh-section-heading-font-weight);line-height:var(--sh-section-heading-line-height);color:var(--sh-section-heading-font-color);margin-bottom:20px; text-align: center;
+        @include media-breakpoint-only(md){
+            font-size:var(--sh-section-heading-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size:var(--sh-section-heading-font-size-mobile);
+        }
+    }
+    p.sh_text{
+        font-size: var(--sh-section-heading-sub-title-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);text-align: center;
+        @include media-breakpoint-only(md){
+            font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+        }
+        @include media-breakpoint-down(md){
+            font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+        }
+    }
+}
+
+.diwali_group_image_section{
+    padding:0px 0px 50px;position: relative;
+    .sh_image_box{
+        height:600px;width:100%;border-radius:20px;position: relative;overflow:hidden;
+        @include media-breakpoint-only(md){
+            height:350px;
+        }
+        @include media-breakpoint-down(md){
+            height:240px;
+        }
+        img{
+            height:100%; width:100%;border-radius:20px;object-fit: cover;
+        }
+        &:after{
+            content: "";position: absolute;width: 200%;height: 0%;left: 50%;top: 50%;background-color: rgba(86, 76, 182, .3);transform: translate(-50%, -50%) rotate(-45deg);z-index: 1;
+        }
+        &:hover{
+            &:after{
+                height: 250%;transition: all 600ms linear;background-color: transparent;
+            }
+        }
+    }
+    .sh_description_box{
+        border-radius: 20px;padding: 30px 0px 0px; 
+
+        h2.sh_title_box{
+            text-decoration: none;font-size:30px;line-height: var(--sh-website-heading-title-line-height);font-weight: 600;text-transform: capitalize;
+            color: var(--sh-section-heading-font-color);text-decoration: none;transition: .2s all;
+            @include media-breakpoint-only(md) {
+                font-size: 18px !important;
+            }
+            @include media-breakpoint-down(md) {
+                font-size: 16px !important;
+            }
+            
+        }
+
+      p.sh_text{  font-size: var(--sh-section-heading-sub-title-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: var(--sh-section-heading-sub-title-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet);
+            }
+            @include media-breakpoint-down(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile);
+            }
+        }
+    }
+}

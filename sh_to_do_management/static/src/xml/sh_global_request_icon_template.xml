@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template_sh" xml:space="preserve">
+
+
+    <t t-inherit="sh_global_requests.global.request.menu" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('sh_global_submenu_list_cls')]" position="inside">
+            <span
+                role="menuitem"
+                class="dropdown-item request_item assignment_global d-none" type='assignment'
+            >
+                <li >
+                    Assignment
+                </li>
+                <li>
+                    <a class=" btn btn-primary fa fa-tasks sh_request_view" type='assignment'>
+                    </a>
+                </li>
+            </span>
+        </xpath>
+    </t>
+
+</templates>

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+  <template id="theme_softhealer_store_template_softhealer_custom_footer" inherit_id="website.layout" name="Softhealer Store Footer" active="False">
+       	<xpath expr="//div[@id='footer']" position="replace">
+       		<div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+            <section class="footer_second_main_part_wrapper">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 first_col">
+                    <div class="sh_footer_logo">
+                      <a href="/" class="footer-brand-logo-website">
+                        <span t-field="website.logo" t-options="{'widget': 'image', 'width': auto, 'class': 'sh_softhealer_website_footer_brand_website_logo'}" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name"/>
+                      </a>
+                      <div class="sh_odoo_partner_logo">
+                        <img src="/theme_softhealer_store/static/src/img/odoo_silver_partner_rgb.svg" alt="Odoo Silver Partner"/>
+                     </div>
+                    </div>
+                    <div>
+                      <p class="static_desc">
+                                            We are passionate about creating exceptional software and app solutions that drive your business success. Our team's ardor for innovation and excellence ensures top-notch products that deliver measurable value and elevate your enterprise to new heights.
+                                        </p>
+                                        <ul class="social_links">
+                      <li>
+                        <a href="https://www.facebook.com/softhealertechnologies/" target="_blank" title="Facebook">
+                          <i class="fa fa-facebook"/>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/SofthealerTech" target="_blank" title="Twitter">
+                          <i class="fa fa-twitter"/>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://instagram.com/softhealer_technologies?utm_medium=copy_link" target="_blank" title="Instagram">
+                          <i class="fa fa-instagram"/>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/authwall?trk=bf&amp;trkInfo=AQEGgL0A4_wtzAAAAZav1l8AKQZIopWffb1huUpWAupIjEAK1EUohJyWUgWUjrbpuxeMSzPm4s25AbMYSl_sdTKcrsnqmACjLrM5p_2cD6Yt8lZxYB7JlqgdzJETjEWlcr4VY0I=&amp;original_referer=&amp;sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fsofthealer-technologies-pvt-ltd%2Fposts%2F%3FfeedView%3Dall" target="_blank" title="Linkedin">
+                          <i class="fa fa-linkedin"/>
+                        </a>
+                      </li>
+                    </ul>
+                    </div>
+                  </div>
+                  <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col_class four_col">
+                    <div>
+                      <h4>Get in Touch</h4>
+                    </div>
+                    <div class="mb-3">
+                      <div>
+                        <i class="fa fa-phone"/>
+                        <a class="mx-2 sh_footer_addr" href="tel:+919328825451'">+919328825451</a>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <div>
+                        <i class="fa fa-envelope-o"/>
+                        <a class="mx-2 sh_footer_addr" href="mailto:info@softhealer.com">info@softhealer.com</a>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <div class="d-flex">
+                        <i class="fa fa-map-marker"/>
+                        <address class="mb0 comp_address">
+                          <div itemprop="address">
+                            <div>
+                              <span itemprop="streetAddress">905, Corporate Levels, 150 Ft. Ring RD, Nr. Ayodya Chowk, Opp Synergy Hospital, Rajkot 360006</span>
+                            </div>
+                          </div>
+                        </address>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-6 col-sm-12 col_class second_col">
+                    <div>
+                      <h4>Services Links</h4>
+                    </div>
+                    <div>
+                      <ul>
+                        <li>
+                          <a href="/erp-solution" target="_blank" class="sh_nav_link_footer">ERP Solutions</a>
+                        </li>
+                        <li>
+                          <a href="/crm-solution" target="_blank" class="sh_nav_link_footer">CRM Solutions</a>
+                        </li>
+                        <li>
+                          <a href="/pos-solution" target="_blank" class="sh_nav_link_footer">POS Solutions</a>
+                        </li>
+                        <li>
+                          <a href="/web-development" target="_blank" class="sh_nav_link_footer">Web Development</a>
+                        </li>
+                        <li>
+                          <a href="/mobile-apps" target="_blank" class="sh_nav_link_footer">Mobile Apps</a>
+                        </li>
+                        <li>
+                          <a href="/custom-software" target="_blank" class="sh_nav_link_footer">Custom Software</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div> -->
+                  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col_class three_col">
+                    <div>
+                      <h4>Quick Support</h4>
+                    </div>
+                    <div>
+                      <ul>
+                        <li>
+                          <a href="/about-us" target="_blank" class="sh_nav_link_footer">About Us</a>
+                        </li>
+                        <!-- <li>
+                          <a href="/erp-solution" target="_blank" class="sh_nav_link_footer">Services</a>
+                        </li> -->
+                        <!-- <li>
+                          <a href="/blog" target="_blank" class="sh_nav_link_footer">Blog Post</a>
+                        </li>
+                        <li>
+                          <a href="/jobs" target="_blank" class="sh_nav_link_footer">Careers</a>
+                        </li> -->
+                        <li>
+                          <a href="/contact-us" target="_blank" class="sh_nav_link_footer">Contact Us</a>
+                        </li>
+                        <li>
+                          <a href="/support" target="_blank" class="sh_nav_link_footer">Support</a>
+                        </li>
+                        <li>
+                          <a href="/privacy-policy" target="_blank" class="sh_nav_link_footer">Privacy Policy</a>
+                        </li>
+                        <li>
+                          <a href="/terms-and-conditions" target="_blank" class="sh_nav_link_footer">Terms &amp; Conditions</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- <section class="custom_footer_copyright_part">
+              <div class="container s_newsletter_subscribe_form s_newsletter_list js_subscribe" data-vxml="001" data-list-id="1" data-name="Newsletter" data-snippet="s_newsletter_subscribe_form">
+                <div class="input-group">
+                  <input type="email" name="email" class="js_subscribe_value form-control" placeholder="your email..."/>
+                  <a role="button" href="#" class="btn btn-primary js_subscribe_btn o_submit o_default_snippet_text">Subscribe</a>
+                  <a role="button" href="#" class="btn btn-success js_subscribed_btn o_submit o_default_snippet_text d-none" disabled="disabled">Thanks</a>
+                </div>
+              </div>
+            </section> -->
+          </div>
+        </xpath>
+      </template>
+  <!--Softhealer Footer-->
+    <!-- <record id="theme_softhealer_store_template_softhealer_custom_footer" model="ir.ui.view">
+      <field name="name">Softhealer Custom Footer</field>
+      <field name="type">qweb</field>
+      <field name="key">theme_softhealer_store.theme_softhealer_store_template_softhealer_custom_footer</field>
+      <field name="inherit_id" ref="website.layout"/>
+      <field name="mode">extension</field>
+      <field name="active" eval="False" />
+      <field name="arch" type="xml">
+          <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+                
+            </div>
+          </xpath>
+      </field>
+    </record> -->
+
+    <!-- Custom Copyright-->
+    <record id="sh_custom_footer_copyright_tmpl" model="ir.ui.view">
+      <field name="name">Softhealer Custom Footer Copyright</field>
+      <field name="type">qweb</field>
+      <field name="key">theme_softhealer_store.sh_custom_footer_copyright_tmpl</field>
+      <field name="inherit_id" ref="website.layout"/>
+      <field name="mode">extension</field>
+      <field name="arch" type="xml">
+          <xpath expr="//footer/div[hasclass('o_footer_copyright')]" position="replace">
+            <div t-if="not no_copyright" class="o_footer_copyright custom_footer_copyright_wrapper">
+                <div class="container py-3">
+                    <div class="row">
+                        <div class="col-sm text-center text-sm-start  text-muted">
+                            <span class="o_footer_copyright_name me-2 text-center d-block"> 
+                                ©2025 Softhealer Technologies Pvt. Ltd. | All Rights Reserved, made with <i class='fa fa-heart' style='color:red;'/> by <a href='/' >softhealer.com</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </xpath>
+      </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- project.project kanban view inherited-->
+    <record id="sh_project_mgmt_edit_kanban_project" model="ir.ui.view">
+        <field name="name">sh.project.mgmt.project.kanban</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="hr_timesheet.view_project_kanban_inherited" />
+        <field name="arch" type="xml">
+            <field name="remaining_hours" position="after">
+                <field name="remaining_inv_hours" invisible="1" />
+            </field>
+            <xpath expr="//div[@t-if='record.allow_timesheets.raw_value and record.allocated_hours.raw_value &gt; 0']" position="replace">
+                <div t-if="record.allow_timesheets.raw_value and record.allocated_hours.raw_value &gt; 0"
+                    t-attf-class="oe_kanban_align badge border {{ badgeColor }}" t-att-title="title">
+                    <field name="remaining_inv_hours" widget="timesheet_uom"/>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- project.project form view inherited-->
+    <record id="sh_project_mgmt_edit_project" model="ir.ui.view">
+        <field name="name">sh.project.mgmt.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//form/header" position="inside">
+                <button name="action_open_update_project_wizard" groups="sh_project_task_base.group_project_officer" type="object" class="oe_highlight" string="Update Project" />
+            </xpath>
+
+            <!-- ADD SMART BUTTONS -->
+            <xpath expr="//sheet//div[@name='button_box']" position="inside">
+
+                <!-- Parent Project -->
+                <button class="oe_stat_button"
+                    name="btn_show_parent_project"
+                    attrs="{'invisible': [('sh_parent_id', '=', False)]}"
+                    icon="fa-puzzle-piece"
+                    type="object"
+                >
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">
+                            Parent Project
+                        </span>
+                    </div>
+                </button>
+
+                <!-- Child Project -->
+                <button class="oe_stat_button"
+                    name="btn_show_child_projects"
+                    attrs="{'invisible': [('sh_child_project_count', '=', 0)]}"
+                    icon="fa-puzzle-piece"
+                    type="object"
+                >
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="sh_child_project_count" nolabel="1" />
+                        </span>
+                        <span class="o_stat_text">
+                            Sub Project
+                        </span>
+                    </div>
+                </button>
+
+                <!-- Sale Order -->
+                <button class="oe_stat_button"
+                    name="btn_show_sale_orders"
+                    icon="fa-pencil-square-o"
+                    attrs="{'invisible':[('sh_sale_order_count','=', 0)]}"
+                    type="object"
+                >
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="sh_sale_order_count" widget="statinfo"
+                                nolabel="1" class="mr4" />
+                        </span>
+                        <span class="o_stat_text">
+                            Sale Orders
+                        </span>
+                    </div>
+                </button>
+
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="update_analytic_amount" type="object" string="Update Analytic amount" groups="sh_project_mgmt.group_project_pl"/>
+
+            </xpath>
+            <!-- Invisible Fields For Domain Purpose -->
+            <field name="tag_ids" position='after'>
+                <field name="sh_parent_id" />
+                <field name="sh_child_ids" readonly="1" invisible="1" widget="many2many_tags" />
+                <field name="sh_child_project_count" invisible="1" />
+                <field name="default_task_users_ids" domain="[('share', '=', False)]" widget="many2many_tags"/>
+            </field>
+
+            <!-- ==========  Update Attributes ================ -->
+            <!-- <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}" groups="project.group_project_stages"/> -->
+            <field name="stage_id" position="attributes">
+                <attribute name="domain">sh_project_stage_ids and [('id', 'in', sh_project_stage_ids)] or []</attribute>
+            </field>
+
+            <!-- ==========  Visible Fields ================ -->
+            <xpath expr="//group/group[2]" position="inside">
+                <!-- Pricing Mode -->
+                <field name="odoo_version" />
+                <field name="sh_edition_id" />
+                <field name="sh_pricing_mode" />
+                <field name="sh_fp_based_on" attrs="{'invisible': [('sh_pricing_mode', '!=', 'fp')], 'required': [('sh_pricing_mode', '=', 'fp')]}" />
+                <field name="sh_tm_based_on" attrs="{'invisible': [('sh_pricing_mode', '!=', 'tm')], 'required': [('sh_pricing_mode', '=', 'tm')]}" />
+            </xpath>
+
+            <!-- ==========  FOR PROJECT STAGES ================ -->
+            <xpath expr="//page[@name='task_stages']" position="after">
+                <page string="Project Stages">
+                    <group>
+                        <group>
+                            <field name="sh_project_stage_tmpl_id" />
+                        </group>
+                        <group>
+                            <field name="sh_project_stage_ids" widget="many2many_tags" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+            <!-- ======== FOR ESTIMATION TEMPLATE LINES FROM SALE ORDER LINES=========== -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Estimation Template Lines" attrs="{'invisible': [('sh_child_project_count', '!=', 0)]}">
+                    <field name="sale_line_estimation_template_line" widget="one2many" nolabel="1">
+                        <tree editable='bottom'>
+                            <field name="department_id" />
+                            <field name="label_id" />
+                            <field name="estimated_hours" readonly="1"/>
+                            <field name="accountable_user_ids" widget='many2many_tags'/>
+                            <field name="responsible_user_ids" widget='many2many_tags'/>
+                            <field name="other_details" optional="hide"/>
+                            <field name="from_date" readonly="1"/>
+                            <field name="to_date"  readonly="1"/>
+                            <field name="actual_from_date"/>
+                            <field name="actual_to_date"/>
+                        </tree>
+                    </field>
+
+                    <group>
+                    <group>
+                        <field name="project_start_date" />
+                    </group>
+                    <group>
+                    <field name="project_end_date" />
+                    </group>
+                    </group>
+                </page>
+            </xpath>
+
+            <field name="sh_tm_based_on" position="after">
+                <field name="sh_send_timesheet" widget="radio" options="{'horizontal' : True}" attrs="{'invisible':['|',('sh_tm_based_on','!=','success_pack'),('sh_pricing_mode','!=','tm')],'required':[('sh_tm_based_on','=','success_pack')]}" />
+            </field>
+        </field>
+    </record>
+
+    <!-- Added Custom Group By in project.project Search View -->
+    <record id="sh_project_project_view_inherit_project_groupby" model="ir.ui.view">
+        <field name="name">sh.project.project.select.inherit.project.groupby</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_project_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="odoo_version" />
+                <field name="sh_edition_id" />
+                <field name="sh_pricing_mode" />
+                <field name="sh_fp_based_on" />
+                <field name="sh_tm_based_on" />
+                <field name="date_start" />
+                <field name="date_start" />
+                <field name="date" />
+                <field name="remaining_hours" />
+                <field name="remaining_inv_hours" />
+                <field name="total_profit_float" />
+            </xpath>
+
+            <xpath expr="//search//group//filter[@name='groupby_stage']" position="after">
+                <filter name="remaing_hours_less" string="Project Over Occupied" domain="[('remaining_inv_hours', '&lt;', 0),('allocated_hours', '&gt;', 0)]"  groups="sh_project_task_base.group_project_officer"/>
+                <filter name="allocated_hours_not_set" string="Allocated Hours not set" domain="['|',('allocated_hours', '=', 0),('allocated_hours', '=', False)]" />
+                <filter name="filter_profitable_project" string="Profitable Project" domain="[('total_profit_float', '>', 0)]" groups="sh_project_mgmt.group_project_pl"/>
+                <filter name="filter_loss_making_project" string="Loss Making Project" domain="[('total_profit_float', '&lt;=', 0)]"  groups="sh_project_mgmt.group_project_pl"/>
+                <filter name="filter_success_pack" string="Success Pack" domain="[('sh_tm_based_on', '=', 'success_pack')]" groups="sh_project_task_base.group_project_officer" />
+                <filter name="filter_billable" string="Billable" domain="[('sh_tm_based_on', '=', 'billable')]" groups="sh_project_task_base.group_project_officer" />
+                <filter name="filter_fix_price" string="Fixed Price" domain="[('sh_pricing_mode', '=', 'fp')]" groups="sh_project_task_base.group_project_officer" />
+
+                <filter string="Odoo Version" name="groupby_odoo_version" context="{'group_by': 'odoo_version'}" />
+                <filter string="Child Project" name="groupby_child_project" domain="[('sh_child_ids', '=', False)]" />
+                <filter string="Edition" name="groupby_edition" context="{'group_by': 'sh_edition_id'}" />
+                <filter string="Pricing Model" name="groupby_pricing_model" context="{'group_by': 'sh_pricing_mode'}" />
+                <filter string="FP Based On" name="groupby_fp_based_on" context="{'group_by': 'sh_fp_based_on'}" />
+                <filter string="T&amp;M Based On" name="groupby_tm_based_on" context="{'group_by': 'sh_tm_based_on'}" />
+                <filter string="Parent Project" name="groupby_parent_id" context="{'group_by': 'sh_parent_id'}" />
+                <filter string="Start Date" name="groupby_date_start" context="{'group_by': 'date_start'}" />
+                <filter string="Expiration/End Date" name="groupby_end_date" context="{'group_by': 'date'}" />
+                <filter string="Tags" name="groupby_tags" context="{'group_by': 'tag_ids'}" />
+            </xpath>
+        </field>
+    </record>
+
+    <record
+        id="project.open_view_project_all_group_stage"
+        model="ir.actions.act_window"
+    >
+        <field name="context">{'default_allow_billable': True, 'search_default_groupby_stage': 1, 'search_default_groupby_child_project': 1}</field>
+    </record>
+
+    <!-- 	project.project tree view inherited-->
+    <record id="sh_view_project_project_mgmt" model="ir.ui.view">
+        <field name="name">sh.project.project.tree.project.mgmt</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project" />
+        <field name="arch" type="xml">
+            <field name="stage_id" position="after">
+                <field name="project_type_selection" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="date_start" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="date" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="allocated_hours" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="sh_pricing_mode" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="sh_fp_based_on" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="sh_tm_based_on" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+                <field name="sh_tm_based_on" optional="hide"  groups="sh_project_task_base.group_project_officer"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- project stage add booelan field-->
+
+    <!-- project.project kanban view inherited-->
+    <record id="sh_project_stage_tree_view_inherit" model="ir.ui.view">
+        <field name="name">sh.project.project.stage.tree</field>
+        <field name="model">project.project.stage</field>
+        <field name="inherit_id" ref="project.project_project_stage_view_tree" />
+        <field name="arch" type="xml">
+            <field name="fold" position="before">
+                <field name="is_new_stage"/>
+                <field name="is_running_stage"/>
+            </field>
+
+        </field>
+    </record>
+    
+    <!-- project.project base kanban view inherited to display stage-->
+    <record id="sh_view_project_kanban_inherit" model="ir.ui.view">
+        <field name="name">sh.project.project.kanban.inherited</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//kanban//field[@name='tag_ids']" position="after">
+                <field name="stage_id"/>
+            </xpath>
+            
+            <xpath expr="//kanban//div[hasclass('oe_kanban_bottom_left')]" position="inside">
+                <field name="stage_id" widget="badge"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    
+</odoo>

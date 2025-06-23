@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <template id="custom_blog_post_content_inherit" inherit_id="website_blog.blog_post_content">
+        <xpath expr="//div[@t-field='blog_post.content']" position="replace">
+
+            <!-- For Load Custom Template -->
+            <t t-if="blog_post.is_article">
+                <section class="sh_complete_tender_management_blog_content sh_custom_addons_section sh_odoo_erp_cost_effective_blog_content">
+                <div class="container">
+                <div class="row justify-content-center">
+
+                    <!-- Content -->
+                    <div class="col-xxl-8 col-xl-8 col-lg-8 mx-auto d-block col-md-12 col-12">
+                        <div class="original-content" t-esc="blog_post.content"/>
+                    </div>
+
+                    <!-- Sidebar Suggested Blogs and Form -->
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 sh_blog_box mx-auto d-block col-md-12 col-12">
+                        <div class="my-custom-blog-content">
+
+                            <t t-foreach="blog_post.suggested_blog_by_categories" t-as="blogs">
+                                <!-- <h1 t-esc="blogs.name"/> -->
+
+                                <div class="sh_recent_blog_div">
+                                    <!-- <a t-att-href="blogs.website_url" target="_blank"> -->
+                                        <a t-attf-href="#{blogs.website_url}" target="_blank">
+ 
+                                        <div class="sh_blog_image">
+                                            <!-- <img t-att-src="'/web/content/%s?download=true' % blog_post.suggestion_image" /> -->
+                                            <img t-att-src="'/web/image/blog.post/%s/suggestion_image' % blogs.id" class="img-fluid" alt="Suggested Image"/>
+                                        </div>
+                                        <!-- <div class="sh_blog_name">
+                                            <t t-esc="blogs.name"/>
+
+                                        </div> -->
+                                    </a>
+                                </div>
+                            </t>
+                        </div>
+                            <t t-call="softhealer_website_base.sh_website_form_for_solution_page_form"/>
+                       
+                    </div>
+                </div>
+                </div>
+                </section>
+
+            </t>
+
+            <t t-else="not blog_post.is_article">
+                <div t-field="blog_post.content" data-editor-message="WRITE HERE OR DRAG BUILDING BLOCKS" t-attf-class="o_wblog_post_content_field #{'js_tweet' if opt_blog_post_select_to_tweet else ''} #{'js_comment' if opt_blog_post_select_to_comment else ''} #{'o_wblog_read_text' if opt_blog_post_readable else ''}"/>
+            </t>
+
+            <!-- Random Blog For Bottom Section -->
+
+            <t t-if="blog_post.is_article and random_blogs">
+              <div class="container">
+                  <div class="sh_down_side_blog">
+                      <h2 class="sh_heading_text">
+                          Recently Published Articles
+                      </h2>
+                      <div class="row">
+                          <t t-foreach="random_blogs" t-as="blogs">
+                              <div class="sh_recent_blog_div col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                                  <a t-attf-href="#{blogs.website_url}" target="_blank">
+                                      <div class="sh_blog_image">
+                                          <img t-att-src="'/web/image/blog.post/%s/suggestion_image' % blogs.id" class="img-fluid" alt="Suggested Image"/>
+                                      </div>
+                                  </a>
+                              </div>
+                          </t>
+                      </div>
+                  </div>
+              </div>
+          </t>
+        </xpath>
+    </template>
+</odoo>

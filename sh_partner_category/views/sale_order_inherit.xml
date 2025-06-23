@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_orcer_form_inherit_partner_categ" model="ir.ui.view">
+            <field name="name">sale.order</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">                   
+                    <field name="sh_partner_category_id"/>
+                </field>
+            </field>
+        </record>
+        <record id="sh_sale_partner_category_search_view" model="ir.ui.view">
+            <field name="name">sale.order</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
+            <field name="arch" type="xml">
+                <filter name="order_month" position="after">
+                    <filter string="Partner Category" name="partner_category" domain="[]" context="{'group_by':'sh_partner_category_id'}"/>
+                </filter>
+            </field>
+        </record>
+    </data>
+</odoo>

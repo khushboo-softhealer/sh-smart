@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="model_product_template_action_create_task" model="ir.actions.server">
+        <field name="name">Create Task</field>
+        <field name="model_id" ref="sh_project_task_base.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="state">code</field>
+        <field name="code">
+            action=records.create_task()
+        </field>
+    </record>
+
+    <!-- Multi Action (Add Technical Name) -->
+    <!-- <record id="sh_add_tech_name" model="ir.actions.server" >
+        <field name="name">Add Technical Name</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_project_task" />
+        <field name="binding_model_id" ref="model_project_task" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.multi_action_add_tech_name()
+        </field>
+    </record> -->
+
+    <!-- Multi Action (Add Git Repo) -->
+    <record id="sh_add_git_repo" model="ir.actions.server" >
+        <field name="name">Add Git Repo/Link Product Variant</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_project_task" />
+        <field name="binding_model_id" ref="model_project_task" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records._multi_action_add_git_repo()
+        </field>
+    </record>
+
+    <!--  -->
+    <record id="sh_task_mass_update" model="ir.actions.server" >
+        <field name="name">Mass Update</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_project_task" />
+        <field name="binding_model_id" ref="model_project_task" />
+        <field name="state">code</field>
+        <field name="code">
+            action = records.multi_action_mass_update_task()
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!-- Softhealer blog custom layout -->
+    <template id="dynamic_filter_template_blog_post_sh_softhealer_mobiheal_custom" name="Mobieal Blog Layout">
+
+        <figure t-foreach="records" t-as="data" class="sh_softhealer_mobiheal_blog_custom_snippet post s_blog_posts_post w-100 justify-content-center" data-number-of-elements="3">
+            <t t-set="record" t-value="data['_record']"/>
+            <span t-if="is_sample" class="h5 float-end bg-primary text-uppercase rounded-circle px-2 py-2">Sample</span>
+            <div class="sh_blog_box" style='position: relative;'>
+                <h5 class="mt0 mb4" t-field="record.post_date" t-options='{"format": "dd/MM/yyyy"}'/>
+               
+                <a class="s_blog_posts_post_cover position-relative d-flex flex-column shadow-sm overflow-hidden rounded text-decoration-none" target="_blank" t-att-href="data['call_to_action_url']">
+                    <t t-call="website.record_cover">
+                        <t t-set="_record" t-value="record"/>
+                        <t t-set="_resize_height" t-value="512"/>
+                        <t t-set="_resize_width" t-value="512"/>
+                        <t t-set="use_filters" t-value="True"/>
+                        <t t-set="additionnal_classes" t-value="'h-100 w-100 bg-600 position-absolute'"/>
+                    </t>
+
+                    <figcaption class="text-center w-100 h-100 px-3 d-flex flex-column flex-grow-1" style='position:absolute;'>
+                        <div t-if="is_sample" class="h5 o_ribbon_right bg-primary text-uppercase">Sample</div>
+                        <div class="s_blog_posts_post_title text-white" t-field="record.name"/>
+                    </figcaption>
+                </a>
+            </div>
+        </figure>
+
+    </template>
+
+
+<!-- Jobs index page-->
+    <template id="sh_jobs_mobiheal_index" name="Mobiheal Jobs">
+        <t t-call="website.layout">
+            <div id="wrap" class="sh_website_hr_recruitment_jobs_list bg-100">
+                <div class="oe_structure">
+                    <section class="mb_support_banner o_colored_level" data-snippet="mb_support_tmpl" data-name="EventHeal" style="background-image: none;" data-oe-model="ir.ui.view" data-oe-id="4283" data-oe-field="arch" data-oe-xpath="/t[1]/t[1]/div[1]/section[1]">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 o_colored_level">
+                                    <div class="left_title">
+                                        <h1 class="elementor-heading-title elementor-size-default">Jobs</h1>
+                                        <p>At Mobiheal Technologies, we're more than just a business—we're a family. We're dedicated to creating an inclusive, innovative, and inspiring workplace where every team member feels valued, empowered, and motivated to reach their full potential.</p>		
+                                    </div>
+                                </div>
+                                <div class="col-md-4 o_colored_level">
+                                    <div class="right_img">
+                                        <img src="/theme_mobiheal_website/static/src/img/career/job-1.webp" alt="Event Management In Mobile" loading="lazy" data-original-title="" title="" aria-describedby="tooltip106905" style=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="sh_website_hr_recruitment_jobs_banner">
+                        <div class="container">
+                            <div class="sh_banner_content">
+                                <h2 class="sh_banner_title"> Join Us Today!</h2>
+                                <p class="sh_banner_text">
+                                    Exciting Career Opportunities Await
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+
+                <!-- <section class="sh_jobs_card">
+                    <div class="container">
+                        <div class="row pt48 pb48">
+                            <div class="d-none" id="jobs_grid_left"></div>
+                            <div class="col-lg" id="jobs_grid">
+                                <div t-if="not jobs">
+                                    <div class="text-center text-muted">
+                                        <h3 class="css_editable_hidden"><a
+                                                t-attf-href="/contact-us">Contact
+                                                us</a> for job opportunities.</h3>
+                                        <h4 groups="hr_recruitment.group_hr_recruitment_manager">
+                                            Create new job pages from the <strong>
+                                                <i>+New</i>
+                                            </strong>
+                                            top-right button. </h4>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div t-foreach="jobs" t-as="job"
+                                        class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4 sh_main_box"
+                                        data-aos="fade-up"
+                                        t-att-data-publish="job.website_published and 'on' or 'off'">
+                                        <div class="sh_inner_box h-100">
+                                            <t t-if="job.sh_urgent">
+                                                <div class="sh_urgent_ribbon">
+                                                    <span class="urgent">Urgent</span>
+                                                </div>
+                                            </t>
+                                            <div class="sh__position_ribbon"
+                                                t-if="job.no_of_recruitment &gt;= 1">
+                                                <span class="urgent">Position : <t
+                                                        t-esc="job.no_of_recruitment" /></span>
+
+                                            </div>
+                                            <div class="sh_icon">
+                                                <span t-if="job.sh_job_image" t-field="job.sh_job_image" t-options="{'widget': 'image', 'itemprop': 'image'}" />
+                                                <img t-else="" t-att-alt="job.name" src="/mail/static/src/img/smiley/avatar.jpg"/>
+                                            </div>
+                                            <div class="sh-des">
+                                                <h5>
+                                                    <a t-attf-href="/jobs/detail/#{ slug(job) }">
+                                                        <span t-field="job.name" />
+                                                    </a>
+                                                </h5>
+                                                <div t-esc="job.description or ''"
+                                                    class="mt16 mb0 sh_website_hr_recruitment_job_description" />
+                                            </div>
+                                            <span t-if="not job.website_published"
+                                                class="badge text-bg-danger mb8 p-2">Unpublished</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+
+                <section data-snippet="s_blog_posts" class="s_blog_posts s_dynamic_snippet_blog_posts s_blog_posts_effect_marley s_dynamic pt32 pb32 o_colored_level s_blog_post_sh_softhealer_website_custom o_dynamic_empty" data-name="Blog Posts" style="background-image: none;" data-filter-by-blog-id="5" data-number-of-records="16" data-filter-id="1" data-template-key="theme_mobiheal_website.dynamic_filter_template_blog_post_sh_softhealer_mobiheal_custom" data-number-of-elements="3">
+                <!-- TODO don't add o_not_editable class -->
+                    <div class="container">
+                        <div class="css_non_editable_mode_hidden">
+                            <div class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none o_default_snippet_text">
+                                Your Dynamic Snippet will be displayed here... This message is displayed because you did not provided both a filter and a template to use.<br/>
+                            </div>
+                        </div>
+                        <div class="dynamic_snippet_template"/>
+                    </div>
+                </section>
+                                
+
+                <section id="sh_jobs_call_to_action" class="d-none"></section>
+            </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,200 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_website_wtsapp
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-02 09:25+0000\n"
+"PO-Revision-Date: 2020-10-02 09:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__sww_color
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__sww_color
+msgid "Background Color"
+msgstr "لون الخلفية"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_position__bottom-center
+msgid "Bottom Center"
+msgstr "مركز القاع"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_position__bottom-left
+msgid "Bottom Left"
+msgstr "أسفل اليسار"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_position__bottom-right
+msgid "Bottom Right"
+msgstr "أسفل اليمين"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__sww_link_btn_title
+msgid "Button Title"
+msgstr "عنوان الزر"
+
+#. module: sh_website_wtsapp
+#: model:ir.model,name:sh_website_wtsapp.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات التكوين"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_type__contact
+msgid "Contact"
+msgstr "اتصل"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_style__fball
+msgid "Floating Ball"
+msgstr "الكرة العائمة"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_style__fbutton
+msgid "Floating Button"
+msgstr "زر عائم"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_type__chat
+msgid "Group Chat"
+msgstr "مجموعة محادثة"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__id
+msgid "ID"
+msgstr "هوية شخصية"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__sww_banner_img
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__sww_banner_img
+msgid "Image"
+msgstr "صورة"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__sww_link_btn_title
+msgid "Link Button Name"
+msgstr "اسم زر الارتباط"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_position__center
+msgid "Mid Center"
+msgstr "منتصف المركز"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_position__left
+msgid "Mid Left"
+msgstr "منتصف اليسار"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_position__right
+msgid "Mid Right"
+msgstr "منتصف اليمين"
+
+#. module: sh_website_wtsapp
+#: model_terms:ir.ui.view,arch_db:sh_website_wtsapp.sh_inherit_res_config_settings_view_form_for_whatsapp_chat_and_share
+#: model_terms:ir.ui.view,arch_db:sh_website_wtsapp.sh_website_whatsapp_website_form
+msgid ""
+"Omit any zeroes, brackets or dashes when adding the phone number in "
+"international format."
+msgstr ""
+"احذف أي أصفار أو أقواس أو شرطات عند إضافة رقم الهاتف"
+"تنسيق دولي."
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__sww_position
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__sww_position
+msgid "Position"
+msgstr "موضع"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__sww_style
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__sww_style
+msgid "Style"
+msgstr "أسلوب"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__sww_text_color
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__sww_text_color
+msgid "Text Color"
+msgstr "لون الخط"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_position__top-center
+msgid "Top Center"
+msgstr "مركز أعلى"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_position__top-left
+msgid "Top Left"
+msgstr "أعلى اليسار"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields.selection,name:sh_website_wtsapp.selection__website__sww_position__top-right
+msgid "Top Right"
+msgstr "اعلى اليمين"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__sww_type
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__sww_type
+msgid "Type"
+msgstr "اكتب"
+
+#. module: sh_website_wtsapp
+#: model:res.config.settings,sww_link_btn_title:sh_website_wtsapp.sh_default_website_whatsapp_data
+msgid "WHATSAPP"
+msgstr "ال WHATSAPP"
+
+#. module: sh_website_wtsapp
+#: model:ir.model,name:sh_website_wtsapp.model_website
+msgid "Website"
+msgstr "موقع الكتروني"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__sww_is_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__sww_is_wtsapp
+msgid "WhatsApp Chat"
+msgstr "دردشة WhatsApp"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__sww_cn
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__sww_cn
+msgid "WhatsApp Contact No"
+msgstr "رقم جهة اتصال WhatsApp"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__sww_message
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__sww_message
+msgid "WhatsApp Default Message"
+msgstr "رسالة WhatsApp الافتراضية"
+
+#. module: sh_website_wtsapp
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_res_config_settings__sww_chat
+#: model:ir.model.fields,field_description:sh_website_wtsapp.field_website__sww_chat
+msgid "WhatsApp Group Chat"
+msgstr "دردشة مجموعة WhatsApp"
+
+#. module: sh_website_wtsapp
+#: model_terms:ir.ui.view,arch_db:sh_website_wtsapp.sh_inherit_res_config_settings_view_form_for_whatsapp_chat_and_share
+#: model_terms:ir.ui.view,arch_db:sh_website_wtsapp.sh_website_whatsapp_website_form
+msgid "WhatsApp Live Chat"
+msgstr "WhatsApp Live Chat"

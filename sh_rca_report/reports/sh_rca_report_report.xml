@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="report_sh_rca_report" model="ir.actions.report">
+        <field name="name">RCA Report</field>
+        <field name="model">sh.rca.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sh_rca_report.report_sh_rca_report_view</field>
+        <field name="report_file">sh_rca_report.report_sh_rca_report_view</field>
+        <field name="print_report_name">'%s' % object.name</field>
+        <field name="binding_model_id" ref="model_sh_rca_report"/>
+        <field name="binding_type">report</field>
+    </record>
+
+
+
+    <template id="report_sh_rca_report_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-esc="doc"/>
+                <t t-call="web.external_layout">
+                    <style>
+                        table{
+                            border-collapse : collapse;
+                        }
+
+                        td {
+                            border : 1px solid black;
+                            word-break:word-break;
+                            white-space:move-wrap;
+                        }
+
+                        tr {
+                            page-break-inside: avoid;
+                            break-inside:avoid;
+                            }
+                        td {
+                            page-break-inside: auto;
+                            page-break-after: auto;
+                            page-break-before: auto;
+                        }
+
+                    </style>
+
+                    <table class="table" width="100%" style="border:1px solid black; page-break-inside: always; " cellspacing="1">
+                        <colgroup>
+                            <col style="width: 35%;" />
+                            <col style="width: 21.66%;" />
+                            <col style="width: 21.66%;" />
+                            <col style="width: 21.66%;" />
+                        </colgroup>
+
+                        <tbody >
+                            <tr>
+                                <th t-field="doc.task_id.name" colspan="4" style="background:yellow;"/>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>Issue Owner Name</span>
+                                </th>
+                                <td>
+                                    <span t-field="doc.issue_owner"/>
+                                </td>
+                                <th>
+                                    <span>Email ID</span>
+                                </th>
+                                <td>
+                                    <span t-field="doc.email"/>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>Issue Report Date &amp; Time</span>
+                                </th>
+                                <td>
+                                    <span t-esc="doc.report_date"/>
+                                </td>
+                                <th>
+                                    <span>Priority Level</span>
+                                </th>
+                                <td>
+                                    <span t-field="doc.issue_priority"/>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <th style="background:yellow;" colspan="4">Issue Details</th>
+                            </tr>
+
+
+                            <tr>
+                                <th>
+                                    <span>Description</span>
+                                </th>
+                                <td colspan="3">
+                                    <span t-field="doc.description"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>Step to Reproduce</span>
+                                </th>
+                                <td colspan="3">
+                                    <span t-field="doc.step_to_reproduce"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>Expected Outcome</span>
+                                </th>
+                                <td colspan="3">
+                                    <span t-field="doc.expected_outcome"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <span>Actual Outcome</span>
+                                </th>
+                                <td colspan="3">
+                                    <span t-field="doc.actual_out_come"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <span>Bugs Logs</span>
+                                </th>
+                                <td colspan="3">
+                                    <span t-field="doc.bug_logs"/>
+                                </td>
+                            </tr>
+
+                            <t t-if="doc.attachment">
+
+                                <tr>
+                                    <th>
+                                        <span>Attachment</span>
+                                    </th>
+                                    <td colspan="3">
+                                        <img style="width: 400px; height: 250px" t-attf-src="data:image/png;base64, #{doc.attachment}" class="img-fluid" />
+                                    </td>
+                                </tr>
+                            </t>
+
+
+                            <tr>
+                                <th style="background:yellow;" colspan="4">RCA</th>
+                            </tr>
+
+
+                            <tr>
+                                <th>
+                                    <span>Root Cause</span>
+                                </th>
+                                <td colspan="3">
+                                    <span t-field="doc.root_cause"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <span>Corrective Action</span>
+                                </th>
+                                <td colspan="3">
+                                    <span t-field="doc.corrective_action"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <span>Preventive Action</span>
+                                </th>
+                                <td colspan="3">
+                                    <span t-field="doc.preventive_action"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <span>Issue Resolve Date &amp; Time in Test</span>
+                                </th>
+                                <td colspan="3">
+                                    <span t-field="doc.issue_resolved_datetime"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <span>Issue Resolve Date &amp; Time in Main</span>
+                                </th>
+                                <td colspan="3">
+                                    <span t-field="doc.issue_resolved_datetime_in_main"/>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

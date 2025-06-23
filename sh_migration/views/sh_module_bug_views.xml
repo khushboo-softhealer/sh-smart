@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- VIEW: Search -->
+    <record id="sh_module_bug_view_search" model="ir.ui.view">
+        <field name="name">sh.module.bug.view.search</field>
+        <field name="model">sh.module.bug</field>
+        <field name="arch" type="xml">
+            <search string="Bugs">
+                <!-- SEARCH -->
+                <field name="title" />
+                <field name="name" />
+                <field name="task_id" />
+                <field name="version" />
+                <field name="resolved_by_id" />
+                <field name="state_id" />
+                <field name="project_id" />
+                <!-- FILTER -->
+                <!-- <filter string="" name="" domain="[('', '=', )]" /> -->
+                <filter string="Devloper Bugs" name="dev_bugs" domain="[('bugs_for', '=', 'developer')]" />
+                <filter string="Designer Bugs" name="design_bugs" domain="[('bugs_for', '=', 'designer')]" />
+                <filter string="My Bugs" name="my_bugs" domain="[('resolved_by_id', '=', uid)]" />
+                <filter string="Issue By" name="issue_by" domain="[('create_uid', '=', uid)]" />
+                <filter string="Bugs" name="bugs" domain="[('bug_type', '=', 'bug')]" />
+                <filter string="Change Requests" name="change_req" domain="[('bug_type', '=', 'cr')]" />
+                <filter string="Open Bugs" name="open_bugs" domain="[('state_id.is_default_state', '=', True)]" />
+                <!-- GROUP BY -->
+                <group name="group" string="Group By">
+                    <filter string='Project' name="group_by_project" context="{'group_by': 'project_id'}" />
+                    <filter string='Task' name="group_by_task" context="{'group_by': 'task_id'}" />
+                    <filter string='State' name="group_by_state_id" context="{'group_by': 'state_id'}" />
+                    <filter string='Bugs For' name="group_by_bugs_for" context="{'group_by': 'bugs_for'}" />
+                    <filter string='Impact On Business' name="group_by_impact_on_business" context="{'group_by': 'impact_on_business'}" />
+                    <filter string='Resolved By' name="group_by_resolved_by_id" context="{'group_by': 'resolved_by_id'}" />
+                    <filter string="Issue By" name="group_by_create_uid" context="{'group_by': 'create_uid'}" />
+                    <filter string="Type" name="group_by_bug_type" context="{'group_by': 'bug_type'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- VIEW: Form -->
+    <record id="sh_module_bug_view_form" model="ir.ui.view">
+        <field name="name">sh.module.bug.view.form</field>
+        <field name="model">sh.module.bug</field>
+        <field name="arch" type="xml">
+            <form string="Bugs">
+                <header>
+                    <field name="state_id" widget="statusbar" options="{'clickable': '1'}" />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="title" required="1" />
+                            <field name="task_id" options="{'no_create': True}" required="1" />
+                            <field name="is_appstore_project" invisible="1" />
+                            <field name="bug_type" widget='radio' options="{'horizontal': true}" required="1"/>
+                            <field name="bugs_for" />
+                            <field name="is_bug_state_testing" invisible="1" />
+                            <field name="root_cause" attrs="{'required': [('is_bug_state_testing', '=', True),('bug_type','!=','cr')]}"/>
+                        </group>
+                        <group>
+                            <field name="impact_on_business" required="1" />
+                            <field name="version" />
+                            <field name="resolved_by_id" readonly="1" options="{'no_open': True}" />
+                            <field name="resolved_date" readonly="1" />
+                            <field name="major_code_changes_occured"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="create_uid" string="Issue By" options="{'no_open': True}" />
+                            <field name="create_date" string="Created Date" />
+                        </group>
+                        <group>
+                            <field name="write_uid" string="Last Modified By" options="{'no_open': True}" />
+                            <field name="write_date" string="Last Modified On" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="link" widget="url" />
+                        <field name="description" />
+                    </group>
+                    <notebook>
+                        <page name="state_change_history" string="State Change History">
+                            <field name="sh_bug_state_log_line" options="{'create': False, 'delete': False}">
+                                <tree no_open="1">
+                                    <field name="state_id" />
+                                    <field name="date_in" />
+                                    <field name="date_in_by" />
+                                    <field name="date_out" />
+                                    <field name="date_out_by" />
+                                    <field name="day_diff" />
+                                    <field name="time_diff" widget="float_time" />
+                                    <field name="total_time_diff" widget="float_time" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <!-- CHATTER -->
+                <div class="oe_chatter" style="display:block;">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- VIEW: Tree -->
+    <record id="sh_module_bug_view_tree" model="ir.ui.view">
+        <field name="name">sh.module.bug.view.tree</field>
+        <field name="model">sh.module.bug</field>
+        <field name="arch" type="xml">
+            <tree string="Bugs">
+                <field name="name" />
+                <field name="title" />
+                <field name="bug_counter" />
+                <field name="is_v17_task" invisible="1" />
+                <field name="is_appstore_project" invisible="1" />
+                <field name="version" optional="show" />
+                <field name="resolved_by_id" optional="show" />
+                <field name="resolved_date" optional="show" />
+                <field name="bug_type" optional="show" />
+                <field name="bugs_for" optional="show" />
+                <field name="link" widget="url" optional="hide" />
+                <field name="root_cause" optional="hide" />
+                <field name="impact_on_business" optional="hide" />
+                <field name="create_uid" optional="hide" string="Issue By" />
+                <field name="write_uid" optional="hide" string="Last Modified By" />
+                <field name="create_date" optional="hide" string="Created Date" />
+                <field name="write_date" optional="hide" string="Last Modified On" />
+                <field name="state_id" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION: Module Bug -->
+    <record id="sh_module_bug_action" model="ir.actions.act_window">
+        <field name="name">Bug Tracker</field>
+        <field name="res_model">sh.module.bug</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[
+            ('is_appstore_project', '=', True),
+            ('is_v17_task', '=', True)
+        ]</field>
+        <field name="context">{
+            'search_default_open_bugs' : 1,
+            'search_default_group_by_task': 1,
+            'create': False
+        }</field>
+    </record>
+
+    <!-- ACTION: Bug From Project -->
+    <record id="sh_project_module_bug_action" model="ir.actions.act_window">
+        <field name="name">Bug Tracker</field>
+        <field name="res_model">sh.module.bug</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{
+            'search_default_open_bugs' : 1,
+            'search_default_group_by_project': 1,
+            'search_default_group_by_task': 1,
+            'create': False
+        }</field>
+    </record>
+
+</odoo>

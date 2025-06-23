@@ -1,0 +1,10 @@
+@media only screen and (max-width: 768px) {
+  .cls_sh_all_in_one_mbs_video_tag {
+    border: 1px solid gray;
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+  }
+}/*# sourceMappingURL=extra_field_barcode.css.map */

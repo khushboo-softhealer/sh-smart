@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+<record model="ir.actions.server" id="sh_global_leaves_multi_action">
+	<field name="name">Update Global Leaves</field>
+	<field name="model_id" ref="sh_leave_custom.model_resource_calendar" />
+	<field name="binding_model_id" ref="resource.model_resource_calendar" />
+	<field name="state">code</field>
+	<field name="code">
+	    action = records.sh_action_update_global_leaves()
+	</field>
+</record>
+</odoo>

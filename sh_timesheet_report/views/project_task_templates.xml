@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="sh_portal_my_task" inherit_id="hr_timesheet.portal_my_timesheets" name="Portal: My Task with Timesheets">
+        <xpath expr="//t[@t-call='portal.portal_table']//thead//th[@t-else='']" position="replace">
+            <th class="text-end">Duration(Invoice)</th>
+        </xpath>
+        <xpath expr="//t[@t-call='portal.portal_table']//t//tbody[2]//t[@t-as='timesheet']//tr//td[@class='text-end']" position="replace">
+            <td class="text-end">
+                <span t-field="timesheet.unit_amount_invoice" t-options='{"widget": "duration", "unit": "hour", "round": "minute"}'/>
+            </td>
+        </xpath>
+    </template>
+</odoo>

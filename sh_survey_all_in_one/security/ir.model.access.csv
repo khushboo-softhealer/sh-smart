@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_survmate_settings_all,access.survmate.settings.all,model_sh_survmate_settings,,1,1,1,1
+access_sh_survmate_theme_button_design_wizard,access.sh.survmate.theme.button.design.wizard,model_sh_survmate_theme_button_design_wizard,,1,1,1,1

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="user_push_notification_view_search" model="ir.ui.view">
+        <field name="name">user.push.notification.view.search</field>
+        <field name="model">user.push.notification</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="active" />
+                <field name="create_uid" />
+                <field name="user_id" />
+                <field name="name" />
+                <field name="desc" />
+                <filter string="Archieved" name="filter" domain="[('active', '!=', True)]" />
+                <filter string="Unarchieved" name="filter" domain="[('active', '=', True)]" />  
+                <group expand="0" string="Group By">
+                    <filter string="Type" name="type" domain="[]" context="{'group_by':'type'}"/>
+                    <filter string="SubType" name="subtype" domain="[]" context="{'group_by':'subtype'}"/>
+                    <filter name="create_uid" string="Created By" domain="[]" context="{'group_by':'create_uid'}"/>
+                    <filter string="User" name="user_id" domain="[]" context="{'group_by':'user_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="user_push_notification_view_tree" model="ir.ui.view">
+		<field name="name">user.push.notification.view.tree</field>
+        <field name="model">user.push.notification</field>
+		<field name="arch" type="xml">
+			<tree string="Notification" create='0' edit="0">
+                <field name="user_id"/>
+                <field name="type"/>
+                <field name="subtype" optional="hide"/>
+				<field name="name" />
+				<field name="desc" />
+                <field name="datetime"/>
+                <button name="open_record" type="object" class="btn btn-primary" string="View"/>
+			</tree>
+		</field>
+	</record>
+
+    <record id="sh_user_push_notifications_action" model="ir.actions.act_window">
+        <field name="name">Notifications</field>
+        <field name="res_model">user.push.notification</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+</odoo>

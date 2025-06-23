@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Action To Update Timesheet Entries -->
+    <record id="action_update_account_analytic_line_open_wizard" model="ir.actions.server">
+        <field name="name">Update Timesheet Entries</field>
+        <field name="model_id" ref="hr_timesheet.model_account_analytic_line"/>
+        <field name="binding_model_id" ref="hr_timesheet.model_account_analytic_line"/>
+        <field name="state">code</field>
+        <field name="code">action = records.open_update_timesheet_wizard()</field>
+    </record>
+</odoo>

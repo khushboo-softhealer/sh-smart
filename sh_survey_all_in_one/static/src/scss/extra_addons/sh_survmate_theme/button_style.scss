@@ -1,0 +1,345 @@
+
+/*====================
+	Button Style 1
+=====================*/
+
+.sh_survmate_button_style_1 .o_survey_form .o_survey_form_content .btn-primary,
+.sh_survmate_button_style_1 .o_survey_print .btn-primary,
+.sh_survmate_button_style_1 .o_survey_print div p .btn-primary{
+	border: 2px solid;
+	background: transparent;
+	border-radius: 0px;padding: 8px 25px;margin: 5px;
+	position:relative;
+	color:#fff;
+	transition:all 0.6s;
+	}
+
+.sh_survmate_button_style_1 .o_survey_form .o_survey_form_content .btn-primary:hover,
+.sh_survmate_button_style_1 .o_survey_print div p .btn-primary:hover{
+	background:#fff !important;
+	transition:all 0.6s;
+}
+.sh_survmate_button_style_1 .o_survey_form .o_survey_form_content .btn-primary:focus,
+.sh_survmate_button_style_1 .o_survey_print div p .btn-primary:focus{
+	box-shadow:none;
+}
+/*====================
+	Button Style 1
+=====================
+
+.sh_survmate_button_style_1 .o_survey_form .o_survey_form_content .btn-primary,
+.sh_survmate_button_style_1 .o_survey_print div p .btn-primary{
+	border: 2px solid;
+	background: transparent;
+	border-radius: 0px;padding: 8px 25px;margin: 5px;
+	position:relative;
+	}
+.sh_survmate_button_style_1 .o_survey_form .o_survey_form_content .btn-primary:after,
+.sh_survmate_button_style_1 .o_survey_print div  p .btn-primary:after{
+	content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+	left:0;
+	width:100%;
+	height:0%;
+    transition:all 0.6s;
+}
+.sh_survmate_button_style_1 .o_survey_form .o_survey_form_content .btn-primary:hover:after,
+.sh_survmate_button_style_1 .o_survey_print div  p .btn-primary:hover:after{
+	height:100%;
+	transition:all 0.6s;
+}
+.sh_survmate_button_style_1 .o_survey_form .o_survey_form_content .btn-primary:hover,
+.sh_survmate_button_style_1 .o_survey_print div p .btn-primary:hover{
+	color:#fff !important;
+	transition:all 0.6s;
+}
+*/
+
+/*====================
+	Button Style 2
+=====================*/
+
+.sh_survmate_button_style_2 .o_survey_form .o_survey_form_content .btn-primary,
+.sh_survmate_button_style_2 .o_survey_print div  p .btn-primary{
+	display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    position: relative;
+    background: transparent;
+    transition-property: color;
+    transition-duration: 0.3s;
+	color:#fff;
+	overflow: hidden;
+}
+.sh_survmate_button_style_2 .o_survey_form .o_survey_form_content .btn-primary:focus,
+.sh_survmate_button_style_2 .o_survey_print div  p .btn-primary	:focus{
+	box-shadow:none;
+}
+
+.sh_survmate_button_style_2 .o_survey_form .o_survey_form_content .btn-primary:after,
+.sh_survmate_button_style_2 .o_survey_print div  p .btn-primary:after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.sh_survmate_button_style_2 .o_survey_form .o_survey_form_content .btn-primary:hover:after,
+.sh_survmate_button_style_2 .o_survey_print div  p .btn-primary:hover:after{
+	transform: scale(0);
+}
+/*====================
+	Button Style 3
+=====================*/
+.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary,
+.sh_survmate_button_style_3 .o_survey_print div  p .btn-primary{
+    position: relative;
+	border-radius:0;
+	border:none;
+	transition: 400ms ease all;
+}
+.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary:hover,
+.sh_survmate_button_style_3 .o_survey_print div  p .btn-primary:hover{
+    background:#fff !important;
+	transition: 400ms ease all;
+}
+
+
+.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary:after,
+.sh_survmate_button_style_3 .o_survey_print div  p .btn-primary:after,
+.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary:before,
+.sh_survmate_button_style_3 .o_survey_print div  p .btn-primary:before{
+	content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3px;
+    width: 0;
+    background: #f0094a;
+    box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary:after,
+.sh_survmate_button_style_3 .o_survey_print div  p .btn-primary:after{
+	right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary:hover:after,
+.sh_survmate_button_style_3 .o_survey_print div  p .btn-primary:hover:after,
+.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary:hover:before,
+.sh_survmate_button_style_3 .o_survey_print div  p .btn-primary:hover:before{
+	width: 100%;
+    transition: 800ms ease all;
+}
+.sh_survmate_button_style_3 .o_survey_form .o_survey_form_content .btn-primary:focus,
+.sh_survmate_button_style_3 .o_survey_print div p .btn-primary:focus{
+	box-shadow:none;
+}
+/*====================
+	Button Style 4
+=====================*/
+
+.sh_survmate_button_style_4 .o_survey_form .o_survey_form_content .btn-primary,
+.sh_survmate_button_style_4 .o_survey_print div p .btn-primary{
+    border: 1px solid ;
+    z-index: 1;
+	position:relative;
+	border-radius:0;
+	border-bottom-left-radius:1pc;
+	border-top-right-radius:1pc;
+	overflow:hidden;
+	color:#fff;
+	}
+.sh_survmate_button_style_4 .o_survey_form .o_survey_form_content .btn-primary:after,
+.sh_survmate_button_style_4 .o_survey_print div  p .btn-primary:after{
+	position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: transparent;
+    background-image: linear-gradient(315deg, #f5f5f5 0%, #f5f5f5 74%);
+    
+    transition: all 0.3s ease;
+	border-radius:0;
+}
+.sh_survmate_button_style_4 .o_survey_form .o_survey_form_content .btn-primary:hover:after,
+.sh_survmate_button_style_4 .o_survey_print div  p .btn-primary:hover:after{
+	    top: 0;
+    height: 100%;
+	transition:all 0.6s;
+}
+.sh_survmate_button_style_4 .o_survey_form .o_survey_form_content .btn-primary:hover,
+.sh_survmate_button_style_4 .o_survey_print div p .btn-primary:hover{
+	color:#fff !important;
+	transition:all 0.6s;
+}
+/*====================
+	Button Style 5
+=====================*/
+/*.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary{
+        border: 0;
+    border-bottom: 2px solid;
+    z-index: 1;
+    padding: 8px 22px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    position: relative;
+    display: inline-block;
+    outline: none;
+   color:red;
+    border-radius: 0px;
+    overflow: hidden;
+}
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:after,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:after{
+	position: absolute;
+    content: "";
+    left:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	transition: all 0.3s ease-in;
+	 background: #f5f5f5;
+}
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:hover:after,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:hover:after{
+    height:0%;
+	transition: all 0.3s ease;
+	z-index: -1;
+}
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:hover,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:hover{
+	color:#fff !important;
+}*/
+
+/*.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary{
+	border: 0;
+    padding: 8px 22px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    position: relative;
+    display: inline-block;
+    outline: none;
+   	color:#fff;
+    border-radius: 0px;
+    overflow: hidden;
+	background:#002C66;
+	border-bottom:2px solid #002C66;
+}
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:focus,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:focus{
+	box-shadow:none;
+}
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:after,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:after{
+	position: absolute;
+    content: "";
+    left:0;
+	top:0;
+	width:100%;
+	height:0%;
+	transition: all 0.3s ease-in;
+	 background: #f5f5f5;
+	z-index:0;
+}
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:hover:after,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:hover:after{
+	height:100%;
+	z-index:1;
+}
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:hover,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:hover{
+	color:#000;
+	border-bottom:2px solid #002C66;
+}*/
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary{
+    color: #ffffff;
+    overflow: hidden;
+    transition: color 0.3s;
+	border:0;
+	border-bottom: 2px solid;
+	border-radius: 0px;
+    padding: 8px 22px;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+}
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:after,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:after,
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:before,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:before{
+	content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 100%;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.3s;
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    background: #f5f5f5;
+	
+}
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:hover,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:hover{
+	border-radius: 0px;
+	border-bottom: 2px solid;
+}
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:hover:after,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:hover:after,
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:hover:before,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:hover:before{
+	    transform: translate3d(0, 100%, 0);
+}
+.sh_survmate_button_style_5 .o_survey_form .o_survey_form_content .btn-primary:focus,
+.sh_survmate_button_style_5 .o_survey_print div  p .btn-primary:focus{
+	box-shadow:none;
+}
+
+.sh_survmate_button_style_5 .js_cls_sh_survey_barcode_mobile_start_btn,
+.sh_survmate_button_style_5 .js_cls_sh_survey_barcode_mobile_start_btn{
+	    padding: 6px 22px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

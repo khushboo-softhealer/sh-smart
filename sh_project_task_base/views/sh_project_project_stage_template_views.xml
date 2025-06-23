@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- VIEW: Form -->
+    <record id="sh_project_project_stage_template_view_form" model="ir.ui.view">
+        <field name="name">Project Stage Templatee</field>
+        <field name="model">sh.project.project.stage.template</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="sh_stage_ids" widget="many2many_tags" options="{'no_create': True, 'no_open': True}" />
+                            <field
+                                name="sh_default_stage_id"
+                                options="{'no_create': True, 'no_open': True}"
+                                domain="[('id', 'in', sh_stage_ids)]"
+                                attrs="{'required': [('sh_stage_ids', '!=', False)]}"
+                            />
+                        </group>
+                        <group>
+                            <field name="sh_pricing_mode" />
+                            <field name="sh_fp_based_on" attrs="{'invisible': [('sh_pricing_mode', '!=', 'fp')], 'required': [('sh_pricing_mode', '=', 'fp')]}" />
+                            <field name="sh_tm_based_on" attrs="{'invisible': [('sh_pricing_mode', '!=', 'tm')], 'required': [('sh_pricing_mode', '=', 'tm')]}" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- VIEW: Tree -->
+    <record id="sh_project_project_stage_template_view_tree" model="ir.ui.view">
+        <field name="name">Project Stage Templatee</field>
+        <field name="model">sh.project.project.stage.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="sh_stage_ids" widget="many2many_tags" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="sh_project_project_stage_template_action" model="ir.actions.act_window">
+        <field name="name">Project Stage Templatee</field>
+        <field name="res_model">sh.project.project.stage.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create a new Project Stage Templatee</p>
+        </field>
+    </record>
+
+</odoo>

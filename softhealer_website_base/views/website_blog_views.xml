@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="softhealer_website_base_blog_tree_view_inherit_mass_update"
+        model="ir.actions.server">
+        <field name="name">Update Mass Meta Details</field>
+        <field name="model_id" ref="website_blog.model_blog_post" />
+        <field name="binding_model_id" ref="website_blog.model_blog_post" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name='groups_id'
+            eval="[(4, ref('softhealer_website_base.group_softhealer_website_base_update_mass_meta_information'))]" />
+        <field name="code">action = records.update_sh_mass_meta_details()</field>
+    </record>
+
+    <!--Blog
+    form-->
+    <record model="ir.ui.view" id="softhealer_website_base_blog_blog_form_view_inherit">
+        <field name="name">softhealer_website_base_blog_blog_form_view_inherit</field>
+        <field name="model">blog.blog</field>
+        <field name="inherit_id" ref="website_blog.view_blog_blog_form" />
+        <field name="arch" type="xml">
+            <field name='website_id' position='after'>
+                <field name='sh_display_as_label' />
+                <field name='softhealer_website_id' />
+                <field name='sh_is_this_career_blog' />
+            </field>
+        </field>
+    </record>
+
+    <!--Blog
+    post form-->
+    <record model="ir.ui.view" id="softhealer_website_base_blog_post_form_view_inherit">
+        <field name="name">softhealer_website_base_blog_post_form_view_inherit</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_form" />
+        <field name="arch" type="xml">
+            <xpath expr='//div[hasclass("oe_button_box")]//field[@name="is_published"]'
+                position='attributes'>
+                <attribute name="class" separator=" " add="d-none" remove="" value=""></attribute>
+            </xpath>
+            <field name='website_id' position='after'>
+                <field name='is_published' widget="boolean_toggle" />
+                <field name='softhealer_website_id' />
+                <field name="is_article" />
+                <field name="suggested_blog_by_categories" widget="many2many_tags" attrs="{'invisible':[('is_article','!=',True)] }" domain="[('id','!=',id)]"/>
+                <field name="suggestion_image" attrs="{'invisible':[('is_article','!=',True)] }"/>
+
+            </field>
+        </field>
+    </record>
+
+    <!-- To add the class on div#wrapwrap to remove the overflow -->
+
+    <record id="theme_softhealer_website_standard_header_layout" model="ir.ui.view">
+        <field name="name">SH Header Inherit</field>
+        <field name="type">qweb</field>
+        <field name="key">softhealer_website_base.theme_softhealer_website_standard_header_layout</field>
+        <field name="inherit_id" ref="website.layout" />
+        <field name="mode">extension</field>
+        <field name="arch" type="xml">
+
+            <!-- Blog and Blog post custom classes -->
+            <xpath expr="//div[@id='wrapwrap']" position="before">
+                <t t-set="url" t-value="request.httprequest.path" />
+
+                <t t-if="url" t-set="url" t-value="url.strip()" />
+                <t t-else="" t-set="url" t-value="''" />
+                <t
+                    t-if="url in ['/my/projects','/web/login','/web/signup','/web/reset_password',
+                '/job-thank-you','/contactus-thank-you','/web/login/totp']">
+                    <t t-set="pageName" t-value="'login_signup_reset_password_page'" />
+                </t>
+                <t t-elif="url=='/jobs'">
+                    <t t-set="pageName" t-value="'sh_cls_website_jobs'" />
+                </t>
+                <t t-elif="(url=='/blog' or url.find('/blog/') &gt; -1) and not blog_post">
+                    <t t-set="pageName" t-value="'sh_cls_website_blogs'" />
+                </t>
+                <t t-elif="url.find('/blog/') &gt; -1 and blog_post">
+                    <t t-set="pageName" t-value="'sh_cls_website_blog_post'" />
+                </t>
+                <t t-elif="url.find('/jobs/detail/') &gt; -1">
+                    <t t-set="pageName"
+                        t-value="'sh_cls_website_jobs_detail login_signup_reset_password_page'" />
+                </t>
+                <t t-elif="url.find('/jobs/apply/') &gt; -1">
+                    <t t-set="pageName"
+                        t-value="'sh_cls_website_jobs_apply login_signup_reset_password_page'" />
+                </t>
+                <t t-elif="url.find('/shop/') &gt; -1">
+                    <t t-if='request.website.sudo().theme_id.name == "theme_softhealer_store"'>
+                        <t t-set="pageName"
+                            t-value="'cls_theme_softhealer_store_custom_product_detail_page'" />
+                    </t>
+                </t>
+                <t
+                    t-if="url in ['/auto-parts-management-system']">
+                    <t t-set="pageName" t-value="'sh_auto_parts_main'" />
+                </t>
+                <t
+                    t-if="url in ['/property-management-system']">
+                    <t t-set="pageName" t-value="'sh_auto_parts_main'" />
+                </t>
+
+                <t t-if="url == '/hardware-store-management-system'">
+                    <t t-set="pageName" t-value="'sh_css_cls_header_background_color'" />
+                </t>
+
+                <t t-if="url in  ['/home-website', '/']">
+                    <t t-set="pageName" t-value="'sh_css_cls_header_background_color'" />
+                </t>
+
+                <t t-if="url in  ['/home-website', '/cooking-competition-2025']">
+                    <t t-set="pageName" t-value="'sh_css_cls_header_background_color'" />
+                </t>
+
+                 <t t-if="url in  ['/home-website', '/odoo-migration-services-in-dubai']">
+                    <t t-set="pageName" t-value="'sh_css_cls_header_background_color'" />
+                </t>
+                
+                <t t-if="'/payment/pay' in url">
+                    <t t-set="pageName" t-value="'login_signup_reset_password_page'" />
+                </t>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

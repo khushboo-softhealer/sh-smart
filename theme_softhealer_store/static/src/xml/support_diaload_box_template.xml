@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="theme_softhealer_store.shEcommerceSupportTemplate">
+        <div class="form-group row sh_support_button_custom_dialoag_wrapper ms-0 me-0">
+            
+            <div class='col-sm-12' t-if='sh_blog_post_not_exists'>
+                <p class='alert alert-info' t-esc='war_text'></p>
+            </div>
+            
+            <label class="col-sm-3 control-label" for="input_firstname">Name <span style='color:red;'>*</span></label>
+            <div class="col-sm-9 mt-2 mb-2"> 
+                <input t-if='user_public' type="text" class="form-control" name="input_firstname" id="input_firstname" placeholder="Name..." value=''/> 
+                <input t-if='!user_public' type="text" class="form-control" name="input_firstname" id="input_firstname" placeholder="Name..." t-att-value='user_name'/>
+            </div> 
+
+            <label class="col-sm-3 control-label" for="input_productname">Product</label>
+            <div class="col-sm-9 mt-2 mb-2" id="product_name_id"> 
+                <input type="text" class="form-control" name="input_product_name" id="input_product_name" t-att-value='product_name' readonly='readonly'/> 
+            </div> 
+
+            <label class="col-sm-3 control-label" for="input_productname">Version</label>
+            <div class="col-sm-9 mt-2 mb-2" id="product_version"> 
+                <input type="text" class="form-control" name="input_version" id="input_version" t-att-value='version' readonly='readonly'/> 
+            </div> 
+
+            <label class="col-sm-3 control-label" for="input_productedition">Edition <span style='color:red;'>*</span></label>
+            <div class="col-sm-9 mt-2 mb-2" id="product_version"> 
+                <select id="input_productedition" name="sh_edition_id" class="form-select">
+                    <option value="" disabled='disabled' selected='selected'>Edition...</option>
+                    <t t-foreach="sh_edition_info" t-as="sh_edition_sh">
+                        <option t-att-value="sh_edition_sh['id']" >
+                            <t t-esc="sh_edition_sh['name']" />
+                        </option>
+                    </t>
+                </select>
+            </div>
+
+            <label class="col-sm-3 control-label" for="input_company">Company</label> 
+            <div class="col-sm-9 mt-2 mb-2">
+                <input type="text" class="form-control" name="input_company" id="input_company" placeholder="Your Company Name" /> 
+            </div>
+
+            <label class="col-sm-3 control-label" for="input_contactno">Contact No. <span style='color:red;'>*</span></label> 
+            <div class="col-sm-9 mt-2 mb-2 country-with-contact">
+                <!-- <input type="text" class="form-control" name="input_contactno" id="input_contactno" placeholder="Contact No..." t-att-value='mobile'/>  -->
+                <input type="text" class="form-control" name="input_contactno" id="input_contactno" /> 
+                 
+            </div>
+
+            <label class="col-sm-3 control-label" for="input_email">Email <span style='color:red;'>*</span></label> 
+            <div class="col-sm-9 mt-2 mb-2">
+                <input type="email" class="form-control" name="input_email" id="input_eamil" placeholder="Email" t-att-value='email'/> 
+            </div> 
+
+            <label class="col-sm-3 control-label" for="input_message_for">Message <span style='color:red;'>*</span></label> 
+            <div class="col-sm-9 mt-2 mb-2">
+                <textarea class="form-control" name="input_message_name" id="input_message" placeholder="Message..." ></textarea>                     
+            </div>
+            
+            <div id="sh_recaptcha_legal_terms"></div>
+
+            <label class="col-sm-3 control-label" for="input_migration_notify_me" t-if='btn_origin == "sh_contact_us"' title='By checking this box, you will receive notifications at the provided email address whenever this app is launched.'>Notify Me</label> 
+            <div class="col-sm-9 mt-2 mb-2" t-if='btn_origin == "sh_contact_us"'>
+                <input type="checkbox" class="" name="input_migration_notify_me" id="input_migration_notify_me"/>           
+            </div>
+
+            <label class="col-sm-3 control-label" for="input_attachment" t-if='btn_origin == "technical_support" or btn_origin == "new_customization"'>Attachment <span style='color:red;'>*</span></label> 
+            <div class="col-sm-9 mt-2 mb-2 file_box" t-if='btn_origin == "technical_support" or btn_origin == "new_customization"'>
+                <input type='file' id="ticket_attachment" class='image-uploader ticket_attachment' multiple="multiple"></input>                   
+            </div> 
+
+            <div class='col-sm-3'></div>
+            <div class='col-sm-9 sh_support_wrapper_warning'></div>
+        </div>
+
+    </t>
+</templates>

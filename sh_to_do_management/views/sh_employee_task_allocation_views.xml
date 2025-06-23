@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form View -->
+    <record id="sh_employee_task_allocation_view_form" model="ir.ui.view">
+        <field name="name">sh.employee.task.allocation.view.form</field>
+        <field name="model">sh.employee.task.allocation</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <button name="action_approve_allocation"
+                        string="Approve" class="btn-success"
+                        type="object"
+                        attrs="{'invisible': ['|',('state', '!=', 'waiting'),('show_approval_btn','=',False)]}"
+                    />
+                    <button name="action_approve_allocation_following"
+                        string="Approve All Following" class="btn-success"
+                        type="object"
+                        attrs="{'invisible': ['|',('state', '!=', 'waiting'),('show_approval_btn','=',False)]}"
+                    />
+                    <button name="action_reject_allocation"
+                        string="Reject" class="btn-danger"
+                        type="object"
+                        attrs="{'invisible': ['|',('state', '!=', 'waiting'),('show_approval_btn','=',False)]}"
+                    />
+                    <button name="action_reject_allocation_following"
+                        string="Reject All Following" class="btn-danger"
+                        type="object"
+                        attrs="{'invisible': ['|',('state', '!=', 'waiting'),('show_approval_btn','=',False)]}"
+                    />
+                    <button name="action_cancel_allocation"
+                        string="Cancel"
+                        type="object"
+                        attrs="{'invisible': [('show_cancel_btn', '=', False)]}"
+                    />
+                    <button name="action_cancel_allocation_following"
+                        string="Cancel All Following"
+                        type="object"
+                        attrs="{'invisible': [('show_cancel_btn', '=', False)]}"
+                    />
+                    <button name="action_reset_draft"
+                        string="Reset To Draft" class="oe_highlight"
+                        type="object"
+                        attrs="{'invisible': [('state', '!=', 'cancel')]}"
+                    />
+                    <button name="action_waiting"
+                        string="Confirm" class="oe_highlight"
+                        type="object"
+                        attrs="{'invisible': [('state', '!=', 'draft')]}"
+                    />
+                    <field name="state" widget="statusbar" statusbar_visible="draft,waiting,done" />
+                </header>
+                <sheet>
+                    <div class="oe_title" colspan="4">
+                        <h1>
+                            <field name="name" readonly="1" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group style="align-items: center;">
+                            <field name="sh_employee_id" options="{'no_create': True, }"
+                                attrs="{'readonly': [('state','in',['done','reject'])]}" />
+                            <!-- <field name="sh_department_id" attrs="{'readonly':
+                            [('is_lock','=',True)]}" options="{'no_create': True,}"/> -->
+                            <field name="user_id" readonly="1" />
+                            <field name="sh_project_id" domain="[('sh_child_ids', '=', False)]"
+                                required="1" attrs="{'readonly': [('is_lock','=',True)]}"
+                                options="{'no_create': True, }" />
+                            <field name="sh_task_id" domain="[('project_id','=',sh_project_id)]"
+                                attrs="{'readonly': [('is_lock','=',True)]}"
+                                options="{'no_create': True, }" />
+                            <label for="parent_from_date" string="Actual Date" />
+                            <div name="parent_dates" class="o_row">
+                                <field name="parent_from_date" widget="daterange" required="1"
+                                    options="{&quot;related_end_date&quot;: &quot;to_date&quot;}"
+                                    attrs="{'readonly':[('state','!=','draft')]}" />
+                                <i class="fa fa-long-arrow-right mx-2 oe_edit_only"
+                                    aria-label="Arrow icon" title="Arrow" />
+                                <i class="fa fa-long-arrow-right mx-2 oe_read_only"
+                                    aria-label="Arrow icon" title="Arrow"
+                                    attrs="{'invisible': [('parent_from_date', '=', False), ('parent_to_date', '=', False)]}" />
+                                <field name="parent_to_date" widget="daterange" required="1"
+                                    options="{&quot;related_start_date&quot;: &quot;from_date&quot;}"
+                                    attrs="{'readonly':[('state','!=','draft')]}" />
+                            </div>
+                            <field name="sh_remarks" attrs="{'readonly': [('is_lock','=',True)]}" />
+                        </group>
+                        <group style="align-items: center;">
+                            <field name="sh_responsible_tl_id" options="{'no_create': True, }"
+                                attrs="{'readonly': [('state','in',['done','reject'])]}" />
+                            <field name="sh_responsible_tl_ids" widget="many2many_tags"
+                                options="{'no_create': True, }" readonly="1" force_save="1" />
+                            <field name="is_lock" invisible="1" />
+                            <field name="show_approval_btn" invisible="1" />
+                            <field name="show_cancel_btn" invisible="1" />
+
+                            <label for="from_date" string="Date" />
+                            <div name="dates" class="o_row">
+                                <field name="from_date" widget="daterange" required="1"
+                                    options="{&quot;related_end_date&quot;: &quot;to_date&quot;}"
+                                    attrs="{'readonly':[('state','=','done')]}" />
+                                <i class="fa fa-long-arrow-right mx-2 oe_edit_only"
+                                    aria-label="Arrow icon" title="Arrow" />
+                                <i class="fa fa-long-arrow-right mx-2 oe_read_only"
+                                    aria-label="Arrow icon" title="Arrow"
+                                    attrs="{'invisible': [('from_date', '=', False), ('to_date', '=', False)]}" />
+                                <field name="to_date" widget="daterange" required="1"
+                                    options="{&quot;related_start_date&quot;: &quot;from_date&quot;}"
+                                    attrs="{'readonly':[('state','=','done')]}" />
+                            </div>
+                            <field name="sh_priority" attrs="{'readonly': [('is_lock','=',True)]}" />
+                            <field name="allocated_hours" widget="float_time"
+                                attrs="{'readonly':[('state','=','done')]}" />
+                            <field name="sh_timesheet_hours" widget='timesheet_uom' />
+                        </group>
+
+                    </group>
+                    <notebook>
+                        <page name="existing_allocations" string="Employee Existing Allocations">
+                            <field name="existing_allocation_ids" widget="one2many" mode="tree">
+                                <tree no_open="1">
+                                    <field name="sh_employee_id" />
+                                    <field name="sh_project_id" />
+                                    <field name="sh_task_id" />
+                                    <field name="sh_responsible_tl_id" />
+                                    <field name="sh_priority" />
+                                    <field name="from_date" />
+                                    <field name="to_date" />
+                                    <field name="allocated_hours" widget="float_time" />
+                                    <field name="state" decoration-info="state == 'draft'"
+                                        decoration-warning="state == 'waiting'"
+                                        decoration-success="state == 'done'"
+                                        decoration-danger="state == 'reject'"
+                                        decoration-muted="state == 'cancel'"
+                                        widget="badge"
+                                    />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Pivot View -->
+    <record model="ir.ui.view" id="employee_allocation_pivot">
+        <field name="name">sh.employee.task.allocation.pivot</field>
+        <field name="model">sh.employee.task.allocation</field>
+        <field name="arch" type="xml">
+            <pivot string="Allocation" disable_linking="True">
+                <field name="allocated_hours" type="measure" />
+                <field name="sh_timesheet_hours" type="measure" />
+                <field name="from_date" interval="day" type="col" />
+                <field name="sh_employee_id" type="row" />
+                <field name="sh_project_id" type="col" />
+
+            </pivot>
+        </field>
+    </record>
+
+    <!-- Kanban View -->
+    <record model="ir.ui.view" id="view_employee_task_allocation_kanban">
+        <field name="name">sh.employee.task.allocation.kanban</field>
+        <field name="model">sh.employee.task.allocation</field>
+        <field name="arch" type="xml">
+            <kanban
+                class="oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors o_kanban_small_column"
+                on_create="quick_create"
+                quick_create_view="sh_to_do_management.sh_employee_task_allocation_view_form"
+                examples="assignment"
+                sample="1"
+            >
+                <field name="id" />
+                <field name="sh_employee_id" />
+                <field name="sh_responsible_tl_id" />
+                <field name="user_id" />
+                <field name="sh_project_id" />
+                <field name="sh_task_id" />
+                <field name="sh_priority" />
+                <field name="from_date" />
+                <field name="to_date" />
+                <field name="allocated_hours" />
+                <field name="state" />
+                <field name="show_approval_btn" />
+                <field name="sh_timesheet_hours" />
+                <field name="employee_on_leave_today" />
+                <field name="employee_on_half_day_leave" />
+                <field name="employee_on_custom_day_leave" />
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_row p-3">
+                            <t t-if="record.employee_on_leave_today.raw_value">
+                                <div class="o_kanban_ribbon o_kanban_ribbon-primary">
+                                    On Leave
+                                </div>
+                            </t>
+
+                            <t t-if="record.employee_on_custom_day_leave.raw_value">
+                                <div class="o_kanban_ribbon o_kanban_ribbon-primary">
+                                    Custom Hours
+                                </div>
+                            </t>
+
+                            <t t-if="record.employee_on_half_day_leave.raw_value">
+                                <div class="o_kanban_ribbon o_kanban_ribbon-primary">
+                                    Half Day
+                                </div>
+                            </t>
+
+                            <div class="o_project_kanban_main ">
+                                <div class="o_project_kanban_boxes d-flex align-items-baseline">
+                                    <strong>
+                                        <span class="o_text_overflow" title="Employee">
+                                            <field name="sh_employee_id" />
+                                            <field name="employee_on_leave_today" />
+                                        </span>
+                                    </strong>
+
+                                    <span class="" title="Allocated Hours">
+                                        <div class="text-primary ms-auto">
+                                            <div name="allocated_hours"
+                                                class="o_field_widget o_required_modifier o_field_monetary fw-bold">
+                                                <span style=" font-size: large;">
+                                                    <field name="allocated_hours"
+                                                        widget="timesheet_uom" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </span>
+
+                                </div>
+                                <div class="mw-100">
+
+                                    <div class="o_kanban_primary_left">
+                                        <div class="o_primary">
+                                            <div class="o_row">
+                                                <span class="o_text_overflow">
+                                                    <field name="sh_project_id" />
+                                                </span>
+                                            </div>
+                                            <div class="o_row text-muted"
+                                                t-if="record.sh_task_id.raw_value">
+                                                <span class="o_text_overflow">
+                                                    <field name="sh_task_id"
+                                                        style="font-size: smaller;" />
+                                                </span>
+                                            </div>
+                                            <div
+                                                t-if="record.from_date.raw_value and record.to_date.raw_value"
+                                                class="text-muted o_row">
+                                                <span class="fa fa-clock-o me-2"
+                                                    title="Allocation Dates"></span>
+                                                <field name="from_date" />
+                                                <i
+                                                    t-if="record.from_date.raw_value and record.to_date.raw_value"
+                                                    class="fa fa-long-arrow-right mx-2 oe_read_only"
+                                                    aria-label="Arrow icon" title="Arrow" />
+                                                <field name="to_date" />
+                                            </div>
+                                            <div>
+                                                <field name="sh_timesheet_hours" widget="timesheet_uom"/>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_kanban_record_bottom mt-3">
+                                <div class="oe_kanban_bottom_left">
+                                    <div class="o_project_kanban_boxes d-flex align-items-baseline">
+                                        <field name="sh_priority" widget="priority" readonly="1" />
+                                        <t
+                                            t-if="record.state.raw_value == 'waiting' and record.show_approval_btn.raw_value != false">
+                                            <div style="margin-left:10px;">
+                                                <button name="action_approve_allocation"
+                                                    nolabel="1"
+                                                    class="fa fa-check-circle-o text-success p-2"
+                                                    type="object"
+                                                    title="Approve Allocation"
+                                                />
+                                                <button name="action_reject_allocation"
+                                                    nolabel="1"
+                                                    class="fa fa-times-circle-o text-danger p-2"
+                                                    type="object"
+                                                    title="Reject Allocation"
+                                                />
+
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <field
+                                        style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 72px;"
+                                        class="text-end" name="state"
+                                        decoration-info="state == 'draft'"
+                                        decoration-warning="state == 'waiting'"
+                                        decoration-success="state == 'done'"
+                                        decoration-danger="state == 'reject'"
+                                        decoration-muted="state == 'cancel'"
+                                        widget="badge" title="Status"
+                                    />
+                                    <field name="user_id" widget="many2one_avatar_user"
+                                        title="Create User" />
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="sh_employee_task_allocation_view_tree" model="ir.ui.view">
+        <field name="name">sh.employee.task.allocation.view.tree</field>
+        <field name="model">sh.employee.task.allocation</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="create_uid" />
+                <field name="sh_employee_id" />
+                <field name="sh_responsible_tl_id" />
+                <field name="sh_project_id" />
+                <field name="sh_task_id" />
+                <field name="sh_priority" optional="show" />
+                <field name="from_date" />
+                <field name="to_date" />
+                <field name="parent_from_date" optional="hide" />
+                <field name="parent_to_date" optional="hide" />
+                <field name="allocated_hours" widget="float_time" optional="show" />
+                <field name="show_approval_btn" invisible="1" />
+                <field name="state"
+                    decoration-info="state == 'draft'"
+                    decoration-warning="state == 'waiting'"
+                    decoration-success="state == 'done'"
+                    decoration-danger="state == 'reject'"
+                    decoration-muted="state == 'cancel'"
+                    widget="badge" optional="show" />
+                <button name="action_approve_allocation"
+                    string="Approve" class="btn-success"
+                    type="object"
+                    attrs="{'invisible': ['|',('state', '!=', 'waiting'),('show_approval_btn','=',False)]}"
+                />
+                <button name="action_reject_allocation"
+                    string="Reject" class="btn-danger"
+                    type="object"
+                    attrs="{'invisible': ['|',('state', '!=', 'waiting'),('show_approval_btn','=',False)]}"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="sh_employee_task_allocation_view_search" model="ir.ui.view">
+        <field name="name">sh.employee.task.allocation.view.search</field>
+        <field name="model">sh.employee.task.allocation</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="sh_employee_id" />
+                <field name="sh_project_id" />
+                <field name="sh_task_id" />
+                <field name="name" />
+                <field name="sh_responsible_tl_id" />
+
+                <field name="state" />
+                <field name="from_date" invisible="1" />
+                <field name="to_date" invisible="1" />
+                <filter name="filter_waiting" string="Waiting For Approval"
+                    domain="[('state', '=', 'waiting')]" />
+                <filter name="filter_done" string="Done" domain="[('state', '=', 'done')]" />
+                <filter name="filter_rejected" string="Rejected" domain="[('state', '=', 'reject')]" />
+                <filter name="filter_done_waiting" string="Done &amp; Waiting"
+                    domain="[('state', 'in', ['done','waiting'])]" />
+
+                <filter name="filter_today" string="Today"
+                    domain="[
+                    ('from_date', '&lt;=', context_today().strftime('%Y-%m-%d 00:00:00')), 
+                    ('to_date', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00')),
+                ]" />
+
+                <filter name="filter_tomorrow" string="Tomorrow"
+                    domain="[
+                    ('from_date', '&lt;=', (context_today()+relativedelta(days=1)).strftime('%Y-%m-%d 00:00:00')), 
+                    ('to_date', '&gt;=', (context_today()+relativedelta(days=1)).strftime('%Y-%m-%d 00:00:00')),
+                ]" />
+
+                <filter name="filter_current_week" string="Current Week"
+                    domain="[
+                        ('to_date','&lt;',(context_today()+relativedelta(days=7)).strftime('%Y-%m-%d 23:59:59')), 
+                        ('from_date','&gt;=',context_today().strftime('%Y-%m-%d 00:00:00')),
+                ]" />
+
+                <group expand="1" string="Group By">
+                    <filter string="Assigned Person" name='group_employee'
+                        context="{'group_by':'sh_employee_id'}" />
+                    <filter string="Responsible TL" name="group_responsible_tl"
+                        context="{'group_by':'sh_responsible_tl_id'}" />
+
+                    <filter string="Project" name="group_project"
+                        context="{'group_by':'sh_project_id'}" />
+                    <filter string="Task" name="group_task" context="{'group_by':'sh_task_id'}" />
+                    <filter string="Status" name="group_status" context="{'group_by':'state'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="sh_employee_task_allocation_action" model="ir.actions.act_window">
+        <field name="name">Employee Task Allocations</field>
+        <field name="res_model">sh.employee.task.allocation</field>
+        <field name="view_mode">kanban,tree,form,pivot</field>
+        <field name="view_id" ref="view_employee_task_allocation_kanban" />
+        <field name="context">{'create':False, 'delete':False,
+            'search_default_group_employee':1,'search_default_filter_today':1 }</field>
+    </record>
+
+    <!-- Mass Approve Multi Action -->
+    <record id="action_mass_approve_allocations" model="ir.actions.server">
+        <field name="name">Mass Approve</field>
+        <field name="model_id" ref="sh_to_do_management.model_sh_employee_task_allocation" />
+        <field name="binding_model_id" ref="sh_to_do_management.model_sh_employee_task_allocation" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_approve_allocation()</field>
+    </record>
+
+    <!-- Employee Task Allocation Menu -->
+    <menuitem
+        id="sh_emp_task_allocation_menu"
+        name="My Allocation"
+        parent="project.menu_main_pm"
+        action="sh_employee_task_allocation_action"
+        sequence="4"
+    />
+</odoo>

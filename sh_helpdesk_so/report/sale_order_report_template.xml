@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sh_helpdesk_so_report" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@id='informations']" position="after">
+            <div t-if="doc.sh_sale_ticket_ids" class="col-auto mw-100 mb-2">
+                <strong>Ticket:</strong>
+                <t t-foreach="doc.sh_sale_ticket_ids" t-as="ticket">
+                    <span style="padding:5px;background-color:#28a745; color:#fff; border-radius:5px; font-size:12px; margin:0px 5px;"  t-esc="ticket.name" />
+                </t>
+            </div>
+        </xpath>
+    </template>
+</odoo>

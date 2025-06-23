@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ================= Migration ================= -->
+    <menuitem
+        id="sh_migration_menu"
+        name="Migration"
+        sequence="10"
+        web_icon="sh_migration,static/description/icon.png"
+    />
+
+    <!-- ================= Dashboard ================= -->
+    <menuitem id="sh_migration_dashboard_menu" 
+        name="Dashboard" 
+        parent="sh_migration_menu" 
+        sequence="1" 
+        action="sh_migration.sh_action_migration_dashboard" 
+     />
+
+    <!-- ================= Tasks ================= -->
+    <menuitem
+        id="sh_migration_project_task_menu"
+        name="Tasks"
+        parent="sh_migration_menu"
+        sequence="2"
+    />
+
+    <!-- Tasks -->
+    <menuitem
+        id="sh_migration_project_task_sub_menu"
+        name="Tasks"
+        parent="sh_migration_project_task_menu"
+        sequence="1"
+        action="sh_migration.sh_migration_project_task_action1"
+    />
+
+    <!-- Bugs -->
+    <menuitem
+        id="sh_module_bug_menu"
+        name="Bug Tracker"
+        parent="sh_migration_project_task_menu"
+        sequence="2"
+        action="sh_migration.sh_module_bug_action"
+    />
+
+    <!-- CR -->
+    <menuitem
+        id="sh_migration_task_upcoming_feature_menu"
+        name="CR"
+        parent="sh_migration_project_task_menu"
+        sequence="3"
+        action="sh_project_task_base.sh_task_upcoming_feature_action"
+    />
+
+    <!-- ================= Configuration ================= -->
+    <menuitem
+        id="sh_migration_configuration_menu"
+        name="Configuration"
+        parent="sh_migration_menu"
+        sequence="3"
+        groups="project.group_project_manager"
+    />
+
+    <!-- Settings -->
+    <menuitem
+        id="sh_migration_settings_menu"
+        name="Settings"
+        parent="sh_migration_configuration_menu"
+        sequence="1"
+        action="sh_migration.action_sh_migration_configuration"
+        groups="project.group_project_manager"
+    />
+
+    <!-- Bug States -->
+    <menuitem
+        id="sh_bug_state_menu"
+        name="Bug States"
+        parent="sh_migration_configuration_menu"
+        action="sh_migration.sh_bug_state_action"
+        sequence="3"
+        groups="project.group_project_manager"
+    />
+
+    <!-- CR States -->
+    <menuitem
+        id="sh_migration_cr_state_menu"
+        name="CR States"
+        parent="sh_migration_configuration_menu"
+        action="sh_project_task_base.sh_cr_state_action"
+        sequence="3"
+        groups="project.group_project_manager"
+    />
+
+    <!-- Bug State Change Analysis -->
+    <menuitem 
+        id="sh_bug_state_log_menu" 
+        name="Bug State Change Analysis"
+        action="sh_bug_state_log_action" 
+        parent="sh_migration_configuration_menu" 
+        sequence="4" 
+    />
+
+    <!-- ================= Project ================= -->
+    <!-- Bugs Tracker -->
+    <menuitem
+        id="sh_project_module_bug_menu"
+        name="Bug Tracker"
+        parent="sh_project_task_base.sh_project_task_other_menu"
+        sequence="1"
+        action="sh_migration.sh_project_module_bug_action"
+    />
+
+</odoo>

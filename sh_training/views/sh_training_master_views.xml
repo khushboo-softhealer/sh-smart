@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_training_master_view_form" model="ir.ui.view">
+        <field name="name">sh.training.master.view.form</field>
+        <field name="model">sh.training.master</field>
+        <field name="arch" type="xml">
+            <form string="Training Master">
+                <sheet>
+                    <group>
+                        <field name="sh_course_id" readonly="1"/>
+                    </group>
+
+                    <field name="trainee_ratings_line">
+                        <tree editable="bottom">
+                            <field name="sh_trainee_ids" invisible="1"/>
+                            <field name="sh_trainee_id" domain="[('id','in',sh_trainee_ids)]"/>
+                            <field name="ratings" widget="priority"/>
+                            <field name="note" />
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    
+
+</odoo>

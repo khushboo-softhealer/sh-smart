@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sh_depends_form" model="ir.ui.view">
+		<field name="name">sh.depends.form</field>
+      	<field name="model">sh.depends</field>
+      	<field name="arch" type="xml">
+        	<form string="Sh Depends">
+         		<sheet>
+              		<group>
+                  		<group>
+                      		<field name="name" required="1"/>
+                      		<field name="technical_name" required="1"/>
+                  		</group>
+              		</group>
+				</sheet>
+			</form>
+		</field>
+ 	</record>
+ 	
+ 	<record id="view_sh_depends_tree" model="ir.ui.view">
+		<field name="name">sh.depends.tree</field>
+      	<field name="model">sh.depends</field>
+      	<field name="arch" type="xml">
+        	<tree string="Depends">
+           		<field name="name"/>
+			</tree>
+		</field>
+ 	</record>
+ 	
+ 	<record id="action_sh_depends" model="ir.actions.act_window">
+        <field name="name">Depends</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.depends</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_sh_depends_tree"/>
+    </record>
+ 	<menuitem name ="Depends"
+              id='menu_sh_depends'
+              parent="sale.product_menu_catalog"
+              action="action_sh_depends"
+              sequence="4"
+              groups="sh_product_base.group_product_tags_manager"/>
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_helpdesk_tickets_so_inherited_view_form" model="ir.ui.view">
+        <field name="name">sh.sh.helpdesk.tickets.so.view.form</field>
+        <field name="model">sh.helpdesk.ticket</field>
+        <!-- <field name="groups_id" eval="[(4, ref('sales_team.group_sale_salesman'))]"/> -->
+        <field name="inherit_id" ref="sh_helpdesk.helpdesk_ticket_form_view" />
+        <field name="arch" type="xml">
+            <field name="stage_id" position="before">
+                <!--Removed due to not use at 19th december 2024-->
+                <!-- <button class="btn btn-primary" name="action_create_so" type="object" string="Create SO" groups="sales_team.group_sale_manager" /> -->
+                <button class="btn btn-primary" name="action_sale_create_order" type="object" string="Create Sale Order" groups="sh_helpdesk_so.sh_helpdesk_ticket_so" />
+            </field>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_sale_orders" type="object" class="oe_stat_button" icon="fa-dollar" context="{'partner_id': partner_id}" attrs="{'invisible':[('sale_order_count','=',0)]}" groups="sh_helpdesk_so.sh_helpdesk_ticket_so">
+                    <div class="o_stat_info">
+                        <field name="sale_order_count" class="o_stat_value" />
+                        <span class="o_stat_text">Sales</span>
+                    </div>
+                </button>
+            </xpath>
+            <xpath expr="//page[last()]" position="before">
+                <page string="Customisation Details" groups="sales_team.group_sale_salesman,sh_helpdesk_so.sh_helpdesk_ticket_so">
+                    <group>
+                        <group>
+                            <field name="sh_estimation_product_id"/>
+                            <!-- <field name="sh_estimation_respon_user_ids" widget="many2many_tags"/> -->
+                            <field name="sh_original_module_send"/>
+                            <field name="estimation_description"/>
+                            <field name="estimation_hours" widget="float_time"/>
+                        </group>
+                        <group>
+                            <field name="sh_invoice_verified"/>
+                            <field name="sh_latest_update"/>
+                            <field name="sh_custom_module_conflict"/>
+                            <field name="sh_need_to_setup_environment"/>
+                            <field name="sh_deployment_required"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

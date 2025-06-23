@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_hr_placement_change_state_wizard_view" model="ir.ui.view">
+        <field name="name">sh.hr.placement.change.state.wizard.view</field>
+        <field name="model">sh.change.state.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="stage_id" widget="selection" />
+                    </group>
+                </group>
+                <footer>
+                    <button class="btn-primary" name="change_state_action" type="object"
+                        string="Submit" />
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_hr_placement_change_state_multi_action" model="ir.actions.act_window">
+        <field name="name">Change State</field>
+        <field name="res_model">sh.change.state.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="hr_recruitment.model_hr_applicant" />
+        <field name="binding_view_types">form</field>
+    </record>
+
+</odoo>
+            

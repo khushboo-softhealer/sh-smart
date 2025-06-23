@@ -1,0 +1,52 @@
+<odoo>
+
+    <!-- Print Timesheet Report -->
+    <record id="action_report_timesheet" model="ir.actions.report">
+        <field name="name">Timesheet</field>
+        <field name="model">project.task</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sh_timesheet_report.report_timesheet</field>
+        <field name="report_file">sh_timesheet_report.report_timesheet</field>
+        <field name="print_report_name">'%s - Timesheet (%s - %s)' % (object.name, object.timesheet_from_date, object.timesheet_to_date)</field>
+    </record>
+
+    <!-- Notebook Page in Task form view -->
+    <record id="sh_project_task_timesheet_print_form_view" model="ir.ui.view">
+        <field name="name">project.task.timesheet_print.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited" />
+        <field name="arch" type="xml">
+            <field name="timesheet_ids" position="before">
+                <group groups="account.group_account_manager">
+                    <group>
+                        <field name="timesheet_from_date" />
+                        <field name="changed_effective_hours" invisible="1" widget="float_time"/>
+                        <field name="timesheet_to_date" />
+                    </group>
+                    <group>
+                        <button name="autofill_timesheet" type="object" string="Auto fill"/>
+                        <button type="object" class="btn btn-primary" name="sh_timesheet_print" string="Timesheet"/>
+                    </group>
+                </group>
+            </field>
+
+            <xpath expr="//page[@id='timesheets_tab']//group[@name='project_hours']//field[@name='effective_hours']" position="after">
+                <field name="invoice_hours" widget="timesheet_uom" groups = "sh_project_task_base.group_project_officer"/>      
+            </xpath>            
+        </field>
+    </record>
+
+     <record id="sh_project_lock_timesheet_form_view_inherit" model="ir.ui.view">
+        <field name="name">project.project.inherit.lock.timesheet</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//form//group//group[2]" position="inside">
+               
+                <field name="sh_auto_lock_timesheet" groups="project.group_project_manager"/>
+            </xpath>
+            
+        </field>
+    </record>
+
+</odoo>

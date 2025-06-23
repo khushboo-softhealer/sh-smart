@@ -1,0 +1,349 @@
+// start why softhealer service banner section // 
+.sh_Trello_Odoo_solution_banner {
+    @include sh_other_page_banner;
+}
+// end banner section // 
+
+//Trello-Odoo Connector
+.sh_trello_odoo_main_section{
+    background: #fff;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);
+    @include media-breakpoint-down(lg){
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+        
+        .sh_column_inner_box{
+            position: relative;top:70px;
+            @include media-breakpoint-down(sm){
+                top:50px;
+            }
+        .sh_photo_group{
+            display: flex;position: relative;z-index: 10;
+            @include media-breakpoint-down(sm){
+                justify-content: center;
+            }
+            .sh_first_photo{
+                position: absolute;transform: translateY(1.6111px);bottom: 50px;left: 20px;
+                @include media-breakpoint-down(sm){
+                    display: none;
+                }
+                @include media-breakpoint-down(xl){
+                    left: 0px;
+                }
+                @include media-breakpoint-only(xl) {
+                    left: 0px;bottom:40px;
+                }
+                img{
+                    width: 100%;box-shadow:var(--sh-website-box-shadow);border-radius:var(--sh-website-common-border-radius);width: 370px;height: 420px;
+
+                    @include media-breakpoint-down(xl){
+                        width: 300px;height: 370px;object-fit: cover;
+                    }
+                    
+                    
+                }
+            }
+        
+            .sh_second_photo{
+                margin-left: auto;
+                @include media-breakpoint-down(sm){
+                    margin-left: 0px;
+                }
+                img{
+                    width: 100%;box-shadow:var(--sh-website-box-shadow);border-radius:var(--sh-website-common-border-radius);width: 370px;height: 420px;
+
+                    @include media-breakpoint-down(xl){
+                        width: 300px;height: 370px;object-fit:  cover;
+                    }
+                }
+            }
+        }
+    }
+    .sh_shapes_one{
+            
+        bottom: 40px;left: 30px;width:100%;height: 100px;transform: translateY(-30.5578px);position: relative;display: flex;
+        @include media-breakpoint-down(sm){
+            top: -60px;left:65px;
+        }
+        @include media-breakpoint-only(sm){
+            bottom: 80px;left: 25px;
+        }
+        @include media-breakpoint-only(md){
+            left: -5px;bottom: 70px;
+        }
+        @include media-breakpoint-only(xl) {
+            left: -5px;
+        }
+        svg{
+            stroke: o-color(o-color-1);
+        }
+    
+}
+.sh_shapes_two{
+   
+        top: -45px;right: -15px;width: 120px;height: 173px;transform: translateY(-14.0692px);position: absolute;display: flex;
+        @include media-breakpoint-down(sm){
+            top: -45px;right: 10px;width: 100px;
+        }
+        @include media-breakpoint-only(sm){
+            top: -45px;right: 40px;width: 100px;
+        }
+        @include media-breakpoint-only(md){
+            width:100px;top: -50px;right: -10px;
+        }
+        @include media-breakpoint-only(xl) {
+            width:105px;
+        }
+        svg{
+            stroke: o-color(o-color-1);
+        }
+    
+}
+    .sh_section_dec{
+        padding-right: 0px;padding-left:50px;
+            @include media-breakpoint-only(xl){
+            padding-right: 0px;padding-left: 20px;
+            }
+            @include media-breakpoint-only(lg){
+            padding-right: 0px;padding-left: 20px;
+            }
+            @include media-breakpoint-only(md){
+            padding-right: 0;padding-left: 0px;
+            }
+            @include media-breakpoint-down(md){
+                padding-right: 0;padding-left: 0px;
+                }
+            
+            
+        h2{
+            font-size:var(--sh-section-heading-font-size);color:var(--sh-website-heading-title-font-color);font-weight:var(--sh-website-heading-title-font-weight);line-height:var(--sh-website-heading-title-line-height);margin-bottom:20px;
+            @include media-breakpoint-only(md) {
+                font-size: var(--sh-section-heading-font-size-tablet);
+               
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-font-size-mobile);
+             
+            }
+        }
+        p{
+            font-size:var(--sh-website-normal-text-font-size);color:var(--sh-website-normal-text-font-color);font-weight:var(--sh-website-normal-text-font-weight);line-height:var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-website-normal-text-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-website-normal-text-font-size-mobile);
+            }
+        }
+        .btn {  
+            @include sh_primary_button;margin-top:20px;
+            span {
+                display: flex;align-items: center;
+                svg {
+                    stroke: #fff;display: inline-block;width: 30px; padding-right:5px;height: 30px;
+                }
+            }
+        }
+        ul{
+            padding-left: 0px;
+            li{
+                font-size:var(--sh-website-normal-text-font-size);color:var(--sh-website-normal-text-font-color);font-weight:var(--sh-website-normal-text-font-weight);line-height:var(--sh-website-normal-text-line-height);list-style: none;margin-bottom: 10px;
+                @include media-breakpoint-down(sm){
+                font-size:var(--sh-section-heading-sub-title-font-size-mobile)
+            }
+                @include media-breakpoint-only(lg){
+                    font-size: 17px;
+                }
+                svg{
+                    width: 20px;display: inline-flex;stroke:o-color(o-color-1);margin-right: 5px;
+                }
+            }
+        }
+        .sh_home_primary_button {
+            .sh_pos_solution_primary_link {
+                @include sh_primary_button;                   
+                .sh_pos_solution_primary_link_right {
+                    svg {
+                        stroke: #fff;display: inline-block;width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Trello-Odoo Connector
+
+
+
+
+//sh_trello_viedo_section
+.sh_trello_viedo_section {
+    background: #fff;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);
+    @include media-breakpoint-down(lg){
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_inner_section {
+        padding: 100px 60px 85px;background-image: url("/theme_softhealer_website/static/src/img/images/third_part_app_trello/video_bg.webp");background-position: center;background-repeat: no-repeat;background-size:cover;border-radius: 50px;text-align: center;position: relative;
+        &::after{
+        content: "";position: absolute;left: 0;top: 0;bottom: 0;right: 0;background:#212240db no-repeat padding-box;opacity: 1;visibility: visible;border-radius: 50px;}
+        @include media-breakpoint-only(lg){
+            padding: 50px 30px 50px;
+        }
+        @include media-breakpoint-down(lg) {
+            padding: 40px 15px 10px;
+        }
+        .sh_heding {
+            text-align: center;
+            margin-bottom: 72px;position: relative;z-index: 1;
+            @include media-breakpoint-down(xl){
+                margin-bottom: 20px;
+            }
+            h2 {
+                color:#fff;font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);letter-spacing: 1.5px;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);margin-bottom: 0px
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile);margin-bottom: 0px;
+            }
+            }
+        }
+        .sh_counter_content {
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 50px;
+            }
+            .sh_counter_number {
+                font-size: 45px;color: o-color(o-color-1);display: inline-flex;
+                @include media-breakpoint-down(lg) {
+                    font-size: 38px;
+                }
+            }
+            .sh_text {
+                color: var(--sh-website-heading-title-font-color);font-size: 18px;
+            }
+        }
+        .sh_subtitle {
+            margin-top: 60px;
+            @include media-breakpoint-down(lg) {
+                margin-top: 40px;
+            }
+            h6 {
+                font-size: var(--sh-website-normal-text-font-size);color: var(--sh-website-normal-text-font-color);font-weight: var(--sh-website-normal-text-font-weight);line-height: var(--sh-website-normal-text-line-height);
+                @include media-breakpoint-only(md){
+                    font-size: var(--sh-website-normal-text-font-size-tablet);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-website-normal-text-font-size-mobile);
+                }
+            }
+        }
+        .sh_main_video_section{
+            display: flex;
+            justify-content: center;position: relative;z-index: 1;
+            .sh_video_button{
+                position: relative;
+                width: 200px;
+                .sh_svg{
+                    width: 200px;
+                }
+                .sh_video_icon{
+                    position: absolute;background: #fff;padding: 20px;border-radius: 50%;left: 59px;top: 57px;
+                    @include media-breakpoint-down(xl) {
+                        padding: 20px 30px;left: 56px;top: 58px;
+                    }
+                    svg{
+                        stroke:o-color(o-color-1);
+                        @include media-breakpoint-down(xl) {
+                            width: 30px;display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//sh_trello_viedo_section
+
+
+//Our Services start
+.sh_trello_odoo_features_section{
+     margin-top: var(--sh-section-top-padding);padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #777AF212;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);margin-top: var(--sh-section-top-padding-mobile);
+    }
+    .row{
+           
+        @include media-breakpoint-only(lg) {
+           justify-content: center;
+        }
+     
+     }
+    header {
+        text-align: center;
+        @include media-breakpoint-down(lg) {
+            margin-top: 0px;
+        }
+        h6 {
+            color: var(--sh-section-heading-sub-title-font-color);font-size: var(--sh-section-heading-sub-title-font-size);letter-spacing: 0.01em;line-height: 1.5;
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-sub-title-font-size-tablet)
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-sub-title-font-size-mobile)
+            }
+        }
+        h2 {
+            color: var(--sh-section-heading-font-color);font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);width: var(--sh-section-heading-width-desktop);margin: auto;margin-bottom: var(--sh-section-heading-margin-bottom);
+            @include media-breakpoint-only(md){
+                font-size: var(--sh-section-heading-font-size-tablet);
+            }
+            @include media-breakpoint-down(md) {
+                width: auto;font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_main_box {
+        margin-top: 30px;
+        @include media-breakpoint-down(md){
+            margin-top: 20px;
+        }
+        .sh_inner_box {
+            border: 1px solid #e7e7e7;text-align: center;padding-top: 40px;padding-bottom: 40px;padding-left: 30px;padding-right: 30px;transition: all 0.15s ease;border-radius: 5px;background: #fff;
+            @include media-breakpoint-down(md) {
+                padding-top: 30px;padding-bottom: 30px;
+            }
+            
+            .sh_icon {
+                background-color: #f0f1ff;width: 70px;height: 70px;margin: 0px auto 25px;display: flex;justify-content: center;border-radius: 5px;
+                svg {
+                    width: 45px;display: inline-flex;
+                    @include media-breakpoint-down(md) {
+                        width: 35px;
+                    }
+                    .cls-2 {
+                        fill: o-color(o-color-1);
+                    }
+                }
+            }
+            .sh-des {
+                h5 {
+                    line-height: 1.3;font-weight: 600;color: var(--sh-website-heading-title-font-color);font-size: var(--sh-website-heading-title-font-size);
+                }
+                p {
+                    color: var(--sh-website-normal-text-font-color);font-size: var(--sh-website-normal-text-font-size);line-height: var(--sh-website-normal-text-line-height);margin-bottom: 0px;
+                    @include media-breakpoint-only(md){
+                        font-size: var(--sh-website-normal-text-font-size-tablet);
+                    }
+                    @include media-breakpoint-down(md){
+                        font-size: var(--sh-website-normal-text-font-size-mobile);
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);border-color: transparent !important;
+            }
+        }
+    }
+}
+//Our Services end
+

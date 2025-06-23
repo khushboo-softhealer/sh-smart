@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="sh_website_prod_price_label_res_config_settings_form" model="ir.ui.view">
+		<field name="name">sh.website.prod.price.label.res.config.settings.form</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="website_sale.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@id='website_tax_inclusion_setting']" position="after">
+
+				<div class="col-12 col-lg-6 o_setting_box" id="sh_website_prod_price_label_setting">
+					<div class="o_setting_right_pane">
+						<label string="Product Prices Label" for="sh_website_prod_price_label_label" />
+						<div class="text-muted">
+							Product prices Label displaying after product price eg.$20(Ex-VAT)
+						</div>
+						<div class="content-group">
+							<div class="mt16">
+								<field name="sh_website_prod_price_label_label"
+									placeholder="(Ex-VAT)" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</xpath>
+		</field>
+	</record>
+
+	<record id="sh_res_config_settings_category_page_form_inherit" model="ir.ui.view">
+		<field name="name">res.config.settings.category.page.form</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="website.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@data-key='website']//div" position="after">
+				<h2>Website Product Category Style</h2>
+
+				<div class="row mt16 o_settings_container" id="category_settings">
+					<div class="col-xs-12 col-md-6 o_setting_box" id="category_page">
+						<div class="o_setting_left_pane">
+						</div>
+						<div class="o_setting_right_pane">
+							<label for="category_style" />
+							<div class="text-muted">
+								Choose product category style
+							</div>
+							<div class="content-group">
+								<div class="mt16">
+									<field name="category_style" class="col-md-6 pull-left" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6 o_setting_box" id="category_header_page">
+						<div class="o_setting_left_pane">
+						</div>
+						<div class="o_setting_right_pane">
+							<label for="category_header_style" />
+							<div class="text-muted">
+								Choose product category header style
+							</div>
+							<div class="content-group">
+								<div class="mt16">
+									<field name="category_header_style" class="col-md-6 pull-left" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-md-6 o_setting_box" id="">
+						<div class="o_setting_left_pane">
+						</div>
+						<div class="o_setting_right_pane">
+							<label for="sub_category_style" />
+							<div class="text-muted">
+								Choose product sub category style
+							</div>
+							<div class="content-group">
+								<div class="mt16">
+									<field name="sub_category_style" class="col-md-6 pull-left" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+	<!-- for project stages -->
+
+	<record id="sh_project_res_config_settings" model="ir.ui.view">
+		<field name="name">Default Project Task Stage Template</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="project.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[@data-key='project']" position="inside">
+				<h2>Default Project Task Stage Template</h2>
+				<div class="row mt16 o_settings_container">
+					<div class="col-12 col-lg-6 o_setting_box">
+						<div class="o_setting_left_pane" />
+						<div class="o_setting_right_pane">
+							<span class="o_form_label">Template</span>
+							<br />
+							<div class="text-muted">
+							</div>
+							<div class="text-muted">
+								<field name="project_stage_template_id" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+	<!-- task time -->
+	<record id="sh_appstore_project_res_config_settings" model="ir.ui.view">
+        <field name="name">Appstore Project</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="project.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='project']" position="inside">
+                <h2>Appstore Project</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Appstore Project</span><br/>
+                            <div class="text-muted">
+
+                            </div>
+                            <div class="text-muted">
+                                <field name="appstore_project_id"/>
+                            </div>
+                        </div>
+                    </div>
+					<!-- Technical Name & Version Required At Stage  -->
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+						<div class="o_setting_right_pane">
+							<span class="o_form_label">Technical Name &amp; Version Required At Stages</span><br/>
+							<div class="text-muted">
+							</div>
+							<div class="text-muted">
+								<field name="sh_tech_name_and_version_req_stage_ids" widget="many2many_tags" options="{'no_create': True}" />
+							</div>
+						</div>
+                    </div>
+					<!-- Pending SS Auto Tick At Stage  -->
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+						<div class="o_setting_right_pane">
+							<span class="o_form_label">Pending SS Auto Tick At Stage</span><br/>
+							<div class="text-muted">
+							</div>
+							<div class="text-muted">
+								<field name="sh_pending_ss_id" options="{'no_create': True}" />
+							</div>
+						</div>
+                    </div>
+                </div>
+                <h2>Pre Appstore Project</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Pre- Appstore Project</span><br/>
+                            <div class="text-muted">
+
+                            </div>
+                            <div class="text-muted">
+                                <field name="preappstore_project_id"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Under Review Task Stage</span><br/>
+                            <div class="text-muted">
+                            </div>
+                            <div class="text-muted">
+                                <field name="sh_under_review_task_stage_id"/>
+                            </div>
+                        </div>
+                    </div>
+					<!-- <div class="col-12 col-lg-6 o_setting_box">
+						<div class="o_setting_left_pane" />
+						<div class="o_setting_right_pane">
+							<span class="o_form_label">Click button to update estimated hours in internal field from external</span>
+							<br />
+							<div class="text-muted">
+							</div>
+							<div class="text-muted">
+								<button name="update_old_task" string="Update Old Data"
+								type="object" class="btn-primary"/>
+							</div>
+						</div>
+					</div> -->
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- # == sh_autoinvoice_task_flow======== -->
+
+	<record id="sale_order_task_res_config_settings" model="ir.ui.view">
+        <field name="name">Project</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='sale_ebay']" position="before">
+                <h2>Project Created From SO</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane" />
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Project Created From SO</span>
+                            <br />
+                            <div class="text-muted">
+                            </div>
+                            <div class="text-muted">
+                                <field name="project_id_created_from_so" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+            </xpath>
+        </field>
+    </record>
+</odoo>

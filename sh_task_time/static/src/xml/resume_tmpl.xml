@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="task.menulist">
+        <div class="pause_entry_list dropdown o_debug_manager" role="menuitem">
+            <a class="openDropdown" href="#" title="Open Pending Task Menu" aria-label="Open Pending Task Menu" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-bars" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right sh_task_menu_submenu_list_cls" role="menu">
+            </div>
+        </div>
+    </t>
+
+    <t t-name="task.menulist.actions">
+        <t t-if="no_menu">
+            <span class='text-center sh_timeer_text'>You have no Paused Task Timers..!</span>
+        </t>
+        <t t-if="task_menulist_actions">
+            <t t-foreach="task_menulist_actions" t-as="task_menulist_action">
+                <span
+                    role="menuitem"
+                    t-att-href="task_menulist_action.sh_url"
+                    t-att-data-menu="task_menulist_action.id"
+                    t-att-data-action-id="task_menulist_action.action_id"
+                    t-att-title="task_menulist_action.name"
+                    class="dropdown-item sh_task_menu"
+                >
+                    <li class="sh_push_task_name">
+                        <t t-esc="task_menulist_action.name" />
+                    </li>
+
+                    <li class="sh_push_btn_group">
+                        <a class="sh_timer_number btn btn-primary">
+                            <t t-esc="task_menulist_action.duration_timer" />
+                        </a>
+                        <a class="sh_end_task_menu_cls" href="#">
+                        <i t-att-data-id="task_menulist_action.id" class="fa fa-stop-circle" title="End"/></a>
+                        <a class="sh_resume_task_menu_cls" href="#">
+                        <i t-att-data-id="task_menulist_action.id"  class="fa fa-play-circle" title="Resume" /></a>
+                    </li>
+                </span>
+            </t>
+        </t>
+    </t>
+</templates>

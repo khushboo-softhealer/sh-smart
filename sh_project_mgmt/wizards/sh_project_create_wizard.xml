@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="sh_project_create_wizard_view_form" model="ir.ui.view">
+        <field name="name">sh.project.create.wizard.view.form</field>
+        <field name="model">sh.project.create.wizard</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="partner_id" />
+                            <field name="tags" widget="many2many_tags" />
+                            <field name="parent_project_id" />
+                            <field name="default_task_user_ids" widget="many2many_tags" />
+                            <field name="responsible_user_ids" widget="many2many_tags" />
+                            <field name="project_type" widget="radio" options="{'horizontal': true}"/>
+                            <field name="send_email" />
+                            <field name="company_id" />
+                        </group>
+
+                        <group>
+                            <field name="user_id" />
+                            <field name="technical_head" />
+                            <label for="start_date" string="Planned Date" />
+                            <div name="dates" class="o_row">
+                                <field name="start_date" widget="daterange"
+                                    options='{"related_end_date": "end_date"}' />
+                                <i class="fa fa-long-arrow-right mx-2 oe_edit_only"
+                                    aria-label="Arrow icon" title="Arrow" />
+                                <i class="fa fa-long-arrow-right mx-2 oe_read_only"
+                                    aria-label="Arrow icon" title="Arrow"
+                                    attrs="{'invisible': [('start_date', '=', False), ('end_date', '=', False)]}" />
+                                <field name="end_date" widget="daterange"
+                                    options='{"related_start_date": "start_date"}' />
+                            </div>
+                            <field name="allocated_hours" widget="timesheet_uom_no_toggle"/>
+                            <field name="odoo_version" />
+                            <field name="edition_id" />
+                            <field name="pricing_mode" required="1"/>
+                            <field name="sh_fp_based_on"
+                                attrs="{'invisible': [('pricing_mode', '!=', 'fp')], 'required': [('pricing_mode', '=', 'fp')]}" />
+                            <field name="sh_tm_based_on"
+                                attrs="{'invisible': [('pricing_mode', '!=', 'tm')], 'required': [('pricing_mode', '=', 'tm')]}" />
+                            <field name="sh_send_timesheet" widget="radio" options="{'horizontal' : True}" attrs="{'invisible':['|',('sh_tm_based_on','!=','success_pack'),('pricing_mode','!=','tm')],'required':[('sh_tm_based_on','=','success_pack')]}"/>
+
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="description" string="Description">
+                            <field name="description" options="{'resizable': false}"
+                                placeholder="Project description..." />
+                        </page>
+
+                        <page name="task_stages" string="Task Stages">
+                            <group>
+                                <group name="task_stage">
+
+                                    <field name="stage_template_id" />
+                                    <field name="stage_ids" widget="many2many_tags" />
+                                </group>
+                            </group>
+
+                        </page>
+
+                        <page name="project_stages" string="Project Stages">
+                            <group>
+                                <group name="project_stage">
+
+                                    <field name="project_stage_template_id" />
+                                </group>
+                            </group>
+                        </page>
+
+                        <page name="estimate_template_line" string="Estimation Template Lines">
+                            <field name="project_estimation_line">
+                                <tree editable="bottom">
+                                    <field name="project_wizard_id"
+                                        attrs="{'column_invisible': True}" />
+                                    <field name="department_id" />
+                                    <field name="estimated_hours" />
+                                    <field name="accountable_users_ids" widget="many2many_tags" />
+                                    <field name="responsible_user_ids" widget="many2many_tags" />
+                                    <field name="other_details" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <footer>
+                    <button string="Create" name="create_project" type="object" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

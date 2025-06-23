@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sh_survmate_theme_button_style_wizard_view" model="ir.ui.view">
+		<field name="name">sh.survmate.theme.button.style.wizard.view</field>
+		<field name="model">sh.survmate.theme.button.design.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Theme Preview">
+						<img alt="preview image" id="js_id_theme_preview_image" src="" style="width:100%;height:100%;"/>
+						<field style="display:none;" name="img_src"/>
+				
+				<script type="text/javascript">
+					$( document ).ready(function() {
+						var img_src = $( "input#img_src").val();
+					    $("#js_id_theme_preview_image").attr('src', img_src);
+					});
+				</script>
+				<footer>
+                    <button string="Cancel" class="btn" special="cancel" />
+                </footer>
+			</form>
+		</field>
+	</record>
+</odoo>

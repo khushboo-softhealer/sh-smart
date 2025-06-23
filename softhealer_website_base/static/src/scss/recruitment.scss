@@ -1,0 +1,10 @@
+// Recruitment -> collage kanban view//
+.o_kanban_view{
+    .o_kanban_project_tasks.o_kanban_grouped{
+        .o_kanban_group{
+            .o_kanban_record{
+                word-wrap: break-word;
+            }
+        }
+    }
+}

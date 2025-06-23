@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="theme_softhealer_store_contact_us_banner_snippet_template" name="Form">
+        <section class="theme_softhealer_store_contact_us_banner_snippet_template"
+            data-snippet="theme_softhealer_store_contact_us_banner_snippet_template">
+            <!-- contact us banner start -->
+            <section id="sh_store_banner"
+                class="sh_store_privacy_policy_banner sh_other_page_banner">
+                <div class="container">
+                    <div class="sh_banner_content">
+                        <h2 class="sh_banner_title">Contact Us</h2>
+                        <ul class="sh_banner_breadcrumb">
+                            <li>
+                                <a class="sh_banner_breadcrumb_link" href="/">Home <span
+                                        class="sh_banner_breadcrumb_icon fa fa-angle-right"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <span class="sh_banner_normal_text">Contact Us</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- contact us banner end -->
+        </section>
+    </template>
+    <template id="theme_softhealer_store_contact_us_form_snippet_template" name="Form">
+        <section class="theme_softhealer_store_contact_us_form_snippet_template"
+            data-snippet="theme_softhealer_store_contact_us_form_snippet_template">
+            <!-- start contact form section -->
+            <section
+                class="s_text_block o_colored_level sh_softhealer_store_default_contact_us_page"
+                id="sh_softhealer_store_default_contact_us_page">
+                <div class="container s_allow_columns">
+                    <div class="sh_contact_main_div ">
+                        <div class="row">
+                            <div
+                                class="d-mg-block col-xxl-4 col-xl-4 col-lg-12 col-md-4 col-sm-12 col-xs-12 col-12 sh_desktop_view d-none">
+                                <div class="sh_map_address_box">
+                                    <div
+                                        class="row flex-column flex-sm-column flex-md-row flex-lg-column flex-xl-column flex-xxl-column">
+                                        <div
+                                            class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 sh_address_box_mobile">
+                                            <div class="sh_address_card">
+                                                <div class="sh_address_icon_box">
+                                                    <svg id="Layer_1" data-name="Layer 1"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 14 14">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                        </defs>
+                                                        <title>Location</title>
+                                                        <rect class="cls-1" width="14"
+                                                            height="14" />
+                                                        <path class="cls-2"
+                                                            d="M10.89,3.66A4.27,4.27,0,0,0,6.54,1.25a4.27,4.27,0,0,0-3.85,4,5.08,5.08,0,0,0,.73,2.68,29.92,29.92,0,0,0,3,4.48.67.67,0,0,0,1.16,0,29.56,29.56,0,0,0,3-4.55,5.56,5.56,0,0,0,.7-2.32A4.49,4.49,0,0,0,10.89,3.66Zm-.67,3.41a24.64,24.64,0,0,1-3.09,4.79c-.07.09-.14.16-.24,0A22.31,22.31,0,0,1,3.63,6.72a3.37,3.37,0,0,1,1-3.88,3.47,3.47,0,0,1,3.92-.58,3.51,3.51,0,0,1,2.11,3.22A3.63,3.63,0,0,1,10.22,7.07ZM7,3.75a1.79,1.79,0,1,0,1.75,1.8A1.79,1.79,0,0,0,7,3.75ZM7,6.64A1.1,1.1,0,0,1,5.9,5.55,1.09,1.09,0,0,1,7,4.45,1.1,1.1,0,1,1,7,6.64Z"
+                                                            transform="translate(0 0)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="sh_address_content">
+                                                    <h5 class="sh_address_title">Rajkot</h5>
+                                                    <p class="sh_address_text">
+                                                        <span> 905, Corporate Levels, 150 Ft. Ring
+                                                            RD, Nr. Ayodya Chowk, Opp Synergy
+                                                            Hospital, Rajkot 360006 </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 sh_address_box_mobile">
+                                            <div class="sh_address_card">
+                                                <div class="sh_address_icon_box">
+                                                    <svg id="Layer_1" data-name="Layer 1"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 14 14">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                        </defs>
+                                                        <title>Location</title>
+                                                        <rect class="cls-1" width="14"
+                                                            height="14" />
+                                                        <path class="cls-2"
+                                                            d="M10.89,3.66A4.27,4.27,0,0,0,6.54,1.25a4.27,4.27,0,0,0-3.85,4,5.08,5.08,0,0,0,.73,2.68,29.92,29.92,0,0,0,3,4.48.67.67,0,0,0,1.16,0,29.56,29.56,0,0,0,3-4.55,5.56,5.56,0,0,0,.7-2.32A4.49,4.49,0,0,0,10.89,3.66Zm-.67,3.41a24.64,24.64,0,0,1-3.09,4.79c-.07.09-.14.16-.24,0A22.31,22.31,0,0,1,3.63,6.72a3.37,3.37,0,0,1,1-3.88,3.47,3.47,0,0,1,3.92-.58,3.51,3.51,0,0,1,2.11,3.22A3.63,3.63,0,0,1,10.22,7.07ZM7,3.75a1.79,1.79,0,1,0,1.75,1.8A1.79,1.79,0,0,0,7,3.75ZM7,6.64A1.1,1.1,0,0,1,5.9,5.55,1.09,1.09,0,0,1,7,4.45,1.1,1.1,0,1,1,7,6.64Z"
+                                                            transform="translate(0 0)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="sh_address_content">
+                                                    <h5 class="sh_address_title">Kenya</h5>
+                                                    <p class="sh_address_text"> Gikomba,
+                                                        Kombomuniraly Road, <br /> Nairobi, Kenya </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 sh_address_box_mobile">
+                                            <div class="sh_address_card">
+                                                <div class="sh_address_icon_box">
+                                                    <svg id="Layer_1" data-name="Layer 1"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 14 14">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                        </defs>
+                                                        <title>Contact</title>
+                                                        <rect class="cls-1" width="14"
+                                                            height="14" />
+                                                        <path class="cls-2"
+                                                            d="M12.06,8.48c-.8-.35-1.61-.7-2.43-1a.84.84,0,0,0-1.07.29c-.19.22-.38.44-.55.67s-.19.14-.34,0A6.91,6.91,0,0,1,5.53,6.32c-.1-.16-.07-.24.07-.35s.48-.38.71-.59a.82.82,0,0,0,.25-1c-.34-.82-.69-1.63-1-2.44a.85.85,0,0,0-1-.49L2.1,2a.85.85,0,0,0-.69.87,9.48,9.48,0,0,0,.17,1.77A9.26,9.26,0,0,0,3.84,9.24a9.67,9.67,0,0,0,6.81,3.33c1,0,1.26-.16,1.44-1s.31-1.43.46-2.15A.85.85,0,0,0,12.06,8.48Zm-.18.91c-.16.75-.33,1.51-.48,2.26-.05.22-.18.25-.37.25a8.93,8.93,0,0,1-5.58-2A9,9,0,0,1,2.23,4.5c0-.16,0-.31-.08-.47s0-.32,0-.47,0-.45,0-.67a.24.24,0,0,1,.22-.29l2.32-.5c.15,0,.23,0,.28.17.33.78.66,1.56,1,2.33a.24.24,0,0,1-.11.33l-.71.58a.7.7,0,0,0-.2,1A6.85,6.85,0,0,0,7.47,9.11a.7.7,0,0,0,1-.19c.2-.24.4-.49.59-.74a.28.28,0,0,1,.37-.09l2.31,1A.24.24,0,0,1,11.88,9.39Z"
+                                                            transform="translate(0 0)" />
+                                                    </svg>
+                                                </div>
+                                                <div class="sh_address_content">
+                                                    <h5 class="sh_address_title">Contact
+                                                        Info</h5>
+                                                    <span class="sh_address_mail_item">
+                                                        <a href="tel:+919023246069'">
+                                                        </a>
+                                                    </span>
+                                                    <span class="sh_address_mail_item">
+                                                        <span class="sh_name">HR</span>
+                                                        <span class="sh_dote"> : </span>
+                                                        <a href="tel:+919023246069'">
+                                                            +919023246069</a>
+                                                    </span>
+                                                    <span class="sh_address_mail_item">
+                                                        <a href="tel:+919023246069'"></a>
+                                                    </span>
+                                                    <span class="sh_address_mail_item">
+                                                        <span class="sh_name">Sales </span>
+                                                        <span class="sh_dote"> : </span>
+                                                        <a
+                                                            href="tel:+919328825451">
+                                                            +919328825451
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 sh_address_box_mobile">
+                                            <div class="sh_address_card ">
+                                                <div class="sh_address_icon_box">
+                                                    <svg id="Layer_1" data-name="Layer 1"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 14 14">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                        </defs>
+                                                        <title>Email</title>
+                                                        <rect class="cls-1" width="14"
+                                                            height="14" />
+                                                        <path class="cls-2"
+                                                            d="M12.93,4.16a1.71,1.71,0,0,0,0-.39,1.51,1.51,0,0,0-1.62-1.18H2.79A1.55,1.55,0,0,0,1.1,3.81a.46.46,0,0,0,0,.23v6a.45.45,0,0,0,0,.23,1.56,1.56,0,0,0,1.69,1.2h8.54a1.5,1.5,0,0,0,1.6-1.6ZM12.21,10a.72.72,0,0,1-.79.79H2.69c-.62,0-.89-.26-.89-.87,0-1.22,0-2.44,0-3.65,0-.09-.05-.2,0-.25s.16.06.23.11L5.91,8.9a1.82,1.82,0,0,0,2.19,0L12,6.09c.07,0,.13-.13.21-.1s.05.16.05.24C12.22,7.47,12.22,8.72,12.21,10Zm-.67-4.45C10.24,6.4,9,7.35,7.74,8.27a1.11,1.11,0,0,1-1.47,0L2.05,5.19A.49.49,0,0,1,1.8,4.7a5.8,5.8,0,0,0,0-.59.71.71,0,0,1,.79-.79h8.79c.57,0,.79.26.85.83A1.35,1.35,0,0,1,11.54,5.52Z"
+                                                            transform="translate(0 0)" />
+                                                    </svg>
+                                                </div>
+                                                <div
+                                                    class="sh_address_content sh_address_content_official">
+                                                    <h5 class="sh_address_title">Official
+                                                        Email</h5>
+                                                    <ul class="sh_address_mail">
+                                                        <li class="sh_address_mail_item">
+                                                            <span class="sh_name">HR</span>
+                                                            <span class="sh_dote"> : </span>
+                                                            <a
+                                                                href="mailto:career@softhealer.com">
+                                                                career@softhealer.com
+                                                            </a>
+                                                        </li>
+                                                        <li class="sh_address_mail_item">
+                                                            <span class="sh_name">Other</span>
+                                                            <span class="sh_dote"> : </span>
+                                                            <a
+                                                                href="mailto:info@softhealer.com">
+                                                                info@softhealer.com
+                                                            </a>
+                                                        </li>
+                                                        <li class="sh_address_mail_item">
+                                                            <span class="sh_name">Support</span>
+                                                            <span class="sh_dote"> : </span>
+                                                            <a
+                                                                href="mailto:support@softhealer.com">
+                                                                support@softhealer.com
+                                                            </a>
+                                                        </li>
+                                                        <li class="sh_address_mail_item">
+                                                            <span class="sh_name">Sales</span>
+                                                            <span class="sh_dote"> : </span>
+                                                            <a
+                                                                href="mailto:sales@softhealer.com">
+                                                                sales@softhealer.com
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12  o_colored_level">
+                                <section class="s_website_form sh_form_box" data-vcss="001"
+                                    data-snippet="s_website_form">
+                                    <!-- <form commented here -->
+                                    <!-- <div class="container">
+                                        <h3 class="sh_contact_form_title">Send Message</h3>
+                                        <form id="contactus_form"
+                                            action="/website/form/"
+                                            method="post"
+                                            enctype="multipart/form-data"
+                                            class="o_mark_required"
+                                            data-mark="*"
+                                            data-model_name="crm.lead"
+                                            data-success-mode="redirect"
+                                            data-success-page="/contactus-thank-you"
+                                            data-pre-fill="true">
+                                            <div
+                                                class="s_website_form_rows row s_col_no_bgcolor">
+                                                <div
+                                                    class="s_website_form_field mb-4 col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 s_website_form_required"
+                                                    data-type="char"
+                                                    data-name="Field">
+                                                    <div
+                                                        class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label
+                                                            class="col-form-label col-sm-auto s_website_form_label sh_contact_label"
+                                                            style="width: 200px;"
+                                                            for="o470ay63z2ps">
+                                                            <span
+                                                                class="s_website_form_label_content">Your
+                                                                Name</span>
+                                                            <span
+                                                                class="s_website_form_mark">
+                                                                *</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input type="text"
+                                                                placeholder="Your Name"
+                                                                class="form-control s_website_form_input"
+                                                                name="contact_name"
+                                                                required="1"
+                                                                data-fill-with="name"
+                                                                id="o470ay63z2ps" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="s_website_form_field mb-4 col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12"
+                                                    data-type="tel"
+                                                    data-name="Field">
+                                                    <div
+                                                        class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label
+                                                            class="col-form-label col-sm-auto s_website_form_label sh_contact_label"
+                                                            style="width: 200px;"
+                                                            for="op2ech0x8q8">
+                                                            <span
+                                                                class="s_website_form_label_content">Phone
+                                                                Number</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input type="tel"
+                                                                placeholder="Phone Number"
+                                                                class="form-control s_website_form_input"
+                                                                name="phone"
+                                                                data-fill-with="phone"
+                                                                id="op2ech0x8q8" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="s_website_form_field mb-4 col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 s_website_form_required"
+                                                    data-type="email"
+                                                    data-name="Field">
+                                                    <div
+                                                        class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label
+                                                            class="col-form-label col-sm-auto s_website_form_label sh_contact_label"
+                                                            style="width: 200px;"
+                                                            for="oyujuhcy4ys">
+                                                            <span
+                                                                class="s_website_form_label_content">Your
+                                                                Email</span>
+                                                            <span
+                                                                class="s_website_form_mark">
+                                                                *</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input type="email"
+                                                                placeholder="Your Email"
+                                                                class="form-control s_website_form_input"
+                                                                name="email_from"
+                                                                required="1"
+                                                                data-fill-with="email"
+                                                                id="oyujuhcy4ys" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="s_website_form_field mb-4 col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 s_website_form_required"
+                                                    data-type="char"
+                                                    data-name="Field">
+                                                    <div
+                                                        class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label
+                                                            class="col-form-label col-sm-auto s_website_form_label sh_contact_label"
+                                                            style="width: 200px;"
+                                                            for="occ0gfuef14i">
+                                                            <span
+                                                                class="s_website_form_label_content">Your
+                                                                Company</span>
+                                                            <span
+                                                                class="s_website_form_mark">
+                                                                *</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input type="text"
+                                                                placeholder="Your Company"
+                                                                class="form-control s_website_form_input"
+                                                                name="partner_name"
+                                                                required="1"
+                                                                data-fill-with="commercial_company_name"
+                                                                id="occ0gfuef14i" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="s_website_form_field mb-4 col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 s_website_form_model_required"
+                                                    data-type="char"
+                                                    data-name="Field">
+                                                    <div
+                                                        class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label
+                                                            class="col-form-label col-sm-auto s_website_form_label sh_contact_label"
+                                                            style="width: 200px;"
+                                                            for="opw04r6y5ush">
+                                                            <span
+                                                                class="s_website_form_label_content">
+                                                                Subject</span>
+                                                            <span
+                                                                class="s_website_form_mark">
+                                                                *</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input type="text"
+                                                                placeholder="Subject"
+                                                                class="form-control s_website_form_input"
+                                                                name="name"
+                                                                required="true"
+                                                                id="opw04r6y5ush" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="s_website_form_field mb-4 col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12 s_website_form_required"
+                                                    data-type="text"
+                                                    data-name="Field">
+                                                    <div
+                                                        class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label
+                                                            class="col-form-label col-sm-auto s_website_form_label sh_contact_label"
+                                                            style="width: 200px;"
+                                                            for="ofoyhijrpdv">
+                                                            <span
+                                                                class="s_website_form_label_content">Your
+                                                                Question</span>
+                                                            <span
+                                                                class="s_website_form_mark">
+                                                                *</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <textarea
+                                                                placeholder="Your Question"
+                                                                class="form-control s_website_form_input"
+                                                                name="description"
+                                                                required="1"
+                                                                id="ofoyhijrpdv"
+                                                                rows="3" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="s_website_form_field mb-4 col-12 s_website_form_dnone"
+                                                    data-name="Field">
+                                                    <div
+                                                        class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label
+                                                            class="col-form-label col-sm-auto s_website_form_label sh_contact_label"
+                                                            style="width: 200px;">
+                                                            <span
+                                                                class="s_website_form_label_content" />
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input
+                                                                class="form-control s_website_form_input"
+                                                                name="team_id"
+                                                                value="1" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="s_website_form_field mb-4 col-12 s_website_form_dnone"
+                                                    data-name="Field">
+                                                    <div
+                                                        class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label
+                                                            class="col-form-label col-sm-auto s_website_form_label sh_contact_label"
+                                                            style="width: 200px;">
+                                                            <span
+                                                                class="s_website_form_label_content" />
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input type="hidden"
+                                                                class="form-control s_website_form_input"
+                                                                name="user_id"
+                                                                value="2" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="mb-0 py-2 col-12 s_website_form_submit"
+                                                    data-name="Submit Button">
+                                                    <div class="s_website_form_label" />
+                                                    <a href="#" role="button"
+                                                        class="btn btn-primary  btn-lg s_website_form_send sh_contact_primary_button rippler rippler-default">
+                                                        Submit <span class=" sh_link_right">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="icon icon-tabler icon-tabler-chevrons-right"
+                                                                viewBox="0 0 24 24" stroke-width="1"
+                                                                fill="none" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <path stroke="none"
+                                                                    d="M0 0h24v24H0z" fill="none"></path>
+                                                                <polyline points="7 7 12 12 7 17"></polyline>
+                                                                <polyline points="13 7 18 12 13 17"></polyline>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                    <span
+                                                        id="s_website_form_result" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div> -->
+
+
+                                    <t t-call="softhealer_website_base.sh_website_form_for_solution_page_form" >
+                                    </t>
+                                </section>
+                                <div>
+                                    <div class="sh_map_address_box sh_mobile_view d-none">
+                                        <div
+                                            class="row flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-column flex-xxl-column">
+                                            <div
+                                                class="col-xxl-12 col-xl-12 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12  sh_address_box_mobile">
+                                                <div class="sh_address_card">
+                                                    <div class="sh_address_icon_box">
+                                                        <svg id="Layer_1" data-name="Layer 1"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 14 14">
+                                                            <defs>
+                                                                <style>
+                                                                    .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                            </defs>
+                                                            <title>Location</title>
+                                                            <rect class="cls-1" width="14"
+                                                                height="14" />
+                                                            <path class="cls-2"
+                                                                d="M10.89,3.66A4.27,4.27,0,0,0,6.54,1.25a4.27,4.27,0,0,0-3.85,4,5.08,5.08,0,0,0,.73,2.68,29.92,29.92,0,0,0,3,4.48.67.67,0,0,0,1.16,0,29.56,29.56,0,0,0,3-4.55,5.56,5.56,0,0,0,.7-2.32A4.49,4.49,0,0,0,10.89,3.66Zm-.67,3.41a24.64,24.64,0,0,1-3.09,4.79c-.07.09-.14.16-.24,0A22.31,22.31,0,0,1,3.63,6.72a3.37,3.37,0,0,1,1-3.88,3.47,3.47,0,0,1,3.92-.58,3.51,3.51,0,0,1,2.11,3.22A3.63,3.63,0,0,1,10.22,7.07ZM7,3.75a1.79,1.79,0,1,0,1.75,1.8A1.79,1.79,0,0,0,7,3.75ZM7,6.64A1.1,1.1,0,0,1,5.9,5.55,1.09,1.09,0,0,1,7,4.45,1.1,1.1,0,1,1,7,6.64Z"
+                                                                transform="translate(0 0)" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="sh_address_content">
+                                                        <h5 class="sh_address_title">Rajkot</h5>
+                                                        <p class="sh_address_text">
+                                                            <span> 905, Corporate Levels, 150 Ft.
+                                                                Ring RD, Nr. Ayodya Chowk, Opp
+                                                                Synergy Hospital, Rajkot
+                                                                360006 </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="col-xxl-12 col-xl-12 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 sh_address_box_mobile">
+                                                <div class="sh_address_card">
+                                                    <div class="sh_address_icon_box">
+                                                        <svg id="Layer_1" data-name="Layer 1"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 14 14">
+                                                            <defs>
+                                                                <style>
+                                                                    .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                            </defs>
+                                                            <title>Location</title>
+                                                            <rect class="cls-1" width="14"
+                                                                height="14" />
+                                                            <path class="cls-2"
+                                                                d="M10.89,3.66A4.27,4.27,0,0,0,6.54,1.25a4.27,4.27,0,0,0-3.85,4,5.08,5.08,0,0,0,.73,2.68,29.92,29.92,0,0,0,3,4.48.67.67,0,0,0,1.16,0,29.56,29.56,0,0,0,3-4.55,5.56,5.56,0,0,0,.7-2.32A4.49,4.49,0,0,0,10.89,3.66Zm-.67,3.41a24.64,24.64,0,0,1-3.09,4.79c-.07.09-.14.16-.24,0A22.31,22.31,0,0,1,3.63,6.72a3.37,3.37,0,0,1,1-3.88,3.47,3.47,0,0,1,3.92-.58,3.51,3.51,0,0,1,2.11,3.22A3.63,3.63,0,0,1,10.22,7.07ZM7,3.75a1.79,1.79,0,1,0,1.75,1.8A1.79,1.79,0,0,0,7,3.75ZM7,6.64A1.1,1.1,0,0,1,5.9,5.55,1.09,1.09,0,0,1,7,4.45,1.1,1.1,0,1,1,7,6.64Z"
+                                                                transform="translate(0 0)" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="sh_address_content">
+                                                        <h5 class="sh_address_title">Kenya</h5>
+                                                        <p class="sh_address_text"> Gikomba,
+                                                            Kombomuniraly Road, <br /> Nairobi,
+                                                            Kenya </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="col-xxl-12 col-xl-12 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 sh_address_box_mobile">
+                                                <div class="sh_address_card">
+                                                    <div class="sh_address_icon_box">
+                                                        <svg id="Layer_1" data-name="Layer 1"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 14 14">
+                                                            <defs>
+                                                                <style>
+                                                                    .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                            </defs>
+                                                            <title>Contact</title>
+                                                            <rect class="cls-1" width="14"
+                                                                height="14" />
+                                                            <path class="cls-2"
+                                                                d="M12.06,8.48c-.8-.35-1.61-.7-2.43-1a.84.84,0,0,0-1.07.29c-.19.22-.38.44-.55.67s-.19.14-.34,0A6.91,6.91,0,0,1,5.53,6.32c-.1-.16-.07-.24.07-.35s.48-.38.71-.59a.82.82,0,0,0,.25-1c-.34-.82-.69-1.63-1-2.44a.85.85,0,0,0-1-.49L2.1,2a.85.85,0,0,0-.69.87,9.48,9.48,0,0,0,.17,1.77A9.26,9.26,0,0,0,3.84,9.24a9.67,9.67,0,0,0,6.81,3.33c1,0,1.26-.16,1.44-1s.31-1.43.46-2.15A.85.85,0,0,0,12.06,8.48Zm-.18.91c-.16.75-.33,1.51-.48,2.26-.05.22-.18.25-.37.25a8.93,8.93,0,0,1-5.58-2A9,9,0,0,1,2.23,4.5c0-.16,0-.31-.08-.47s0-.32,0-.47,0-.45,0-.67a.24.24,0,0,1,.22-.29l2.32-.5c.15,0,.23,0,.28.17.33.78.66,1.56,1,2.33a.24.24,0,0,1-.11.33l-.71.58a.7.7,0,0,0-.2,1A6.85,6.85,0,0,0,7.47,9.11a.7.7,0,0,0,1-.19c.2-.24.4-.49.59-.74a.28.28,0,0,1,.37-.09l2.31,1A.24.24,0,0,1,11.88,9.39Z"
+                                                                transform="translate(0 0)" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="sh_address_content">
+                                                        <h5 class="sh_address_title">Contact
+                                                            Info</h5>
+                                                        <span class="sh_address_mail_item">
+                                                            <a href="tel:+919023246069'">
+                                                            </a>
+                                                        </span>
+                                                        <span class="sh_address_mail_item">
+                                                            <span class="sh_name">HR</span>
+                                                            <span class="sh_dote"> : </span>
+                                                            <a href="tel:+919023246069'">
+                                                                +919023246069</a>
+                                                        </span>
+                                                        <span class="sh_address_mail_item">
+                                                            <a href="tel:+919023246069'"></a>
+                                                        </span>
+                                                        <span class="sh_address_mail_item">
+                                                            <span class="sh_name">Sales </span>
+                                                            <span class="sh_dote"> : </span>
+                                                            <a
+                                                                href="tel:+919328825451">
+                                                                +919328825451
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="col-xxl-12 col-xl-12 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 sh_address_box_mobile">
+                                                <div class="sh_address_card">
+                                                    <div class="sh_address_icon_box">
+                                                        <svg id="Layer_1" data-name="Layer 1"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 14 14">
+                                                            <defs>
+                                                                <style>
+                                                                    .cls-1{fill:none;}.cls-2{fill:#393939;}</style>
+                                                            </defs>
+                                                            <title>Email</title>
+                                                            <rect class="cls-1" width="14"
+                                                                height="14" />
+                                                            <path class="cls-2"
+                                                                d="M12.93,4.16a1.71,1.71,0,0,0,0-.39,1.51,1.51,0,0,0-1.62-1.18H2.79A1.55,1.55,0,0,0,1.1,3.81a.46.46,0,0,0,0,.23v6a.45.45,0,0,0,0,.23,1.56,1.56,0,0,0,1.69,1.2h8.54a1.5,1.5,0,0,0,1.6-1.6ZM12.21,10a.72.72,0,0,1-.79.79H2.69c-.62,0-.89-.26-.89-.87,0-1.22,0-2.44,0-3.65,0-.09-.05-.2,0-.25s.16.06.23.11L5.91,8.9a1.82,1.82,0,0,0,2.19,0L12,6.09c.07,0,.13-.13.21-.1s.05.16.05.24C12.22,7.47,12.22,8.72,12.21,10Zm-.67-4.45C10.24,6.4,9,7.35,7.74,8.27a1.11,1.11,0,0,1-1.47,0L2.05,5.19A.49.49,0,0,1,1.8,4.7a5.8,5.8,0,0,0,0-.59.71.71,0,0,1,.79-.79h8.79c.57,0,.79.26.85.83A1.35,1.35,0,0,1,11.54,5.52Z"
+                                                                transform="translate(0 0)" />
+                                                        </svg>
+                                                    </div>
+                                                    <div
+                                                        class="sh_address_content sh_address_content_official">
+                                                        <h5 class="sh_address_title">Official
+                                                            Email</h5>
+                                                        <ul class="sh_address_mail">
+                                                            <li class="sh_address_mail_item">
+                                                                <span class="sh_name">HR</span>
+                                                                <span class="sh_dote"> : </span>
+                                                                <a
+                                                                    href="mailto:career@softhealer.com">
+                                                                    career@softhealer.com
+                                                                </a>
+                                                            </li>
+                                                            <li class="sh_address_mail_item">
+                                                                <span class="sh_name">Other</span>
+                                                                <span class="sh_dote"> : </span>
+                                                                <a
+                                                                    href="mailto:info@softhealer.com">
+                                                                    info@softhealer.com
+                                                                </a>
+                                                            </li>
+                                                            <li class="sh_address_mail_item">
+                                                                <span class="sh_name">Support</span>
+                                                                <span class="sh_dote"> : </span>
+                                                                <a
+                                                                    href="mailto:support@softhealer.com">
+                                                                    support@softhealer.com
+                                                                </a>
+                                                            </li>
+                                                            <li class="sh_address_mail_item">
+                                                                <span class="sh_name">Sales</span>
+                                                                <span class="sh_dote"> : </span>
+                                                                <a
+                                                                    href="mailto:sales@softhealer.com">
+                                                                    sales@softhealer.com
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sh_contact_map_iframe">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.8192363277667!2d70.76543041419302!3d22.322675147725015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca18fbb8df83%3A0xc5d2508a38a14110!2sSofthealer%20Technologies!5e0!3m2!1sen!2sin!4v1680865859897!5m2!1sen!2sin"
+                                        width="100%" height="400" style="border:0;"
+                                        allowfullscreen=""
+                                        loading="lazy" alt="contact map"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end contact form section -->
+        </section>
+    </template>
+</odoo>

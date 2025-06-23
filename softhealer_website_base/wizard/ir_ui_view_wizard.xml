@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="softhealer_website_base_ir_ui_view_wizard" model="ir.ui.view">
+		<field name="name">softhealer.website.base.ir.ui.view.wizard</field>
+		<field name="model">softhealer.website.base.ir.ui.view.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Update View">
+				<group>
+                    <field name='view_name'/>
+                </group>
+                <notebook>
+                    <page string="Architecture" invisible="1" name="architecture">
+                        <field name="arch_db" class="oe_no_translation_content" />
+                        <field name="arch_base" string="View Architecture" widget="ace"
+                            options="{'mode': 'xml'}" required="1" />
+                    </page>
+
+                    <page string="Optimize SEO">
+                        <group class="mt-4">
+                            <field name="website_meta_title"/>
+                            <field name="website_meta_description"/>
+                            <field name="website_meta_keywords"/>
+                            <field name="website_meta_og_img"/>
+                        </group>
+                    </page>
+                    
+                </notebook>
+                <footer>
+                    <button name="update_sh_ir_ui_view_code" string="Update" class="oe_highlight" type="object"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>				
+			</form>
+		</field>
+	</record>
+
+    <record id="softhealer_website_base_ir_ui_view_wizard_action" model="ir.actions.act_window">
+        <field name="name">Update View</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">softhealer.website.base.ir.ui.view.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="softhealer_website_base_ir_ui_view_wizard"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

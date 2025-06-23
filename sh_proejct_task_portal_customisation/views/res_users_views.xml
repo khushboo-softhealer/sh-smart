@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="sh_task_portal_user_view" model="ir.ui.view">
+        <field name="name">res.users</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='preferences']//group[@name='messaging']" position="after">
+                <group>
+                    <group string="Task &amp; Timesheet Portal Configuration" name="task_portal_configuration">
+                        <field name="sh_display_task_menu" readonly="0"/>
+                        <field name="sh_display_timesheet" readonly="0"/>
+                        <field name="sh_display_allocated_hours" readonly="0"/>
+                        <field name="sh_display_progress" readonly="0"/>
+                        <field name="sh_display_assignees" readonly="0"/>
+                        <field name="sh_display_milestone" readonly="0"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

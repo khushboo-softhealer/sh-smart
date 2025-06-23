@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sh_website_dynamic_content.access_sh_website_dynamic_content,access_sh_website_dynamic_content,sh_website_dynamic_content.model_sh_website_dynamic_content,,1,1,1,1

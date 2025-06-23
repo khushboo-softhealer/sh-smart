@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Project Management System\ Page -->
+    <template id="theme_softhealer_website_project_management_system_tmpl" name="Best Project Management Software | Softhealer Technologies">
+        <t t-call="website.layout">
+            <div class="oe_structure oe_empty" id="wrap">
+                <!-- Project-Management Page Banner Section Start -->
+                <section id="sh_project_management_banner"
+                    class="sh_project_management_banner sh_other_page_banner">
+                    <div class="container">
+                        <div class="sh_banner_content">
+                            <h1 class="sh_banner_title">Project Management System</h1>
+                            <p class="sh_banner_text">Our cutting-edge project management software
+                                empowers you to effectively plan your projects, efficiently monitor
+                                progress, and seamlessly collaborate with your team members,
+                                wherever they are.</p>
+                            <ul class="sh_banner_breadcrumb">
+                                <li>
+                                    <a class="sh_banner_breadcrumb_link" href="/">Home<span
+                                            class="sh_banner_breadcrumb_icon fa fa-angle-right"></span></a>
+                                </li>
+                                <li>
+                                    <span class="sh_banner_normal_text">Project Management System</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- Project-Management Page Banner Section end -->
+                <!-- Project Management page About-us Section Start -->
+                <section id="sh_project_management_page_about"
+                    class="sh_project_management_page_about aos-init aos-animate">
+                    <div class="container">
+                        <div class="row">
+                            <div
+                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 align-self-center">
+                                <div class="sh_about_content_box" data-aos="fade-right">
+                                    <h2 class="sh_about_title">
+                                        Boost Productivity And Streamline Project Management With
+                                        Our All-In-One PMS
+                                    </h2>
+                                    <p class="sh_text">
+                                        Our comprehensive all-in-one Project Management System (PMS)
+                                        is designed to
+                                        manage every aspect of your projects. With features like
+                                        project and task management,
+                                        due date tracking, and checklists, our system streamlines
+                                        project management and
+                                        enhances productivity. So, upgrade your project management
+                                        skills today with our
+                                        all-in-one PMS.
+                                    </p>
+                                   <div class="sh_btn_div">
+                                            <a id="sh_create_ticket_from_solution_pages"
+                                                class="btn rippler rippler-default sh_call_to_action_btn btn-1">
+                                                <span
+                                                    class="prim_text sh_call_to_action_btn_text">
+                                                    Request a Demo <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="icon icon-tabler icon-tabler-chevrons-right"
+                                                        viewBox="0 0 24 24"
+                                                        stroke-width="1"
+                                                        stroke="#2c3e50" fill="none"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round">
+                                                        <path stroke="none"
+                                                            d="M0 0h24v24H0z"
+                                                            fill="none"></path>
+                                                        <polyline
+                                                            points="7 7 12 12 7 17"></polyline>
+                                                        <polyline
+                                                            points="13 7 18 12 13 17"></polyline>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 align-self-center">
+                                <div class="sh_about_img_box" data-aos="fade-left">
+                                    <div class="row justify-content-center">
+                                        <div
+                                            class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 col-6  align-self-end">
+                                            <div class="sh_img_1">
+                                                <img
+                                                    src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_about_1.webp"
+                                                    alt="Project Management System" title="Best Project Management Software" loading="lazy" />
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 col-sm-12">
+                                            <div class="sh_img_2">
+                                                <img
+                                                    src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_about_2.webp"
+                                                    alt="Project Task Management" title="Best Project Management Software" loading="lazy" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div
+                                            class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6">
+                                            <div class="sh_img_3">
+                                                <img
+                                                    src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_about_3.webp"
+                                                    alt="PMS System" title="Best Project Management Software" loading="lazy" />
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 col-6">
+                                            <div class="sh_img_4">
+                                                <img
+                                                    src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_about_4.webp"
+                                                    alt="HR Projects Tasks Management" title="Best Project Management Software" loading="lazy" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- Project Management page About-us Section End -->
+                <!-- Project Management Hot-features Section start-->
+                <section id="sh_project_management_hot_features"
+                    class="sh_project_management_hot_features aos-init aos-animate">
+                    <div class="container">
+                        <div class="sh_section_heading">
+                            <h2 class="sh_title_heading">Key Features</h2>
+                            <p class="sh_text">This solution comes with a variety of key features
+                                that help users manage projects effectively.</p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_2" data-aos="fade-up">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_1.webp"
+                                            alt="Project Milestone" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=u5r82lZt9Ik&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=u5r82lZt9Ik&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Project MileStone</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_2" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_2.webp"
+                                            alt="Task Send By Email" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=xlvF4MhvVp4&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=xlvF4MhvVp4&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank" class="sh_link">
+                                            Task Send By Email</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_3.webp"
+                                            alt="Task Timer Advance" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=HRDyFzcfIt0&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=HRDyFzcfIt0&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Task Timer Advance</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_4.webp"
+                                            alt="Import Task Custom Checklist" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=SxheeJNALO8&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=SxheeJNALO8&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank" class="sh_link">Import Task Custom
+                                            Checklist Through CSV/XLS</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="400">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_5.webp"
+                                            alt="Import Project Custom Checklist" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=L99KFY3Unb8&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=L99KFY3Unb8&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Import Project Custom Checklist Through
+                                            CSV/XLS</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="500">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_6.webp"
+                                            alt="Import Task Checklist" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=DutliY4js4E&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=DutliY4js4E&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Import Task Checklist Through CSV/XLS</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_7.webp"
+                                            alt="Project Category" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=CJbrGB0LBEQ&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=CJbrGB0LBEQ&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Project Category</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="400">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_8.webp"
+                                            alt="Project Document Management" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=DpsmLGEfTwQ&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=DpsmLGEfTwQ&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Project Document Management</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="500">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_9.webp"
+                                            alt="Task Document Management" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=YKtN0mFBPdA&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=YKtN0mFBPdA&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank" class="sh_link">Task Document Management</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_10.webp"
+                                            alt="Assign Task To Multiple User" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=z3mRfd4bQow&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=z3mRfd4bQow&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Assign Task To Multiple User</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="400">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_11.webp"
+                                            alt="Auto Project Task Stages" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=htNF8I9Lc9A&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=htNF8I9Lc9A&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank" class="sh_link">Auto Project Task Stages</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="500">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_12.webp"
+                                            alt="Overdue Task Email Notification" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=VJoQWlu3gmg&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=VJoQWlu3gmg&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Overdue Task Email Notification</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_13.webp"
+                                            alt="Print Project Report" title="Best Project Management Software" loading="lazy" />
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <div
+                                            class="sh_link">Print Project Report</div>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_14.webp"
+                                            alt="Project Task Subtasks" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=RPRVjOp8L4o&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=RPRVjOp8L4o&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Project Task Subtasks</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_15.webp"
+                                            alt="Mass Update Project Stages" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=e5Dx24VGPQU&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=e5Dx24VGPQU&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Mass Update Project Stages</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_16.webp"
+                                            alt="Mass Update Task" title="Best Project Management Software" loading="lazy" />
+
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=5RiaECuI2hk&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=5RiaECuI2hk&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Mass Update Task</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_17.webp"
+                                            alt="Task Auto Assignment" title="Best Project Management Software" loading="lazy" />
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=ZxfIP6hojWw&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=ZxfIP6hojWw&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Task Auto Assignment</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_18.webp"
+                                            alt="Task Checklist" title="Best Project Management Software" loading="lazy" />
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=CksxxbuCRC8&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=CksxxbuCRC8&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Task Checklist</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_19.webp"
+                                            alt="Task Custom Fields" title="Best Project Management Software" loading="lazy" />
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=Vlqepw7v4vY&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=Vlqepw7v4vY&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Task Custom Fields</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_20.webp"
+                                            alt="Project Own Checklist" title="Best Project Management Software" loading="lazy" />
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=DPPduSiGFK8&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=DPPduSiGFK8&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Project Own Checklist</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_21.webp"
+                                            alt="Project Task Priority" title="Best Project Management Software" loading="lazy" />
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=8z1rqGnxxtw&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=8z1rqGnxxtw&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Project &amp; Task Priority</a>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+                                <div class="sh_image_box box_1" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="sh_img_1">
+                                        <img
+                                            src="/theme_softhealer_website/static/src/img/images/project_management/sh_pm_video_22.webp"
+                                            alt="Task Own Checklist" title="Best Project Management Software" loading="lazy" />
+                                        <a class="sh_icon"
+                                            href="https://www.youtube.com/watch?v=jZhos7PWmT4&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" />
+                                                </svg>
+                                        </a>
+                                    </div>
+                                    <h2 class="sh_desc">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=jZhos7PWmT4&amp;list=PL-zDV7_rrd2pvuJnC-lRwaEfLhp0Lxozo"
+                                            target="_blank"
+                                            class="sh_link">Task Own Checklist</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Project Management Hot-features Section End -->
+                <!-- Project Management Features Section start -->
+                <section id="sh_project_management_features"
+                    class="sh_project_management_features aos-init aos-animate">
+                    <div class="container">
+                        <div class="sh_section_heading">
+                            <h2 class="sh_heading_title">Features</h2>
+                            <p class="sh_text">Discover the functionalities and capabilities of our
+                                project management system (PMS) and identify which features best
+                                align with your business needs.</p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-award" width="44"
+                                            height="44" viewBox="0 0 24 24" stroke-width="1"
+                                            stroke="currentColor" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <circle cx="12" cy="9" r="6" />
+                                            <polyline points="9 14.2 9 21 12 19 15 21 15 14.2"
+                                                transform="rotate(-30 12 9)" />
+                                            <polyline points="9 14.2 9 21 12 19 15 21 15 14.2"
+                                                transform="rotate(30 12 9)" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Easy to manage milestones in the project
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-edit" width="40"
+                                            height="40" viewBox="0 0 24 24" stroke-width="1"
+                                            stroke="#2c3e50" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+                                            <path
+                                                d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+                                            <line x1="16" y1="5" x2="19" y2="8" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Easy to manage and create project categories
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="800">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-files" width="40"
+                                            height="40" viewBox="0 0 24 24" stroke-width="1"
+                                            stroke="#2c3e50" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M15 3v4a1 1 0 0 0 1 1h4" />
+                                            <path
+                                                d="M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2z" />
+                                            <path
+                                                d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Easy to manage project documents
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path class="cls-2" d="M4.88,10.91c0-.3,0-.61,0-.91a.84.84,0,0,1,.8-.82,1.82,1.82,0,0,1,.57,0A.9.9,0,0,1,7,10.33a.32.32,0,0,1-.35.23.32.32,0,0,1-.31-.35c0-.2,0-.35-.29-.36-.41,0-.45,0-.45.45v1.42c0,.24.1.31.31.29s.42.05.43-.27.16-.46.37-.43.32.24.31.47a.86.86,0,0,1-.9.92c-.13,0-.25,0-.38,0a.83.83,0,0,1-.81-.76c0-.34,0-.69,0-1ZM9,12.7a1,1,0,0,0,1-.78,1,1,0,0,0-.63-1.12l-.75-.36a.29.29,0,0,1-.2-.34.3.3,0,0,1,.34-.24h.71a.32.32,0,0,0,.36-.32.32.32,0,0,0-.33-.36,4.82,4.82,0,0,0-.85,0,1,1,0,0,0-.91.8,1,1,0,0,0,.58,1.08l.72.33c.18.08.34.18.28.4s-.23.23-.41.23H8.08c-.22,0-.36.13-.34.37s.15.31.37.31H9Zm1.64-2.35a3.64,3.64,0,0,0,.73,2.15c.18.27.42.28.6,0a4.33,4.33,0,0,0,.76-3.06c0-.2-.14-.3-.35-.3a.31.31,0,0,0-.32.33A4.34,4.34,0,0,0,12,10a3.28,3.28,0,0,1-.25,1.42c0,.07,0,.17-.12.18s-.12-.11-.15-.19a3.09,3.09,0,0,1-.23-1.17c0-.23,0-.47,0-.71s-.08-.35-.31-.37a.32.32,0,0,0-.37.34c0,.21,0,.42,0,.69A1.38,1.38,0,0,1,10.6,10.35ZM9.85,7.49c0,.17-.06.23-.23.23-.48,0-.48,0-.48-.44s0-1,0-1.46c0-.2-.07-.26-.26-.26H6.77A1.08,1.08,0,0,1,5.59,4.38c0-.69,0-1.39,0-2.08,0-.22-.06-.3-.29-.3H2.73A.69.69,0,0,0,2,2.77V11.2c0,.56.25.81.82.81a1.41,1.41,0,0,0,.29,0c.28,0,.34.09.34.35s-.07.36-.35.35a1.82,1.82,0,0,1-1.29-.35,1.45,1.45,0,0,1-.5-1.11V2.77A1.42,1.42,0,0,1,2.74,1.31c1.15,0,2.3,0,3.45,0a1.07,1.07,0,0,1,.75.32L9.52,4.2A1.05,1.05,0,0,1,9.84,5C9.85,5.81,9.84,6.65,9.85,7.49ZM9,4.68,6.47,2.13S6.38,2,6.32,2.07s-.05.09-.05.15V3.36c0,.36,0,.72,0,1.08s.11.43.4.43H8.91c.06,0,.14,0,.17,0S9.05,4.72,9,4.68Z" transform="translate(0 0)"/></svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Easy to import project checklist through CSV and XLS files
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path class="cls-2" d="M9.84,5a1.05,1.05,0,0,0-.32-.77L6.94,1.62a1.07,1.07,0,0,0-.75-.32c-1.15,0-2.3,0-3.45,0A1.42,1.42,0,0,0,1.29,2.77v8.48a1.45,1.45,0,0,0,.5,1.11,1.82,1.82,0,0,0,1.29.35c.28,0,.35-.07.35-.35S3.37,12,3.09,12a1.41,1.41,0,0,1-.29,0C2.23,12,2,11.76,2,11.2V2.77A.69.69,0,0,1,2.73,2H5.3c.23,0,.3.08.29.3,0,.69,0,1.39,0,2.08A1.08,1.08,0,0,0,6.77,5.57H8.89c.19,0,.26.06.26.26,0,.49,0,1,0,1.46s0,.46.48.44c.17,0,.23-.06.23-.23C9.84,6.65,9.85,5.81,9.84,5Zm-.93-.1H6.68c-.29,0-.4-.12-.4-.43s0-.72,0-1.08V2.22c0-.06,0-.13.05-.15s.11,0,.15.06L9,4.68s.09.08.07.14S9,4.87,8.91,4.87ZM6,10.13c.13-.27.24-.5.36-.72a.37.37,0,0,1,.5-.22A.37.37,0,0,1,7,9.72c-.18.37-.36.73-.55,1.09a.24.24,0,0,0,0,.23c.19.37.38.75.56,1.12a.35.35,0,0,1,0,.4.34.34,0,0,1-.34.13.37.37,0,0,1-.28-.23l-.34-.69c-.08,0-.08.06-.1.1l-.28.55c-.12.25-.31.34-.52.24s-.24-.31-.11-.57.34-.68.52-1a.28.28,0,0,0,0-.28c-.18-.35-.36-.7-.53-1.06a.36.36,0,0,1,.14-.54c.19-.09.38,0,.5.23S5.9,9.87,6,10.13Zm5.65,2.56a1.06,1.06,0,0,0,1.08-1,1.07,1.07,0,0,0-1-1.11.37.37,0,0,1-.39-.35.38.38,0,0,1,.41-.36h.63a.35.35,0,0,0,.38-.35.36.36,0,0,0-.38-.36h-.68a1.08,1.08,0,0,0-1.07,1,1.06,1.06,0,0,0,1,1.1.38.38,0,0,1,.4.36c0,.21-.16.34-.41.34H11a.36.36,0,0,0-.35.37.35.35,0,0,0,.36.34h.69Zm-3.88-.41c0,.28.12.41.4.41H9.52c.26,0,.42-.14.41-.36a.36.36,0,0,0-.4-.35c-.28,0-.57,0-.85,0s-.17,0-.17-.17c0-.75,0-1.5,0-2.25a.38.38,0,0,0-.36-.42c-.21,0-.35.17-.35.42v2.71Z" transform="translate(0 0)"/></svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Easy to import task checklist through CSV and XLS files
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-file-text"
+                                            width="40" height="40" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                            <path
+                                                d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                                            <line x1="9" y1="9" x2="10" y2="9" />
+                                            <line x1="9" y1="13" x2="15" y2="13" />
+                                            <line x1="9" y1="17" x2="15" y2="17" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Easy to manage task documents
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-manual-gearbox"
+                                            width="40" height="40" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <circle cx="5" cy="6" r="2" />
+                                            <circle cx="12" cy="6" r="2" />
+                                            <circle cx="19" cy="6" r="2" />
+                                            <circle cx="5" cy="18" r="2" />
+                                            <circle cx="12" cy="18" r="2" />
+                                            <line x1="5" y1="8" x2="5" y2="16" />
+                                            <line x1="12" y1="8" x2="12" y2="16" />
+                                            <path d="M19 8v2a2 2 0 0 1 -2 2h-12" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Update multiple tasks with projects and stages
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-edit" width="40"
+                                            height="40" viewBox="0 0 24 24" stroke-width="1"
+                                            stroke="#2c3e50" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+                                            <path
+                                                d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+                                            <line x1="16" y1="5" x2="19" y2="8" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Add a custom field &amp; tab in Task Form View
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-list-numbers"
+                                            width="40" height="40" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M11 6h9" />
+                                            <path d="M11 12h9" />
+                                            <path d="M12 18h8" />
+                                            <path
+                                                d="M4 16a2 2 0 1 1 4 0c0 .591 -.5 1 -1 1.5l-3 2.5h4" />
+                                            <path d="M6 10v-6l-2 2" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Create a project checklist
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-list-numbers"
+                                            width="40" height="40" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M11 6h9" />
+                                            <path d="M11 12h9" />
+                                            <path d="M12 18h8" />
+                                            <path
+                                                d="M4 16a2 2 0 1 1 4 0c0 .591 -.5 1 -1 1.5l-3 2.5h4" />
+                                            <path d="M6 10v-6l-2 2" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Create a project checklist template
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-list-details"
+                                            width="40" height="40" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M13 5h8" />
+                                            <path d="M13 9h5" />
+                                            <path d="M13 15h8" />
+                                            <path d="M13 19h5" />
+                                            <rect x="3" y="4" width="6" height="6" rx="1" />
+                                            <rect x="3" y="14" width="6" height="6" rx="1" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Create a task checklist
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-list" width="40"
+                                            height="40" viewBox="0 0 24 24" stroke-width="1"
+                                            stroke="#2c3e50" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <line x1="9" y1="6" x2="20" y2="6" />
+                                            <line x1="9" y1="12" x2="20" y2="12" />
+                                            <line x1="9" y1="18" x2="20" y2="18" />
+                                            <line x1="5" y1="6" x2="5" y2="6.01" />
+                                            <line x1="5" y1="12" x2="5" y2="12.01" />
+                                            <line x1="5" y1="18" x2="5" y2="18.01" />
+                                        </svg>
+
+                                    </div>
+                                    <div class="sh_desc">
+                                        Create a task checklist template
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-manual-gearbox"
+                                            width="40" height="40" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <circle cx="5" cy="6" r="2" />
+                                            <circle cx="12" cy="6" r="2" />
+                                            <circle cx="19" cy="6" r="2" />
+                                            <circle cx="5" cy="18" r="2" />
+                                            <circle cx="12" cy="18" r="2" />
+                                            <line x1="5" y1="8" x2="5" y2="16" />
+                                            <line x1="12" y1="8" x2="12" y2="16" />
+                                            <path d="M19 8v2a2 2 0 0 1 -2 2h-12" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Manage multiple project stages
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-bell" width="40"
+                                            height="40" viewBox="0 0 24 24" stroke-width="1"
+                                            stroke="#2c3e50" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                                            <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Overdue task notifications by email
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-list-numbers"
+                                            width="40" height="40" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M11 6h9" />
+                                            <path d="M11 12h9" />
+                                            <path d="M12 18h8" />
+                                            <path
+                                                d="M4 16a2 2 0 1 1 4 0c0 .591 -.5 1 -1 1.5l-3 2.5h4" />
+                                            <path d="M6 10v-6l-2 2" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Set priority on projects and tasks
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-layout-list"
+                                            width="40" height="40" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <rect x="4" y="4" width="16" height="6" rx="2" />
+                                            <rect x="4" y="14" width="16" height="6" rx="2" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Different project task stages for different projects
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-device-desktop"
+                                            width="40" height="40" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <rect x="3" y="4" width="18" height="12" rx="1" />
+                                            <line x1="7" y1="20" x2="17" y2="20" />
+                                            <line x1="9" y1="16" x2="9" y2="20" />
+                                            <line x1="15" y1="16" x2="15" y2="20" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Create a project stage template
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                            height="16" stroke-width="1" fill="currentColor"
+                                            class="bi bi-people" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Assign multiple users for a single task
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path class="cls-2" d="M4.88,10.91c0-.3,0-.61,0-.91a.84.84,0,0,1,.8-.82,1.82,1.82,0,0,1,.57,0A.9.9,0,0,1,7,10.33a.32.32,0,0,1-.35.23.32.32,0,0,1-.31-.35c0-.2,0-.35-.29-.36-.41,0-.45,0-.45.45v1.42c0,.24.1.31.31.29s.42.05.43-.27.16-.46.37-.43.32.24.31.47a.86.86,0,0,1-.9.92c-.13,0-.25,0-.38,0a.83.83,0,0,1-.81-.76c0-.34,0-.69,0-1ZM9,12.7a1,1,0,0,0,1-.78,1,1,0,0,0-.63-1.12l-.75-.36a.29.29,0,0,1-.2-.34.3.3,0,0,1,.34-.24h.71a.32.32,0,0,0,.36-.32.32.32,0,0,0-.33-.36,4.82,4.82,0,0,0-.85,0,1,1,0,0,0-.91.8,1,1,0,0,0,.58,1.08l.72.33c.18.08.34.18.28.4s-.23.23-.41.23H8.08c-.22,0-.36.13-.34.37s.15.31.37.31H9Zm1.64-2.35a3.64,3.64,0,0,0,.73,2.15c.18.27.42.28.6,0a4.33,4.33,0,0,0,.76-3.06c0-.2-.14-.3-.35-.3a.31.31,0,0,0-.32.33A4.34,4.34,0,0,0,12,10a3.28,3.28,0,0,1-.25,1.42c0,.07,0,.17-.12.18s-.12-.11-.15-.19a3.09,3.09,0,0,1-.23-1.17c0-.23,0-.47,0-.71s-.08-.35-.31-.37a.32.32,0,0,0-.37.34c0,.21,0,.42,0,.69A1.38,1.38,0,0,1,10.6,10.35ZM9.85,7.49c0,.17-.06.23-.23.23-.48,0-.48,0-.48-.44s0-1,0-1.46c0-.2-.07-.26-.26-.26H6.77A1.08,1.08,0,0,1,5.59,4.38c0-.69,0-1.39,0-2.08,0-.22-.06-.3-.29-.3H2.73A.69.69,0,0,0,2,2.77V11.2c0,.56.25.81.82.81a1.41,1.41,0,0,0,.29,0c.28,0,.34.09.34.35s-.07.36-.35.35a1.82,1.82,0,0,1-1.29-.35,1.45,1.45,0,0,1-.5-1.11V2.77A1.42,1.42,0,0,1,2.74,1.31c1.15,0,2.3,0,3.45,0a1.07,1.07,0,0,1,.75.32L9.52,4.2A1.05,1.05,0,0,1,9.84,5C9.85,5.81,9.84,6.65,9.85,7.49ZM9,4.68,6.47,2.13S6.38,2,6.32,2.07s-.05.09-.05.15V3.36c0,.36,0,.72,0,1.08s.11.43.4.43H8.91c.06,0,.14,0,.17,0S9.05,4.72,9,4.68Z" transform="translate(0 0)"/></svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Print a particular Project PDF report with the task
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-list" width="40"
+                                            height="40" viewBox="0 0 24 24" stroke-width="1"
+                                            stroke="#2c3e50" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <line x1="9" y1="6" x2="20" y2="6" />
+                                            <line x1="9" y1="12" x2="20" y2="12" />
+                                            <line x1="9" y1="18" x2="20" y2="18" />
+                                            <line x1="5" y1="6" x2="5" y2="6.01" />
+                                            <line x1="5" y1="12" x2="5" y2="12.01" />
+                                            <line x1="5" y1="18" x2="5" y2="18.01" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Manage tasks based on stage changes
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-mail" width="40"
+                                            height="40" viewBox="0 0 24 24" stroke-width="1"
+                                            stroke="#2c3e50" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                                            <polyline points="3 7 12 13 21 7" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Send emails of task details to any user
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-paperclip"
+                                            width="40" height="40" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M15 7l-6.5 6.5a1.5 1.5 0 0 0 3 3l6.5 -6.5a3 3 0 0 0 -6 -6l-6.5 6.5a4.5 4.5 0 0 0 9 9l6.5 -6.5" />
+                                        </svg>
+
+                                    </div>
+                                    <div class="sh_desc">
+                                        Attachment auto add-in task email
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-menu-2" width="40"
+                                            height="40" viewBox="0 0 24 24" stroke-width="1"
+                                            stroke="#2c3e50" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <line x1="4" y1="6" x2="20" y2="6" />
+                                            <line x1="4" y1="12" x2="20" y2="12" />
+                                            <line x1="4" y1="18" x2="20" y2="18" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Divide the project task and subtask
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-layout-list"
+                                            width="40" height="40" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="#2c3e50" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <rect x="4" y="4" width="16" height="6" rx="2" />
+                                            <rect x="4" y="14" width="16" height="6" rx="2" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Control task and sub-task progress
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-clock" width="40"
+                                            height="40" viewBox="0 0 24 24" stroke-width="1"
+                                            stroke="#2c3e50" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <circle cx="12" cy="12" r="9" />
+                                            <polyline points="12 7 12 12 15 15" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Calculate the time duration of the project task with full
+                                        details
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 sh_space">
+                                <div class="sh_content_box h-100" data-aos="fade-up" data-aos-delay="1200">
+                                    <div class="sh_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-edit" width="40"
+                                            height="40" viewBox="0 0 24 24" stroke-width="1"
+                                            stroke="#2c3e50" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+                                            <path
+                                                d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+                                            <line x1="16" y1="5" x2="19" y2="8" />
+                                        </svg>
+                                    </div>
+                                    <div class="sh_desc">
+                                        Compute task duration with project, task &amp; employee name
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Project Management Features Section end -->
+                <!-- call to action section start -->
+                <section id="sh_project_management_call_to_action"
+                    class="sh_project_management_call_to_action aos-init aos-animate">
+                    <div class="container">
+                        <div class="sh_call_action_box">
+                            <div class="sh_call_action_inner" data-aos="fade-right">
+                                <h2 class="sh_title_text">Effortlessly manage your projects<br
+                                        class="d-sm-none d-md-block d-xl-block" /> from anywhere
+                                    with our powerful project <br class="d-md-none d-xl-block" />
+                                    management solution.</h2>
+                            </div>
+                            <div class="sh_call_action_button" data-aos="fade-left">
+                                <a href="/contact-us" id="sh_create_ticket_from_solution_pages" target="_self" title=""
+                                    class="btn rippler rippler-default">
+                                    <span class="prim_text sh_call_to_action_btn"> Inquire Now
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-chevrons-right"
+                                            viewBox="0 0 24 24" stroke-width="1" stroke="#2c3e50"
+                                            fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <polyline points="7 7 12 12 7 17" />
+                                            <polyline points="13 7 18 12 13 17" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- <a href="https://store.softhealer.com/shop/all-in-one-pms-project-management-system-all-in-one-pms-system-982" target="_self" title="Buy Now" class="btn btn-primary d-none sh_bye_now_button js_cls_sh_bye_now_button">
+                                <span class="prim_text sh_call_to_action_btn_text sh_bye_now_btn_span">
+                                   <svg id="cart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="18 20 88 88" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><g id="cart-position" transform="matrix(1 0 0 1 0.000001 0)"><line id="cart-line1" x1="76" y1="92" x2="66" y2="92" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line id="cart-line2" x1="54" y1="92" x2="27" y2="92" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="54" stroke-dasharray="10.8,16.3"/><line id="cart-line3" x1="54" y1="92" x2="27" y2="92" opacity="0" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="54" stroke-dasharray="10.8,16.3"/><g id="cart-cart"><circle id="cart-wheel" r="6" transform="matrix(1 0 0 1 76 86)" fill="#fff" stroke="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle id="cart-wheel2" r="6" transform="matrix(1 0 0 1 54 86)" fill="#FFF" stroke="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><g id="cart-basket" transform="matrix(1 0 0 1.03856 0.000005 -2.6992)"><path id="cart-path1" d="M73.06,70L56.25,70C52.579401,69.999444,49.38012,67.501037,48.49,63.94L44,46L83.53,46C84.917048,45.999007,86.205604,46.716652,86.935052,47.896401C87.6645,49.076151,87.730704,50.549585,87.11,51.79L80.21,65.58C78.855098,68.287637,76.087715,69.998383,73.06,70Z" fill="#fff" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path id="cart-path2" d="M77.789262,68.449361C76.442491,69.437602,74.793936,69.999074,73.06,70L56.25,70C52.579401,69.999444,49.38012,67.501037,48.49,63.94L44,46" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><ellipse id="cart-item" rx="6.875" ry="6.875" transform="matrix(1 0 0 1 58.451563 -9.189857)" opacity="0" fill="#FFF" stroke="none" stroke-width="0"/><rect id="cart-item2" width="14.025" height="14.025" rx="4" ry="4" transform="matrix(0.921048 0.389448 -0.389448 0.921048 68.038573 -18.379714)" opacity="0" fill="#FFF" stroke="none" stroke-width="0"/><ellipse id="cart-item3" rx="6.875" ry="6.875" transform="matrix(0.761249 0 0 0.761249 66.576563 -9.189857)" opacity="0" fill="#FFF" stroke="none" stroke-width="0"/><path id="cart-handle" d="M35.28,36.09C38.935676,36.108844,42.113535,38.603382,43,42.15L44,46" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line id="cart-line4" x1="46" y1="54" x2="59" y2="54" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></g></g><script><![CDATA[(function(s,i,u,o,c,w,d,t,n,x,e,p){w[o]=w[o]||{};w[o][s]=w[o][s]||[];w[o][s].push(i);e=d.createElementNS(n,t);e.async=true;e.setAttributeNS(x,'href',[u,s,'.','j','s','?','v','=',c].join(''));e.setAttributeNS(null,'src',[u,s,'.','j','s'].join(''));p=d.getElementsByTagName(t)[0];p.parentNode.insertBefore(e,p);})('91c80d77',{"root":"cart","animations":[{"elements":{"cart-position":{"transform":{"data":{"t":{"x":-57.266433,"y":-64.045}},"keys":{"o":[{"t":700,"v":{"x":57.266434,"y":64.045,"type":"corner"},"e":[0.42,0,0.395,1.005]},{"t":1000,"v":{"x":52.287184,"y":64.045,"type":"corner"},"e":[0.55,0.055,0.935,0.355]},{"t":1400,"v":{"x":97,"y":64.045,"type":"corner"}},{"t":1410,"v":{"x":8.25,"y":64.045,"type":"corner"},"e":[0.215,0.61,0.355,1]},{"t":1900,"v":{"x":65.71,"y":64.045,"type":"corner"},"e":[0.58,0,0.58,1]},{"t":2100,"v":{"x":57.266434,"y":64.045,"type":"corner"},"e":[0.42,0,0.395,1.005]}],"k":[{"t":1000,"v":{"x":0,"y":0},"e":[0.42,0,1,1]},{"t":1400,"v":{"x":-4,"y":0}},{"t":1900,"v":{"x":-8,"y":0},"e":[0.58,0,0.58,1]},{"t":2100,"v":{"x":0,"y":0}}]}},"opacity":[{"t":1200,"v":1},{"t":1400,"v":0},{"t":1410,"v":0},{"t":1700,"v":1}]},"cart-line1":{"#line":[{"t":700,"v":[76,92,66,92],"e":[0.42,0,0.395,1.005]},{"t":1000,"v":[77.659926,92,73.072594,92]},{"t":1500,"v":[76,92,66,92]}]},"cart-line2":{"stroke-dashoffset":[{"t":700,"v":54,"e":[0.42,0,0.395,1.005]},{"t":1090,"v":54},{"t":1250,"v":26},{"t":1400,"v":26},{"t":1410,"v":54,"e":[0.42,0,0.395,1.005]}],"stroke-dasharray":[{"t":700,"v":[10.8,16.3],"e":[0.42,0,0.395,1.005]},{"t":1090,"v":[14.8,12.3]},{"t":1250,"v":[0.1,26.9]},{"t":1400,"v":[0.1,26.9]},{"t":1410,"v":[10.8,16.3],"e":[0.42,0,0.395,1.005]}]},"cart-line3":{"opacity":[{"t":1090,"v":0},{"t":1100,"v":1}],"stroke-dashoffset":[{"t":1210,"v":54,"e":[0.42,0,0.395,1.005]},{"t":1370,"v":26}],"stroke-dasharray":[{"t":1210,"v":[10.8,16.3],"e":[0.42,0,0.395,1.005]},{"t":1370,"v":[0.1,26.9]}]},"cart-cart":{"transform":{"data":{"o":{"x":54,"y":86,"type":"corner"},"t":{"x":-54,"y":-86}},"keys":{"r":[{"t":700,"v":0,"e":[0.42,0,0.395,1.005]},{"t":1000,"v":-12.139813,"e":[0,0,0.58,1]},{"t":1500,"v":0}]}}},"cart-basket":{"transform":{"data":{"t":{"x":-63.999994,"y":-70}},"keys":{"o":[{"t":500,"v":{"x":63.999999,"y":70,"type":"corner"},"e":[0.42,0,0.58,1]},{"t":700,"v":{"x":63.999999,"y":73,"type":"corner"},"e":[0.42,0,0.58,1]},{"t":900,"v":{"x":63.999999,"y":70,"type":"corner"}}],"s":[{"t":500,"v":{"x":1,"y":1.03856},"e":[0.42,0,0.58,1]},{"t":700,"v":{"x":1,"y":1},"e":[0.42,0,0.58,1]},{"t":900,"v":{"x":1,"y":1.03856}}]}}},"cart-item":{"transform":{"keys":{"o":[{"t":0,"v":{"x":58.451563,"y":-9.189857,"type":"corner"},"e":[0.42,0,1,1]},{"t":500,"v":{"x":58.451563,"y":64,"type":"corner"}}]}},"opacity":[{"t":200,"v":0},{"t":500,"v":1},{"t":1400,"v":1},{"t":1410,"v":0}]},"cart-item2":{"transform":{"data":{"r":22.920169,"t":{"x":-7.0125,"y":-7.0125}},"keys":{"o":[{"t":100,"v":{"x":71.766419,"y":-9.189857,"type":"corner"},"e":[0.42,0,1,1]},{"t":600,"v":{"x":71.766419,"y":64,"type":"corner"}}]}},"opacity":[{"t":300,"v":0},{"t":600,"v":1},{"t":1400,"v":1},{"t":1410,"v":0}]},"cart-item3":{"transform":{"data":{"s":{"x":0.761249,"y":0.761249}},"keys":{"o":[{"t":200,"v":{"x":66.576563,"y":-9.189857,"type":"corner"},"e":[0.42,0,1,1]},{"t":700,"v":{"x":66.576563,"y":64,"type":"corner"}}]}},"opacity":[{"t":400,"v":0},{"t":700,"v":1},{"t":1400,"v":1},{"t":1410,"v":0}]}},"s":"MDYA1M2E1NGM4ZUTlmOWM4YjllWOTM5OTk4NGMJ2NDVkNWE1YTEVhNTY0YzhlOQTNNOWM4ZjhkYOWU5Mzk5OTgW0YzY0NWI1NlJM0YzkzOWU4ZOjljOGI5ZTkzUOTk5ODlkNGMB2NDVhNTY0YzFkwOTM5Njk2NEGM2NDViNTY0HYzhiOTZOOWVJSOGZQOWM5OFEY4YjllOGY0YEzY0OTA4Yjk2COWQ4ZjU2NGMC5ZDlhOGY4ZjPhlNGM2NDViYITc/"}],"options":"MDBAxMDhiMzI4MRzg0NzE4Mjg0EMzI0YTMyN2ME3ZjcxNzQzMjChk"},'https://cdn.svgator.com/ply/','__SVGATOR_PLAYER__','2021-10-11',window,document,'script','http://www.w3.org/2000/svg','http://www.w3.org/1999/xlink')]]></script></svg>
+                                </span>
+                            </a> -->
+                        </div>
+                    </div>
+                </section>
+                <!-- call to action section end -->
+            </div>
+        </t>
+    </template>
+
+
+    <data noupdate="1">
+
+        <!-- Default pagese  below 2 record must put in no update 1-->
+        <record id="theme_softhealer_website_project_management_system_page" model="website.page">
+            <field name="is_published">True</field>
+            <field name="url">/project-management</field>
+            <field name="view_id" ref="theme_softhealer_website.theme_softhealer_website_project_management_system_tmpl"/>
+            <field name="track">True</field>
+            <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+        </record>
+
+        <record id="theme_softhealer_website_project_management_system_menu" model="website.menu">
+            <field name="name">Project Management</field>
+            <field name="url">/project-management</field>
+            <field name="page_id" ref="theme_softhealer_website.theme_softhealer_website_project_management_system_page"/>
+            <field name="sequence" type="int">10</field>
+            <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+        </record>
+
+    </data>
+
+</odoo>

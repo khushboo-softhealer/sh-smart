@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="sh_testimonial_s_test_1_item" name="testimonial 10">
+        <div class='item'>
+            <div class="sh_store_top_name">
+                <input type='hidden' name='priority' t-att-value='priority'/>
+                <div class="sh_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                    <path d="M13.3333 0C12.1188 0 11.1111 1.00771 11.1111 2.22222V6.66667C11.1111 7.88118 12.1188 8.88889 13.3333 8.88889H16.6775L11.6905 15.5881H14.4618L20 8.1467V5.55773V2.22222C20 1.00771 18.9923 0 17.7778 0H13.3333ZM2.22222 0.0325521C1.00771 0.0325521 0 1.04026 0 2.25477V6.69922C0 7.91373 1.00771 8.92144 2.22222 8.92144H5.56641L0.603299 15.5881H3.3724L8.88889 8.17708V7.81033V5.58811V2.25477C8.88889 1.04026 7.88118 0.0325521 6.66667 0.0325521H2.22222ZM13.3333 2.22222H17.7778V6.66667H13.3333V2.22222ZM2.22222 2.25477H6.66667V5.58811V6.69922H2.22222V2.25477Z" fill="#537CD9"></path>
+                    </svg>
+                </div>
+                <div class="sh_img">
+                    <img t-att-src="partner_image" alt="" />
+                </div>
+                <div class="sh_author">
+                    <h2>
+                        <span t-esc="partner_name"></span>
+                    </h2>
+                    <p>
+                        <span t-esc="function"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="sh_review_box">
+                <div class="sh_store_stars">
+                    <t t-set="empty_star" t-value="5 - int(priority)"/>
+                    <t t-foreach="range(0, int(priority))" t-as="num">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FACC2E" fill="#FACC2E" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                        </svg>
+                    </t>
+                    <t t-foreach="range(0, empty_star)" t-as="num">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FACC2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                        </svg>
+                    </t>
+                </div>
+                <p>
+                    <span t-esc="comment"></span>
+                </p>
+            </div>
+        </div>
+    </template>
+
+</odoo>

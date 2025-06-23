@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Dynamic Product Filters Menu -->
+    <menuitem id="sh_website_ecommerce_dynamic_product_filters_menu" name="Dynamic Product Filters"
+        groups="softhealer_website_base.group_softhealer_website_editor_dynamic_product_filters"
+        parent="softhealer_website_base.sh_website_editor_ecommerce_menu"
+        action="sh_ecommerce_snippet.sh_ecom_s_filter_action" sequence="20" />
+
+</odoo>

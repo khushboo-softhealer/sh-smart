@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="hr_timesheet.portal_layout" name="Portal layout: timesheet menu entry" inherit_id="portal.portal_breadcrumbs" priority="35">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <t t-if="request.env.user.sh_display_timesheet">
+                <li t-if="page_name == 'timesheet' or timesheet" t-attf-class="breadcrumb-item #{'active' if not timesheet else ''}">
+                    <t>Timesheets</t>
+                </li>
+            </t>
+        </xpath>
+    </template>
+    <template id="hr_timesheet.portal_my_home_timesheet" name="Show Timesheets" customize_show="True"  inherit_id="portal.portal_my_home" priority="45">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-if="request.env.user.sh_display_timesheet">
+                <t t-call="portal.portal_docs_entry">
+                    <t t-set="title">Timesheets</t>
+                    <t t-set="url" t-value="'/my/timesheets'"/>
+                    <t t-set="placeholder_count" t-value="'timesheet_count'"/>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>

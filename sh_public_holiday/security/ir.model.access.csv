@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sh_public_holiday.access_sh_public_holiday,access_sh_public_holiday,sh_public_holiday.model_sh_public_holiday,hr.group_hr_manager,1,1,1,1
+sh_public_holiday.access_sh_public_holiday_line,access_sh_public_holiday_line,sh_public_holiday.model_sh_public_holiday_line,hr.group_hr_manager,1,1,1,1

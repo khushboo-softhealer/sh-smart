@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Product pricelist form view inherit for Image-->
+    <record id="sh_website_sale_popup_pricelist_product_pricelist_view_inherit" model="ir.ui.view">
+        <field name="name">product.product.pricelist.view.form.inherit</field>
+        <field name="model">product.pricelist</field>
+        <field name="inherit_id" ref="product.product_pricelist_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]" position="before">
+                <field name="sh_website_sale_popup_pricelist_image" widget="image" class="oe_avatar"
+                    options="{&quot;size&quot;: [90, 90]}" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

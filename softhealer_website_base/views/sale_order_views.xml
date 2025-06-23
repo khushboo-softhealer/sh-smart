@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="softhealer_website_base_view_sale_order_view_form" model="ir.ui.view">
+        <field name="name">softhealer.website.base.view.sale.order.view.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_sh_download_logs_views" type="object" class="oe_state_button" icon="fa-download" 
+                groups="softhealer_website_base.group_softhealer_website_editor_module_download_logs" 
+                attrs="{'invisible': [('sh_download_log_count', '=', 0)]}">
+                    <div class="o_stat_info">
+                        <field name="sh_download_log_count" class="o_stat_value" />
+                        <span class="o_stat_text">Download Logs</span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

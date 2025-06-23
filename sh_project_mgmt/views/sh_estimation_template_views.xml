@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- FORM VIEW -->
+    <record id="sh_estimation_template_view_form" model="ir.ui.view">
+        <field name="name">sh.estimation.template.view.form</field>
+        <field name="model">sh.estimation.template</field>
+        <field name="arch" type="xml">
+            <form string="Estimation Template">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                        <field name="estimation_template_line" >
+                            <tree editable='bottom'>
+                                <field name="department_id"/>
+                                <field name="label_id"/>
+                                <field name="estimated_hours"/>
+                                <field name="accountable_user_ids" widget='many2many_tags'/>
+                                <field name="responsible_user_ids" widget='many2many_tags'/>
+                                <field name="other_details"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- TREE VIEW -->
+    <record id="sh_estimation_template_view_tree" model="ir.ui.view">
+        <field name="name">sh.estimation.template.view.tree</field>
+        <field name="model">sh.estimation.template</field>
+        <field name="arch" type="xml">
+            <tree string="Estimation Template">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="sh_estimation_templte_action" model="ir.actions.act_window">
+        <field name="name">Estimation Templates</field>
+        <field name="res_model">sh.estimation.template</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- MENU -->
+    <menuitem id="sh_estimation_templte_menu" name="Estimation Templates" parent="sale.menu_sale_config" action="sh_estimation_templte_action"/>
+
+
+</odoo>

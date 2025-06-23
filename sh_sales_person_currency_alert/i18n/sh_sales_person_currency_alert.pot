@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sh_sales_person_currency_alert
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-27 05:55+0000\n"
+"PO-Revision-Date: 2022-04-27 05:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_sales_person_currency_alert
+#: model_terms:ir.ui.view,arch_db:sh_sales_person_currency_alert.sh_currency_alert_view
+msgid "<strong>Base Currency ,Please kindly check again !</strong>"
+msgstr ""
+
+#. module: sh_sales_person_currency_alert
+#: model:ir.model.fields,field_description:sh_sales_person_currency_alert.field_sale_order__pricelist_alert
+msgid "Pricelist Alert"
+msgstr ""
+
+#. module: sh_sales_person_currency_alert
+#: model:ir.model,name:sh_sales_person_currency_alert.model_sale_order
+msgid "Sale Order"
+msgstr ""
+
+#. module: sh_sales_person_currency_alert
+#. openerp-web
+#: code:addons/sh_sales_person_currency_alert/static/src/xml/time_track.xml:7
+#, python-format
+msgid "Start Timer"
+msgstr ""
+
+#. module: sh_sales_person_currency_alert
+#. openerp-web
+#: code:addons/sh_sales_person_currency_alert/static/src/xml/time_track.xml:10
+#, python-format
+msgid "Stop Timer"
+msgstr ""
+

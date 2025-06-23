@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- INHERIT FORM VIEW -->
+    <record id="edit_project_inherit_sh_task_state_permission" model="ir.ui.view">
+        <field name="name">sh.project.project.form.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <field name="active" position="after">
+                <field name="sh_restrict_stage_movement" groups="project.group_project_manager" />
+            </field>
+        </field>
+    </record>
+</odoo>

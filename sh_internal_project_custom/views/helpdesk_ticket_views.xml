@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="sh_helpdesk_ticket_inherit_form_view" model="ir.ui.view">
+        <field name="name">sh.helpdesk.ticket.inherit.form.view</field>
+        <field name="model">sh.helpdesk.ticket</field>
+        <field name="inherit_id" ref="sh_helpdesk.helpdesk_ticket_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sh_special']" position="after">
+                <field name="sh_move_task_to_preapp_store" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

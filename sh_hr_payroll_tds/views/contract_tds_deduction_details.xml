@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_contract_tds_deduction_details_form" model="ir.ui.view">
+        <field name="name">contract.tds.deduction.view.form</field>
+        <field name="model">contract.tds.deduction</field>
+        <field name="arch" type="xml">
+            <form string="Deduction Details">
+                    <group>
+                        <field name="line_ids">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="amount"/>
+                            </tree>
+                        </field>
+                    </group>
+            </form>
+        </field>
+    </record>
+
+   
+<!-- 
+
+
+    <record id="sh_tax_slab_template_action" model="ir.actions.act_window">
+        <field name="name">Deduction Details</field>
+        <field name="res_model">contract.tds.deduction</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record> -->
+
+    
+</odoo>

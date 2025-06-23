@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_so_portal_ticket_type_view" model="ir.ui.view">
+        <field name="name">sh.helpdesk.ticket.type</field>
+        <field name="model">sh.helpdesk.ticket.type</field>
+        <field name="inherit_id" ref="sh_helpdesk.sh_helpdesk_ticket_type_form_view"/>
+        <field name="arch" type="xml">
+            <field name="sh_display_in_frontend" position="after">
+                <field name="sh_display_at_so_portal"/>
+            </field>
+        </field>
+    </record>
+</odoo>

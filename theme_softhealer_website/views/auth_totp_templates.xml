@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <template id="sh_auth_totp_form" inherit_id="auth_totp.auth_totp_form">
+
+        <xpath expr="//form[1]" position="attributes">
+            <attribute name="class" position="add" separator=" ">sh_two_factor_verification_log_in_form</attribute>
+        </xpath>
+        <xpath expr="//form[2]" position="attributes">
+            <attribute name="class" position="add" separator=" ">sh_two_factor_verification_log_out_form</attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('oe_login_form')]//h5" position="attributes">
+            <attribute name="class" position="add" separator=" ">sh_two_factor_verification_heading_tag</attribute>
+        </xpath>
+
+    </template>
+</odoo>

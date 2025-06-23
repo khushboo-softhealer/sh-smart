@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <!-- HOME PAGE 2 -->
+   <template id="theme_mobiheal_website_contact_tmpl" name="Get in Touch - Contact Tech Innovate for Mobile Solutions">
+      <t t-call="website.layout">
+         <div id="wrap" class="oe_structure oe_empty">
+            <section class="s_website_form sh_contact_section_2 o_colored_level"
+               data-snippet="s_text_block" data-name="Contact" style="background-image: none;">
+               <div class="sh_contact_main">
+                  <div class="sh_contact_heading">
+                     <div class="container">
+                        <img src="/theme_mobiheal_website/static/src/img/contact/contact_1.png"
+                           alt="" class="sh_shapes sh_shape_one" title="Get in Touch - Contact Tech Innovate for Mobile Solutions" loading="lazy" />
+                        <img src="/theme_mobiheal_website/static/src/img/contact/contact_2.png"
+                           alt="" class="sh_shapes sh_shape_two" title="Get in Touch - Contact Tech Innovate for Mobile Solutions" loading="lazy" />
+                        <div class="heading">
+                           <h1 class="sh_title o_default_snippet_text">Best Mobile Solution <br /> <span
+                                 class="o_default_snippet_text">You can trust </span></h1>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sh_contact_card">
+                     <div class="container">
+                        <div class="row justify-content-center">
+                           <div class="col-lg-4 col-md-6 col-12 mb-4 o_colored_level">
+                              <div class="sh_address_card">
+                                 <div class="sh_address_icon">
+                                    <img
+                                       src="/theme_mobiheal_website/static/src/img/contact/mb_location.png"
+                                       loading="lazy" title="Get in Touch - Contact Tech Innovate for Mobile Solutions" />
+                                 </div>
+                                 <h5 class="sh_address_title o_default_snippet_text">Our Location</h5>
+                                 <p class="o_default_snippet_text">
+                                    <a href="#" style="color:rgba(0, 40, 78, 0.5);"> 
+                                       905, Corporate Levels, 150 Ft. Ring RD,
+                                       Nr. Ayodya Chowk, Opp Synergy Hospital,
+                                       Rajkot 360006,
+                                       Gujarat GJ,
+                                       India </a>
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-12 mb-4 o_colored_level">
+                              <div class="sh_address_card">
+                                 <div class="sh_address_icon">
+                                    <img
+                                       src="/theme_mobiheal_website/static/src/img/contact/mb_contact.png"
+                                       loading="lazy" title="Get in Touch - Contact Tech Innovate for Mobile Solutions" />
+                                 </div>
+                                 <h5 class="sh_address_title o_default_snippet_text">Contact Info</h5>
+                                 <p>
+                                    <a href="tel:919328825451" style="color:rgba(0, 40, 78, 0.5);">
+                                    </a>
+                                 </p>
+                                 <p>
+                                    <a href="tel:919328825451" style="color:rgba(0, 40, 78, 0.5);"
+                                       class="o_default_snippet_text">Sales:+919328825451</a>
+                                 </p>
+                                 <a href="tel:919328825451" style="color:rgba(0, 40, 78, 0.5);">
+                                 </a>
+                                 <p />
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-6 col-12 mb-4 o_colored_level">
+                              <div class="sh_address_card">
+                                 <div class="sh_address_icon">
+                                    <img
+                                       src="/theme_mobiheal_website/static/src/img/contact/mb_email.png"
+                                       loading="lazy" title="Get in Touch - Contact Tech Innovate for Mobile Solutions" />
+                                 </div>
+                                 <h5 class="sh_address_title o_default_snippet_text">Official Email</h5>
+                                 <p>
+                                 </p>
+                                 <p>
+                                    <a href="mailto: info@mobiheal.tech ">
+                                       <p class="o_default_snippet_text">
+                                          info@mobiheal.tech
+                                       </p>
+                                    </a>
+                                 </p>
+                                 <p />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sh_contact_form_main">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-lg-6 o_colored_level">
+                              <div class="sh_map_main" id="map_main_add">
+                                 <div class="sh_map">
+                                    <section style="background-image: none;" class="o_colored_level">
+                                       <iframe
+                                          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14763.297358403634!2d70.7674585!3d22.3224822!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8335b599650099a7%3A0x5bfa47e032b61bae!2sMobiheal%20Technologies!5e0!3m2!1sen!2sin!4v1702895373129!5m2!1sen!2sin"
+                                          width="600" height="450" style="border:0;"
+                                          allowfullscreen="" loading="lazy"
+                                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </section>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 o_colored_level">
+                              <section class="s_website_form contact_form o_colored_level"
+                                 data-vcss="001" data-snippet="s_website_form" data-name="Form"
+                                 style="background-image: none;">
+                                 <div class="container">
+                                    <div class="sh_section_heading">
+                                       <h2 class="o_default_snippet_text">It’s easy and only takes a
+                                          moment to fill.</h2>
+                                    </div>
+                                    <t t-call="softhealer_website_base.sh_website_form_for_solution_page_form" >
+                                       <t t-set="is_show_tnc" t-value="false"/>
+                                       <t t-set="utm_medium" t-value="'Website'"/>
+                                       <t t-set="utm_campaign" t-value="'B2B Odoo Services'"/>
+                                   </t>
+                                 </div>
+                              </section>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </t>
+   </template>
+
+   <data noupdate="1">
+
+      <!-- Default pagese  below 2 record must put in no update 1-->
+      <record id="theme_mobiheal_website_contact_page" model="website.page">
+         <field name="is_published">True</field>
+         <field name="url">/contact</field>
+         <field name="view_id" ref="theme_mobiheal_website.theme_mobiheal_website_contact_tmpl" />
+         <field name="track">True</field>
+         <field name="website_id" model="website"
+            eval="obj().env['website'].sudo().get_current_website()" />
+      </record>
+
+      <record id="theme_mobiheal_website_contact_menu" model="website.menu">
+         <field name="name">Contact</field>
+         <field name="url">/contact</field>
+         <field name="page_id" ref="theme_mobiheal_website.theme_mobiheal_website_contact_page" />
+         <field name="sequence" type="int">8</field>
+         <field name="website_id" model="website"
+            eval="obj().env['website'].sudo().get_current_website()" />
+      </record>
+
+   </data>
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="sh_renew_contract_wizard" model="ir.ui.view">
+        <field name="name">sh.renew.contract.wizard.form</field>
+        <field name="model">sh.renew.contract</field>
+        <field name="arch" type="xml">
+            <form string="Renew Contract">
+                <h1>
+                    <field name="name" required="1"/>
+                </h1>
+                <group>
+                    <group>
+                        
+                        <field name="date_start"/>
+                        <field name="date_end"/>
+                    </group>
+                    <group>
+
+                        <label for="contract_type" />
+                        <div class="o_row">
+                            <field name="contract_period" />
+                            <field name="contract_type" />
+                        </div>
+                    </group>
+                </group>
+                <footer>
+                    <button name="create_contract" class="btn btn-primary" type="object" string="Create Contract" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="sh_renew_contract_action" model="ir.actions.act_window">
+        <field name="name">Renew Contract</field>
+        <field name="res_model">sh.renew.contract</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

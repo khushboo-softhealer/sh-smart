@@ -1,0 +1,118 @@
+.sh_sop_article_custom_class{
+.o_kanban_renderer.o_renderer{
+    .o_kanban_record{
+        width:100%;
+       
+        .oe_kanban_global_click{
+            width:100%;justify-content: space-around; padding:10px 5px;
+            .row{
+                width:100%;
+               .o_kanban_image_fill_left{
+                position: absolute;bottom: 10px;right: 20px;
+                @include media-breakpoint-down(xl){
+                    right:10px;
+                }
+                @include media-breakpoint-down(md){
+                    bottom:10px;
+                }
+                    .o_kanban_image_inner_pic{
+                            .o_field_widget{
+                                img{
+                                    height:30px; width:30px; border: 2px solid #ffffff;
+                                    box-shadow: 0 10px 10px rgba(0, 10, 10, 0.1);
+                                    border-radius: 20px; transition:all 0.5s;
+                                    &:hover{
+                                        transform: translateY(-4px) scale(1.02);transition: 0.5s;
+                                    }
+                                }
+                            }
+                
+                    }
+                }
+                .sh_knowledge_article_title{
+                    font-size:16px; font-weight:600; color:#000;
+                    .sh_label{
+                        white-space:nowrap;
+                    }
+                }
+                .sh_knowledge_date{
+                    @include media-breakpoint-down(xl){
+                        margin-bottom:10px;
+                    }
+                    .sh_label{
+                        white-space:nowrap;
+                    }
+                }
+                .sh_knowledge_tags{
+                    .sh_label{
+                        white-space:nowrap;
+                    }
+                }
+                .oe_kanban_details{
+                   font-size: 14px;font-weight: 600 !important;
+
+                    @include media-breakpoint-down(xl){
+                        text-align:start !important; font-size:13px; align-items:flex-start !important;
+                    }
+                    [name="sh_tag_ids"]{
+                         > div[aria-atomic]{
+                            display:flex !important;position: relative;flex-wrap:wrap;align-items: center;
+                        }
+                        .o-checkbox{
+                            .form-check-label{
+                                padding: 0px 10px;border-radius: 20px; color:#573285; font-weight:600;font-size: 12px;line-height: 22px;
+                                &:after{
+                                    display:none;
+                                }
+                                &:before{
+                                    display:none;
+                                }
+                            }
+                            &.form-check:not(.form-switch){
+                                padding-left:5px !important;
+                                @include media-breakpoint-down(xl){
+                                    padding-bottom:5px;
+                                }
+                            }
+                        }
+                    }
+                    .sh_knowledge_article_cat{
+                        span{
+                            background: #573285;color: #FFF;border-radius: 20px;padding: 3px 12px;font-size: 12px; text-transform: capitalize;white-space: nowrap;width: 160px;overflow: hidden;text-overflow: ellipsis;display: block;
+                        }
+                    }
+                    
+                   
+                }
+            }
+        }
+    }
+
+}
+.o_search_panel.flex-grow-0.flex-shrink-0.border-end{
+    overflow: unset !important;
+.o_search_panel_section.o_search_panel_category{
+   height:100%;
+   header {
+    + ul.list-group.o_search_panel_field{
+        overflow: auto;height: 98.5%;
+        li.o_search_panel_category_value:not(.o_treeEntry){
+            overflow: auto;min-width: fit-content;max-width: 100vh;
+            .list-group-item{
+                .o_search_panel_label{
+                    .o_search_panel_label_title{
+                        overflow: unset !important;text-overflow: unset !important;white-space: nowrap !important;
+                    }
+                }
+            }
+        }
+    }
+   }
+    
+}
+}
+}
+
+
+
+

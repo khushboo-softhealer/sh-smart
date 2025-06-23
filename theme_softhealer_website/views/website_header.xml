@@ -1,0 +1,20 @@
+<odoo>
+<record id="website_theme_softhealer_website_standard_header_layout" model="ir.ui.view">
+        <field name="name">SH Header Inherit Website</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_softhealer_website.website_theme_softhealer_website_standard_header_layout</field>
+        <field name="inherit_id" ref="website.layout" />
+        <field name="mode">extension</field>
+        <field name="arch" type="xml">
+
+            <!-- Blog and Blog post custom classes -->
+            <xpath expr="//div[@id='wrapwrap']" position="before">
+                    <!-- <t t-if="url in  ['','/home-website', '/cooking-competition-2025']">
+                        <t t-set="pageName" t-value="'sh_css_cls_header_background_color'" />
+                    </t> -->
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

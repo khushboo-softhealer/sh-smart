@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="sh_employee_custom" model="ir.ui.view">
+            <field name="name">sh.employee.custom</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="work_phone" position="after">
+                    <field name="sh_bank_account" groups="sh_hr_payroll.group_hr_payroll_manager"/>
+                </field>              
+            </field>
+        </record>
+    </data>
+</odoo>

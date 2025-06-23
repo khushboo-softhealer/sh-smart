@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_sop_article_view_kanban" model="ir.ui.view">
+        <field name="name">sop.article.view.kanban</field>
+        <field name="model">sh.sop.article</field>
+        <field name="arch" type="xml">
+            <kanban class="o_res_partner_kanban">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click" class="d-flex">
+                           <div class="row">
+                            <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-12">
+                                <div class="oe_kanban_details d-flex flex-column">
+                                    <div class="mb-2 sh_knowledge_article_title">
+                                        <strong class="oe_kanban_details"> <span class="sh_label"> Article Title : </span> <field
+                                                name="sh_title" />
+                                        </strong>
+                                    </div>
+                                    <div class="mb-2 sh_knowledge_tags">
+                                        <strong class="oe_kanban_details d-flex mt-1 mb-1"><span class="sh_label">Tags :</span> <span>
+                                                <field name="sh_tag_ids"/>
+                                            </span>
+                                        </strong>
+                                    </div>
+                                    <div class="sh_knowledge_date">
+                                        <strong class="oe_kanban_details"> <span class="sh_label">Last updated : </span> <span>
+                                                <field name="write_date" />
+                                            </span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-12 col-md-12 col-12">
+                                <div class="oe_kanban_details d-flex flex-column align-items-end">
+                                    
+                                    <div class="mb-2 sh_knowledge_article_cat">
+                                        <strong class="oe_kanban_details"><field
+                                                name="sh_category_id" />
+                                        </strong>
+                                    </div>
+                                    <div class="o_kanban_image_fill_left o_kanban_image_full">
+                                        <span class="o_kanban_image_inner_pic">
+                                            <field name="icon" widget="image" class="oe_avatar" />
+                                        </span>
+                                    </div>
+                                   
+                                   
+                                    <!--<div
+                                    class="o_kanban_image_fill_left o_kanban_image_full p-2">
+                                    <span class="o_kanban_image_inner_pic">
+                                        <field name="icon" widget="image" class="oe_avatar" />
+                                    </span>
+                                </div>-->
+    
+    
+                                    <!--<div>
+                                        <strong class="oe_kanban_details">Revision no : <span>
+                                                <field name="sh_revision_no" />
+                                            </span></strong>
+                                    </div>
+                                    <div>
+                                        <strong class="oe_kanban_details">Create Date -<span>
+                                                <field name="sh_create_date" />
+                                            </span></strong>
+                                    </div>
+                                    <div>
+                                        <strong class="oe_kanban_details">Approve Date - <span>
+                                                <field name="approve_date" />
+                                            </span></strong>
+                                    </div>-->
+                                </div> 
+                            </div>
+                           
+                           </div>
+                           
+                           
+                           
+                            
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="sh_sop_article_view_form" model="ir.ui.view">
+        <field name="name">sop.article.view.form</field>
+        <field name="model">sh.sop.article</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="SOP Article">
+                <header>
+                    <field name="is_coach_or_owner" invisible="1" />
+                    <field name="is_coach" invisible="1" />
+                    <field name="sh_owner" invisible="1" />
+                    <field name="sh_approve" invisible="1" />
+                    <field name="is_owner" invisible="1"/>
+
+                    <button name="sh_approve_button" string="Approve" type="object"
+                        class="oe_highlight"
+                        attrs="{'invisible':['|',('is_coach_or_owner','=',False),('state','not in',['submit'])]}"
+                        groups="sh_project_task_base.group_project_officer" />
+                    <button name="sh_revision_user" string="Revision" type="object"
+                        attrs="{'invisible':['|',('is_coach_or_owner','=',False),('state','in',['draft','reject','cancel','revision'])]}"
+                        class="oe_highlight" />
+                    <button name="sh_reject" string="Reject" type="object" class="oe_highlight"
+                        attrs="{'invisible':['|',('is_coach_or_owner','=',False),('state','not in',['submit','publish'])]}"
+                        groups="sh_project_task_base.group_project_officer" />
+                    <button name="sh_submit_manager" string="Submit To Manager" type="object"
+                        class="oe_highlight"
+                        attrs="{'invisible':['|',('is_coach_or_owner','=',False),('state','not in',['draft','revision'])]}" />
+                    <button name="sh_sop_cancel" string="Cancel" type="object"
+                        class="oe_highlight"
+                        attrs="{'invisible':['|',('is_coach_or_owner','=',False),('state','not in',['draft','revision','publish'])]}" />
+                     <button name="sh_reset_to_draft" string="Reset to Draft" type="object"
+                        class="oe_highlight"
+                        attrs="{'invisible':['|',('is_coach_or_owner','=',False),('state','in',['draft','submit','revision','publish'])]}" />
+                    <!--<button
+                    name="sh_revision_manager" string="Revision" type="object"
+                    attrs="{'invisible':[('state','in',['draft','approved','reject'])]}"
+                    class="oe_highlight" groups="sh_project_task_base.group_project_officer
+"/>-->
+                    <!--                    <field name="stage_id" widget="statusbar" class="o_field_statusbar" />-->
+                    <field name="state" widget="statusbar" class="o_field_statusbar" />
+                </header>
+                <sheet>
+
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" string="Archive" type="object" class="oe_stat_button" icon="fa-archive" attrs="{'invisible': [('is_owner', '=', False)]}">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+                        </button>
+                    </div>
+                    <field name="icon" widget="image" class="oe_avatar" />
+                    <div class="oe_title d-flex">
+                        <h1>
+                            <field name="sh_title"
+                                attrs="{'readonly': ['|',('is_coach_or_owner','=',False),('state', '=', 'publish')]}" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="state" invisible="1" />
+                            <field name="submited_stage" invisible="1" />
+                            <field name="company_id" invisible="1" />
+
+
+                            <field name="sh_revision_no" readonly="1" />
+                            <field name="recuring_review_process_date"
+                                attrs="{'readonly': ['|',('is_coach', '=', False),('state','=','publish')]}" />
+                            <field name="sh_url_ref"
+                                attrs="{'readonly': ['|',('is_coach_or_owner','=',False),('state', '=', 'publish')]}" />
+                            <field name="sh_department_user_ids" widget="many2many_tags"
+                                invisible="1" />
+                        </group>
+                        <group>
+                            <field name="sh_category_id"
+                                attrs="{'readonly': [('is_coach_or_owner','=',False)]}" />
+                            <field name="sh_tag_ids" widget="many2many_tags"
+                                options="{'color_field': 'color'}"
+                                attrs="{'readonly': ['|',('is_coach_or_owner','=',False),('state', '=', 'publish')]}" />
+                            <field name="owner_ids" widget="many2many_tags" />
+                            <field name="manager_ids" widget="many2many_tags" />
+                            <field name="sh_user_ids" widget="many2many_tags"
+                                attrs="{'readonly': [('is_coach_or_owner','=',False)]}" />
+                            <field name="department_ids" widget="many2many_tags"
+                                attrs="{'readonly': [('is_coach_or_owner','=',False)]}" />
+                        </group>
+                        <group>
+                        </group>
+                        <group>
+
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="Content">
+                            <field name="sh_content"
+                                attrs="{'readonly': ['|',('is_coach_or_owner','=',False),('state', '=', 'publish')]}" />
+                        </page>
+                        <!--<page name="Cover Page">
+                            <field name="banner"
+                                attrs="{'readonly':[('state','not in',['draft'])]}" />
+                        </page>-->
+                        <page name="Other Info">
+                            <group>
+                                <group>
+                                    <field name="sh_document_no" readonly='1' />
+                                    <field name="sh_create_date" readonly="1" />
+                                    <field name="owner_id" readonly="1" />
+                                    <field name="effective_date" readonly="1" />
+                                </group>
+                                <group>
+                                    <field name="approve_date" readonly="1" />
+                                    <field name="approve_by" readonly="1" />
+                                    <field name="review_date" readonly="1" />
+                                    <field name="review_by" readonly="1" />
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="o_attachment_preview" />
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_sop_article_view_tree" model="ir.ui.view">
+        <field name="name">sop.article.view.tree</field>
+        <field name="model">sh.sop.article</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sh_owner" invisible="1" />
+                <field name="sh_approve" invisible="1" />
+                <field name="sh_title" />
+                <field name="sh_document_no"></field>
+                <field name="sh_revision_no"></field>
+                <field name="create_date" />
+                <field name="owner_ids" widget="many2many_tags"/>
+                <field name="approve_date"></field>
+                <field name="approve_by"></field>
+                <field name="effective_date"></field>
+                <field name="is_coach_or_owner"></field>
+                <field name="state" widget="badge"></field>
+                <button name="sh_revision_user" string="Revision" type="object"
+                        attrs="{'invisible':['|',('is_coach_or_owner','=',False),('state','in',['draft','reject','cancel'])]}"
+                        class="oe_highlight" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_sop_article_view_search" model="ir.ui.view">
+        <field name="name">sh.sop.article.search</field>
+        <field name="model">sh.sop.article</field>
+        <field name="arch" type="xml">
+            <search string="SOP Article">
+                <field name="sh_title" string="Title"  filter_domain="['|','|','|','|','|',('sh_title','ilike',self),('sh_tag_ids','ilike',self),('department_ids','ilike',self),('owner_ids','ilike',self),('manager_ids','ilike',self),('sh_content','ilike',self)]"/>
+                <field name="sh_category_id" string="Category" />
+                <field name="sh_department_id" string="Department" />
+                <field name="owner_id" string="Owner" />
+                <field name="sh_tag_ids" string="Tags" />
+                <filter string="My SOP" name="my_sop" domain="[('owner_id', '=', uid)]" />
+                <filter string="Create Date" name="filter_create_date" date="create_date" />
+                <searchpanel>
+                    <field name="sh_category_id" icon="fa-users" enable_counters="1"
+                        string="ARTICLE CATEGORY" />
+                </searchpanel>
+                <group expand="1" string="Group By">
+                    <filter string="State" name="group_by_sh_state" context="{'group_by': 'state'}" />
+                    <filter string="Category" name="group_by_sh_category_id"
+                        context="{'group_by': 'sh_category_id'}" />
+                    <filter string="Department" name="group_by_sh_department_id"
+                        context="{'group_by': 'sh_department_id'}" />
+                    <filter string="Owner" name="group_by_owner_id"
+                        context="{'group_by': 'owner_id'}" />
+                    <filter string="Tags" name="group_by_sh_tag_ids"
+                        context="{'group_by': 'sh_tag_ids'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sh_sop_article_custom_action" model="ir.actions.act_window">
+        <field name="name">SOP Article</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.sop.article</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_id" ref="sh_knowledge_base_customised.sh_sop_article_view_kanban" />
+    </record>
+
+</odoo>

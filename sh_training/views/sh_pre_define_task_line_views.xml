@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="pre_define_task_line_view_form" model="ir.ui.view">
+        <field name="name">pre.define.task.line.view.form</field>
+        <field name="model">pre.define.task.line</field>
+        <field name="arch" type="xml">
+            <form string="Predefine Task Line">
+                <sheet>
+                    <group>
+                        <field name="tick" />
+                        <field name="name" />
+                        <field name="description" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

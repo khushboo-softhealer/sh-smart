@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="tl_restrict_company_group" model="res.groups">
+            <field name="name">Multi Company Restrict group (TL)</field>
+        </record>
+
+        
+    </data>
+
+    <data>
+
+        <!-- Deactive rules-->
+
+        <record id="hr_contract.ir_rule_hr_payroll_structure_type_multi_company" model="ir.rule">
+            <field name="active" eval="False"/>
+        </record>
+    </data>
+</odoo>

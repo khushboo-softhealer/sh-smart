@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="sh_helpdesk_url_inherit_view" model="ir.ui.view">
+        <field name="name">sh.helpdesk.url.inherit.view</field>
+        <field name="model">sh.helpdesk.ticket</field>
+        <field name="inherit_id" ref="sh_helpdesk.helpdesk_ticket_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='extra_details']" position="inside">
+                <group string="Marketing">
+                    <group>
+                        <field name="custom_website_form_url" />
+                        <field name="custom_website_form_company" />
+                        <field name="custom_website_form_country_id" />
+                        <field name="custom_website_form_contact_no" />
+                    </group>
+                    <group>
+                        <field name="custom_website_form_campaign_id" />
+                        <field name="custom_website_form_medium_id" />
+                        <field name="custom_website_form_source_id" />
+                        <field name="custom_website_form_ref_by" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+     <record id="helpdesk_ticket_search_view_website" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.search.view.website</field>
+        <field name="model">sh.helpdesk.ticket</field>
+        <field name="inherit_id" ref="sh_helpdesk.helpdesk_ticket_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search//field[@name='name']" position="after">
+                <field name="custom_website_form_campaign_id" />
+                <field name="custom_website_form_medium_id" />
+                <field name="custom_website_form_source_id" />
+            </xpath>
+            <xpath expr="//group//filter" position="after">
+                <field name="custom_website_form_medium_id" />
+                <filter string="Campaign" name="Campaign" context="{'group_by':'custom_website_form_campaign_id'}" />
+                <filter string="Medium" name="Medium" context="{'group_by':'custom_website_form_medium_id'}" />
+                <filter string="Source" name="Source" context="{'group_by':'custom_website_form_source_id'}" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_helpdesk_ticket_inherit_pivot_view" model="ir.ui.view">
+        <field name="name">sh.helpdesk.ticket.inherit.pivot.view</field>
+        <field name="model">sh.helpdesk.ticket</field>
+        <field name="inherit_id" ref="sh_helpdesk.helpdesk_ticket_sla_pivot" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='team_id']" position="after">
+                    <field name="custom_website_form_campaign_id" type="measure" />
+                    <field name="custom_website_form_medium_id" type="measure" />
+                    <field name="custom_website_form_source_id" type="measure" />
+                </xpath>
+        </field>
+    </record>
+</odoo>

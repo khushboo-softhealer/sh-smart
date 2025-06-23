@@ -1,0 +1,288 @@
+#wrapwrap:not(.sh_survmate_checkbox_style_1):not(.sh_survmate_checkbox_style_2):not(.sh_survmate_checkbox_style_3):not(.sh_survmate_checkbox_style_4):not(.sh_survmate_checkbox_style_5) .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn .fa.fa-check-square {
+  display: block;
+}
+
+#wrapwrap:not(.sh_survmate_checkbox_style_1):not(.sh_survmate_checkbox_style_2):not(.sh_survmate_checkbox_style_3):not(.sh_survmate_checkbox_style_4):not(.sh_survmate_checkbox_style_5) .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn .fa.fa-check-square:before {
+  content: "" !important;
+}
+
+#wrapwrap:not(.sh_survmate_checkbox_style_1):not(.sh_survmate_checkbox_style_2):not(.sh_survmate_checkbox_style_3):not(.sh_survmate_checkbox_style_4):not(.sh_survmate_checkbox_style_5) .js_question-wrapper .o_survey_form_choice .o_survey_choice_btn.o_survey_selected .fa.fa-check-square:before {
+  content: "\f14a" !important;
+}
+
+/*======================
+	Checkbox Style 1
+========================*/
+.sh_survmate_checkbox_style_1 .o_survey_form_choice .o_survey_choice_btn .fa-square-o:before {
+  content: "\f1db";
+  display: none;
+}
+
+.sh_survmate_checkbox_style_1 .o_survey_choice_btn:not(.o_survey_selected) .fa-check-square:before {
+  content: "";
+}
+
+.sh_survmate_checkbox_style_1 .o_survey_form_choice .o_survey_selected .fa-check-square:before {
+  content: "\f058";
+  display: none;
+}
+
+.sh_survmate_checkbox_style_1 .o_survey_question_matrix .o_survey_matrix_btn i.fa-square-o:before {
+  content: "\f1db";
+  display: none;
+}
+
+.sh_survmate_checkbox_style_1 .o_survey_question_matrix .o_survey_matrix_btn i.fa-check-square:before {
+  content: "\f058";
+  display: none;
+}
+
+.sh_survmate_checkbox_style_1 .fa-square-o {
+  content: "";
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+}
+
+.sh_survmate_checkbox_style_1 .o_survey_selected .fa-square-o {
+  display: block !important;
+  content: "";
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+  border-left: 0;
+  border-top: 0;
+  width: 8px;
+  transform: rotate(45deg) !important;
+  top: -2px;
+}
+
+.sh_survmate_checkbox_style_1 .o_survey_matrix_btn .fa-square-o {
+  content: "";
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border: 2px solid;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+  position: absolute !important;
+  transform: translate(-50%, -50%);
+}
+
+.sh_survmate_checkbox_style_1 .o_survey_matrix_btn.o_survey_selected .fa-square-o {
+  display: block !important;
+  content: "";
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border: 2px solid;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+  border-left: 0;
+  border-top: 0;
+  width: 8px;
+  transform: translate(-50%, -50%) rotate(45deg) !important;
+}
+
+/*======================
+	Checkbox Style 2
+========================*/
+.sh_survmate_checkbox_style_2 .o_survey_choice_btn:not(.o_survey_selected) .fa-check-square:before {
+  content: "";
+}
+
+.sh_survmate_checkbox_style_2 .o_survey_form_choice .o_survey_choice_btn .fa-square-o:before {
+  content: "\f096";
+}
+
+.sh_survmate_checkbox_style_2 .o_survey_form_choice .o_survey_selected .fa-check-square {
+  display: inline !important;
+}
+
+.sh_survmate_checkbox_style_2 .o_survey_form_choice .o_survey_selected .fa-check-square:before {
+  content: "\f0fe";
+}
+
+.sh_survmate_checkbox_style_2 .o_survey_question_matrix .o_survey_matrix_btn i.fa-square-o:before {
+  content: "\f096";
+}
+
+.sh_survmate_checkbox_style_2 .o_survey_question_matrix .o_survey_matrix_btn i.fa-check-square:before {
+  content: "\f0fe";
+}
+
+/*======================
+	Checkbox Style 3
+========================*/
+.sh_survmate_checkbox_style_3 .o_survey_choice_btn:not(.o_survey_selected) .fa-check-square:before {
+  content: "";
+}
+
+.sh_survmate_checkbox_style_3 .o_survey_form_choice .o_survey_selected .fa-check-square {
+  display: inline !important;
+}
+
+.sh_survmate_checkbox_style_3 .o_survey_form_choice .o_survey_choice_btn .fa-square-o:before {
+  content: "\f096";
+}
+
+.sh_survmate_checkbox_style_3 .o_survey_form_choice .o_survey_selected .fa-check-square:before {
+  content: "\f046";
+}
+
+.sh_survmate_checkbox_style_3 .o_survey_question_matrix .o_survey_matrix_btn i.fa-square-o:before {
+  content: "\f096";
+}
+
+.sh_survmate_checkbox_style_3 .o_survey_question_matrix .o_survey_matrix_btn i.fa-check-square:before {
+  content: "\f046";
+}
+
+/*======================
+	Checkbox Style 4
+========================*/
+.sh_survmate_checkbox_style_4 .o_survey_choice_btn:not(.o_survey_selected) .fa-check-square:before {
+  content: "";
+}
+
+.sh_survmate_checkbox_style_4 .o_survey_form_choice .o_survey_choice_btn .fa-square-o:before {
+  content: "\f10c";
+  display: none;
+}
+
+.sh_survmate_checkbox_style_4 .o_survey_form_choice .o_survey_selected .fa-check-square:before {
+  content: "\f111";
+  display: none;
+}
+
+.sh_survmate_checkbox_style_4 .o_survey_question_matrix .o_survey_matrix_btn i.fa-square-o:before {
+  content: "\f10c";
+  display: none;
+}
+
+.sh_survmate_checkbox_style_4 .o_survey_question_matrix .o_survey_matrix_btn i.fa-check-square:before {
+  content: "\f111";
+  display: none;
+}
+
+.sh_survmate_checkbox_style_4 .o_survey_form_choice .fa-square-o {
+  content: "";
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+}
+
+.sh_survmate_checkbox_style_4 .o_survey_form_choice .o_survey_selected .fa-square-o {
+  display: block !important;
+  content: "";
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.sh_survmate_checkbox_style_4 .o_survey_form_choice .o_survey_selected .fa-square-o:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3px;
+  width: 12px;
+  height: 12px;
+}
+
+/*Matrix check box*/
+.sh_survmate_checkbox_style_4 .o_survey_question_matrix .o_survey_matrix_btn i.fa-square-o {
+  position: absolute !important;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border: 1px solid;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+}
+
+.sh_survmate_checkbox_style_4 .o_survey_question_matrix .o_survey_matrix_btn.o_survey_selected i.fa-square-o {
+  display: block !important;
+  position: absolute !important;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+}
+
+.placeholder {
+  background: transparent;
+}
+
+.sh_survmate_checkbox_style_4 .o_survey_question_matrix .o_survey_matrix_btn.o_survey_selected i.fa-square-o:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3px;
+  width: 12px;
+  height: 12px;
+}
+
+/*
+.sh_survmate_checkbox_style_4 .o_survey_form_choice .o_survey_selected.o_survey_selected .fa-square-o:after{
+	position:absolute;
+	content:'';
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	padding:3px;
+	width:12px;
+	height:12px;
+}*/
+/*======================
+	Checkbox Style 5
+========================*/
+.sh_survmate_checkbox_style_5 .o_survey_choice_btn:not(.o_survey_selected) .fa-check-square:before {
+  content: "";
+}
+
+.sh_survmate_checkbox_style_5 .o_survey_form_choice .o_survey_selected .fa-check-square {
+  display: inline !important;
+}
+
+.sh_survmate_checkbox_style_5 .o_survey_form_choice .o_survey_choice_btn .fa-square-o:before {
+  content: "\f1db";
+}
+
+.sh_survmate_checkbox_style_5 .o_survey_form_choice .o_survey_selected .fa-check-square:before {
+  content: "\f2da";
+}
+
+.sh_survmate_checkbox_style_5 .o_survey_question_matrix .o_survey_matrix_btn i.fa-square-o:before {
+  content: "\f1db";
+}
+
+.sh_survmate_checkbox_style_5 .o_survey_question_matrix .o_survey_matrix_btn i.fa-check-square:before {
+  content: "\f2da";
+}/*# sourceMappingURL=checkbox_style.css.map */

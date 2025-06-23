@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- Sh website sale popup pricelist Configuration-->
+    <record id="sh_website_sale_popup_pricelist_website_sale_res_config_settings_view_form_inherit"
+        model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website_sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='sale_product_catalog_settings']" position="after">
+                <h2>Pricelist Popup</h2>
+                <div class="row mt16 o_settings_container"
+                    id="sh_website_sale_popup_pricelist_settings">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="is_sh_website_sale_popup_pricelist" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_sh_website_sale_popup_pricelist" />
+                            <div
+                                attrs="{'invisible': [('is_sh_website_sale_popup_pricelist', '=', False)]}">
+                                <div class="text-muted">
+                                    Type Pages URL, to on that URL show Popup.
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="sh_website_sale_popup_pricelist_pages_url"
+                                            class="oe_inline"
+                                            placeholder="URL With Prefix &apos;/&apos;, And coma separated value." />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="migration_dashboard.dashboard">
+        <!--View-->
+        <div class="hr_dash col-xs-12 col-md-12 col-lg-12 col-sm-8">
+            <!--dashboard boxes-->
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="row">
+                        <t t-foreach="migration_details" t-as="stage" t-key="stage.value">
+                            <div class="col-md-3 p-4">
+                                <div class="dash-box h-100">
+                                    <div class="dash-box-body dash-box-color-5 ">
+                                        <span class="dash-box-count"><t t-esc="stage.value"/></span>
+                                        <span class="dash-box-title"><t t-esc="stage.key"/></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>                        
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_leave_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-02 11:45+0000\n"
+"PO-Revision-Date: 2021-10-02 11:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_leave_report
+#: model:ir.actions.report,print_report_name:sh_leave_report.sh_action_leave_report
+msgid "'Leave Report'"
+msgstr "'Dejar informe'"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "<b>Manager</b>"
+msgstr "<b>Gerente</b>"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid ""
+"<br/>\n"
+"                                    <i class=\"fa fa-building\" aria-hidden=\"true\"/>\n"
+"                                    &amp;nbsp;&amp;nbsp;"
+msgstr ""
+"<br/>\n"
+"                                    <i class=\"fa fa-building\" aria-hidden=\"true\"/>\n"
+"                                    &amp;nbsp;&amp;nbsp;"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid ""
+"<br/>\n"
+"                                    <i class=\"fa fa-user\" aria-hidden=\"true\"/>\n"
+"                                    &amp;nbsp;&amp;nbsp;&amp;nbsp;"
+msgstr ""
+"<br/>\n"
+"                                    <i class=\"fa fa-user\" aria-hidden=\"true\"/>\n"
+"                                    &amp;nbsp;&amp;nbsp;&amp;nbsp;"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid ""
+"<i class=\"fa fa-envelope\" aria-hidden=\"true\"/>\n"
+"                                        &amp;nbsp;&amp;nbsp;"
+msgstr ""
+"<i class=\"fa fa-envelope\" aria-hidden=\"true\"/>\n"
+"                                        &amp;nbsp;&amp;nbsp;"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid ""
+"<i class=\"fa fa-phone\" aria-hidden=\"true\"/>\n"
+"                                        &amp;nbsp;&amp;nbsp;&amp;nbsp;"
+msgstr ""
+"<i class=\"fa fa-phone\" aria-hidden=\"true\"/>\n"
+"                                        &amp;nbsp;&amp;nbsp;&amp;nbsp;"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "About Leave"
+msgstr "Sobre la licencia"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "Comment by Manager :"
+msgstr "Comentario por gerente:"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "Date"
+msgstr "Fecha"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "Days"
+msgstr "Dias"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "Duration"
+msgstr "Duración"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "Employee Information :"
+msgstr "Información del empleado :"
+
+#. module: sh_leave_report
+#: model:ir.actions.report,name:sh_leave_report.sh_action_leave_report
+msgid "Leave Report"
+msgstr "Dejar informar"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "Leave Request"
+msgstr "Dejar petición"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "Leave Type"
+msgstr "Dejar tipo"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_hr_leave_view_form
+msgid "Manager's Comment"
+msgstr "Comentario del gerente"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "Status"
+msgstr "Estado"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "To"
+msgstr "Para"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_leave_report_template
+msgid "__________________________________"
+msgstr "__________________________________"
+
+#. module: sh_leave_report
+#: model_terms:ir.ui.view,arch_db:sh_leave_report.sh_hr_leave_view_form
+msgid "e.g. Report to the next month..."
+msgstr "p.ej. Informe al próximo mes ..."

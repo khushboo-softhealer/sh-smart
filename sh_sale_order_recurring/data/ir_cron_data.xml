@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--     
+    <record id="sh_sale_recurring_cron" model="ir.cron">
+        <field name="name">Sale Recurring Order Cron</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="user_id" ref="base.user_root" />
+        <field name="numbercall">-1</field>
+        <field name="model_id" ref="model_sale_recurring" />
+        <field name="state">code</field>
+        <field name="code">model.recurring_order_cron()</field>
+        <field name="doall" eval="False" />
+    </record> -->
+
+
+     <record id="sh_sale_order_cron" model="ir.cron">
+        <field name="name">Sale Order Recurring Cron</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="user_id" ref="base.user_root" />
+        <field name="numbercall">-1</field>
+        <field name="model_id" ref="model_sale_order" />
+        <field name="state">code</field>
+        <field name="code">model.recurring_order_cron()</field>
+        <field name="doall" eval="False" />
+    </record>
+
+</odoo>

@@ -1,0 +1,360 @@
+// Primary Buttton //
+@mixin sh_primary_button{
+    position: relative;color: #ffffff;background: o-color(o-color-1);box-shadow: 0 15px 35px rgba(86, 75, 198, 0.15);border-radius: 5px;width: max-content;display: flex;align-items: center;justify-content: center;outline: none;overflow: hidden;font-size: 18px;padding: 12px 30px;transition: .2s;border: 1px solid o-color(o-color-1);letter-spacing: .01em;cursor: pointer;min-width: auto;
+    @include media-breakpoint-down(lg){
+        padding: 12px 18px !important;
+        font-size: 16px !important;
+    }
+}
+// ripple effect //
+@mixin btn_primary_rippler {
+    position: relative;display: inline-block;padding: 12px 36px;margin: 10px 0;color: #fff;text-decoration: none;text-transform: uppercase;font-size: 18px;letter-spacing: 2px;border-radius: 40px;overflow: hidden;
+}
+
+@mixin rippler_span {
+    position: absolute;background: #fff;transform: translate(-50%, -50%);pointer-events: none;border-radius: 50%;animation: ripple_effect 1s linear infinite;z-index: 1000;
+}
+
+@keyframes ripple_effect {
+    0% {
+        width: 0;height: 0;opacity: 0.5;
+    }
+
+    100% {
+        width: 500px;height: 500px;opacity: 0;
+    }
+}
+// Secondary Button //
+@mixin sh_secondary_button{
+    position: relative;color: o-color(o-color-1);background: #ffffff;box-shadow: none;border-radius: 5px;width: max-content;display: flex;align-items: center;justify-content: center;outline: none;overflow: hidden;font-size: 18px;padding: 12px 30px;transition: .2s;border: 1px solid o-color(o-color-1);letter-spacing: .01em;cursor: pointer;min-width: auto;
+    @include media-breakpoint-down(md){
+        padding: 12px 18px !important;
+        font-size: 16px !important;
+    }
+}
+
+// Other Page Banner //
+@mixin sh_other_page_banner{
+        padding-top: 180px;padding-bottom: 100px;display: flex;justify-content:center;align-items: center;flex-direction:column;position: relative;z-index:1;padding-left: 50px;padding-right: 50px;background: #212240;
+        @include media-breakpoint-only(md) {
+            padding: 100px 50px;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 70px 15px;
+        }
+        .sh_banner_content{
+            width: 65%;text-align: center;margin:0px auto;
+            @include media-breakpoint-down(lg){
+                width: 100%;
+            }
+            .sh_banner_title{
+                 color: #fff;font-size: 40px;font-weight: 600;letter-spacing: -.01em;line-height: 1.1;margin-bottom: 0px;
+                 @include media-breakpoint-only(md){
+                    font-size: var(--sh-sh-other-page-banner-content-h2-tablet);
+                 }
+                  @include media-breakpoint-down(md){
+                    font-size: var(--sh-sh-other-page-banner-content-h2-mobile);
+                 }
+            }
+            .sh_banner_text{
+                     color: #fff;font-size: 18px;letter-spacing: .01em;margin: 8px 0px;text-align: center;
+                     @include media-breakpoint-only(md){
+                     font-size: var(--sh-sh-other-page-banner-content-text-tablet);
+                 }
+                  @include media-breakpoint-down(md){
+                     font-size: var(--sh-sh-other-page-banner-content-text-mobile);
+                 }
+            }
+    
+        ul.sh_banner_breadcrumb{
+            list-style: none;display:flex;align-items: center;padding-left: 0px;margin-bottom: 0px;justify-content: center;
+            li{
+                 margin-right:10px;font-size: 18px;color:#fff;
+    
+                 @include media-breakpoint-only(md){
+                     font-size: var(--sh-sh-other-page-banner-content-breadcrumb-font-size-tablet);
+                 }
+                  @include media-breakpoint-down(md){
+                     font-size: var(--sh-sh-other-page-banner-content-breadcrumb-font-size-mobile);
+                 }
+                 a.sh_banner_breadcrumb_link{
+                    text-decoration:none;color:#fff;transition:0.4s;
+                    &:hover{
+                         opacity:0.7;
+                    }
+    
+                    span.sh_normal_text{
+                    color: #ffffff;
+                    }
+                    span.sh_banner_breadcrumb_icon{
+                         margin-left:10px;
+                    }
+                 }
+            }
+        }
+    }
+}
+@mixin sh_sub_badge{
+    width:fit-content; color:o-color(o-color-1);border-radius:5px; font-size:16px;background: rgba(87, 74, 199,0.10);padding: 7px 20px 7px 20px;font-weight: 400;margin-bottom:20px;text-transform: capitalize;
+}
+// Footer // 
+@mixin sh_footer{
+    background-color: #212240 !important;padding: 0px 0px;z-index: 0;
+}
+@mixin sh_footer_menu{
+    position: relative;color: #ffffff !important;font-size: 17px;text-align: left;transition: all .1s ease-in-out;text-decoration: none;font-weight: 400;
+}
+@mixin sh_footer_menu_heading{
+    color: #ffffff;font-size: 20px;text-align: left;transition: all .1s ease-in-out;text-decoration: none;font-weight: 600;margin-bottom: 1.6rem;
+}
+@mixin sh_fixed_button_slider_text{
+    color: #5b6674;font-size: 16px;line-height: 22px;text-decoration: none;transition:all 0.4s ease;
+}
+
+// Call to Action Button //
+@mixin sh_call_to_action_section{
+    position: relative;padding: 100px 0px;background: linear-gradient(225deg, o-color(o-color-1) 40%, var(--sh-call-to-action-gradient-second-color) 100%);
+    @include media-breakpoint-only(md) {
+        padding: 70px 0px;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 50px 0px;
+    }
+    .sh_call_action_box{
+        display: flex;justify-content: space-between;align-items: center;
+        @include media-breakpoint-only(md) {
+            padding: 0px;
+        }
+        @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-font-size-mobile);flex-direction: column;justify-content: center;align-items: center;
+        }
+        .sh_call_action_inner {
+            h2.sh_title_text {
+                font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: #fff;text-transform: capitalize;margin-bottom: 0px;
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-section-heading-font-size-tablet);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile);text-align: center;margin-bottom: 15px;
+                }
+                br{
+                    @include media-breakpoint-down(md) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .sh_call_action_button {
+            .btn {
+                position: relative;color: #ffffff;background: #212240;box-shadow: none;border-radius: 5px;width: max-content;display: flex;align-items: center;justify-content: center;outline: none;overflow: hidden;font-size: 18px;padding: 12px 30px;transition: .2s;border: 1px solid #212240;letter-spacing: .01em;cursor: pointer;min-width: auto;                
+                span {
+                    display: flex;align-items: center;
+                    svg {
+                        stroke: #fff;display: inline-block;width: 20px;
+                    }
+                }
+                @include media-breakpoint-down(lg) {
+                    font-size: 16px !important; padding: 12px 18px !important;
+                }
+            }
+        }
+    }
+}
+
+// start related section //
+@mixin sh_related_services_section{
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background: #fff;
+
+    @include media-breakpoint-down(lg) {
+        padding-left: 0;padding-right: 0;padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+
+    .sh_section_heading {
+        width: var(--sh-section-heading-width-desktop);margin: 0 auto;
+
+        @include media-breakpoint-down(lg) {
+            width: var(--sh-section-heading-width-mobile);
+        }
+        h2.sh_heading_title {
+            font-size: var(--sh-section-heading-font-size);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);color: var(--sh-section-heading-font-color);text-align: center;margin-bottom: 50px;text-transform: capitalize;
+            @include media-breakpoint-down(lg) {
+                font-size: var(--sh-section-heading-font-size-tablet);margin-bottom: 0px;
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-section-heading-font-size-mobile);
+            }
+        }
+    }
+    .sh_main_box {
+        text-align: center;width: 100%;
+        @include media-breakpoint-only(md) {
+            margin-top: 30px; 
+        }
+        @include media-breakpoint-down(md) {
+            margin-top: 20px; margin-bottom: 10px;
+        }
+        .sh_icon_box {
+            height: 180px;width: 180px;border-radius: var(--sh-website-common-border-radius);display: flex;justify-content: center;align-items: center;margin: 0px auto;background: var(--sh-section-background-color);margin-bottom: 20px;
+            svg {
+                height: 70px !important;width: 70px !important;
+                .cls-2 {
+                    fill: o-color(o-color-1) !important;
+                }
+                @include media-breakpoint-down(lg) {
+                    height: 60px !important;width: 60px !important;
+                }
+            }
+            @include media-breakpoint-only(md) {
+                height: 140px;width: 150px;
+            }
+            @include media-breakpoint-down(md) {
+                height: 115px;width: 120px;
+            }
+        }
+        .sh_desc {
+            text-decoration: none;font-size: var(--sh-website-heading-title-font-size);line-height: var(--sh-website-heading-title-line-height);font-weight: 600;text-transform: capitalize;
+            @include media-breakpoint-only(md) {
+                font-size: 18px !important;
+            }
+            @include media-breakpoint-down(md) {
+                font-size: 16px !important;
+            }
+            a {
+                color: var(--sh-section-heading-font-color);text-decoration: none;transition: .2s all;
+                &:hover{
+                    color: o-color(o-color-1);  
+                }
+            }
+        }
+    }
+}
+// end related section //
+
+// start why work with us section //
+@mixin sh_why_work_with_us_section{
+    position: relative;padding-top: var(--sh-section-top-padding);padding-bottom: var(--sh-section-bottom-padding);background-color: #fff;
+    @include media-breakpoint-down(lg) {
+        padding-top: var(--sh-section-top-padding-mobile);padding-bottom: var(--sh-section-bottom-padding-mobile);
+    }
+    .sh_why_work_section_main {
+        .sh_section_heading {
+            width: var(--sh-section-heading-width-desktop);margin: 0 auto;margin-bottom: 40px;
+            @include media-breakpoint-down(lg) {
+                width: var(--sh-section-heading-width-mobile);margin-bottom: 20px;
+            }
+            .sh_section_heading_title {
+                font-size: var(--sh-section-heading-font-size);color: var(--sh-section-heading-font-color);font-weight: var(--sh-section-heading-font-weight);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);text-align: center;text-transform: capitalize;
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-section-heading-font-size-tablet);line-height: var(--sh-section-heading-line-height);margin-bottom: var(--sh-section-heading-margin-bottom);
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-section-heading-font-size-mobile);
+                }
+            }
+            .sh_section_heading_text {
+                font-size: var(--sh-website-normal-text-font-size);color: var(--sh-section-heading-sub-title-font-color);font-weight: var(--sh-section-heading-sub-title-font-weight);line-height: var(--sh-section-heading-sub-title-line-height);margin-bottom: 0;text-align: center;
+                @include media-breakpoint-only(md) {
+                    font-size: var(--sh-website-normal-text-font-size-tablet)
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: var(--sh-website-normal-text-font-size-mobile)
+                }
+            }
+        }
+        .sh_inner_box {
+            margin-top: 50px;
+            @include media-breakpoint-down(md) {
+                margin-top: 25px;
+            }      
+            .row {
+                justify-content: center;      
+                .sh_main_work_box {
+                    margin-bottom: 30px;   
+                    @include media-breakpoint-down(md) {
+                        margin-bottom: 20px;
+                    }   
+                    &.sh_mb_1{
+                        @include media-breakpoint-up(md) { 
+                            margin-bottom: 0;
+                        }
+                    }
+                    &.sh_mb_0{
+                        @include media-breakpoint-down(md) { 
+                            margin-bottom: 0;
+                        }
+                    }
+                    .sh_work_box {
+                        display: flex;align-items: center;padding: 20px;box-shadow: 0 5px 70px rgba(38, 42, 76, .1);position: relative;border-radius: 5px;transition: all .80s ease !important;text-transform: capitalize;
+                        @include media-breakpoint-down(lg) {
+                            padding: 15px 10px;
+                        }      
+                        .sh_icon {
+                            margin-right: 15px;      
+                            svg {
+                                width: 45px;stroke: o-color(o-color-1);display: inline-flex;
+                                @include media-breakpoint-down(md) {
+                                    width: 35px;
+                                }
+                            }
+                        }
+                        .sh_svg_icon{
+                            svg{
+                                stroke: none!important;
+                                path{
+                                    fill:o-color(o-color-1)!important;
+                                }
+                            }
+                            
+                        }
+                              
+                        .sh_title_box {
+                            h5 {
+                                color: var(--sh-section-heading-font-color);font-size: 20px;font-weight: 500;margin: 0px;text-transform: capitalize;
+                                @include media-breakpoint-only(md) {
+                                    font-size: 18px;
+                                }
+                                @include media-breakpoint-down(md) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }      
+                        &:hover {
+                            background-color: o-color(o-color-1);      
+                            ::before {
+                                opacity: .4;
+                            }      
+                            svg {
+                                stroke: #fff;
+                            }      
+                            h5 {
+                                color: #fff;
+                            }
+                            path.sh_white{
+                                fill:#fff!important
+                            }
+                            
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+// start why work with us section //
+
+// MOVE TOP BOTTOM MIXNI 
+@mixin move_top_bottom{
+    animation: move_top_bottom 5s ease-in-out infinite;
+    @keyframes move_top_bottom {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+}

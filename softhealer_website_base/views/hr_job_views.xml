@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_softhealer_website_view_hr_job_form_inherit" model="ir.ui.view">
+        <field name="name">hr.job.view.form.inherit</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//div[hasclass("oe_title")]' position="before">
+                <field name="sh_job_image" widget="image" class="oe_avatar"/>
+            </xpath>
+
+            <field name="contract_type_id" position="before">
+                <field name="sh_job_location" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

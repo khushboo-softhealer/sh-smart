@@ -1,0 +1,70 @@
+#sh_terms_condition_banner{
+    @include sh_other_page_banner;
+}
+
+#sh_softhealer_store_terms_condition{
+
+.sh_terms_condition{
+    margin-bottom: 30px;
+    @include media-breakpoint-down(lg){
+       margin-bottom: 20px;
+    }
+    .sh_content_box{
+        margin-top:10px;
+        @include media-breakpoint-down(lg){
+            margin-top:0px;
+        }
+        @include media-breakpoint-down(md){
+            margin-top:0px;
+        }
+        h2.sh_title_heading{font-size: var(--sh-store-section-heading-font-size);font-weight: var(--sh-store-section-heading-font-weight);color: var(--sh-store-section-heading-font-color);margin-bottom: var(--sh-store-section-heading-margin-bottom);text-transform: capitalize; text-align: center;
+        
+            @include media-breakpoint-only(md) {
+                font-size: var(--sh-store-section-heading-font-size-tablet); text-align: left;
+            }
+            @include media-breakpoint-down(md) {
+                font-size: var(--sh-store-section-heading-font-size-mobile);text-align: left;
+            }
+        }
+    h2.sh_sub_heading{
+        font-size:22px;font-weight:600; color:#1e266d; margin-bottom:20px; margin-top:50px;
+        &:first-child{
+            margin-top: 0;
+        }
+        @include media-breakpoint-down(lg){
+            margin-top:30px;margin-bottom:10px;
+        }
+        @include media-breakpoint-down(md){
+            margin-top:20px;
+        }
+    }
+    p.sh_text{
+        font-size:var(--sh-store-normal-text-font-size);font-weight:400;color:#445781;line-height:1.6; margin-bottom:0;
+        @include media-breakpoint-down(lg){
+            font-size:16px;
+        }
+        @include media-breakpoint-down(md){
+            font-size:15px;
+        }
+    }
+    .sh_text{
+        font-size:var(--sh-store-normal-text-font-size);font-weight:400;color:#445781;line-height:1.6; list-style-type:none; display:flex; align-items:baseline;margin-bottom:20px;
+        @include media-breakpoint-down(lg){
+            font-size:16px;
+        }
+        @include media-breakpoint-down(md){
+            font-size:15px;
+        }
+        .sh_icon{
+            font-size:14px;font-weight:400;color:#aeaed5; margin-right: 15px;
+            @include media-breakpoint-down(lg){
+                font-size:12px; margin-right:10px;
+            }
+        }
+        .sh_desc{
+            span{font-size:20px;font-weight: 600;color: #1e266d;margin-bottom: 20px;margin-top: 50px;}
+        }
+    }
+}
+}
+}

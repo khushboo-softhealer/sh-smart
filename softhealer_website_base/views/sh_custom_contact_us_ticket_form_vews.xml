@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="sh_website_form_for_solution_page_form" name="Create Ticket Form">
+        <div id="sh_website_form_for_solution_page_form_sec" t-att-class="'sh_custom_create_ticket_contact_us_form ' + (form_custom_design_class or '')">
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <div class="form-group">
+
+                        <input type="text" class="form-control" placeholder="Your Name.." id="sh_custom_contact_us_form_partner_name" name="sh_custom_contact_us_form_partner_name" />
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Company Name.." id="sh_custom_contact_us_form_company" name="sh_custom_contact_us_form_company" />
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email Address.." class="form-control" id="sh_custom_contact_us_form_email" name="sh_custom_contact_us_form_email" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input id="sh_custom_contact_us_form_contact_no" type="tel" class="form-control rounded-0 w-100" name="sh_custom_contact_us_form_country"/>
+                        <!-- <select class="form-control sh_country_selection input-group-append" id="sh_custom_contact_us_form_country" name="sh_custom_contact_us_form_country">
+                            
+                        </select>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Contact No." id="sh_custom_contact_us_form_contact_no" name="sh_custom_contact_us_form_contact_no" />
+                        </div> -->
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <textarea class="form-control" id="sh_custom_contact_us_form_description" name="sh_custom_contact_us_form_description" rows="2" cols="50" placeholder="Requirements..."/>
+                        <!-- <input type="text" class="form-control" placeholder="Requirements.." id="sh_custom_contact_us_form_description" name="sh_custom_contact_us_form_description" /> -->
+                    </div>
+                    <p class="alert alert-danger" style="margin-top:10px;margin-bottom:0px;display:none;" id="error_message_contact_us"></p>
+                </div>
+            </div>
+
+            <div t-if="is_show_tnc" id="sh_recaptcha_legal_terms" class="mb-2"></div>
+
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <div class="form-group">
+
+                        <button id="sh_custom_create_ticket_contact_us_form" class="btn btn-primary rippler rippler-default" t-att-data-utm_medium="utm_medium" t-att-data-utm_campaign="utm_campaign" t-att-data-utm_source="utm_source">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>

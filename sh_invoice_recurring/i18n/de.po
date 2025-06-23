@@ -1,0 +1,761 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_invoice_recurring
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-28 12:44+0000\n"
+"PO-Revision-Date: 2020-12-28 12:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__sh_bill_recurring_count
+msgid "# of Bills"
+msgstr "Anzahl der Rechnungen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__sh_customer_credit_recurring_count
+msgid "# of Customer Credit Notes"
+msgstr "Anzahl der Kreditnotizen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__sh_invoice_recurring_count
+msgid "# of Invoices"
+msgstr "Anzahl der Rechnungen."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__sh_purchase_receipt_recurring_count
+msgid "# of Purchase Receipts"
+msgstr "Anzahl der Kaufeinnahmen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__sh_sale_receipt_recurring_count
+msgid "# of Sales Receipts"
+msgstr "Anzahl der Verkaufsquittungen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__sh_vendor_credit_recurring_count
+msgid "# of Vendor Credit Notes"
+msgstr "Anzahl der Anbieter-Kreditnotizen"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "<span class=\"text-muted\">(If fixed-term contract)</span>"
+msgstr "<span class = \ "text-gedämpft \"> (falls fester Begriff) </ span>"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__access_warning
+msgid "Access warning"
+msgstr "Zugriffswarnung"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_needaction
+msgid "Action Needed"
+msgstr "Handlungsbedarf"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__active
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__activity_ids
+msgid "Activities"
+msgstr "Aktivitäten"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Aktivitätsausnahmedekoration."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__activity_state
+msgid "Activity State"
+msgstr "Aktivitätszustand"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Aktivitätstyp-Symbol"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Archive"
+msgstr "Archiv"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_attachment_count
+msgid "Attachment Count"
+msgstr "Befestigungszählung"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Bills"
+msgstr "Rechnungen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__campaign_id
+msgid "Campaign"
+msgstr "Kampagne"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__state__cancel
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "Cancelled"
+msgstr "Abgesagt"
+
+#. module: sh_invoice_recurring
+#: code:addons/sh_invoice_recurring/models/invoice_recurring_model.py:0
+#, python-format
+msgid ""
+"Cannot create an invoice of type %(move_type)s with a journal having "
+"%(journal_type)s as type."
+msgstr ""
+
+#. module: sh_invoice_recurring
+#: model:ir.model,name:sh_invoice_recurring.model_res_company
+msgid "Companies"
+msgstr "Unternehmen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__company_id
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__company_id
+msgid "Company"
+msgstr "Gesellschaft"
+
+#. module: sh_invoice_recurring
+#: model:ir.model,name:sh_invoice_recurring.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurationseinstellungen"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Create Order Manually"
+msgstr "Bestellung manuell erstellen"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.actions.act_window,help:sh_invoice_recurring.sh_invoice_recurring_action
+msgid "Create a new invoice recurring order here"
+msgstr "Erstellen Sie hier eine neue Rechnung wiederkehrende Reihenfolge"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__create_uid
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__create_date
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__partner_id
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "Customer"
+msgstr "Kunde"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__type__out_refund
+msgid "Customer Credit Note"
+msgstr "Kundendienstmeldung."
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Customer Credit Notes"
+msgstr "Kundennotizen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__type__out_invoice
+msgid "Customer Invoice"
+msgstr "Kundenrechnung"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__access_url
+msgid "Customer Portal URL"
+msgstr "Kundenportal-URL."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__signed_on
+msgid "Date of the signature."
+msgstr "Datum der Unterschrift."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__recurring_interval_unit__days
+msgid "Days"
+msgstr "Tage"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__name
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__discount
+msgid "Discount (%)"
+msgstr "Rabatt (%)"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_account_move__display_name
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__display_name
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__display_name
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_res_company__display_name
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "End Date"
+msgstr "Endtermin"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__end_date
+msgid "End date"
+msgstr "Endtermin"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__state__done
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "Expired"
+msgstr "Abgelaufen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_follower_ids
+msgid "Followers"
+msgstr "Anhänger"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Anhänger (Kanäle)"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Anhänger (Partner)"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Schriftart fantastisches Symbol z. FA-Aufgaben"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "Group By"
+msgstr "Gruppiere nach"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_account_move__id
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__id
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__id
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_res_company__id
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_res_config_settings__id
+msgid "ID"
+msgstr "ICH WÜRDE"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__activity_exception_icon
+msgid "Icon"
+msgstr "Symbol"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Symbol, um eine Ausnahmeaktivität anzuzeigen."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__message_needaction
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__message_unread
+msgid "If check, new messages require your attention."
+msgstr "Wenn Sie überprüfen, erfordern neue Nachrichten Ihre Aufmerksamkeit."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__message_has_error
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__message_has_sms_error
+msgid "If check, some messages have a delivery error."
+msgstr "Wenn Sie überprüfen, haben einige Nachrichten einen Lieferfehler."
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "Inactive"
+msgstr "Inaktiv"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Internal Notes"
+msgstr "Interne Notizen"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Internal note..."
+msgstr "Interne Note ..."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__recurring_interval
+msgid "Interval"
+msgstr "Intervall"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__recurring_interval_unit
+msgid "Interval Unit"
+msgstr "Intervalleinheit"
+
+#. module: sh_invoice_recurring
+#: code:addons/sh_invoice_recurring/models/invoice_recurring_model.py:0
+#, python-format
+msgid "Interval must be positive."
+msgstr "Intervall muss positiv sein."
+
+#. module: sh_invoice_recurring
+#: model:ir.model,name:sh_invoice_recurring.model_invoice_recurring
+msgid "Invoice Order Recurring"
+msgstr "Rechnungsauftrag wiederkehrend"
+
+#. module: sh_invoice_recurring
+#: model:ir.model,name:sh_invoice_recurring.model_sh_invoice_recurring_line
+msgid "Invoice Recurring Line"
+msgstr "Rechnungszeile in Rechnung"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_res_company__sh_invoice_online_signature
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_res_config_settings__sh_invoice_online_signature
+msgid "Invoice Recurring Online Signature"
+msgstr "Rechnung wiederkehrende Online-Unterschrift"
+
+#. module: sh_invoice_recurring
+#: model:ir.actions.act_window,name:sh_invoice_recurring.sh_invoice_recurring_action
+msgid "Invoice Recurring Order"
+msgstr "Rechnungsauftrag"
+
+#. module: sh_invoice_recurring
+#: model:ir.actions.server,name:sh_invoice_recurring.sh_invoice_recurring_cron_ir_actions_server
+#: model:ir.cron,cron_name:sh_invoice_recurring.sh_invoice_recurring_cron
+#: model:ir.cron,name:sh_invoice_recurring.sh_invoice_recurring_cron
+msgid "Invoice Recurring Order Cron"
+msgstr "Rechnungsauftrag umkehrende Ordnung Cron"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__name
+msgid "Invoice Recurring Reference"
+msgstr "Rechnungswechselreferenz"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_config_setting_view
+msgid "Invoice Recurring Signature Configuration"
+msgstr "Rechnungsabschnittskonfiguration in Rechnung"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Invoices"
+msgstr "Rechnungen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_is_follower
+msgid "Is Follower"
+msgstr "Ist Anhänger"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__journal_id
+msgid "Journal"
+msgstr "Tagebuch"
+
+#. module: sh_invoice_recurring
+#: model:ir.model,name:sh_invoice_recurring.model_account_move
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__type__entry
+msgid "Journal Entry"
+msgstr "Tagebucheintrag"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_account_move____last_update
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring____last_update
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line____last_update
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_res_company____last_update
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__write_uid
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__write_date
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__last_generated_date
+msgid "Last date"
+msgstr "Letztes Datum"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Hauptanhang"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__medium_id
+msgid "Medium"
+msgstr "Mittel"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_has_error
+msgid "Message Delivery error"
+msgstr "Fehler beim Zustellungsfehler"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_ids
+msgid "Messages"
+msgstr "Mitteilungen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__recurring_interval_unit__months
+msgid "Months"
+msgstr "Monate"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__signed_by
+msgid "Name of the person that signed the SO."
+msgstr "Name der Person, die das so unterzeichnet hat."
+
+#. module: sh_invoice_recurring
+#: code:addons/sh_invoice_recurring/models/invoice_recurring_model.py:0
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__state__draft
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+#, python-format
+msgid "New"
+msgstr "Neu"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Nächste Aktivitätsfrist."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__activity_summary
+msgid "Next Activity Summary"
+msgstr "Nächste Aktivitätsübersicht."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__activity_type_id
+msgid "Next Activity Type"
+msgstr "Nächste Aktivitätstyp."
+
+#. module: sh_invoice_recurring
+#: code:addons/sh_invoice_recurring/models/invoice_recurring_model.py:0
+#, python-format
+msgid ""
+"No journal could be found in company %(company_name)s for any of those "
+"types: %(journal_types)s"
+msgstr ""
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__note
+msgid "Note"
+msgstr "Notiz"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Anzahl der Aktionen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_has_error_counter
+msgid "Number of errors"
+msgstr "Anzahl der Fehler."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Anzahl der Nachrichten, die eine Aktion erfordert"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Anzahl der Nachrichten mit dem Lieferfehler"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Anzahl ungelesener Nachrichten"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__online_signature
+msgid "Online Signature"
+msgstr "Online-Unterschrift"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__order_line
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Order Lines"
+msgstr "Bestelllinien"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__invoice_recurring_id
+msgid "Order Reference"
+msgstr "Bestellnummer"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Other Info"
+msgstr "Andere Information"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__access_url
+msgid "Portal Access URL"
+msgstr "Portalzugriff URL."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__product_id
+msgid "Product"
+msgstr "Produkt"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__type__in_receipt
+msgid "Purchase Receipt"
+msgstr "Kaufbeleg"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Purchase Receipts"
+msgstr "Einkaufsquitt kaufen."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__quantity
+msgid "Quantity"
+msgstr "Menge"
+
+#. module: sh_invoice_recurring
+#: model:ir.ui.menu,name:sh_invoice_recurring.sh_invoice_recurring_order_menu
+msgid "Recurring Invoices"
+msgstr "Wiederkehrende Rechnungen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_account_bank_statement_line__sh_invoice_recurring_order_id
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_account_move__sh_invoice_recurring_order_id
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_account_payment__sh_invoice_recurring_order_id
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "Recurring Order"
+msgstr "Wiederkehrende Reihenfolge"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__activity_user_id
+msgid "Responsible User"
+msgstr "Verantwortungsbewusster Benutzer"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__state__confirm
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "Running"
+msgstr "Laufen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS-Lieferfehler."
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Sale Receipts"
+msgstr "Verkaufsquittungen."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__type__out_receipt
+msgid "Sales Receipt"
+msgstr "Quittung"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "Search recurring Order"
+msgstr "Wiederkehrende Reihenfolge suchen."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__access_token
+msgid "Security Token"
+msgstr "Sicherheitstoken"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__signature
+msgid "Signature"
+msgstr "Unterschrift"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Signature Information"
+msgstr "Unterschriftinformationen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__signature
+msgid "Signature received through the portal."
+msgstr "Unterschrift durch das Portal erhalten."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__signed_by
+msgid "Signed By"
+msgstr "Unterzeichnet von"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__signed_on
+msgid "Signed On"
+msgstr "Angemeldet"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__source_id
+msgid "Source"
+msgstr "Quelle"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "Start Date"
+msgstr "Startdatum"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__start_date
+msgid "Start date"
+msgstr "Startdatum"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__state
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "Status"
+msgstr "Status"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__stop_recurring_interval_unit
+msgid "Stop Interval Unit"
+msgstr "Intervalleinheit stoppen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__stop_recurring_interval
+msgid "Stop after"
+msgstr "Stoppt danach."
+
+#. module: sh_invoice_recurring
+#: code:addons/sh_invoice_recurring/models/invoice_recurring_model.py:0
+#, python-format
+msgid "Stop after must be positive."
+msgstr "Stoppen Sie, nachdem Sie positiv sein müssen."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr "Dies ist die Lieferart, z. Postkarte, E-Mail oder Banner Anzeige"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__title
+msgid "Title"
+msgstr "Titel"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__state__pending
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_search_view
+msgid "To Renew"
+msgstr "Erneuern"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__type
+msgid "Type"
+msgstr "Typ"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Art der Ausnahmeaktivität auf Datensatz."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring_line__price_unit
+msgid "Unit Price"
+msgstr "Stückpreis"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_unread
+msgid "Unread Messages"
+msgstr "ungelesene Nachrichten"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Ungelesene Nachrichtenzähler"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__type__in_invoice
+msgid "Vendor Bill"
+msgstr "Lieferantenrechnung"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__type__in_refund
+msgid "Vendor Credit Note"
+msgstr "Anbieter Kreditnotiz."
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "Vendor Credit Notes"
+msgstr "Lieferanten Kreditnotizen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,field_description:sh_invoice_recurring.field_sh_invoice_recurring__website_message_ids
+msgid "Website Messages"
+msgstr "Website-Nachrichten"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields,help:sh_invoice_recurring.field_sh_invoice_recurring__website_message_ids
+msgid "Website communication history"
+msgstr "Website-Kommunikationsverlauf."
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__recurring_interval_unit__weeks
+msgid "Weeks"
+msgstr "Wochen"
+
+#. module: sh_invoice_recurring
+#: model:ir.model.fields.selection,name:sh_invoice_recurring.selection__invoice_recurring__recurring_interval_unit__years
+msgid "Years"
+msgstr "Jahre"
+
+#. module: sh_invoice_recurring
+#: model_terms:ir.ui.view,arch_db:sh_invoice_recurring.sh_invoice_recurring_form_view
+msgid "invoice Recurring Order"
+msgstr "Rechnungsauftrag"
+
+#. module: sh_invoice_recurring
+#: code:addons/sh_invoice_recurring/models/invoice_recurring_model.py:0
+#, python-format
+msgid "start date must be less than end date."
+msgstr "Startdatum muss weniger als Enddatum sein."

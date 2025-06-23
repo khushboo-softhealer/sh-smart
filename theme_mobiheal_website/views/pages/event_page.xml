@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- HOME PAGE 2 -->
+  <template id="theme_mobiheal_website_event_tmpl" name="Mobiheal Events">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty">
+          <section class="mb_eventheal_banner o_colored_level" data-snippet="mb_eventheal_tmpl"
+            data-name="EventHeal" style="background-image: none;">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 o_colored_level">
+                  <div class="left_title">
+                    <h1 class="o_default_snippet_text">Explore The World Together</h1>
+                  </div>
+                </div>
+                <div class="col-md-6 o_colored_level">
+                  <div class="right_img">
+                    <img src="/theme_mobiheal_website/static/src/img/event/gif1.gif" alt="Event Management In Mobile" loading="lazy"
+                      data-original-title="" title="" aria-describedby="tooltip106905" style="" />
+                  </div>
+                </div>
+              </div>
+              <div class="mb_tab_box">
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Scan
+                      Ticket</a>
+                    <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Events List</a>
+                    <a class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Attendees list</a>
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <h3 class="o_default_snippet_text">Scan Ticket</h3>
+                      <p class="o_default_snippet_text">Easy to scan event tickets from your mobile for scanning tickets, you do not need any additional scanning device. Just tap on 'scan' and scan the ticket.</p>
+                      <div class="mb_btn_group">
+                        <a href="https://play.google.com/store/apps/details?id=com.MobiHeal.EvenHeal.evenheal" target="_blank">
+                        <div class="mb_and_btn">
+                          <span class="fa fa-android" />
+                          <label for="" class="o_default_snippet_text">PlayStore</label>
+                        </div>
+                      </a>
+                     
+                        <div class="mb_ios_btn">
+                          <span class="fa fa-apple" />
+                          <label for="" class="o_default_snippet_text">AppStore</label>
+                        </div>
+                      
+                      </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <h3 class="o_default_snippet_text">Events List</h3>
+                      <p class="o_default_snippet_text">Easy to check attendees names and some
+                        informations in attendees list. Day wise attendees list. In list you find
+                        attendees name and contact details, so you can followup them to attend the
+                        events or you can easily notify them.</p>
+                      <div class="mb_btn_group">
+                        <a href="https://play.google.com/store/apps/details?id=com.MobiHeal.EvenHeal.evenheal" target="_blank" >
+                        <div class="mb_and_btn">
+                          <span class="fa fa-android" />
+                          <label for="" class="o_default_snippet_text">PlayStore</label>
+                        </div>
+                        </a>
+                        <a href="#">
+                        <div class="mb_ios_btn">
+                          <span class="fa fa-apple" />
+                          <label for="" class="o_default_snippet_text">AppStore</label>
+                        </div>
+                        </a>
+                      </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <h3 class="o_default_snippet_text">Attendees list</h3>
+                      <p class="o_default_snippet_text">Here eventheal user can see the list of events
+                        which are assigned to them. They are see the assigned events list with
+                        details. </p>
+                      <div class="mb_btn_group">
+                        <a href="https://play.google.com/store/apps/details?id=com.MobiHeal.EvenHeal.evenheal" target="_blank">
+                        <div class="mb_and_btn">
+                          <span class="fa fa-android" />
+                          <label for="" class="o_default_snippet_text">PlayStore</label>
+                        </div>
+                        </a>
+                        <a href="#">
+                        <div class="mb_ios_btn">
+                          <span class="fa fa-apple" />
+                          <label for="" class="o_default_snippet_text">AppStore</label>
+                        </div>
+                        </a>
+                      </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </section>
+
+          <!--mb_order_booker_services-Start-->
+          <section class="mb_event_services o_colored_level oe_img_bg o_bg_img_center"
+          data-snippet="mb_event_services_tmpl" data-name="Order Services"
+          style="background-image: url(&quot;/theme_mobiheal_website/static/src/img/bg.png&quot;);">
+            <div class="container">
+              <h2 class="o_default_snippet_text">We take step wise for your every platform.</h2>
+              <div class="mb_main_row">
+                <div class="row" style="justify-content: center;">
+                  <div class="col-lg-4 col-md-6 col-sm-6 col-12 o_colored_level mb-4">
+                    <div class="mb_dman_box h-100">
+                      <div class="mb_icon_box">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                          viewbox="0 0 800 800">
+                          <defs>
+                            <style class="o_default_snippet_text">
+                              .cls-1{fill:none;}.cls-2{fill:#020202;}</style>
+                          </defs>
+                          <title class="o_default_snippet_text">Event List</title>
+                          <rect class="cls-1" width="800" height="800" />
+                          <path class="cls-2"
+                            d="M779.48,148.87c-.06-34.85-21-59.16-55.34-64.15-6-.88-8-3.14-8-9,.07-8.28-.23-16.6-3.61-24.45a50.78,50.78,0,0,0-56.08-30c-23.93,4.55-41.36,24.67-40.76,49.44.28,11.45-3.62,13.84-14,13.36-17-.8-34-.72-51,0-9,.37-11.19-2.4-11.22-11.26-.09-24.11-14-43.21-34.78-49.86-33.53-10.73-66.63,13.44-66.65,49.4,0,9.44-2.64,12.11-11.88,11.73-17.36-.72-34.8-.71-52.16,0-9.27.37-12.28-2.27-12-11.82.61-20.78-8.92-36.66-27.34-46.2-34.19-17.72-72.46,6.41-74,46.87-.33,8.83-2.35,11.6-11.3,11.16-15.37-.76-30.81-.21-46.23-.21-17.43,0-17.43,0-18.48-17a49.58,49.58,0,0,0-47.08-46.16C111,19.44,86.79,37.71,85.1,63.06c-.95,14.25-3.5,20.68-19.39,24.12-28.95,6.28-45.23,32-45.23,64.26q-.07,278.16,0,556.33c0,46.71,25.64,72.13,72.73,72.13H400.3q154.74,0,309.48,0c44,0,69.73-25.82,69.74-70q0-169,0-338.06Q779.52,260.38,779.48,148.87ZM641.22,67.35c1.36-14.65,13.48-22.38,27.88-21,12.5,1.21,21.46,11.12,21.89,25.11.39,12.62.08,25.26.08,37.89,0,12.23.3,24.48-.07,36.7-.45,14.72-10.42,25.45-23.72,26.29-12.66.8-25.07-8.26-26.18-22.31A482.75,482.75,0,0,1,641.22,67.35ZM463.94,70.29c.24-14.52,10.9-24.17,25.1-24.09s24.16,9.89,24.53,24.65c.32,13,.06,26,.07,39,0,12.23.22,24.46-.06,36.67-.34,14.92-11.36,26-25.1,25.82a25.17,25.17,0,0,1-24.57-25.19Q463.34,108.75,463.94,70.29ZM286.48,72.42c.22-16.19,10.6-26.38,25.64-26.2,14.51.18,23.83,9.87,24.35,26.07.39,12.21.08,24.44.09,36.66,0,11.83.25,23.67-.05,35.49-.44,17.23-10.76,28.35-25.43,27.93C297,172,286.62,160.6,286.45,144.58,286.21,120.53,286.15,96.47,286.48,72.42Zm-176.9-.93c.5-15.1,10.13-24.88,24.09-25.26,14.11-.39,25.49,8.65,26,23.4.93,26,.86,52.09.06,78.1a25.24,25.24,0,0,1-25.4,24.64c-13.84-.18-24-11-24.86-26.31,0-.78,0-1.57,0-2.36V108.18h0C109.5,96,109.17,83.71,109.58,71.49ZM46.08,210.17c1-21.7.1-43.48.4-65.22C46.72,128,60,113,76.3,109.83c5.71-1.11,8,.08,7.85,6.2-.27,11.07-.37,22.16.12,33.21,1.24,27.88,23.59,48.71,51.28,48.18,27.3-.52,48.27-21.22,49.22-48.9.37-10.66.31-21.35.08-32-.13-5.6,1.93-7.65,7.6-7.58,20.16.23,40.32.35,60.47-.06,6.87-.14,7.55,3,7.63,8.58.19,13-1.25,26.06,1.5,39,5.66,26.73,28,43.18,55.46,40.51,25.17-2.44,44.23-23.58,44.7-49.75.18-9.88.25-19.77,0-29.65-.16-5.64.91-8.79,7.66-8.67,20.15.33,40.31.26,60.47,0,5.52-.07,7.82,1.54,7.6,7.35-.36,9.48-.16,19-.08,28.47.24,30,22.13,52.63,50.85,52.71,28.25.08,50-21.78,51-51.42q.48-14.82,0-29.65c-.2-5.74,2-7.52,7.54-7.46,20.16.24,40.32.32,60.47,0,6.61-.12,8,2.67,7.78,8.47-.32,10.27-.22,20.56,0,30.84.53,27.12,21.86,48.42,49.11,49.2,26.9.78,48.89-18.5,51.05-45.45.91-11.4.79-22.91.6-34.36-.11-6.8,1.64-9.3,8.94-7.54,15.13,3.65,28,16.92,28.4,32.47.7,24.49.23,49,.46,73.53,0,5.16-1.87,6.93-7,6.74-8.29-.32-16.6-.08-24.9-.08H399.62c-113.44,0-226.87-.14-340.31.23C49.27,223,45.58,221.12,46.08,210.17Zm665.79,544.2q-311.83-1-623.69,0c-22.31.08-42.39-17.21-42.24-43.06.88-150.24.59-300.49.12-450.74,0-11.32,3.78-12.49,13.37-12.46q170.74.45,341.49.19,170.74,0,341.49-.21c9.12,0,11.76,2.07,11.74,11.55-.32,150.65-.59,301.29.12,451.93C754.4,737.77,735.09,754.44,711.87,754.37ZM223.08,603.16c-.39-15.95-9.42-25.45-25.05-25.87-25.62-.7-51.29-.73-76.9.09-15.36.49-24.34,10.8-24.53,26.33q-.45,36.69,0,73.4c.23,16.33,10.42,26.24,26.85,26.64,11.82.3,23.66.06,35.5.07,12.23,0,24.46.18,36.69,0,16.79-.31,27-9.35,27.41-26C223.72,652.89,223.68,628,223.08,603.16Zm-32.74,75.16c-10.23-.32-20.48-.09-30.72-.09s-20.49-.19-30.73.08c-5.09.13-6.93-1.7-6.88-6.84q.3-30.74,0-61.48c-.06-5.58,1.76-7.62,7.45-7.55,20.48.24,41,.19,61.45,0,5.06,0,7,1.78,6.94,6.89-.18,20.49-.22,41,0,61.48C197.91,676.46,196,678.5,190.34,678.32Zm32.5-380.63c-.45-14.86-9.4-23.35-24.28-23.72q-38.43-.95-76.89,0c-15.94.37-24.8,10.47-25.12,26.78-.23,11.83,0,23.68,0,35.51,0,12.24-.21,24.47.06,36.7.36,16.45,10.2,27,26.35,27.23q37.28.63,74.55,0c14.67-.27,24.89-9.58,25.35-24.34Q224.07,336.78,222.84,297.69Zm-25,68.38c.08,5.86-1.26,8.54-7.84,8.42-20.15-.37-40.31-.29-60.46,0-5.55.07-7.65-1.64-7.57-7.39.26-20.16.32-40.33,0-60.48-.12-6.55,2.51-8.07,8.41-7.86,9.86.35,19.75.1,29.63.1s19.77.28,29.63-.11c6.11-.23,8.35,1.74,8.25,8.07C197.55,326.54,197.6,346.31,197.86,366.07Zm25,83.72c-.49-15.64-10.4-23.86-26.41-24.18-11.84-.23-23.68,0-35.52,0-13,0-26-.27-39.06.09-15.26.44-25,10.05-25.26,25.45q-.59,37.29,0,74.61c.25,16.09,11,26.26,27.18,26.4q36.1.33,72.21,0c15.22-.12,26.24-9.24,26.76-24.22C223.67,501.9,223.68,475.81,222.88,449.79Zm-34,76.58c-19.33-.33-38.69-.5-58,.06-7.84.23-9.26-2.91-8.92-9.7.47-9.45.11-19,.11-28.42,0-9.87.25-19.75-.09-29.61-.19-5.77,1.07-8.56,7.71-8.44q30.2.57,60.39,0c6.63-.12,7.84,2.65,7.76,8.44-.25,19.74-.38,39.49.06,59.22C198.06,525,195.3,526.49,188.9,526.37Zm250,.1q-72.27,0-144.54,0c-3.94,0-8,.14-11.77-.78-5.59-1.37-8.38-5.59-8.57-11.36s2.28-10.14,7.77-11.93a34.42,34.42,0,0,1,10.5-1.27q145.73-.11,291.45,0c3.52,0,7.25,0,10.51,1.15,5.92,2,8.61,6.74,8,13-.58,5.64-3.54,9.75-9.34,10.73a72.58,72.58,0,0,1-11.81.52Q510,526.5,438.89,526.47Zm-1.38-151.9q-71.65,0-143.31,0c-3.55,0-7.22.36-10.62-.4-6.69-1.49-9.91-6.27-9.52-13,.35-6.24,3.62-10.38,10.2-10.95,3.93-.33,7.89-.34,11.83-.34q142.13,0,284.25,0c3.16,0,6.31.06,9.47.1,8.22.13,12.71,4.53,12.38,12.52-.32,7.8-4.9,12.16-13.08,12.09-4.74-.05-9.48,0-14.21,0Zm.68,303.88q-73.44,0-146.89,0c-6.6,0-12.79-.39-16.15-7.23-3.64-7.4.23-15.59,8.43-17.29a58.49,58.49,0,0,1,11.78-.72q142.75-.06,285.51,0c2.37,0,4.74,0,7.1.06,8.09.18,14.35,3.22,14.27,12.19-.08,9.14-5.74,13-14.78,13Q512.84,678.34,438.19,678.45ZM393.7,476.33c-34,0-67.91-.07-101.86.05-9.18,0-16.88-1.82-17.79-12.69-.73-8.72,5.76-13.45,18.17-13.46q101.86-.08,203.73,0c9,0,17,1.58,17.72,12.7.58,8.9-5.66,13.4-18.11,13.41Q444.62,476.39,393.7,476.33Zm1.35-177.73q50.31,0,100.61,0c12.73,0,18.74,4.38,18,13.33-.91,11.18-9,12.31-17.95,12.3q-101.8-.11-203.59-.06c-12.62,0-18.82-4.49-18.07-13.33.94-11.13,9-12.32,18-12.3C326.4,298.65,360.72,298.6,395.05,298.6Zm-1.76,329.34c-33.94,0-67.87-.09-101.8.06-9.27,0-17.3-1.89-17.35-12.87-.05-11.16,8.37-12.83,17.4-12.83q102.39,0,204.78,0c9.06,0,17.38,1.61,17.27,12.88-.1,11.06-8.07,12.86-17.32,12.82C461.94,627.85,427.61,627.94,393.29,627.94ZM621.84,476.33c-21.71,0-43.41-.05-65.11,0-9.32,0-17-2.44-16.89-13.4.08-10.4,7.75-12.72,16.39-12.73q65.7-.09,131.39,0c8.84,0,16.06,3.07,15.72,13.38-.34,10.11-7.46,12.77-16.4,12.73C665.24,476.26,643.54,476.33,621.84,476.33Zm-.08,151.61c-21.68,0-43.37-.08-65.06,0-9.29,0-17-2.08-16.87-13.24.14-10.59,7.93-12.42,16.51-12.42q65.07,0,130.13,0c9.15,0,17.19,2,16.86,13.26-.29,10.26-7.6,12.5-16.5,12.43C665.14,627.83,643.45,627.94,621.76,627.94Zm-1-303.73c-21.29,0-42.58,0-63.87,0-9.17,0-17.21-1.84-17-13.08s8.55-12.58,17.52-12.57q64.47.06,128.93,0c9.22,0,17.24,1.92,17,13.07s-8.45,12.67-17.54,12.62C664.11,324.13,642.42,324.21,620.74,324.21Z"
+                            transform="translate(0)" />
+                        </svg>
+                      </div>
+                      <h3>
+                        Android &amp;amp; IOS
+                      </h3>
+                      <p class="o_default_snippet_text">Ticket scanner personnel can see the list of
+                        assigned events</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6 col-12 o_colored_level mb-4">
+                    <div class="mb_dman_box h-100">
+                      <div class="mb_icon_box box_1">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 800 800">
+                          <defs>
+                            <style class="o_default_snippet_text">
+                                .cls-1{fill:none;}.cls-2{fill:#020202;}</style>
+                          </defs>
+                          <title class="o_default_snippet_text">attendees list</title>
+                          <rect class="cls-1" width="800" height="800"></rect>
+                          <path class="cls-2" d="M316.89,738.36c-9.39-28.13-27.34-49.19-53.73-62.72-6.31-3.24-8-5.09-2.8-11.77C281.12,637,278,601.51,253.8,579.71a61.75,61.75,0,0,0-82.8-.06c-24.1,21.7-27.26,57.44-6.58,84.17,5,6.52,3.9,8.47-2.64,11.75C136.42,688.26,119,708.41,109,734.78c-10.71,28.38,4.78,50.5,35.2,50.79,22.7.22,45.41,0,68.12,0v0c23.9,0,47.81.49,71.69-.13C310.34,784.76,325.18,763.18,316.89,738.36ZM213.41,588a37.64,37.64,0,0,1,36.67,37.84c-.29,20.21-17.38,37.26-37.49,37.39-20.67.14-37.82-17.27-37.62-38.19A37.22,37.22,0,0,1,213.41,588Zm66.74,173.37c-22.68.22-45.36.06-68,.06-21.89,0-43.77.09-65.66,0-16.38-.09-19.85-5.43-13.81-20.81,12.81-32.6,45.35-53.69,81.84-53,35.53.63,66.92,22.91,78.64,55.83C297.57,755.92,293.92,761.26,280.15,761.39Zm36.73-566.78C307.63,166.89,290,146,264.16,132.43c-7.17-3.76-8.86-5.91-3.17-13.25,20.29-26.13,16.83-61.18-7.24-83.12a61.47,61.47,0,0,0-82.71,0c-24,21.9-27.49,57.19-7.24,83.11,5.69,7.28,4.23,9.44-3.06,13.24-25.89,13.46-43.72,34.3-52.72,62.1-8.32,25.67,7,46.84,33.82,47.19,23.1.3,46.21.06,69.32,0,24.31,0,48.61.31,72.91-.1C309.93,241.26,325.12,219.3,316.88,194.61ZM212.61,44.24a37.52,37.52,0,1,1-.43,75,37.52,37.52,0,0,1,.43-75Zm69,173.32c-23.08.24-46.17.07-69.26.07-22.69,0-45.38.13-68.06,0-13.62-.11-17-5.21-12.45-18.11,11.74-33.39,44.87-56.18,81.16-55.85s69.24,23.57,80.49,57C297.28,211.83,293.6,217.44,281.62,217.56Zm34.45,246.32c-9.65-26.53-27.05-46.74-52.11-59.7-7.62-3.94-8.5-6-2.9-13.15,20.17-25.64,16.65-61.28-7.26-83.09a61.61,61.61,0,0,0-82.69-.07c-24.3,22.14-27.64,58.2-6.71,84,6,7.39,3.2,8.85-3.16,12.12-25.15,12.95-42.66,33.06-52.41,59.49-10.29,27.89,5.07,49.76,34.69,50,22.69.22,45.37,0,68.06,0,23.48,0,47,.22,70.44-.06C311,513.13,326,491.26,316.07,463.88ZM211.72,316.28a37.46,37.46,0,0,1,38.35,37.26c.05,20.66-17.58,38.08-38.19,37.74A37.63,37.63,0,0,1,175,353.71,36.94,36.94,0,0,1,211.72,316.28Zm68.48,173c-22.68.16-45.36,0-68,0-22.29,0-44.57.1-66.86,0-15.15-.09-18.38-5-13-19.39,12.21-32.74,44.88-54.67,81-54.33s68,22.65,79.88,55.89C297.57,484,294,489.22,280.2,489.32ZM543.6,106.61q-66.27,0-132.55,0a72.17,72.17,0,0,1-10.72-.38c-5.84-.87-9.13-4.59-9.64-10.47s2.36-10.31,7.79-12c4.07-1.25,8.62-1.27,13-1.28q132.56-.09,265.11,0h4.77c8.55,0,15.69,3.06,15.62,12.51-.08,9.7-7.48,11.75-16,11.72C635.16,106.54,589.38,106.6,543.6,106.61Zm1.27,519.89q65.65,0,131.33,0a69.49,69.49,0,0,1,10.71.47c6.33,1,10,5.15,10.15,11.41s-3.82,10.36-9.89,11.73a43.55,43.55,0,0,1-9.5.54q-133.71,0-267.43,0c-3.94,0-8.08,0-11.77-1.16-5.51-1.72-8.26-6.11-7.78-12,.42-5.34,3.42-9,8.6-10.15a57.16,57.16,0,0,1,11.86-.81Q478,626.47,544.87,626.5Zm0-247.77q-66.27,0-132.54,0a91.32,91.32,0,0,1-10.73-.32c-6.88-.83-11-4.8-10.89-11.86s4.41-10.8,11.15-11.72a61.07,61.07,0,0,1,8.35-.25H677.68c2.39,0,4.79-.08,7.16.14,7.34.7,12.29,4.67,12.19,12.11s-5,11.56-12.46,11.74c-11.53.27-23.08.17-34.62.17Q597.41,378.75,544.87,378.73ZM489.06,451c-27,0-54.06,0-81.1,0-8.57,0-16.86-1.11-17.13-11.84s7.83-12.37,16.51-12.37q82.89,0,165.78,0c8.46,0,16,2.22,16.1,11.77.11,10.29-7.76,12.52-16.68,12.48C544.72,451,516.89,451,489.06,451ZM489.69,699c27.44,0,54.87.11,82.3-.06,8.7,0,17.08,1.11,17.17,11.68.1,10.18-7.81,12.59-16.69,12.59q-82.3-.07-164.6,0c-8.59,0-16.8-1.5-17.06-12.1-.27-10.91,7.86-12.16,16.58-12.13C434.82,699,462.26,699,489.69,699Zm.66-544.08q41.85,0,83.69,0c5.93,0,11.05,1.39,14.06,7.11,2.33,4.43,1.43,8.45-1.39,12.28-2.92,4-7.22,4.75-11.69,4.76q-84.9.06-169.78,0c-8.06,0-14.58-2.84-14.47-12.12s6.65-12,14.69-12C433.76,154.84,462.05,154.88,490.35,154.88Z" transform="translate(0)"></path>
+                        </svg>
+                      </div>
+                      <h3>
+                       Attendees list
+                      </h3>
+                      <p class="o_default_snippet_text">The person who scan the ticket, can be able to
+                        see the list of attendees of each
+                        events.</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6 col-12 o_colored_level mb-4">
+                    <div class="mb_dman_box h-100">
+                      <div class="mb_icon_box box_2">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                          viewbox="0 0 354.53 413.71">
+                          <title class="o_default_snippet_text">Android &amp; IOS</title>
+                          <path
+                            d="M247.27,198.74q0,60.82,0,121.66c0,19.84-12.3,33.79-30.95,34q-56.09.51-112.17,0C85.38,354.21,72.77,340,72.76,320q0-121,0-242c0-20.44,12.68-34.53,31.8-34.65q55.45-.36,110.92,0c19.42.11,31.78,13.79,31.79,34.45Q247.29,138.26,247.27,198.74ZM115.16,55.27c-4.72,0-8.65-.17-12.55,0C91.55,55.91,84,64.1,84,75.86q-.09,123,0,246c0,11.75,7.6,20.41,18.66,20.48q57.33.39,114.67,0c11.44-.07,18.81-8.59,18.95-20.8.1-8.42,0-16.85,0-25.27q0-109.37,0-218.74c0-10.92-5-19.47-13.35-21.33-5.54-1.24-11.39-.84-17.45-1.2-.18,3-.35,5-.4,6.91-.28,10.91-6.5,17.9-16.77,18q-28.35.3-56.71,0c-9.86-.13-16.16-7.28-16.42-17.76C115.12,60.21,115.16,58.25,115.16,55.27Zm11.62,0c-1.34,11.76-.27,13.14,9.56,13.15q24.21,0,48.43,0c1.85,0,4.07.36,5.36.22,5.33-.58,4.5-7.78,4.2-12.52,0-.68-2.17-.68-3.37-.69C169.68,55.19,148.38,55.25,126.78,55.25Zm65,271.23c3.57,0,6.88-.56,7-5.42.14-5.19-3.17-6.05-7.09-6.05q-31.42,0-62.85,0c-3.83,0-7.37.59-7.35,5.78s3.64,5.7,7.43,5.7q15.24,0,30.48,0ZM427.21,170.86c0-19.32-14.88-34.07-34.28-34.12q-53-.13-106,0a35.43,35.43,0,0,0-10.77,1.68c-15.05,4.94-23.42,17.27-23.45,34.47q-.1,61.74,0,123.48,0,60.49,0,121c0,2.33,0,4.67.17,7,1.24,18.15,15,32,33.15,32.19q54,.54,108,0c18.86-.2,33.19-15.39,33.2-34.25Q427.31,296.58,427.21,170.86ZM416.28,422.27c0,11.7-5.15,19.34-14.84,21.89a33.26,33.26,0,0,1-8.29.85q-53.23.08-106.48,0c-14.93,0-23-7.92-23-22.37q0-126,0-251.94c0-14.66,8.2-22.6,23.4-22.62q53,0,106,0c15.16,0,23.25,7.89,23.27,22.73q.08,62.73,0,125.46Q416.3,359.29,416.28,422.27Zm-76-262.52c6.82,0,13.64-.06,20.46,0,4.83,0,8.09,2.78,8.37,6.77s-3.13,7.74-8,7.8q-21.21.27-42.41,0c-5.19-.08-7.9-3.28-7.64-7.89.22-4.15,3.19-6.62,8.26-6.67C326.34,159.7,333.33,159.75,340.31,159.75Zm14,260.48a14.37,14.37,0,0,1-14.71,14.35A14.86,14.86,0,0,1,325.38,420a14.31,14.31,0,0,1,14.68-14.35C348.44,405.71,354.41,411.79,354.33,420.23Z"
+                            transform="translate(-72.74 -43.15)" />
+                        </svg>
+                      </div>
+                      <h3>
+                       Android &amp; IOS
+                      </h3>
+                      <p class="o_default_snippet_text">This app available on both platforms </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6 col-12 o_colored_level mb-4">
+                    <div class="mb_dman_box h-100">
+                      <div class="mb_icon_box box_3">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 361.61 413.49">
+                          <title class="o_default_snippet_text">Scan to Verify</title>
+                          <path d="M363.13,214.83c-.13,5.18-4.4,8.48-11.45,8.51-18.28.07-36.56,0-54.85,0-18.06,0-36.13,0-54.19,0-7.89,0-12.45-3.41-12.32-8.9.13-5.29,4.61-8.56,12.1-8.57q54.51-.06,109,0C358.71,205.89,363.26,209.52,363.13,214.83Zm39.64,219.74a11,11,0,0,0,3.81-.25c-5.91,9.3-15.66,18.9-27.19,20.7a79.18,79.18,0,0,1-12.22.85q-117.24.08-234.48-.05a59.7,59.7,0,0,1-17.18-2.18C97.06,448,87.3,434.37,87.29,415.11q0-111.75,0-223.5c0-17,0-34,0-51,.09-26.08,17.63-43.69,43.78-43.92,11.38-.09,22.76,0,35.09,0,0-5.18,0-9.24,0-13.3.09-8.21,2.94-11.3,11.24-11.55,7.53-.23,15.08-.28,22.61,0,4,.16,6-1.33,7.91-4.86,8.78-16.54,22.79-24.73,41.51-24.53,19,.21,33.6,7.8,42.36,25.39.93,1.87,4,3.6,6.2,3.74,7.5.46,15.06.1,22.59.2,10.28.14,13.06,3,13.08,13,0,3.64,0,7.28,0,11.85,11.19,0,21.9-.18,32.6.08,5.55.13,11.34.2,16.58,1.78,18.25,5.48,29.65,21.44,29.66,40.83q0,82.18,0,164.38c-.15,0-.3,4-.45,4-1.67-4.14-4.65-5.58-8.65-10.54-2.05-1.75-4.5-6.05-7.24-6.69q0-75.86,0-151.69c0-2,.1-4-.07-5.95-1-12.51-10-21.17-22.57-21.39-11-.2-22-.08-33.06,0a33.78,33.78,0,0,0-4.86.76c0,7.34.07,14.36,0,21.37-.12,8.83-4.13,13-13,13.05q-72.74.13-145.48,0c-8.94,0-12.76-4-12.91-13-.12-7,0-14.06,0-22.19-11.79,0-22.54,0-33.29,0-18.94,0-27.09,8.06-27.09,26.8v276.4c0,16.86,7.05,24,24.15,24q122,.09,244,0c7.17,0,12.58-1.29,16.45-4,5.83-.32,4.59-.44,7.2-.44A45.6,45.6,0,0,1,402.77,434.57ZM180,127.83c0,4.35,2.79,4.17,5.72,4.16,42.85,0,85.7-.05,128.55.07,4.31,0,5.8-1.46,5.72-5.73-.2-10.62-.26-21.26,0-31.88.13-4.78-1.75-6.14-6.21-6-7.06.26-14.13-.13-21.19.11-7.71.27-12.26-3.06-14.56-10.52-4.52-14.67-15.17-23.16-28.45-23.28C236,54.66,224.8,63.54,220,78.59c-2.14,6.71-6.22,10.17-13.46,10-8.44-.22-16.89-.06-26.45-.06C180.08,102.43,180.14,115.13,180,127.83ZM349.5,284.89q-52.9,0-105.81,0a31.49,31.49,0,0,0-6.26.68,8.86,8.86,0,0,0-6.62,7.16c-.25,2.59,2.1,6.93,5.14,8a27,27,0,0,0,8,1.31c17.63.1,35.26.05,52.9.05,17.85,0,35.69,0,53.54,0,7.94,0,12.59-3.21,12.74-8.46s-4.46-8.56-12.33-8.75Zm-15.66,78.77q-45.31,0-90.61,0c-8.33,0-13.06,3.28-12.9,8.74.15,5.25,4.59,8.16,12.76,8.18,17.86,0,35.71,0,53.56,0H327A85.28,85.28,0,0,1,333.84,363.66ZM139.39,289.52c6.84,7.43,13.94,14.63,21.17,21.68,3.54,3.45,8.18,3.72,11.74.45,13.61-12.49,27.14-25.11,40.12-38.24,2-2,2.31-5.79.86-8.42a8.89,8.89,0,0,0-9.37-3.87c-2.52.66-5.83,3.32-8.09,5.39-9.63,8.83-19,18.94-28.81,28.27-5-4.93-9.12-10.27-13.53-14.35s-10.11-6.11-13.86-2.36C136.15,281.52,135.74,285.55,139.39,289.52ZM161,390.18c3.54,3.45,8.18,3.72,11.74.46,13.61-12.5,27.14-25.11,40.12-38.25,2-2,2.31-5.79.86-8.41a8.88,8.88,0,0,0-9.37-3.88c-2.52.66-5.83,3.32-8.09,5.39-9.63,8.83-19,18.95-28.81,28.27-5-4.92-9.12-10.27-13.53-14.35s-10.11-6.11-13.86-2.36c-3.47,3.46-3.88,7.49-.23,11.45C146.71,375.93,153.81,383.13,161,390.18Zm-.48-157.89c3.54,3.45,8.18,3.73,11.74.46,13.61-12.49,27.14-25.11,40.12-38.25,2-2,2.31-5.78.86-8.41a8.9,8.9,0,0,0-9.37-3.88c-2.52.67-5.83,3.32-8.09,5.39-9.63,8.84-19,19-28.81,28.27-5-4.92-9.12-10.26-13.53-14.34s-10.11-6.11-13.86-2.37c-3.47,3.46-3.88,7.49-.23,11.46C146.23,218,153.33,225.25,160.56,232.29ZM448.87,366.21l-52,57-.5-.21V389.35a73.67,73.67,0,0,0-35.28,9.56c-10.92,6.07-18.81,15.46-27.2,24.76a9,9,0,0,1-.21-1.22c.06-9.18-.23-18.38.28-27.53,1.22-21.77,17.25-42,38-48.8a63,63,0,0,1,22.33-2.92c1.65.07,2.14-.41,2.13-2.09-.07-10,0-19.91,0-29.87v-1.91l.44-.2Zm-41.61,27.08c10.4-12.19,12.32-12.78,23.79-27.07-10.24-12.1-13.91-18.42-24.81-29.09-.13.06.74.12.61.18v3.55c0,5.19.95,8.38,1,13.56,0,1.32-6.45.65-7.85.61-3.1-.09-6.21-.18-9.29,0a69.53,69.53,0,0,0-11.13,1.17c-18.55,4.14-29.41,14.9-32.06,31.82-.52,3.35-2.07,5.82-2.07,9.35.44-.37.85-.73,1.29-1.07,2.23-1.7,4.37-4.51,6.71-6.07,13.94-9.3,29.73-13.27,47-12.84,1.3,0,6.35.57,6.34,1.44,0,5.24,0,7.47,0,12.71v1.56Z" transform="translate(-87.26 -42.42)"></path>
+                        </svg>
+                      </div>
+                      <h3>
+                        Scan to Verify
+                      </h3>
+                      <p class="o_default_snippet_text">Once the ticket is scanned, it cannot be scanned again.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--mb_order_booker_services-end-->
+
+          <!--MB-app-screenshots-Section-Start-->
+          <section class="mb_event_app_screenshots oe_img_bg o_bg_img_center o_colored_level" data-snippet="mb_app_screenshots_templ" data-name="App Screenshots">
+            <div class="container">
+              <div class="mb_app_screenshots_main">
+                <div class="mb_app_screenshots_heading">
+                  <span class="text-center mb_app_screenshots_title o_default_snippet_text">A beautiful
+                    way to present</span>
+                  <h2 class="text-center mb_app_sub_title o_default_snippet_text">App screenshots</h2>
+                  <p class="text-center mb_app_screenshots_text o_default_snippet_text">The simple,
+                    intuitive and powerful app to
+                    manage your work.The only app you’ll need to power your life.Learn how: 
+                            </p>
+                </div>
+                <div class="mb_carousel_main_div">
+                  <div class="owl-carousel mb_app_screenshots_slider owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                      <div class="owl-stage"
+                        style="transition: all 0.25s ease 0s; width: 4940px; transform: translate3d(-2080px, 0px, 0px);">
+                        <div class="owl-item" style="width: 250px; margin-right: 10px;">
+                          <div class="item">
+                            <div class="mb_app_screenshots_item">
+                              <img src="/theme_mobiheal_website/static/src/img/event/event_1.webp" alt="Event With Barcode/QRCode"
+                                loading="lazy" style="" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="owl-item" style="width: 250px; margin-right: 10px;">
+                          <div class="item">
+                            <div class="mb_app_screenshots_item">
+                              <img src="/theme_mobiheal_website/static/src/img/event/event_2.webp" alt="Event Management With Attendence"
+                                loading="lazy" style="" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="owl-item" style="width: 250px; margin-right: 10px;">
+                          <div class="item">
+                            <div class="mb_app_screenshots_item">
+                              <img src="/theme_mobiheal_website/static/src/img/event/event_3.webp" alt="Event Registration"
+                                loading="lazy" style="" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="owl-item active" style="width: 250px; margin-right: 10px;">
+                          <div class="item">
+                            <div class="mb_app_screenshots_item">
+                              <img src="/theme_mobiheal_website/static/src/img/event/event_4.webp" alt="Event Details"
+                                loading="lazy" style="" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="owl-item active" style="width: 250px; margin-right: 10px;">
+                          <div class="item">
+                            <div class="mb_app_screenshots_item">
+                              <img src="/theme_mobiheal_website/static/src/img/event/event_5.webp" alt="Event Ticket Management"
+                                loading="lazy" style="" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="owl-item active center" style="width: 250px; margin-right: 10px;">
+                          <div class="item">
+                            <div class="mb_app_screenshots_item">
+                              <img src="/theme_mobiheal_website/static/src/img/event/event_6.webp" alt="Event Ticket Scanner"
+                                loading="lazy" style="" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="owl-item active" style="width: 250px; margin-right: 10px;">
+                          <div class="item">
+                            <div class="mb_app_screenshots_item">
+                              <img src="/theme_mobiheal_website/static/src/img/event/event_7.webp" alt="Event Management With Mobile Application"
+                                loading="lazy" style="" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="owl-item active" style="width: 250px; margin-right: 10px;">
+                          <div class="item">
+                            <div class="mb_app_screenshots_item">
+                              <img src="/theme_mobiheal_website/static/src/img/event/event_8.webp" alt="Event Records"
+                                loading="lazy" style="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="owl-nav disabled">
+                      <button type="button" role="presentation" class="owl-prev">
+                        <span aria-label="Previous">‹</span>
+                      </button>
+                      <button type="button" role="presentation" class="owl-next">
+                        <span aria-label="Next">›</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mb_phone_div">
+                    <img src="/theme_mobiheal_website/static/src/img/order_booker/mockup.webp" alt=""
+                      loading="lazy" style="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--MB-app-screenshots-Section-end-->
+
+      </div>
+    </t>
+  </template>
+
+  <data noupdate="1">
+
+    <!-- Default pagese  below 2 record must put in no update 1-->
+    <record id="theme_mobiheal_website_event_page" model="website.page">
+        <field name="is_published">True</field>
+        <field name="url">/eventheal</field>
+        <field name="view_id" ref="theme_mobiheal_website.theme_mobiheal_website_event_tmpl"/>
+        <field name="track">True</field>
+        <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+    </record>
+
+    <record id="theme_mobiheal_website_event_menu" model="website.menu">
+        <field name="name">Event</field>
+        <field name="url">/eventheal</field>
+        <field name="page_id" ref="theme_mobiheal_website.theme_mobiheal_website_event_page"/>
+        <field name="sequence" type="int">5</field>
+        <field name="website_id" model="website" eval="obj().env['website'].sudo().get_current_website()"/>
+    </record>
+
+</data>
+</odoo>

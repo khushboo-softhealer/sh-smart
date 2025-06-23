@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   
+<data noupdate="1">
+
+                <!-- Default pagese  below 2 record must put in no update 1-->
+                <record id="theme_mobiheal_website_website_support_template_menu" model="website.menu">
+                    <field name="name">Support</field>
+                    <field name="parent_id" ref="website.main_menu" />
+                    <field name="sequence" type="int">7</field>
+                    <field name="url">/support</field>
+                </record>
+            
+            </data>
+
+</odoo>

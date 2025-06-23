@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="actionButtons" t-inherit="mail.Composer.actionButtons" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-if='composerView.hasSendButton']" position="inside">
+           
+            <t t-if="composerView and composerView.chatter and composerView.chatter.threadModel">
+            <button t-if="accesschatgpt"
+            class="o_Composer_actionButton o_Composer_button o_Composer_buttonSend btn btn-primary ms-2"
+            t-att-class="{
+                        'o-last': !composerView.hasDiscardButton,
+                        'o-composer-is-compact border-start-0': composerView.isCompact,
+                        'o-has-current-partner-avatar': composerView.hasCurrentPartnerAvatar,
+                        'rounded-0 rounded-end-3': !composerView.hasDiscardButton and composerView.hasCurrentPartnerAvatar and composerView.isCompact,
+                    }"
+            t-on-click="click_draft_response"
+            type="button">Draft Response
+            </button> 
+            </t>
+            
+        </xpath>
+    </t>
+</templates>

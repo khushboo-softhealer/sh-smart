@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_update_variant_image_action" model="ir.actions.server">
+        <field name="name">Update Variant Image</field>
+        <field name="model_id" ref="product.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.update_variant_image()</field>
+    </record>
+
+    <record id="sh_update_product_template_meta_image_action" model="ir.actions.server">
+        <field name="name">Update Website opengraph image</field>
+        <field name="model_id" ref="product.model_product_template" />
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.update_template_meta_image_url()</field>
+    </record>
+
+    <!--Product url for store-->
+    <record model="ir.ui.view" id="sh_softhealer_product_template_form_normal_inherit_custom_view">
+        <field name="name">sh.softhealer.product.template.product.form.form.inherit.custom</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <!-- sh_backend  -->
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button name="sh_get_website_redirect" type="object" class="oe_stat_button"
+                    icon="fa-globe" string="Go To Store">
+                </button>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

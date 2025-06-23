@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="theme_softhealer_header_custom_global_search" inherit_id="website.layout"
+        name="Softhealer Store Header" active="False">
+
+        <xpath expr="//header//nav" position="replace">
+            <t t-call="website.navbar">
+                <t t-set="_navbar_classes" t-valuef="shadow-sm" />
+                <div id="top_menu_container"
+                    class="container justify-content-start justify-content-lg-between js_cls_global_search_container js_cls_custom_header_pricelist_drop">
+                    <!-- Brand -->
+                    <t t-call="website.placeholder_header_brand">
+                        <t t-set="_link_class" t-valuef="me-4" />
+                    </t>
+                    
+                    <!-- Navbar Collapse -->
+                    <div id="top_menu_collapse"
+                        class="collapse navbar-collapse order-last order-lg-0">
+                        <t t-call="website.navbar_nav">
+                            <t t-set="_nav_class" t-valuef="flex-grow-1" />
+                            <!-- Menu -->
+                            <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                <t t-call="website.submenu">
+                                    <t t-set="item_class" t-valuef="nav-item" />
+                                    <t t-set="link_class" t-valuef="nav-link" />
+                                </t>
+                            </t>
+
+
+                            <t t-set="website_sale_order" t-value="website.sale_get_order()" />
+                            <t t-set="show_cart" t-value="true" />
+
+                            <div class="cls_theme_softhealer_store_button_part o_no_autohide_item hide_in_mobile">
+                                <t t-call="website_sale_wishlist.header_wishlist_link">
+                                    <t t-set="_icon" t-value="True"/>
+                                    <t t-set="_item_class" t-value="'nav-item ms-lg-3 hide_el'"/>
+                                    <t t-set="_link_class" t-value="'nav-link'"/>
+                                </t>
+                                <li class="o_wsale_my_cart nav-item o_no_autohide_item hide_el">
+                                    <t t-set="website_sale_cart_quantity"
+                                        t-value="request.session['website_sale_cart_quantity'] if 'website_sale_cart_quantity' in request.session else website.sale_get_order().cart_quantity or 0" />
+                                    <t t-set="show_cart" t-value="true" />
+                                    <a href="/shop/cart" class="nav-link">
+                                        <i class="fa fa-shopping-bag" />
+                                        <sup
+                                            class="my_cart_quantity badge text-bg-primary o_animate_blink"
+                                            t-esc="website_sale_cart_quantity"
+                                            t-att-data-order-id="request.session.get('sale_order_id', '')" />
+                                    </a>
+                                </li>
+
+                                <li class="nav-item o_no_autohide_item hide_el" id='search_link'>
+                                    <a href="#" t-attf-class="nav-link js_cls_global_search_btn">
+                                        <i class="fa fa-search" />
+                                    </a>
+                                </li>
+
+                                <li class='nav-item o_no_autohide_item'>
+                                    <t
+                                        t-call="theme_softhealer_store.theme_softhealer_store_pricelist_selector" />
+                                </li>
+
+                                <t t-call="portal.placeholder_user_sign_in">
+                                    <t t-set="_item_class" t-valuef="nav-item o_no_autohide_item" />
+                                    <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                                </t>
+                                <t t-call="portal.user_dropdown">
+                                    <t t-set="_avatar" t-value="true" />
+                                    <t t-set="_item_class"
+                                        t-valuef="nav-item dropdown o_no_autohide_item" />
+                                    <t t-set="_link_class" t-valuef="nav-link" />
+                                </t>
+                            </div>
+                        </t>
+                    </div>
+                    
+
+                    <div class="cls_theme_softhealer_store_button_part o_no_autohide_item hide_in_desktop">
+
+                        <t t-call="website_sale_wishlist.header_wishlist_link">
+                            <t t-set="_icon" t-value="True"/>
+                            <t t-set="_item_class" t-value="'nav-item ms-lg-3 hide_el'"/>
+                            <t t-set="_link_class" t-value="'nav-link'"/>
+                        </t>
+                        <li class="o_wsale_my_cart nav-item o_no_autohide_item hide_el">
+                            <t t-set="website_sale_cart_quantity"
+                                t-value="request.session['website_sale_cart_quantity'] if 'website_sale_cart_quantity' in request.session else website.sale_get_order().cart_quantity or 0" />
+                            <t t-set="show_cart" t-value="true" />
+                            <a href="/shop/cart" class="nav-link">
+                                <i class="fa fa-shopping-bag" />
+                                <sup
+                                    class="my_cart_quantity badge text-bg-primary o_animate_blink"
+                                    t-esc="website_sale_cart_quantity"
+                                    t-att-data-order-id="request.session.get('sale_order_id', '')" />
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item o_no_autohide_item hide_el" id='search_link'>
+                            <a href="#" t-attf-class="nav-link js_cls_global_search_btn">
+                                <i class="fa fa-search" />
+                            </a>
+                        </li>
+
+                    </div>
+
+                    <!-- Navbar Toggler -->
+                    <t t-call="website.navbar_toggler"></t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

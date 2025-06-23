@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- VIEW: Search -->
+    <record id="sh_task_upcoming_feature_view_search" model="ir.ui.view">
+        <field name="name">sh.task.upcoming.feature.view.search</field>
+        <field name="model">sh.task.upcoming.feature</field>
+        <field name="arch" type="xml">
+            <search string="CR">
+                
+                <!-- SEARCH -->
+                <field name="name" />
+                <field name="task_id" />
+                <!-- <field name="suggested_by_id" /> -->
+                <field name="user_id" />
+                <field name="state_id" />
+                <!-- <field name="" /> -->
+
+                <!-- FILTER -->
+                <!-- <filter string="" name="" domain="[('', '=', '')]" /> -->
+                <!-- <filter string="Suggest By Me" name="suggested_by_id" domain="[('suggested_by_id', '=', uid)]" /> -->
+                <filter string="Suggest By Me" name="user_id" domain="[('user_id', '=', uid)]" />
+
+                <!-- GROUP BY -->
+                <group name="group" string="Group By">
+                    <filter string="Task" name="group_by_task_id" context="{'group_by': 'task_id'}" />
+                    <filter string="State" name="group_by_state_id" context="{'group_by': 'state_id'}" />
+                    <!-- <filter string="Suggest By" name="group_by_suggested_by_id" context="{'group_by': 'suggested_by_id'}" /> -->
+                    <filter string="Suggest By" name="group_by_user_id" context="{'group_by': 'user_id'}" />
+                    <!-- <filter string="" name="" context="{'group_by': ''}" /> -->
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+    <!-- VIEW: Form -->
+    <record id="sh_task_upcoming_feature_view_form" model="ir.ui.view">
+        <field name="name">sh.task.upcoming.feature.view.form</field>
+        <field name="model">sh.task.upcoming.feature</field>
+        <field name="arch" type="xml">
+            <form string="CR">
+                <header>
+                    <field name="state_id" widget="statusbar" options="{'clickable': '1'}" />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1" /></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="task_id" required="1" options="{'no_create': True}" />
+                            <field name="user_id" options="{'no_open': True}" readonly="1" />
+                        </group>
+                        <group>
+                            <!-- <field name="suggested_by_id" readonly="1" /> -->
+                            <field name="date" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" />
+                    </group>
+                </sheet>
+                <!-- CHATTER -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- VIEW: Tree -->
+    <record id="sh_task_upcoming_feature_view_tree" model="ir.ui.view">
+        <field name="name">sh.task.upcoming.feature.view.tree</field>
+        <field name="model">sh.task.upcoming.feature</field>
+        <field name="arch" type="xml">
+            <tree string="CR">
+                <field name="name" />
+                <field name="task_id" optional="show" />
+                <field name="user_id" />
+                <!-- <field name="suggested_by_id" /> -->
+                <field name="date" optional="show" />
+                <field name="state_id" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="sh_task_upcoming_feature_action" model="ir.actions.act_window">
+        <field name="name">CR</field>
+        <field name="res_model">sh.task.upcoming.feature</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{
+            'search_default_group_by_task_id': 1,
+            'create': False
+        }</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sh_generate_task_wizard_form_view" model="ir.ui.view">
+        <field name="name">view.sh.generate.task.wizard.form.view</field>
+        <field name="model">sh.generate.task.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="training_batch_ids" domain="[('stage','=','in_progress'), ('sh_training_course_ids.id','in',[course_id])]" widget="many2many_tags" />
+                        <field name="trainee_ids" widget="many2many_tags" />
+                        <field name="course_id" invisible="1" />
+                    </group>
+                    
+                </group>
+                <label for="predefined_task_ids" string="Selected Task" />
+                    <field name="predefined_task_ids">
+                        <tree>
+                            <field name="name" />
+                            <field name="description" />
+                        </tree>
+                    </field>
+                <footer>
+                    <button name="create_task_action" class="btn btn-primary" type="object" string="Generate Task" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

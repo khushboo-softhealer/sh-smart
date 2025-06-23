@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <record id="sh_mass_update_task_wizard_form_view" model="ir.ui.view">
+        <field name="name">sh.project.task.mass.tag.wizard.form</field>
+        <field name="model">sh.mass.update.task.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Mass Update Task">
+                <group>
+                    <group>
+                        <field name="task_ids" widget="many2many_tags" invisible="1" />
+                        <field name="assignees_update_method" widget="radio" options="{'horizontal': True}" />
+                        <field name="user_ids" widget="many2many_tags" attrs="{'invisible': [('assignees_update_method', '=', False)]}" options="{'no_create': True, 'no_open': True}" />
+                        <field name="deadline" />
+                        <field name="tl_id" options="{'no_create': True, 'no_open': True}" />
+                        <field name="dev_id" options="{'no_create': True, 'no_open': True}" />
+                        <field name="support_dev_id" options="{'no_create': True, 'no_open': True}" />
+                        <field name="tester_id" options="{'no_create': True, 'no_open': True}" />
+                    </group>
+                    <group>
+                        <field name="tag_update_method" widget="radio" options="{'horizontal': True}" />
+                        <field name="project_tags_ids" widget="many2many_tags" attrs="{'invisible': [('tag_update_method', '=', False)]}" />
+                        <field name="stage_id" options="{'no_create': True, 'no_open': True}" />
+                        <field name="designer_id" options="{'no_create': True, 'no_open': True}" />
+                        <field name="index_by_id" options="{'no_create': True, 'no_open': True}" />
+                        <field name="market_by_id" options="{'no_create': True, 'no_open': True}" />
+                    </group>
+                </group>
+                <footer>
+                    <button name="btn_mass_update_task" class="btn btn-primary" type="object" string="Update" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="sh_mass_update_task_wizard_action" model="ir.actions.act_window">
+        <field name="name">Mass Update Task</field>
+        <field name="res_model">sh.mass.update.task.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="sh_hr_recruitment_task_hr_job_form_view" model="ir.ui.view">
+        <field name="name">sh.hr.recruitment.task.hr.job.form.view</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <field name="hide_button_bool" invisible="True" />
+                <button class="btn btn-primary"
+                    name="%(sh_hr_recruitment_task.sh_hr_recruitment_task_create_task_wizard_action)d"
+                    type="action" string="Create Task"
+                    attrs="{'invisible':[('hide_button_bool','=',True)]}" />
+            </xpath>
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button name="action_get_task_view" class="oe_stat_button" icon="fa-tasks"
+                    type="object">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">
+                            Tasks</span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

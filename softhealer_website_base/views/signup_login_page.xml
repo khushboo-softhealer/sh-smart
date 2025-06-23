@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+
+     <!-- SIGNUP PAGE -->
+    <template id="sh_softhealer_website_web_signup" name="Softhealer Website Signup Icon" inherit_id="auth_signup.fields">
+        <xpath expr="//div[hasclass('field-login')]" position="before">
+            <img alt="Softhealer Logo" class="d-block mx-auto img img-fluid sh_website_logo" src="/theme_softhealer_website/static/src/img/images/logo/sh_login_page.png"/>
+        </xpath>
+
+       
+        <xpath expr="//label[@for='login']" position="attributes">
+            <attribute name="class" position="add" separator=" ">form-label</attribute>
+        </xpath>
+
+         <xpath expr="//label[@for='name']" position="attributes">
+            <attribute name="class" position="add" separator=" ">form-label</attribute>
+        </xpath>
+
+         <xpath expr="//label[@for='password']" position="attributes">
+            <attribute name="class" position="add" separator=" ">form-label</attribute>
+        </xpath>
+        
+         <xpath expr="//label[@for='confirm_password']" position="attributes">
+            <attribute name="class" position="add" separator=" ">form-label</attribute>
+        </xpath>
+
+    </template>
+
+    <!-- LOGIN PAGE -->
+    <template id="sh_softhealer_website_web_login" name="Softhealer Website Login Icon" inherit_id="web.login">
+        <xpath expr="//input[@name='csrf_token']" position="before">
+            <img t-if="request.website.sudo().theme_id and request.website.sudo().theme_id.name in ['theme_softhealer_website','theme_softhealer_store']"
+            alt="Softhealer Logo" class="d-block mx-auto img img-fluid sh_website_logo"
+            src="/theme_softhealer_website/static/src/img/images/logo/sh_login_page.png"/>
+        </xpath>
+    </template>
+
+    <!-- RESET PAGE -->
+    <template id="sh_softhealer_website_reset_password" name="Softhealer Website Reset Password" inherit_id="auth_signup.reset_password">
+        <xpath expr="//div[hasclass('field-login')]" position="before">
+            <img t-if="request.website.sudo().theme_id and request.website.sudo().theme_id.name in ['theme_softhealer_website','theme_softhealer_store']"
+            alt="Softhealer Logo" class="d-block mx-auto img img-fluid sh_website_logo"
+            src="/theme_softhealer_website/static/src/img/images/logo/sh_login_page.png"/>
+        </xpath>
+    </template>
+
+</odoo>

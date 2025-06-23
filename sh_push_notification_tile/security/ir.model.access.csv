@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_user_push_notifiction,access_user_push_notifiction,model_user_push_notification,base.group_user,1,1,1,0
+access_user_push_notifiction_admin,access_user_push_notifiction_admin,model_user_push_notification,base.group_erp_manager,1,1,1,1
+sh_push_notification_tile.access_user_push_notification_sub_type,access_user_push_notification_sub_type,sh_push_notification_tile.model_user_push_notification_sub_type,base.group_user,1,1,1,0

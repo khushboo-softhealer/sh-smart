@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+    <record id="sh_edit_holiday_status_form" model="ir.ui.view">
+        <field name="name">sh.hr.leave.type.form</field>
+        <field name="model">hr.leave.type</field>
+        <field name="inherit_id" ref="hr_holidays.edit_holiday_status_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group/group[@name='allocation_validation']" position="inside">
+                <field name="allocation_type" widget="radio" force_save="1" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

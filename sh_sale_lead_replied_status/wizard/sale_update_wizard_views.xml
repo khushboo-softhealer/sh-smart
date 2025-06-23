@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_mass_sale_update_wizard_view" model="ir.ui.view">
+        <field name="name">sh.sale.update.wizard</field>
+        <field name="model">sh.sale.update.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Mass Update">
+                <group>
+                    <group>
+                        <field name="sh_replied_status" invisible="1"/>
+                        <field name="sh_replied_status_id" options="{'no_create': True,'no_edit': True}"/>
+                    </group>
+                </group>
+                <footer>
+                   <button string='Update' name="action_update" type="object" class="btn-primary"/>
+                   <button string="Cancel" class="btn-default" special="cancel"/>
+               	</footer>
+            </form>
+        </field>
+    </record>
+    <record id="sh_mass_sale_update_action" model="ir.actions.act_window">
+            <field name="name">Mass Update</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+</odoo>

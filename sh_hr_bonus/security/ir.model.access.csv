@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_bonus_template,access_sh_bonus_template,model_sh_bonus_template,base.group_user,1,1,1,1
+access_sh_bonus_template_line,access_sh_bonus_template_line,model_sh_bonus_template_line,base.group_user,1,1,1,1
+access_sh_bonus_allocation,access_sh_bonus_allocation,model_sh_bonus_allocation,base.group_user,1,1,1,1
+access_sh_bonus_employee_allocation,access_sh_bonus_employee_allocation,model_sh_bonus_employee_allocation,base.group_user,1,1,1,1

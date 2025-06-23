@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>      
+    <menuitem       
+        id="calendar.mail_menu_calendar"
+        name="Calendar"
+        sequence="1"
+        action="sh_meeting_room.sh_dashboard_room_action"       
+        web_icon="calendar,static/description/icon.svg"
+        groups="base.group_user"/>
+    <menuitem
+        id="sh_meeting_room_dashboard_menu"
+        parent="calendar.mail_menu_calendar"
+        name="Dashboard"
+        sequence="1"
+        action="sh_meeting_room.sh_dashboard_room_action"       
+        groups="base.group_user"/>
+
+    <menuitem
+        id="mail_menu_calendar_inherit"
+        parent="calendar.mail_menu_calendar"
+        name="Calendar"
+        sequence="2"
+        action="calendar.action_calendar_event"       
+        groups="base.group_user"/>
+    <menuitem
+        id="sh_meeting_room_menu"
+        parent="calendar.calendar_menu_config"
+        name="Meeting Rooms"
+        action="sh_meeting_room.sh_meeting_room_action"
+        groups="base.group_no_one"/>
+</odoo>

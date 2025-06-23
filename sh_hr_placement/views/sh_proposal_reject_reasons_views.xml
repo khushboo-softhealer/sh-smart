@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_reject_view_form" model="ir.ui.view">
+        <field name="name">sh.proposal.reject.reasons.form</field>
+        <field name="model">sh.proposal.reject.reasons</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_reject_view_tree" model="ir.ui.view">
+        <field name="name">sh.proposal.reject.reasons.tree</field>
+        <field name="model">sh.proposal.reject.reasons</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_reject_action" model="ir.actions.act_window">
+        <field name="name">Proposal Rejected Reasons</field>
+        <field name="res_model">sh.proposal.reject.reasons</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="reject_main_menu" name="Proposal Reject Reasons" action="sh_hr_placement.sh_reject_action" groups="hr_recruitment.group_hr_recruitment_user" parent="sh_hr_placement.placement_main_menu" sequence="1" />
+    
+</odoo>

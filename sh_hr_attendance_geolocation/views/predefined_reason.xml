@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sh_predefined_reason_form_view" model="ir.ui.view">
+		<field name="name">sh.predefined.reason</field>
+		<field name="model">sh.predefined.reason</field>
+		<field name="arch" type="xml">
+			<form string="Predefined Reason">
+				<sheet>
+					<group>
+						<group>
+							<field name="name"/>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="sh_predefined_reason_tree_view" model="ir.ui.view">
+		<field name="name">sh.predefined.reason</field>
+		<field name="model">sh.predefined.reason</field>
+		<field name="arch" type="xml">
+			<tree string="Predefined Reason">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+	<record id="sh_predefined_reason_action" model="ir.actions.act_window">
+		<field name="name">Predefined Reason</field>
+		<field name="res_model">sh.predefined.reason</field>
+		<!-- <field name="view_type">form</field> -->
+		<field name="view_mode">tree,form</field>
+		<!-- <field name="type">ir.actions.act_window</field> -->
+	</record>
+	<menuitem id="sh_menu_predefined_reason" parent="hr_attendance.menu_hr_attendance_settings" sequence="1" action="sh_predefined_reason_action"/>
+</odoo>

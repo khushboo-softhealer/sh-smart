@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+      <!-- Blog Post List View -->
+    <record id="sh_website_editor_blog_blog_tree_view" model="ir.ui.view">
+        <field name="name">sh.website.editor.blog.blog.view.tree</field>
+        <field name="model">blog.blog</field>
+        <field name="arch" type="xml">
+            <tree string="Blogs">
+                <field name="name" />
+                <field name="blog_post_count" />
+                <field name="website_id" groups="website.group_multi_website" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+      <!-- Blog Post Form View-->
+    <record id="sh_website_editor_blog_blog_form_view" model="ir.ui.view">
+        <field name="name">sh.website.editor.blog.blog.view.form</field>
+        <field name="model">blog.blog</field>
+        <field name="arch" type="xml">
+            <form string="Blog">
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                        attrs="{'invisible': [('active', '=', True)]}" />
+                    <group>
+                        <field name="active" invisible="1" />
+                        <field name="name" />
+                        <field name="subtitle" />
+                        <field name="sh_display_as_label"/>
+                        <field name="website_id" options="{'no_create': True}"
+                            groups="website.group_multi_website" />
+                        <field name="sh_is_this_career_blog" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+     <!-- Blog Post Action -->
+     <record id="sh_website_editor_blog_blog_action" model="ir.actions.act_window">
+        <field name="name">Blog</field>
+        <field name="res_model">blog.blog</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids"
+            eval="[(5, 0, 0),(0, 0, {'view_mode': 'tree', 'view_id': ref('sh_website_editor_blog_blog_tree_view')}),(0, 0, {'view_mode': 'form', 'view_id': ref('sh_website_editor_blog_blog_form_view')})]" />
+    </record>
+
+</odoo>

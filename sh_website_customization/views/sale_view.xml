@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sh_website_sale_order_forn_view_inherit" model="ir.ui.view">
+		<field name="name">sale.order</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="website_sale.sale_order_view_form"/>
+		<field name="arch" type="xml">
+			
+			<field name="website_id" position="replace">
+			    <field name="website_id" groups="website.group_multi_website" options="{'no_create': True, 'no_open': True}" />
+
+			</field>
+		</field>
+	</record>
+</odoo>

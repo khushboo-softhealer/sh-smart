@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sh_softhealer_website_menus_form_view_inherit_website" model="ir.ui.view">
+        <field name="name">sh.softhealer.website.menus.form.view.inherit.website</field>
+        <field name="model">website.menu</field>
+        <field name="inherit_id" ref="website.website_menus_form_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//sheet" position="inside">
+                <notebook>
+                    <page name="mega_menu_context" string="Mega Menu Content" attrs="{'invisible':[('is_mega_menu', '=', False)]}">
+                        <field name="mega_menu_content" widget="html" options="{'codeview': true}"/>
+                    </page>
+                </notebook>
+
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

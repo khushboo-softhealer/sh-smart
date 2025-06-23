@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- SALE ORDER FORM VIEW -->
+    <record id="sh_sale_order_inherit_recurring_form" model="ir.ui.view">
+        <field name="name">sh.sale.order.recurring.inherit.sale.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='partner_details']" position="inside">
+                <field name="sh_is_recurring" />
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page name="recurring" string="Recurring Details" attrs="{'invisible':[('sh_is_recurring','=',False)]}">
+                    <group>
+                            <group>
+                                <field name="recurring_start_date" attrs="{'readonly':[('state','!=','draft')]}"  />
+
+                                <label for="recurring_interval" />
+                                <div class="o_row" name="wage">
+                                    <field name="recurring_interval" nolabel="1" />
+                                    <span>
+                                        <field name="recurring_interval_unit" nolabel="1"  />
+                                    </span>
+                                </div>
+
+
+                                <label for="recurring_end_date" widget="remaining_days" options="{'allow_order': '1'}" />
+                                <div class="o_row">
+                                    <field name="recurring_end_date" nolabel="1"  />
+                                    <span class="text-muted">(If fixed-term contract)</span>
+                                </div>
+                                <field name="sh_recurrent_order" string="Recurrent Order" readonly="1"/>
+
+                            </group>
+                            
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

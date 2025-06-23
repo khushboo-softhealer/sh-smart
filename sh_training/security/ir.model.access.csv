@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pre_define_task_line,access_pre_define_task_line,model_pre_define_task_line,base.group_user,1,1,1,1
+access_sh_training_course,access_sh_training_course,model_sh_training_course,base.group_user,1,1,1,1
+access_sh_training_batch,access_sh_training_batch,model_sh_training_batch,base.group_user,1,1,1,1
+access_sh_training_master,access_sh_training_master,model_sh_training_master,base.group_user,1,1,1,1
+access_sh_trainee_ratings,access_sh_trainee_ratings,model_sh_trainee_ratings,base.group_user,1,1,1,1
+sh_training.access_sh_generate_task_wizard,access_sh_generate_task_wizard,sh_training.model_sh_generate_task_wizard,base.group_user,1,1,1,1

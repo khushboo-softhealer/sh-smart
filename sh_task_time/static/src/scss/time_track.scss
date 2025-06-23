@@ -1,0 +1,44 @@
+.sh_timer_div .sh_timer {
+	margin-left: 10px;margin-right: 10px;
+}
+.sh_timer_task {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 210px;margin-bottom: 0px;padding-left: 0px;
+}
+#timer_kanban_button{
+	font-size: 11px;
+    background: white;
+    color: #5f5e97;
+    padding: 7px 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 0px;
+}
+
+.sh_timer_div .main_ul_task .sh_timer_li{list-style-type: none;}
+
+.sh_timer_div{display: flex;align-items: center;background: transparent;position: relative;top: 1px;}
+.sh_timer_div .main_ul_task{width:fit-content;display: flex;position: relative;justify-content: center;align-items: center;height: 38px;margin-bottom: 0px;padding-left: 0px;}
+.sh_timer_div .main_ul_task #user_task:not(:empty),
+.sh_timer_div .main_ul_task .sh_timer_li #timer_pause,
+.sh_timer_div .main_ul_task .sh_timer_li #timer_stop,
+.sh_timer_div .main_ul_task .sh_timer_li #timer_resume,
+.sh_timer_div .main_ul_task .sh_timer_li #timer_start{background: #ffff;color: #71639e;padding: 5px 10px;border-radius: 5px;margin-left: 5px;margin-right: 5px;}
+// .sh_timer_div .main_ul_task .sh_timer #task_timer{color: #ffffff;}
+.sh_timer_div .main_ul_task #task_timer{color: #ffffff;}
+.sh_timer_div .main_ul_task #user_task:empty{width: auto !important;}
+
+.sh_task_menu_submenu_list_cls{width: 500px; padding:0;right: 0;left: auto;}
+.sh_timeer_text{min-width:200px !important;display:block; padding: 12px 5px;}
+.sh_task_menu_submenu_list_cls .sh_task_menu{display: flex;justify-content: space-between;align-items: center;padding: 10px 5px !important;}
+.sh_task_menu_submenu_list_cls .sh_task_menu .sh_push_task_name{display: inline-block; float: left; padding-top: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: top; max-width: 70%;}
+.sh_task_menu_submenu_list_cls .sh_task_menu .sh_push_btn_group{display: flex;  padding-right:5px;align-items: center;}
+.sh_task_menu_submenu_list_cls .sh_task_menu .sh_push_btn_group .sh_edit_pause_task_cls{margin-right:5px;font-weight: bold;padding:4px;border-radius: 5px; display:none; float: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: top; max-width: 70%;}
+.sh_task_menu_submenu_list_cls .sh_task_menu .sh_push_btn_group .sh_edit_pause_task_cls i.fa{font-size: 18px;}
+.sh_task_menu_submenu_list_cls .sh_task_menu .sh_push_btn_group .sh_timer_number{margin-right:5px;font-weight: bold;padding:3px 10px !important;border-radius: 5px;background:#71639b; color:white; display: inline-block; float: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: top; max-width: 70%;}
+.sh_task_menu_submenu_list_cls .sh_task_menu .sh_push_btn_group .sh_end_task_menu_cls{margin-right:5px;}
+
+
+

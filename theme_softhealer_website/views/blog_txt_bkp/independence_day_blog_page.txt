@@ -1,0 +1,45 @@
+<section class="sh_independence_day_about_section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 mx-auto d-block">
+                                <div class="sh_image_box">
+                                    <img src="/theme_softhealer_website/static/src/img/blogs_bkp/independence_day/main.webp"
+                                    alt="78th Independence Day" loading="lazy" title="78th Independence Day"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 mx-auto d-block">
+                                <div class="sh_description_box">
+                                    <h2 class="sh_title_box">Independence Day Celebrations</h2>
+                                    <p class="sh_text">
+                                        At Softhealer Technologies, Independence Day isn't just another day on the calendar. It's a moment to pause, reflect, and celebrate the values that define us as a company and as individuals. Our recent Independence Day celebration was a testament to the spirit of unity, innovation, and progress that drives us every day.
+                                    </p>
+                                    <h2 class="sh_title_box">A Day To Remember</h2>
+                                    <p class="sh_text" style="margin-bottom:5px;">
+                                        The day started with a warm gathering of our team members, each bringing their unique perspectives and vibrant energy to the occasion. The office was adorned with the colors of the national flag, creating an atmosphere of pride and patriotism. The significance of the day was not lost on anyone; it was a reminder of the sacrifices made by countless individuals to secure the freedom we enjoy today.
+                                    </p>
+                                      <h2 class="sh_title_box">Speeches that Inspire</h2>
+                                      <p class="sh_text">
+                                        After the national anthem, we moved on to a series of speeches from our leadership team. Each speech echoed the themes of freedom, responsibility, and the role we play as a technology company in shaping the future. Our CEO spoke about the parallels between our nation's journey towards independence and our own journey as a company—both filled with challenges, innovation, and a relentless pursuit of excellence.
+                                      </p>
+                                     <p class="sh_text">
+                                        Other leaders shared their thoughts on how independence is not just about freedom from external control, but also about the freedom to innovate, create, and contribute to society in meaningful ways. These speeches left everyone feeling inspired and motivated to continue striving for excellence in their work.
+                                     </p>
+                                    
+                                    <h2 class="sh_title_box">Reflecting on Our Values</h2>
+                                    <p class="sh_text">
+                                        Independence Day at Softhealer Technologies is more than just a celebration; it's a time to reflect on the values that drive us. We are committed to innovation, quality, and customer satisfaction, and we believe that these values are closely tied to the spirit of independence. Just as our nation fought for its freedom, we strive to push the boundaries of what is possible in technology, constantly seeking new ways to improve and innovate.
+                                    </p>
+                                    <h2 class="sh_title_box mt-4">Looking Ahead</h2>
+                                    <p class="sh_text">
+                                        As the day drew to a close, there was a palpable sense of unity and pride among everyone at Softhealer Technologies. We left the celebration not just with memories of a wonderful day, but with a renewed commitment to our work and a deeper understanding of the importance of independence in our professional and personal lives.
+                                    </p>
+                                    <p class="sh_text">
+                                        Independence Day reminds us that with freedom comes responsibility. At Softhealer Technologies, we are dedicated to using our freedom to innovate, to create solutions that make a difference, and to contribute positively to the world around us. As we continue to grow and evolve, we carry with us the lessons of independence, and we look forward to the future with hope, determination, and a sense of purpose.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </section>

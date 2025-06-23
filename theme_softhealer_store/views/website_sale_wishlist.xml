@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Module Information -->
+    <template id='theme_softhealer_store_wishlist_tmpl_inherit' name='Custom store wishlist' inherit_id='website_sale_wishlist.product_wishlist'>
+        <xpath expr="//button[@id='add_to_cart_button']" position="attributes">
+            <attribute name="class" separator=" " add="btn-primary" remove="btn-secondary" value=""></attribute>
+        </xpath>
+    </template>
+
+    <!--Wishlist-->
+    <template id="theme_softhealer_store_wishlist_btn" name="Custom shop wishlist btn" inherit_id="website_sale_wishlist.add_to_wishlist">
+        <xpath expr="//span[hasclass('fa-heart')]" position="replace">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Add to wishlist">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+            </svg>
+        </xpath>
+    </template>
+</odoo>

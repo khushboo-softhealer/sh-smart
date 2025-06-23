@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <!-- Global search dialog form -->
+    <div t-name="sh.softhealer.website.global.search.dialog">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="modal" aria-label="Close"/>
+        <form class="sh_global_searchbar_form o_wait_lazy_js s_searchbar_input"
+            method="get">
+            <div class="input-group s_searchbar_input mt8" role="search">
+                <t t-set="search_placeholder">Search...</t>
+                <div class="sh_label_text">
+                    <input type="search" name="search"
+                    class="global-search-query form-control oe_search_box"
+                    t-att-placeholder="search_placeholder"
+                    data-search-type="all"
+                    data-limit="10000"
+                    data-display-image="true"
+                    data-display-description="true"
+                    data-display-extra-link="true"
+                    data-display-detail="true"
+                    data-order-by="name asc"/>
+                </div>
+            </div>
+            <input name="order" type="hidden" class="o_search_order_by"
+                value="name asc" />
+        </form>
+        <div class="container mt32 js_gs_results"/>
+    </div>
+
+    <!-- Global Search Bar autocomplete item -->
+    <div t-name="sh.softhealer.website.global.search.autocomplete" class="">
+        <t t-if="fuzzySearch and results.length">
+            <span class="text-muted">No results found for '<t t-esc="search"/>'. Showing results for '<a href="#" class="s_searchbar_fuzzy_submit" t-esc="fuzzySearch"/>'.</span>
+        </t>
+        <t t-elif="!results.length">
+            <span class="text-muted">No results found. Please try another search.</span>
+        </t>
+        <div class="list-group">
+                                                        
+            <a t-foreach="results" t-as="result" t-attf-href="#{result['website_url']}" class="dropdown-item p-2 text-wrap" target="_blank">
+                <div class="d-flex align-items-center o_search_result_item">
+                    <t t-if="widget.displayImageGS">
+                        <img t-if="result['image_url']" t-att-src="result['image_url']" class="flex-shrink-0 o_image_64_contain"/>
+                        <i t-else="" t-attf-class="o_image_64_contain text-center pt16 fa #{result['_fa']}" style="font-size: 34px;"/>
+                    </t>
+                    <div class="o_search_result_item_detail px-3">
+                        <t t-set="description" t-value="parts['description'] and widget.displayDescriptionGS and result['description']"/>
+                            <t t-set="extra_link" t-value="parts['extra_link'] and widget.displayExtraLinkGS and result['extra_link_url'] and result['extra_link']"/>
+                            <div t-attf-class="h6 sh_global_Search_title font-weight-bold #{description ? '' : 'mb-0'}" t-out="result['name']"/>
+                            <p t-if="description" class="mb-0" t-out="description"/>
+                            <t t-if="extra_link">
+                                <t t-if="!extra_link['extra_link_title']">
+                                    <button t-if="extra_link" class="extra_link btn btn-link btn-sm" t-att-data-target="result['extra_link_url']" t-out="extra_link"/>
+                                </t>
+                                <t t-else="">
+                                    <button class="btn btn-link btn-sm pr-0" disabled="disabled" t-out="extra_link['extra_link_title']"/>
+                                    <t t-foreach="Object.keys(extra_link)" t-as="link">
+                                        <button t-if="result['extra_link_url'][link]" class="extra_link btn btn-link btn-sm p-0" t-att-data-target="result['extra_link_url'][link]" t-out="extra_link[link]"/>
+                                    </t>
+                                </t>
+                            </t>
+                        <t t-out="result['extra_link']"/>
+                    </div>
+                    <div t-if="parts['detail'] and widget.displayDetailGS" class="flex-shrink-0">
+                        <t t-if="result['detail_strike']">
+                            <span class="text-danger text-nowrap" style="text-decoration: line-through;">
+                                <t t-out="result['detail_strike']"/>
+                            </span>
+                            <br/>
+                        </t>
+                        <b t-if="result['detail']" class="text-nowrap">
+                            <t t-out="result['detail']"/>
+                        </b>
+                        <t t-if="result['detail_extra']">
+                            <br/>
+                            <span class="text-nowrap" t-out="result['detail_extra']"/>
+                        </t>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</templates>

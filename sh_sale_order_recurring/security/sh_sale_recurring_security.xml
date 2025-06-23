@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- <record model="ir.rule" id="sh_sale_order_recurring_PO_comp_rule">
+        <field name="name">Sale Order Recurring multi-company</field>
+        <field name="model_id" ref="model_sale_recurring" />
+        <field name="global" eval="True" />
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+    
+    <record model="ir.rule" id="sh_sale_order_recurring_line_SO_comp_rule">
+        <field name="name">Sale Order Recurring Line multi-company</field>
+        <field name="model_id" ref="model_sale_recurring_line" />
+        <field name="global" eval="True" />
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record> -->
+
+    <record id="group_recurring_sale_order_notification" model="res.groups">
+        <field name="name">Recurring Sale Order Notification</field>
+        <field name="comment">This user will be able to received activity for recurring sale orders.</field>
+    </record>
+
+</odoo>

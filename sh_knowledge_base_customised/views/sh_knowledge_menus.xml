@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="parent_sh_knowledge_article" name="Knowledge"/>
+    <menuitem id="menu_sh_knowledge_article" action="sh_knowledge_article_custom_action" sequence="1" name="Knowledge Article" parent="sh_knowledge_base_customised.parent_sh_knowledge_article"/>
+    <menuitem id="menu_sh_sop_article_custom" action="sh_sop_article_custom_action" sequence="2" name="SOP Article" parent="sh_knowledge_base_customised.parent_sh_knowledge_article"/>
+    <menuitem id="menu_configuration" name="Configuration" sequence="3" parent="sh_knowledge_base_customised.parent_sh_knowledge_article"/>
+    <menuitem id="menu_config_sop" name="Settings" parent="sh_knowledge_base_customised.menu_configuration" action="sop_config_settings_action" groups="base.group_system" />
+    <menuitem id="menu_article_categories" action="sh_article_categories_action" name="Knowledge Article Categories" parent="sh_knowledge_base_customised.menu_configuration"/>
+    <menuitem id="menu_sop_article_categories" action="sh_sop_article_categories_action" name="SOP Article Categories" parent="sh_knowledge_base_customised.menu_configuration"/>
+    <menuitem id="menu_article_tags" action="sh_article_tags_action" name="Knowledge Article Tags" parent="sh_knowledge_base_customised.menu_configuration"/>
+    <menuitem id="menu_sop_article_tags" action="sh_sop_article_tags_action" name="SOP Article Tags" parent="sh_knowledge_base_customised.menu_configuration"/>
+    <menuitem id="menu_stages" action="sh_stages_action" name="Stages" parent="sh_knowledge_base_customised.menu_configuration"/>
+</odoo>
