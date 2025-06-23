@@ -1,0 +1,51 @@
+<?xml version ="1.0" encoding="utf-8" ?>
+<odoo>	
+   	<record id="sh_employee_form_view" model="ir.ui.view">
+		<field name="name">hr.employee</field>
+		<field name="model">hr.employee</field>
+		<field name="inherit_id" ref="hr.view_employee_form"/>
+		<field name="arch" type="xml">
+ 			<field name="resource_calendar_id" position="after" >
+				<field name="sh_work_hours_notify" groups="hr_attendance.group_hr_attendance_manager"/>			
+			</field>
+ 		</field>
+	</record>
+	<record id="sh_mail_history_view" model="ir.ui.view">
+		<field name="name">sh.employee.workhours.notify</field>
+		<field name="model">sh.employee.workhours.notify</field>
+		<field name="arch" type="xml">
+ 			<tree string="Mail Histrory" create="0" edit="0">
+ 				<field name="emp_id"/>
+ 				<field name="worked_date"/>
+ 				<field name="worked_hours"/>
+ 				<field name="min_work_hours"/>
+ 				<field name="mail_id" invisible="1"/>
+ 				<button name="action_view_mail" string="View Mail" class="oe_highlight" type="object"/>
+ 			</tree>
+ 		</field>
+	</record>
+	<record id="sh_action_sh_employee_workhours_notify" model="ir.actions.act_window">
+		<field name="name">Mail History</field>		
+		<field name="res_model">sh.employee.workhours.notify</field>		
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record id="sh_manager_mail_history_view" model="ir.ui.view">
+		<field name="name">sh.employee.workhours.email</field>
+		<field name="model">sh.employee.workhours.email</field>
+		<field name="arch" type="xml">
+ 			<tree string="Mail Histrory" create="0" edit="0">
+ 				<field name="name"/>
+ 				<field name="emp_name"/>
+ 				<field name="mail_id" invisible="1"/>
+ 				<button name="action_view_mail" string="View Mail" class="oe_highlight" type="object"/>
+ 			</tree>
+ 		</field>
+	</record>
+	<record id="sh_action_manager_sh_employee_workhours_emails" model="ir.actions.act_window">
+		<field name="name">Mail History</field>		
+		<field name="res_model">sh.employee.workhours.email</field>		
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem id="sh_menu_mail_history" name="Email History" parent="hr.menu_hr_root" groups="hr.group_hr_manager" action="sh_action_manager_sh_employee_workhours_emails"/>	
+	<menuitem id="sh_menu_mail_notify" name="Email Notification" parent="hr.menu_hr_root" groups="hr.group_hr_manager" action="sh_action_sh_employee_workhours_notify"/>	
+ </odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <record id="sh_emp_update_wizard_form_view" model="ir.ui.view">
+        <field name="name">sh.emp.mass.tag.wizard.form</field>
+        <field name="model">emp.mass.update.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Update Mass Wizard">
+                <group>
+                    <group string="Allocate to Employee">
+                        <field name="emp_id" />
+                    </group>
+                </group>
+                <footer>
+                    <button name="update_record" class="btn btn-primary" type="object"
+                        string="Allocate" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="sh_emp_update_wizard_action" model="ir.actions.act_window">
+        <field name="name">Update Mass Employee</field>
+        <field name="res_model">emp.mass.update.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

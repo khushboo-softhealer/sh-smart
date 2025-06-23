@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View sh.cron.failure View Tree -->
+    <record id="view_sh_leave_cron_tree" model="ir.ui.view">
+        <field name="name">view.sh.leave.cron.log</field>
+        <field name="model">sh.leave.cron.log</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cron_date"/>
+                <field name="date" />
+                <field name="employee_ids" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- View sh.cron.failure form -->
+    <record id="view_sh_leave_cron_log_form" model="ir.ui.view">
+        <field name="name">view.sh.leave.cron.log.form</field>
+        <field name="model">sh.leave.cron.log</field>
+        <field name="arch" type="xml">
+            <form string="Leave Cron Log">
+                <sheet>
+                    
+                    <group>
+                        <field name="cron_date"/>
+                        <field name="date" />
+                        <field name="employee_ids" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View sh.cron.failure search -->
+    <record id="view_sh_leave_cron_log_search" model="ir.ui.view">
+        <field name="name">view.sh.leave.cron.log.search</field>
+        <field name="model">sh.leave.cron.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Date" name="date" context="{'group_by':'date'}"/>
+                    <filter string="Cron Date" name="con_date" context="{'group_by':'date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action sh.cron.failure -->
+    <record id="action_sh_cron_leave_log" model="ir.actions.act_window">
+        <field name="name">Sh Cron Leave log</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sh.leave.cron.log</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Sh leave cron log.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="sh_leave_cron_log_menu" name="Leave Cron Log" action="action_sh_cron_leave_log"
+        parent="sh_hr_dashboard.sh_hr_dashboard_main_menu" groups="sh_cron_failure.group_cron_failure" sequence="10" />
+
+</odoo>

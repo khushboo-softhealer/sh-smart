@@ -1,0 +1,524 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_attendance_modification_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.1alpha1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-16 06:19+0000\n"
+"PO-Revision-Date: 2021-09-16 06:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_attendance_modification_request
+#: model:mail.template,body_html:sh_attendance_modification_request.sh_attendance_modification_request_email_approve_tmpl
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    Dear ${object.employee_id.name},\n"
+"                    <br/>\n"
+"                    ${object.name} has been Approved by ${object.employee_id.parent_id.name}.\n"
+"                    <br/>\n"
+"                    Thank you\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    亲 ${object.employee_id.name},\n"
+"                    <br/>\n"
+"                    ${object.name} 已获得批准 ${object.employee_id.parent_id.name}.\n"
+"                    <br/>\n"
+"                    谢谢\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+
+
+#. module: sh_attendance_modification_request
+#: model:mail.template,body_html:sh_attendance_modification_request.sh_attendance_modification_request_email_reject_tmpl
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    Dear ${object.employee_id.name},\n"
+"                    <br/>\n"
+"                    Attendace modification Request ${object.name} has been rejected by ${object.employee_id.parent_id.name}.\n"
+"                    <br/>\n"
+"                    Thank you\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    亲 ${object.employee_id.name},\n"
+"                    <br/>\n"
+"                     参考资料修改要求 ${object.name} 被拒绝了 ${object.employee_id.parent_id.name}.\n"
+"                    <br/>\n"
+"                    谢谢\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+
+#. module: sh_attendance_modification_request
+#: model:mail.template,body_html:sh_attendance_modification_request.sh_attendance_modification_request_email_tmpl
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    Dear ${object.employee_id.parent_id.name},\n"
+"                    <br/>\n"
+"                    Attendace modification Request ${object.name} has been submitted by ${object.employee_id.name}.\n"
+"                    <br/>\n"
+"                    Thank you\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p>\n"
+"                    亲 ${object.employee_id.parent_id.name},\n"
+"                    <br/>\n"
+"                     参考资料修改要求 ${object.name} 已提交 ${object.employee_id.name}.\n"
+"                    <br/>\n"
+"                    谢谢\n"
+"                </p>\n"
+"                <div style=\"display: inline-block; margin: 15px; text-align: left;\">\n"
+"                    <a href=\"/mail/view?model=sh.attendance.modification.request&amp;res_id=${object.id}\" target=\"_blank\" style=\"padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;\">\n"
+"                        View\n"
+"                    </a>\n"
+"                </div>\n"
+"            </div>\n"
+"        "
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_needaction
+msgid "Action Needed"
+msgstr "需要行动"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活动异常装饰"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活动类型图标"
+
+#. module: sh_attendance_modification_request
+#: model:mail.template,subject:sh_attendance_modification_request.sh_attendance_modification_request_email_approve_tmpl
+#: model:mail.template,subject:sh_attendance_modification_request.sh_attendance_modification_request_email_reject_tmpl
+#: model:mail.template,subject:sh_attendance_modification_request.sh_attendance_modification_request_email_tmpl
+msgid "Application For Attendance Modification Request"
+msgstr "出勤修改要求申请"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+msgid "Approve"
+msgstr "批准"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__state__approved
+msgid "Approved"
+msgstr "得到正式认可的"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件计数"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__attendance_id
+msgid "Attendance"
+msgstr "出勤"
+
+#. module: sh_attendance_modification_request
+#: model:ir.actions.act_window,name:sh_attendance_modification_request.sh_attendance_modification_request_action
+#: model:ir.model,name:sh_attendance_modification_request.model_sh_attendance_modification_request
+#: model:ir.ui.menu,name:sh_attendance_modification_request.sh_attendance_modification_request_menu
+#: model:mail.template,name:sh_attendance_modification_request.sh_attendance_modification_request_email_tmpl
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "Attendance Modification Request"
+msgstr "出勤修改要求"
+
+#. module: sh_attendance_modification_request
+#: model:mail.template,name:sh_attendance_modification_request.sh_attendance_modification_request_email_approve_tmpl
+#: model:mail.template,name:sh_attendance_modification_request.sh_attendance_modification_request_email_reject_tmpl
+msgid "Attendance Modification Request Approve"
+msgstr "出席修改请求批准"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model,name:sh_attendance_modification_request.model_sh_attendance_modification_request_reason
+msgid "Attendance Modification Request Reason"
+msgstr "出勤修改请求原因"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__type__both
+msgid "Both"
+msgstr "两个都"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__state__cancel
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+msgid "Cancel"
+msgstr "取消"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__type__checkin
+msgid "Check In"
+msgstr "报到"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__type__checkout
+msgid "Check Out"
+msgstr "查看"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+msgid "Confirm"
+msgstr "确认"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.actions.act_window,help:sh_attendance_modification_request.sh_attendance_modification_request_action
+msgid "Create a new Attendance Modification Request"
+msgstr "创建新的考勤修改请求"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__create_uid
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__create_uid
+msgid "Created by"
+msgstr "由...制作"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__create_date
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__date
+msgid "Date"
+msgstr "日期"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__display_name
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__state__draft
+msgid "Draft"
+msgstr "草案"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__employee_id
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "Employee"
+msgstr "员工"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_follower_ids
+msgid "Followers"
+msgstr "追随者"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "追随者（合作伙伴）"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "字体令人敬畏的图标e.g. FA-TASKS."
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "Group"
+msgstr "团体"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__has_message
+msgid "Has Message"
+msgstr "有消息"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__id
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_exception_icon
+msgid "Icon"
+msgstr "图标"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "图标表示异常活动。"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_needaction
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "如果检查，新消息需要您的注意。"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_error
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果检查，则某些消息具有交付错误。"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_is_follower
+msgid "Is Follower"
+msgstr "是追随者"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request____last_update
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason____last_update
+msgid "Last Modified on"
+msgstr "最后修改了"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__write_uid
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__write_uid
+msgid "Last Updated by"
+msgstr "最后更新"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__write_date
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__write_date
+msgid "Last Updated on"
+msgstr "上次更新了"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "主要依恋"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_error
+msgid "Message Delivery error"
+msgstr "消息传递错误"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活动截止日期"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__name
+msgid "Name"
+msgstr "姓名"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一项活动截止日期"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一项活动摘要"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一个活动类型"
+
+#. module: sh_attendance_modification_request
+#: code:addons/sh_attendance_modification_request/models/sh_attendance_modification_request.py:0
+#: code:addons/sh_attendance_modification_request/models/sh_attendance_modification_request.py:0
+#: code:addons/sh_attendance_modification_request/models/sh_attendance_modification_request.py:0
+#, python-format
+msgid "Notification"
+msgstr "通知"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "行动数量"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "错误数量"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要动作的消息数"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "交货错误的消息数"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读消息的数量"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__reason
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request_reason__myreason
+msgid "Reason"
+msgstr "原因"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__state__reject
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+msgid "Reject"
+msgstr "拒绝"
+
+#. module: sh_attendance_modification_request
+#: model:ir.actions.act_window,name:sh_attendance_modification_request.sh_attendance_modification_request_reason_action
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__rejection_reason
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_reason_form_view
+msgid "Rejection Reason"
+msgstr "拒绝原因"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__user_id
+msgid "Related user name for the resource to manage its access."
+msgstr "资源管理其访问的相关用户名。"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_reason_form_view
+msgid "Remove Reason"
+msgstr "去除原因"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_form_view
+msgid "Reset To Draft"
+msgstr "重置为草案"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_user_id
+msgid "Responsible User"
+msgstr "负责任的用户"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "短信交付错误"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_reason_form_view
+msgid "Save Reason"
+msgstr "拯救理由"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__state
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "State"
+msgstr "状态"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基于活动的状态\ n"
+"逾期：截止日期已通过\n"
+"今天：活动日期是今天\n"
+"计划：未来的活动。\n"
+
+#. module: sh_attendance_modification_request
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "Today"
+msgstr "今天"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__type
+#: model_terms:ir.ui.view,arch_db:sh_attendance_modification_request.sh_attendance_modification_request_view_search
+msgid "Type"
+msgstr "类型"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,help:sh_attendance_modification_request.field_sh_attendance_modification_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "记录上的异常活动类型。"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_unread
+msgid "Unread Messages"
+msgstr "未读消息"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读消息计数器"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__updated_value
+msgid "Updated Value Checkin"
+msgstr "更新值checkin."
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__updated_value_checkout
+msgid "Updated Value Checkout"
+msgstr "更新的值结账"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields,field_description:sh_attendance_modification_request.field_sh_attendance_modification_request__user_id
+msgid "User"
+msgstr "用户"
+
+#. module: sh_attendance_modification_request
+#: model:ir.model.fields.selection,name:sh_attendance_modification_request.selection__sh_attendance_modification_request__state__waiting_for_approve
+msgid "Waiting For Approve"
+msgstr "等待批准"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="seq_master_data" model="ir.sequence">
+        <field name="name">Attendance Modification Request</field>
+        <field name="code">sh.attendance.modification.request</field>
+        <field name="prefix">REQ/</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False" />
+    </record>
+</odoo>

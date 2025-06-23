@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="sh_attendance_form_view" model="ir.ui.view">
+			<field name="name">sh.attendance.form.view</field>
+			<field name="model">hr.attendance</field>
+			<field name="inherit_id" ref="hr_attendance.hr_attendance_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='check_out']" position="after">
+					<field name="sh_remark"/>
+					<field name="sh_duration"/>
+				</xpath>
+			</field>
+		</record>
+		<record id="sh_attendance_tree_view" model="ir.ui.view">
+			<field name="name">sh.attendance.tree.view</field>
+			<field name="model">hr.attendance</field>
+			<field name="inherit_id" ref="hr_attendance.view_attendance_tree"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='check_out']" position="after">
+					<field name="sh_remark"/>
+					<field name="sh_duration"/>
+				</xpath> 
+			</field>
+		</record>
+	</data>
+</odoo>

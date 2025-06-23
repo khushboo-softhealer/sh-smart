@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="sh_attendance_modification_request_email_tmpl" model="mail.template">
+        <field name="name">Attendance Modification Request</field>
+        <field name="model_id" ref="sh_attendance_modification_request.model_sh_attendance_modification_request" />
+        <field name="subject">Application For Attendance Modification Request</field>
+        <field name="auto_delete" eval="False" />
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p>
+                    <span>Dear </span>
+                    <t t-esc="object.employee_id.parent_id.name"/>
+                    <span>,</span>
+                    <br />
+                    <span>Attendace modification Request </span>
+                    <t t-esc="object.name"/>
+                    <span>has been submitted by </span>
+                    <t t-esc="object.employee_id.name"/>
+                    <span>.</span>
+                    <br />
+                    <span>Thank you</span>
+                </p>
+                <div style="display: inline-block; margin: 15px; text-align: left;">
+                    <a t-att-href="'/mail/view?model=sh.attendance.modification.request&amp;res_id=%s' % object.id" target="_blank" style="padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;">
+                        View
+                    </a>
+                </div>
+            </div>
+        </field>
+    </record>
+    <record id="sh_attendance_modification_request_email_approve_tmpl" model="mail.template">
+        <field name="name">Attendance Modification Request Approve</field>
+        <field name="model_id" ref="sh_attendance_modification_request.model_sh_attendance_modification_request" />
+        <field name="subject">Application For Attendance Modification Request</field>
+        <field name="auto_delete" eval="False" />
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p>
+                    <span>Dear </span>
+                    <t t-esc="object.employee_id.name"/>
+                    <span>,</span>
+                    <br />
+                    <t t-esc="object.name"/>
+                    <span> has been Approved by </span>
+                    <t t-esc="object.employee_id.parent_id.name"/>
+                    <span>.</span>
+                    <br />
+                    <span>Thank you</span>
+                </p>
+                <div style="display: inline-block; margin: 15px; text-align: left;">
+                    <a t-att-href="'/mail/view?model=sh.attendance.modification.request&amp;res_id=%s' % object.id" target="_blank" style="padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;">
+                        <span>View</span>
+                    </a>
+                </div>
+            </div>
+        </field>
+    </record>
+    <record id="sh_attendance_modification_request_email_reject_tmpl" model="mail.template">
+        <field name="name">Attendance Modification Request Approve</field>
+        <field name="model_id" ref="sh_attendance_modification_request.model_sh_attendance_modification_request" />
+        <field name="subject">Application For Attendance Modification Request</field>
+        <field name="auto_delete" eval="False" />
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p>
+                    <span>Dear </span>
+                    <t t-esc="object.employee_id.name"/>
+                    <span>,</span>
+                    <br />
+                    <span>Attendace modification Request </span>
+                    <t t-esc="object.name"/>
+                    <span> has been rejected by </span>
+                    <t t-esc="object.employee_id.parent_id.name"/>
+                    <span>.</span>
+                    <br />
+                    <span>Thank you</span>
+                </p>
+                <div style="display: inline-block; margin: 15px; text-align: left;">
+                    <a t-att-href="'/mail/view?model=sh.attendance.modification.request&amp;res_id=%s' % object.id" target="_blank" style="padding: 5px 10px; color: #ffffff; text-decoration: none; background-color: #875a7b; border: 1px solid #875a7b; border-radius: 3px;">
+                        <span>View</span>
+                    </a>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>

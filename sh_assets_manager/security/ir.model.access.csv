@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sh_asset_type,access_sh_asset_type,model_sh_asset_type,base.group_user,1,1,1,1
+access_sh_asset,access_sh_asset,model_sh_asset,base.group_user,1,1,1,1
+access_asset_request,access_asset_request,model_asset_request,base.group_user,1,1,1,1
+sh_assets_manager.access_employee_wizard,access_employee_wizard,sh_assets_manager.model_employee_wizard,base.group_user,1,1,1,1
+sh_assets_manager.access_emp_mass_update_wizard,access_emp_mass_update_wizard,sh_assets_manager.model_emp_mass_update_wizard,base.group_user,1,1,1,1
+sh_assets_manager.access_assets_request_wizard,access_assets_request_wizard,sh_assets_manager.model_assets_request_wizard,base.group_user,1,1,1,1

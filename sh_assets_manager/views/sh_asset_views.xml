@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_sh_asset_form">
+        <field name="name">sh.asset.form</field>
+        <field name="model">sh.asset</field>
+        <field name="arch" type="xml">
+            <form string="Assets">
+                <header>
+                    <field name="state" widget="statusbar" clickable="True" />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="e.g. Laptop Notebook" string="Name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="asset_category_id" />
+                            <field name="allocated" readonly="1" />
+                            <field name="is_child" attrs="{'invisible': [('is_parent', '=', True)]}" />
+                            <field name="is_parent" attrs="{'invisible': [('is_child', '=', True)]}" />
+                            <field name="parent" options="{'no_create':True,'no_create_edit':True}"
+                                attrs="{'invisible': [('is_parent', '=', True)],'required': [('is_child', '=', True)]}"
+                                domain="[('is_parent','=',True)]" />
+                            <field name="sh_ebs_barcode" />
+                            <field name="sh_ebs_barcode_img" widget="image"
+                                options='{"preview_image": "sh_ebs_barcode_img", "size": [200, 90]}' />
+                            <field name="sh_is_general_asset" />
+                        </group>
+                        <group>
+                            <field name="amount" />
+                            <field name="vendor_id" domain="[('supplier_rank','>', 0)]" />
+                            <field name="bill_number" string="Bill Number"
+                                options="{'no_create': True}" />
+                            <field name="employee_id" />
+                            <field name="warranty_date" />
+                            <field name="warranty_expiry_date" />
+                            <field name="warranty_month" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_sh_asset_kanban" model="ir.ui.view">
+        <field name="name">sh.asset.kanban</field>
+        <field name="model">sh.asset</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="name" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                            <div class="row mb4">
+                                <div class="col-6">
+                                    <strong>
+                                        <span>
+                                            <field name="name" />
+                                        </span>
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_sh_asset_tree">
+        <field name="name">sh.asset.tree</field>
+        <field name="model">sh.asset</field>
+        <field name="arch" type="xml">
+            <tree string="Asset category">
+                <field name="name" />
+                <field name="employee_id" />
+                <field name="warranty_date" />
+                <field name="warranty_expiry_date" />
+                <field name="vendor_id" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_sh_asset_search" model="ir.ui.view">
+        <field name="name">Assets Group By</field>
+        <field name="model">sh.asset</field>
+        <field name="arch" type="xml">
+            <search string="Search By">
+                <field name="name"
+                    filter_domain="['|', ('name', 'ilike', self), ('sh_ebs_barcode', 'ilike', self)]" />
+                <field name="employee_id" />
+                <field name="sh_ebs_barcode" />
+                <field name="state" />
+                <filter name="state_unused" string="Unused" domain="[('state','=','unused')]" />
+                <filter name="state_running" string="Running" domain="[('state','=','running')]" />
+                <filter name="state_scrap" string="Scrap" domain="[('state','=','scrap')]" />
+                <filter name="state_repairing" string="Repairing"
+                    domain="[('state','=','repairing')]" />
+                <filter name="parent" string="Parent" domain="[('is_parent','=',True)]" />
+                <group name="group" string="Group By">
+                    <filter name="group_by_employee" string="Employee"
+                        context="{'group_by':'employee_id'}" />
+                    <filter name="group_by_state" string="State" context="{'group_by':'state'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_sh_asset">
+        <field name="name">Assets</field>
+        <field name="res_model">sh.asset</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+
+    <menuitem id="sh_maintenance_root_menu" name="Maintenance Requests"
+        parent="sh_hr_dashboard.sh_hr_dashboard_main_menu" sequence="3" />
+
+    <menuitem id="sh_asset_types" action="action_sh_asset_type" parent="sh_maintenance_root_menu"
+        name="Assets Types" sequence="4" groups="sh_assets_manager.asset_management_group" />
+    <menuitem id="sh_assets_menu" action="action_sh_asset" parent="sh_maintenance_root_menu"
+        name="Assets" sequence="3" groups="sh_assets_manager.asset_management_group" />
+    <menuitem id="sh_maintenance_request" action="assets_maintenance_request_action"
+        parent="sh_maintenance_root_menu" name="Maintenance Request" sequence="1"
+        groups="sh_assets_manager.asset_management_group" />
+
+    <record id="model_sh_assets_manager_tag_action" model="ir.actions.server">
+        <field name="name">Mass Employee Update</field>
+        <field name="model_id" ref="sh_assets_manager.model_sh_asset" />
+        <field name="binding_model_id" ref="sh_assets_manager.model_sh_asset" />
+        <field name="state">code</field>
+        <field name="binding_view_types">list</field>
+        <field name="code"> action = model.action_mass_emp_update()</field>
+    </record>
+
+</odoo>

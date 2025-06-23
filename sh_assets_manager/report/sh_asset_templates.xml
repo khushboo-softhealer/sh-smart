@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="assets_report_doc">
+		<t t-call="web.basic_layout">
+			<div class="page">
+				<div style="width:100%;box-sizing: border-box;text-align:center;">
+					<t t-foreach="docs" t-as="doc">
+						<div
+							style="box-sizing: border-box;width:33%;border:1px black solid;display:inline-block;text-align:center;padding:10px 0;">
+							<span t-field="doc.sh_ebs_barcode" />
+							<div t-field="doc.sh_ebs_barcode" t-if="len(doc.sh_ebs_barcode) == 13"
+								t-options="{'widget': 'barcode','symbology': 'EAN13', 'width': 600, 'height': 150, 'img_style': 'width:100%;height:4rem'}" />
+							<div t-field="doc.sh_ebs_barcode" t-elif="len(doc.sh_ebs_barcode) == 8"
+								t-options="{'widget': 'barcode','symbology': 'EAN8', 'width': 600, 'height': 150, 'img_style': 'width:100%;height:4rem'}" />
+							<div t-field="doc.sh_ebs_barcode" t-else=""
+								t-options="{'widget': 'barcode','symbology': 'Code128', 'width': 600, 'height': 150, 'img_style': 'width:100%;height:4rem'}" />
+							<span t-field="doc.asset_category_id.name" />
+						</div>
+					</t>
+				</div>
+			</div>
+		</t>
+	</template>
+
+	<record id="action_report_barcode_assets" model="ir.actions.report">
+		<field name="name">Assets Report</field>
+		<field name="model">sh.asset</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">sh_assets_manager.assets_report_doc</field>
+		<field name="report_file">sh_assets_manager.assets_report_doc</field>
+		<field name="print_report_name">'Assets Report'</field>
+		<field name="binding_model_id" ref="model_sh_asset" />
+		<field name="binding_type">report</field>
+	</record>
+</odoo>

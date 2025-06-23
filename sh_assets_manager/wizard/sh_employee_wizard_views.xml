@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="employee_wizard_view" model="ir.ui.view">
+        <field name="name">employee.wizard.view</field>
+        <field name="model">employee.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Maintenance Employee Request">
+                <group>
+                    <group>
+                        <field name="employees_ids" widget="many2many_tags" />
+                    </group>
+                </group>
+                <footer>
+                    <button name="generate_report" string="Print Report" type="object"
+                        class="oe_highlight" />
+                    <button special="cancel" string="Cancel" class="oe_link" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="employee_wizard_action" model="ir.actions.act_window">
+        <field name="name">Employee Equipment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">employee.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem id="sh_employee_wizard_menu" name="Employee Equipment"
+        parent="sh_maintenance_root_menu" action="employee_wizard_action" sequence="5"
+        groups="sh_assets_manager.asset_management_group" />
+</odoo>
